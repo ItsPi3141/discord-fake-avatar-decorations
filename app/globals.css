@@ -35,25 +35,87 @@
 	margin: 24px 0;
 }
 
-/* width */
+/* DISCORD STYLE SCROLLBAR */
 .discord-scrollbar::-webkit-scrollbar {
 	width: 20px;
 }
-/* Track */
 .discord-scrollbar::-webkit-scrollbar-track {
 	background: #666;
 	border-radius: 99px;
 	border: solid 6.5px transparent;
 	background-clip: content-box;
 }
-/* Handle */
 .discord-scrollbar::-webkit-scrollbar-thumb {
 	background: #888;
 	border-radius: 99px;
 	border: solid 6.5px transparent;
 	background-clip: content-box !important;
 }
-/* Handle on hover */
 .discord-scrollbar::-webkit-scrollbar-thumb:hover {
 	background: #999;
+}
+
+/* LOADING SPINNER */
+.loading-container {
+	position: relative;
+	display: block;
+	width: 52px;
+	height: 52px;
+	contain: paint;
+}
+.loading-cube {
+	background-color: #5865f2;
+	width: 10px;
+	height: 10px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	-webkit-animation: loading-cube-anim 1.8s ease-in-out infinite;
+	animation: loading-cube-anim 1.8s ease-in-out infinite;
+}
+.loading-cube:last-child {
+	-webkit-animation-delay: -0.9s;
+	animation-delay: -0.9s;
+}
+@-webkit-keyframes loading-cube-anim {
+	25% {
+		-webkit-transform: translateX(22px) rotate(-90deg) scale(0.5);
+		transform: translateX(22px) rotate(-90deg) scale(0.5);
+	}
+
+	50% {
+		-webkit-transform: translateX(22px) translateY(22px) rotate(-180deg);
+		transform: translateX(22px) translateY(22px) rotate(-180deg);
+	}
+
+	75% {
+		-webkit-transform: translateX(0) translateY(22px) rotate(-270deg) scale(0.5);
+		transform: translateX(0) translateY(22px) rotate(-270deg) scale(0.5);
+	}
+
+	to {
+		-webkit-transform: rotate(-1turn);
+		transform: rotate(-1turn);
+	}
+}
+@keyframes loading-cube-anim {
+	25% {
+		-webkit-transform: translateX(22px) rotate(-90deg) scale(0.5);
+		transform: translateX(22px) rotate(-90deg) scale(0.5);
+	}
+
+	50% {
+		-webkit-transform: translateX(22px) translateY(22px) rotate(-180deg);
+		transform: translateX(22px) translateY(22px) rotate(-180deg);
+	}
+
+	75% {
+		-webkit-transform: translateX(0) translateY(22px) rotate(-270deg) scale(0.5);
+		transform: translateX(0) translateY(22px) rotate(-270deg) scale(0.5);
+	}
+
+	to {
+		-webkit-transform: rotate(-1turn);
+		transform: rotate(-1turn);
+	}
 }
