@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+	font-family: "Ginto Nord Black";
+	src: url("https://cdn.jsdelivr.net/gh/ROMVoid95/DiscordFonts@master/Ginto-Nord/Ginto-Nord-700.woff2") format("woff");
+}
+@font-face {
+	font-family: "gg sans";
+	font-style: normal;
+	font-weight: 400;
+	src: local("gg sans Normal"), url("https://fonts.cdnfonts.com/s/93931/gg sans Regular.woff") format("woff");
+}
+
+* {
+	font-family: "gg sans";
+}
+.ginto {
+	font-family: "Ginto Nord Black";
+	letter-spacing: 1px;
+}
+
+#profile-preview hr {
+	outline: none;
+	border: none;
+	border-bottom: 1px solid #313338;
+	margin: 12px 0;
+}
+
+#settings hr {
+	outline: none;
+	border: none;
+	border-bottom: 1px solid #3d3f45;
+	margin: 24px 0;
+}
+
+/* width */
+.discord-scrollbar::-webkit-scrollbar {
+	width: 20px;
+}
+/* Track */
+.discord-scrollbar::-webkit-scrollbar-track {
+	background: #666;
+	border-radius: 99px;
+	border: solid 6.5px transparent;
+	background-clip: content-box;
+}
+/* Handle */
+.discord-scrollbar::-webkit-scrollbar-thumb {
+	background: #888;
+	border-radius: 99px;
+	border: solid 6.5px transparent;
+	background-clip: content-box !important;
+}
+/* Handle on hover */
+.discord-scrollbar::-webkit-scrollbar-thumb:hover {
+	background: #999;
+}

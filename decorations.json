@@ -1,0 +1,163 @@
+[
+	{
+		"name": "Fantasy",
+		"description": "You're walking in the forest and notice something magical and shiny.",
+		"banner": {
+			"image": "/banners/fantasy.png",
+			"text": "/bannertext/fantasy.png"
+		},
+		"items": [
+			{
+				"name": "Flaming Sword",
+				"description": "Slaying the look and the monsters",
+				"file": "/decorations/flaming_sword.png"
+			},
+			{
+				"name": "Magical Potion",
+				"description": "Drink at your own risk",
+				"file": "/decorations/magical_potion.png"
+			},
+			{
+				"name": "Fairy Sprites",
+				"description": "Here to guide you on your path",
+				"file": "/decorations/fairy_sprites.png"
+			},
+			{
+				"name": "Wizard's Staff",
+				"description": "How much power does it hold?",
+				"file": "/decorations/wizards_staff.png"
+			},
+			{
+				"name": "Glowing Runes",
+				"description": "I wonder what these symbols mean",
+				"file": "/decorations/glowing_runes.png"
+			},
+			{
+				"name": "Defensive Shield",
+				"description": "Use against pointy things",
+				"file": "/decorations/defensive_shield.png"
+			},
+			{
+				"name": "Skull Medallion",
+				"description": "Earned through unknown means",
+				"file": "/decorations/skull_medallion.png"
+			},
+			{
+				"name": "Treasure and Key",
+				"description": "What glorious treasures lie within?",
+				"file": "/decorations/treasure_and_key.png"
+			}
+		]
+	},
+	{
+		"name": "Anime",
+		"description": "Senpai will definitely notice you.",
+		"banner": {
+			"image": "/banners/anime.png",
+			"text": "/bannertext/anime.png"
+		},
+		"items": [
+			{
+				"name": "Radiating Energy",
+				"description": "Over EIGHT-THOUSAND-NINE-HUNDRED-NINETY-NINE!",
+				"file": "/decorations/radiating_energy.png"
+			},
+			{
+				"name": "Soul Leaving Body",
+				"description": "Can I just disappear right now?",
+				"file": "/decorations/soul_leaving_body.png"
+			},
+			{
+				"name": "Sweat Drops",
+				"description": "*laughs nervously*",
+				"file": "/decorations/sweat_drops.png"
+			},
+			{
+				"name": "Starry Eyed",
+				"description": "Feelin' sparkly",
+				"file": "/decorations/starry_eyed.png"
+			},
+			{
+				"name": "In Love",
+				"description": "uwu",
+				"file": "/decorations/in_love.png"
+			},
+			{
+				"name": "Shocked",
+				"description": "Nani?!!",
+				"file": "/decorations/shocked.png"
+			},
+			{
+				"name": "Angry",
+				"description": "How dare you",
+				"file": "/decorations/angry.png"
+			}
+		]
+	},
+	{
+		"name": "Breakfast",
+		"description": "Breakfast is definitely the most important meal of the day.",
+		"banner": {
+			"image": "/banners/breakfast.png",
+			"text": "/bannertext/breakfast.png"
+		},
+		"items": [
+			{
+				"name": "Toast",
+				"description": "It is toast",
+				"file": "/decorations/toast.png"
+			},
+			{
+				"name": "Morning Coffee",
+				"description": "Don't talk to me until I finish this",
+				"file": "/decorations/morning_coffee.png"
+			},
+			{
+				"name": "Fried Egg",
+				"description": "I like mine sunny side-up",
+				"file": "/decorations/fried_egg.png"
+			},
+			{
+				"name": "Blueberry Jam",
+				"description": "MMMM JUICY",
+				"file": "/decorations/blueberry_jam.png"
+			},
+			{
+				"name": "Donut",
+				"description": "Never enough sprinkles",
+				"file": "/decorations/donut.png"
+			},
+			{
+				"name": "Pancakes",
+				"description": "How high can you stack 'em?",
+				"file": "/decorations/pancakes.png"
+			}
+		]
+	},
+	{
+		"name": "Disxcore",
+		"description": "Available to use with an active Nitro subscription.",
+		"banner": {
+			"image": "/banners/disxcore.png",
+			"text": "/bannertext/disxcore.png",
+			"height": 26
+		},
+		"items": [
+			{
+				"name": "DISXCORE Headset",
+				"description": "Everything sounds better with these on",
+				"file": "/decorations/disxcore_headset.png"
+			},
+			{
+				"name": "Futuristic UI",
+				"description": "BEEP BOOP",
+				"file": "/decorations/futuristic_ui.png"
+			},
+			{
+				"name": "Smoke",
+				"description": "Now you see me, now you don't",
+				"file": "/decorations/smoke.png"
+			}
+		]
+	}
+]
