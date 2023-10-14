@@ -76,6 +76,9 @@ export default function Home() {
 									type="text"
 									className="bg-surface1 outline-none py-2 px-2.5 rounded transition grow"
 									placeholder="Enter image URL..."
+									onChange={(e) => {
+										setAvUrl(e.target.value);
+									}}
 								/>
 							</div>
 							<hr />
