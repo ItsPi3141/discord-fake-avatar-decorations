@@ -159,5 +159,65 @@
 				"file": "/decorations/smoke.png"
 			}
 		]
+	},
+	{
+		"name": "Fall",
+		"description": "There's a calm and cozy vibe in the air.",
+		"banner": {
+			"image": "/banners/fall.png",
+			"text": "/bannertext/fall.png"
+		},
+		"items": [
+			{
+				"name": "Fall Leaves",
+				"description": "Behold nature's dance.",
+				"file": "/decorations/fall_leaves.png"
+			},
+			{
+				"name": "Pumpkin Spice",
+				"description": "Sweets and spice make everything nice.",
+				"file": "/decorations/pumpkin_spice.png"
+			},
+			{
+				"name": "Frog Hat",
+				"description": "Frogs and fashion go together and you can't tell me otherwise.",
+				"file": "/decorations/frog_hat.png"
+			},
+			{
+				"name": "Fox Hat",
+				"description": "Charming, cozy, and a little bit nosy.",
+				"file": "/decorations/fox_hat.png"
+			}
+		]
+	},
+	{
+		"name": "Halloween",
+		"description": "Fright and delight your friends, strangers, and friendly strangers.",
+		"banner": {
+			"image": "/banners/halloween.png",
+			"text": "/bannertext/halloween.png"
+		},
+		"items": [
+			{
+				"name": "Graveyard Cat",
+				"description": "Just a cat on graveyard duty.",
+				"file": "/decorations/graveyard_cat.png"
+			},
+			{
+				"name": "Ghosts",
+				"description": "Look at them just spinning and grinning all day...",
+				"file": "/decorations/ghosts.png"
+			},
+			{
+				"name": "Minions",
+				"description": "Name a more iconic duo.",
+				"file": "/decorations/minions.png"
+			},
+			{
+				"name": "Jack-o'-Lantern",
+				"description": "You can practically hear its eerie cackle...",
+				"file": "/decorations/jack_o_lantern.png"
+			}
+		]
 	}
 ]
