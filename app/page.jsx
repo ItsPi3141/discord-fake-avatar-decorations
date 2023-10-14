@@ -16,8 +16,7 @@ export default function Home() {
 		ffmpeg.on("log", ({ message }) => {
 			console.log(message);
 		});
-		// toBlobURL is used to bypass CORS issue, urls with the same
-		// domain can be used directly.
+		// toBlobURL is used to bypass CORS issue, urls with the same domain can be used directly.
 		await ffmpeg.load({
 			coreURL: await toBlobURL(`${baseURL}/ffmpeg-core.js`, "text/javascript"),
 			wasmURL: await toBlobURL(`${baseURL}/ffmpeg-core.wasm`, "application/wasm")
@@ -25,8 +24,12 @@ export default function Home() {
 		setLoaded(true);
 	};
 
+	const previewAvatar = () => {};
+
 	const [name, setName] = useState("");
 	const [description, setDescription] = useState("");
+	const [decoUrl, setDecoUrl] = useState("");
+	const [avUrl, setAvUrl] = useState("");
 
 	useEffect(() => {
 		load();
@@ -61,6 +64,10 @@ export default function Home() {
 										id="upload-avatar"
 										className="hidden"
 										accept="image/png, image/jpeg, image/gif"
+										onChange={(e) => {
+											const [file] = e.target.files;
+											if (file) setAvUrl(URL.createObjectURL(file));
+										}}
 									/>
 									Upload image
 								</button>
@@ -106,6 +113,7 @@ export default function Home() {
 															onClick={(e) => {
 																setName(decor.name);
 																setDescription(decor.description);
+																setDecoUrl(decor.file);
 																document.querySelectorAll("button.decor.border-2.border-primary").forEach((el) => {
 																	el.classList.remove("border-primary");
 																	el.classList.add("border-surface1");
@@ -134,11 +142,19 @@ export default function Home() {
 							className="relative bg-surface2 w-[340px] h-[392px] rounded-xl shadow-lg overflow-hidden"
 						>
 							<div className="h-[60px] bg-[#5461f2]"></div>
-							<div className="rounded-full w-[92px] h-[92px] border-[6px] border-surface2 absolute top-4 left-5 select-none">
-								<img
-									src="/avatar.png"
-									className="rounded-full"
-								/>
+							<div className="rounded-full w-[92px] h-[92px] border-[6px] bg-surface2 border-surface2 absolute top-4 left-5 select-none">
+								<div className="relative w-[80px] h-[80px] rounded-full overflow-hidden">
+									<img
+										id="avatar"
+										src={avUrl || "/avatar.png"}
+										className={"absolute top-[calc(80px*0.1)] left-[calc(80px*0.1)] w-[calc(80px*0.8)] h-[calc(80px*0.8)] rounded-full"}
+									/>
+									<img
+										id="decoration"
+										src={decoUrl}
+										className="absolute top-0 left-0"
+									/>
+								</div>
 								<div className="bg-[#229f56] w-7 h-7 absolute right-[-4px] bottom-[-4px] rounded-full border-[5px] border-surface2"></div>
 							</div>
 							<div className="p-4 m-4 bg-surface0 w-[calc(100%-32px)] h-[256px] rounded-lg absolute bottom-0">
