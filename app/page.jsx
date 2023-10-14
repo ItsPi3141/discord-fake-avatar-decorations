@@ -147,7 +147,7 @@ export default function Home() {
 									<img
 										id="avatar"
 										src={avUrl || "/avatar.png"}
-										className={"absolute top-[calc(80px*0.1)] left-[calc(80px*0.1)] w-[calc(80px*0.8)] h-[calc(80px*0.8)] rounded-full"}
+										className={"absolute top-[calc(80px*0.09)] left-[calc(80px*0.09)] w-[calc(80px*0.82)] h-[calc(80px*0.82)] rounded-full"}
 									/>
 									<img
 										id="decoration"
