@@ -26,6 +26,7 @@ export default function Home() {
 	};
 
 	const previewAvatar = async (url) => {
+		setAvUrl("loading");
 		var res = await cropToSquare(ffmpegRef.current, url);
 		if (!res) return setAvUrl(null);
 		setAvUrl(res);
@@ -167,18 +168,29 @@ export default function Home() {
 							<div className="h-[60px] bg-[#5461f2]"></div>
 							<div className="rounded-full w-[92px] h-[92px] border-[6px] bg-surface2 border-surface2 absolute top-4 left-5 select-none">
 								<div className="relative w-[80px] h-[80px] rounded-full overflow-hidden">
-									<img
-										id="avatar"
-										src={avUrl || "/avatar.png"}
-										className={"absolute top-[calc(80px*0.09)] left-[calc(80px*0.09)] w-[calc(80px*0.82)] h-[calc(80px*0.82)] rounded-full"}
-										draggable={false}
-									/>
-									<img
-										id="decoration"
-										src={decoUrl}
-										className="absolute top-0 left-0"
-										draggable={false}
-									/>
+									{avUrl == "loading" ? (
+										<div className="absolute top-[24px] left-[24px]">
+											<span className="loading-container">
+												<span className="loading-cube"></span>
+												<span className="loading-cube"></span>
+											</span>
+										</div>
+									) : (
+										<>
+											<img
+												id="avatar"
+												src={avUrl || "/avatar.png"}
+												className={"absolute top-[calc(80px*0.09)] left-[calc(80px*0.09)] w-[calc(80px*0.82)] h-[calc(80px*0.82)] rounded-full"}
+												draggable={false}
+											/>
+											<img
+												id="decoration"
+												src={decoUrl}
+												className="absolute top-0 left-0"
+												draggable={false}
+											/>
+										</>
+									)}
 								</div>
 								<div className="bg-[#229f56] w-7 h-7 absolute right-[-4px] bottom-[-4px] rounded-full border-[5px] border-surface2"></div>
 							</div>
@@ -198,7 +210,7 @@ export default function Home() {
 			) : (
 				<main className="flex flex-col justify-center items-center h-screen w-full text-white p-8">
 					<p className="text-4xl text-center ginto absolute mx-8 top-8 max-w-xl">DISCORD FAKE AVATAR DECORATIONS</p>
-					<span className="loading-container">
+					<span className="loading-container mb-8">
 						<span className="loading-cube"></span>
 						<span className="loading-cube"></span>
 					</span>

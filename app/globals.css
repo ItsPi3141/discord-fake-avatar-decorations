@@ -59,8 +59,8 @@ body::-webkit-scrollbar-thumb {
 .loading-container {
 	position: relative;
 	display: block;
-	width: 52px;
-	height: 52px;
+	width: 32px;
+	height: 32px;
 	contain: paint;
 }
 .loading-cube {
