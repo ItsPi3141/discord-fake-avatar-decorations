@@ -36,23 +36,23 @@
 }
 
 /* DISCORD STYLE SCROLLBAR */
-.discord-scrollbar::-webkit-scrollbar {
+.discord-scrollbar::-webkit-scrollbar,
+body::-webkit-scrollbar {
 	width: 20px;
 }
-.discord-scrollbar::-webkit-scrollbar-track {
-	background: #666;
+.discord-scrollbar::-webkit-scrollbar-track,
+body::-webkit-scrollbar-track {
+	background: #2b2d31;
 	border-radius: 99px;
 	border: solid 6.5px transparent;
 	background-clip: content-box;
 }
-.discord-scrollbar::-webkit-scrollbar-thumb {
-	background: #888;
+.discord-scrollbar::-webkit-scrollbar-thumb,
+body::-webkit-scrollbar-thumb {
+	background: #1a1b1e;
 	border-radius: 99px;
 	border: solid 6.5px transparent;
 	background-clip: content-box !important;
-}
-.discord-scrollbar::-webkit-scrollbar-thumb:hover {
-	background: #999;
 }
 
 /* LOADING SPINNER */
