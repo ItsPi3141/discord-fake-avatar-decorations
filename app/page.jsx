@@ -151,11 +151,13 @@ export default function Home() {
 										id="avatar"
 										src={avUrl || "/avatar.png"}
 										className={"absolute top-[calc(80px*0.09)] left-[calc(80px*0.09)] w-[calc(80px*0.82)] h-[calc(80px*0.82)] rounded-full"}
+										draggable={false}
 									/>
 									<img
 										id="decoration"
 										src={decoUrl}
 										className="absolute top-0 left-0"
+										draggable={false}
 									/>
 								</div>
 								<div className="bg-[#229f56] w-7 h-7 absolute right-[-4px] bottom-[-4px] rounded-full border-[5px] border-surface2"></div>
@@ -175,9 +177,9 @@ export default function Home() {
 			) : (
 				<main className="flex flex-col justify-center items-center h-screen w-full text-white p-8">
 					<p className="text-4xl text-center ginto absolute mx-8 top-8 max-w-xl">DISCORD FAKE AVATAR DECORATIONS</p>
-					<span class="loading-container">
-						<span class="loading-cube"></span>
-						<span class="loading-cube"></span>
+					<span className="loading-container">
+						<span className="loading-cube"></span>
+						<span className="loading-cube"></span>
 					</span>
 					<p>Loading...</p>
 				</main>
