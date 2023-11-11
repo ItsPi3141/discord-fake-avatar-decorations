@@ -1,3 +1,6 @@
+# Discord Fake Avatar Decorations
+![Next JS](https://img.shields.io/badge/Next-black?style=for-the-badge&logo=next.js&logoColor=white)
+
 ## Getting Started
 
 First, run the development server:
