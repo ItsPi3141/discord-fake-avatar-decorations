@@ -5,6 +5,7 @@ import decorationsData from "../decorations.json";
 import { useEffect, useRef, useState } from "react";
 import { FFmpeg } from "@ffmpeg/ffmpeg";
 import { toBlobURL } from "@ffmpeg/util";
+import { cropToSquare } from "@/ffmpeg/cropImage";
 
 export default function Home() {
 	const [loaded, setLoaded] = useState(false);
@@ -14,7 +15,7 @@ export default function Home() {
 		const baseURL = "https://unpkg.com/@ffmpeg/core@0.12.2/dist/umd";
 		const ffmpeg = ffmpegRef.current;
 		ffmpeg.on("log", ({ message }) => {
-			console.log(message);
+			// console.log(message);
 		});
 		// toBlobURL is used to bypass CORS issue, urls with the same domain can be used directly.
 		await ffmpeg.load({
@@ -24,7 +25,11 @@ export default function Home() {
 		setLoaded(true);
 	};
 
-	const previewAvatar = () => {};
+	const previewAvatar = async (url) => {
+		var res = await cropToSquare(ffmpegRef.current, url);
+		if (!res) return setAvUrl(null);
+		setAvUrl(res);
+	};
 
 	const [name, setName] = useState("");
 	const [description, setDescription] = useState("");
@@ -39,7 +44,7 @@ export default function Home() {
 		<>
 			{loaded ? (
 				<main className="text-white w-full min-h-screen flex flex-col items-center">
-					<div className="bg-primary min-h-[20rem] w-full flex flex-col items-center justify-center text-center p-16">
+					<div className="bg-primary min-h-[20rem] w-[calc(100%-6rem)] flex flex-col items-center justify-center text-center p-16 mt-8 rounded-3xl">
 						<p className="text-5xl ginto">DISCORD</p>
 						<p className="text-4xl ginto mb-4">FAKE AVATAR DECORATIONS</p>
 						<p>Create profile pictures with avatar decorations so you can use them in Discord without spending money</p>
@@ -66,7 +71,13 @@ export default function Home() {
 										accept="image/png, image/jpeg, image/gif"
 										onChange={(e) => {
 											const [file] = e.target.files;
-											if (file) setAvUrl(URL.createObjectURL(file));
+											if (file) {
+												const reader = new FileReader();
+												reader.readAsDataURL(file);
+												reader.onload = () => {
+													previewAvatar(reader.result);
+												};
+											}
 										}}
 									/>
 									Upload image
@@ -76,8 +87,17 @@ export default function Home() {
 									type="text"
 									className="bg-surface1 outline-none py-2 px-2.5 rounded transition grow"
 									placeholder="Enter image URL..."
-									onChange={(e) => {
-										setAvUrl(e.target.value);
+									onChange={async (e) => {
+										var res = await fetch(e.target.value);
+										if (res.status < 200 || res.status >= 400) return setAvUrl(null);
+										var blob = await res.blob();
+										console.log(blob);
+										if (!["image/png", "image/jpeg", "image/gif"].includes(blob.type)) return setAvUrl(null);
+										const reader = new FileReader();
+										reader.readAsDataURL(blob);
+										reader.onload = () => {
+											previewAvatar(reader.result);
+										};
 									}}
 								/>
 							</div>
@@ -173,6 +193,7 @@ export default function Home() {
 							</div>
 						</div>
 					</div>
+					<p className="mb-4 text-gray-400 text-sm">This site is NOT affiliated with Discord Inc. in any way</p>
 				</main>
 			) : (
 				<main className="flex flex-col justify-center items-center h-screen w-full text-white p-8">
