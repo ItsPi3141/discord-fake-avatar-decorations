@@ -54,7 +54,7 @@ export default function Home() {
 						{/* SETTINGS */}
 						<div
 							id="settings"
-							className="grow block"
+							className="grow block select-none"
 						>
 							{/* UPLOAD AVATAR */}
 							<p className="text-sm font-semibold text-gray-300 [letter-spacing:.05em] scale-y-90 my-2">AVATAR</p>
@@ -133,7 +133,7 @@ export default function Home() {
 													return (
 														<button
 															key={index}
-															className="decor bg-surface1 h-20 w-20 rounded p-1 border-2 border-surface1"
+															className="decor bg-surface1 h-20 w-20 rounded-[5px] p-1 border-2 border-surface1"
 															onClick={(e) => {
 																setName(decor.name);
 																setDescription(decor.description);
@@ -163,7 +163,7 @@ export default function Home() {
 						{/* PROFILE PREVIEW */}
 						<div
 							id="profile-preview"
-							className="relative bg-surface2 w-[340px] h-[392px] rounded-xl shadow-lg overflow-hidden"
+							className="relative bg-surface2 w-[340px] h-[422px] rounded-xl shadow-lg overflow-hidden select-none"
 						>
 							<div className="h-[60px] bg-[#5461f2]"></div>
 							<div className="rounded-full w-[92px] h-[92px] border-[6px] bg-surface2 border-surface2 absolute top-4 left-5 select-none">
@@ -194,7 +194,7 @@ export default function Home() {
 								</div>
 								<div className="bg-[#229f56] w-7 h-7 absolute right-[-4px] bottom-[-4px] rounded-full border-[5px] border-surface2"></div>
 							</div>
-							<div className="p-4 m-4 bg-surface0 w-[calc(100%-32px)] h-[256px] rounded-lg absolute bottom-0">
+							<div className="p-4 m-4 bg-surface0 w-[calc(100%-32px)] h-[286px] rounded-lg absolute bottom-0">
 								<p className="text-xl font-semibold [letter-spacing:.02em]">{name || "Display Name"}</p>
 								<p className="text-sm">{description || "username"}</p>
 								<hr />
@@ -202,6 +202,19 @@ export default function Home() {
 								<p className="text-sm">Hello, this is an example profile so that you can see what the profile picture would actually look like on Discord.</p>
 								<p className="text-xs font-semibold [letter-spacing:.02em] scale-y-95 mt-3 mb-1">DISCORD MEMBER SINCE</p>
 								<p className="text-sm">May 13, 2015</p>
+								<button className="bg-secondary hover:bg-secondaryAlt py-1.5 rounded-[3px] transition w-full my-3 flex items-center justify-center gap-2">
+									<svg
+										xmlns="http://www.w3.org/2000/svg"
+										height="1em"
+										viewBox="0 0 448 512"
+									>
+										<path
+											fill="#ffffff"
+											d="M64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V173.3c0-17-6.7-33.3-18.7-45.3L352 50.7C340 38.7 323.7 32 306.7 32H64zm0 96c0-17.7 14.3-32 32-32H288c17.7 0 32 14.3 32 32v64c0 17.7-14.3 32-32 32H96c-17.7 0-32-14.3-32-32V128zM224 288a64 64 0 1 1 0 128 64 64 0 1 1 0-128z"
+										/>
+									</svg>
+									Save image
+								</button>
 							</div>
 						</div>
 					</div>
