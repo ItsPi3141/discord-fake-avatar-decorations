@@ -1,5 +1,4 @@
 "use client";
-import Image from "next/image";
 
 import decorationsData from "../decorations.json";
 import { useEffect, useRef, useState } from "react";
@@ -13,12 +12,12 @@ export default function Home() {
 	const ffmpegRef = useRef(new FFmpeg());
 
 	const load = async () => {
-		const baseURL = "https://unpkg.com/@ffmpeg/core@0.12.2/dist/umd";
+		const baseURL = "/ffmpeg/";
 		const ffmpeg = ffmpegRef.current;
 		// toBlobURL is used to bypass CORS issue, urls with the same domain can be used directly.
 		await ffmpeg.load({
-			coreURL: await toBlobURL(`${baseURL}/ffmpeg-core.js`, "text/javascript"),
-			wasmURL: await toBlobURL(`${baseURL}/ffmpeg-core.wasm`, "application/wasm")
+			coreURL: await toBlobURL(`${baseURL}ffmpeg-core.js`, "text/javascript"),
+			wasmURL: await toBlobURL(`${baseURL}ffmpeg-core.wasm`, "application/wasm")
 		});
 		setLoaded(true);
 	};
