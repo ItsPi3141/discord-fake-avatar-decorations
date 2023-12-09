@@ -62,7 +62,13 @@ export default function Home() {
 			{loaded ? (
 				<>
 					<main className="text-white w-screen h-screen overflow-auto flex flex-col items-center discord-scrollbar">
-						<div className="bg-primary min-h-[20rem] w-[calc(100%-6rem)] flex flex-col items-center justify-center text-center p-16 mt-8 rounded-3xl">
+						<div
+							className="bg-primary min-h-[20rem] w-[calc(100%-6rem)] flex flex-col items-center justify-center text-center p-16 mt-8 rounded-3xl"
+							style={{
+								backgroundImage: new Date().getMonth() == 11 ? "url(/wallpaper/winter.jpg)" : "",
+								backgroundPosition: "center bottom"
+							}}
+						>
 							<p className="text-5xl ginto">DISCORD</p>
 							<p className="text-4xl ginto mb-4">FAKE AVATAR DECORATIONS</p>
 							<p>Create profile pictures with avatar decorations so you can use them in Discord without spending money</p>
