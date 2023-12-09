@@ -9,7 +9,7 @@ export function Modal(props) {
 			}}
 		>
 			<div
-				className="w-[420px] min-h-[400px] bg-surface4 text-white rounded-lg overflow-hidden flex flex-col relative"
+				className="xs:w-[420px] xs:min-h-[400px] min-w-screen min-h-screen bg-surface4 text-white xs:rounded-lg overflow-hidden flex flex-col relative"
 				style={{
 					transition: "scale 0.2s ease-in-out",
 					scale: props.visible ? 1 : 0
@@ -32,12 +32,12 @@ export function Modal(props) {
 				</button>
 				{props.title && (
 					<div className="pt-8 flex justify-center">
-						<p className="text-2xl font-semibold [letter-spacing:.02em]">{props.title}</p>
+						<p className="text-2xl font-semibold [letter-spacing:.02em] text-center">{props.title}</p>
 					</div>
 				)}
 				{props.subtitle && (
 					<div className="flex justify-center px-4">
-						<p className="text-white text-opacity-70 text-center">{props.subtitle}</p>
+						<p className="text-white text-opacity-70 text-center xs:text-base text-sm">{props.subtitle}</p>
 					</div>
 				)}
 				<div className="grow p-4 flex flex-col justify-stretch">{props.children}</div>

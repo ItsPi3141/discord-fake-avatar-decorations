@@ -62,15 +62,15 @@ export default function Home() {
 				<>
 					<main className="text-white w-screen h-screen overflow-auto flex flex-col items-center discord-scrollbar">
 						<div
-							className="bg-primary min-h-[20rem] w-[calc(100%-6rem)] flex flex-col items-center justify-center text-center p-16 mt-8 rounded-3xl"
+							className="bg-primary min-h-[20rem] w-[calc(100%-6rem)] flex flex-col items-center justify-center text-center p-4 sm:p-16 mt-8 rounded-3xl"
 							style={{
 								backgroundImage: new Date().getMonth() == 11 ? "url(/wallpaper/winter.jpg)" : "",
 								backgroundPosition: "center bottom"
 							}}
 						>
-							<p className="text-5xl ginto">DISCORD</p>
-							<p className="text-4xl ginto mb-4">FAKE AVATAR DECORATIONS</p>
-							<p>Create profile pictures with avatar decorations so you can use them in Discord without spending money</p>
+							<p className="text-3xl sm:text-5xl ginto">DISCORD</p>
+							<p className="text-2xl sm:text-4xl ginto mb-4">FAKE AVATAR DECORATIONS</p>
+							<p className="text-sm sm:text-base">Create profile pictures with avatar decorations so you can use them in Discord without spending money</p>
 						</div>
 						<div className="flex flex-col md:flex-row items-center md:items-start gap-8 w-full max-w-[900px] px-8 py-12">
 							{/* SETTINGS */}
@@ -80,7 +80,7 @@ export default function Home() {
 							>
 								{/* UPLOAD AVATAR */}
 								<p className="text-sm font-semibold text-gray-300 [letter-spacing:.05em] scale-y-90 my-2">AVATAR</p>
-								<div className="flex gap-3 items-center">
+								<div className="flex gap-3 sm:items-center sm:flex-row flex-col">
 									<button
 										className="bg-primary hover:bg-primaryAlt py-2 px-4 rounded transition"
 										onClick={() => {
@@ -105,7 +105,7 @@ export default function Home() {
 										/>
 										Upload image
 									</button>
-									<p>or</p>
+									<p className="text-center sm:text-left">or</p>
 									<input
 										type="text"
 										className="bg-surface1 outline-none py-2 px-2.5 rounded transition grow"
@@ -130,9 +130,12 @@ export default function Home() {
 								<div className="discord-scrollbar flex flex-col gap-8 max-h-[480px] overflow-auto py-2">
 									{decorationsData.map((category, index) => {
 										return (
-											<div key={index}>
+											<div
+												key={index}
+												className="w-fit"
+											>
 												<div
-													className="w-full h-28 mb-4 flex flex-col justify-center items-center rounded-2xl"
+													className="w-full h-28 mb-4 flex flex-col justify-center items-center rounded-2xl p-4"
 													style={{
 														backgroundImage: `url(${category.banner.image})`,
 														backgroundSize: "cover",
@@ -146,10 +149,10 @@ export default function Home() {
 															height: `${category.banner.height || 48}px`
 														}}
 													/>
-													<p className="text-xs">{category.description}</p>
+													<p className="text-xs text-center xs:w-full w-[232px]">{category.description}</p>
 												</div>
 
-												<div className="flex flex-wrap gap-3 w-[448px]">
+												<div className="flex flex-wrap gap-3 w-[264px] xs:w-[356px] sm:w-[448px]">
 													{category.items.map((decor, index) => {
 														return (
 															<button
@@ -184,7 +187,7 @@ export default function Home() {
 							{/* PROFILE PREVIEW */}
 							<div
 								id="profile-preview"
-								className="relative bg-surface2 w-[340px] rounded-xl shadow-lg overflow-hidden select-none"
+								className="relative bg-surface2 w-[256px] xs:w-[340px] rounded-xl shadow-lg overflow-hidden select-none"
 							>
 								<div className="h-[60px] bg-[#5461f2]"></div>
 								<div className="rounded-full w-[92px] h-[92px] border-[6px] bg-surface2 border-surface2 absolute top-4 left-5 select-none">
