@@ -9,11 +9,11 @@
 		"lint": "next lint"
 	},
 	"dependencies": {
-		"@ffmpeg/ffmpeg": "latest",
-		"@ffmpeg/util": "latest",
-		"next": "latest",
-		"react": "latest",
-		"react-dom": "latest"
+		"@ffmpeg/ffmpeg": "^0.12.6",
+		"@ffmpeg/util": "^0.12.1",
+		"next": "^14.0.4",
+		"react": "^18.2.0",
+		"react-dom": "^18.2.0"
 	},
 	"devDependencies": {
 		"autoprefixer": "latest",
