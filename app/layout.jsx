@@ -29,7 +29,7 @@ export default function RootLayout({ children }) {
 				/>
 				<meta
 					property="og:image"
-					content="/android-chrome-192x192.png"
+					content="https://discord-decorations.netlify.app/android-chrome-192x192.png"
 				/>
 
 				{/* Twitter embeds */}
@@ -47,7 +47,7 @@ export default function RootLayout({ children }) {
 				/>
 				<meta
 					property="twitter:image"
-					content="/android-chrome-192x192.png"
+					content="https://discord-decorations.netlify.app/android-chrome-192x192.png"
 				/>
 
 				{/* Favicon */}
