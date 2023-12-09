@@ -1,5 +1,95 @@
 [
 	{
+		"name": "Winter Wonderland",
+		"description": "tis the season",
+		"banner": {
+			"image": "/banners/winter_wonderland.png",
+			"text": "/bannertext/winter_wonderland.png"
+		},
+		"items": [
+			{
+				"name": "New Year",
+				"description": "Ringing in 2024!",
+				"file": "/decorations/new_year.png"
+			},
+			{
+				"name": "Fresh Pine",
+				"description": "Ah...the smell of Winter.",
+				"file": "/decorations/fresh_pine.png"
+			},
+			{
+				"name": "Snowglobe",
+				"description": "Try not to shake too hard.",
+				"file": "/decorations/snowglobe.png"
+			},
+			{
+				"name": "String Lights",
+				"description": "String up some holiday cheer.",
+				"file": "/decorations/string_lights.png"
+			}
+		]
+	},
+	{
+		"name": "Halloween",
+		"description": "Fright and delight your friends, strangers, and friendly strangers.",
+		"banner": {
+			"image": "/banners/halloween.png",
+			"text": "/bannertext/halloween.png"
+		},
+		"items": [
+			{
+				"name": "Graveyard Cat",
+				"description": "Just a cat on graveyard duty.",
+				"file": "/decorations/graveyard_cat.png"
+			},
+			{
+				"name": "Ghosts",
+				"description": "Look at them just spinning and grinning all day...",
+				"file": "/decorations/ghosts.png"
+			},
+			{
+				"name": "Minions",
+				"description": "Name a more iconic duo.",
+				"file": "/decorations/minions.png"
+			},
+			{
+				"name": "Jack-o'-Lantern",
+				"description": "You can practically hear its eerie cackle...",
+				"file": "/decorations/jack_o_lantern.png"
+			}
+		]
+	},
+	{
+		"name": "Fall",
+		"description": "There's a calm and cozy vibe in the air.",
+		"banner": {
+			"image": "/banners/fall.png",
+			"text": "/bannertext/fall.png"
+		},
+		"items": [
+			{
+				"name": "Fall Leaves",
+				"description": "Behold nature's dance.",
+				"file": "/decorations/fall_leaves.png"
+			},
+			{
+				"name": "Pumpkin Spice",
+				"description": "Sweets and spice make everything nice.",
+				"file": "/decorations/pumpkin_spice.png"
+			},
+			{
+				"name": "Frog Hat",
+				"description": "Frogs and fashion go together and you can't tell me otherwise.",
+				"file": "/decorations/frog_hat.png"
+			},
+			{
+				"name": "Fox Hat",
+				"description": "Charming, cozy, and a little bit nosy.",
+				"file": "/decorations/fox_hat.png"
+			}
+		]
+	},
+	{
 		"name": "Fantasy",
 		"description": "You're walking in the forest and notice something magical and shiny.",
 		"banner": {
@@ -157,96 +247,6 @@
 				"name": "Smoke",
 				"description": "Now you see me, now you don't",
 				"file": "/decorations/smoke.png"
-			}
-		]
-	},
-	{
-		"name": "Fall",
-		"description": "There's a calm and cozy vibe in the air.",
-		"banner": {
-			"image": "/banners/fall.png",
-			"text": "/bannertext/fall.png"
-		},
-		"items": [
-			{
-				"name": "Fall Leaves",
-				"description": "Behold nature's dance.",
-				"file": "/decorations/fall_leaves.png"
-			},
-			{
-				"name": "Pumpkin Spice",
-				"description": "Sweets and spice make everything nice.",
-				"file": "/decorations/pumpkin_spice.png"
-			},
-			{
-				"name": "Frog Hat",
-				"description": "Frogs and fashion go together and you can't tell me otherwise.",
-				"file": "/decorations/frog_hat.png"
-			},
-			{
-				"name": "Fox Hat",
-				"description": "Charming, cozy, and a little bit nosy.",
-				"file": "/decorations/fox_hat.png"
-			}
-		]
-	},
-	{
-		"name": "Halloween",
-		"description": "Fright and delight your friends, strangers, and friendly strangers.",
-		"banner": {
-			"image": "/banners/halloween.png",
-			"text": "/bannertext/halloween.png"
-		},
-		"items": [
-			{
-				"name": "Graveyard Cat",
-				"description": "Just a cat on graveyard duty.",
-				"file": "/decorations/graveyard_cat.png"
-			},
-			{
-				"name": "Ghosts",
-				"description": "Look at them just spinning and grinning all day...",
-				"file": "/decorations/ghosts.png"
-			},
-			{
-				"name": "Minions",
-				"description": "Name a more iconic duo.",
-				"file": "/decorations/minions.png"
-			},
-			{
-				"name": "Jack-o'-Lantern",
-				"description": "You can practically hear its eerie cackle...",
-				"file": "/decorations/jack_o_lantern.png"
-			}
-		]
-	},
-	{
-		"name": "Winter Wonderland",
-		"description": "tis the season",
-		"banner": {
-			"image": "/banners/winter_wonderland.png",
-			"text": "/bannertext/winter_wonderland.png"
-		},
-		"items": [
-			{
-				"name": "New Year",
-				"description": "Ringing in 2024!",
-				"file": "/decorations/new_year.png"
-			},
-			{
-				"name": "Fresh Pine",
-				"description": "Ah...the smell of Winter.",
-				"file": "/decorations/fresh_pine.png"
-			},
-			{
-				"name": "Snowglobe",
-				"description": "Try not to shake too hard.",
-				"file": "/decorations/snowglobe.png"
-			},
-			{
-				"name": "String Lights",
-				"description": "String up some holiday cheer.",
-				"file": "/decorations/string_lights.png"
 			}
 		]
 	}
