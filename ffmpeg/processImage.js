@@ -18,8 +18,22 @@ export function cropToSquare(/** @type {FFmpeg} */ ffmpeg, /** @type {String} */
 		const ext = type.replace("image/", "");
 		await ffmpeg.writeFile(`avatarpreview.${ext}`, data);
 
+		const filter_complex = [
+			// Crop
+			"[0]format=argb,",
+			"scale=236:236,",
+			"crop=236:236,",
+
+			// Split into two images so the palette can be generated in one single command
+			"split[s0][s1];",
+
+			// Generate palette
+			"[s0]palettegen=reserve_transparent=on:transparency_color=ffffff[p];",
+			"[s1][p]paletteuse"
+		];
+
 		// run ffmpeg -i avatarpreview.png -vf "scale=236:236:force_original_aspect_ratio=increase,crop=236:236" avatarpreviewcropped.png
-		await ffmpeg.exec(["-i", `avatarpreview.${ext}`, "-vf", "scale=236:236:force_original_aspect_ratio=increase,crop=236:236", `avatarpreviewcropped.${ext}`]);
+		await ffmpeg.exec(["-i", `avatarpreview.${ext}`, "-filter_complex", filter_complex.join(""), `avatarpreviewcropped.${ext}`]);
 
 		const res = await ffmpeg.readFile(`avatarpreviewcropped.${ext}`);
 		const reader = new FileReader();
@@ -47,7 +61,7 @@ export function addDecoration(/** @type {FFmpeg} */ ffmpeg, /** @type {String} *
 				"color=s=288x288:d=100,format=argb,colorchannelmixer=aa=0.0[background];",
 
 				// Round the corners of the avatar image
-				"[0]format=argb,geq=lum='p(X,Y)':a='st(1,pow(min(W/2,H/2),2))+st(3,pow(X-(W/2),2)+pow(Y-(H/2),2));if(lte(ld(3),ld(1)),255,0)'[rounded avatar];",
+				"[0]format=argb,geq=lum='p(X,Y)':a='st(1,pow(min(W/2,H/2),2))+st(3,pow(X-(W/2),2)+pow(Y-(H/2),2));if(lte(ld(3),ld(1)),alpha(X,Y),0)'[rounded avatar];",
 
 				// Add base image to background
 				"[background][rounded avatar]overlay=",
@@ -60,7 +74,7 @@ export function addDecoration(/** @type {FFmpeg} */ ffmpeg, /** @type {String} *
 				"split[s0][s1];",
 
 				// Generate palette
-				"[s0]palettegen[p];",
+				"[s0]palettegen=reserve_transparent=on:transparency_color=ffffff[p];",
 				"[s1][p]paletteuse"
 			];
 
@@ -85,7 +99,7 @@ export function addDecoration(/** @type {FFmpeg} */ ffmpeg, /** @type {String} *
 				"color=s=288x288:d=100,format=argb,colorchannelmixer=aa=0.0[background];",
 
 				// Round the corners of the avatar image
-				"[0]format=yuva444p,geq=lum='p(X,Y)':a='st(1,pow(min(W/2,H/2),2))+st(3,pow(X-(W/2),2)+pow(Y-(H/2),2));if(lte(ld(3),ld(1)),255,0)'[rounded avatar];",
+				"[0]format=argb,geq=lum='p(X,Y)':a='st(1,pow(min(W/2,H/2),2))+st(3,pow(X-(W/2),2)+pow(Y-(H/2),2));if(lte(ld(3),ld(1)),alpha(X,Y),0)'[rounded avatar];",
 
 				// Add base image to background
 				"[background][rounded avatar]overlay=",
@@ -104,7 +118,7 @@ export function addDecoration(/** @type {FFmpeg} */ ffmpeg, /** @type {String} *
 				"split[s0][s1];",
 
 				// Generate palette
-				"[s0]palettegen[p];",
+				"[s0]palettegen=reserve_transparent=on:transparency_color=ffffff[p];",
 				"[s1][p]paletteuse"
 			];
 			await ffmpeg.exec(["-i", `avatarbase.${ext}`, "-i", "decoration.gif", "-filter_complex", filter_complex.join(""), "avatarwithdeco.gif"]);
