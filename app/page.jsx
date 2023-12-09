@@ -6,6 +6,7 @@ import { FFmpeg } from "@ffmpeg/ffmpeg";
 import { toBlobURL } from "@ffmpeg/util";
 import { addDecoration, cropToSquare } from "@/ffmpeg/processImage";
 import { Modal } from "./components/modal";
+import Link from "next/link";
 
 export default function Home() {
 	const [loaded, setLoaded] = useState(false);
@@ -251,7 +252,28 @@ export default function Home() {
 								</div>
 							</div>
 						</div>
-						<p className="mb-4 text-gray-400 text-sm">This site is NOT affiliated with Discord Inc. in any way</p>
+						<p className="mb-4 text-gray-400 text-sm text-center">
+							Website made by{" "}
+							<Link
+								href={"https://github.com/ItsPi3141"}
+								className="underline hover:text-gray-200"
+								target="_blank"
+							>
+								ItsPi3141
+							</Link>
+							<br />
+							This project is open-source! View{" "}
+							<Link
+								href={"https://github.com/ItsPi3141/discord-fake-avatar-decorations"}
+								className="underline hover:text-gray-200"
+								target="_blank"
+							>
+								source code
+							</Link>{" "}
+							on GitHub.
+							<br />
+							This site is NOT affiliated with Discord Inc. in any way. All images and assets belong to Discord Inc.
+						</p>
 					</main>
 					<Modal
 						title={"Download Decorated Avatar"}
