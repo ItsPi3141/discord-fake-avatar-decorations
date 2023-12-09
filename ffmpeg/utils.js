@@ -1,3 +1,9 @@
+/**
+ * Retrieves the MIME type of an ArrayBuffer or Uint8Array.
+ *
+ * @param {Uint8Array | ArrayBuffer} arrayBuffer - The input ArrayBuffer or Uint8Array.
+ * @return {string | null} The MIME type of the input data, or null if it is not recognized.
+ */
 export function getMimeTypeFromArrayBuffer(/** @type {Uint8Array | ArrayBuffer} */ arrayBuffer) {
 	const uint8arr = new Uint8Array(arrayBuffer);
 

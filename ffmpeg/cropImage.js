@@ -2,7 +2,14 @@ import { FFmpeg } from "@ffmpeg/ffmpeg";
 import { fetchFile } from "@ffmpeg/util";
 import { getMimeTypeFromArrayBuffer } from "./utils";
 
-// Crops image to fit in square aspect ratio
+
+/**
+ * Crop the image to a square shape using FFmpeg.
+ *
+ * @param {FFmpeg} ffmpeg - The FFmpeg instance.
+ * @param {String} url - The URL or B64 string of the image to crop.
+ * @return {Promise} A promise that resolves with the cropped image data.
+ */
 export function cropToSquare(/** @type {FFmpeg} */ ffmpeg, /** @type {String} */ url) {
 	return new Promise(async (resolve, reject) => {
 		const data = await fetchFile(url);
