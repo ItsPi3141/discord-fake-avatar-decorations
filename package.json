@@ -1,23 +1,23 @@
 {
-  "name": "discord-fake-avatar-deco",
-  "version": "0.1.0",
-  "private": true,
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
-  },
-  "dependencies": {
-    "@ffmpeg/ffmpeg": "^0.12.6",
-    "@ffmpeg/util": "^0.12.1",
-    "next": "latest",
-    "react": "latest",
-    "react-dom": "latest"
-  },
-  "devDependencies": {
-    "autoprefixer": "latest",
-    "postcss": "latest",
-    "tailwindcss": "latest"
-  }
+	"name": "discord-fake-avatar-deco",
+	"version": "0.1.0",
+	"private": true,
+	"scripts": {
+		"dev": "next dev",
+		"build": "next build",
+		"start": "next start",
+		"lint": "next lint"
+	},
+	"dependencies": {
+		"@ffmpeg/ffmpeg": "latest",
+		"@ffmpeg/util": "latest",
+		"next": "latest",
+		"react": "latest",
+		"react-dom": "latest"
+	},
+	"devDependencies": {
+		"autoprefixer": "latest",
+		"postcss": "latest",
+		"tailwindcss": "latest"
+	}
 }

@@ -219,5 +219,35 @@
 				"file": "/decorations/jack_o_lantern.png"
 			}
 		]
+	},
+	{
+		"name": "Winter Wonderland",
+		"description": "tis the season",
+		"banner": {
+			"image": "/banners/winter_wonderland.png",
+			"text": "/bannertext/winter_wonderland.png"
+		},
+		"items": [
+			{
+				"name": "New Year",
+				"description": "Ringing in 2024!",
+				"file": "/decorations/new_year.png"
+			},
+			{
+				"name": "Fresh Pine",
+				"description": "Ah...the smell of Winter.",
+				"file": "/decorations/fresh_pine.png"
+			},
+			{
+				"name": "Snowglobe",
+				"description": "Try not to shake too hard.",
+				"file": "/decorations/snowglobe.png"
+			},
+			{
+				"name": "String Lights",
+				"description": "String up some holiday cheer.",
+				"file": "/decorations/string_lights.png"
+			}
+		]
 	}
 ]
