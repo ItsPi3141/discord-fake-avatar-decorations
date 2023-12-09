@@ -1,0 +1,11 @@
+@media screen and (max-width: 440px) {
+	.modal-box {
+		scale: 1 !important;
+		transform-origin: bottom;
+	}
+}
+@media screen and (min-width: 440px) {
+	.modal-box {
+		transform: translateY(0) !important;
+	}
+}

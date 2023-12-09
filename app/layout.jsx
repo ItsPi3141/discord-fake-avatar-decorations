@@ -1,6 +1,7 @@
 "use client";
 
 import "./globals.css";
+import "./components/modal.css";
 
 export default function RootLayout({ children }) {
 	return (

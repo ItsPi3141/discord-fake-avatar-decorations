@@ -9,10 +9,11 @@ export function Modal(props) {
 			}}
 		>
 			<div
-				className="xs:w-[420px] xs:min-h-[400px] min-w-screen min-h-screen bg-surface4 text-white xs:rounded-lg overflow-hidden flex flex-col relative"
+				className="modal-box xs:w-[420px] xs:min-h-[400px] w-screen min-h-screen bg-surface4 text-white xs:rounded-lg overflow-hidden flex flex-col relative"
 				style={{
-					transition: "scale 0.2s ease-in-out",
-					scale: props.visible ? 1 : 0
+					transition: "all 0.2s ease-in-out",
+					scale: props.visible ? 1 : 0,
+					transform: props.visible ? "translateY(0)" : "translateY(100%)"
 				}}
 			>
 				<button
