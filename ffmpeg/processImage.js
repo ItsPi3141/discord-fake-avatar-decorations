@@ -1,3 +1,4 @@
+"use client";
 import { FFmpeg } from "@ffmpeg/ffmpeg";
 import { fetchFile } from "@ffmpeg/util";
 import { getMimeTypeFromArrayBuffer } from "./utils";
