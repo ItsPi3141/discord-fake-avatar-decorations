@@ -34,7 +34,7 @@ export default function Home() {
 			addDecoration(ffmpegRef.current, url, deco).then((res) => {
 				if (!res) return setFinishedAv(null), setGenerationFailed(true);
 				setFinishedAv(res);
-				// setIsGeneratingAv(false);
+				setIsGeneratingAv(false);
 			});
 		} catch {
 			setGenerationFailed(true);
