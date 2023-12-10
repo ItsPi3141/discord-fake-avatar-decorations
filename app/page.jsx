@@ -7,6 +7,7 @@ import { toBlobURL } from "@ffmpeg/util";
 import { addDecoration, cropToSquare } from "@/ffmpeg/processImage";
 import { Modal } from "./components/modal";
 import Link from "next/link";
+import Image from "next/image";
 import Twemoji from "./components/twemoji";
 
 export default function Home() {
@@ -137,21 +138,45 @@ export default function Home() {
 												className="w-fit"
 											>
 												<div
-													className="w-full h-28 mb-4 flex flex-col justify-center items-center rounded-2xl p-4"
-													style={{
-														backgroundImage: `url(${category.banner.image})`,
-														backgroundSize: "cover",
-														backgroundPosition: "center"
-													}}
+													className="w-full h-28 mb-4 grid grid-cols-1 grid-rows-1 justify-center items-center rounded-2xl overflow-hidden bg-black"
+													style={
+														{
+															// backgroundImage: `url(${category.banner.image})`,
+															// backgroundSize: "cover",
+															// backgroundPosition: "center"
+														}
+													}
 												>
-													<img
-														src={category.banner.text}
-														alt={category.name}
+													<Image
+														className="[grid-column:1/1] [grid-row:1/1] object-cover"
+														src={category.banner.image}
+														alt={""}
+														draggable={false}
+														loading="eager"
+														height={0}
+														width={0}
+														sizes="640px"
 														style={{
-															height: `${category.banner.height || 48}px`
+															height: "100%",
+															width: "auto"
 														}}
 													/>
-													<p className="text-xs text-center xs:w-full w-[232px]">{category.description}</p>
+													<div className="[grid-column:1/1] [grid-row:1/1] flex flex-col justify-center items-center p-4">
+														<Image
+															src={category.banner.text}
+															alt={category.name}
+															draggable={false}
+															loading="eager"
+															height={0}
+															width={0}
+															sizes="256px"
+															style={{
+																height: `${category.banner.height || 48}px`,
+																width: "auto"
+															}}
+														/>
+														<p className="text-xs text-center xs:w-full w-[232px]">{category.description}</p>
+													</div>
 												</div>
 
 												<div className="flex flex-wrap gap-3 w-[264px] xs:w-[356px] sm:w-[448px]">
@@ -172,9 +197,19 @@ export default function Home() {
 																	e.target.classList.remove("border-surface1");
 																}}
 															>
-																<img
-																	src={decor.file}
+																<Image
 																	className="pointer-events-none"
+																	src={decor.file}
+																	alt={""}
+																	draggable={false}
+																	loading="eager"
+																	height={0}
+																	width={0}
+																	sizes="96px"
+																	style={{
+																		height: `100%`,
+																		width: "100%"
+																	}}
 																/>
 															</button>
 														);
@@ -204,18 +239,28 @@ export default function Home() {
 												</div>
 											) : (
 												<>
-													<img
-														id="avatar"
+													<Image
+														className="absolute top-[calc(80px*0.09)] left-[calc(80px*0.09)] w-[calc(80px*0.82)] h-[calc(80px*0.82)] rounded-full"
 														src={avUrl || "/avatar.png"}
-														className={"absolute top-[calc(80px*0.09)] left-[calc(80px*0.09)] w-[calc(80px*0.82)] h-[calc(80px*0.82)] rounded-full"}
+														alt={""}
 														draggable={false}
+														loading="eager"
+														height={0}
+														width={0}
+														sizes="48px"
 													/>
-													<img
-														id="decoration"
-														src={decoUrl}
-														className="absolute top-0 left-0"
-														draggable={false}
-													/>
+													{decoUrl && (
+														<Image
+															className="absolute top-0 left-0 w-[80px] h-[80px]"
+															src={decoUrl}
+															alt={""}
+															draggable={false}
+															loading="eager"
+															height={0}
+															width={0}
+															sizes="48px"
+														/>
+													)}
 												</>
 											)}
 										</div>
@@ -310,19 +355,39 @@ export default function Home() {
 													<>
 														{m.styled ? (
 															<div className="w-10 h-10 rounded-full overflow-hidden relative">
-																<img
-																	src={avUrl || "/avatar.png"}
+																<Image
 																	className="absolute top-[calc(40px*0.09)] left-[calc(40px*0.09)] w-[calc(40px*0.82)] h-[calc(40px*0.82)] rounded-full"
+																	src={avUrl || "/avatar.png"}
+																	alt={""}
+																	draggable={false}
+																	loading="eager"
+																	height={0}
+																	width={0}
+																	sizes="48px"
 																/>
-																<img
-																	src={decoUrl}
-																	className="absolute top-0 left-0"
-																/>
+																{decoUrl && (
+																	<Image
+																		className="absolute top-0 left-0 h-10 w-10 rounded-full"
+																		src={decoUrl}
+																		alt={""}
+																		draggable={false}
+																		loading="eager"
+																		height={0}
+																		width={0}
+																		sizes="48px"
+																	/>
+																)}
 															</div>
 														) : (
-															<img
-																src={avUrl || "/avatar.png"}
+															<Image
 																className="w-10 h-10 rounded-full"
+																src={avUrl || "/avatar.png"}
+																alt={""}
+																draggable={false}
+																loading="eager"
+																height={0}
+																width={0}
+																sizes="48px"
 															/>
 														)}
 													</>
