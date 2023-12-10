@@ -186,7 +186,7 @@ export default function Home() {
 								</div>
 							</div>
 
-							<div className="flex flex-col gap-8">
+							<div className="flex flex-col gap-8 items-center">
 								{/* PROFILE PREVIEW */}
 								<div
 									id="profile-preview"
@@ -329,18 +329,18 @@ export default function Home() {
 												)}
 												<div className="flex flex-col">
 													{m.groupStart && (
-														<div className="flex items-center gap-2">
-															<p className="text-base font-medium h-fit">{name || "Display Name"}</p>
-															<p className="text-xs h-4 text-secondaryLight">
+														<p className="text-base font-medium h-fit">
+															<span className="mr-1">{name || "Display Name"}</span>
+															<span className="text-xs h-4 text-secondaryLight ml-1">
 																Today at {[new Date().getHours() % 12, new Date().getMinutes()].join(":") + (new Date().getHours() >= 12 ? " PM" : " AM")}
-															</p>
-														</div>
+															</span>
+														</p>
 													)}
 
 													<p
 														style={{
 															marginLeft: m.groupStart ? "0" : "56px",
-															height: m.groupStart ? "" : "22px"
+															lineHeight: "22px"
 														}}
 													>
 														{m.text}
