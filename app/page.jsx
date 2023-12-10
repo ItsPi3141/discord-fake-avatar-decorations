@@ -247,7 +247,7 @@ export default function Home() {
 														loading="eager"
 														height={0}
 														width={0}
-														sizes="48px"
+														sizes="96px"
 													/>
 													{decoUrl && (
 														<Image
@@ -258,7 +258,7 @@ export default function Home() {
 															loading="eager"
 															height={0}
 															width={0}
-															sizes="48px"
+															sizes="96px"
 														/>
 													)}
 												</>
@@ -363,7 +363,7 @@ export default function Home() {
 																	loading="eager"
 																	height={0}
 																	width={0}
-																	sizes="48px"
+																	sizes="96px"
 																/>
 																{decoUrl && (
 																	<Image
@@ -374,7 +374,7 @@ export default function Home() {
 																		loading="eager"
 																		height={0}
 																		width={0}
-																		sizes="48px"
+																		sizes="96px"
 																	/>
 																)}
 															</div>
