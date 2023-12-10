@@ -7,6 +7,7 @@ import { toBlobURL } from "@ffmpeg/util";
 import { addDecoration, cropToSquare } from "@/ffmpeg/processImage";
 import { Modal } from "./components/modal";
 import Link from "next/link";
+import Twemoji from "./components/twemoji";
 
 export default function Home() {
 	const [loaded, setLoaded] = useState(false);
@@ -128,7 +129,7 @@ export default function Home() {
 
 								{/* SELECT DECORATION */}
 								<p className="text-sm font-semibold text-gray-300 [letter-spacing:.05em] scale-y-90 my-2">AVATAR DECORATION</p>
-								<div className="discord-scrollbar flex flex-col gap-8 max-h-[480px] overflow-auto py-2">
+								<div className="discord-scrollbar flex flex-col gap-8 max-h-[532px] overflow-auto py-1">
 									{decorationsData.map((category, index) => {
 										return (
 											<div
@@ -185,70 +186,169 @@ export default function Home() {
 								</div>
 							</div>
 
-							{/* PROFILE PREVIEW */}
-							<div
-								id="profile-preview"
-								className="relative bg-surface2 w-[256px] xs:w-[340px] rounded-xl shadow-lg overflow-hidden select-none"
-							>
-								<div className="h-[60px] bg-[#5461f2]"></div>
-								<div className="rounded-full w-[92px] h-[92px] border-[6px] bg-surface2 border-surface2 absolute top-4 left-5 select-none">
-									<div className="relative w-[80px] h-[80px] rounded-full overflow-hidden">
-										{avUrl == "loading" ? (
-											<div className="absolute top-[24px] left-[24px]">
-												<span className="loading-container">
-													<span className="loading-cube"></span>
-													<span className="loading-cube"></span>
-												</span>
-											</div>
-										) : (
-											<>
-												<img
-													id="avatar"
-													src={avUrl || "/avatar.png"}
-													className={"absolute top-[calc(80px*0.09)] left-[calc(80px*0.09)] w-[calc(80px*0.82)] h-[calc(80px*0.82)] rounded-full"}
-													draggable={false}
-												/>
-												<img
-													id="decoration"
-													src={decoUrl}
-													className="absolute top-0 left-0"
-													draggable={false}
-												/>
-											</>
-										)}
+							<div className="flex flex-col gap-8">
+								{/* PROFILE PREVIEW */}
+								<div
+									id="profile-preview"
+									className="relative bg-surface2 w-[256px] xs:w-[340px] rounded-xl shadow-lg overflow-hidden select-none"
+								>
+									<div className="h-[60px] bg-[#5461f2]"></div>
+									<div className="rounded-full w-[92px] h-[92px] border-[6px] bg-surface2 border-surface2 absolute top-4 left-5 select-none">
+										<div className="relative w-[80px] h-[80px] rounded-full overflow-hidden">
+											{avUrl == "loading" ? (
+												<div className="absolute top-[24px] left-[24px]">
+													<span className="loading-container">
+														<span className="loading-cube"></span>
+														<span className="loading-cube"></span>
+													</span>
+												</div>
+											) : (
+												<>
+													<img
+														id="avatar"
+														src={avUrl || "/avatar.png"}
+														className={"absolute top-[calc(80px*0.09)] left-[calc(80px*0.09)] w-[calc(80px*0.82)] h-[calc(80px*0.82)] rounded-full"}
+														draggable={false}
+													/>
+													<img
+														id="decoration"
+														src={decoUrl}
+														className="absolute top-0 left-0"
+														draggable={false}
+													/>
+												</>
+											)}
+										</div>
+										<div className="bg-[#229f56] w-7 h-7 absolute right-[-4px] bottom-[-4px] rounded-full border-[5px] border-surface2"></div>
 									</div>
-									<div className="bg-[#229f56] w-7 h-7 absolute right-[-4px] bottom-[-4px] rounded-full border-[5px] border-surface2"></div>
-								</div>
-								<div className="p-4 m-4 bg-surface0 w-[calc(100%-32px)] rounded-lg mt-[calc(15rem/4)]">
-									<p className="text-xl font-semibold [letter-spacing:.02em]">{name || "Display Name"}</p>
-									<p className="text-sm">{description || "username"}</p>
-									<hr />
-									<p className="text-xs font-semibold [letter-spacing:.02em] scale-y-95 mb-1">ABOUT ME</p>
-									<p className="text-sm">Hello, this is an example profile so that you can see what the profile picture would actually look like on Discord.</p>
-									<p className="text-xs font-semibold [letter-spacing:.02em] scale-y-95 mt-3 mb-1">DISCORD MEMBER SINCE</p>
-									<p className="text-sm">May 13, 2015</p>
-									<button
-										className="bg-secondary hover:bg-secondaryAlt py-1.5 rounded-[3px] transition w-full mt-3 flex items-center justify-center gap-2"
-										onClick={() => {
-											setFinishedAv("");
-											setIsGeneratingAv(true);
-											setGenerationFailed(false);
-											setDownloadModalVisible(true);
-											createAvatar(avUrl || "/avatar.png", decoUrl);
-										}}
-									>
-										<svg
-											xmlns="http://www.w3.org/2000/svg"
-											height="1em"
-											viewBox="0 0 448 512"
+									<div className="p-4 m-4 bg-surface0 w-[calc(100%-32px)] rounded-lg mt-[calc(15rem/4)]">
+										<p className="text-xl font-semibold [letter-spacing:.02em]">{name || "Display Name"}</p>
+										<p className="text-sm">{description || "username"}</p>
+										<hr />
+										<p className="text-xs font-semibold [letter-spacing:.02em] scale-y-95 mb-1">ABOUT ME</p>
+										<p className="text-sm">Hello, this is an example profile so that you can see what the profile picture would actually look like on Discord.</p>
+										<p className="text-xs font-semibold [letter-spacing:.02em] scale-y-95 mt-3 mb-1">DISCORD MEMBER SINCE</p>
+										<p className="text-sm">May 13, 2015</p>
+										<button
+											className="bg-secondary hover:bg-secondaryAlt py-1.5 rounded-[3px] transition w-full mt-3 flex items-center justify-center gap-2"
+											onClick={() => {
+												setFinishedAv("");
+												setIsGeneratingAv(true);
+												setGenerationFailed(false);
+												setDownloadModalVisible(true);
+												createAvatar(avUrl || "/avatar.png", decoUrl);
+											}}
 										>
-											<path
-												fill="#ffffff"
-												d="M64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V173.3c0-17-6.7-33.3-18.7-45.3L352 50.7C340 38.7 323.7 32 306.7 32H64zm0 96c0-17.7 14.3-32 32-32H288c17.7 0 32 14.3 32 32v64c0 17.7-14.3 32-32 32H96c-17.7 0-32-14.3-32-32V128zM224 288a64 64 0 1 1 0 128 64 64 0 1 1 0-128z"
-											/>
-										</svg>
-										Save image
-									</button>
+											<svg
+												xmlns="http://www.w3.org/2000/svg"
+												height="1em"
+												viewBox="0 0 448 512"
+											>
+												<path
+													fill="#ffffff"
+													d="M64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V173.3c0-17-6.7-33.3-18.7-45.3L352 50.7C340 38.7 323.7 32 306.7 32H64zm0 96c0-17.7 14.3-32 32-32H288c17.7 0 32 14.3 32 32v64c0 17.7-14.3 32-32 32H96c-17.7 0-32-14.3-32-32V128zM224 288a64 64 0 1 1 0 128 64 64 0 1 1 0-128z"
+												/>
+											</svg>
+											Save image
+										</button>
+									</div>
+								</div>
+								{/* Message preview */}
+								<div className="py-4 bg-surface3 border border-surface1 w-full rounded-lg select-none cursor-default">
+									{[
+										{
+											styled: false,
+											groupStart: true,
+											text: "Look at me I'm a beautiful butterfly"
+										},
+										{
+											styled: false,
+											groupStart: false,
+											text: (
+												<>
+													Fluttering in the moonlight <Twemoji emoji={"🌝"} />
+												</>
+											)
+										},
+										{
+											styled: false,
+											groupStart: false,
+											text: "Waiting for the day when"
+										},
+										{
+											styled: false,
+											groupStart: false,
+											text: "I get a profile picture decoration"
+										},
+										{
+											styled: true,
+											groupStart: true,
+											text: (
+												<>
+													{decoUrl ? (
+														<>
+															Yay! Here it is! <Twemoji emoji={"🎉"} />
+														</>
+													) : (
+														<>
+															Hmm... I still don't see it <Twemoji emoji={"🤔"} />
+														</>
+													)}
+												</>
+											)
+										}
+									].map((m, i) => {
+										return (
+											<div
+												className="flex px-4 py-0.5 items-center gap-4 hover:bg-[#02020210]"
+												style={{
+													marginTop: m.groupStart && i != 0 ? "17px" : "0"
+												}}
+												key={i}
+											>
+												{m.groupStart && (
+													<>
+														{m.styled ? (
+															<div className="w-10 h-10 rounded-full overflow-hidden relative">
+																<img
+																	src={avUrl || "/avatar.png"}
+																	className="absolute top-[calc(40px*0.09)] left-[calc(40px*0.09)] w-[calc(40px*0.82)] h-[calc(40px*0.82)] rounded-full"
+																/>
+																<img
+																	src={decoUrl}
+																	className="absolute top-0 left-0"
+																/>
+															</div>
+														) : (
+															<img
+																src={avUrl || "/avatar.png"}
+																className="w-10 h-10 rounded-full"
+															/>
+														)}
+													</>
+												)}
+												<div className="flex flex-col">
+													{m.groupStart && (
+														<div className="flex items-center gap-2">
+															<p className="text-base font-medium h-fit">{name || "Display Name"}</p>
+															<p className="text-xs h-4 text-secondaryLight">
+																Today at {[new Date().getHours() % 12, new Date().getMinutes()].join(":") + (new Date().getHours() >= 12 ? " PM" : " AM")}
+															</p>
+														</div>
+													)}
+
+													<p
+														style={{
+															marginLeft: m.groupStart ? "0" : "56px",
+															height: m.groupStart ? "" : "22px"
+														}}
+													>
+														{m.text}
+													</p>
+												</div>
+											</div>
+										);
+									})}
 								</div>
 							</div>
 						</div>

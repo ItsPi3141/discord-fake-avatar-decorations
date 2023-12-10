@@ -8,6 +8,7 @@ module.exports = {
 				primaryAlt: "#4752c4",
 				secondary: "#4e5058",
 				secondaryAlt: "#6d6f78",
+				secondaryLight: "#949ba4",
 				surface0: "#111214",
 				surface1: "#1e1f22",
 				surface2: "#232428",

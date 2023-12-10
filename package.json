@@ -13,7 +13,8 @@
 		"@ffmpeg/util": "0.12.1",
 		"next": "14.0.4",
 		"react": "18.2.0",
-		"react-dom": "18.2.0"
+		"react-dom": "18.2.0",
+		"twemoji": "^14.0.2"
 	},
 	"devDependencies": {
 		"autoprefixer": "latest",

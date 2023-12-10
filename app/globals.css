@@ -9,8 +9,26 @@
 @font-face {
 	font-family: "gg sans";
 	font-style: normal;
+	font-weight: 700;
+	src: local("gg sans"), url("https://fonts.cdnfonts.com/s/93931/gg sans Bold.woff") format("woff");
+}
+@font-face {
+	font-family: "gg sans";
+	font-style: normal;
 	font-weight: 400;
 	src: local("gg sans Normal"), url("https://fonts.cdnfonts.com/s/93931/gg sans Regular.woff") format("woff");
+}
+@font-face {
+	font-family: "gg sans";
+	font-style: normal;
+	font-weight: 500;
+	src: local("gg sans Medium"), url("https://fonts.cdnfonts.com/s/93931/gg sans Medium.woff") format("woff");
+}
+@font-face {
+	font-family: "gg sans";
+	font-style: normal;
+	font-weight: 600;
+	src: local("gg sans SemiBold"), url("https://fonts.cdnfonts.com/s/93931/gg sans Semibold.woff") format("woff");
 }
 
 * {
@@ -46,6 +64,9 @@ body::-webkit-scrollbar-track {
 	border-radius: 99px;
 	border: solid 6.5px transparent;
 	background-clip: content-box;
+}
+.discord-scrollbar:not(main)::-webkit-scrollbar-track {
+	margin: -6.5px 0;
 }
 .discord-scrollbar::-webkit-scrollbar-thumb,
 body::-webkit-scrollbar-thumb {

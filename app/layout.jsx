@@ -2,6 +2,7 @@
 
 import "./globals.css";
 import "./components/modal.css";
+import "./components/twemoji.css";
 
 export default function RootLayout({ children }) {
 	return (
