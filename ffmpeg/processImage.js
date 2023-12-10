@@ -21,8 +21,8 @@ export function cropToSquare(/** @type {FFmpeg} */ ffmpeg, /** @type {String} */
 		const filter_complex = [
 			// Crop
 			"[0]format=argb,",
-			"scale=236:236,",
-			"crop=236:236,",
+			"scale='max(iw*238/ih,238):max(238,ih*238/iw)',",
+			"crop=238:238,",
 
 			// Split into two images so the palette can be generated in one single command
 			"split[s0][s1];",
@@ -32,10 +32,9 @@ export function cropToSquare(/** @type {FFmpeg} */ ffmpeg, /** @type {String} */
 			"[s1][p]paletteuse"
 		];
 
-		// run ffmpeg -i avatarpreview.png -vf "scale=236:236:force_original_aspect_ratio=increase,crop=236:236" avatarpreviewcropped.png
-		await ffmpeg.exec(["-i", `avatarpreview.${ext}`, "-filter_complex", filter_complex.join(""), `avatarpreviewcropped.${ext}`]);
+		await ffmpeg.exec(["-i", `avatarpreview.${ext}`, "-filter_complex", filter_complex.join(""), `avatarpreviewcropped.gif`]);
 
-		const res = await ffmpeg.readFile(`avatarpreviewcropped.${ext}`);
+		const res = await ffmpeg.readFile(`avatarpreviewcropped.gif`);
 		const reader = new FileReader();
 		reader.readAsDataURL(new Blob([new Uint8Array(res.buffer, res.byteOffset, res.length)], { type: type }));
 		reader.onload = () => {
