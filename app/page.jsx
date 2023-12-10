@@ -7,8 +7,8 @@ import { toBlobURL } from "@ffmpeg/util";
 import { addDecoration, cropToSquare } from "@/ffmpeg/processImage";
 import { Modal } from "./components/modal";
 import Link from "next/link";
-import Image from "next/image";
 import Twemoji from "./components/twemoji";
+import Image from "next/image";
 
 export default function Home() {
 	const [loaded, setLoaded] = useState(false);
@@ -197,19 +197,9 @@ export default function Home() {
 																	e.target.classList.remove("border-surface1");
 																}}
 															>
-																<Image
-																	className="pointer-events-none"
+																<img
 																	src={decor.file}
-																	alt={""}
-																	draggable={false}
-																	loading="eager"
-																	height={0}
-																	width={0}
-																	sizes="96px"
-																	style={{
-																		height: `100%`,
-																		width: "100%"
-																	}}
+																	className="pointer-events-none"
 																/>
 															</button>
 														);
@@ -239,28 +229,18 @@ export default function Home() {
 												</div>
 											) : (
 												<>
-													<Image
-														className="absolute top-[calc(80px*0.09)] left-[calc(80px*0.09)] w-[calc(80px*0.82)] h-[calc(80px*0.82)] rounded-full"
+													<img
+														id="avatar"
 														src={avUrl || "/avatar.png"}
-														alt={""}
+														className={"absolute top-[calc(80px*0.09)] left-[calc(80px*0.09)] w-[calc(80px*0.82)] h-[calc(80px*0.82)] rounded-full"}
 														draggable={false}
-														loading="eager"
-														height={0}
-														width={0}
-														sizes="96px"
 													/>
-													{decoUrl && (
-														<Image
-															className="absolute top-0 left-0 w-[80px] h-[80px]"
-															src={decoUrl}
-															alt={""}
-															draggable={false}
-															loading="eager"
-															height={0}
-															width={0}
-															sizes="96px"
-														/>
-													)}
+													<img
+														id="decoration"
+														src={decoUrl}
+														className="absolute top-0 left-0"
+														draggable={false}
+													/>
 												</>
 											)}
 										</div>
@@ -353,42 +333,38 @@ export default function Home() {
 											>
 												{m.groupStart && (
 													<>
-														{m.styled ? (
-															<div className="w-10 h-10 rounded-full overflow-hidden relative">
-																<Image
-																	className="absolute top-[calc(40px*0.09)] left-[calc(40px*0.09)] w-[calc(40px*0.82)] h-[calc(40px*0.82)] rounded-full"
-																	src={avUrl || "/avatar.png"}
-																	alt={""}
-																	draggable={false}
-																	loading="eager"
-																	height={0}
-																	width={0}
-																	sizes="96px"
-																/>
-																{decoUrl && (
-																	<Image
-																		className="absolute top-0 left-0 h-10 w-10 rounded-full"
-																		src={decoUrl}
-																		alt={""}
-																		draggable={false}
-																		loading="eager"
-																		height={0}
-																		width={0}
-																		sizes="96px"
-																	/>
-																)}
+														{avUrl == "loading" ? (
+															<div className="w-10 h-10 relative scale-75">
+																<span className="loading-container">
+																	<span className="loading-cube"></span>
+																	<span className="loading-cube"></span>
+																</span>
 															</div>
 														) : (
-															<Image
-																className="w-10 h-10 rounded-full"
-																src={avUrl || "/avatar.png"}
-																alt={""}
-																draggable={false}
-																loading="eager"
-																height={0}
-																width={0}
-																sizes="48px"
-															/>
+															<>
+																{m.styled ? (
+																	<div className="w-10 h-10 rounded-full overflow-hidden relative">
+																		<img
+																			src={avUrl || "/avatar.png"}
+																			draggable={false}
+																			className="absolute top-[calc(40px*0.09)] left-[calc(40px*0.09)] w-[calc(40px*0.82)] h-[calc(40px*0.82)] rounded-full"
+																		/>
+																		{decoUrl && (
+																			<img
+																				src={decoUrl}
+																				draggable={false}
+																				className="absolute top-0 left-0"
+																			/>
+																		)}
+																	</div>
+																) : (
+																	<img
+																		src={avUrl || "/avatar.png"}
+																		draggable={false}
+																		className="w-10 h-10 rounded-full"
+																	/>
+																)}
+															</>
 														)}
 													</>
 												)}
