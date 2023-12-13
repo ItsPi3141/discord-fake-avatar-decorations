@@ -1,5 +1,55 @@
 [
 	{
+		"name": "Monsters",
+		"description": "We're not a menace, just misunderstood.",
+		"banner": {
+			"image": "/banners/monsters.png",
+			"text": "/bannertext/monsters.png"
+		},
+		"items": [
+			{
+				"name": "Beamchop",
+				"description": "Awh it's so cu- AHHH",
+				"file": "/decorations/beamchop.png"
+			},
+			{
+				"name": "Stinkums",
+				"description": "Questionably dealt. Definitely smelt.",
+				"file": "/decorations/stinkums.png"
+			},
+			{
+				"name": "Chuck",
+				"description": "Wanna see what I had for lunch earlier?",
+				"file": "/decorations/chuck.png"
+			},
+			{
+				"name": "Winkle",
+				"description": "Eye love you.",
+				"file": "/decorations/winkle.png"
+			},
+			{
+				"name": "Chewbert",
+				"description": "Me chew gum, make bubbles, big fun.",
+				"file": "/decorations/chewbert.png"
+			},
+			{
+				"name": "Doodlezard",
+				"description": "You might want to wash up after.",
+				"file": "/decorations/doodlezard.png"
+			},
+			{
+				"name": "Glop",
+				"description": "Is there something in my teeth?",
+				"file": "/decorations/glop.png"
+			},
+			{
+				"name": "Gawblehop",
+				"description": "Talk about being tongue-tied.",
+				"file": "/decorations/gawblehop.png"
+			}
+		]
+	},
+	{
 		"name": "Winter Wonderland",
 		"description": "tis the season",
 		"banner": {
