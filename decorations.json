@@ -56,6 +56,7 @@
 			"image": "/banners/winter_wonderland.png",
 			"text": "/bannertext/winter_wonderland.png"
 		},
+		"badge": "WINTER 2023",
 		"items": [
 			{
 				"name": "New Year",
@@ -86,6 +87,7 @@
 			"image": "/banners/halloween.png",
 			"text": "/bannertext/halloween.png"
 		},
+		"badge": "FALL 2023",
 		"items": [
 			{
 				"name": "Graveyard Cat",
@@ -116,6 +118,7 @@
 			"image": "/banners/fall.png",
 			"text": "/bannertext/fall.png"
 		},
+		"badge": "FALL 2023",
 		"items": [
 			{
 				"name": "Fall Leaves",

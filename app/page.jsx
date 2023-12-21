@@ -161,7 +161,7 @@ export default function Home() {
 															width: "auto"
 														}}
 													/>
-													<div className="[grid-column:1/1] [grid-row:1/1] flex flex-col justify-center items-center p-4">
+													<div className="[grid-column:1/1] [grid-row:1/1] flex flex-col justify-center items-center p-4 relative">
 														<Image
 															src={category.banner.text}
 															alt={category.name}
@@ -176,6 +176,11 @@ export default function Home() {
 															}}
 														/>
 														<p className="text-xs text-center xs:w-full w-[232px]">{category.description}</p>
+														{category.badge && (
+															<p className="absolute top-0 right-2 bg-white py-0 px-2 rounded-full m-0 text-black font-semibold text-xs [letter-spacing:0]">
+																{category.badge}
+															</p>
+														)}
 													</div>
 												</div>
 
