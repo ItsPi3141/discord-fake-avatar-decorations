@@ -1,5 +1,35 @@
 [
 	{
+		"name": "Cyberpunk",
+		"description": "Welcome to the neon embrace of the future.",
+		"banner": {
+			"image": "/banners/cyberpunk.png",
+			"text": "/bannertext/cyberpunk.png"
+		},
+		"items": [
+			{
+				"name": "Glitch",
+				"description": "Neurovisor disruption detected, please standby.",
+				"file": "/decorations/glitch.png"
+			},
+			{
+				"name": "Cybernetic",
+				"description": "Cybernetic visuals now online. Welcome aboard, runner.",
+				"file": "/decorations/cybernetic.png"
+			},
+			{
+				"name": "Digital Sunrise",
+				"description": "It's a new day in cyberspace.",
+				"file": "/decorations/digital_sunrise.png"
+			},
+			{
+				"name": "Implant",
+				"description": "Get ready to jack in.",
+				"file": "/decorations/implant.png"
+			}
+		]
+	},
+	{
 		"name": "Monsters",
 		"description": "We're not a menace, just misunderstood.",
 		"banner": {
