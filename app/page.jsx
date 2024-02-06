@@ -71,9 +71,9 @@ export default function Home() {
 								backgroundPosition: "center bottom"
 							}}
 						>
-							<p className="text-3xl sm:text-5xl ginto">DISCORD</p>
-							<p className="text-2xl sm:text-4xl ginto mb-4">FAKE AVATAR DECORATIONS</p>
-							<p className="text-sm sm:text-base">Create profile pictures with avatar decorations so you can use them in Discord without spending money</p>
+							<h1 className="text-3xl sm:text-5xl ginto">DISCORD</h1>
+							<h1 className="text-2xl sm:text-4xl ginto mb-4">FAKE AVATAR DECORATIONS</h1>
+							<h2 className="text-sm sm:text-base">Create profile pictures with avatar decorations so you can use them in Discord without spending money</h2>
 						</div>
 						<div className="flex flex-col md:flex-row items-center md:items-start gap-8 w-full max-w-[900px] px-8 py-12">
 							{/* SETTINGS */}
