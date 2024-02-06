@@ -4,6 +4,9 @@ import "./globals.css";
 import "./components/modal.css";
 import "./components/twemoji.css";
 
+import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/next";
+
 export default function RootLayout({ children }) {
 	return (
 		<html lang="en">
@@ -74,7 +77,11 @@ export default function RootLayout({ children }) {
 					href="/site.webmanifest"
 				/>
 			</head>
-			<body className="bg-surface4">{children}</body>
+			<body className="bg-surface4">
+				{children}
+				<Analytics />
+				<SpeedInsights />
+			</body>
 		</html>
 	);
 }
