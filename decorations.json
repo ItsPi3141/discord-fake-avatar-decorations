@@ -4,7 +4,8 @@
 		"description": "Roar into the Year of the Dragon.",
 		"banner": {
 			"image": "/banners/lunar_new_year.png",
-			"text": "/bannertext/lunar_new_year.png"
+			"text": "/bannertext/lunar_new_year.png",
+			"height": 38
 		},
 		"items": [
 			{
@@ -44,7 +45,8 @@
 		"description": "Welcome to the neon embrace of the future.",
 		"banner": {
 			"image": "/banners/cyberpunk.png",
-			"text": "/bannertext/cyberpunk.png"
+			"text": "/bannertext/cyberpunk.png",
+			"height": 44
 		},
 		"items": [
 			{
