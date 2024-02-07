@@ -1,5 +1,45 @@
 [
 	{
+		"name": "Lunar New Year",
+		"description": "Roar into the Year of the Dragon.",
+		"banner": {
+			"image": "/banners/lunar_new_year.png",
+			"text": "/bannertext/lunar_new_year.png"
+		},
+		"items": [
+			{
+				"name": "Fan Flourish",
+				"description": "Incredibly fan-tastic.",
+				"file": "/decorations/fan_flourish.png"
+			},
+			{
+				"name": "Lunar Lanterns",
+				"description": "Light the night.",
+				"file": "/decorations/lunar_lanterns.png"
+			},
+			{
+				"name": "Firecrackers",
+				"description": "Don't try this at home!",
+				"file": "/decorations/firecrackers.png"
+			},
+			{
+				"name": "Dragon's Smile",
+				"description": "A dragon's grin fills your year with laughs.",
+				"file": "/decorations/dragons_smile.png"
+			},
+			{
+				"name": "Lucky Envelopes",
+				"description": "Capacity: 888 coins.",
+				"file": "/decorations/lucky_envelopes.png"
+			},
+			{
+				"name": "Koi Pond",
+				"description": "Swimming in an eternal, peaceful circle.",
+				"file": "/decorations/koi_pond.png"
+			}
+		]
+	},
+	{
 		"name": "Cyberpunk",
 		"description": "Welcome to the neon embrace of the future.",
 		"banner": {
