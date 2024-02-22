@@ -1,5 +1,46 @@
 [
 	{
+		"name": "Elements",
+		"description": "Which will you unleash?",
+		"banner": {
+			"image": "/banners/elements.png",
+			"text": "/bannertext/elements.png",
+			"height": 42
+		},
+		"items": [
+			{
+				"name": "Fire",
+				"description": "Ignite your flame within.",
+				"file": "/decorations/fire.png"
+			},
+			{
+				"name": "Water",
+				"description": "Control the ebb and flow.",
+				"file": "/decorations/water.png"
+			},
+			{
+				"name": "Air",
+				"description": "Will the wind.",
+				"file": "/decorations/air.png"
+			},
+			{
+				"name": "Earth",
+				"description": "Call the might of the earth.",
+				"file": "/decorations/earth.png"
+			},
+			{
+				"name": "Lightning",
+				"description": "Electrify your presence.",
+				"file": "/decorations/lightning.png"
+			},
+			{
+				"name": "Balance",
+				"description": "Harness the elements.",
+				"file": "/decorations/balance.png"
+			}
+		]
+	},
+	{
 		"name": "Lunar New Year",
 		"description": "Roar into the Year of the Dragon.",
 		"banner": {
@@ -7,6 +48,7 @@
 			"text": "/bannertext/lunar_new_year.png",
 			"height": 38
 		},
+		"badge": "SPRING 2024",
 		"items": [
 			{
 				"name": "Fan Flourish",
