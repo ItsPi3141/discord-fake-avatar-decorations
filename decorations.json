@@ -1,5 +1,51 @@
 [
 	{
+		"name": "Anime 2",
+		"description": "Senpai will definitely notice you.",
+		"darkText": true,
+		"banner": {
+			"image": "/banners/anime2.png",
+			"text": "/bannertext/anime2.png"
+		},
+		"items": [
+			{
+				"name": "Cat Ears",
+				"description": "≽ ^ • ⩊ • ^ ≼",
+				"file": "/decorations/cat_ears.png"
+			},
+			{
+				"name": "Ki Energy",
+				"description": "Focus from within.",
+				"file": "/decorations/ki_energy.png"
+			},
+			{
+				"name": "Heartbloom",
+				"description": "Let your love blossom.",
+				"file": "/decorations/heartbloom.png"
+			},
+			{
+				"name": "Dismay",
+				"description": "Not like this...",
+				"file": "/decorations/dismay.png"
+			},
+			{
+				"name": "Rage",
+				"description": "THAT'S IT.",
+				"file": "/decorations/rage.png"
+			},
+			{
+				"name": "In Tears",
+				"description": "*sobbing*",
+				"file": "/decorations/in_tears.png"
+			},
+			{
+				"name": "Angry",
+				"description": "How dare you",
+				"file": "/decorations/angry.png"
+			}
+		]
+	},
+	{
 		"name": "Elements",
 		"description": "Which will you unleash?",
 		"banner": {
