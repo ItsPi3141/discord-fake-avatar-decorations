@@ -1,5 +1,47 @@
 [
 	{
+		"name": "Springtoon",
+		"description": "You awaken to find yourself in a springtime wonderland.",
+		"darkText": true,
+		"banner": {
+			"image": "/banners/springtoon.png",
+			"text": "/bannertext/springtoon.png",
+			"height": 38
+		},
+		"items": [
+			{
+				"name": "Honeyblossom",
+				"description": "Buzz meets bloom.",
+				"file": "/decorations/honeyblossom.png"
+			},
+			{
+				"name": "Dandelion Duo",
+				"description": "Strengths: Cute and fluffy. Weaknesses: The breeze.",
+				"file": "/decorations/dandelion_duo.png"
+			},
+			{
+				"name": "Hugh the Rainbow",
+				"description": "Does he have a hue for every mood?",
+				"file": "/decorations/hugh_the_rainbow.png"
+			},
+			{
+				"name": "Strawberry Vine",
+				"description": "Now that's a sweet harvest.",
+				"file": "/decorations/strawberry_vine.png"
+			},
+			{
+				"name": "Butterflies",
+				"description": "We shall tickle the clouds today - join us!",
+				"file": "/decorations/butterflies.png"
+			},
+			{
+				"name": "The Petal Pack",
+				"description": "Comes with sunshine and smiles.",
+				"file": "/decorations/the_petal_pack.png"
+			}
+		]
+	},
+	{
 		"name": "Anime 2",
 		"description": "Senpai will definitely notice you.",
 		"darkText": true,
