@@ -132,59 +132,111 @@ export default function Home() {
 								<div className="flex flex-col gap-8 py-1 max-h-[532px] overflow-auto discord-scrollbar">
 									{decorationsData.map((category, index) => {
 										return (
-											<div key={index} className="w-fit">
-												<div
-													className="justify-center items-center grid grid-cols-1 grid-rows-1 bg-black mb-4 rounded-2xl w-full h-28 overflow-hidden"
-													style={
-														{
-															// backgroundImage: `url(${category.banner.image})`,
-															// backgroundSize: "cover",
-															// backgroundPosition: "center"
+											<div key={index}>
+												<div className="relative justify-center items-center grid grid-cols-1 grid-rows-1 bg-black mb-4 rounded-2xl w-full h-28 overflow-hidden">
+													{(() => {
+														if (category.name === "VALORANT") {
+															return (
+																<>
+																	<div className="top-0 right-0 bottom-0 left-0 absolute bg-[#ff4655]"></div>
+																	{category.banner.image.map((e, i) => (
+																		<Image
+																			key={i}
+																			className={`object-cover bottom-0 absolute`}
+																			src={e.url}
+																			alt={""}
+																			draggable={false}
+																			loading="eager"
+																			height={0}
+																			width={0}
+																			sizes="640px"
+																			style={{
+																				height: "150%",
+																				width: "150%",
+																				left: e.align == "left" ? 0 : "",
+																				right: e.align == "right" ? 0 : "",
+																				objectPosition: e.align,
+																			}}
+																		/>
+																	))}
+																	<div className="relative top-0 right-0 bottom-0 left-0 absolute flex flex-col justify-center items-center p-4">
+																		<Image
+																			src={category.banner.text}
+																			alt={category.name}
+																			draggable={false}
+																			loading="eager"
+																			height={0}
+																			width={0}
+																			sizes="256px"
+																			style={{
+																				height: `${category.banner.height || 48}px`,
+																				width: "auto",
+																			}}
+																		/>
+																		<p
+																			className="-mt-4 w-[232px] xs:w-full font-medium text-center text-sm"
+																			style={{
+																				color: category.darkText || false ? "#000" : "#fff",
+																			}}
+																		>
+																			{category.description}
+																		</p>
+																		{category.badge && (
+																			<p className="top-3 right-2 absolute bg-white m-0 px-2 py-0 rounded-full font-semibold text-black text-xs [letter-spacing:0]">
+																				{category.badge}
+																			</p>
+																		)}
+																	</div>
+																</>
+															);
 														}
-													}
-												>
-													<Image
-														className="[grid-column:1/1] [grid-row:1/1] object-cover"
-														src={category.banner.image}
-														alt={""}
-														draggable={false}
-														loading="eager"
-														height={0}
-														width={0}
-														sizes="640px"
-														style={{
-															height: "100%",
-															width: "auto",
-														}}
-													/>
-													<div className="relative flex flex-col justify-center items-center [grid-column:1/1] [grid-row:1/1] p-4">
-														<Image
-															src={category.banner.text}
-															alt={category.name}
-															draggable={false}
-															loading="eager"
-															height={0}
-															width={0}
-															sizes="256px"
-															style={{
-																height: `${category.banner.height || 48}px`,
-																width: "auto",
-															}}
-														/>
-														<p
-															className="w-[232px] xs:w-full font-medium text-center text-sm"
-															style={{
-																color: category.darkText || false ? "#000" : "#fff",
-															}}
-														>
-															{category.description}
-														</p>
-														{category.badge && (
-															<p className="top-0 right-2 absolute bg-white m-0 px-2 py-0 rounded-full font-semibold text-black text-xs [letter-spacing:0]">
-																{category.badge}
-															</p>
-														)}
-													</div>
+														return (
+															<>
+																<Image
+																	className="[grid-column:1/1] [grid-row:1/1] object-cover"
+																	src={category.banner.image}
+																	alt={""}
+																	draggable={false}
+																	loading="eager"
+																	height={0}
+																	width={0}
+																	sizes="640px"
+																	style={{
+																		height: "100%",
+																		width: "auto",
+																	}}
+																/>
+																<div className="relative flex flex-col justify-center items-center [grid-column:1/1] [grid-row:1/1] p-4">
+																	<Image
+																		src={category.banner.text}
+																		alt={category.name}
+																		draggable={false}
+																		loading="eager"
+																		height={0}
+																		width={0}
+																		sizes="256px"
+																		style={{
+																			height: `${category.banner.height || 48}px`,
+																			width: "auto",
+																		}}
+																	/>
+																	<p
+																		className="w-[232px] xs:w-full font-medium text-center text-sm"
+																		style={{
+																			color: category.darkText || false ? "#000" : "#fff",
+																		}}
+																	>
+																		{category.description}
+																	</p>
+																	{category.badge && (
+																		<p className="top-0 right-2 absolute bg-white m-0 px-2 py-0 rounded-full font-semibold text-black text-xs [letter-spacing:0]">
+																			{category.badge}
+																		</p>
+																	)}
+																</div>
+															</>
+														);
+													})()}
 												</div>
 
 												<div className="flex flex-wrap gap-3 w-[264px] sm:w-[448px] xs:w-[356px]">

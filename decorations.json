@@ -1,5 +1,56 @@
 [
 	{
+		"name": "VALORANT",
+		"description": "DEFY DEFINITION",
+		"darkText": false,
+		"banner": {
+			"image": [
+				{
+					"url": "/banners/valorant1.png",
+					"align": "right"
+				},
+				{
+					"url": "/banners/valorant2.png",
+					"align": "right"
+				},
+				{
+					"url": "/banners/valorant3.png",
+					"align": "left"
+				}
+			],
+			"text": "/bannertext/valorant.png",
+			"height": 64
+		},
+		"badge": "APRIL 2024",
+		"items": [
+			{
+				"name": "A Hint of Clove",
+				"description": "Back again from the great beyond.",
+				"file": "/decorations/a_hint_of_clove.png"
+			},
+			{
+				"name": "Omen's Cowl",
+				"description": "Embrace the shadows.",
+				"file": "/decorations/omens_cowl.png"
+			},
+			{
+				"name": "Reyna's Leer",
+				"description": "The last thing they'll ever see. Lucky them.",
+				"file": "/decorations/reynas_leer.png"
+			},
+			{
+				"name": "FRAG OUT",
+				"description": "Five down. None to go.",
+				"file": "/decorations/frag_out.png"
+			},
+			{
+				"name": "Blade Storm",
+				"description": "Watch this.",
+				"file": "/decorations/blade_storm.png"
+			}
+		]
+	},
+	{
 		"name": "Springtoon",
 		"description": "You awaken to find yourself in a springtime wonderland.",
 		"darkText": true,
