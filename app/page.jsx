@@ -182,7 +182,7 @@ export default function Home() {
 																			{category.description}
 																		</p>
 																		{category.badge && (
-																			<p className="top-3 right-2 absolute bg-white m-0 px-2 py-0 rounded-full font-semibold text-black text-xs [letter-spacing:0]">
+																			<p className="top-0 right-2 absolute bg-white m-0 px-2 py-0 rounded-full font-semibold text-black text-xs [letter-spacing:0]">
 																				{category.badge}
 																			</p>
 																		)}
