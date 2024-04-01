@@ -159,7 +159,7 @@ export default function Home() {
 																			}}
 																		/>
 																	))}
-																	<div className="relative top-0 right-0 bottom-0 left-0 absolute flex flex-col justify-center items-center p-4">
+																	<div className="relative top-0 right-0 bottom-0 left-0 absolute flex flex-col justify-center items-center p-4 h-full">
 																		<Image
 																			src={category.banner.text}
 																			alt={category.name}
@@ -182,7 +182,48 @@ export default function Home() {
 																			{category.description}
 																		</p>
 																		{category.badge && (
-																			<p className="top-0 right-2 absolute bg-white m-0 px-2 py-0 rounded-full font-semibold text-black text-xs [letter-spacing:0]">
+																			<p className="top-2 right-2 absolute bg-white m-0 px-2 py-0 rounded-full font-semibold text-black text-xs [letter-spacing:0]">
+																				{category.badge}
+																			</p>
+																		)}
+																	</div>
+																</>
+															);
+														}
+														if (category.name === "Discord") {
+															return (
+																<>
+																	<div className="top-0 right-0 bottom-0 left-0 absolute bg-gradient-to-r from-[#3441d9] to-[#9a44f7]"></div>
+																	{category.banner.image.map((e, i) => (
+																		<Image
+																			key={i}
+																			className={`object-cover absolute`}
+																			src={e.url}
+																			alt={""}
+																			draggable={false}
+																			loading="eager"
+																			height={0}
+																			width={0}
+																			sizes="640px"
+																			style={{
+																				height: "auto",
+																				width: "100%",
+																				opacity: 0.5,
+																			}}
+																		/>
+																	))}
+																	<div className="relative top-0 right-0 bottom-0 left-0 absolute flex flex-col justify-center items-center p-4 h-full">
+																		<p className="text-3xl ginto">Discord</p>
+																		<p
+																			className="w-[232px] xs:w-full font-medium text-center text-sm"
+																			style={{
+																				color: category.darkText || false ? "#000" : "#fff",
+																			}}
+																		>
+																			{category.description}
+																		</p>
+																		{category.badge && (
+																			<p className="top-2 right-2 absolute bg-white m-0 px-2 py-0 rounded-full font-semibold text-black text-xs [letter-spacing:0]">
 																				{category.badge}
 																			</p>
 																		)}
@@ -206,7 +247,7 @@ export default function Home() {
 																		width: "auto",
 																	}}
 																/>
-																<div className="relative flex flex-col justify-center items-center [grid-column:1/1] [grid-row:1/1] p-4">
+																<div className="relative flex flex-col justify-center items-center [grid-column:1/1] [grid-row:1/1] p-4 h-full">
 																	<Image
 																		src={category.banner.text}
 																		alt={category.name}
@@ -229,7 +270,7 @@ export default function Home() {
 																		{category.description}
 																	</p>
 																	{category.badge && (
-																		<p className="top-0 right-2 absolute bg-white m-0 px-2 py-0 rounded-full font-semibold text-black text-xs [letter-spacing:0]">
+																		<p className="top-2 right-2 absolute bg-white m-0 px-2 py-0 rounded-full font-semibold text-black text-xs [letter-spacing:0]">
 																			{category.badge}
 																		</p>
 																	)}

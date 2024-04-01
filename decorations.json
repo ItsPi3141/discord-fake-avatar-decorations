@@ -1,5 +1,25 @@
 [
 	{
+		"name": "Discord",
+		"description": "Miscellaneous decorations.",
+		"darkText": false,
+		"banner": {
+			"image": [
+				{
+					"url": "/banners/lootbox.svg",
+					"align": "left"
+				}
+			]
+		},
+		"items": [
+			{
+				"name": "I'm a Clown",
+				"description": "I opened a bunch of Loot Boxes and all I got was this stupid clown decoration. Exclusive to April Fools 2024 for a limited time.",
+				"file": "/decorations/im_a_clown.png"
+			}
+		]
+	},
+	{
 		"name": "VALORANT",
 		"description": "DEFY DEFINITION",
 		"darkText": false,
