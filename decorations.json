@@ -150,11 +150,6 @@
 				"name": "In Tears",
 				"description": "*sobbing*",
 				"file": "/decorations/in_tears.png"
-			},
-			{
-				"name": "Angry",
-				"description": "How dare you",
-				"file": "/decorations/angry.png"
 			}
 		]
 	},
