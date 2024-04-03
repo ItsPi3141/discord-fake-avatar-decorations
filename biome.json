@@ -1,0 +1,7 @@
+{
+	"linter": {
+		"rules": {
+			"lint/suspicious/noArrayIndexKey": false
+		}
+	}
+}

@@ -27,7 +27,7 @@ export default function Home() {
 
 	const previewAvatar = async (url) => {
 		setAvUrl("loading");
-		var res = await cropToSquare(ffmpegRef.current, url);
+		const res = await cropToSquare(ffmpegRef.current, url);
 		if (!res) return setAvUrl(null);
 		setAvUrl(res);
 	};
@@ -57,7 +57,7 @@ export default function Home() {
 
 	useEffect(() => {
 		load();
-	}, []);
+	}, [load]);
 
 	return (
 		<>
@@ -84,6 +84,7 @@ export default function Home() {
 								<p className="my-2 font-semibold text-gray-300 text-sm [letter-spacing:.05em] scale-y-90">AVATAR</p>
 								<div className="flex sm:flex-row flex-col sm:items-center gap-3">
 									<button
+										type="button"
 										className="bg-primary hover:bg-primaryAlt px-4 py-2 rounded transition"
 										onClick={() => {
 											document.getElementById("upload-avatar").click();
@@ -113,9 +114,9 @@ export default function Home() {
 										className="bg-surface1 px-2.5 py-2 rounded transition grow outline-none"
 										placeholder="Enter image URL..."
 										onChange={async (e) => {
-											var res = await fetch(e.target.value);
+											const res = await fetch(e.target.value);
 											if (res.status < 200 || res.status >= 400) return setAvUrl(null);
-											var blob = await res.blob();
+											const blob = await res.blob();
 											if (!["image/png", "image/jpeg", "image/gif"].includes(blob.type)) return setAvUrl(null);
 											const reader = new FileReader();
 											reader.readAsDataURL(blob);
@@ -138,7 +139,7 @@ export default function Home() {
 														if (category.name === "VALORANT") {
 															return (
 																<>
-																	<div className="top-0 right-0 bottom-0 left-0 absolute bg-[#ff4655]"></div>
+																	<div className="top-0 right-0 bottom-0 left-0 absolute bg-[#ff4655]" />
 																	{category.banner.image.map((e, i) => (
 																		<Image
 																			key={i}
@@ -159,7 +160,7 @@ export default function Home() {
 																			}}
 																		/>
 																	))}
-																	<div className="relative top-0 right-0 bottom-0 left-0 absolute flex flex-col justify-center items-center p-4 h-full">
+																	<div className="relative top-0 right-0 bottom-0 left-0 flex flex-col justify-center items-center p-4 h-full">
 																		<Image
 																			src={category.banner.text}
 																			alt={category.name}
@@ -193,11 +194,11 @@ export default function Home() {
 														if (category.name === "Discord") {
 															return (
 																<>
-																	<div className="top-0 right-0 bottom-0 left-0 absolute bg-gradient-to-r from-[#3441d9] to-[#9a44f7]"></div>
+																	<div className="top-0 right-0 bottom-0 left-0 absolute bg-gradient-to-r from-[#3441d9] to-[#9a44f7]" />
 																	{category.banner.image.map((e, i) => (
 																		<Image
 																			key={i}
-																			className={`object-cover absolute`}
+																			className="absolute object-cover"
 																			src={e.url}
 																			alt={""}
 																			draggable={false}
@@ -212,7 +213,7 @@ export default function Home() {
 																			}}
 																		/>
 																	))}
-																	<div className="relative top-0 right-0 bottom-0 left-0 absolute flex flex-col justify-center items-center p-4 h-full">
+																	<div className="relative top-0 right-0 bottom-0 left-0 flex flex-col justify-center items-center p-4 h-full">
 																		<p className="text-3xl ginto">Discord</p>
 																		<p
 																			className="w-[232px] xs:w-full font-medium text-center text-sm"
