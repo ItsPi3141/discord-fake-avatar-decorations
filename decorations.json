@@ -16,6 +16,53 @@
 				"name": "I'm a Clown",
 				"description": "I opened a bunch of Loot Boxes and all I got was this stupid clown decoration. Exclusive to April Fools 2024 for a limited time.",
 				"file": "/decorations/im_a_clown.png"
+			},
+			{
+				"name": "Mokoko",
+				"description": "An affectionate Mokoko wants to give you plenty of hugs! Exclusive to Mokoko Quest 2024 for a limited time.",
+				"file": "/decorations/mokoko.png"
+			}
+		]
+	},
+	{
+		"name": "Lofi Vibes",
+		"description": "Where chill meets mood.",
+		"darkText": true,
+		"banner": {
+			"image": "/banners/lofi_vibes.png",
+			"text": "/bannertext/lofi_vibes.png",
+			"height": 38
+		},
+		"items": [
+			{
+				"name": "Chromawave",
+				"description": "Never miss a beat.",
+				"file": "/decorations/chromawave.png"
+			},
+			{
+				"name": "Cozy Cat",
+				"description": "Vibing one catnap at a time.",
+				"file": "/decorations/cozy_cat.png"
+			},
+			{
+				"name": "Oasis",
+				"description": "Chilling in my comfort place.",
+				"file": "/decorations/oasis.png"
+			},
+			{
+				"name": "Rainy Mood",
+				"description": "Feel the calm.",
+				"file": "/decorations/rainy_mood.png"
+			},
+			{
+				"name": "Cozy Headphones",
+				"description": "Perfect for any tune.",
+				"file": "/decorations/cozy_headphones.png"
+			},
+			{
+				"name": "Doodling",
+				"description": "What do you mean I'm procrastinating?",
+				"file": "/decorations/doodling.png"
 			}
 		]
 	},
