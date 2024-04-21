@@ -10,7 +10,7 @@
 	},
 	"dependencies": {
 		"@discordapp/twemoji": "^15.0.3",
-		"@ffmpeg/ffmpeg": "0.12.10",
+		"@ffmpeg/ffmpeg": "0.12.6",
 		"@ffmpeg/util": "0.12.1",
 		"@vercel/analytics": "^1.2.2",
 		"next": "14.1.4",
