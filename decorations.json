@@ -23,6 +23,11 @@
 				"file": "/decorations/mokoko.png"
 			},
 			{
+				"name": "Gyoiko Sakura",
+				"description": "Limited time decoration from May 2023. Given to new nitro subscribers between April 24, 2024 and May 1, 2024.",
+				"file": "/decorations/gyoiko_sakura.png"
+			},
+			{
 				"name": "Helmet",
 				"description": "This decoration is part of the unreleased Galaxy decorations.",
 				"file": "/decorations/helmet.png"
