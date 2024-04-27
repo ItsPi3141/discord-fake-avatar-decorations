@@ -21,6 +21,21 @@
 				"name": "Mokoko",
 				"description": "An affectionate Mokoko wants to give you plenty of hugs! Exclusive to Mokoko Quest 2024 for a limited time.",
 				"file": "/decorations/mokoko.png"
+			},
+			{
+				"name": "Helmet",
+				"description": "This decoration is part of the unreleased Galaxy decorations.",
+				"file": "/decorations/helmet.png"
+			},
+			{
+				"name": "Star",
+				"description": "This decoration is part of the unreleased Galaxy decorations.",
+				"file": "/decorations/star.png"
+			},
+			{
+				"name": "Galaxy",
+				"description": "This decoration is part of the unreleased Galaxy decorations.",
+				"file": "/decorations/galaxy.png"
 			}
 		]
 	},
