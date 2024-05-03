@@ -8,6 +8,12 @@
 				{
 					"url": "/banners/lootbox.svg",
 					"align": "left"
+				},
+				{
+					"url": "/banners/sakura.svg",
+					"align": "right",
+					"height": "100%",
+					"opacity": "0.8"
 				}
 			]
 		},
@@ -26,21 +32,48 @@
 				"name": "Gyoiko Sakura",
 				"description": "Limited time decoration from May 2023. Given to new nitro subscribers between April 24, 2024 and May 1, 2024.",
 				"file": "/decorations/gyoiko_sakura.png"
+			}
+		]
+	},
+	{
+		"name": "Galaxy",
+		"description": "Reach for the stars.",
+		"darkText": false,
+		"banner": {
+			"image": "/banners/galaxy.png",
+			"text": "/bannertext/galaxy.png",
+			"height": 38
+		},
+		"items": [
+			{
+				"name": "Stardust",
+				"description": "The essence of the cosmos.",
+				"file": "/decorations/stardust.png"
 			},
 			{
-				"name": "Helmet",
-				"description": "This decoration is part of the unreleased Galaxy decorations.",
-				"file": "/decorations/helmet.png"
+				"name": "Black Hole",
+				"description": "An enigma of matter, space, and time.",
+				"file": "/decorations/black_hole.png"
 			},
 			{
-				"name": "Star",
-				"description": "This decoration is part of the unreleased Galaxy decorations.",
-				"file": "/decorations/star.png"
+				"name": "Constellations",
+				"description": "What secrets do the stars reveal?",
+				"file": "/decorations/constellations.png"
 			},
 			{
-				"name": "Galaxy",
-				"description": "This decoration is part of the unreleased Galaxy decorations.",
-				"file": "/decorations/galaxy.png"
+				"name": "Solar Orbit",
+				"description": "An eternal dance of fiery passion.",
+				"file": "/decorations/solar_orbit.png"
+			},
+			{
+				"name": "UFO",
+				"description": "The perfect ride for any grab-and-go heist.",
+				"file": "/decorations/ufo.png"
+			},
+			{
+				"name": "Astronaut Helmet",
+				"description": "Always wear your helmet.",
+				"file": "/decorations/astronaut_helmet.png"
 			}
 		]
 	},
@@ -51,7 +84,7 @@
 		"banner": {
 			"image": "/banners/lofi_vibes.png",
 			"text": "/bannertext/lofi_vibes.png",
-			"height": 38
+			"height": 45
 		},
 		"items": [
 			{

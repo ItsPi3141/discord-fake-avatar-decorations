@@ -207,9 +207,12 @@ export default function Home() {
 																			width={0}
 																			sizes="640px"
 																			style={{
-																				height: "auto",
-																				width: "100%",
-																				opacity: 0.5,
+																				height: e.height || "auto",
+																				width: e.height ? "auto" : "100%",
+																				opacity: e.opacity || 0.5,
+																				left: e.align == "left" ? 0 : "",
+																				right: e.align == "right" ? 0 : "",
+																				objectPosition: e.align,
 																			}}
 																		/>
 																	))}
