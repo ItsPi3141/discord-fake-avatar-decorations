@@ -36,6 +36,80 @@
 		]
 	},
 	{
+		"name": "Feelin' Retro",
+		"description": "How ya feelin' today?",
+		"darkText": false,
+		"banner": {
+			"image": "/banners/feelin_retro.png",
+			"text": "/bannertext/feelin_retro.png",
+			"height": 52
+		},
+		"items": [
+			{
+				"name": "Feelin' Awe",
+				"description": "When you touch the grass.",
+				"file": "/decorations/feelin_awe.png"
+			},
+			{
+				"name": "Feelin' Panic",
+				"description": "When you get challenged to a spontaneous rap battle.",
+				"file": "/decorations/feelin_panic.png"
+			},
+			{
+				"name": "Feelin' Nervous",
+				"description": "When you ping @everyone.",
+				"file": "/decorations/feelin_nervous.png"
+			},
+			{
+				"name": "Feelin' Scrumptious",
+				"description": "When they let you cook.",
+				"file": "/decorations/feelin_scrumptious.png"
+			}
+		]
+	},
+	{
+		"name": "Pirates",
+		"description": "Don yer finest and set course, ye landlubbers.",
+		"darkText": false,
+		"banner": {
+			"image": "/banners/pirates.png",
+			"text": "/bannertext/pirates.png",
+			"height": 52
+		},
+		"items": [
+			{
+				"name": "Pirate Captain",
+				"description": "Arrr... yer bounty comes due.",
+				"file": "/decorations/pirate_captain.png"
+			},
+			{
+				"name": "Scallywag",
+				"description": "Nay even a pirate can steal me good looks.",
+				"file": "/decorations/scallywag.png"
+			},
+			{
+				"name": "Good Ol' Pepper",
+				"description": "An old salt's trusty matey at sea.",
+				"file": "/decorations/good_ol_pepper.png"
+			},
+			{
+				"name": "Crossbones",
+				"description": "Cross me not, else a pile o' bones be yer fate.",
+				"file": "/decorations/crossbones.png"
+			},
+			{
+				"name": "Cannon Fire",
+				"description": "Sink yer foes in iron and let 'em be claimed by the sea...",
+				"file": "/decorations/cannon_fire.png"
+			},
+			{
+				"name": "Helmsman",
+				"description": "Heading, cap'n?",
+				"file": "/decorations/helmsman.png"
+			}
+		]
+	},
+	{
 		"name": "Galaxy",
 		"description": "Reach for the stars.",
 		"darkText": false,
