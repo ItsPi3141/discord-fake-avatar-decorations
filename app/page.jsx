@@ -74,7 +74,7 @@ export default function Home() {
 							<h1 className="text-3xl sm:text-5xl ginto">DISCORD</h1>
 							<h1 className="mb-4 text-2xl sm:text-4xl ginto">FAKE AVATAR DECORATIONS</h1>
 							<h2 className="text-sm sm:text-base">
-								Create profile pictures with avatar decorations so you can use them in Discord without spending money
+								Create profile pictures with avatar decorations so you can use them in Discord for free without spending money
 							</h2>
 						</div>
 						<div className="flex md:flex-row flex-col items-center md:items-start gap-8 px-8 py-12 w-full max-w-[900px]">
