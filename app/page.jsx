@@ -15,7 +15,7 @@ export default function Home() {
 	const ffmpegRef = useRef(new FFmpeg());
 
 	const load = async () => {
-		const baseURL = "/ffmpeg/";
+		const baseURL = "https://unpkg.com/@ffmpeg/core@0.12.6/dist/umd/";
 		const ffmpeg = ffmpegRef.current;
 		// toBlobURL is used to bypass CORS issue, urls with the same domain can be used directly.
 		await ffmpeg.load({
