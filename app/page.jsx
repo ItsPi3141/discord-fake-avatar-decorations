@@ -531,7 +531,7 @@ export default function Home() {
 									</div>
 								) : (
 									<div className="flex flex-col justify-center items-center gap-4 grow">
-										<Image src={finishedAv} draggable={false} width={128} height={128} />
+										<img src={finishedAv} draggable={false} width={128} height={128} />
 										<div className="flex justify-center gap-2 w-full">
 											<button
 												className="flex justify-center items-center gap-1 bg-secondary hover:bg-secondaryAlt mt-3 py-1.5 rounded-[3px] w-72 transition"
