@@ -8,7 +8,9 @@ import { addDecoration, cropToSquare } from "@/ffmpeg/processImage";
 import { Modal } from "./components/modal";
 import Link from "next/link";
 import Twemoji from "./components/twemoji";
-import Image from "next/image";
+
+import { Image } from "./components/image";
+const baseImgUrl = process.env.NEXT_PUBLIC_BASE_IMAGE_URL || "";
 
 export default function Home() {
 	const [loaded, setLoaded] = useState(false);
@@ -302,7 +304,7 @@ export default function Home() {
 																	e.target.classList.remove("border-surface1");
 																}}
 															>
-																<img src={decor.file} className="pointer-events-none" />
+																<Image src={decor.file} className="pointer-events-none" />
 															</button>
 														);
 													})}
@@ -331,7 +333,7 @@ export default function Home() {
 												</div>
 											) : (
 												<>
-													<img
+													<Image
 														id="avatar"
 														src={avUrl || "/avatar.png"}
 														className={
@@ -339,7 +341,7 @@ export default function Home() {
 														}
 														draggable={false}
 													/>
-													<img id="decoration" src={decoUrl} className="top-0 left-0 absolute" draggable={false} />
+													<Image id="decoration" src={decoUrl} className="top-0 left-0 absolute" draggable={false} />
 												</>
 											)}
 										</div>
@@ -362,7 +364,7 @@ export default function Home() {
 												setIsGeneratingAv(true);
 												setGenerationFailed(false);
 												setDownloadModalVisible(true);
-												createAvatar(avUrl || "/avatar.png", decoUrl);
+												createAvatar(baseImgUrl + (avUrl || "/avatar.png"), decoUrl);
 											}}
 										>
 											<svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
@@ -441,15 +443,15 @@ export default function Home() {
 															<>
 																{m.styled ? (
 																	<div className="relative rounded-full w-10 h-10 overflow-hidden">
-																		<img
+																		<Image
 																			src={avUrl || "/avatar.png"}
 																			draggable={false}
 																			className="top-[calc(40px*0.09)] left-[calc(40px*0.09)] absolute rounded-full w-[calc(40px*0.82)] h-[calc(40px*0.82)]"
 																		/>
-																		{decoUrl && <img src={decoUrl} draggable={false} className="top-0 left-0 absolute" />}
+																		{decoUrl && <Image src={decoUrl} draggable={false} className="top-0 left-0 absolute" />}
 																	</div>
 																) : (
-																	<img src={avUrl || "/avatar.png"} draggable={false} className="rounded-full w-10 h-10" />
+																	<Image src={avUrl || "/avatar.png"} draggable={false} className="rounded-full w-10 h-10" />
 																)}
 															</>
 														)}
@@ -529,7 +531,7 @@ export default function Home() {
 									</div>
 								) : (
 									<div className="flex flex-col justify-center items-center gap-4 grow">
-										<img src={finishedAv} draggable={false} width={128} height={128} />
+										<Image src={finishedAv} draggable={false} width={128} height={128} />
 										<div className="flex justify-center gap-2 w-full">
 											<button
 												className="flex justify-center items-center gap-1 bg-secondary hover:bg-secondaryAlt mt-3 py-1.5 rounded-[3px] w-72 transition"
