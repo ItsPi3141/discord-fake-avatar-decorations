@@ -35,16 +35,16 @@ export default function Home() {
 	};
 
 	const createAvatar = async (url, deco) => {
-		try {
-			addDecoration(ffmpegRef.current, url, deco).then((res) => {
+		addDecoration(ffmpegRef.current, url, deco)
+			.then((res) => {
 				if (!res) return setFinishedAv(null), setGenerationFailed(true);
 				setFinishedAv(res);
 				setIsGeneratingAv(false);
+			})
+			.catch(() => {
+				setGenerationFailed(true);
+				setIsGeneratingAv(false);
 			});
-		} catch {
-			setGenerationFailed(true);
-			setIsGeneratingAv(false);
-		}
 	};
 
 	const [name, setName] = useState("");
