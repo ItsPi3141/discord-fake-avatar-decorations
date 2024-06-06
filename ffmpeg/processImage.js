@@ -11,7 +11,7 @@ import { getMimeTypeFromArrayBuffer } from "./utils";
  */
 export function cropToSquare(/** @type {FFmpeg} */ ffmpeg, /** @type {String} */ url) {
 	return new Promise(async (resolve, reject) => {
-		const data = await fetchFile(url);
+		const data = await fetchFile(await (await fetch(url)).blob());
 		const type = getMimeTypeFromArrayBuffer(data);
 		if (type == null) return reject(new Error("Invalid image type"));
 
@@ -29,7 +29,7 @@ export function cropToSquare(/** @type {FFmpeg} */ ffmpeg, /** @type {String} */
 
 			// Generate palette
 			"[s0]palettegen=reserve_transparent=on:transparency_color=ffffff[p];",
-			"[s1][p]paletteuse"
+			"[s1][p]paletteuse",
 		];
 
 		await ffmpeg.exec(["-i", `avatarpreview.${ext}`, "-filter_complex", filter_complex.join(""), `avatarpreviewcropped.gif`]);
@@ -48,7 +48,7 @@ export function cropToSquare(/** @type {FFmpeg} */ ffmpeg, /** @type {String} */
 
 export function addDecoration(/** @type {FFmpeg} */ ffmpeg, /** @type {String} */ imageUrl, /** @type {String} */ decorationUrl) {
 	return new Promise(async (resolve, reject) => {
-		const avatarData = await fetchFile(imageUrl);
+		const avatarData = await fetchFile(await (await fetch(imageUrl)).blob());
 		const avatarType = getMimeTypeFromArrayBuffer(avatarData);
 		if (avatarType == null) return reject(new Error("Invalid image type"));
 		const ext = avatarType.replace("image/", "");
@@ -74,7 +74,7 @@ export function addDecoration(/** @type {FFmpeg} */ ffmpeg, /** @type {String} *
 
 				// Generate palette
 				"[s0]palettegen=reserve_transparent=on:transparency_color=ffffff[p];",
-				"[s1][p]paletteuse"
+				"[s1][p]paletteuse",
 			];
 
 			await ffmpeg.exec(["-i", `avatarbase.${ext}`, "-filter_complex", filter_complex.join(""), `avatarcircle.${ext}`]);
@@ -89,7 +89,7 @@ export function addDecoration(/** @type {FFmpeg} */ ffmpeg, /** @type {String} *
 				return reject(reader.error);
 			};
 		} else {
-			const decoData = await fetchFile(decorationUrl);
+			const decoData = await fetchFile(await (await fetch(decorationUrl)).blob());
 			await ffmpeg.writeFile("decoration.gif", decoData);
 
 			// run ffmpeg -i avatarbase.png -i decoration.gif -filter_complex "[0][1]overlay=(main_w-overlay_w)/2:(main_h-overlay_h)/2:format=auto,split[s0][s1];[s0]palettegen[p];[s1][p]paletteuse" avatarwithdeco.gif
@@ -118,7 +118,7 @@ export function addDecoration(/** @type {FFmpeg} */ ffmpeg, /** @type {String} *
 
 				// Generate palette
 				"[s0]palettegen=reserve_transparent=on:transparency_color=ffffff[p];",
-				"[s1][p]paletteuse"
+				"[s1][p]paletteuse",
 			];
 			await ffmpeg.exec(["-i", `avatarbase.${ext}`, "-i", "decoration.gif", "-filter_complex", filter_complex.join(""), "avatarwithdeco.gif"]);
 
