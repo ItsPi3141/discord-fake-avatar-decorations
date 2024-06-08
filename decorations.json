@@ -36,6 +36,48 @@
 		]
 	},
 	{
+		"name": "Arcade",
+		"description": "Press START to play.",
+		"darkText": false,
+		"banner": {
+			"image": "/banners/arcade.png",
+			"text": "/bannertext/arcade.png",
+			"height": 50
+		},
+		"items": [
+			{
+				"name": "Joystick",
+				"description": "Pressing buttons harder definitely increases your chances of winning.",
+				"file": "/decorations/joystick.png"
+			},
+			{
+				"name": "Clyde Invaders",
+				"description": "Rogue invaders have taken control of the galaxy. It's up to you to save the day.",
+				"file": "/decorations/clyde_invaders.png"
+			},
+			{
+				"name": "Pipedream",
+				"description": "If you stare at this for 5,461 seconds without blinking, you win.",
+				"file": "/decorations/pipedream.png"
+			},
+			{
+				"name": "Hot Shot",
+				"description": "Baller status: Pro.",
+				"file": "/decorations/hot_shot.png"
+			},
+			{
+				"name": "Mallow Jump",
+				"description": "Hop till you drop!",
+				"file": "/decorations/mallow_jump.png"
+			},
+			{
+				"name": "Slither 'n Snack",
+				"description": "Gobble and grow to become the biggest snake in the garden.",
+				"file": "/decorations/slither_n_snack.png"
+			}
+		]
+	},
+	{
 		"name": "Feelin' Retro",
 		"description": "How ya feelin' today?",
 		"darkText": false,
