@@ -35,7 +35,7 @@ export default function Home() {
 	};
 
 	const createAvatar = async (url, deco) => {
-		addDecoration(ffmpegRef.current, url, deco)
+		addDecoration(ffmpegRef.current, url, `${baseImgUrl}${deco}`)
 			.then((res) => {
 				if (!res) return setFinishedAv(null), setGenerationFailed(true);
 				setFinishedAv(res);
