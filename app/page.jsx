@@ -35,7 +35,7 @@ export default function Home() {
 	};
 
 	const createAvatar = async (url, deco) => {
-		addDecoration(ffmpegRef.current, url, `${baseImgUrl}${deco}`)
+		addDecoration(ffmpegRef.current, url, deco === "" ? "" : `${baseImgUrl}${deco}`)
 			.then((res) => {
 				if (!res) return setFinishedAv(null), setGenerationFailed(true);
 				setFinishedAv(res);
@@ -364,7 +364,7 @@ export default function Home() {
 												setIsGeneratingAv(true);
 												setGenerationFailed(false);
 												setDownloadModalVisible(true);
-												createAvatar(baseImgUrl + (avUrl || "/avatar.png"), decoUrl);
+												createAvatar(avUrl || `${baseImgUrl}/avatar.png`, decoUrl);
 											}}
 										>
 											<svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
