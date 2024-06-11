@@ -13,15 +13,15 @@ export function getMimeTypeFromArrayBuffer(/** @type {Uint8Array | ArrayBuffer} 
 		for (let i = 0; i < len; i++) signatureArr[i] = uint8arr[i].toString(16);
 		const signature = signatureArr.join("").toUpperCase();
 
-		switch (signature) {
-			case "89504E47":
+		switch (true) {
+			case signature === "89504E47":
 				return "image/png";
-			case "47494638":
+			case signature === "47494638":
 				return "image/gif";
-			case "FFD8FFDB":
-			case "FFD8FFE0":
+			case signature.startsWith("FFD8FF"):
 				return "image/jpeg";
 			default:
+				console.log("Unknown type. Signature:", signature);
 				return null;
 		}
 	}
