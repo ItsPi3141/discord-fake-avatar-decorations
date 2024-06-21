@@ -128,16 +128,22 @@ export function addDecoration(/** @type {FFmpeg} */ ffmpeg, /** @type {String} *
 				await ffmpeg.exec(["-i", `avatarbase.${ext}`, "-i", "decoration.gif", "-filter_complex", filter_complex.join(""), "avatarwithdeco.gif"]);
 
 				const res = await ffmpeg.readFile("avatarwithdeco.gif");
+				if (res.length == 0) {
+					console.error("Error: Empty result from ffmpeg");
+					return reject();
+				}
 				const reader = new FileReader();
 				reader.readAsDataURL(new Blob([new Uint8Array(res.buffer, res.byteOffset, res.length)], { type: "image/gif" }));
 				reader.onload = () => {
 					return resolve(reader.result);
 				};
 				reader.onerror = () => {
+					console.error(reader.error);
 					return reject(reader.error);
 				};
 			}
-		} catch {
+		} catch (err) {
+			console.error(err);
 			return reject(null);
 		}
 	});
