@@ -1,6 +1,7 @@
 "use client";
 
 import decorationsData from "../decorations.json";
+import avatarsData from "../avatars.json";
 import { useEffect, useRef, useState } from "react";
 import { FFmpeg } from "@ffmpeg/ffmpeg";
 import { toBlobURL } from "@ffmpeg/util";
@@ -127,6 +128,30 @@ export default function Home() {
 											};
 										}}
 									/>
+								</div>
+								<p className="mt-4">You can also pick from one of these avatars below</p>
+								<div className="flex flex-col gap-8 py-1 max-h-[180px] overflow-auto discord-scrollbar">
+									<div className="flex flex-wrap gap-3 w-[264px] sm:w-[448px] xs:w-[356px]">
+										{avatarsData.map((avatar, index) => {
+											return (
+												<button
+													key={index}
+													className="border-2 border-surface1 bg-surface1 p-2 rounded-[5px] w-20 h-20 decor"
+													onClick={(e) => {
+														setAvUrl(avatar.file);
+														document.querySelectorAll("button.decor.border-2.border-primary").forEach((el) => {
+															el.classList.remove("border-primary");
+															el.classList.add("border-surface1");
+														});
+														e.target.classList.add("border-primary");
+														e.target.classList.remove("border-surface1");
+													}}
+												>
+													<Image src={avatar.file} className="rounded-full pointer-events-none" />
+												</button>
+											);
+										})}
+									</div>
 								</div>
 								<hr />
 
@@ -341,7 +366,7 @@ export default function Home() {
 												<>
 													<Image
 														id="avatar"
-														src={avUrl || "/avatar.png"}
+														src={avUrl || "/avatars/blue.png"}
 														className={
 															"absolute top-[calc(80px*0.09)] left-[calc(80px*0.09)] w-[calc(80px*0.82)] h-[calc(80px*0.82)] rounded-full"
 														}
@@ -370,7 +395,7 @@ export default function Home() {
 												setIsGeneratingAv(true);
 												setGenerationFailed(false);
 												setDownloadModalVisible(true);
-												createAvatar(avUrl || `${baseImgUrl}/avatar.png`, decoUrl);
+												createAvatar(avUrl || `${baseImgUrl}/avatars/blue.png`, decoUrl);
 											}}
 										>
 											<svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
@@ -450,14 +475,18 @@ export default function Home() {
 																{m.styled ? (
 																	<div className="relative rounded-full w-10 h-10 overflow-hidden">
 																		<Image
-																			src={avUrl || "/avatar.png"}
+																			src={avUrl || "/avatars/blue.png"}
 																			draggable={false}
 																			className="top-[calc(40px*0.09)] left-[calc(40px*0.09)] absolute rounded-full w-[calc(40px*0.82)] h-[calc(40px*0.82)]"
 																		/>
 																		{decoUrl && <Image src={decoUrl} draggable={false} className="top-0 left-0 absolute" />}
 																	</div>
 																) : (
-																	<Image src={avUrl || "/avatar.png"} draggable={false} className="rounded-full w-10 h-10" />
+																	<Image
+																		src={avUrl || "/avatars/blue.png"}
+																		draggable={false}
+																		className="rounded-full w-10 h-10"
+																	/>
 																)}
 															</>
 														)}

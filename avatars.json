@@ -1,0 +1,66 @@
+[
+	{
+		"name": "Arcade",
+		"file": "/avatars/arcade.png"
+	},
+	{
+		"name": "Galaxy",
+		"file": "/avatars/galaxy.png"
+	},
+	{
+		"name": "Lofi",
+		"file": "/avatars/lofi.png"
+	},
+	{
+		"name": "Retro",
+		"file": "/avatars/retro.gif"
+	},
+	{
+		"name": "Valorant",
+		"file": "/avatars/valorant.png"
+	},
+	{
+		"name": "Blue",
+		"file": "/avatars/blue.png"
+	},
+	{
+		"name": "Gray",
+		"file": "/avatars/gray.png"
+	},
+	{
+		"name": "Green",
+		"file": "/avatars/green.png"
+	},
+	{
+		"name": "Yellow",
+		"file": "/avatars/yellow.png"
+	},
+	{
+		"name": "Red",
+		"file": "/avatars/red.png"
+	},
+	{
+		"name": "Pink",
+		"file": "/avatars/pink.png"
+	},
+	{
+		"name": "Classic Blue",
+		"file": "/avatars/classic_blue.png"
+	},
+	{
+		"name": "Classic Gray",
+		"file": "/avatars/classic_gray.png"
+	},
+	{
+		"name": "Classic Green",
+		"file": "/avatars/classic_green.png"
+	},
+	{
+		"name": "Classic Yellow",
+		"file": "/avatars/classic_yellow.png"
+	},
+	{
+		"name": "Classic Red",
+		"file": "/avatars/classic_red.png"
+	}
+]
