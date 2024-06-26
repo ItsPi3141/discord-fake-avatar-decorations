@@ -132,8 +132,8 @@ export default function Home() {
 										}}
 									/>
 								</div>
-								<p className="mt-4">You can also pick from one of these avatars below</p>
-								<div className="flex flex-col gap-8 py-1 max-h-[180px] overflow-auto discord-scrollbar">
+								<p className="mt-4 mb-2">You can also pick from one of these avatars below</p>
+								<div className="flex flex-col gap-8 py-1 max-h-[280px] overflow-auto discord-scrollbar">
 									<div className="flex flex-wrap gap-3 w-[264px] sm:w-[448px] xs:w-[356px]">
 										{avatarsData.map((avatar, index) => {
 											return (
@@ -553,6 +553,11 @@ export default function Home() {
 							on GitHub.
 							<br />
 							This site is NOT affiliated with Discord Inc. in any way. All images and assets belong to Discord Inc.
+							<br />
+							Discord Character avatars were created by Bred and Jace. View the collection on{" "}
+							<Link href={"https://www.figma.com/community/file/1114896965920105129"} className="hover:text-gray-200 underline" target="_blank">
+								Figma
+							</Link>
 						</p>
 					</main>
 					<Modal

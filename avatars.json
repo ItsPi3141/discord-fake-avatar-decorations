@@ -66,5 +66,961 @@
 	{
 		"name": "Classic Red",
 		"file": "/avatars/classic_red.png"
+	},
+	{
+		"name": "Ander #1",
+		"file": "/avatars/ander_1.png"
+	},
+	{
+		"name": "Ander #2",
+		"file": "/avatars/ander_2.png"
+	},
+	{
+		"name": "Ander #3",
+		"file": "/avatars/ander_3.png"
+	},
+	{
+		"name": "Ander #4",
+		"file": "/avatars/ander_4.png"
+	},
+	{
+		"name": "Annabel #1",
+		"file": "/avatars/annabel_1.png"
+	},
+	{
+		"name": "Bartender #1",
+		"file": "/avatars/bartender_1.png"
+	},
+	{
+		"name": "Bento #1",
+		"file": "/avatars/bento_1.png"
+	},
+	{
+		"name": "Big Bird #1",
+		"file": "/avatars/big_bird_1.png"
+	},
+	{
+		"name": "Bill #1",
+		"file": "/avatars/bill_1.png"
+	},
+	{
+		"name": "Birb #1",
+		"file": "/avatars/birb_1.png"
+	},
+	{
+		"name": "Bling #1",
+		"file": "/avatars/bling_1.png"
+	},
+	{
+		"name": "Blink #1",
+		"file": "/avatars/blink_1.png"
+	},
+	{
+		"name": "Blip #1",
+		"file": "/avatars/blip_1.png"
+	},
+	{
+		"name": "Blip #2",
+		"file": "/avatars/blip_2.png"
+	},
+	{
+		"name": "Bonbon #1",
+		"file": "/avatars/bonbon_1.png"
+	},
+	{
+		"name": "Bonbon #2",
+		"file": "/avatars/bonbon_2.png"
+	},
+	{
+		"name": "Boomer #1",
+		"file": "/avatars/boomer_1.png"
+	},
+	{
+		"name": "Bopper #1",
+		"file": "/avatars/bopper_1.png"
+	},
+	{
+		"name": "Bopper #2",
+		"file": "/avatars/bopper_2.png"
+	},
+	{
+		"name": "Bouncer #1",
+		"file": "/avatars/bouncer_1.png"
+	},
+	{
+		"name": "Brainy #1",
+		"file": "/avatars/brainy_1.png"
+	},
+	{
+		"name": "Brib #1",
+		"file": "/avatars/brib_1.png"
+	},
+	{
+		"name": "Bunny Man #1",
+		"file": "/avatars/bunny_man_1.png"
+	},
+	{
+		"name": "Cacdude #1",
+		"file": "/avatars/cacdude_1.png"
+	},
+	{
+		"name": "Cambrella #1",
+		"file": "/avatars/cambrella_1.png"
+	},
+	{
+		"name": "Camie #1",
+		"file": "/avatars/camie_1.png"
+	},
+	{
+		"name": "Cap #1",
+		"file": "/avatars/cap_1.png"
+	},
+	{
+		"name": "Cap #2",
+		"file": "/avatars/cap_2.png"
+	},
+	{
+		"name": "Cap #3",
+		"file": "/avatars/cap_3.png"
+	},
+	{
+		"name": "Cap #4",
+		"file": "/avatars/cap_4.png"
+	},
+	{
+		"name": "Cap #5",
+		"file": "/avatars/cap_5.png"
+	},
+	{
+		"name": "Cap #6",
+		"file": "/avatars/cap_6.png"
+	},
+	{
+		"name": "Cap #7",
+		"file": "/avatars/cap_7.png"
+	},
+	{
+		"name": "Cap #8",
+		"file": "/avatars/cap_8.png"
+	},
+	{
+		"name": "Capper #1",
+		"file": "/avatars/capper_1.png"
+	},
+	{
+		"name": "Capper #2",
+		"file": "/avatars/capper_2.png"
+	},
+	{
+		"name": "Cat #1",
+		"file": "/avatars/cat_1.png"
+	},
+	{
+		"name": "Chance #1",
+		"file": "/avatars/chance_1.png"
+	},
+	{
+		"name": "Cherry #1",
+		"file": "/avatars/cherry_1.png"
+	},
+	{
+		"name": "Chief #1",
+		"file": "/avatars/chief_1.png"
+	},
+	{
+		"name": "Chiller #1",
+		"file": "/avatars/chiller_1.png"
+	},
+	{
+		"name": "Clyde #1",
+		"file": "/avatars/clyde_1.png"
+	},
+	{
+		"name": "Clyde #2",
+		"file": "/avatars/clyde_2.png"
+	},
+	{
+		"name": "Clyde #3",
+		"file": "/avatars/clyde_3.png"
+	},
+	{
+		"name": "Clyde #4",
+		"file": "/avatars/clyde_4.png"
+	},
+	{
+		"name": "Clyde #6",
+		"file": "/avatars/clyde_6.png"
+	},
+	{
+		"name": "Clyde #7",
+		"file": "/avatars/clyde_7.png"
+	},
+	{
+		"name": "Clyde #8",
+		"file": "/avatars/clyde_8.png"
+	},
+	{
+		"name": "Clyde #9",
+		"file": "/avatars/clyde_9.png"
+	},
+	{
+		"name": "Clyde #10",
+		"file": "/avatars/clyde_10.png"
+	},
+	{
+		"name": "Clyde #11",
+		"file": "/avatars/clyde_11.png"
+	},
+	{
+		"name": "Dee #1",
+		"file": "/avatars/dee_1.png"
+	},
+	{
+		"name": "Doodie #1",
+		"file": "/avatars/doodie_1.png"
+	},
+	{
+		"name": "D–20 #1",
+		"file": "/avatars/d20_1.png"
+	},
+	{
+		"name": "Elmer #1",
+		"file": "/avatars/elmer_1.png"
+	},
+	{
+		"name": "Fairy #1",
+		"file": "/avatars/fairy_1.png"
+	},
+	{
+		"name": "Fang #1",
+		"file": "/avatars/fang_1.png"
+	},
+	{
+		"name": "Felippe #1",
+		"file": "/avatars/felippe_1.png"
+	},
+	{
+		"name": "Fighter #1",
+		"file": "/avatars/fighter_1.png"
+	},
+	{
+		"name": "Flipper #1",
+		"file": "/avatars/flipper_1.png"
+	},
+	{
+		"name": "Floop #1",
+		"file": "/avatars/floop_1.png"
+	},
+	{
+		"name": "Floop #2",
+		"file": "/avatars/floop_2.png"
+	},
+	{
+		"name": "Floop #3",
+		"file": "/avatars/floop_3.png"
+	},
+	{
+		"name": "Flynn #1",
+		"file": "/avatars/flynn_1.png"
+	},
+	{
+		"name": "Frog Stranger #1",
+		"file": "/avatars/frog_stranger_1.png"
+	},
+	{
+		"name": "Froge #1",
+		"file": "/avatars/froge_1.png"
+	},
+	{
+		"name": "Froge #2",
+		"file": "/avatars/froge_2.png"
+	},
+	{
+		"name": "Froge #3",
+		"file": "/avatars/froge_3.png"
+	},
+	{
+		"name": "Froge #4",
+		"file": "/avatars/froge_4.png"
+	},
+	{
+		"name": "Froge #5",
+		"file": "/avatars/froge_5.png"
+	},
+	{
+		"name": "Froge #6",
+		"file": "/avatars/froge_6.png"
+	},
+	{
+		"name": "Froge #7",
+		"file": "/avatars/froge_7.png"
+	},
+	{
+		"name": "Froge #8",
+		"file": "/avatars/froge_8.png"
+	},
+	{
+		"name": "Froge #9",
+		"file": "/avatars/froge_9.png"
+	},
+	{
+		"name": "Froge #10",
+		"file": "/avatars/froge_10.png"
+	},
+	{
+		"name": "Froge #11",
+		"file": "/avatars/froge_11.png"
+	},
+	{
+		"name": "Gero #1",
+		"file": "/avatars/gero_1.png"
+	},
+	{
+		"name": "Gill #1",
+		"file": "/avatars/gill_1.png"
+	},
+	{
+		"name": "Gnarf #1",
+		"file": "/avatars/gnarf_1.png"
+	},
+	{
+		"name": "Gobbi #1",
+		"file": "/avatars/gobbi_1.png"
+	},
+	{
+		"name": "Graggle #1",
+		"file": "/avatars/graggle_1.png"
+	},
+	{
+		"name": "Graggle #2",
+		"file": "/avatars/graggle_2.png"
+	},
+	{
+		"name": "Graggle #3",
+		"file": "/avatars/graggle_3.png"
+	},
+	{
+		"name": "Graggle #4",
+		"file": "/avatars/graggle_4.png"
+	},
+	{
+		"name": "Graggle #5",
+		"file": "/avatars/graggle_5.png"
+	},
+	{
+		"name": "Graggle #6",
+		"file": "/avatars/graggle_6.png"
+	},
+	{
+		"name": "Graggle #7",
+		"file": "/avatars/graggle_7.png"
+	},
+	{
+		"name": "Grimma #1",
+		"file": "/avatars/grimma_1.png"
+	},
+	{
+		"name": "Hand #1",
+		"file": "/avatars/hand_1.png"
+	},
+	{
+		"name": "Hark #1",
+		"file": "/avatars/hark_1.png"
+	},
+	{
+		"name": "Hello #1",
+		"file": "/avatars/hello_1.png"
+	},
+	{
+		"name": "House #1",
+		"file": "/avatars/house_1.png"
+	},
+	{
+		"name": "Klayden #1",
+		"file": "/avatars/klayden_1.png"
+	},
+	{
+		"name": "Lady #1",
+		"file": "/avatars/lady_1.png"
+	},
+	{
+		"name": "Lady #2",
+		"file": "/avatars/lady_2.png"
+	},
+	{
+		"name": "Lemon #1",
+		"file": "/avatars/lemon_1.png"
+	},
+	{
+		"name": "Leon #1",
+		"file": "/avatars/leon_1.png"
+	},
+	{
+		"name": "Leon #2",
+		"file": "/avatars/leon_2.png"
+	},
+	{
+		"name": "Lime #1",
+		"file": "/avatars/lime_1.png"
+	},
+	{
+		"name": "Linda #1",
+		"file": "/avatars/linda_1.png"
+	},
+	{
+		"name": "Locke #1",
+		"file": "/avatars/locke_1.png"
+	},
+	{
+		"name": "Locke #2",
+		"file": "/avatars/locke_2.png"
+	},
+	{
+		"name": "Locke #3",
+		"file": "/avatars/locke_3.png"
+	},
+	{
+		"name": "Lukid #1",
+		"file": "/avatars/lukid_1.png"
+	},
+	{
+		"name": "Mason #1",
+		"file": "/avatars/mason_1.png"
+	},
+	{
+		"name": "Megatron #1",
+		"file": "/avatars/megatron_1.png"
+	},
+	{
+		"name": "Milo #1",
+		"file": "/avatars/milo_1.png"
+	},
+	{
+		"name": "Milo #2",
+		"file": "/avatars/milo_2.png"
+	},
+	{
+		"name": "Moe #1",
+		"file": "/avatars/moe_1.png"
+	},
+	{
+		"name": "Morf #1",
+		"file": "/avatars/morf_1.png"
+	},
+	{
+		"name": "Nelly #1",
+		"file": "/avatars/nelly_1.png"
+	},
+	{
+		"name": "Nelly #2",
+		"file": "/avatars/nelly_2.png"
+	},
+	{
+		"name": "Nelly #3",
+		"file": "/avatars/nelly_3.png"
+	},
+	{
+		"name": "Nelly #4",
+		"file": "/avatars/nelly_4.png"
+	},
+	{
+		"name": "Nelly #5",
+		"file": "/avatars/nelly_5.png"
+	},
+	{
+		"name": "Nelly #6",
+		"file": "/avatars/nelly_6.png"
+	},
+	{
+		"name": "Nerm #1",
+		"file": "/avatars/nerm_1.png"
+	},
+	{
+		"name": "Noah #1",
+		"file": "/avatars/noah_1.png"
+	},
+	{
+		"name": "Noodle #1",
+		"file": "/avatars/noodle_1.png"
+	},
+	{
+		"name": "Noodle #2",
+		"file": "/avatars/noodle_2.png"
+	},
+	{
+		"name": "Oiseau #1",
+		"file": "/avatars/oiseau_1.png"
+	},
+	{
+		"name": "Ono #1",
+		"file": "/avatars/ono_1.png"
+	},
+	{
+		"name": "Ono #2",
+		"file": "/avatars/ono_2.png"
+	},
+	{
+		"name": "Oslow #1",
+		"file": "/avatars/oslow_1.png"
+	},
+	{
+		"name": "Painter #1",
+		"file": "/avatars/painter_1.png"
+	},
+	{
+		"name": "Pawn #1",
+		"file": "/avatars/pawn_1.png"
+	},
+	{
+		"name": "Pea #1",
+		"file": "/avatars/pea_1.png"
+	},
+	{
+		"name": "Peachy #1",
+		"file": "/avatars/peachy_1.png"
+	},
+	{
+		"name": "Peeper #1",
+		"file": "/avatars/peeper_1.png"
+	},
+	{
+		"name": "Peppe #1",
+		"file": "/avatars/peppe_1.png"
+	},
+	{
+		"name": "Peppe #2",
+		"file": "/avatars/peppe_2.png"
+	},
+	{
+		"name": "Peppe #3",
+		"file": "/avatars/peppe_3.png"
+	},
+	{
+		"name": "Peppe #4",
+		"file": "/avatars/peppe_4.png"
+	},
+	{
+		"name": "Peppe #5",
+		"file": "/avatars/peppe_5.png"
+	},
+	{
+		"name": "Peppe #6",
+		"file": "/avatars/peppe_6.png"
+	},
+	{
+		"name": "Peppe #7",
+		"file": "/avatars/peppe_7.png"
+	},
+	{
+		"name": "Peppe #8",
+		"file": "/avatars/peppe_8.png"
+	},
+	{
+		"name": "Peppe #9",
+		"file": "/avatars/peppe_9.png"
+	},
+	{
+		"name": "Peppe #10",
+		"file": "/avatars/peppe_10.png"
+	},
+	{
+		"name": "Petal #1",
+		"file": "/avatars/petal_1.png"
+	},
+	{
+		"name": "Phibi #1",
+		"file": "/avatars/phibi_1.png"
+	},
+	{
+		"name": "Pinky #1",
+		"file": "/avatars/pinky_1.png"
+	},
+	{
+		"name": "Pinky #2",
+		"file": "/avatars/pinky_2.png"
+	},
+	{
+		"name": "Quirk #1",
+		"file": "/avatars/quirk_1.png"
+	},
+	{
+		"name": "Rezzy #1",
+		"file": "/avatars/rezzy_1.png"
+	},
+	{
+		"name": "River #1",
+		"file": "/avatars/river_1.png"
+	},
+	{
+		"name": "Roach #1",
+		"file": "/avatars/roach_1.png"
+	},
+	{
+		"name": "Robot #1",
+		"file": "/avatars/robot_1.png"
+	},
+	{
+		"name": "Robot #2",
+		"file": "/avatars/robot_2.png"
+	},
+	{
+		"name": "Robot #3",
+		"file": "/avatars/robot_3.png"
+	},
+	{
+		"name": "Robot #4",
+		"file": "/avatars/robot_4.png"
+	},
+	{
+		"name": "Robot #5",
+		"file": "/avatars/robot_5.png"
+	},
+	{
+		"name": "Robot #6",
+		"file": "/avatars/robot_6.png"
+	},
+	{
+		"name": "Robot #7",
+		"file": "/avatars/robot_7.png"
+	},
+	{
+		"name": "Robot #8",
+		"file": "/avatars/robot_8.png"
+	},
+	{
+		"name": "Roka #1",
+		"file": "/avatars/roka_1.png"
+	},
+	{
+		"name": "Rumi #1",
+		"file": "/avatars/rumi_1.png"
+	},
+	{
+		"name": "Sandmich #1",
+		"file": "/avatars/sandmich_1.png"
+	},
+	{
+		"name": "Scena #1",
+		"file": "/avatars/scena_1.png"
+	},
+	{
+		"name": "Scotty #1",
+		"file": "/avatars/scotty_1.png"
+	},
+	{
+		"name": "Skull #1",
+		"file": "/avatars/skull_1.png"
+	},
+	{
+		"name": "Sleepy Dragon #1",
+		"file": "/avatars/sleepy_dragon_1.png"
+	},
+	{
+		"name": "Slormp #1",
+		"file": "/avatars/slormp_1.png"
+	},
+	{
+		"name": "Smandwitch #1",
+		"file": "/avatars/smandwitch_1.png"
+	},
+	{
+		"name": "Smeed #1",
+		"file": "/avatars/smeed_1.png"
+	},
+	{
+		"name": "Smeed #2",
+		"file": "/avatars/smeed_2.png"
+	},
+	{
+		"name": "Snail #1",
+		"file": "/avatars/snail_1.png"
+	},
+	{
+		"name": "Snap #1",
+		"file": "/avatars/snap_1.png"
+	},
+	{
+		"name": "Snek #1",
+		"file": "/avatars/snek_1.png"
+	},
+	{
+		"name": "Snumpus #1",
+		"file": "/avatars/snumpus_1.png"
+	},
+	{
+		"name": "Space Brain #1",
+		"file": "/avatars/space_brain_1.png"
+	},
+	{
+		"name": "Speece #1",
+		"file": "/avatars/speece_1.png"
+	},
+	{
+		"name": "Speek #1",
+		"file": "/avatars/speek_1.png"
+	},
+	{
+		"name": "Spime #1",
+		"file": "/avatars/spime_1.png"
+	},
+	{
+		"name": "Steve #1",
+		"file": "/avatars/steve_1.png"
+	},
+	{
+		"name": "Stork #2",
+		"file": "/avatars/stork_2.png"
+	},
+	{
+		"name": "Stork #1",
+		"file": "/avatars/stork_1.png"
+	},
+	{
+		"name": "Strech #1",
+		"file": "/avatars/strech_1.png"
+	},
+	{
+		"name": "Swirl #1",
+		"file": "/avatars/swirl_1.png"
+	},
+	{
+		"name": "Tan #1",
+		"file": "/avatars/tan_1.png"
+	},
+	{
+		"name": "Thawne #1",
+		"file": "/avatars/thawne_1.png"
+	},
+	{
+		"name": "Thonk #1",
+		"file": "/avatars/thonk_1.png"
+	},
+	{
+		"name": "Tipp #1",
+		"file": "/avatars/tipp_1.png"
+	},
+	{
+		"name": "Toad #1",
+		"file": "/avatars/toad_1.png"
+	},
+	{
+		"name": "Trom #1",
+		"file": "/avatars/trom_1.png"
+	},
+	{
+		"name": "Twoot #1",
+		"file": "/avatars/twoot_1.png"
+	},
+	{
+		"name": "Val #1",
+		"file": "/avatars/val_1.png"
+	},
+	{
+		"name": "Vroom #1",
+		"file": "/avatars/vroom_1.png"
+	},
+	{
+		"name": "Wallp #1",
+		"file": "/avatars/wallp_1.png"
+	},
+	{
+		"name": "Wanderer #1",
+		"file": "/avatars/wanderer_1.png"
+	},
+	{
+		"name": "Willow #1",
+		"file": "/avatars/willow_1.png"
+	},
+	{
+		"name": "Winston #1",
+		"file": "/avatars/winston_1.png"
+	},
+	{
+		"name": "Wizzy #1",
+		"file": "/avatars/wizzy_1.png"
+	},
+	{
+		"name": "Worf #1",
+		"file": "/avatars/worf_1.png"
+	},
+	{
+		"name": "Worm #1",
+		"file": "/avatars/worm_1.png"
+	},
+	{
+		"name": "Wump Bot #1",
+		"file": "/avatars/wump_bot_1.png"
+	},
+	{
+		"name": "Wumpus #1",
+		"file": "/avatars/wumpus_1.png"
+	},
+	{
+		"name": "Wumpus #2",
+		"file": "/avatars/wumpus_2.png"
+	},
+	{
+		"name": "Wumpus #3",
+		"file": "/avatars/wumpus_3.png"
+	},
+	{
+		"name": "Wumpus #4",
+		"file": "/avatars/wumpus_4.png"
+	},
+	{
+		"name": "Wumpus #5",
+		"file": "/avatars/wumpus_5.png"
+	},
+	{
+		"name": "Wumpus #6",
+		"file": "/avatars/wumpus_6.png"
+	},
+	{
+		"name": "Wumpus #7",
+		"file": "/avatars/wumpus_7.png"
+	},
+	{
+		"name": "Wumpus #8",
+		"file": "/avatars/wumpus_8.png"
+	},
+	{
+		"name": "Wumpus #9",
+		"file": "/avatars/wumpus_9.png"
+	},
+	{
+		"name": "Wumpus #10",
+		"file": "/avatars/wumpus_10.png"
+	},
+	{
+		"name": "Wumpus #11",
+		"file": "/avatars/wumpus_11.png"
+	},
+	{
+		"name": "Wumpus #12",
+		"file": "/avatars/wumpus_12.png"
+	},
+	{
+		"name": "Wumpus #13",
+		"file": "/avatars/wumpus_13.png"
+	},
+	{
+		"name": "Wumpus #14",
+		"file": "/avatars/wumpus_14.png"
+	},
+	{
+		"name": "Wumpus #15",
+		"file": "/avatars/wumpus_15.png"
+	},
+	{
+		"name": "Wumpus #16",
+		"file": "/avatars/wumpus_16.png"
+	},
+	{
+		"name": "Wumpus #17",
+		"file": "/avatars/wumpus_17.png"
+	},
+	{
+		"name": "Wumpus #18",
+		"file": "/avatars/wumpus_18.png"
+	},
+	{
+		"name": "Wumpus #19",
+		"file": "/avatars/wumpus_19.png"
+	},
+	{
+		"name": "Wumpus #20",
+		"file": "/avatars/wumpus_20.png"
+	},
+	{
+		"name": "Wumpus #21",
+		"file": "/avatars/wumpus_21.png"
+	},
+	{
+		"name": "Wumpus #22",
+		"file": "/avatars/wumpus_22.png"
+	},
+	{
+		"name": "Wumpus #23",
+		"file": "/avatars/wumpus_23.png"
+	},
+	{
+		"name": "Wumpus #24",
+		"file": "/avatars/wumpus_24.png"
+	},
+	{
+		"name": "Wumpus #25",
+		"file": "/avatars/wumpus_25.png"
+	},
+	{
+		"name": "Wumpus #26",
+		"file": "/avatars/wumpus_26.png"
+	},
+	{
+		"name": "Wumpus #27",
+		"file": "/avatars/wumpus_27.png"
+	},
+	{
+		"name": "Wumpus #28",
+		"file": "/avatars/wumpus_28.png"
+	},
+	{
+		"name": "Wumpus #29",
+		"file": "/avatars/wumpus_29.png"
+	},
+	{
+		"name": "Wumpus #30",
+		"file": "/avatars/wumpus_30.png"
+	},
+	{
+		"name": "Wumpus #31",
+		"file": "/avatars/wumpus_31.png"
+	},
+	{
+		"name": "Wumpus #32",
+		"file": "/avatars/wumpus_32.png"
+	},
+	{
+		"name": "Wumpus #33",
+		"file": "/avatars/wumpus_33.png"
+	},
+	{
+		"name": "Wumpus #34",
+		"file": "/avatars/wumpus_34.png"
+	},
+	{
+		"name": "Wumpus #35",
+		"file": "/avatars/wumpus_35.png"
+	},
+	{
+		"name": "Wumpus #36",
+		"file": "/avatars/wumpus_36.png"
+	},
+	{
+		"name": "Wumpus #37",
+		"file": "/avatars/wumpus_37.png"
+	},
+	{
+		"name": "Wumpus #38",
+		"file": "/avatars/wumpus_38.png"
+	},
+	{
+		"name": "Wumpus #39",
+		"file": "/avatars/wumpus_39.png"
+	},
+	{
+		"name": "Wumpus #40",
+		"file": "/avatars/wumpus_40.png"
+	},
+	{
+		"name": "Wumpus #41",
+		"file": "/avatars/wumpus_41.png"
+	},
+	{
+		"name": "Wumpus #42",
+		"file": "/avatars/wumpus_42.png"
+	},
+	{
+		"name": "Wumpus #43",
+		"file": "/avatars/wumpus_43.png"
 	}
 ]
