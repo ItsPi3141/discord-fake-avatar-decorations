@@ -10,6 +10,9 @@ import { Modal } from "./components/modal";
 import Link from "next/link";
 import Twemoji from "./components/twemoji";
 
+import "react-tooltip/dist/react-tooltip.css";
+import { Tooltip } from "react-tooltip";
+
 import { Image } from "./components/image";
 const baseImgUrl = process.env.NEXT_PUBLIC_BASE_IMAGE_URL || "";
 
@@ -134,21 +137,35 @@ export default function Home() {
 									<div className="flex flex-wrap gap-3 w-[264px] sm:w-[448px] xs:w-[356px]">
 										{avatarsData.map((avatar, index) => {
 											return (
-												<button
-													key={index}
-													className="border-2 border-surface1 bg-surface1 p-2 rounded-[5px] w-20 h-20 decor"
-													onClick={(e) => {
-														setAvUrl(baseImgUrl + avatar.file);
-														document.querySelectorAll("button.decor.border-2.border-primary").forEach((el) => {
-															el.classList.remove("border-primary");
-															el.classList.add("border-surface1");
-														});
-														e.target.classList.add("border-primary");
-														e.target.classList.remove("border-surface1");
-													}}
-												>
-													<Image src={avatar.file} className="rounded-full pointer-events-none" />
-												</button>
+												<div className="flex flex-col items-center text-center">
+													<button
+														key={index}
+														data-tooltip-id={avatar.name.toLowerCase().replaceAll(" ", "-")}
+														data-tooltip-content={avatar.name}
+														className="border-2 border-surface1 bg-surface1 p-2 rounded-[5px] w-20 h-20 decor"
+														onClick={(e) => {
+															setAvUrl(baseImgUrl + avatar.file);
+															document.querySelectorAll("button.decor.border-2.border-primary").forEach((el) => {
+																el.classList.remove("border-primary");
+																el.classList.add("border-surface1");
+															});
+															e.target.classList.add("border-primary");
+															e.target.classList.remove("border-surface1");
+														}}
+													>
+														<Image src={avatar.file} className="rounded-full pointer-events-none" />
+													</button>
+													<Tooltip
+														id={avatar.name.toLowerCase().replaceAll(" ", "-")}
+														opacity={1}
+														style={{
+															background: "#111214",
+															borderRadius: "8px",
+															padding: "6px 12px 4px 12px",
+															boxShadow: "0 10px 15px -3px rgb(0 0 0 / 0.2), 0 4px 6px -4px rgb(0 0 0 / 0.2)",
+														}}
+													/>
+												</div>
 											);
 										})}
 									</div>
