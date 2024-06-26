@@ -36,6 +36,69 @@
 		]
 	},
 	{
+		"name": "Palworld",
+		"description": "New island, new Pals, new adventures!",
+		"darkText": false,
+		"banner": {
+			"image": [
+				{
+					"url": "/banners/palworld.png",
+					"align": "center",
+					"height": "100%"
+				},
+				{
+					"url": "/banners/palworld1.png",
+					"align": "center"
+				},
+				{
+					"url": "/banners/palworld2.png",
+					"align": "right",
+					"height": "150%"
+				},
+				{
+					"url": "/banners/palworld3.png",
+					"align": "left",
+					"height": "150%"
+				}
+			],
+			"text": "/bannertext/palworld.png",
+			"height": 50
+		},
+		"badge": "JULY 2024",
+		"items": [
+			{
+				"name": "Chillet",
+				"description": "Who doesn't love to cuddle?",
+				"file": "/decorations/chillet.png"
+			},
+			{
+				"name": "Pal Sphere",
+				"description": "Fingers crossed!",
+				"file": "/decorations/pal_sphere.png"
+			},
+			{
+				"name": "Cattiva",
+				"description": "Cute... from a distance.",
+				"file": "/decorations/cattiva.png"
+			},
+			{
+				"name": "Lamball",
+				"description": "Cozy, fluffy, and clumsy!",
+				"file": "/decorations/lamball.png"
+			},
+			{
+				"name": "Depresso",
+				"description": "As enthusiastic as ever.",
+				"file": "/decorations/depresso.png"
+			},
+			{
+				"name": "Selyne",
+				"description": "A mysterious moonlight encounter.",
+				"file": "/decorations/selyne.png"
+			}
+		]
+	},
+	{
 		"name": "Arcade",
 		"description": "Press START to play.",
 		"darkText": false,
@@ -239,6 +302,7 @@
 		"name": "VALORANT",
 		"description": "DEFY DEFINITION",
 		"darkText": false,
+		"descriptionTopMargin": "-16px",
 		"banner": {
 			"image": [
 				{
@@ -247,15 +311,18 @@
 				},
 				{
 					"url": "/banners/valorant2.png",
-					"align": "right"
+					"align": "right",
+					"height": "150%"
 				},
 				{
 					"url": "/banners/valorant3.png",
-					"align": "left"
+					"align": "left",
+					"height": "150%"
 				}
 			],
 			"text": "/bannertext/valorant.png",
-			"height": 64
+			"height": 64,
+			"background": "#ff4655"
 		},
 		"badge": "APRIL 2024",
 		"items": [
