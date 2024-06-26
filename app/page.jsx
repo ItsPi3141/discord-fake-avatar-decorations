@@ -73,8 +73,9 @@ export default function Home() {
 						<div
 							className="flex flex-col justify-center items-center bg-primary mt-8 p-4 sm:p-16 rounded-3xl w-[calc(100%-6rem)] min-h-[20rem] text-center"
 							style={{
-								backgroundImage: new Date().getMonth() == 11 ? "url(/wallpaper/winter.jpg)" : "",
+								backgroundImage: new Date().getMonth() == 11 ? `url(${baseImgUrl}/wallpaper/winter.jpg)` : "",
 								backgroundPosition: "center bottom",
+								backgroundSize: "cover",
 							}}
 						>
 							<h1 className="text-3xl sm:text-5xl ginto">DISCORD</h1>
