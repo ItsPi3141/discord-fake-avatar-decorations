@@ -1,7 +1,15 @@
 [
 	{
+		"name": "Palworld",
+		"file": "/avatars/palworld.png"
+	},
+	{
 		"name": "Arcade",
 		"file": "/avatars/arcade.png"
+	},
+	{
+		"name": "Retro",
+		"file": "/avatars/retro.gif"
 	},
 	{
 		"name": "Galaxy",
@@ -10,10 +18,6 @@
 	{
 		"name": "Lofi",
 		"file": "/avatars/lofi.png"
-	},
-	{
-		"name": "Retro",
-		"file": "/avatars/retro.gif"
 	},
 	{
 		"name": "Valorant",
