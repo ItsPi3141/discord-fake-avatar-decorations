@@ -138,7 +138,7 @@ export default function Home() {
 													key={index}
 													className="border-2 border-surface1 bg-surface1 p-2 rounded-[5px] w-20 h-20 decor"
 													onClick={(e) => {
-														setAvUrl(avatar.file);
+														setAvUrl(baseImgUrl + avatar.file);
 														document.querySelectorAll("button.decor.border-2.border-primary").forEach((el) => {
 															el.classList.remove("border-primary");
 															el.classList.add("border-surface1");
@@ -366,7 +366,7 @@ export default function Home() {
 												<>
 													<Image
 														id="avatar"
-														src={avUrl || "/avatars/blue.png"}
+														src={avUrl || `${baseImgUrl}/avatars/blue.png`}
 														className={
 															"absolute top-[calc(80px*0.09)] left-[calc(80px*0.09)] w-[calc(80px*0.82)] h-[calc(80px*0.82)] rounded-full"
 														}
@@ -475,7 +475,7 @@ export default function Home() {
 																{m.styled ? (
 																	<div className="relative rounded-full w-10 h-10 overflow-hidden">
 																		<Image
-																			src={avUrl || "/avatars/blue.png"}
+																			src={avUrl || `${baseImgUrl}/avatars/blue.png`}
 																			draggable={false}
 																			className="top-[calc(40px*0.09)] left-[calc(40px*0.09)] absolute rounded-full w-[calc(40px*0.82)] h-[calc(40px*0.82)]"
 																		/>
@@ -483,7 +483,7 @@ export default function Home() {
 																	</div>
 																) : (
 																	<Image
-																		src={avUrl || "/avatars/blue.png"}
+																		src={avUrl || `${baseImgUrl}/avatars/blue.png`}
 																		draggable={false}
 																		className="rounded-full w-10 h-10"
 																	/>
