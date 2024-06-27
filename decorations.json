@@ -15,7 +15,8 @@
 					"height": "100%",
 					"opacity": "0.8"
 				}
-			]
+			],
+			"background": "linear-gradient(90deg, rgba(52,65,217,1) 0%, rgba(154,68,247,1) 100%)"
 		},
 		"items": [
 			{
@@ -851,6 +852,128 @@
 				"name": "Smoke",
 				"description": "Now you see me, now you don't",
 				"file": "/decorations/smoke.png"
+			}
+		]
+	},
+	{
+		"name": "Snowsgiving",
+		"description": "❆ Happy Snowsgiving! ❆",
+		"banner": {
+			"image": "/banners/snowsgiving.png",
+			"text": "/bannertext/snowsgiving.svg",
+			"height": 42
+		},
+		"badge": "WINTER 2022",
+		"items": [
+			{
+				"name": "Green Blanket",
+				"description": "Limited time decoration from December 2022. Given to all nitro subscribers.",
+				"file": "/decorations/blanket_green.png"
+			},
+			{
+				"name": "Orange Blanket",
+				"description": "Limited time decoration from December 2022. Given to all nitro subscribers.",
+				"file": "/decorations/blanket_orange.png"
+			},
+			{
+				"name": "Pink Blanket",
+				"description": "Limited time decoration from December 2022. Given to all nitro subscribers.",
+				"file": "/decorations/blanket_pink.png"
+			},
+			{
+				"name": "Purple Blanket",
+				"description": "Limited time decoration from December 2022. Given to all nitro subscribers.",
+				"file": "/decorations/blanket_purple.png"
+			},
+			{
+				"name": "White Box",
+				"description": "Limited time decoration from December 2022. Given to all nitro subscribers.",
+				"file": "/decorations/box_white_blue.png"
+			},
+			{
+				"name": "Blue Box",
+				"description": "Limited time decoration from December 2022. Given to all nitro subscribers.",
+				"file": "/decorations/box_blue_yellow.png"
+			},
+			{
+				"name": "Green Box",
+				"description": "Limited time decoration from December 2022. Given to all nitro subscribers.",
+				"file": "/decorations/box_green_red.png"
+			},
+			{
+				"name": "Red Box",
+				"description": "Limited time decoration from December 2022. Given to all nitro subscribers.",
+				"file": "/decorations/box_red_white.png"
+			},
+			{
+				"name": "Red White Box",
+				"description": "Limited time decoration from December 2022. Given to all nitro subscribers.",
+				"file": "/decorations/box_red_white_blue.png"
+			},
+			{
+				"name": "Festive Confetti",
+				"description": "Limited time decoration from December 2022. Given to all nitro subscribers.",
+				"file": "/decorations/confetti_festive.png"
+			},
+			{
+				"name": "Fire Confetti",
+				"description": "Limited time decoration from December 2022. Given to all nitro subscribers.",
+				"file": "/decorations/confetti_fire.png"
+			},
+			{
+				"name": "Ice Confetti",
+				"description": "Limited time decoration from December 2022. Given to all nitro subscribers.",
+				"file": "/decorations/confetti_ice.png"
+			},
+			{
+				"name": "Mint Confetti",
+				"description": "Limited time decoration from December 2022. Given to all nitro subscribers.",
+				"file": "/decorations/confetti_mint.png"
+			},
+			{
+				"name": "Star Confetti",
+				"description": "Limited time decoration from December 2022. Given to all nitro subscribers.",
+				"file": "/decorations/confetti_star.png"
+			},
+			{
+				"name": "Vaporwave Confetti",
+				"description": "Limited time decoration from December 2022. Given to all nitro subscribers.",
+				"file": "/decorations/confetti_vaporwave.png"
+			},
+			{
+				"name": "Icecube",
+				"description": "Limited time decoration from December 2022. Given to all nitro subscribers.",
+				"file": "/decorations/ice_cube.png"
+			},
+			{
+				"name": "Gleaming Icicle",
+				"description": "Limited time decoration from December 2022. Given to all nitro subscribers.",
+				"file": "/decorations/icicle_gleaming.png"
+			},
+			{
+				"name": "Snowing Icicle",
+				"description": "Limited time decoration from December 2022. Given to all nitro subscribers.",
+				"file": "/decorations/icicle_snowing.png"
+			},
+			{
+				"name": "Blue Teacup",
+				"description": "Limited time decoration from December 2022. Given to all nitro subscribers.",
+				"file": "/decorations/teacup_blue.png"
+			},
+			{
+				"name": "Orange Teacup",
+				"description": "Limited time decoration from December 2022. Given to all nitro subscribers.",
+				"file": "/decorations/teacup_orange.png"
+			},
+			{
+				"name": "Pink Teacup",
+				"description": "Limited time decoration from December 2022. Given to all nitro subscribers.",
+				"file": "/decorations/teacup_pink.png"
+			},
+			{
+				"name": "Red Teacup",
+				"description": "Limited time decoration from December 2022. Given to all nitro subscribers.",
+				"file": "/decorations/teacup_red.png"
 			}
 		]
 	}
