@@ -63,7 +63,7 @@
 				}
 			],
 			"text": "/bannertext/palworld.png",
-			"height": 50
+			"height": 56
 		},
 		"badge": "JULY 2024",
 		"items": [
@@ -106,7 +106,7 @@
 		"banner": {
 			"image": "/banners/arcade.png",
 			"text": "/bannertext/arcade.png",
-			"height": 50
+			"height": 40
 		},
 		"items": [
 			{
@@ -861,7 +861,7 @@
 		"banner": {
 			"image": "/banners/snowsgiving.png",
 			"text": "/bannertext/snowsgiving.svg",
-			"height": 42
+			"height": 46
 		},
 		"badge": "WINTER 2022",
 		"items": [
