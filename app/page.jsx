@@ -134,6 +134,7 @@ export default function Home() {
 									/>
 								</div>
 								<p className="mt-4 mb-2">You can also pick from one of these avatars below</p>
+								{/* SELECT AVATAR */}
 								<div className="flex flex-col gap-8 py-1 max-h-[280px] overflow-auto discord-scrollbar">
 									<div className="flex flex-wrap gap-3 w-[264px] sm:w-[448px] xs:w-[356px]">
 										{avatarsData.map((avatar, index) => {
@@ -143,10 +144,10 @@ export default function Home() {
 														key={index}
 														data-tooltip-id={avatar.name.toLowerCase().replaceAll(" ", "-")}
 														data-tooltip-content={avatar.name}
-														className="border-2 border-surface1 bg-surface1 p-2 rounded-[5px] w-20 h-20 decor outline-none"
+														className="border-2 border-surface1 bg-surface1 p-2 rounded-[5px] w-20 h-20 avatar-preset outline-none"
 														onClick={(e) => {
 															setAvUrl(baseImgUrl + avatar.file);
-															document.querySelectorAll("button.decor.border-2.border-primary").forEach((el) => {
+															document.querySelectorAll("button.avatar-preset.border-2.border-primary").forEach((el) => {
 																el.classList.remove("border-primary");
 																el.classList.add("border-surface1");
 															});
