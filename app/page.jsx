@@ -514,7 +514,11 @@ export default function Home() {
 							This site is NOT affiliated with Discord Inc. in any way. All images and assets belong to Discord Inc.
 							<br />
 							Discord Character avatars were created by Bred and Jace. View the collection on{" "}
-							<Link href={"https://www.figma.com/community/file/1114896965920105129"} className="hover:text-gray-200 underline" target="_blank">
+							<Link
+								href={"https://www.figma.com/community/file/1316822758717784787/ultimate-discord-library"}
+								className="hover:text-gray-200 underline"
+								target="_blank"
+							>
 								Figma
 							</Link>
 						</p>
