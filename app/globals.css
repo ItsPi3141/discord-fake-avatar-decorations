@@ -54,6 +54,7 @@
 }
 
 /* DISCORD STYLE SCROLLBAR */
+/* Chromium */
 .discord-scrollbar::-webkit-scrollbar,
 body::-webkit-scrollbar {
 	width: 20px;
@@ -72,8 +73,20 @@ body::-webkit-scrollbar-track {
 body::-webkit-scrollbar-thumb {
 	background: #1a1b1e;
 	border-radius: 99px;
+	min-height: 30px;
 	border: solid 6.5px transparent;
 	background-clip: content-box !important;
+}
+/* Firefox */
+@-moz-document url-prefix() {
+	body,
+	.discord-scrollbar {
+		scrollbar-track-color: #2b2d31;
+		scrollbar-face-color: #3d3f45;
+		scrollbar-color: #3d3f45 #2b2d31;
+		scrollbar-gutter: stable;
+		padding-right: 16px;
+	}
 }
 
 /* LOADING SPINNER */

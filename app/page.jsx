@@ -180,7 +180,7 @@ export default function Home() {
 									{decorationsData.map((category, index) => {
 										return (
 											<div key={index}>
-												<div className="relative justify-center items-center grid grid-cols-1 grid-rows-1 bg-black mb-4 rounded-2xl w-full h-28 overflow-hidden">
+												<div className="relative justify-center items-center grid grid-cols-1 grid-rows-1 bg-black mb-4 rounded-2xl h-28 overflow-hidden">
 													{(() => {
 														if (typeof category.banner.image !== "string") {
 															return (
