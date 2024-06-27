@@ -143,7 +143,7 @@ export default function Home() {
 														key={index}
 														data-tooltip-id={avatar.name.toLowerCase().replaceAll(" ", "-")}
 														data-tooltip-content={avatar.name}
-														className="border-2 border-surface1 bg-surface1 p-2 rounded-[5px] w-20 h-20 decor"
+														className="border-2 border-surface1 bg-surface1 p-2 rounded-[5px] w-20 h-20 decor outline-none"
 														onClick={(e) => {
 															setAvUrl(baseImgUrl + avatar.file);
 															document.querySelectorAll("button.decor.border-2.border-primary").forEach((el) => {
