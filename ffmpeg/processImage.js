@@ -65,7 +65,7 @@ export function addDecoration(/** @type {FFmpeg} */ ffmpeg, /** @type {String} *
 					"color=s=288x288:d=100,format=argb,colorchannelmixer=aa=0.0[background];",
 
 					// Resize avatar to be 288x288
-					"[0]scale=288:288 [avatar],",
+					"[0]scale=236:236 [avatar],",
 
 					// Round the corners of the avatar image
 					"[avatar]format=argb,geq=lum='p(X,Y)':a='st(1,pow(min(W/2,H/2),2))+st(3,pow(X-(W/2),2)+pow(Y-(H/2),2));if(lte(ld(3),ld(1)),alpha(X,Y),0)'[rounded avatar];",
@@ -106,7 +106,7 @@ export function addDecoration(/** @type {FFmpeg} */ ffmpeg, /** @type {String} *
 					"color=s=288x288:d=100,format=argb,colorchannelmixer=aa=0.0[background];",
 
 					// Resize avatar to be 288x288
-					"[0]scale=288:288 [avatar],",
+					"[0]scale=236:236 [avatar],",
 
 					// Round the corners of the avatar image
 					"[avatar]format=argb,geq=lum='p(X,Y)':a='st(1,pow(min(W/2,H/2),2))+st(3,pow(X-(W/2),2)+pow(Y-(H/2),2));if(lte(ld(3),ld(1)),alpha(X,Y),0)'[rounded avatar];",
