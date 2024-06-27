@@ -48,6 +48,94 @@
 		"file": "/avatars/pink.png"
 	},
 	{
+		"name": "Blurple",
+		"file": "/avatars/blurple.png"
+	},
+	{
+		"name": "Goth",
+		"file": "/avatars/goth.png"
+	},
+	{
+		"name": "WHAM",
+		"file": "/avatars/wham.png"
+	},
+	{
+		"name": "Charcoal",
+		"file": "/avatars/charcoal.png"
+	},
+	{
+		"name": "Ceramic",
+		"file": "/avatars/ceramic.png"
+	},
+	{
+		"name": "Pastel",
+		"file": "/avatars/pastel.png"
+	},
+	{
+		"name": "Matey",
+		"file": "/avatars/matey.png"
+	},
+	{
+		"name": "Tactical",
+		"file": "/avatars/tactical.png"
+	},
+	{
+		"name": "Sunset Ave",
+		"file": "/avatars/sunset_ave.png"
+	},
+	{
+		"name": "Galactic Chrome",
+		"file": "/avatars/galactic_chrome.png"
+	},
+	{
+		"name": "Holo",
+		"file": "/avatars/holo.png"
+	},
+	{
+		"name": "Sakura",
+		"file": "/avatars/sakura.png"
+	},
+	{
+		"name": "Sherbet Dreamsicle",
+		"file": "/avatars/sherbet_dreamsicle.png"
+	},
+	{
+		"name": "Gaming",
+		"file": "/avatars/gaming.png"
+	},
+	{
+		"name": "Mainframe",
+		"file": "/avatars/mainframe.png"
+	},
+	{
+		"name": "Prismatic Waves",
+		"file": "/avatars/prismatic_waves.png"
+	},
+	{
+		"name": "Fuming",
+		"file": "/avatars/fuming.png"
+	},
+	{
+		"name": "D64",
+		"file": "/avatars/d64.png"
+	},
+	{
+		"name": "Blurple Twilight",
+		"file": "/avatars/blurple_twilight.png"
+	},
+	{
+		"name": "In Rainbows",
+		"file": "/avatars/in_rainbows.png"
+	},
+	{
+		"name": "Midnight Prism",
+		"file": "/avatars/midnight_prism.png"
+	},
+	{
+		"name": "Color Wave",
+		"file": "/avatars/color_wave.png"
+	},
+	{
 		"name": "Classic Blue",
 		"file": "/avatars/classic_blue.png"
 	},
@@ -1030,5 +1118,9 @@
 	{
 		"name": "Wumpus #43",
 		"file": "/avatars/wumpus_43.png"
+	},
+	{
+		"name": "Wumpus #44",
+		"file": "/avatars/wumpus_44.png"
 	}
 ]
