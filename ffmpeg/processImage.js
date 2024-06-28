@@ -1,6 +1,8 @@
 import { FFmpeg } from "@ffmpeg/ffmpeg";
 import { fetchFile } from "@ffmpeg/util";
 import { getMimeTypeFromArrayBuffer } from "./utils";
+import parseAPNG from "apng-js";
+import { isNotAPNG } from "apng-js";
 
 /**
  * Crop the image to a square shape using FFmpeg.
@@ -53,13 +55,14 @@ export function cropToSquare(/** @type {FFmpeg} */ ffmpeg, /** @type {String} */
 export function addDecoration(/** @type {FFmpeg} */ ffmpeg, /** @type {String} */ imageUrl, /** @type {String} */ decorationUrl) {
 	return new Promise(async (resolve, reject) => {
 		try {
-			const avatarData = await fetchFile(await (await fetch(imageUrl)).blob());
+			const avatarAB = await (await fetch(imageUrl)).arrayBuffer();
+			const avatarData = await fetchFile(new Blob([avatarAB]));
 			const avatarType = getMimeTypeFromArrayBuffer(avatarData);
 			if (avatarType == null) return reject(new Error("Invalid image type"));
 			const ext = avatarType.replace("image/", "");
-			await ffmpeg.writeFile(`avatarbase.${ext}`, avatarData);
 
 			if (!decorationUrl) {
+				await ffmpeg.writeFile(`avatarbase.${ext}`, avatarData);
 				const filter_complex = [
 					// Start out with a transparent background
 					"color=s=288x288:d=100,format=argb,colorchannelmixer=aa=0.0[background];",
@@ -97,10 +100,36 @@ export function addDecoration(/** @type {FFmpeg} */ ffmpeg, /** @type {String} *
 					return reject(reader.error);
 				};
 			} else {
-				const decoData = await fetchFile(await (await fetch(decorationUrl)).blob());
-				await ffmpeg.writeFile("decoration.gif", decoData);
+				const decoAB = await (await fetch(decorationUrl)).arrayBuffer();
+				const decoData = await fetchFile(new Blob([decoAB]));
 
-				// run ffmpeg -i avatarbase.png -i decoration.gif -filter_complex "[0][1]overlay=(main_w-overlay_w)/2:(main_h-overlay_h)/2:format=auto,split[s0][s1];[s0]palettegen[p];[s1][p]paletteuse" avatarwithdeco.gif
+				async function writeFiles() {
+					await ffmpeg.writeFile(`avatarbase.${ext}`, avatarData);
+				}
+				if (ext === "gif") {
+					const decoDuration = getAPngDuration(decoAB);
+					const avatarDuration = getGifDuration(avatarAB);
+					if (decoDuration > avatarDuration) {
+						await ffmpeg.writeFile("avatar_before_timing.gif", avatarData);
+						await ffmpeg.exec(["-ignore_loop", "0", "-i", "avatar_before_timing.gif", "-loop", "0", "-t", `${decoDuration}`, `avatarbase.${ext}`]);
+					} else {
+						await writeFiles();
+					}
+				} else if (ext === "png") {
+					const decoDuration = getAPngDuration(decoAB);
+					const avatarDuration = getAPngDuration(avatarAB);
+					if (decoDuration > avatarDuration && avatarDuration > 1) {
+						await ffmpeg.writeFile("avatar_before_timing.png", avatarData);
+						await ffmpeg.exec(["-i", "avatar_before_timing.png", "-loop", "0", "-t", `${decoDuration}`, `avatarbase.${ext}`]);
+					} else {
+						await writeFiles();
+					}
+				} else {
+					await writeFiles();
+				}
+				await ffmpeg.writeFile("decoration.png", decoData);
+
+				// run ffmpeg -i avatarbase.png -i decoration.png -filter_complex "[0][1]overlay=(main_w-overlay_w)/2:(main_h-overlay_h)/2:format=auto,split[s0][s1];[s0]palettegen[p];[s1][p]paletteuse" avatarwithdeco.gif
 				const filter_complex = [
 					// Start out with a transparent background
 					"color=s=288x288:d=100,format=argb,colorchannelmixer=aa=0.0[background];",
@@ -131,14 +160,15 @@ export function addDecoration(/** @type {FFmpeg} */ ffmpeg, /** @type {String} *
 					"[s0]palettegen=reserve_transparent=on:transparency_color=ffffff[p];",
 					"[s1][p]paletteuse",
 				];
-				await ffmpeg.exec(["-i", `avatarbase.${ext}`, "-i", "decoration.gif", "-filter_complex", filter_complex.join(""), "avatarwithdeco.gif"]);
+				await ffmpeg.exec(["-i", `avatarbase.${ext}`, "-i", "decoration.png", "-filter_complex", filter_complex.join(""), "avatarwithdeco.gif"]);
 
-				const res = await ffmpeg.readFile("avatarwithdeco.gif");
-				if (res.length == 0) {
+				const res = await ffmpeg.readFile("avatarwithdeco.gif").catch((err) => console.error(err));
+				if (typeof res === "undefined" || res.length == 0) {
 					console.error("Error: Empty result from ffmpeg");
 					return reject();
 				}
 				const reader = new FileReader();
+				console.log(getGifDuration(res.buffer));
 				reader.readAsDataURL(new Blob([new Uint8Array(res.buffer, res.byteOffset, res.length)], { type: "image/gif" }));
 				reader.onload = () => {
 					return resolve(reader.result);
@@ -153,4 +183,25 @@ export function addDecoration(/** @type {FFmpeg} */ ffmpeg, /** @type {String} *
 			return reject(null);
 		}
 	});
+}
+
+function getAPngDuration(arraybuf) {
+	const apng = parseAPNG(arraybuf);
+	if (apng instanceof Error) {
+		return 1;
+	}
+	return apng.playTime / 1000;
+}
+
+// https://stackoverflow.com/a/74236879
+function getGifDuration(arraybuf) {
+	const uint8 = new Uint8Array(arraybuf);
+	let duration = 0;
+	for (let i = 0, len = uint8.length; i < len; i++) {
+		if (uint8[i] == 0x21 && uint8[i + 1] == 0xf9 && uint8[i + 2] == 0x04 && uint8[i + 7] == 0x00) {
+			const delay = (uint8[i + 5] << 8) | (uint8[i + 4] & 0xff);
+			duration += delay < 2 ? 10 : delay;
+		}
+	}
+	return duration / 100;
 }

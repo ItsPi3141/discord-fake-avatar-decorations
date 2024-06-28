@@ -548,7 +548,7 @@ export default function Home() {
 							<>
 								{generationFailed ? (
 									<div className="flex flex-col justify-center items-center gap-4 grow">
-										<p className="text-red-400">
+										<p className="text-center text-red-400">
 											Failed to generate image
 											<br />
 											Please try again.
