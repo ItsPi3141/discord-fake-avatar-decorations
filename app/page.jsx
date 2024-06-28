@@ -596,7 +596,7 @@ export default function Home() {
 														fill="#ffffff"
 													/>
 												</svg>
-												Share website{" "}
+												Pls share the website{" "}
 												<span className="scale-75">
 													<Twemoji emoji="🙏" />
 												</span>
