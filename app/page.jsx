@@ -494,6 +494,63 @@ export default function Home() {
 										);
 									})}
 								</div>
+
+								{/* pls support */}
+								<div className="flex flex-col justify-start items-stretch w-full text-center">
+									<p>
+										Help support the project <Twemoji emoji="🙏" />
+									</p>
+									<button
+										className="flex justify-center items-center gap-1 bg-secondary hover:bg-secondaryAlt mt-3 py-1.5 rounded-[3px] transition"
+										onClick={() => {
+											navigator.clipboard.writeText(window.location.href);
+											setShared(true);
+											setTimeout(() => {
+												setShared(false);
+											}, 1500);
+										}}
+										data-tooltip-id="share-tooltip"
+										data-tooltip-content="Copied to clipboard!"
+									>
+										<svg height="1.1em" fill="none" viewBox="2 2 21 21" xmlns="http://www.w3.org/2000/svg">
+											<path
+												d="M17 3.002a2.998 2.998 0 1 1-2.148 5.09l-5.457 3.12a3.002 3.002 0 0 1 0 1.577l5.458 3.119a2.998 2.998 0 1 1-.746 1.304l-5.457-3.12a2.998 2.998 0 1 1 0-4.184l5.457-3.12A2.998 2.998 0 0 1 17 3.002Z"
+												fill="#ffffff"
+											/>
+										</svg>
+										Share the website w/ your friends
+									</button>
+									<Tooltip
+										id="share-tooltip"
+										opacity={1}
+										style={{
+											display: shared ? "block" : "none",
+											background: "#229f56",
+											color: "white",
+											borderRadius: "8px",
+											padding: "6px 12px 4px 12px",
+											boxShadow: "0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1)",
+										}}
+										closeEvents={[]}
+										place="bottom"
+									/>
+									<button
+										className="flex justify-center items-center gap-1 bg-secondary hover:bg-secondaryAlt mt-3 py-1.5 rounded-[3px] transition"
+										onClick={() => {
+											window.open("https://github.com/ItsPi3141/discord-fake-avatar-decorations");
+										}}
+										data-tooltip-id="share-tooltip"
+										data-tooltip-content="Copied to clipboard!"
+									>
+										<svg height="1em" fill="none" viewBox="2 2 22 21" xmlns="http://www.w3.org/2000/svg">
+											<path
+												d="M10.788 3.103c.495-1.004 1.926-1.004 2.421 0l2.358 4.777 5.273.766c1.107.161 1.549 1.522.748 2.303l-3.816 3.72.901 5.25c.19 1.103-.968 1.944-1.959 1.424l-4.716-2.48-4.715 2.48c-.99.52-2.148-.32-1.96-1.424l.901-5.25-3.815-3.72c-.801-.78-.359-2.142.748-2.303L8.43 7.88l2.358-4.777Z"
+												fill="#ffffff"
+											/>
+										</svg>
+										Star the project on GitHub
+									</button>
+								</div>
 							</div>
 						</div>
 						<p className="mb-4 text-center text-gray-400 text-sm">
@@ -578,59 +635,6 @@ export default function Home() {
 												</button>
 												{/* placeholder for a future feature */}
 											</div>
-											<button
-												className="flex justify-center items-center gap-1 bg-secondary hover:bg-secondaryAlt mt-3 py-1.5 rounded-[3px] w-72 transition"
-												onClick={() => {
-													navigator.clipboard.writeText(window.location.href);
-													setShared(true);
-													setTimeout(() => {
-														setShared(false);
-													}, 1500);
-												}}
-												data-tooltip-id="share-tooltip"
-												data-tooltip-content="Copied to clipboard!"
-											>
-												<svg height="1.1em" fill="none" viewBox="2 2 21 21" xmlns="http://www.w3.org/2000/svg">
-													<path
-														d="M17 3.002a2.998 2.998 0 1 1-2.148 5.09l-5.457 3.12a3.002 3.002 0 0 1 0 1.577l5.458 3.119a2.998 2.998 0 1 1-.746 1.304l-5.457-3.12a2.998 2.998 0 1 1 0-4.184l5.457-3.12A2.998 2.998 0 0 1 17 3.002Z"
-														fill="#ffffff"
-													/>
-												</svg>
-												Pls share the website{" "}
-												<span className="scale-75">
-													<Twemoji emoji="🙏" />
-												</span>
-											</button>
-											<Tooltip
-												id="share-tooltip"
-												opacity={1}
-												style={{
-													display: shared ? "block" : "none",
-													background: "#229f56",
-													color: "white",
-													borderRadius: "8px",
-													padding: "6px 12px 4px 12px",
-													boxShadow: "0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1)",
-												}}
-												closeEvents={[]}
-												place="bottom"
-											/>
-											<button
-												className="flex justify-center items-center gap-1 bg-secondary hover:bg-secondaryAlt mt-3 py-1.5 rounded-[3px] w-72 transition"
-												onClick={() => {
-													window.open("https://github.com/ItsPi3141/discord-fake-avatar-decorations");
-												}}
-												data-tooltip-id="share-tooltip"
-												data-tooltip-content="Copied to clipboard!"
-											>
-												<svg height="1em" fill="none" viewBox="2 2 22 21" xmlns="http://www.w3.org/2000/svg">
-													<path
-														d="M10.788 3.103c.495-1.004 1.926-1.004 2.421 0l2.358 4.777 5.273.766c1.107.161 1.549 1.522.748 2.303l-3.816 3.72.901 5.25c.19 1.103-.968 1.944-1.959 1.424l-4.716-2.48-4.715 2.48c-.99.52-2.148-.32-1.96-1.424l.901-5.25-3.815-3.72c-.801-.78-.359-2.142.748-2.303L8.43 7.88l2.358-4.777Z"
-														fill="#ffffff"
-													/>
-												</svg>
-												Star the project on GitHub
-											</button>
 										</div>
 									</div>
 								)}
