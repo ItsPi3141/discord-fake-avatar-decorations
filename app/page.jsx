@@ -60,6 +60,7 @@ export default function Home() {
 	const [isGeneratingAv, setIsGeneratingAv] = useState(false);
 	const [generationFailed, setGenerationFailed] = useState(false);
 	const [downloadModalVisible, setDownloadModalVisible] = useState(false);
+	const [shared, setShared] = useState(false);
 
 	useEffect(() => {
 		load();
@@ -556,24 +557,64 @@ export default function Home() {
 								) : (
 									<div className="flex flex-col justify-center items-center gap-4 grow">
 										<img src={finishedAv} draggable={false} width={128} height={128} />
-										<div className="flex justify-center gap-2 w-full">
+										<div className="flex flex-col">
+											<div className="flex justify-center gap-2 w-full">
+												<button
+													className="flex justify-center items-center gap-1 bg-secondary hover:bg-secondaryAlt mt-3 py-1.5 rounded-[3px] w-72 transition"
+													onClick={() => {
+														const a = document.createElement("a");
+														a.href = finishedAv;
+														a.download = `discord_fake_avatar_decorations_${Date.now()}.gif`;
+														a.click();
+													}}
+												>
+													<svg height="1.1em" fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+														<path
+															d="M5.25 20.5h13.498a.75.75 0 0 1 .101 1.493l-.101.007H5.25a.75.75 0 0 1-.102-1.494l.102-.006h13.498H5.25Zm6.633-18.498L12 1.995a1 1 0 0 1 .993.883l.007.117v12.59l3.294-3.293a1 1 0 0 1 1.32-.083l.094.084a1 1 0 0 1 .083 1.32l-.083.094-4.997 4.996a1 1 0 0 1-1.32.084l-.094-.083-5.004-4.997a1 1 0 0 1 1.32-1.498l.094.083L11 15.58V2.995a1 1 0 0 1 .883-.993L12 1.995l-.117.007Z"
+															fill="#ffffff"
+														/>
+													</svg>
+													Download
+												</button>
+												{/* placeholder for a future feature */}
+											</div>
 											<button
 												className="flex justify-center items-center gap-1 bg-secondary hover:bg-secondaryAlt mt-3 py-1.5 rounded-[3px] w-72 transition"
 												onClick={() => {
-													const a = document.createElement("a");
-													a.href = finishedAv;
-													a.download = `discord_fake_avatar_decorations_${Date.now()}.gif`;
-													a.click();
+													navigator.clipboard.writeText(window.location.href);
+													setShared(true);
+													setTimeout(() => {
+														setShared(false);
+													}, 1500);
 												}}
+												data-tooltip-id="share-tooltip"
+												data-tooltip-content="Copied to clipboard!"
 											>
-												<svg xmlns="http://www.w3.org/2000/svg" height="1.1em" viewBox="0 0 24 24">
-													<g fill="currentColor">
-														<path d="M17.707 10.708L16.293 9.29398L13 12.587V2.00098H11V12.587L7.70697 9.29398L6.29297 10.708L12 16.415L17.707 10.708Z"></path>
-														<path d="M18 18.001V20.001H6V18.001H4V20.001C4 21.103 4.897 22.001 6 22.001H18C19.104 22.001 20 21.103 20 20.001V18.001H18Z"></path>
-													</g>
+												<svg height="1.1em" fill="none" viewBox="3 3 21 21" xmlns="http://www.w3.org/2000/svg">
+													<path
+														d="M17 3.002a2.998 2.998 0 1 1-2.148 5.09l-5.457 3.12a3.002 3.002 0 0 1 0 1.577l5.458 3.119a2.998 2.998 0 1 1-.746 1.304l-5.457-3.12a2.998 2.998 0 1 1 0-4.184l5.457-3.12A2.998 2.998 0 0 1 17 3.002Z"
+														fill="#ffffff"
+													/>
 												</svg>
-												Download
+												Share website{" "}
+												<span className="scale-75">
+													<Twemoji emoji="🙏" />
+												</span>
 											</button>
+											<Tooltip
+												id="share-tooltip"
+												opacity={1}
+												style={{
+													display: shared ? "block" : "none",
+													background: "#229f56",
+													color: "white",
+													borderRadius: "8px",
+													padding: "6px 12px 4px 12px",
+													boxShadow: "0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1)",
+												}}
+												closeEvents={[]}
+												place="bottom"
+											/>
 										</div>
 									</div>
 								)}
