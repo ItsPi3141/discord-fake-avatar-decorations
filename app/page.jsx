@@ -79,7 +79,7 @@ export default function Home() {
 								backgroundSize: "cover",
 							}}
 						>
-							<h1 className="text-3xl md:text-5xl ginto">DISCORD</h1>
+							<h1 className="font-bold text-3xl md:text-5xl ginto">Discord</h1>
 							<h1 className="mb-4 text-2xl md:text-4xl ginto">FAKE AVATAR DECORATIONS</h1>
 							<h2 className="text-sm sm:text-base">
 								Create profile pictures with avatar decorations so you can use them in Discord for free without spending money
@@ -644,7 +644,11 @@ export default function Home() {
 				</>
 			) : (
 				<main className="flex flex-col justify-center items-center p-8 w-full h-screen text-white">
-					<p className="top-8 absolute mx-8 max-w-xl text-4xl text-center ginto">DISCORD FAKE AVATAR DECORATIONS</p>
+					<p className="top-8 absolute mx-8 max-w-xl font-bold text-4xl text-center ginto">
+						Discord
+						<br />
+						FAKE AVATAR DECORATIONS
+					</p>
 					<span className="mb-8 loading-container">
 						<span className="loading-cube"></span>
 						<span className="loading-cube"></span>
