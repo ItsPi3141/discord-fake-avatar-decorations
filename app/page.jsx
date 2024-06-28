@@ -590,7 +590,7 @@ export default function Home() {
 												data-tooltip-id="share-tooltip"
 												data-tooltip-content="Copied to clipboard!"
 											>
-												<svg height="1.1em" fill="none" viewBox="3 3 21 21" xmlns="http://www.w3.org/2000/svg">
+												<svg height="1.1em" fill="none" viewBox="2 2 21 21" xmlns="http://www.w3.org/2000/svg">
 													<path
 														d="M17 3.002a2.998 2.998 0 1 1-2.148 5.09l-5.457 3.12a3.002 3.002 0 0 1 0 1.577l5.458 3.119a2.998 2.998 0 1 1-.746 1.304l-5.457-3.12a2.998 2.998 0 1 1 0-4.184l5.457-3.12A2.998 2.998 0 0 1 17 3.002Z"
 														fill="#ffffff"
@@ -615,6 +615,22 @@ export default function Home() {
 												closeEvents={[]}
 												place="bottom"
 											/>
+											<button
+												className="flex justify-center items-center gap-1 bg-secondary hover:bg-secondaryAlt mt-3 py-1.5 rounded-[3px] w-72 transition"
+												onClick={() => {
+													window.open("https://github.com/ItsPi3141/discord-fake-avatar-decorations");
+												}}
+												data-tooltip-id="share-tooltip"
+												data-tooltip-content="Copied to clipboard!"
+											>
+												<svg height="1em" fill="none" viewBox="2 2 22 21" xmlns="http://www.w3.org/2000/svg">
+													<path
+														d="M10.788 3.103c.495-1.004 1.926-1.004 2.421 0l2.358 4.777 5.273.766c1.107.161 1.549 1.522.748 2.303l-3.816 3.72.901 5.25c.19 1.103-.968 1.944-1.959 1.424l-4.716-2.48-4.715 2.48c-.99.52-2.148-.32-1.96-1.424l.901-5.25-3.815-3.72c-.801-.78-.359-2.142.748-2.303L8.43 7.88l2.358-4.777Z"
+														fill="#ffffff"
+													/>
+												</svg>
+												Star the project on GitHub
+											</button>
 										</div>
 									</div>
 								)}
