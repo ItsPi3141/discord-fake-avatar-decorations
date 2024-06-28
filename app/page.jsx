@@ -72,15 +72,15 @@ export default function Home() {
 				<>
 					<main className="flex flex-col items-center w-screen h-screen text-white overflow-auto discord-scrollbar">
 						<div
-							className="flex flex-col justify-center items-center bg-primary mt-8 p-4 sm:p-16 rounded-3xl w-[calc(100%-6rem)] min-h-[20rem] text-center"
+							className="flex flex-col justify-center items-center bg-primary mt-8 p-4 sm:p-8 md:p-12 lg:p-16 rounded-3xl w-[calc(100%-6rem)] min-h-[12rem] text-center"
 							style={{
 								backgroundImage: new Date().getMonth() == 11 ? `url(${baseImgUrl}/wallpaper/winter.jpg)` : "",
 								backgroundPosition: "center bottom",
 								backgroundSize: "cover",
 							}}
 						>
-							<h1 className="text-3xl sm:text-5xl ginto">DISCORD</h1>
-							<h1 className="mb-4 text-2xl sm:text-4xl ginto">FAKE AVATAR DECORATIONS</h1>
+							<h1 className="text-3xl md:text-5xl ginto">DISCORD</h1>
+							<h1 className="mb-4 text-2xl md:text-4xl ginto">FAKE AVATAR DECORATIONS</h1>
 							<h2 className="text-sm sm:text-base">
 								Create profile pictures with avatar decorations so you can use them in Discord for free without spending money
 							</h2>
