@@ -14,14 +14,15 @@ module.exports = {
 				surface2: "#232428",
 				surface3: "#2b2d31",
 				surface4: "#313338",
-				surface5: "#383a40"
-			}
+				surface5: "#383a40",
+				error: "#d9373d",
+			},
 		},
 		screens: {
 			xs: "440px",
 			sm: "540px",
-			md: "900px"
-		}
+			md: "900px",
+		},
 	},
-	plugins: []
+	plugins: [],
 };

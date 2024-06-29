@@ -14,6 +14,7 @@ import "react-tooltip/dist/react-tooltip.css";
 import { Tooltip } from "react-tooltip";
 
 import { Image } from "./components/image";
+import { FileUpload } from "./components/fileupload";
 const baseImgUrl = process.env.NEXT_PUBLIC_BASE_IMAGE_URL || "";
 
 export default function Home() {
@@ -641,6 +642,20 @@ export default function Home() {
 							</>
 						)}
 					</Modal>
+					<FileUpload
+						onUpload={async (e) => {
+							const file = e.dataTransfer.files.item(0);
+							if (!["image/png", "image/jpeg", "image/gif"].includes(file.type)) {
+								throw new Error("Invalid file format");
+							}
+							const ab = await file.arrayBuffer();
+							const reader = new FileReader();
+							reader.readAsDataURL(new Blob([ab]));
+							reader.onload = () => {
+								previewAvatar(reader.result);
+							};
+						}}
+					/>
 				</>
 			) : (
 				<main className="flex flex-col justify-center items-center p-8 w-full h-screen text-white">
