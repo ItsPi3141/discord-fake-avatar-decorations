@@ -33,6 +33,16 @@
 				"name": "Gyoiko Sakura",
 				"description": "Limited time decoration from May 2023. Given to new nitro subscribers between April 24, 2024 and May 1, 2024.",
 				"file": "/decorations/gyoiko_sakura.png"
+			},
+			{
+				"name": "Warp Helmet",
+				"description": "Traveling at the speed of light. Available to use until September 9, 2024.",
+				"file": "/decorations/warp_helmet.png"
+			},
+			{
+				"name": "Fortnite Victory Crown",
+				"description": "A sparkly crown! Available to use until September 3, 2024.",
+				"file": "/decorations/victory_crown.png"
 			}
 		]
 	},
