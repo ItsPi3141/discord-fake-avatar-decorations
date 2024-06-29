@@ -67,7 +67,7 @@ export function addDecoration(/** @type {FFmpeg} */ ffmpeg, /** @type {String} *
 					// Start out with a transparent background
 					"color=s=288x288:d=100,format=argb,colorchannelmixer=aa=0.0[background];",
 
-					// Resize avatar to be 288x288
+					// Resize avatar to be 236x236
 					"[0]scale=236:236 [avatar],",
 
 					// Round the corners of the avatar image
@@ -160,8 +160,11 @@ export function addDecoration(/** @type {FFmpeg} */ ffmpeg, /** @type {String} *
 					// Start out with a transparent background
 					"color=s=288x288:d=100,format=argb,colorchannelmixer=aa=0.0[background];",
 
-					// Resize avatar to be 288x288
+					// Resize avatar to be 236x236
 					"[0]scale=236:236 [avatar],",
+
+					// Resize decoration to be 288x288
+					"[1]scale=288:288 [deco],",
 
 					// Round the corners of the avatar image
 					"[avatar]format=argb,geq=lum='p(X,Y)':a='st(1,pow(min(W/2,H/2),2))+st(3,pow(X-(W/2),2)+pow(Y-(H/2),2));if(lte(ld(3),ld(1)),alpha(X,Y),0)'[rounded avatar];",
@@ -171,10 +174,10 @@ export function addDecoration(/** @type {FFmpeg} */ ffmpeg, /** @type {String} *
 					"(main_w-overlay_w)/2:",
 					"(main_h-overlay_h)/2:",
 					"shortest=1:",
-					"format=auto[avatar];",
+					"format=auto[tavatar];",
 
 					// Add deco overlay
-					"[avatar][1]overlay=",
+					"[tavatar][deco]overlay=",
 					"(main_w-overlay_w)/2:",
 					"(main_h-overlay_h)/2:",
 					"format=auto,",
