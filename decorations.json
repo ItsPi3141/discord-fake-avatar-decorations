@@ -54,7 +54,8 @@
 				{
 					"url": "/banners/palworld.png",
 					"align": "center",
-					"height": "100%"
+					"height": "100%",
+					"width": "100%"
 				},
 				{
 					"url": "/banners/palworld1.png",

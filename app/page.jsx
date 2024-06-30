@@ -73,7 +73,7 @@ export default function Home() {
 				<>
 					<main className="flex flex-col items-center w-screen h-screen text-white overflow-auto discord-scrollbar">
 						<div
-							className="flex flex-col justify-center items-center bg-primary mt-8 p-4 sm:p-8 md:p-12 lg:p-16 rounded-3xl w-[calc(100%-6rem)] min-h-[12rem] text-center"
+							className="flex flex-col justify-center items-center bg-primary mt-8 px-4 py-8 sm:p-8 md:p-12 lg:p-16 rounded-3xl w-[calc(100%-6rem)] text-center"
 							style={{
 								backgroundImage: new Date().getMonth() == 11 ? `url(${baseImgUrl}/wallpaper/winter.jpg)` : "",
 								backgroundPosition: "center bottom",
@@ -138,7 +138,7 @@ export default function Home() {
 								<p className="mt-4 mb-2">You can also pick from one of these avatars below</p>
 								{/* SELECT AVATAR */}
 								<div className="flex flex-col gap-8 py-1 max-h-[280px] overflow-auto discord-scrollbar">
-									<div className="flex flex-wrap gap-3 w-[264px] sm:w-[448px] xs:w-[356px]">
+									<div className="gap-3 grid grid-cols-3 sm:grid-cols-5 md:grid-cols-5 min-[600px]:grid-cols-6 min-[720px]:grid-cols-7 xs:grid-cols-4">
 										{avatarsData.map((avatar, index) => {
 											return (
 												<div className="flex flex-col items-center text-center">
@@ -146,7 +146,7 @@ export default function Home() {
 														key={index}
 														data-tooltip-id={avatar.name.toLowerCase().replaceAll(" ", "-")}
 														data-tooltip-content={avatar.name}
-														className="border-2 border-surface1 bg-surface1 p-2 rounded-[5px] w-20 h-20 avatar-preset outline-none"
+														className="border-2 border-surface1 bg-surface1 p-2 rounded-[5px] aspect-square avatar-preset outline-none"
 														onClick={(e) => {
 															setAvUrl(baseImgUrl + avatar.file);
 															document.querySelectorAll("button.avatar-preset.border-2.border-primary").forEach((el) => {
@@ -203,7 +203,7 @@ export default function Home() {
 																	width={0}
 																	style={{
 																		height: e.height || "auto",
-																		width: e.height ? "auto" : "100%",
+																		width: e.width || (e.height ? "auto" : "100%"),
 																		left: e.align == "left" || e.align == "center" ? 0 : "",
 																		right: e.align == "right" || e.align == "center" ? 0 : "",
 																		objectPosition: e.align,
@@ -282,12 +282,12 @@ export default function Home() {
 													</div>
 												</div>
 
-												<div className="flex flex-wrap gap-3 w-[264px] sm:w-[448px] xs:w-[356px]">
+												<div className="gap-3 grid grid-cols-3 sm:grid-cols-5 md:grid-cols-5 min-[600px]:grid-cols-6 min-[720px]:grid-cols-7 xs:grid-cols-4">
 													{category.items.map((decor, index) => {
 														return (
 															<button
 																key={index}
-																className="border-2 border-surface1 bg-surface1 p-1 rounded-[5px] w-20 h-20 decor"
+																className="border-2 border-surface1 bg-surface1 p-1 rounded-[5px] aspect-square decor"
 																onClick={(e) => {
 																	setName(decor.name);
 																	setDescription(decor.description);
