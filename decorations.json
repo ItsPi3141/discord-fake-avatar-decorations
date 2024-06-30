@@ -31,7 +31,7 @@
 			},
 			{
 				"name": "Gyoiko Sakura",
-				"description": "Limited time decoration from May 2023. Given to new nitro subscribers between April 24, 2024 and May 1, 2024.",
+				"description": "A rare blossom only seen by a fortunate few. Given to new nitro subscribers between April 24, 2024 and May 1, 2024.",
 				"file": "/decorations/gyoiko_sakura.png"
 			},
 			{
@@ -856,12 +856,120 @@
 			{
 				"name": "Futuristic UI",
 				"description": "BEEP BOOP",
-				"file": "/decorations/futuristic_ui.png"
+				"file": "/decorations/pink_futuristic_ui.png"
 			},
 			{
 				"name": "Smoke",
 				"description": "Now you see me, now you don't",
-				"file": "/decorations/smoke.png"
+				"file": "/decorations/green_smoke.png"
+			}
+		]
+	},
+	{
+		"name": "Discord 8th Birthday",
+		"description": "",
+		"banner": {
+			"image": "/banners/discord8thbd.png",
+			"bgPos": "top left",
+			"text": "",
+			"height": 46
+		},
+		"badge": "JUNE 2023",
+		"items": [
+			{
+				"name": "Blue Headset",
+				"description": "Everything sounds better with these on.",
+				"file": "/decorations/disxcore_headset.png"
+			},
+			{
+				"name": "Pink Headset",
+				"description": "Everything sounds better with these on.",
+				"file": "/decorations/pink_headset.png"
+			},
+			{
+				"name": "Green Headset",
+				"description": "Everything sounds better with these on.",
+				"file": "/decorations/green_headset.png"
+			},
+			{
+				"name": "Blue Futuristic UI",
+				"description": "BEEP BOOP",
+				"file": "/decorations/blue_futuristic_ui.png"
+			},
+			{
+				"name": "Pink Futuristic UI",
+				"description": "BEEP BOOP",
+				"file": "/decorations/pink_futuristic_ui.png"
+			},
+			{
+				"name": "Green Futuristic UI",
+				"description": "BEEP BOOP",
+				"file": "/decorations/green_futuristic_ui.png"
+			},
+			{
+				"name": "Blue Smoke",
+				"description": "Now you see me, now you don't",
+				"file": "/decorations/blue_smoke.png"
+			},
+			{
+				"name": "Pink Smoke",
+				"description": "Now you see me, now you don't",
+				"file": "/decorations/pink_smoke.png"
+			},
+			{
+				"name": "Green Smoke",
+				"description": "Now you see me, now you don't",
+				"file": "/decorations/green_smoke.png"
+			},
+			{
+				"name": "Blue Gyroscope",
+				"description": "Keeping your avatar stable while stylish.",
+				"file": "/decorations/blue_gyroscope.png"
+			},
+			{
+				"name": "Pink Gyroscope",
+				"description": "Keeping your avatar stable while stylish.",
+				"file": "/decorations/pink_gyroscope.png"
+			},
+			{
+				"name": "Green Gyroscope",
+				"description": "Keeping your avatar stable while stylish.",
+				"file": "/decorations/green_gyroscope.png"
+			},
+			{
+				"name": "Blue Shine Helmet",
+				"description": "Always wear your helmet.",
+				"file": "/decorations/blue_shine_helmet.png"
+			},
+			{
+				"name": "Pink Shine Helmet",
+				"description": "Always wear your helmet.",
+				"file": "/decorations/pink_shine_helmet.png"
+			},
+			{
+				"name": "Green Shine Helmet",
+				"description": "Always wear your helmet.",
+				"file": "/decorations/green_shine_helmet.png"
+			},
+			{
+				"name": "Blue Hyper Helmet",
+				"description": "Always wear your helmet.",
+				"file": "/decorations/blue_hyper_helmet.png"
+			},
+			{
+				"name": "Pink Hyper Helmet",
+				"description": "Always wear your helmet.",
+				"file": "/decorations/pink_hyper_helmet.png"
+			},
+			{
+				"name": "Green Hyper Helmet",
+				"description": "Always wear your helmet.",
+				"file": "/decorations/green_hyper_helmet.png"
+			},
+			{
+				"name": "Saw",
+				"description": "Here to make your avatar more stylish... and dangerous!",
+				"file": "/decorations/saw.png"
 			}
 		]
 	},

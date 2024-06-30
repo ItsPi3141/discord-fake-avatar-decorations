@@ -261,21 +261,31 @@ export default function Home() {
 																		height: "100%",
 																		width: "100%",
 																		objectFit: "cover",
+																		objectPosition: category.banner.bgPos || "",
 																	}}
 																/>
 																<div className="relative flex flex-col justify-center items-center [grid-column:1/1] [grid-row:1/1] p-4 h-full">
-																	<Image
-																		src={category.banner.text}
-																		alt={category.name}
-																		draggable={false}
-																		loading="eager"
-																		height={0}
-																		width={0}
-																		style={{
-																			height: `${category.banner.height || 48}px`,
-																			width: "auto",
-																		}}
-																	/>
+																	{category.banner.text === "" ? (
+																		<div
+																			style={{
+																				height: `${category.banner.height || 48}px`,
+																				width: "100%",
+																			}}
+																		/>
+																	) : (
+																		<Image
+																			src={category.banner.text}
+																			alt={category.name}
+																			draggable={false}
+																			loading="eager"
+																			height={0}
+																			width={0}
+																			style={{
+																				height: `${category.banner.height || 48}px`,
+																				width: "auto",
+																			}}
+																		/>
+																	)}
 																	<p
 																		className="w-[232px] xs:w-full font-medium text-center text-sm"
 																		style={{
