@@ -2,7 +2,6 @@
 	{
 		"name": "Discord",
 		"description": "Miscellaneous decorations.",
-		"darkText": false,
 		"banner": {
 			"image": [
 				{
@@ -32,7 +31,7 @@
 			{
 				"name": "Gyoiko Sakura",
 				"description": "A rare blossom only seen by a fortunate few. Given to new nitro subscribers between April 24, 2024 and May 1, 2024.",
-				"file": "/decorations/gyoiko_sakura.png"
+				"file": "/decorations/sakura_gyoiko.png"
 			},
 			{
 				"name": "Warp Helmet",
@@ -869,10 +868,8 @@
 		"name": "Discord 8th Birthday",
 		"description": "",
 		"banner": {
-			"image": "/banners/discord8thbd.png",
-			"bgPos": "top left",
-			"text": "",
-			"height": 46
+			"image": [],
+			"background": "linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(16,6,37,1) 100%)"
 		},
 		"badge": "JUNE 2023",
 		"items": [
@@ -970,6 +967,118 @@
 				"name": "Saw",
 				"description": "Here to make your avatar more stylish... and dangerous!",
 				"file": "/decorations/saw.png"
+			}
+		]
+	},
+	{
+		"name": "Spring '23",
+		"description": "Limited time decoration from Spring 2023",
+		"darkText": true,
+		"banner": {
+			"image": [],
+			"background": "linear-gradient(90deg, rgba(209,221,147,1) 0%, rgba(240,237,170,1) 100%)"
+		},
+		"badge": "APRIL 2023",
+		"items": [
+			{
+				"name": "Sakura #1",
+				"description": "Close your eyes and breathe.",
+				"file": "/decorations/sakura_1.png"
+			},
+			{
+				"name": "Sakura #2",
+				"description": "Close your eyes and breathe.",
+				"file": "/decorations/sakura_2.png"
+			},
+			{
+				"name": "Sakura #3",
+				"description": "Close your eyes and breathe.",
+				"file": "/decorations/sakura_3.png"
+			},
+			{
+				"name": "Sakura #4",
+				"description": "Close your eyes and breathe.",
+				"file": "/decorations/sakura_gyoiko.png"
+			},
+			{
+				"name": "Mushroom #1",
+				"description": "A mushroom.",
+				"file": "/decorations/mushroom_1.png"
+			},
+			{
+				"name": "Mushroom #2",
+				"description": "A mushroom.",
+				"file": "/decorations/mushroom_2.png"
+			},
+			{
+				"name": "Mushroom #3",
+				"description": "A mushroom.",
+				"file": "/decorations/mushroom_3.png"
+			},
+			{
+				"name": "Mushroom #4",
+				"description": "A mushroom.",
+				"file": "/decorations/mushroom_4.png"
+			},
+			{
+				"name": "Forest",
+				"description": "A forest.",
+				"file": "/decorations/forest.png"
+			},
+			{
+				"name": "Frog #1",
+				"description": "*ribbit*",
+				"file": "/decorations/frog_1.png"
+			},
+			{
+				"name": "Frog #2",
+				"description": "*ribbit*",
+				"file": "/decorations/frog_2.png"
+			},
+			{
+				"name": "Frog #3",
+				"description": "*ribbit*",
+				"file": "/decorations/frog_3.png"
+			},
+			{
+				"name": "Frog #4",
+				"description": "*ribbit*",
+				"file": "/decorations/frog_4.png"
+			},
+			{
+				"name": "Lazy Cat #1",
+				"description": "A lazy cat.",
+				"file": "/decorations/cat_1.png"
+			},
+			{
+				"name": "Lazy Cat #2",
+				"description": "A lazy cat.",
+				"file": "/decorations/cat_2.png"
+			},
+			{
+				"name": "Lazy Cat #3",
+				"description": "A lazy cat.",
+				"file": "/decorations/cat_3.png"
+			},
+			{
+				"name": "Lazy Cat #4",
+				"description": "A lazy cat.",
+				"file": "/decorations/cat_4.png"
+			},
+			{
+				"name": "Dogs #1",
+				"description": "Happy dogs.",
+				"file": "/decorations/dog_1.png"
+			},
+			{
+				"name": "Dogs #2",
+				"description": "Happy dogs.",
+				"file": "/decorations/dog_2.png"
+			},
+			{
+				"name": "Dogs #3",
+				"description": "Happy dogs.",
+				"file": "/decorations/dog_3.png"
 			}
 		]
 	},

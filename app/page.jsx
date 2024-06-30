@@ -183,126 +183,103 @@ export default function Home() {
 										return (
 											<div key={index}>
 												<div className="relative justify-center items-center grid grid-cols-1 grid-rows-1 bg-black mb-4 rounded-2xl h-28 overflow-hidden">
-													{(() => {
-														if (typeof category.banner.image !== "string") {
-															return (
-																<>
-																	<div
-																		className="top-0 right-0 bottom-0 left-0 absolute"
-																		style={{
-																			background: category.banner.background || "#000",
-																		}}
-																	/>
-																	{category.banner.image.map((e, i) => (
-																		<Image
-																			key={i}
-																			className={`object-cover bottom-0 absolute`}
-																			src={e.url}
-																			alt={""}
-																			draggable={false}
-																			loading="eager"
-																			height={0}
-																			width={0}
-																			style={{
-																				height: e.height || "auto",
-																				width: e.height ? "auto" : "100%",
-																				left: e.align == "left" || e.align == "center" ? 0 : "",
-																				right: e.align == "right" || e.align == "center" ? 0 : "",
-																				objectPosition: e.align,
-																			}}
-																		/>
-																	))}
-																	<div className="relative top-0 right-0 bottom-0 left-0 flex flex-col justify-center items-center p-4 h-full">
-																		{category.banner.text ? (
-																			<Image
-																				src={category.banner.text}
-																				alt={category.name}
-																				draggable={false}
-																				loading="eager"
-																				height={0}
-																				width={0}
-																				style={{
-																					height: `${category.banner.height || 48}px`,
-																					width: "auto",
-																				}}
-																			/>
-																		) : (
-																			<p className="text-3xl ginto">{category.name}</p>
-																		)}
-																		<p
-																			className="w-[232px] xs:w-full font-medium text-center text-sm"
-																			style={{
-																				color: category.darkText || false ? "#000" : "#fff",
-																				marginTop: category.descriptionTopMargin || "",
-																			}}
-																		>
-																			{category.description}
-																		</p>
-																		{category.badge && (
-																			<p className="top-2 right-2 absolute bg-white m-0 px-2 py-0 rounded-full font-semibold text-black text-xs [letter-spacing:0]">
-																				{category.badge}
-																			</p>
-																		)}
-																	</div>
-																</>
-															);
-														}
-														return (
-															<>
+													{typeof category.banner.image !== "string" ? (
+														<>
+															<div
+																className="top-0 right-0 bottom-0 left-0 absolute"
+																style={{
+																	background: category.banner.background || "#000",
+																}}
+															/>
+															{category.banner.image.map((e, i) => (
 																<Image
-																	className="[grid-column:1/1] [grid-row:1/1] object-cover"
-																	src={category.banner.image}
+																	key={i}
+																	className={`object-cover bottom-0 absolute`}
+																	src={e.url}
 																	alt={""}
 																	draggable={false}
 																	loading="eager"
 																	height={0}
 																	width={0}
 																	style={{
-																		height: "100%",
-																		width: "100%",
-																		objectFit: "cover",
-																		objectPosition: category.banner.bgPos || "",
+																		height: e.height || "auto",
+																		width: e.height ? "auto" : "100%",
+																		left: e.align == "left" || e.align == "center" ? 0 : "",
+																		right: e.align == "right" || e.align == "center" ? 0 : "",
+																		objectPosition: e.align,
 																	}}
 																/>
-																<div className="relative flex flex-col justify-center items-center [grid-column:1/1] [grid-row:1/1] p-4 h-full">
-																	{category.banner.text === "" ? (
-																		<div
-																			style={{
-																				height: `${category.banner.height || 48}px`,
-																				width: "100%",
-																			}}
-																		/>
-																	) : (
-																		<Image
-																			src={category.banner.text}
-																			alt={category.name}
-																			draggable={false}
-																			loading="eager"
-																			height={0}
-																			width={0}
-																			style={{
-																				height: `${category.banner.height || 48}px`,
-																				width: "auto",
-																			}}
-																		/>
-																	)}
+															))}
+														</>
+													) : (
+														<Image
+															className="[grid-column:1/1] [grid-row:1/1] object-cover"
+															src={category.banner.image}
+															alt={""}
+															draggable={false}
+															loading="eager"
+															height={0}
+															width={0}
+															style={{
+																height: "100%",
+																width: "100%",
+																objectFit: "cover",
+																objectPosition: category.banner.bgPos || "",
+															}}
+														/>
+													)}
+													<div className="relative flex flex-col justify-center items-center [grid-column:1/1] [grid-row:1/1] p-4 h-full">
+														{category.banner.text ? (
+															category.banner.text === "" ? (
+																<div
+																	style={{
+																		height: `${category.banner.height || 48}px`,
+																		width: "100%",
+																	}}
+																/>
+															) : (
+																<Image
+																	src={category.banner.text}
+																	alt={category.name}
+																	draggable={false}
+																	loading="eager"
+																	height={0}
+																	width={0}
+																	style={{
+																		height: `${category.banner.height || 48}px`,
+																		width: "auto",
+																	}}
+																/>
+															)
+														) : (
+															<>
+																{!category.hideTitle && (
 																	<p
-																		className="w-[232px] xs:w-full font-medium text-center text-sm"
+																		className="px-4 text-3xl text-center ginto"
 																		style={{
 																			color: category.darkText || false ? "#000" : "#fff",
 																		}}
 																	>
-																		{category.description}
+																		{category.name}
 																	</p>
-																	{category.badge && (
-																		<p className="top-2 right-2 absolute bg-white m-0 px-2 py-0 rounded-full font-semibold text-black text-xs [letter-spacing:0]">
-																			{category.badge}
-																		</p>
-																	)}
-																</div>
+																)}
 															</>
-														);
-													})()}
+														)}
+														<p
+															className="w-[232px] xs:w-full font-medium text-center text-sm"
+															style={{
+																color: category.darkText || false ? "#000" : "#fff",
+																marginTop: category.descriptionTopMargin || "",
+															}}
+														>
+															{category.description}
+														</p>
+														{category.badge && (
+															<p className="top-2 right-2 absolute bg-white m-0 px-2 py-0 rounded-full font-semibold text-black text-xs [letter-spacing:0]">
+																{category.badge}
+															</p>
+														)}
+													</div>
 												</div>
 
 												<div className="flex flex-wrap gap-3 w-[264px] sm:w-[448px] xs:w-[356px]">
