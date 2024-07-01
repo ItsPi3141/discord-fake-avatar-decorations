@@ -16,7 +16,7 @@ export function cropToSquare(/** @type {FFmpeg} */ ffmpeg, /** @type {String} */
 		try {
 			const data = await fetchFile(await (await fetch(url)).blob());
 			const type = getMimeTypeFromArrayBuffer(data);
-			if (type == null) return reject(new Error("Invalid image type"));
+			if (type == null) return reject("Invalid image type");
 
 			const ext = type.replace("image/", "");
 			await ffmpeg.writeFile(`avatarpreview.${ext}`, data);
@@ -58,7 +58,7 @@ export function addDecoration(/** @type {FFmpeg} */ ffmpeg, /** @type {String} *
 			const avatarAB = await (await fetch(imageUrl)).arrayBuffer();
 			const avatarData = await fetchFile(new Blob([avatarAB]));
 			const avatarType = getMimeTypeFromArrayBuffer(avatarData);
-			if (avatarType == null) return reject(new Error("Invalid image type"));
+			if (avatarType == null) return reject("Invalid image type");
 			const ext = avatarType.replace("image/", "");
 
 			if (!decorationUrl) {
@@ -90,7 +90,7 @@ export function addDecoration(/** @type {FFmpeg} */ ffmpeg, /** @type {String} *
 
 				await ffmpeg.exec(["-i", `avatarbase.${ext}`, "-filter_complex", filter_complex.join(""), `avatarcircle.${ext}`]);
 
-				const res = await ffmpeg.readFile(`avatarcircle.${ext}`);
+				const res = await ffmpeg.readFile(`avatarcircle.${ext}`).catch((err) => console.error(err));
 				const reader = new FileReader();
 				reader.readAsDataURL(new Blob([new Uint8Array(res.buffer, res.byteOffset, res.length)], { type: "image/gif" }));
 				reader.onload = () => {
@@ -108,7 +108,6 @@ export function addDecoration(/** @type {FFmpeg} */ ffmpeg, /** @type {String} *
 					const avatarDuration = getGifDuration(avatarAB);
 					if (decoDuration > avatarDuration) {
 						await ffmpeg.writeFile("avatar_before_timing.gif", avatarData);
-						console.log(decoDuration, avatarDuration);
 						await ffmpeg.exec([
 							"-stream_loop",
 							"-1",
@@ -124,7 +123,6 @@ export function addDecoration(/** @type {FFmpeg} */ ffmpeg, /** @type {String} *
 							].join(" "),
 							`avatarbase.${ext}`,
 						]);
-						console.log("gif done");
 					} else {
 						await ffmpeg.writeFile(`avatarbase.${ext}`, avatarData);
 					}
@@ -132,7 +130,6 @@ export function addDecoration(/** @type {FFmpeg} */ ffmpeg, /** @type {String} *
 					const decoDuration = getAPngDuration(decoAB);
 					const avatarDuration = getAPngDuration(avatarAB);
 					if (decoDuration > avatarDuration && avatarDuration > 1) {
-						console.log(decoDuration, avatarDuration);
 						await ffmpeg.writeFile("avatar_before_timing.png", avatarData);
 						await ffmpeg.exec([
 							"-i",
@@ -147,7 +144,6 @@ export function addDecoration(/** @type {FFmpeg} */ ffmpeg, /** @type {String} *
 							].join(" "),
 							`avatarbase.${ext}`,
 						]);
-						console.log("png done");
 					} else {
 						await ffmpeg.writeFile(`avatarbase.${ext}`, avatarData);
 					}
@@ -192,7 +188,6 @@ export function addDecoration(/** @type {FFmpeg} */ ffmpeg, /** @type {String} *
 				await ffmpeg.exec(["-i", `avatarbase.${ext}`, "-i", "decoration.png", "-filter_complex", filter_complex.join(""), "avatarwithdeco.gif"]);
 
 				const res = await ffmpeg.readFile("avatarwithdeco.gif").catch((err) => console.error(err));
-				// const res = await ffmpeg.readFile(`avatarbase.${ext}`).catch((err) => console.error(err));
 				if (typeof res === "undefined" || res.length == 0) {
 					console.error("Error: Empty result from ffmpeg");
 					return reject();

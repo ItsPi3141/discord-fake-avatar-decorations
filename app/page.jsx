@@ -15,13 +15,32 @@ import { Tooltip } from "react-tooltip";
 
 import { Image } from "./components/image";
 import { FileUpload } from "./components/fileupload";
+import { print, printErr } from "./print";
+import { getMimeTypeFromArrayBuffer } from "@/ffmpeg/utils";
 const baseImgUrl = process.env.NEXT_PUBLIC_BASE_IMAGE_URL || "";
 
+function onFfmpegLog(e) {
+	print(
+		["ffmpeg", e.message],
+		[
+			{
+				color: "white",
+				background: "#5765f2",
+				padding: "2px 8px",
+				borderRadius: "10px",
+			},
+		]
+	);
+}
+
 export default function Home() {
+	const isServer = typeof window === "undefined";
+
 	const [loaded, setLoaded] = useState(false);
-	const ffmpegRef = useRef(new FFmpeg());
+	const ffmpegRef = useRef(isServer ? null : new FFmpeg());
 
 	const load = async () => {
+		if (isServer) return;
 		const baseURL = "https://unpkg.com/@ffmpeg/core@0.12.6/dist/umd/";
 		const ffmpeg = ffmpegRef.current;
 		// toBlobURL is used to bypass CORS issue, urls with the same domain can be used directly.
@@ -29,26 +48,30 @@ export default function Home() {
 			coreURL: await toBlobURL(`${baseURL}ffmpeg-core.js`, "text/javascript"),
 			wasmURL: await toBlobURL(`${baseURL}ffmpeg-core.wasm`, "application/wasm"),
 		});
+		ffmpeg.on("log", onFfmpegLog);
 		setLoaded(true);
 	};
 
 	const previewAvatar = async (url) => {
+		if (isServer) return;
 		setAvUrl("loading");
-		const res = await cropToSquare(ffmpegRef.current, url);
+		const res = await cropToSquare(ffmpegRef.current, url).catch((reason) => printErr(reason));
 		if (!res) return setAvUrl(null);
 		setAvUrl(res);
 	};
 
 	const createAvatar = async (url, deco) => {
+		if (isServer) return;
 		addDecoration(ffmpegRef.current, url, deco === "" ? "" : `${baseImgUrl}${deco}`)
 			.then((res) => {
 				if (!res) return setFinishedAv(null), setGenerationFailed(true);
 				setFinishedAv(res);
 				setIsGeneratingAv(false);
 			})
-			.catch(() => {
+			.catch((reason) => {
 				setGenerationFailed(true);
 				setIsGeneratingAv(false);
+				printErr(reason);
 			});
 	};
 
@@ -63,9 +86,12 @@ export default function Home() {
 	const [downloadModalVisible, setDownloadModalVisible] = useState(false);
 	const [shared, setShared] = useState(false);
 
+	let t = false;
 	useEffect(() => {
+		if (t) return;
+		t = true;
 		load();
-	}, [load]);
+	}, []);
 
 	return (
 		<>
@@ -141,7 +167,7 @@ export default function Home() {
 									<div className="gap-3 grid grid-cols-3 sm:grid-cols-5 md:grid-cols-5 min-[600px]:grid-cols-6 min-[720px]:grid-cols-7 xs:grid-cols-4">
 										{avatarsData.map((avatar, index) => {
 											return (
-												<div className="flex flex-col items-center text-center">
+												<div key={index} className="flex flex-col items-center text-center">
 													<button
 														key={index}
 														data-tooltip-id={avatar.name.toLowerCase().replaceAll(" ", "-")}
@@ -631,9 +657,13 @@ export default function Home() {
 						onUpload={async (e) => {
 							const file = e.dataTransfer.files.item(0);
 							if (!["image/png", "image/jpeg", "image/gif"].includes(file.type)) {
-								throw new Error("Invalid file format");
+								printErr(`Expected image/png, image/jpeg, or image/gif. Got ${file.type}`);
+								throw printErr("Invalid image file");
 							}
 							const ab = await file.arrayBuffer();
+							if (getMimeTypeFromArrayBuffer(ab) == null) {
+								throw printErr("Invalid image type");
+							}
 							const reader = new FileReader();
 							reader.readAsDataURL(new Blob([ab]));
 							reader.onload = () => {

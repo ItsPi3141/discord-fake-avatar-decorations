@@ -1,3 +1,5 @@
+import { printErr } from "@/app/print";
+
 /**
  * Retrieves the MIME type of an ArrayBuffer or Uint8Array.
  *
@@ -21,7 +23,7 @@ export function getMimeTypeFromArrayBuffer(/** @type {Uint8Array | ArrayBuffer} 
 			case signature.startsWith("FFD8FF"):
 				return "image/jpeg";
 			default:
-				console.log("Unknown type. Signature:", signature);
+				printErr(`Unknown file type. Signature: ${signature}`);
 				return null;
 		}
 	}
