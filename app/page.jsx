@@ -658,11 +658,11 @@ export default function Home() {
 							const file = e.dataTransfer.files.item(0);
 							if (!["image/png", "image/jpeg", "image/gif"].includes(file.type)) {
 								printErr(`Expected image/png, image/jpeg, or image/gif. Got ${file.type}`);
-								throw printErr("Invalid image file");
+								throw printErr("Invalid file type");
 							}
 							const ab = await file.arrayBuffer();
 							if (getMimeTypeFromArrayBuffer(ab) == null) {
-								throw printErr("Invalid image type");
+								throw printErr("Invalid image file");
 							}
 							const reader = new FileReader();
 							reader.readAsDataURL(new Blob([ab]));
