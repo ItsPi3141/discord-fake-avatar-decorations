@@ -146,7 +146,7 @@ export default function Home() {
 														key={index}
 														data-tooltip-id={avatar.name.toLowerCase().replaceAll(" ", "-")}
 														data-tooltip-content={avatar.name}
-														className="border-2 border-surface1 bg-surface1 p-2 rounded-[5px] aspect-square avatar-preset outline-none"
+														className="border-2 border-surface1 bg-surface1 p-2 rounded-[5px] w-full aspect-square avatar-preset outline-none"
 														onClick={(e) => {
 															setAvUrl(baseImgUrl + avatar.file);
 															document.querySelectorAll("button.avatar-preset.border-2.border-primary").forEach((el) => {
@@ -287,7 +287,7 @@ export default function Home() {
 														return (
 															<button
 																key={index}
-																className="border-2 border-surface1 bg-surface1 p-1 rounded-[5px] aspect-square decor"
+																className="border-2 border-surface1 bg-surface1 p-1 rounded-[5px] w-full aspect-square decor"
 																onClick={(e) => {
 																	setName(decor.name);
 																	setDescription(decor.description);
