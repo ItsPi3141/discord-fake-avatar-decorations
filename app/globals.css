@@ -1,48 +1,14 @@
+@import url(https://itspi3141.github.io/discord-fonts/font.css);
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-@font-face {
-	font-family: "Ginto Nord";
-	font-weight: 600;
-	src: url("https://cdn.jsdelivr.net/gh/ROMVoid95/DiscordFonts@master/Ginto-Nord/Ginto-Nord-600.woff2") format("woff2");
-}
-@font-face {
-	font-family: "Ginto Nord";
-	font-weight: 700;
-	src: url("https://cdn.jsdelivr.net/gh/ROMVoid95/DiscordFonts@master/Ginto-Nord/Ginto-Nord-700.woff2") format("woff2");
-}
-
-@font-face {
-	font-family: "gg sans";
-	font-style: normal;
-	font-weight: 400;
-	src: local("gg sans Normal"), url("https://fonts.cdnfonts.com/s/93931/gg sans Regular.woff") format("woff");
-}
-@font-face {
-	font-family: "gg sans";
-	font-style: normal;
-	font-weight: 500;
-	src: local("gg sans Medium"), url("https://fonts.cdnfonts.com/s/93931/gg sans Medium.woff") format("woff");
-}
-@font-face {
-	font-family: "gg sans";
-	font-style: normal;
-	font-weight: 600;
-	src: local("gg sans SemiBold"), url("https://fonts.cdnfonts.com/s/93931/gg sans Semibold.woff") format("woff");
-}
-@font-face {
-	font-family: "gg sans";
-	font-style: normal;
-	font-weight: 700;
-	src: local("gg sans"), url("https://fonts.cdnfonts.com/s/93931/gg sans Bold.woff") format("woff");
-}
 
 * {
 	font-family: "gg sans";
 }
 .ginto {
-	font-family: "Ginto Nord";
+	font-family: "ABC Ginto Nord";
 	letter-spacing: 1px;
 }
 
