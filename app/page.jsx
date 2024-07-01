@@ -527,8 +527,6 @@ export default function Home() {
 										onClick={() => {
 											window.open("https://github.com/ItsPi3141/discord-fake-avatar-decorations");
 										}}
-										data-tooltip-id="share-tooltip"
-										data-tooltip-content="Copied to clipboard!"
 									>
 										<svg height="1em" fill="none" viewBox="2 2 22 21" xmlns="http://www.w3.org/2000/svg">
 											<path
