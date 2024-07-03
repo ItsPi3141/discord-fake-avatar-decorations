@@ -3,6 +3,7 @@
 import "./globals.css";
 import "./components/modal.css";
 import "./components/twemoji.css";
+import { FontPreloader } from "./components/fontpreload";
 
 export default function RootLayout({ children }) {
 	return (
@@ -29,8 +30,14 @@ export default function RootLayout({ children }) {
 				<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
 				<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
 				<link rel="manifest" href="/site.webmanifest" />
+
+				{/* Fonts */}
+				<link rel="stylesheet" href="https://itspi3141.github.io/discord-fonts/font.css" />
 			</head>
-			<body className="bg-surface4 overflow-x-hidden">{children}</body>
+			<body className="bg-surface4 overflow-x-hidden">
+				<FontPreloader />
+				{children}
+			</body>
 		</html>
 	);
 }
