@@ -1,8 +1,6 @@
 import { FFmpeg } from "@ffmpeg/ffmpeg";
 import { fetchFile } from "@ffmpeg/util";
-import { getMimeTypeFromArrayBuffer } from "./utils";
-import parseAPNG from "apng-js";
-import { isNotAPNG } from "apng-js";
+import { getAPngDuration, getGifDuration, getMimeTypeFromArrayBuffer } from "./utils";
 
 /**
  * Crop the image to a square shape using FFmpeg.
@@ -129,7 +127,7 @@ export function addDecoration(/** @type {FFmpeg} */ ffmpeg, /** @type {String} *
 				} else if (ext === "png") {
 					const decoDuration = getAPngDuration(decoAB);
 					const avatarDuration = getAPngDuration(avatarAB);
-					if (decoDuration > avatarDuration && avatarDuration > 1) {
+					if (decoDuration > avatarDuration && avatarDuration > 0) {
 						await ffmpeg.writeFile("avatar_before_timing.png", avatarData);
 						await ffmpeg.exec([
 							"-i",
@@ -207,25 +205,4 @@ export function addDecoration(/** @type {FFmpeg} */ ffmpeg, /** @type {String} *
 			return reject(null);
 		}
 	});
-}
-
-function getAPngDuration(arraybuf) {
-	const apng = parseAPNG(arraybuf);
-	if (apng instanceof Error) {
-		return 1;
-	}
-	return apng.playTime / 1000;
-}
-
-// https://stackoverflow.com/a/74236879
-function getGifDuration(arraybuf) {
-	const uint8 = new Uint8Array(arraybuf);
-	let duration = 0;
-	for (let i = 0, len = uint8.length; i < len; i++) {
-		if (uint8[i] == 0x21 && uint8[i + 1] == 0xf9 && uint8[i + 2] == 0x04 && uint8[i + 7] == 0x00) {
-			const delay = (uint8[i + 5] << 8) | (uint8[i + 4] & 0xff);
-			duration += delay < 2 ? 10 : delay;
-		}
-	}
-	return duration / 100;
 }

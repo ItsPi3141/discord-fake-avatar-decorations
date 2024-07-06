@@ -15,23 +15,9 @@ import { Tooltip } from "react-tooltip";
 
 import { Image } from "./components/image";
 import { FileUpload } from "./components/fileupload";
-import { print, printErr } from "./print";
+import { printMsg, printErr } from "./print";
 import { getMimeTypeFromArrayBuffer } from "@/ffmpeg/utils";
 const baseImgUrl = process.env.NEXT_PUBLIC_BASE_IMAGE_URL || "";
-
-function onFfmpegLog(e) {
-	print(
-		["ffmpeg", e.message],
-		[
-			{
-				color: "white",
-				background: "#5765f2",
-				padding: "2px 8px",
-				borderRadius: "10px",
-			},
-		]
-	);
-}
 
 export default function Home() {
 	const isServer = typeof window === "undefined";
@@ -48,7 +34,19 @@ export default function Home() {
 			coreURL: await toBlobURL(`${baseURL}ffmpeg-core.js`, "text/javascript"),
 			wasmURL: await toBlobURL(`${baseURL}ffmpeg-core.wasm`, "application/wasm"),
 		});
-		ffmpeg.on("log", onFfmpegLog);
+		ffmpeg.on("log", (e) =>
+			printMsg(
+				["ffmpeg", e.message],
+				[
+					{
+						color: "white",
+						background: "#5765f2",
+						padding: "2px 8px",
+						borderRadius: "10px",
+					},
+				]
+			)
+		);
 		setLoaded(true);
 	};
 

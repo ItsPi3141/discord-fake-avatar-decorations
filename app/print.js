@@ -1,5 +1,5 @@
 // it logs to console
-export function print(message, style) {
+export function printMsg(message, style) {
 	try {
 		let m = "";
 		let s = [];
@@ -19,7 +19,7 @@ export function print(message, style) {
 	}
 }
 export function printErr(message) {
-	print(
+	printMsg(
 		["error", message],
 		[
 			{
