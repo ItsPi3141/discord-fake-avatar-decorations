@@ -17,6 +17,7 @@ import { Image } from "./components/image";
 import { FileUpload } from "./components/fileupload";
 import { printMsg, printErr } from "./print";
 import { getMimeTypeFromArrayBuffer } from "@/ffmpeg/utils";
+import { useRouter } from "next/navigation";
 const baseImgUrl = process.env.NEXT_PUBLIC_BASE_IMAGE_URL || "";
 
 export default function Home() {
@@ -90,6 +91,8 @@ export default function Home() {
 		t = true;
 		load();
 	}, []);
+
+	const router = useRouter();
 
 	return (
 		<>
@@ -592,11 +595,11 @@ export default function Home() {
 						</p>
 					</main>
 					<Modal
-						title={"Download Decorated Avatar"}
+						title={"Save Decorated Avatar"}
 						subtitle={
 							isGeneratingAv
 								? "Please wait while the image is being generated."
-								: "You can download the image below. You may need to use an external tool to extract a still frame from the image if you do not have an active Nitro subscription."
+								: "You can save the image below. You may need to extract a still frame from the image if you do not have an active Nitro subscription."
 						}
 						visible={downloadModalVisible}
 						onClose={() => {
@@ -624,10 +627,10 @@ export default function Home() {
 								) : (
 									<div className="flex flex-col justify-center items-center gap-4 grow">
 										<img src={finishedAv} draggable={false} width={128} height={128} />
-										<div className="flex flex-col">
-											<div className="flex justify-center gap-2 w-full">
+										<div className="flex flex-col w-full">
+											<div className="flex flex-col items-center gap-2 mt-3 w-full">
 												<button
-													className="flex justify-center items-center gap-1 bg-secondary hover:bg-secondaryAlt mt-3 py-1.5 rounded-[3px] w-72 transition"
+													className="flex justify-center items-center gap-1 bg-secondary hover:bg-secondaryAlt py-1.5 rounded-[3px] w-72 transition"
 													onClick={() => {
 														const a = document.createElement("a");
 														a.href = finishedAv;
@@ -641,9 +644,27 @@ export default function Home() {
 															fill="#ffffff"
 														/>
 													</svg>
-													Download
+													Save
 												</button>
-												{/* placeholder for a future feature */}
+												<button
+													className="flex justify-center items-center gap-1 bg-secondary hover:bg-secondaryAlt py-1.5 rounded-[3px] w-72 transition"
+													onClick={() => {
+														if (!isServer) {
+															sessionStorage.setItem("image", finishedAv);
+															router.push("/gif-extractor");
+														}
+													}}
+												>
+													<svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 28 28">
+														<path
+															fill="#ffffff"
+															d="M4.66663 0.666626C2.45749 0.666626 0.666626 2.45748 0.666626 4.66662V23.3333C0.666626 25.5424 2.45748 27.3333 4.66662 27.3333H23.3333C25.5424 27.3333 27.3333 25.5424 27.3333 23.3333V4.66663C27.3333 2.45749 25.5424 0.666626 23.3333 0.666626H4.66663ZM8.66663 5.99996C10.1376 5.99996 11.3333 7.19356 11.3333 8.66663C11.3333 10.1408 10.1376 11.3333 8.66663 11.3333C7.19249 11.3333 5.99996 10.1408 5.99996 8.66663C5.99996 7.19356 7.19249 5.99996 8.66663 5.99996ZM5.99996 22L9.99996 16.6666L12.6666 19.3333L18 12.6666L22 22H5.99996Z"
+															fillRule="evenodd"
+															clipRule="evenodd"
+														/>
+													</svg>
+													Extract still image
+												</button>
 											</div>
 										</div>
 									</div>

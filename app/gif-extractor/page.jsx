@@ -37,6 +37,12 @@ export default function GifExtractor() {
 			)
 		);
 		setLoaded(true);
+
+		if (!isServer) {
+			const i = sessionStorage.getItem("image");
+			if (i) setFile(i);
+			sessionStorage.removeItem("image");
+		}
 	};
 
 	let t = false;
