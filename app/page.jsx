@@ -490,8 +490,9 @@ export default function Home() {
 															<span className="mr-1">{name || "Display Name"}</span>
 															<span className="ml-1 h-4 text-secondaryLight text-xs">
 																Today at{" "}
-																{[new Date().getHours() % 12, new Date().getMinutes()].join(":") +
-																	(new Date().getHours() >= 12 ? " PM" : " AM")}
+																{[new Date().getHours() % 12, new Date().getMinutes()]
+																	.map((e) => e.toString().padStart(2, "0"))
+																	.join(":") + (new Date().getHours() >= 12 ? " PM" : " AM")}
 															</span>
 														</p>
 													)}
