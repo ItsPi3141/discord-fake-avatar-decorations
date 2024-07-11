@@ -46,6 +46,49 @@
 		]
 	},
 	{
+		"name": "Dark Fantasy",
+		"description": "Approach, wanderer... dangerously charming relics await.",
+		"darkText": false,
+		"hideTitle": true,
+		"descriptionTopMargin": "72px",
+		"banner": {
+			"image": "/banners/dark_fantasy.png",
+			"height": 40
+		},
+		"items": [
+			{
+				"name": "Midnight Sorceress",
+				"description": "Wear the beauty of midnight.",
+				"file": "/decorations/midnight_sorceress.png"
+			},
+			{
+				"name": "Malefic Crown",
+				"description": "Fit for those who rule with an iron fist.",
+				"file": "/decorations/malefic_crown.png"
+			},
+			{
+				"name": "Death's Edge",
+				"description": "A great conversation starter... and ender.",
+				"file": "/decorations/deaths_edge.png"
+			},
+			{
+				"name": "Spirit Embers",
+				"description": "For protection against dark nights and unseen terrors.",
+				"file": "/decorations/spirit_embers.png"
+			},
+			{
+				"name": "Eldritch Ring",
+				"description": "For those days when you want to feel extra cursed.",
+				"file": "/decorations/eldritch_ring.png"
+			},
+			{
+				"name": "Arcane Sigil",
+				"description": "Those who stare will fall under your spell.",
+				"file": "/decorations/arcane_sigil.png"
+			}
+		]
+	},
+	{
 		"name": "Palworld",
 		"description": "New island, new Pals, new adventures!",
 		"darkText": false,
