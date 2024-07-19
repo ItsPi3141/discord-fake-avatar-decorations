@@ -46,14 +46,68 @@
 		]
 	},
 	{
-		"name": "Dark Fantasy",
-		"description": "Approach, wanderer... dangerously charming relics await.",
-		"darkText": false,
+		"name": "Spongebob",
+		"description": "Celebrate 25 years of nautical nonsense!",
+		"darkText": true,
 		"hideTitle": true,
 		"descriptionTopMargin": "72px",
 		"banner": {
-			"image": "/banners/dark_fantasy.png",
+			"image": [
+				{
+					"url": "/banners/spongebob.png",
+					"align": "center",
+					"height": "115%",
+					"width": "100%"
+				}
+			],
 			"height": 40
+		},
+		"items": [
+			{
+				"name": "SpongeBob",
+				"description": "Order up!",
+				"file": "/decorations/spongebob.png"
+			},
+			{
+				"name": "Imagination",
+				"description": "With imagination, I can be anything I want.",
+				"file": "/decorations/imagination.png"
+			},
+			{
+				"name": "Patrick Star",
+				"description": "He, she, me wumbo.",
+				"file": "/decorations/patrick_star.png"
+			},
+			{
+				"name": "Flower Clouds",
+				"description": "Immerse yourself in Bikini Bottom.",
+				"file": "/decorations/flower_clouds.png"
+			},
+			{
+				"name": "Gary the Snail",
+				"description": "Meow.",
+				"file": "/decorations/gary_the_snail.png"
+			},
+			{
+				"name": "Sandy Cheeks",
+				"description": "Underwater breathing apparatus.",
+				"file": "/decorations/sandy_cheeks.png"
+			},
+			{
+				"name": "MuscleBob",
+				"description": "How tough are ya?",
+				"file": "/decorations/musclebob.png"
+			}
+		]
+	},
+	{
+		"name": "Dark Fantasy",
+		"description": "Approach, wanderer... dangerously charming relics await.",
+		"darkText": false,
+		"banner": {
+			"image": "/banners/dark_fantasy.png",
+			"text": "/bannertext/dark_fantasy.png",
+			"height": 48
 		},
 		"items": [
 			{
