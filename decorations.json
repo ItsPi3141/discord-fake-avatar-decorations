@@ -42,6 +42,16 @@
 				"name": "Fortnite Victory Crown",
 				"description": "A sparkly crown! Available to use until September 3, 2024.",
 				"file": "/decorations/victory_crown.png"
+			},
+			{
+				"name": "Wingman Boba",
+				"description": "Your trusty VALORANT buddy, with a refreshing bubbly twist. Available to use until October 6, 2024.",
+				"file": "/decorations/wingman_boba.png"
+			},
+			{
+				"name": "Freezer Bunny Lovebug",
+				"description": "A Sim's coolest companion! Available until September 30, 2024.",
+				"file": "/decorations/freezer_bunny_lovebug.png"
 			}
 		]
 	},
