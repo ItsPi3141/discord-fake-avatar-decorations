@@ -56,6 +56,34 @@
 		]
 	},
 	{
+		"name": "VALORANT CHAMPIONS",
+		"description": "All Paths End Here.",
+		"darkText": false,
+		"descriptionTopMargin": "4px",
+		"banner": {
+			"image": "/banners/valorant_champions.png",
+			"text": "/bannertext/valorant_champions.png",
+			"height": 40
+		},
+		"items": [
+			{
+				"name": "Yoru Dimensional Drift",
+				"description": "Looking for me?",
+				"file": "/decorations/yoru_dimensional_drift.png"
+			},
+			{
+				"name": "Viper Poison Cloud",
+				"description": "No one can hold their breath forever.",
+				"file": "/decorations/viper_poison_cloud.png"
+			},
+			{
+				"name": "Cypher Neural Theft",
+				"description": "Nothing stays hidden from me.",
+				"file": "/decorations/cypher_neural_theft.png"
+			}
+		]
+	},
+	{
 		"name": "Spongebob",
 		"description": "Celebrate 25 years of nautical nonsense!",
 		"darkText": true,
