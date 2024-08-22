@@ -56,6 +56,49 @@
 		]
 	},
 	{
+		"name": "Dojo",
+		"description": "Where discipline meets destiny.",
+		"darkText": true,
+		"descriptionTopMargin": "2px",
+		"banner": {
+			"image": "/banners/dojo.png",
+			"text": "/bannertext/dojo.png",
+			"height": 48
+		},
+		"items": [
+			{
+				"name": "Kabuto",
+				"description": "Donned only by true warriors.",
+				"file": "/decorations/kabuto.png"
+			},
+			{
+				"name": "Oni Mask",
+				"description": "Unleash your inner demon.",
+				"file": "/decorations/oni_mask.png"
+			},
+			{
+				"name": "Straw Hat",
+				"description": "A must-have for the traveling wanderer.",
+				"file": "/decorations/straw_hat.png"
+			},
+			{
+				"name": "Sakura Ink",
+				"description": "Fleeting beauty... forever etched in ink.",
+				"file": "/decorations/sakura_ink.png"
+			},
+			{
+				"name": "Sakura Warrior",
+				"description": "Blossom and blade, united in purpose.",
+				"file": "/decorations/sakura_warrior.png"
+			},
+			{
+				"name": "Shuriken's Mask",
+				"description": "Aim with purpose.",
+				"file": "/decorations/shurikens_mask.png"
+			}
+		]
+	},
+	{
 		"name": "VALORANT CHAMPIONS",
 		"description": "All Paths End Here.",
 		"darkText": false,
