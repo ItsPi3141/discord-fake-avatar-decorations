@@ -1,5 +1,9 @@
 [
 	{
+		"name": "Dojo",
+		"file": "/avatars/dojo.png"
+	},
+	{
 		"name": "Palworld",
 		"file": "/avatars/palworld.png"
 	},
@@ -1122,5 +1126,9 @@
 	{
 		"name": "Wumpus #44",
 		"file": "/avatars/wumpus_44.png"
+	},
+	{
+		"name": "Wumpus #45",
+		"file": "/avatars/wumpus_45.png"
 	}
 ]
