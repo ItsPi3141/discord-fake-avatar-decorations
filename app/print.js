@@ -2,7 +2,7 @@
 export function printMsg(message, style) {
 	try {
 		let m = "";
-		let s = [];
+		const s = [];
 		for (const i in message) {
 			if (m === "") {
 				m += "%c";
@@ -15,7 +15,11 @@ export function printMsg(message, style) {
 		}
 		console.log(m, ...s);
 	} catch {
-		console.log(`%cinfo%c${message}`, "color:white;background:#444;padding:2px 8px;border-radius:10px", "");
+		console.log(
+			`%cinfo%c${message}`,
+			"color:white;background:#444;padding:2px 8px;border-radius:10px",
+			"",
+		);
 	}
 }
 export function printErr(message) {
@@ -28,7 +32,7 @@ export function printErr(message) {
 				padding: "2px 8px",
 				borderRadius: "10px",
 			},
-		]
+		],
 	);
 }
 
@@ -39,7 +43,7 @@ function obj2css(obj) {
 				`${property
 					.split(/(?=[A-Z])/)
 					.join("-")
-					.toLowerCase()}:${value}`
+					.toLowerCase()}:${value}`,
 		)
 		.join(";");
 }

@@ -1,12 +1,16 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
-import { FileUpload } from "../components/fileupload";
-import { getMimeTypeFromArrayBuffer } from "@/ffmpeg/utils";
-import { imagesFromGif } from "@/ffmpeg/extractFrames";
+import { useCallback, useEffect, useRef, useState } from "react";
+
 import { FFmpeg } from "@ffmpeg/ffmpeg";
 import { toBlobURL } from "@ffmpeg/util";
-import { printMsg } from "../print";
+import { imagesFromGif } from "@/ffmpeg/extractFrames.js";
+import { getMimeTypeFromArrayBuffer } from "@/ffmpeg/utils.js";
+
+import FileUpload from "../components/fileupload.jsx";
+import Image from "../components/image.jsx";
+
+import { printMsg } from "../print.js";
 
 export default function GifExtractor() {
 	const isServer = typeof window === "undefined";
@@ -14,14 +18,17 @@ export default function GifExtractor() {
 	const [loaded, setLoaded] = useState(false);
 	const ffmpegRef = useRef(isServer ? null : new FFmpeg());
 
-	const load = async () => {
+	const load = useCallback(async () => {
 		if (isServer) return;
 		const baseURL = "https://unpkg.com/@ffmpeg/core@0.12.6/dist/umd/";
 		const ffmpeg = ffmpegRef.current;
 		// toBlobURL is used to bypass CORS issue, urls with the same domain can be used directly.
 		await ffmpeg.load({
 			coreURL: await toBlobURL(`${baseURL}ffmpeg-core.js`, "text/javascript"),
-			wasmURL: await toBlobURL(`${baseURL}ffmpeg-core.wasm`, "application/wasm"),
+			wasmURL: await toBlobURL(
+				`${baseURL}ffmpeg-core.wasm`,
+				"application/wasm",
+			),
 		});
 		ffmpeg.on("log", (e) =>
 			printMsg(
@@ -33,8 +40,8 @@ export default function GifExtractor() {
 						padding: "2px 8px",
 						borderRadius: "10px",
 					},
-				]
-			)
+				],
+			),
 		);
 		setLoaded(true);
 
@@ -43,14 +50,14 @@ export default function GifExtractor() {
 			if (i) setFile(i);
 			sessionStorage.removeItem("image");
 		}
-	};
+	});
 
-	let t = false;
+	const [t, setT] = useState(false);
 	useEffect(() => {
 		if (t) return;
-		t = true;
+		setT(true);
 		load();
-	}, []);
+	}, [load, t]);
 
 	const [file, setFile] = useState(null);
 	const [frames, setFrames] = useState(null);
@@ -65,6 +72,7 @@ export default function GifExtractor() {
 						{file == null ? (
 							<>
 								<button
+									type="button"
 									className="flex justify-center items-center gap-1 bg-primary hover:bg-primaryAlt mt-3 py-1.5 rounded-[3px] w-72 transition"
 									onClick={() => {
 										document.getElementById("upload-gif").click();
@@ -88,19 +96,29 @@ export default function GifExtractor() {
 									/>
 									Upload a GIF
 								</button>
-								<p className="text-gray-300 text-sm">You can also drag and drop a GIF file here</p>
+								<p className="text-gray-300 text-sm">
+									You can also drag and drop a GIF file here
+								</p>
 							</>
 						) : (
 							<>
 								<div className="relative flex flex-col items-center">
 									<button
+										type="button"
 										className="top-2 right-2 absolute bg-surface5 hover:bg-secondary shadow p-1 rounded text-error"
 										onClick={() => {
 											setFile(null);
 											setFrames(null);
 										}}
 									>
-										<svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24">
+										<svg
+											aria-hidden="true"
+											xmlns="http://www.w3.org/2000/svg"
+											width="20"
+											height="20"
+											fill="none"
+											viewBox="0 0 24 24"
+										>
 											<path
 												fill="currentColor"
 												d="M14.25 1c.41 0 .75.34.75.75V3h5.25c.41 0 .75.34.75.75v.5c0 .41-.34.75-.75.75H3.75A.75.75 0 0 1 3 4.25v-.5c0-.41.34-.75.75-.75H9V1.75c0-.41.34-.75.75-.75h4.5Z"
@@ -113,7 +131,11 @@ export default function GifExtractor() {
 											/>
 										</svg>
 									</button>
-									<img src={file} className="rounded-lg w-72 max-w-[calc(100vw-4rem)] sm:max-w-[32rem]" draggable="false" />
+									<Image
+										src={file}
+										className="rounded-lg w-72 max-w-[calc(100vw-4rem)] sm:max-w-[32rem]"
+										draggable="false"
+									/>
 									<button
 										type="button"
 										className="flex justify-center items-center gap-1 bg-primary hover:bg-primaryAlt mt-3 py-1.5 rounded-[3px] w-72 max-w-[calc(100vw-4rem)] transition"
@@ -130,6 +152,7 @@ export default function GifExtractor() {
 										typeof frames.map === "function" &&
 										frames.map((frame, i) => (
 											<button
+												type="button"
 												key={i}
 												className="flex justify-center items-center border-2 border-surface1 bg-surface1 p-1 rounded-[5px] w-32 aspect-square"
 												onClick={() => {
@@ -139,7 +162,12 @@ export default function GifExtractor() {
 													a.click();
 												}}
 											>
-												<img src={`data:image/png;base64,${frame}`} className="rounded" draggable="false" />
+												<img
+													alt=""
+													src={`data:image/png;base64,${frame}`}
+													className="rounded"
+													draggable="false"
+												/>
 											</button>
 										))}
 								</div>
@@ -154,7 +182,11 @@ export default function GifExtractor() {
 								throw printErr("Invalid file type");
 							}
 							const ab = await file.arrayBuffer();
-							if (!["image/png", "image/gif"].includes(getMimeTypeFromArrayBuffer(ab))) {
+							if (
+								!["image/png", "image/gif"].includes(
+									getMimeTypeFromArrayBuffer(ab),
+								)
+							) {
 								throw printErr("Invalid image file");
 							}
 							const reader = new FileReader();
@@ -173,11 +205,13 @@ export default function GifExtractor() {
 						FAKE AVATAR DECORATIONS
 						<br />
 						<br />
-						<span className="text-3xl text-gray-300 ginto">Gif Frame Extractor</span>
+						<span className="text-3xl text-gray-300 ginto">
+							Gif Frame Extractor
+						</span>
 					</p>
 					<span className="mb-8 loading-container">
-						<span className="loading-cube"></span>
-						<span className="loading-cube"></span>
+						<span className="loading-cube" />
+						<span className="loading-cube" />
 					</span>
 					<p>Loading...</p>
 				</main>

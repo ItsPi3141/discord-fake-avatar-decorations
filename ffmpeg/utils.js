@@ -7,12 +7,14 @@ import parseAPNG from "apng-js";
  * @param {Uint8Array | ArrayBuffer} arrayBuffer - The input ArrayBuffer or Uint8Array.
  * @return {string | null} The MIME type of the input data, or null if it is not recognized.
  */
-export function getMimeTypeFromArrayBuffer(/** @type {Uint8Array | ArrayBuffer} */ arrayBuffer) {
+export function getMimeTypeFromArrayBuffer(
+	/** @type {Uint8Array | ArrayBuffer} */ arrayBuffer,
+) {
 	const uint8arr = new Uint8Array(arrayBuffer);
 
 	const len = 4;
 	if (uint8arr.length >= len) {
-		let signatureArr = new Array(len);
+		const signatureArr = new Array(len);
 		for (let i = 0; i < len; i++) signatureArr[i] = uint8arr[i].toString(16);
 		const signature = signatureArr.join("").toUpperCase();
 
@@ -57,7 +59,12 @@ export function getGifDuration(arraybuf) {
 	const uint8 = new Uint8Array(arraybuf);
 	let duration = 0;
 	for (let i = 0, len = uint8.length; i < len; i++) {
-		if (uint8[i] == 0x21 && uint8[i + 1] == 0xf9 && uint8[i + 2] == 0x04 && uint8[i + 7] == 0x00) {
+		if (
+			uint8[i] === 0x21 &&
+			uint8[i + 1] === 0xf9 &&
+			uint8[i + 2] === 0x04 &&
+			uint8[i + 7] === 0x00
+		) {
 			const delay = (uint8[i + 5] << 8) | (uint8[i + 4] & 0xff);
 			duration += delay < 2 ? 10 : delay;
 		}
@@ -70,7 +77,7 @@ export function arraybuffer2base64(arraybuffer) {
 		let binary = "";
 		const bytes = new Uint8Array(arraybuffer);
 		const len = bytes.byteLength;
-		for (var i = 0; i < len; i++) {
+		for (let i = 0; i < len; i++) {
 			binary += String.fromCharCode(bytes[i]);
 		}
 		return btoa(binary);
