@@ -55,8 +55,13 @@
 			},
 			{
 				"name": "Los Santos",
-				"description": "Available until to use October 14, 2024.",
+				"description": "Get to the chopper! Los Santos sky-high pursuit! Available to use until October 14, 2024.",
 				"file": "/decorations/los_santos.png"
+			},
+			{
+				"name": "Hailey",
+				"description": "Worn by the legendary sniper in The First Descendant. Available until to use November 6, 2024.",
+				"file": "/decorations/hailey.png"
 			}
 		]
 	},
