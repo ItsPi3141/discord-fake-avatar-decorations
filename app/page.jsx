@@ -33,7 +33,10 @@ export default function Home() {
 		// toBlobURL is used to bypass CORS issue, urls with the same domain can be used directly.
 		await ffmpeg.load({
 			coreURL: await toBlobURL(`${baseURL}ffmpeg-core.js`, "text/javascript"),
-			wasmURL: await toBlobURL(`${baseURL}ffmpeg-core.wasm`, "application/wasm"),
+			wasmURL: await toBlobURL(
+				`${baseURL}ffmpeg-core.wasm`,
+				"application/wasm",
+			),
 		});
 		ffmpeg.on("log", (e) =>
 			printMsg(
@@ -45,8 +48,8 @@ export default function Home() {
 						padding: "2px 8px",
 						borderRadius: "10px",
 					},
-				]
-			)
+				],
+			),
 		);
 		setLoaded(true);
 	};
@@ -54,14 +57,20 @@ export default function Home() {
 	const previewAvatar = async (url) => {
 		if (isServer) return;
 		setAvUrl("loading");
-		const res = await cropToSquare(ffmpegRef.current, url).catch((reason) => printErr(reason));
+		const res = await cropToSquare(ffmpegRef.current, url).catch((reason) =>
+			printErr(reason),
+		);
 		if (!res) return setAvUrl(null);
 		setAvUrl(res);
 	};
 
 	const createAvatar = async (url, deco) => {
 		if (isServer) return;
-		addDecoration(ffmpegRef.current, url, deco === "" ? "" : `${baseImgUrl}${deco}`)
+		addDecoration(
+			ffmpegRef.current,
+			url,
+			deco === "" ? "" : `${baseImgUrl}${deco}`,
+		)
 			.then((res) => {
 				if (!res) return setFinishedAv(null), setGenerationFailed(true);
 				setFinishedAv(res);
@@ -102,22 +111,30 @@ export default function Home() {
 						<div
 							className="flex flex-col justify-center items-center bg-primary mt-8 px-4 py-8 sm:p-8 md:p-12 lg:p-16 rounded-3xl w-[calc(100%-6rem)] text-center"
 							style={{
-								backgroundImage: new Date().getMonth() == 11 ? `url(${baseImgUrl}/wallpaper/winter.jpg)` : "",
+								backgroundImage:
+									new Date().getMonth() == 11
+										? `url(${baseImgUrl}/wallpaper/winter.jpg)`
+										: "",
 								backgroundPosition: "center bottom",
 								backgroundSize: "cover",
 							}}
 						>
 							<h1 className="font-bold text-3xl md:text-5xl ginto">Discord</h1>
-							<h1 className="mb-4 text-2xl md:text-4xl ginto">FAKE AVATAR DECORATIONS</h1>
+							<h1 className="mb-4 text-2xl md:text-4xl ginto">
+								FAKE AVATAR DECORATIONS
+							</h1>
 							<h2 className="text-sm sm:text-base">
-								Create profile pictures with avatar decorations so you can use them in Discord for free without spending money
+								Create profile pictures with avatar decorations so you can use
+								them in Discord for free without spending money
 							</h2>
 						</div>
 						<div className="flex md:flex-row flex-col items-center md:items-start gap-8 px-8 py-12 w-full max-w-[900px]">
 							{/* SETTINGS */}
 							<div id="settings" className="block select-none grow">
 								{/* UPLOAD AVATAR */}
-								<p className="my-2 font-semibold text-gray-300 text-sm [letter-spacing:.05em] scale-y-90">AVATAR</p>
+								<p className="my-2 font-semibold text-gray-300 text-sm [letter-spacing:.05em] scale-y-90">
+									AVATAR
+								</p>
 								<div className="flex sm:flex-row flex-col sm:items-center gap-3">
 									<button
 										type="button"
@@ -151,9 +168,15 @@ export default function Home() {
 										placeholder="Enter image URL..."
 										onChange={async (e) => {
 											const res = await fetch(e.target.value);
-											if (res.status < 200 || res.status >= 400) return setAvUrl(null);
+											if (res.status < 200 || res.status >= 400)
+												return setAvUrl(null);
 											const blob = await res.blob();
-											if (!["image/png", "image/jpeg", "image/gif"].includes(blob.type)) return setAvUrl(null);
+											if (
+												!["image/png", "image/jpeg", "image/gif"].includes(
+													blob.type,
+												)
+											)
+												return setAvUrl(null);
 											const reader = new FileReader();
 											reader.readAsDataURL(blob);
 											reader.onload = () => {
@@ -162,29 +185,43 @@ export default function Home() {
 										}}
 									/>
 								</div>
-								<p className="mt-4 mb-2">You can also pick from one of these avatars below</p>
+								<p className="mt-4 mb-2">
+									You can also pick from one of these avatars below
+								</p>
 								{/* SELECT AVATAR */}
 								<div className="flex flex-col gap-8 py-1 max-h-[280px] overflow-auto discord-scrollbar">
 									<div className="gap-3 grid grid-cols-3 sm:grid-cols-5 md:grid-cols-5 min-[600px]:grid-cols-6 min-[720px]:grid-cols-7 xs:grid-cols-4">
 										{avatarsData.map((avatar, index) => {
 											return (
-												<div key={index} className="flex flex-col items-center text-center">
+												<div
+													key={index}
+													className="flex flex-col items-center text-center"
+												>
 													<button
 														key={index}
-														data-tooltip-id={avatar.name.toLowerCase().replaceAll(" ", "-")}
+														data-tooltip-id={avatar.name
+															.toLowerCase()
+															.replaceAll(" ", "-")}
 														data-tooltip-content={avatar.name}
 														className="border-2 border-surface1 bg-surface1 p-2 rounded-[5px] w-full aspect-square avatar-preset outline-none"
 														onClick={(e) => {
 															setAvUrl(baseImgUrl + avatar.file);
-															document.querySelectorAll("button.avatar-preset.border-2.border-primary").forEach((el) => {
-																el.classList.remove("border-primary");
-																el.classList.add("border-surface1");
-															});
+															document
+																.querySelectorAll(
+																	"button.avatar-preset.border-2.border-primary",
+																)
+																.forEach((el) => {
+																	el.classList.remove("border-primary");
+																	el.classList.add("border-surface1");
+																});
 															e.target.classList.add("border-primary");
 															e.target.classList.remove("border-surface1");
 														}}
 													>
-														<Image src={avatar.file} className="rounded-full pointer-events-none" />
+														<Image
+															src={avatar.file}
+															className="rounded-full pointer-events-none"
+														/>
 													</button>
 													<Tooltip
 														id={avatar.name.toLowerCase().replaceAll(" ", "-")}
@@ -193,7 +230,8 @@ export default function Home() {
 															background: "#111214",
 															borderRadius: "8px",
 															padding: "6px 12px 4px 12px",
-															boxShadow: "0 10px 15px -3px rgb(0 0 0 / 0.2), 0 4px 6px -4px rgb(0 0 0 / 0.2)",
+															boxShadow:
+																"0 10px 15px -3px rgb(0 0 0 / 0.2), 0 4px 6px -4px rgb(0 0 0 / 0.2)",
 														}}
 													/>
 												</div>
@@ -204,7 +242,9 @@ export default function Home() {
 								<hr />
 
 								{/* SELECT DECORATION */}
-								<p className="my-2 font-semibold text-gray-300 text-sm [letter-spacing:.05em] scale-y-90">AVATAR DECORATION</p>
+								<p className="my-2 font-semibold text-gray-300 text-sm [letter-spacing:.05em] scale-y-90">
+									AVATAR DECORATION
+								</p>
 								<div className="flex flex-col gap-8 py-1 max-h-[532px] overflow-auto discord-scrollbar">
 									{decorationsData.map((category, index) => {
 										return (
@@ -215,7 +255,8 @@ export default function Home() {
 															<div
 																className="top-0 right-0 bottom-0 left-0 absolute"
 																style={{
-																	background: category.banner.background || "#000",
+																	background:
+																		category.banner.background || "#000",
 																}}
 															/>
 															{category.banner.image.map((e, i) => (
@@ -230,9 +271,16 @@ export default function Home() {
 																	width={0}
 																	style={{
 																		height: e.height || "auto",
-																		width: e.width || (e.height ? "auto" : "100%"),
-																		left: e.align == "left" || e.align == "center" ? 0 : "",
-																		right: e.align == "right" || e.align == "center" ? 0 : "",
+																		width:
+																			e.width || (e.height ? "auto" : "100%"),
+																		left:
+																			e.align == "left" || e.align == "center"
+																				? 0
+																				: "",
+																		right:
+																			e.align == "right" || e.align == "center"
+																				? 0
+																				: "",
 																		objectPosition: e.align,
 																	}}
 																/>
@@ -284,7 +332,10 @@ export default function Home() {
 																	<p
 																		className="px-4 text-3xl text-center ginto"
 																		style={{
-																			color: category.darkText || false ? "#000" : "#fff",
+																			color:
+																				category.darkText || false
+																					? "#000"
+																					: "#fff",
 																		}}
 																	>
 																		{category.name}
@@ -295,7 +346,8 @@ export default function Home() {
 														<p
 															className="w-[232px] xs:w-full font-medium text-center text-sm"
 															style={{
-																color: category.darkText || false ? "#000" : "#fff",
+																color:
+																	category.darkText || false ? "#000" : "#fff",
 																marginTop: category.descriptionTopMargin || "",
 															}}
 														>
@@ -319,15 +371,22 @@ export default function Home() {
 																	setName(decor.name);
 																	setDescription(decor.description);
 																	setDecoUrl(decor.file);
-																	document.querySelectorAll("button.decor.border-2.border-primary").forEach((el) => {
-																		el.classList.remove("border-primary");
-																		el.classList.add("border-surface1");
-																	});
+																	document
+																		.querySelectorAll(
+																			"button.decor.border-2.border-primary",
+																		)
+																		.forEach((el) => {
+																			el.classList.remove("border-primary");
+																			el.classList.add("border-surface1");
+																		});
 																	e.target.classList.add("border-primary");
 																	e.target.classList.remove("border-surface1");
 																}}
 															>
-																<Image src={decor.file} className="pointer-events-none" />
+																<Image
+																	src={decor.file}
+																	className="pointer-events-none"
+																/>
 															</button>
 														);
 													})}
@@ -364,21 +423,33 @@ export default function Home() {
 														}
 														draggable={false}
 													/>
-													<Image id="decoration" src={decoUrl} className="top-0 left-0 absolute" draggable={false} />
+													<Image
+														id="decoration"
+														src={decoUrl}
+														className="top-0 left-0 absolute"
+														draggable={false}
+													/>
 												</>
 											)}
 										</div>
 										<div className="right-[-4px] bottom-[-4px] absolute border-[5px] border-surface2 bg-[#229f56] rounded-full w-7 h-7"></div>
 									</div>
 									<div className="bg-surface0 m-4 mt-[calc(15rem/4)] p-4 rounded-lg w-[calc(100%-32px)]">
-										<p className="font-semibold text-xl [letter-spacing:.02em]">{name || "Display Name"}</p>
+										<p className="font-semibold text-xl [letter-spacing:.02em]">
+											{name || "Display Name"}
+										</p>
 										<p className="text-sm">{description || "username"}</p>
 										<hr />
-										<p className="font-semibold text-xs [letter-spacing:.02em] mb-1 scale-y-95">ABOUT ME</p>
-										<p className="text-sm">
-											Hello, this is an example profile so that you can see what the profile picture would actually look like on Discord.
+										<p className="font-semibold text-xs [letter-spacing:.02em] mb-1 scale-y-95">
+											ABOUT ME
 										</p>
-										<p className="font-semibold text-xs [letter-spacing:.02em] mt-3 mb-1 scale-y-95">DISCORD MEMBER SINCE</p>
+										<p className="text-sm">
+											Hello, this is an example profile so that you can see what
+											the profile picture would actually look like on Discord.
+										</p>
+										<p className="font-semibold text-xs [letter-spacing:.02em] mt-3 mb-1 scale-y-95">
+											DISCORD MEMBER SINCE
+										</p>
 										<p className="text-sm">May 13, 2015</p>
 										<button
 											className="flex justify-center items-center gap-2 bg-secondary hover:bg-secondaryAlt mt-3 py-1.5 rounded-[3px] w-full transition"
@@ -387,10 +458,17 @@ export default function Home() {
 												setIsGeneratingAv(true);
 												setGenerationFailed(false);
 												setDownloadModalVisible(true);
-												createAvatar(avUrl || `${baseImgUrl}/avatars/blue.png`, decoUrl);
+												createAvatar(
+													avUrl || `${baseImgUrl}/avatars/blue.png`,
+													decoUrl,
+												);
 											}}
 										>
-											<svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
+											<svg
+												xmlns="http://www.w3.org/2000/svg"
+												height="1em"
+												viewBox="0 0 448 512"
+											>
 												<path
 													fill="#ffffff"
 													d="M64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V173.3c0-17-6.7-33.3-18.7-45.3L352 50.7C340 38.7 323.7 32 306.7 32H64zm0 96c0-17.7 14.3-32 32-32H288c17.7 0 32 14.3 32 32v64c0 17.7-14.3 32-32 32H96c-17.7 0-32-14.3-32-32V128zM224 288a64 64 0 1 1 0 128 64 64 0 1 1 0-128z"
@@ -438,7 +516,8 @@ export default function Home() {
 														</>
 													) : (
 														<>
-															Hmm... I still don't see it <Twemoji emoji={"🤔"} />
+															Hmm... I still don't see it{" "}
+															<Twemoji emoji={"🤔"} />
 														</>
 													)}
 												</>
@@ -467,15 +546,26 @@ export default function Home() {
 																{m.styled ? (
 																	<div className="relative rounded-full w-10 h-10 overflow-hidden">
 																		<Image
-																			src={avUrl || `${baseImgUrl}/avatars/blue.png`}
+																			src={
+																				avUrl ||
+																				`${baseImgUrl}/avatars/blue.png`
+																			}
 																			draggable={false}
 																			className="top-[calc(40px*0.09)] left-[calc(40px*0.09)] absolute rounded-full w-[calc(40px*0.82)] h-[calc(40px*0.82)]"
 																		/>
-																		{decoUrl && <Image src={decoUrl} draggable={false} className="top-0 left-0 absolute" />}
+																		{decoUrl && (
+																			<Image
+																				src={decoUrl}
+																				draggable={false}
+																				className="top-0 left-0 absolute"
+																			/>
+																		)}
 																	</div>
 																) : (
 																	<Image
-																		src={avUrl || `${baseImgUrl}/avatars/blue.png`}
+																		src={
+																			avUrl || `${baseImgUrl}/avatars/blue.png`
+																		}
 																		draggable={false}
 																		className="rounded-full w-10 h-10"
 																	/>
@@ -487,12 +577,18 @@ export default function Home() {
 												<div className="flex flex-col">
 													{m.groupStart && (
 														<p className="h-fit font-medium text-base">
-															<span className="mr-1">{name || "Display Name"}</span>
+															<span className="mr-1">
+																{name || "Display Name"}
+															</span>
 															<span className="ml-1 h-4 text-secondaryLight text-xs">
 																Today at{" "}
-																{[new Date().getHours() % 12, new Date().getMinutes()]
+																{[
+																	new Date().getHours() % 12,
+																	new Date().getMinutes(),
+																]
 																	.map((e) => e.toString().padStart(2, "0"))
-																	.join(":") + (new Date().getHours() >= 12 ? " PM" : " AM")}
+																	.join(":") +
+																	(new Date().getHours() >= 12 ? " PM" : " AM")}
 															</span>
 														</p>
 													)}
@@ -528,7 +624,12 @@ export default function Home() {
 										data-tooltip-id="share-tooltip"
 										data-tooltip-content="Copied to clipboard!"
 									>
-										<svg height="1.1em" fill="none" viewBox="2 2 21 21" xmlns="http://www.w3.org/2000/svg">
+										<svg
+											height="1.1em"
+											fill="none"
+											viewBox="2 2 21 21"
+											xmlns="http://www.w3.org/2000/svg"
+										>
 											<path
 												d="M17 3.002a2.998 2.998 0 1 1-2.148 5.09l-5.457 3.12a3.002 3.002 0 0 1 0 1.577l5.458 3.119a2.998 2.998 0 1 1-.746 1.304l-5.457-3.12a2.998 2.998 0 1 1 0-4.184l5.457-3.12A2.998 2.998 0 0 1 17 3.002Z"
 												fill="#ffffff"
@@ -545,7 +646,8 @@ export default function Home() {
 											color: "white",
 											borderRadius: "8px",
 											padding: "6px 12px 4px 12px",
-											boxShadow: "0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1)",
+											boxShadow:
+												"0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1)",
 										}}
 										closeEvents={[]}
 										place="bottom"
@@ -553,10 +655,17 @@ export default function Home() {
 									<button
 										className="flex justify-center items-center gap-1 bg-secondary hover:bg-secondaryAlt mt-3 py-1.5 rounded-[3px] transition"
 										onClick={() => {
-											window.open("https://github.com/ItsPi3141/discord-fake-avatar-decorations");
+											window.open(
+												"https://github.com/ItsPi3141/discord-fake-avatar-decorations",
+											);
 										}}
 									>
-										<svg height="1em" fill="none" viewBox="2 2 22 21" xmlns="http://www.w3.org/2000/svg">
+										<svg
+											height="1em"
+											fill="none"
+											viewBox="2 2 22 21"
+											xmlns="http://www.w3.org/2000/svg"
+										>
 											<path
 												d="M10.788 3.103c.495-1.004 1.926-1.004 2.421 0l2.358 4.777 5.273.766c1.107.161 1.549 1.522.748 2.303l-3.816 3.72.901 5.25c.19 1.103-.968 1.944-1.959 1.424l-4.716-2.48-4.715 2.48c-.99.52-2.148-.32-1.96-1.424l.901-5.25-3.815-3.72c-.801-.78-.359-2.142.748-2.303L8.43 7.88l2.358-4.777Z"
 												fill="#ffffff"
@@ -569,13 +678,19 @@ export default function Home() {
 						</div>
 						<p className="mb-4 text-center text-gray-400 text-sm">
 							Website made by{" "}
-							<Link href={"https://github.com/ItsPi3141"} className="hover:text-gray-200 underline" target="_blank">
+							<Link
+								href={"https://github.com/ItsPi3141"}
+								className="hover:text-gray-200 underline"
+								target="_blank"
+							>
 								ItsPi3141
 							</Link>
 							<br />
 							This project is open-source! View{" "}
 							<Link
-								href={"https://github.com/ItsPi3141/discord-fake-avatar-decorations"}
+								href={
+									"https://github.com/ItsPi3141/discord-fake-avatar-decorations"
+								}
 								className="hover:text-gray-200 underline"
 								target="_blank"
 							>
@@ -583,11 +698,15 @@ export default function Home() {
 							</Link>{" "}
 							on GitHub.
 							<br />
-							This site is NOT affiliated with Discord Inc. in any way. All images and assets belong to Discord Inc.
+							This site is NOT affiliated with Discord Inc. in any way. All
+							images and assets belong to Discord Inc.
 							<br />
-							Discord Character avatars were created by Bred and Jace. View the collection on{" "}
+							Discord Character avatars were created by Bred and Jace. View the
+							collection on{" "}
 							<Link
-								href={"https://www.figma.com/community/file/1316822758717784787/ultimate-discord-library"}
+								href={
+									"https://www.figma.com/community/file/1316822758717784787/ultimate-discord-library"
+								}
 								className="hover:text-gray-200 underline"
 								target="_blank"
 							>
@@ -627,7 +746,12 @@ export default function Home() {
 									</div>
 								) : (
 									<div className="flex flex-col justify-center items-center gap-4 grow">
-										<img src={finishedAv} draggable={false} width={128} height={128} />
+										<img
+											src={finishedAv}
+											draggable={false}
+											width={128}
+											height={128}
+										/>
 										<div className="flex flex-col w-full">
 											<div className="flex flex-col items-center gap-2 mt-3 w-full">
 												<button
@@ -639,7 +763,12 @@ export default function Home() {
 														a.click();
 													}}
 												>
-													<svg height="1.1em" fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+													<svg
+														height="1.1em"
+														fill="none"
+														viewBox="0 0 24 24"
+														xmlns="http://www.w3.org/2000/svg"
+													>
 														<path
 															d="M5.25 20.5h13.498a.75.75 0 0 1 .101 1.493l-.101.007H5.25a.75.75 0 0 1-.102-1.494l.102-.006h13.498H5.25Zm6.633-18.498L12 1.995a1 1 0 0 1 .993.883l.007.117v12.59l3.294-3.293a1 1 0 0 1 1.32-.083l.094.084a1 1 0 0 1 .083 1.32l-.083.094-4.997 4.996a1 1 0 0 1-1.32.084l-.094-.083-5.004-4.997a1 1 0 0 1 1.32-1.498l.094.083L11 15.58V2.995a1 1 0 0 1 .883-.993L12 1.995l-.117.007Z"
 															fill="#ffffff"
@@ -656,7 +785,11 @@ export default function Home() {
 														}
 													}}
 												>
-													<svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 28 28">
+													<svg
+														xmlns="http://www.w3.org/2000/svg"
+														height="1em"
+														viewBox="0 0 28 28"
+													>
 														<path
 															fill="#ffffff"
 															d="M4.66663 0.666626C2.45749 0.666626 0.666626 2.45748 0.666626 4.66662V23.3333C0.666626 25.5424 2.45748 27.3333 4.66662 27.3333H23.3333C25.5424 27.3333 27.3333 25.5424 27.3333 23.3333V4.66663C27.3333 2.45749 25.5424 0.666626 23.3333 0.666626H4.66663ZM8.66663 5.99996C10.1376 5.99996 11.3333 7.19356 11.3333 8.66663C11.3333 10.1408 10.1376 11.3333 8.66663 11.3333C7.19249 11.3333 5.99996 10.1408 5.99996 8.66663C5.99996 7.19356 7.19249 5.99996 8.66663 5.99996ZM5.99996 22L9.99996 16.6666L12.6666 19.3333L18 12.6666L22 22H5.99996Z"
@@ -676,8 +809,12 @@ export default function Home() {
 					<FileUpload
 						onUpload={async (e) => {
 							const file = e.dataTransfer.files.item(0);
-							if (!["image/png", "image/jpeg", "image/gif"].includes(file.type)) {
-								printErr(`Expected image/png, image/jpeg, or image/gif. Got ${file.type}`);
+							if (
+								!["image/png", "image/jpeg", "image/gif"].includes(file.type)
+							) {
+								printErr(
+									`Expected image/png, image/jpeg, or image/gif. Got ${file.type}`,
+								);
 								throw printErr("Invalid file type");
 							}
 							const ab = await file.arrayBuffer();

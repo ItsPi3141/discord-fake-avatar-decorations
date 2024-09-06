@@ -61,6 +61,83 @@
 		]
 	},
 	{
+		"name": "The Vault",
+		"description": "Long-awaited treasures from times past have made their return…",
+		"darkText": false,
+		"banner": {
+			"image": "/banners/the_vault.png",
+			"text": "/bannertext/the_vault.png",
+			"height": 72
+		},
+		"items": [
+			{
+				"name": "Sakura",
+				"description": "A beautiful cherry blossom.",
+				"file": "/decorations/sakura.png"
+			},
+			{
+				"name": "Pink Sakura",
+				"description": "A promise of new beginnings.",
+				"file": "/decorations/sakura_pink.png"
+			},
+			{
+				"name": "Ukon Sakura",
+				"description": "A symbol of standing out with quiet elegance.",
+				"file": "/decorations/sakura_ukon.png"
+			},
+			{
+				"name": "Gyoiko Sakura",
+				"description": "A rare blossom only seen by a fortunate few.",
+				"file": "/decorations/sakura_gyoiko.png"
+			},
+			{
+				"name": "Angry Frog",
+				"description": "*ribbits angrily*",
+				"file": "/decorations/frog_angry.png"
+			},
+			{
+				"name": "Derpy Frog",
+				"description": "*ribbits derpily*",
+				"file": "/decorations/frog_derpy.png"
+			},
+			{
+				"name": "Fried Egg",
+				"description": "I like mine sunny side-up.",
+				"file": "/decorations/fried_egg.png"
+			},
+			{
+				"name": "Green Fried Egg",
+				"description": "Wish there was some ham to go with this.",
+				"file": "/decorations/green_fried_egg.png"
+			},
+			{
+				"name": "Morning Coffee",
+				"description": "Don't talk to me until I finish this.",
+				"file": "/decorations/morning_coffee.png"
+			},
+			{
+				"name": "Toast",
+				"description": "It is toast.",
+				"file": "/decorations/toast.png"
+			},
+			{
+				"name": "Burnt Toast",
+				"description": "Why did you burn the toast.",
+				"file": "/decorations/burnt_toast.png"
+			},
+			{
+				"name": "Stinkums",
+				"description": "Questionably dealt. Definitely smelt.",
+				"file": "/decorations/stinkums.png"
+			},
+			{
+				"name": "Goblin Stinkums",
+				"description": "Green goblin mode unlocks many abilities... some consider to be unnaturally stinky.",
+				"file": "/decorations/goblin_stinkums.png"
+			}
+		]
+	},
+	{
 		"name": "Dojo",
 		"description": "Where discipline meets destiny.",
 		"darkText": true,
@@ -1165,22 +1242,22 @@
 		"badge": "APRIL 2023",
 		"items": [
 			{
-				"name": "Sakura #1",
+				"name": "Sakura",
 				"description": "Close your eyes and breathe.",
-				"file": "/decorations/sakura_1.png"
+				"file": "/decorations/sakura.png"
 			},
 			{
-				"name": "Sakura #2",
+				"name": "Pink Sakura",
 				"description": "Close your eyes and breathe.",
-				"file": "/decorations/sakura_2.png"
+				"file": "/decorations/sakura_pink.png"
 			},
 			{
-				"name": "Sakura #3",
+				"name": "Ukon Sakura",
 				"description": "Close your eyes and breathe.",
-				"file": "/decorations/sakura_3.png"
+				"file": "/decorations/sakura_ukon.png"
 			},
 			{
-				"name": "Sakura #4",
+				"name": "Gyoiko Sakura",
 				"description": "Close your eyes and breathe.",
 				"file": "/decorations/sakura_gyoiko.png"
 			},
@@ -1217,7 +1294,7 @@
 			{
 				"name": "Frog #2",
 				"description": "*ribbit*",
-				"file": "/decorations/frog_2.png"
+				"file": "/decorations/frog_derpy.png"
 			},
 			{
 				"name": "Frog #3",
@@ -1227,7 +1304,7 @@
 			{
 				"name": "Frog #4",
 				"description": "*ribbit*",
-				"file": "/decorations/frog_4.png"
+				"file": "/decorations/frog_angry.png"
 			},
 			{
 				"name": "Lazy Cat #1",
