@@ -124,3 +124,35 @@ body::-webkit-scrollbar-thumb {
 		transform: rotate(-1turn);
 	}
 }
+
+/* SHINY BUTTON */
+@keyframes button-shine {
+	0% {
+		left: -50%;
+	}
+	100% {
+		left: 125%;
+	}
+}
+.shiny-button {
+	position: relative;
+	overflow: hidden;
+}
+.shiny-button::after {
+	content: "";
+	width: 10px;
+	height: 100px;
+	position: absolute;
+	top: 50%;
+	left: 0;
+	transform: rotate(30deg) translate3d(0, -50%, 0);
+	background-color: rgba(255, 255, 255, 0.2);
+	outline: 10px solid rgba(255, 255, 255, 0.1);
+	animation: button-shine 2.5s ease-in-out 750ms infinite;
+}
+
+/* HIGHLIGHT */
+.highlight {
+	border: #b945c1 solid 1px;
+	background: linear-gradient(90deg, #b473f52b 0%, #e292aa2b 100%);
+}

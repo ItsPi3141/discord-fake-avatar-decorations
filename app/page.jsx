@@ -624,13 +624,33 @@ const App = ({ ffmpegRef, isServer }) => {
 						</div>
 
 						{/* pls support */}
-						<div className="flex flex-col justify-start items-stretch w-full text-center">
+						<div className="flex flex-col justify-start items-stretch p-4 rounded-lg w-full text-center highlight">
 							<p>
 								Help support the project <Twemoji emoji="🙏" />
 							</p>
 							<button
 								type="button"
-								className="flex justify-center items-center gap-1 bg-secondary hover:bg-secondaryAlt mt-3 py-1.5 rounded-[3px] transition"
+								className="flex justify-center items-center gap-1 bg-white/10 hover:bg-white/20 mt-3 py-1.5 rounded-[3px] transition shiny-button"
+								onClick={() => {
+									window.open(
+										"https://github.com/ItsPi3141/discord-fake-avatar-decorations",
+									);
+								}}
+							>
+								<svg
+									aria-hidden="true"
+									height="1em"
+									viewBox="2 2 22 21"
+									xmlns="http://www.w3.org/2000/svg"
+									fill="#ffffff"
+								>
+									<path d="M10.788 3.103c.495-1.004 1.926-1.004 2.421 0l2.358 4.777 5.273.766c1.107.161 1.549 1.522.748 2.303l-3.816 3.72.901 5.25c.19 1.103-.968 1.944-1.959 1.424l-4.716-2.48-4.715 2.48c-.99.52-2.148-.32-1.96-1.424l.901-5.25-3.815-3.72c-.801-.78-.359-2.142.748-2.303L8.43 7.88l2.358-4.777Z" />
+								</svg>
+								Star on GitHub
+							</button>
+							<button
+								type="button"
+								className="flex justify-center items-center gap-1 bg-white/10 hover:bg-white/20 mt-3 py-1.5 rounded-[3px] transition"
 								onClick={() => {
 									navigator.clipboard.writeText(window.location.href);
 									setShared(true);
@@ -653,7 +673,7 @@ const App = ({ ffmpegRef, isServer }) => {
 										fill="#ffffff"
 									/>
 								</svg>
-								Share the website w/ your friends
+								Share the website
 							</button>
 							<Tooltip
 								id="share-tooltip"
@@ -672,26 +692,24 @@ const App = ({ ffmpegRef, isServer }) => {
 							/>
 							<button
 								type="button"
-								className="flex justify-center items-center gap-1 bg-secondary hover:bg-secondaryAlt mt-3 py-1.5 rounded-[3px] transition"
+								className="flex justify-center items-center gap-1 bg-white/10 hover:bg-white/20 mt-3 py-1.5 rounded-[3px] transition"
 								onClick={() => {
 									window.open(
-										"https://github.com/ItsPi3141/discord-fake-avatar-decorations",
+										"https://github.com/ItsPi3141/discord-fake-avatar-decorations/issues/new",
 									);
 								}}
 							>
 								<svg
 									aria-hidden="true"
 									height="1em"
-									fill="none"
-									viewBox="2 2 22 21"
+									viewBox="0 0 16 16"
 									xmlns="http://www.w3.org/2000/svg"
+									fill="#ffffff"
 								>
-									<path
-										d="M10.788 3.103c.495-1.004 1.926-1.004 2.421 0l2.358 4.777 5.273.766c1.107.161 1.549 1.522.748 2.303l-3.816 3.72.901 5.25c.19 1.103-.968 1.944-1.959 1.424l-4.716-2.48-4.715 2.48c-.99.52-2.148-.32-1.96-1.424l.901-5.25-3.815-3.72c-.801-.78-.359-2.142.748-2.303L8.43 7.88l2.358-4.777Z"
-										fill="#ffffff"
-									/>
+									<path d="M4.978.855a.5.5 0 1 0-.956.29l.41 1.352A5 5 0 0 0 3 6h10a5 5 0 0 0-1.432-3.503l.41-1.352a.5.5 0 1 0-.956-.29l-.291.956A5 5 0 0 0 8 1a5 5 0 0 0-2.731.811l-.29-.956z" />
+									<path d="M13 6v1H8.5v8.975A5 5 0 0 0 13 11h.5a.5.5 0 0 1 .5.5v.5a.5.5 0 1 0 1 0v-.5a1.5 1.5 0 0 0-1.5-1.5H13V9h1.5a.5.5 0 0 0 0-1H13V7h.5A1.5 1.5 0 0 0 15 5.5V5a.5.5 0 0 0-1 0v.5a.5.5 0 0 1-.5.5zm-5.5 9.975V7H3V6h-.5a.5.5 0 0 1-.5-.5V5a.5.5 0 0 0-1 0v.5A1.5 1.5 0 0 0 2.5 7H3v1H1.5a.5.5 0 0 0 0 1H3v1h-.5A1.5 1.5 0 0 0 1 11.5v.5a.5.5 0 1 0 1 0v-.5a.5.5 0 0 1 .5-.5H3a5 5 0 0 0 4.5 4.975" />
 								</svg>
-								Star the project on GitHub
+								Report a bug
 							</button>
 						</div>
 					</div>
