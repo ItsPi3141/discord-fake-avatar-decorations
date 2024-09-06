@@ -592,11 +592,13 @@ const App = ({ ffmpegRef, isServer }) => {
 												)}
 											</>
 										)}
-										<div className="flex flex-col">
+										<div className="flex flex-col overflow-hidden">
 											{m.groupStart && (
-												<p className="h-fit font-medium text-base">
-													<span className="mr-1">{name || "Display Name"}</span>
-													<span className="ml-1 h-4 text-secondaryLight text-xs">
+												<p className="flex items-center max-w-[250px] h-fit font-medium text-base">
+													<span className="mr-1 text-ellipsis text-nowrap overflow-hidden">
+														{name || "Display Name"}
+													</span>
+													<span className="ml-1 h-4 text-nowrap text-secondaryLight text-xs">
 														Today at{" "}
 														{[
 															new Date().getHours() % 12,
