@@ -211,6 +211,31 @@
 				"name": "Cypher Neural Theft",
 				"description": "Nothing stays hidden from me.",
 				"file": "/decorations/cypher_neural_theft.png"
+			},
+			{
+				"name": "A Hint of Clove",
+				"description": "Back again from the great beyond.",
+				"file": "/decorations/a_hint_of_clove.png"
+			},
+			{
+				"name": "Omen's Cowl",
+				"description": "Embrace the shadows.",
+				"file": "/decorations/omens_cowl.png"
+			},
+			{
+				"name": "Reyna's Leer",
+				"description": "The last thing they'll ever see. Lucky them.",
+				"file": "/decorations/reynas_leer.png"
+			},
+			{
+				"name": "FRAG OUT",
+				"description": "Five down. None to go.",
+				"file": "/decorations/frag_out.png"
+			},
+			{
+				"name": "Blade Storm",
+				"description": "Watch this.",
+				"file": "/decorations/blade_storm.png"
 			}
 		]
 	},
@@ -710,6 +735,41 @@
 				"name": "In Tears",
 				"description": "*sobbing*",
 				"file": "/decorations/in_tears.png"
+			},
+			{
+				"name": "Radiating Energy",
+				"description": "Over EIGHT-THOUSAND-NINE-HUNDRED-NINETY-NINE!",
+				"file": "/decorations/radiating_energy.png"
+			},
+			{
+				"name": "Soul Leaving Body",
+				"description": "Can I just disappear right now?",
+				"file": "/decorations/soul_leaving_body.png"
+			},
+			{
+				"name": "Sweat Drops",
+				"description": "*laughs nervously*",
+				"file": "/decorations/sweat_drops.png"
+			},
+			{
+				"name": "Starry Eyed",
+				"description": "Feelin' sparkly",
+				"file": "/decorations/starry_eyed.png"
+			},
+			{
+				"name": "In Love",
+				"description": "uwu",
+				"file": "/decorations/in_love.png"
+			},
+			{
+				"name": "Shocked",
+				"description": "Nani?!!",
+				"file": "/decorations/shocked.png"
+			},
+			{
+				"name": "Angry",
+				"description": "How dare you",
+				"file": "/decorations/angry.png"
 			}
 		]
 	},
