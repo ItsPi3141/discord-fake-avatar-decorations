@@ -62,6 +62,11 @@
 				"name": "Hailey",
 				"description": "Worn by the legendary sniper in The First Descendant. Available until to use November 6, 2024.",
 				"file": "/decorations/hailey.png"
+			},
+			{
+				"name": "Bunny",
+				"description": "Worn by Albion's speedster, Bunny, in The First Descendant. Available until to use November 12, 2024.",
+				"file": "/decorations/bunny.png"
 			}
 		]
 	},
