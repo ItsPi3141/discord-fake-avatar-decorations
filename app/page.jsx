@@ -628,7 +628,7 @@ const App = ({ ffmpegRef, isServer }) => {
 						{/* pls support */}
 						<div className="flex flex-col justify-start items-stretch p-4 rounded-lg w-full text-center highlight">
 							<p>
-								External Links <Twemoji emoji="🙏" />
+								External Links <Twemoji emoji="⚙️" />
 							</p>
 							<button
 								type="button"
@@ -692,10 +692,36 @@ const App = ({ ffmpegRef, isServer }) => {
 								closeEvents={[]}
 								place="bottom"
 							/>
+							<button
+								type="button"
+								className="flex justify-center items-center gap-1 bg-white/10 hover:bg-white/20 mt-3 py-1.5 rounded-[3px] transition"
+								onClick={() => {
+									window.open(
+										"https://discord.gg/buildbots",
+									);
+								}}
+							>
+								<svg
+									aria-hidden="true"
+									height="1em"
+									viewBox="0 0 16 16"
+									xmlns="http://www.w3.org/2000/svg"
+									fill="#ffffff"
+								>
+									<path d="M4.978.855a.5.5 0 1 0-.956.29l.41 1.352A5 5 0 0 0 3 6h10a5 5 0 0 0-1.432-3.503l.41-1.352a.5.5 0 1 0-.956-.29l-.291.956A5 5 0 0 0 8 1a5 5 0 0 0-2.731.811l-.29-.956z" />
+									<path d="M13 6v1H8.5v8.975A5 5 0 0 0 13 11h.5a.5.5 0 0 1 .5.5v.5a.5.5 0 1 0 1 0v-.5a1.5 1.5 0 0 0-1.5-1.5H13V9h1.5a.5.5 0 0 0 0-1H13V7h.5A1.5 1.5 0 0 0 15 5.5V5a.5.5 0 0 0-1 0v.5a.5.5 0 0 1-.5.5zm-5.5 9.975V7H3V6h-.5a.5.5 0 0 1-.5-.5V5a.5.5 0 0 0-1 0v.5A1.5 1.5 0 0 0 2.5 7H3v1H1.5a.5.5 0 0 0 0 1H3v1h-.5A1.5 1.5 0 0 0 1 11.5v.5a.5.5 0 1 0 1 0v-.5a.5.5 0 0 1 .5-.5H3a5 5 0 0 0 4.5 4.975" />
+								</svg>
+								Report a bug
+							</button>
 						</div>
 					</div>
-				</div>			
-				<Modal
+				</div>
+					<br />
+					This site is NOT affiliated with Discord Inc. in any way. All images
+					and assets belong to Discord Inc.
+					<br />
+			</main>
+			<Modal
 				title={"Save Decorated Avatar"}
 				subtitle={
 					isGeneratingAv
