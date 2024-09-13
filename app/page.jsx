@@ -715,46 +715,8 @@ const App = ({ ffmpegRef, isServer }) => {
 							</button>
 						</div>
 					</div>
-				</div>
-				<p className="mb-4 text-center text-gray-400 text-sm">
-					Website made by{" "}
-					<Link
-						href={"https://github.com/ItsPi3141"}
-						className="hover:text-gray-200 underline"
-						target="_blank"
-					>
-						ItsPi3141
-					</Link>
-					<br />
-					This project is open-source! View{" "}
-					<Link
-						href={
-							"https://github.com/ItsPi3141/discord-fake-avatar-decorations"
-						}
-						className="hover:text-gray-200 underline"
-						target="_blank"
-					>
-						source code
-					</Link>{" "}
-					on GitHub.
-					<br />
-					This site is NOT affiliated with Discord Inc. in any way. All images
-					and assets belong to Discord Inc.
-					<br />
-					Discord Character avatars were created by Bred and Jace. View the
-					collection on{" "}
-					<Link
-						href={
-							"https://www.figma.com/community/file/1316822758717784787/ultimate-discord-library"
-						}
-						className="hover:text-gray-200 underline"
-						target="_blank"
-					>
-						Figma
-					</Link>
-				</p>
-			</main>
-			<Modal
+				</div>			
+				<Modal
 				title={"Save Decorated Avatar"}
 				subtitle={
 					isGeneratingAv
