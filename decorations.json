@@ -67,6 +67,11 @@
 				"name": "Bunny",
 				"description": "Worn by Albion's speedster, Bunny, in The First Descendant. Available until to use November 12, 2024.",
 				"file": "/decorations/bunny.png"
+			},
+			{
+				"name": "Torgal Puppy",
+				"description": "Torgal the puppy is here to keep you company! Available until to use November 23, 2024.",
+				"file": "/decorations/torgal_puppy.png"
 			}
 		]
 	},
