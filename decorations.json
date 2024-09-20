@@ -67,6 +67,94 @@
 				"name": "Bunny",
 				"description": "Worn by Albion's speedster, Bunny, in The First Descendant. Available until to use November 12, 2024.",
 				"file": "/decorations/bunny.png"
+			},
+			{
+				"name": "Torgal Puppy",
+				"description": "Torgal the puppy is here to keep you company! Available until to use November 23, 2024.",
+				"file": "/decorations/torgal_puppy.png"
+			}
+		]
+	},
+	{
+		"name": "Autumn Equinox",
+		"description": "Beauty in balance.",
+		"banner": {
+			"image": "/banners/autumn_equinox.png",
+			"text": "/bannertext/autumn_equinox.png",
+			"height": 42
+		},
+		"badge": "FALL 2024",
+		"items": [
+			{
+				"name": "Twilight Chrysanthemums",
+				"description": "Transformation is a dance where your inner beauty finds its rhythm.",
+				"file": "/decorations/twilight_chrysanthemums.png"
+			},
+			{
+				"name": "Dusk and Dawn",
+				"description": "Illuminate yourself with the light of the moon and sun.",
+				"file": "/decorations/dusk_and_dawn.png"
+			},
+			{
+				"name": "Floral Harmony",
+				"description": "A touch of day and night woven into every petal.",
+				"file": "/decorations/floral_harmony.png"
+			},
+			{
+				"name": "Autumn's Arbor",
+				"description": "Where day and night share equal ground.",
+				"file": "/decorations/autumns_arbor.png"
+			},
+			{
+				"name": "Autumn Crown",
+				"description": "A crown of nature's finest, with autumn's special touch.",
+				"file": "/decorations/autumn_crown.png"
+			},
+			{
+				"name": "Faces of the Moon",
+				"description": "The moon tells its tale in shadows and light... listen....",
+				"file": "/decorations/faces_of_the_moon.png"
+			}
+		]
+	},
+	{
+		"name": "Fall 2",
+		"description": "There's a calm and cozy vibe in the air.",
+		"banner": {
+			"image": "/banners/fall2.png",
+			"text": "/bannertext/fall2.png"
+		},
+		"badge": "FALL 2024",
+		"items": [
+			{
+				"name": "Fox Hat",
+				"description": "Charming, cozy, and a little bit nosy.",
+				"file": "/decorations/fox_hat.png"
+			},
+			{
+				"name": "Chestnut Fox Hat",
+				"description": "Charming, cozy, and a little bit nosy.",
+				"file": "/decorations/fox_hat_chestnut.png"
+			},
+			{
+				"name": "Snow Fox Hat",
+				"description": "Charming, cozy, and a little bit nosy.",
+				"file": "/decorations/fox_hat_snow.png"
+			},
+			{
+				"name": "Fall Leaves",
+				"description": "Behold nature's dance.",
+				"file": "/decorations/fall_leaves.png"
+			},
+			{
+				"name": "Scarlet Leaves",
+				"description": "Behold nature's dance.",
+				"file": "/decorations/fall_leaves_scarlet.png"
+			},
+			{
+				"name": "Woodland Leaves",
+				"description": "Behold nature's dance.",
+				"file": "/decorations/fall_leaves_woodland.png"
 			}
 		]
 	},
