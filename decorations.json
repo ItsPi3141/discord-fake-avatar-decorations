@@ -88,7 +88,12 @@
 			{
 				"name": "Twilight Chrysanthemums",
 				"description": "Transformation is a dance where your inner beauty finds its rhythm.",
-				"file": "/decorations/twilight_chrysanthemums.png"
+				"file": "/decorations/chrysanthemums_twilight.png"
+			},
+			{
+				"name": "Morning Chrysanthemums",
+				"description": "Transformation is a dance where your inner beauty finds its rhythm.",
+				"file": "/decorations/chrysanthemums_morning.png"
 			},
 			{
 				"name": "Dusk and Dawn",
@@ -101,9 +106,19 @@
 				"file": "/decorations/floral_harmony.png"
 			},
 			{
+				"name": "Floral Harmony (Sunburst)",
+				"description": "A touch of day and night woven into every petal.",
+				"file": "/decorations/floral_harmony_sunburst.png"
+			},
+			{
 				"name": "Autumn's Arbor",
 				"description": "Where day and night share equal ground.",
 				"file": "/decorations/autumns_arbor.png"
+			},
+			{
+				"name": "Autumn's Arbor (Aurora)",
+				"description": "Where day and night share equal ground.",
+				"file": "/decorations/autumns_arbor_aurora.png"
 			},
 			{
 				"name": "Autumn Crown",
