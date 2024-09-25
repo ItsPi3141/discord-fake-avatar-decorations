@@ -1,5 +1,9 @@
 [
 	{
+		"name": "Street Fighter",
+		"file": "/avatars/street_fighter.png"
+	},
+	{
 		"name": "Dojo",
 		"file": "/avatars/dojo.png"
 	},

@@ -76,6 +76,69 @@
 		]
 	},
 	{
+		"name": "Street Fighter",
+		"description": "Hit the streets with Street Fighter.",
+		"banner": {
+			"image": [
+				{
+					"url": "/banners/street_fighter.png",
+					"align": "center",
+					"height": "100%",
+					"width": "100%"
+				},
+				{
+					"url": "/banners/street_fighter1.png",
+					"align": "center",
+					"height": "100%"
+				}
+			],
+			"text": "/bannertext/street_fighter.png",
+			"height": 50
+		},
+		"items": [
+			{
+				"name": "Ryu",
+				"description": "Ever training, Ryu seeks true strength… just keep spiders away from him.",
+				"file": "/decorations/ryu.png"
+			},
+			{
+				"name": "Chun-Li",
+				"description": "A former high-kicking ICPO agent Chun-Li. Never skips leg day.",
+				"file": "/decorations/chun_li.png"
+			},
+			{
+				"name": "Ken",
+				"description": "Former US National Fighting Champ. Keeps his hair salon quality.",
+				"file": "/decorations/ken.png"
+			},
+			{
+				"name": "Akuma",
+				"description": "A demon of combat (the raging kind!) that has welcomed the Satsui no Hado into his being.",
+				"file": "/decorations/akuma.png"
+			},
+			{
+				"name": "Cammy",
+				"description": "Member of British special forces unit Delta Red. Hates everything. Likes cats.",
+				"file": "/decorations/cammy.png"
+			},
+			{
+				"name": "Guile",
+				"description": "A US Air Force pilot fantastic at comeback wins when listening to his own theme.",
+				"file": "/decorations/guile.png"
+			},
+			{
+				"name": "Juri",
+				"description": "A sadistic thrill seeker. Never misses a manicure.",
+				"file": "/decorations/juri.png"
+			},
+			{
+				"name": "M. Bison",
+				"description": "The leader of Shadaloo, who was believed to be dead. Very fond of power... the Psycho kind.",
+				"file": "/decorations/m_bison.png"
+			}
+		]
+	},
+	{
 		"name": "Autumn Equinox",
 		"description": "Beauty in balance.",
 		"banner": {
