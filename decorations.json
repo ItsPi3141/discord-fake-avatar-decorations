@@ -76,6 +76,23 @@
 		]
 	},
 	{
+		"name": "Marvel",
+		"description": "Marvel Studios",
+		"banner": {
+			"image": "/banners/babXmarvel.png",
+			"text": " ",
+			"height": 42
+		},
+		"badge": "MARVEL 2024",
+		"items": [
+			{
+				"name": "Twilight Chrysanthemums",
+				"description": "Transformation is a dance where your inner beauty finds its rhythm.",
+				"file": "/decorations/twilight_chrysanthemums.png"
+			}
+		]
+	},
+	{
 		"name": "Autumn Equinox",
 		"description": "Beauty in balance.",
 		"banner": {
