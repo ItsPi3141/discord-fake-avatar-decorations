@@ -77,7 +77,7 @@
 	},
 	{
 		"name": " ",
-		"description": "Marvel Studios",
+		"description": " ",
 		"banner": {
 			"image": "/banners/babXmarvel.png",
 			"text": " ",
@@ -94,7 +94,7 @@
 	},
 	{
 		"name": " ",
-		"description": "DC Universe",
+		"description": " ",
 		"banner": {
 			"image": "/banners/babXdc.png",
 			"text": " ",
@@ -111,7 +111,7 @@
 	},
 	{
 		"name": " ",
-		"description": "Sony Entertainment",
+		"description": " ",
 		"banner": {
 			"image": "/banners/babXsony.png",
 			"text": " ",
@@ -128,7 +128,7 @@
 	},
 	{
 		"name": " ",
-		"description": "Amazon Studios",
+		"description": " ",
 		"banner": {
 			"image": "/banners/babXamazon.png",
 			"text": " ",
