@@ -77,71 +77,43 @@
 	},
 	{
 		"name": " ",
-		"description": " ",
+		"description": "Coming soon...",
 		"banner": {
 			"image": "/banners/babXmarvel.png",
 			"text": " ",
 			"height": 42
 		},
 		"badge": "MARVEL 2024",
-		"items": [
-			{
-				"name": "Twilight Chrysanthemums",
-				"description": "Transformation is a dance where your inner beauty finds its rhythm.",
-				"file": "/decorations/twilight_chrysanthemums.png"
-			}
-		]
 	},
 	{
 		"name": " ",
-		"description": " ",
+		"description": "Coming soon...",
 		"banner": {
 			"image": "/banners/babXdc.png",
 			"text": " ",
 			"height": 42
 		},
 		"badge": "DC 2024",
-		"items": [
-			{
-				"name": "Twilight Chrysanthemums",
-				"description": "Transformation is a dance where your inner beauty finds its rhythm.",
-				"file": "/decorations/twilight_chrysanthemums.png"
-			}
-		]
 	},
 	{
 		"name": " ",
-		"description": " ",
+		"description": "Coming soon...",
 		"banner": {
 			"image": "/banners/babXsony.png",
 			"text": " ",
 			"height": 42
 		},
 		"badge": "SONY 2024",
-		"items": [
-			{
-				"name": "Twilight Chrysanthemums",
-				"description": "Transformation is a dance where your inner beauty finds its rhythm.",
-				"file": "/decorations/twilight_chrysanthemums.png"
-			}
-		]
 	},
 	{
 		"name": " ",
-		"description": " ",
+		"description": "Coming soon...",
 		"banner": {
 			"image": "/banners/babXamazon.png",
 			"text": " ",
 			"height": 42
 		},
 		"badge": "THE BOYS 2024",
-		"items": [
-			{
-				"name": "Twilight Chrysanthemums",
-				"description": "Transformation is a dance where your inner beauty finds its rhythm.",
-				"file": "/decorations/twilight_chrysanthemums.png"
-			}
-		]
 	},
 	{
 		"name": "Autumn Equinox",
