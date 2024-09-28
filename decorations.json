@@ -76,7 +76,7 @@
 		]
 	},
 	{
-		"name": "Marvel",
+		"name": " ",
 		"description": "Marvel Studios",
 		"banner": {
 			"image": "/banners/babXmarvel.png",
@@ -84,6 +84,57 @@
 			"height": 42
 		},
 		"badge": "MARVEL 2024",
+		"items": [
+			{
+				"name": "Twilight Chrysanthemums",
+				"description": "Transformation is a dance where your inner beauty finds its rhythm.",
+				"file": "/decorations/twilight_chrysanthemums.png"
+			}
+		]
+	},
+	{
+		"name": " ",
+		"description": "DC Universe",
+		"banner": {
+			"image": "/banners/babXdc.png",
+			"text": " ",
+			"height": 42
+		},
+		"badge": "DC 2024",
+		"items": [
+			{
+				"name": "Twilight Chrysanthemums",
+				"description": "Transformation is a dance where your inner beauty finds its rhythm.",
+				"file": "/decorations/twilight_chrysanthemums.png"
+			}
+		]
+	},
+	{
+		"name": " ",
+		"description": "Sony Entertainment",
+		"banner": {
+			"image": "/banners/babXsony.png",
+			"text": " ",
+			"height": 42
+		},
+		"badge": "SONY 2024",
+		"items": [
+			{
+				"name": "Twilight Chrysanthemums",
+				"description": "Transformation is a dance where your inner beauty finds its rhythm.",
+				"file": "/decorations/twilight_chrysanthemums.png"
+			}
+		]
+	},
+	{
+		"name": " ",
+		"description": "Amazon Studios",
+		"banner": {
+			"image": "/banners/babXamazon.png",
+			"text": " ",
+			"height": 42
+		},
+		"badge": "THE BOYS 2024",
 		"items": [
 			{
 				"name": "Twilight Chrysanthemums",
