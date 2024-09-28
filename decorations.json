@@ -84,6 +84,12 @@
 			"height": 42
 		},
 		"badge": "MARVEL 2024",
+		"items": [
+			{
+				"name": "Twilight Chrysanthemums",
+				"description": "Transformation is a dance where your inner beauty finds its rhythm.",
+				"file": "/decorations/twilight_chrysanthemums.png"
+			}
 	},
 	{
 		"name": " ",
@@ -94,6 +100,12 @@
 			"height": 42
 		},
 		"badge": "DC 2024",
+		"items": [
+			{
+				"name": "Twilight Chrysanthemums",
+				"description": "Transformation is a dance where your inner beauty finds its rhythm.",
+				"file": "/decorations/twilight_chrysanthemums.png"
+			}
 	},
 	{
 		"name": " ",
@@ -104,6 +116,12 @@
 			"height": 42
 		},
 		"badge": "SONY 2024",
+		"items": [
+			{
+				"name": "Twilight Chrysanthemums",
+				"description": "Transformation is a dance where your inner beauty finds its rhythm.",
+				"file": "/decorations/twilight_chrysanthemums.png"
+			}
 	},
 	{
 		"name": " ",
@@ -114,6 +132,12 @@
 			"height": 42
 		},
 		"badge": "THE BOYS 2024",
+		"items": [
+			{
+				"name": "Twilight Chrysanthemums",
+				"description": "Transformation is a dance where your inner beauty finds its rhythm.",
+				"file": "/decorations/twilight_chrysanthemums.png"
+			}
 	},
 	{
 		"name": "Autumn Equinox",
