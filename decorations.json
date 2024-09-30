@@ -1,7 +1,7 @@
 [
 	{
 		"name": "Discord",
-		"description": "Miscellaneous decorations.",
+		"description": "Miscellaneous decorations and quest rewards.",
 		"banner": {
 			"image": [
 				{
@@ -70,8 +70,18 @@
 			},
 			{
 				"name": "Torgal Puppy",
-				"description": "Torgal the puppy is here to keep you company! Available until to use November 23, 2024.",
+				"description": "Torgal the puppy is here to keep you company! This reward is exclusive to the FFXVI Quest. Available until to use November 23, 2024.",
 				"file": "/decorations/torgal_puppy.png"
+			},
+			{
+				"name": "Street Fighter 6 Battle Field",
+				"description": "Avatar Decoration for the Award winning Street Fighter 6. Exclusive to Street Fighter 6 Quest for a limited time. Available until to use November 29, 2024.",
+				"file": "/decorations/street_fighter_6_battle_field.png"
+			},
+			{
+				"name": "Wolf Morph",
+				"description": "Your Morph can take on many unique forms and help you move throughout the world in THRONE AND LIBERTY. Available until to use November 30, 2024.",
+				"file": "/decorations/wolf_morph.png"
 			}
 		]
 	},
