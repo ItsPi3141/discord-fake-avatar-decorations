@@ -86,6 +86,88 @@
 		]
 	},
 	{
+		"name": "Spooky Night",
+		"description": "Beware what lurks in the dark...",
+		"descriptionTopMargin": "-12px",
+		"banner": {
+			"image": "/banners/spooky_night.png",
+			"text": "/bannertext/spooky_night.png",
+			"height": 75
+		},
+		"items": [
+			{
+				"name": "Spooky Cat Ears",
+				"description": "≽ ^ ʘ⩊ʘ ^ ≼",
+				"file": "/decorations/spooky_cat_ears.png"
+			},
+			{
+				"name": "Spooky Cat Ears (Midnight)",
+				"description": "≽ ^ ʘ⩊ʘ ^ ≼",
+				"file": "/decorations/spooky_cat_ears_midnight.png"
+			},
+			{
+				"name": "Candlelight",
+				"description": "Now you can see in the dark. But so can they...",
+				"file": "/decorations/candlelight.png"
+			},
+			{
+				"name": "Crimson Candlelight",
+				"description": "Now you can see in the dark. But so can they...",
+				"file": "/decorations/candlelight_crimson.png"
+			},
+			{
+				"name": "Dark Candlelight",
+				"description": "Now you can see in the dark. But so can they...",
+				"file": "/decorations/candlelight_dark.png"
+			},
+			{
+				"name": "Dark Hood",
+				"description": "You definitely don't look suspicious at all.",
+				"file": "/decorations/hood_dark.png"
+			},
+			{
+				"name": "Crimson Hood",
+				"description": "You definitely don't look suspicious at all.",
+				"file": "/decorations/hood_crimson.png"
+			},
+			{
+				"name": "Plum Witch Hat",
+				"description": "Mischief looks good on you.",
+				"file": "/decorations/witch_hat_plum.png"
+			},
+			{
+				"name": "Midnight Witch Hat",
+				"description": "Mischief looks good on you.",
+				"file": "/decorations/witch_hat_midnight.png"
+			},
+			{
+				"name": "Zombie Food",
+				"description": "Looks like you weren't fast enough. Unlucky.",
+				"file": "/decorations/zombie_food.png"
+			},
+			{
+				"name": "Zombie Food (Purple)",
+				"description": "Looks like you weren't fast enough. Unlucky.",
+				"file": "/decorations/zombie_food_purple.png"
+			},
+			{
+				"name": "Bloodthirsty",
+				"description": "Just a bite...",
+				"file": "/decorations/bloodthirsty.png"
+			},
+			{
+				"name": "Bloodthirsty (Green)",
+				"description": "Just a bite...",
+				"file": "/decorations/bloodthirsty_green.png"
+			},
+			{
+				"name": "Bloodthirsty (Gold)",
+				"description": "Just a bite...",
+				"file": "/decorations/bloodthirsty_gold.png"
+			}
+		]
+	},
+	{
 		"name": "Street Fighter",
 		"description": "Hit the streets with Street Fighter.",
 		"banner": {
