@@ -92,7 +92,7 @@
 		"banner": {
 			"image": "/banners/spooky_night.png",
 			"text": "/bannertext/spooky_night.png",
-			"height": 75
+			"height": 70
 		},
 		"items": [
 			{
