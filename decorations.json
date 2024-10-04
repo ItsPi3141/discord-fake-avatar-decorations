@@ -94,6 +94,7 @@
 			"text": "/bannertext/spooky_night.png",
 			"height": 70
 		},
+		"badge": "FALL 2024",
 		"items": [
 			{
 				"name": "Spooky Cat Ears",
@@ -233,6 +234,7 @@
 	{
 		"name": "Autumn Equinox",
 		"description": "Beauty in balance.",
+		"descriptionTopMargin": "-4px",
 		"banner": {
 			"image": "/banners/autumn_equinox.png",
 			"text": "/bannertext/autumn_equinox.png",
