@@ -463,6 +463,11 @@
 		},
 		"items": [
 			{
+				"name": "VALORANT Champions 2024",
+				"description": "All paths end here.",
+				"file": "/decorations/valorant_champions_2024.png"
+			},
+			{
 				"name": "Yoru Dimensional Drift",
 				"description": "Looking for me?",
 				"file": "/decorations/yoru_dimensional_drift.png"
