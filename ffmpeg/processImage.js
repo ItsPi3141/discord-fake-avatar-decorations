@@ -30,8 +30,8 @@ export function cropToSquare(
 				const filter_complex = [
 					// Crop
 					"[0]format=argb,",
-					"scale='max(iw*238/ih,238):max(238,ih*238/iw)',",
-					"crop=238:238,",
+					"scale='max(iw*240/ih,240):max(240,ih*240/iw)',",
+					"crop=240:240,",
 
 					// Split into two images so the palette can be generated in one single command
 					"split[s0][s1];",
@@ -89,8 +89,8 @@ export function addDecoration(
 						// Start out with a transparent background
 						"color=s=288x288:d=100,format=argb,colorchannelmixer=aa=0.0[background];",
 
-						// Resize avatar to be 236x236
-						"[0]scale=236:236 [avatar],",
+						// Resize avatar to be 240x240
+						"[0]scale=240:240 [avatar],",
 
 						// Round the corners of the avatar image
 						"[avatar]format=argb,geq=lum='p(X,Y)':a='st(1,pow(min(W/2,H/2),2))+st(3,pow(X-(W/2),2)+pow(Y-(H/2),2));if(lte(ld(3),ld(1)),alpha(X,Y),0)'[rounded avatar];",
@@ -190,8 +190,8 @@ export function addDecoration(
 						// Start out with a transparent background
 						"color=s=288x288:d=100,format=argb,colorchannelmixer=aa=0.0[background];",
 
-						// Resize avatar to be 236x236
-						"[0]scale=236:236 [avatar],",
+						// Resize avatar to be 240x240
+						"[0]scale=240:240 [avatar],",
 
 						// Resize decoration to be 288x288
 						"[1]scale=288:288 [deco],",
