@@ -86,6 +86,63 @@
 		]
 	},
 	{
+		"name": "Dungeons & Dragons",
+		"description": "The ultimate adventurer's pack.",
+		"banner": {
+			"image": [
+				{
+					"url": "/banners/dungeons_and_dragons.png",
+					"align": "center",
+					"height": "100%",
+					"width": "100%"
+				},
+				{
+					"url": "/banners/dungeons_and_dragons1.png",
+					"align": "center"
+				}
+			],
+			"text": "/bannertext/dungeons_and_dragons.png",
+			"height": 64
+		},
+		"items": [
+			{
+				"name": "Violet Dice",
+				"description": "Let’s roll!",
+				"file": "/decorations/dice_violet.png"
+			},
+			{
+				"name": "Azure Dice",
+				"description": "Let’s roll!",
+				"file": "/decorations/dice_azure.png"
+			},
+			{
+				"name": "Green Gelatinous Cube",
+				"description": "It’s not edible, but YOU are.",
+				"file": "/decorations/gelatinous_cube_green.png"
+			},
+			{
+				"name": "Blue Gelatinous Cube",
+				"description": "It’s not edible, but YOU are.",
+				"file": "/decorations/gelatinous_cube_blue.png"
+			},
+			{
+				"name": "Owlbear Cub",
+				"description": "Your very own feathery friend!",
+				"file": "/decorations/owlbear_cub.png"
+			},
+			{
+				"name": "Snowy Owlbear Cub",
+				"description": "Your very own feathery friend!",
+				"file": "/decorations/owlbear_cub_snowy.png"
+			},
+			{
+				"name": "Baby Displacer Beast",
+				"description": "Here, kitty, kitty…",
+				"file": "/decorations/baby_displacer_beast.png"
+			}
+		]
+	},
+	{
 		"name": "Spooky Night",
 		"description": "Beware what lurks in the dark...",
 		"descriptionTopMargin": "-12px",
