@@ -86,6 +86,48 @@
 		]
 	},
 	{
+		"name": "Mythical Creatures",
+		"description": "Wonders lost to time, found again.",
+		"descriptionTopMargin": "-8px",
+		"banner": {
+			"image": "/banners/mythical_creatures.png",
+			"text": "/bannertext/mythical_creatures.png",
+			"height": 84
+		},
+		"items": [
+			{
+				"name": "Kitsune",
+				"description": "Legends say playful chaos is their specialty.",
+				"file": "/decorations/kitsune.png"
+			},
+			{
+				"name": "Unicorn",
+				"description": "Unicorns love two things: magic and your vibe.",
+				"file": "/decorations/unicorn.png"
+			},
+			{
+				"name": "Phoenix",
+				"description": "The symbol of running it back.",
+				"file": "/decorations/phoenix.png"
+			},
+			{
+				"name": "Dancing Fairies",
+				"description": "Catch us if you can!",
+				"file": "/decorations/dancing_fairies.png"
+			},
+			{
+				"name": "Crystal Elk",
+				"description": "Its antlers shimmer with the magic of ancient snowstorms.",
+				"file": "/decorations/crystal_elk.png"
+			},
+			{
+				"name": "Mermaid Serenade",
+				"description": "They seem to like you... but is that a good thing?",
+				"file": "/decorations/mermaid_serenade.png"
+			}
+		]
+	},
+	{
 		"name": "Dungeons & Dragons",
 		"description": "The ultimate adventurer's pack.",
 		"banner": {
