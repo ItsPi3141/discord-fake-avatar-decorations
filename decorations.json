@@ -21,67 +21,67 @@
 			{
 				"name": "I'm a Clown",
 				"description": "I opened a bunch of Loot Boxes and all I got was this stupid clown decoration. Exclusive to April Fools 2024 for a limited time.",
-				"file": "/decorations/im_a_clown.png"
+				"file": "im_a_clown.png"
 			},
 			{
 				"name": "Mokoko",
 				"description": "An affectionate Mokoko wants to give you plenty of hugs! Exclusive to Mokoko Quest 2024 for a limited time.",
-				"file": "/decorations/mokoko.png"
+				"file": "mokoko.png"
 			},
 			{
 				"name": "Gyoiko Sakura",
 				"description": "A rare blossom only seen by a fortunate few. Given to new nitro subscribers between April 24, 2024 and May 1, 2024.",
-				"file": "/decorations/sakura_gyoiko.png"
+				"file": "sakura_gyoiko.png"
 			},
 			{
 				"name": "Warp Helmet",
 				"description": "Traveling at the speed of light. Available to use until September 9, 2024.",
-				"file": "/decorations/warp_helmet.png"
+				"file": "warp_helmet.png"
 			},
 			{
 				"name": "Fortnite Victory Crown",
 				"description": "A sparkly crown! Available to use until September 3, 2024.",
-				"file": "/decorations/victory_crown.png"
+				"file": "victory_crown.png"
 			},
 			{
 				"name": "Freezer Bunny Lovebug",
 				"description": "A Sim's coolest companion! Available to use until September 30, 2024.",
-				"file": "/decorations/freezer_bunny_lovebug.png"
+				"file": "freezer_bunny_lovebug.png"
 			},
 			{
 				"name": "Wingman Boba",
 				"description": "Your trusty VALORANT buddy, with a refreshing bubbly twist. Available to use until October 6, 2024.",
-				"file": "/decorations/wingman_boba.png"
+				"file": "wingman_boba.png"
 			},
 			{
 				"name": "Los Santos",
 				"description": "Get to the chopper! Los Santos sky-high pursuit! Available to use until October 14, 2024.",
-				"file": "/decorations/los_santos.png"
+				"file": "los_santos.png"
 			},
 			{
 				"name": "Hailey",
 				"description": "Worn by the legendary sniper in The First Descendant. Available until to use November 6, 2024.",
-				"file": "/decorations/hailey.png"
+				"file": "hailey.png"
 			},
 			{
 				"name": "Bunny",
 				"description": "Worn by Albion's speedster, Bunny, in The First Descendant. Available until to use November 12, 2024.",
-				"file": "/decorations/bunny.png"
+				"file": "bunny.png"
 			},
 			{
 				"name": "Torgal Puppy",
 				"description": "Torgal the puppy is here to keep you company! This reward is exclusive to the FFXVI Quest. Available until to use November 23, 2024.",
-				"file": "/decorations/torgal_puppy.png"
+				"file": "torgal_puppy.png"
 			},
 			{
 				"name": "Street Fighter 6 Battle Field",
 				"description": "Avatar Decoration for the Award winning Street Fighter 6. Exclusive to Street Fighter 6 Quest for a limited time. Available until to use November 29, 2024.",
-				"file": "/decorations/street_fighter_6_battle_field.png"
+				"file": "street_fighter_6_battle_field.png"
 			},
 			{
 				"name": "Wolf Morph",
 				"description": "Your Morph can take on many unique forms and help you move throughout the world in THRONE AND LIBERTY. Available until to use November 30, 2024.",
-				"file": "/decorations/wolf_morph.png"
+				"file": "wolf_morph.png"
 			}
 		]
 	},
@@ -98,32 +98,32 @@
 			{
 				"name": "Kitsune",
 				"description": "Legends say playful chaos is their specialty.",
-				"file": "/decorations/kitsune.png"
+				"file": "kitsune.png"
 			},
 			{
 				"name": "Unicorn",
 				"description": "Unicorns love two things: magic and your vibe.",
-				"file": "/decorations/unicorn.png"
+				"file": "unicorn.png"
 			},
 			{
 				"name": "Phoenix",
 				"description": "The symbol of running it back.",
-				"file": "/decorations/phoenix.png"
+				"file": "phoenix.png"
 			},
 			{
 				"name": "Dancing Fairies",
 				"description": "Catch us if you can!",
-				"file": "/decorations/dancing_fairies.png"
+				"file": "dancing_fairies.png"
 			},
 			{
 				"name": "Crystal Elk",
 				"description": "Its antlers shimmer with the magic of ancient snowstorms.",
-				"file": "/decorations/crystal_elk.png"
+				"file": "crystal_elk.png"
 			},
 			{
 				"name": "Mermaid Serenade",
 				"description": "They seem to like you... but is that a good thing?",
-				"file": "/decorations/mermaid_serenade.png"
+				"file": "mermaid_serenade.png"
 			}
 		]
 	},
@@ -150,37 +150,37 @@
 			{
 				"name": "Violet Dice",
 				"description": "Let’s roll!",
-				"file": "/decorations/dice_violet.png"
+				"file": "dice_violet.png"
 			},
 			{
 				"name": "Azure Dice",
 				"description": "Let’s roll!",
-				"file": "/decorations/dice_azure.png"
+				"file": "dice_azure.png"
 			},
 			{
 				"name": "Green Gelatinous Cube",
 				"description": "It’s not edible, but YOU are.",
-				"file": "/decorations/gelatinous_cube_green.png"
+				"file": "gelatinous_cube_green.png"
 			},
 			{
 				"name": "Blue Gelatinous Cube",
 				"description": "It’s not edible, but YOU are.",
-				"file": "/decorations/gelatinous_cube_blue.png"
+				"file": "gelatinous_cube_blue.png"
 			},
 			{
 				"name": "Owlbear Cub",
 				"description": "Your very own feathery friend!",
-				"file": "/decorations/owlbear_cub.png"
+				"file": "owlbear_cub.png"
 			},
 			{
 				"name": "Snowy Owlbear Cub",
 				"description": "Your very own feathery friend!",
-				"file": "/decorations/owlbear_cub_snowy.png"
+				"file": "owlbear_cub_snowy.png"
 			},
 			{
 				"name": "Baby Displacer Beast",
 				"description": "Here, kitty, kitty…",
-				"file": "/decorations/baby_displacer_beast.png"
+				"file": "baby_displacer_beast.png"
 			}
 		]
 	},
@@ -198,72 +198,72 @@
 			{
 				"name": "Spooky Cat Ears",
 				"description": "≽ ^ ʘ⩊ʘ ^ ≼",
-				"file": "/decorations/spooky_cat_ears.png"
+				"file": "spooky_cat_ears.png"
 			},
 			{
 				"name": "Spooky Cat Ears (Midnight)",
 				"description": "≽ ^ ʘ⩊ʘ ^ ≼",
-				"file": "/decorations/spooky_cat_ears_midnight.png"
+				"file": "spooky_cat_ears_midnight.png"
 			},
 			{
 				"name": "Candlelight",
 				"description": "Now you can see in the dark. But so can they...",
-				"file": "/decorations/candlelight.png"
+				"file": "candlelight.png"
 			},
 			{
 				"name": "Crimson Candlelight",
 				"description": "Now you can see in the dark. But so can they...",
-				"file": "/decorations/candlelight_crimson.png"
+				"file": "candlelight_crimson.png"
 			},
 			{
 				"name": "Dark Candlelight",
 				"description": "Now you can see in the dark. But so can they...",
-				"file": "/decorations/candlelight_dark.png"
+				"file": "candlelight_dark.png"
 			},
 			{
 				"name": "Dark Hood",
 				"description": "You definitely don't look suspicious at all.",
-				"file": "/decorations/hood_dark.png"
+				"file": "hood_dark.png"
 			},
 			{
 				"name": "Crimson Hood",
 				"description": "You definitely don't look suspicious at all.",
-				"file": "/decorations/hood_crimson.png"
+				"file": "hood_crimson.png"
 			},
 			{
 				"name": "Plum Witch Hat",
 				"description": "Mischief looks good on you.",
-				"file": "/decorations/witch_hat_plum.png"
+				"file": "witch_hat_plum.png"
 			},
 			{
 				"name": "Midnight Witch Hat",
 				"description": "Mischief looks good on you.",
-				"file": "/decorations/witch_hat_midnight.png"
+				"file": "witch_hat_midnight.png"
 			},
 			{
 				"name": "Zombie Food",
 				"description": "Looks like you weren't fast enough. Unlucky.",
-				"file": "/decorations/zombie_food.png"
+				"file": "zombie_food.png"
 			},
 			{
 				"name": "Zombie Food (Purple)",
 				"description": "Looks like you weren't fast enough. Unlucky.",
-				"file": "/decorations/zombie_food_purple.png"
+				"file": "zombie_food_purple.png"
 			},
 			{
 				"name": "Bloodthirsty",
 				"description": "Just a bite...",
-				"file": "/decorations/bloodthirsty.png"
+				"file": "bloodthirsty.png"
 			},
 			{
 				"name": "Bloodthirsty (Green)",
 				"description": "Just a bite...",
-				"file": "/decorations/bloodthirsty_green.png"
+				"file": "bloodthirsty_green.png"
 			},
 			{
 				"name": "Bloodthirsty (Gold)",
 				"description": "Just a bite...",
-				"file": "/decorations/bloodthirsty_gold.png"
+				"file": "bloodthirsty_gold.png"
 			}
 		]
 	},
@@ -291,42 +291,42 @@
 			{
 				"name": "Ryu",
 				"description": "Ever training, Ryu seeks true strength… just keep spiders away from him.",
-				"file": "/decorations/ryu.png"
+				"file": "ryu.png"
 			},
 			{
 				"name": "Chun-Li",
 				"description": "A former high-kicking ICPO agent Chun-Li. Never skips leg day.",
-				"file": "/decorations/chun_li.png"
+				"file": "chun_li.png"
 			},
 			{
 				"name": "Ken",
 				"description": "Former US National Fighting Champ. Keeps his hair salon quality.",
-				"file": "/decorations/ken.png"
+				"file": "ken.png"
 			},
 			{
 				"name": "Akuma",
 				"description": "A demon of combat (the raging kind!) that has welcomed the Satsui no Hado into his being.",
-				"file": "/decorations/akuma.png"
+				"file": "akuma.png"
 			},
 			{
 				"name": "Cammy",
 				"description": "Member of British special forces unit Delta Red. Hates everything. Likes cats.",
-				"file": "/decorations/cammy.png"
+				"file": "cammy.png"
 			},
 			{
 				"name": "Guile",
 				"description": "A US Air Force pilot fantastic at comeback wins when listening to his own theme.",
-				"file": "/decorations/guile.png"
+				"file": "guile.png"
 			},
 			{
 				"name": "Juri",
 				"description": "A sadistic thrill seeker. Never misses a manicure.",
-				"file": "/decorations/juri.png"
+				"file": "juri.png"
 			},
 			{
 				"name": "M. Bison",
 				"description": "The leader of Shadaloo, who was believed to be dead. Very fond of power... the Psycho kind.",
-				"file": "/decorations/m_bison.png"
+				"file": "m_bison.png"
 			}
 		]
 	},
@@ -344,47 +344,47 @@
 			{
 				"name": "Twilight Chrysanthemums",
 				"description": "Transformation is a dance where your inner beauty finds its rhythm.",
-				"file": "/decorations/chrysanthemums_twilight.png"
+				"file": "chrysanthemums_twilight.png"
 			},
 			{
 				"name": "Morning Chrysanthemums",
 				"description": "Transformation is a dance where your inner beauty finds its rhythm.",
-				"file": "/decorations/chrysanthemums_morning.png"
+				"file": "chrysanthemums_morning.png"
 			},
 			{
 				"name": "Dusk and Dawn",
 				"description": "Illuminate yourself with the light of the moon and sun.",
-				"file": "/decorations/dusk_and_dawn.png"
+				"file": "dusk_and_dawn.png"
 			},
 			{
 				"name": "Floral Harmony",
 				"description": "A touch of day and night woven into every petal.",
-				"file": "/decorations/floral_harmony.png"
+				"file": "floral_harmony.png"
 			},
 			{
 				"name": "Floral Harmony (Sunburst)",
 				"description": "A touch of day and night woven into every petal.",
-				"file": "/decorations/floral_harmony_sunburst.png"
+				"file": "floral_harmony_sunburst.png"
 			},
 			{
 				"name": "Autumn's Arbor",
 				"description": "Where day and night share equal ground.",
-				"file": "/decorations/autumns_arbor.png"
+				"file": "autumns_arbor.png"
 			},
 			{
 				"name": "Autumn's Arbor (Aurora)",
 				"description": "Where day and night share equal ground.",
-				"file": "/decorations/autumns_arbor_aurora.png"
+				"file": "autumns_arbor_aurora.png"
 			},
 			{
 				"name": "Autumn Crown",
 				"description": "A crown of nature's finest, with autumn's special touch.",
-				"file": "/decorations/autumn_crown.png"
+				"file": "autumn_crown.png"
 			},
 			{
 				"name": "Faces of the Moon",
 				"description": "The moon tells its tale in shadows and light... listen....",
-				"file": "/decorations/faces_of_the_moon.png"
+				"file": "faces_of_the_moon.png"
 			}
 		]
 	},
@@ -400,32 +400,32 @@
 			{
 				"name": "Fox Hat",
 				"description": "Charming, cozy, and a little bit nosy.",
-				"file": "/decorations/fox_hat.png"
+				"file": "fox_hat.png"
 			},
 			{
 				"name": "Chestnut Fox Hat",
 				"description": "Charming, cozy, and a little bit nosy.",
-				"file": "/decorations/fox_hat_chestnut.png"
+				"file": "fox_hat_chestnut.png"
 			},
 			{
 				"name": "Snow Fox Hat",
 				"description": "Charming, cozy, and a little bit nosy.",
-				"file": "/decorations/fox_hat_snow.png"
+				"file": "fox_hat_snow.png"
 			},
 			{
 				"name": "Fall Leaves",
 				"description": "Behold nature's dance.",
-				"file": "/decorations/fall_leaves.png"
+				"file": "fall_leaves.png"
 			},
 			{
 				"name": "Scarlet Leaves",
 				"description": "Behold nature's dance.",
-				"file": "/decorations/fall_leaves_scarlet.png"
+				"file": "fall_leaves_scarlet.png"
 			},
 			{
 				"name": "Woodland Leaves",
 				"description": "Behold nature's dance.",
-				"file": "/decorations/fall_leaves_woodland.png"
+				"file": "fall_leaves_woodland.png"
 			}
 		]
 	},
@@ -443,67 +443,67 @@
 			{
 				"name": "Sakura",
 				"description": "A beautiful cherry blossom.",
-				"file": "/decorations/sakura.png"
+				"file": "sakura.png"
 			},
 			{
 				"name": "Pink Sakura",
 				"description": "A promise of new beginnings.",
-				"file": "/decorations/sakura_pink.png"
+				"file": "sakura_pink.png"
 			},
 			{
 				"name": "Ukon Sakura",
 				"description": "A symbol of standing out with quiet elegance.",
-				"file": "/decorations/sakura_ukon.png"
+				"file": "sakura_ukon.png"
 			},
 			{
 				"name": "Gyoiko Sakura",
 				"description": "A rare blossom only seen by a fortunate few.",
-				"file": "/decorations/sakura_gyoiko.png"
+				"file": "sakura_gyoiko.png"
 			},
 			{
 				"name": "Angry Frog",
 				"description": "*ribbits angrily*",
-				"file": "/decorations/frog_angry.png"
+				"file": "frog_angry.png"
 			},
 			{
 				"name": "Derpy Frog",
 				"description": "*ribbits derpily*",
-				"file": "/decorations/frog_derpy.png"
+				"file": "frog_derpy.png"
 			},
 			{
 				"name": "Fried Egg",
 				"description": "I like mine sunny side-up.",
-				"file": "/decorations/fried_egg.png"
+				"file": "fried_egg.png"
 			},
 			{
 				"name": "Green Fried Egg",
 				"description": "Wish there was some ham to go with this.",
-				"file": "/decorations/green_fried_egg.png"
+				"file": "green_fried_egg.png"
 			},
 			{
 				"name": "Morning Coffee",
 				"description": "Don't talk to me until I finish this.",
-				"file": "/decorations/morning_coffee.png"
+				"file": "morning_coffee.png"
 			},
 			{
 				"name": "Toast",
 				"description": "It is toast.",
-				"file": "/decorations/toast.png"
+				"file": "toast.png"
 			},
 			{
 				"name": "Burnt Toast",
 				"description": "Why did you burn the toast.",
-				"file": "/decorations/burnt_toast.png"
+				"file": "burnt_toast.png"
 			},
 			{
 				"name": "Stinkums",
 				"description": "Questionably dealt. Definitely smelt.",
-				"file": "/decorations/stinkums.png"
+				"file": "stinkums.png"
 			},
 			{
 				"name": "Goblin Stinkums",
 				"description": "Green goblin mode unlocks many abilities... some consider to be unnaturally stinky.",
-				"file": "/decorations/goblin_stinkums.png"
+				"file": "goblin_stinkums.png"
 			}
 		]
 	},
@@ -521,32 +521,32 @@
 			{
 				"name": "Kabuto",
 				"description": "Donned only by true warriors.",
-				"file": "/decorations/kabuto.png"
+				"file": "kabuto.png"
 			},
 			{
 				"name": "Oni Mask",
 				"description": "Unleash your inner demon.",
-				"file": "/decorations/oni_mask.png"
+				"file": "oni_mask.png"
 			},
 			{
 				"name": "Straw Hat",
 				"description": "A must-have for the traveling wanderer.",
-				"file": "/decorations/straw_hat.png"
+				"file": "straw_hat.png"
 			},
 			{
 				"name": "Sakura Ink",
 				"description": "Fleeting beauty... forever etched in ink.",
-				"file": "/decorations/sakura_ink.png"
+				"file": "sakura_ink.png"
 			},
 			{
 				"name": "Sakura Warrior",
 				"description": "Blossom and blade, united in purpose.",
-				"file": "/decorations/sakura_warrior.png"
+				"file": "sakura_warrior.png"
 			},
 			{
 				"name": "Shuriken's Mask",
 				"description": "Aim with purpose.",
-				"file": "/decorations/shurikens_mask.png"
+				"file": "shurikens_mask.png"
 			}
 		]
 	},
@@ -564,47 +564,47 @@
 			{
 				"name": "VALORANT Champions 2024",
 				"description": "All paths end here.",
-				"file": "/decorations/valorant_champions_2024.png"
+				"file": "valorant_champions_2024.png"
 			},
 			{
 				"name": "Yoru Dimensional Drift",
 				"description": "Looking for me?",
-				"file": "/decorations/yoru_dimensional_drift.png"
+				"file": "yoru_dimensional_drift.png"
 			},
 			{
 				"name": "Viper Poison Cloud",
 				"description": "No one can hold their breath forever.",
-				"file": "/decorations/viper_poison_cloud.png"
+				"file": "viper_poison_cloud.png"
 			},
 			{
 				"name": "Cypher Neural Theft",
 				"description": "Nothing stays hidden from me.",
-				"file": "/decorations/cypher_neural_theft.png"
+				"file": "cypher_neural_theft.png"
 			},
 			{
 				"name": "A Hint of Clove",
 				"description": "Back again from the great beyond.",
-				"file": "/decorations/a_hint_of_clove.png"
+				"file": "a_hint_of_clove.png"
 			},
 			{
 				"name": "Omen's Cowl",
 				"description": "Embrace the shadows.",
-				"file": "/decorations/omens_cowl.png"
+				"file": "omens_cowl.png"
 			},
 			{
 				"name": "Reyna's Leer",
 				"description": "The last thing they'll ever see. Lucky them.",
-				"file": "/decorations/reynas_leer.png"
+				"file": "reynas_leer.png"
 			},
 			{
 				"name": "FRAG OUT",
 				"description": "Five down. None to go.",
-				"file": "/decorations/frag_out.png"
+				"file": "frag_out.png"
 			},
 			{
 				"name": "Blade Storm",
 				"description": "Watch this.",
-				"file": "/decorations/blade_storm.png"
+				"file": "blade_storm.png"
 			}
 		]
 	},
@@ -629,37 +629,37 @@
 			{
 				"name": "SpongeBob",
 				"description": "Order up!",
-				"file": "/decorations/spongebob.png"
+				"file": "spongebob.png"
 			},
 			{
 				"name": "Imagination",
 				"description": "With imagination, I can be anything I want.",
-				"file": "/decorations/imagination.png"
+				"file": "imagination.png"
 			},
 			{
 				"name": "Patrick Star",
 				"description": "He, she, me wumbo.",
-				"file": "/decorations/patrick_star.png"
+				"file": "patrick_star.png"
 			},
 			{
 				"name": "Flower Clouds",
 				"description": "Immerse yourself in Bikini Bottom.",
-				"file": "/decorations/flower_clouds.png"
+				"file": "flower_clouds.png"
 			},
 			{
 				"name": "Gary the Snail",
 				"description": "Meow.",
-				"file": "/decorations/gary_the_snail.png"
+				"file": "gary_the_snail.png"
 			},
 			{
 				"name": "Sandy Cheeks",
 				"description": "Underwater breathing apparatus.",
-				"file": "/decorations/sandy_cheeks.png"
+				"file": "sandy_cheeks.png"
 			},
 			{
 				"name": "MuscleBob",
 				"description": "How tough are ya?",
-				"file": "/decorations/musclebob.png"
+				"file": "musclebob.png"
 			}
 		]
 	},
@@ -676,32 +676,32 @@
 			{
 				"name": "Midnight Sorceress",
 				"description": "Wear the beauty of midnight.",
-				"file": "/decorations/midnight_sorceress.png"
+				"file": "midnight_sorceress.png"
 			},
 			{
 				"name": "Malefic Crown",
 				"description": "Fit for those who rule with an iron fist.",
-				"file": "/decorations/malefic_crown.png"
+				"file": "malefic_crown.png"
 			},
 			{
 				"name": "Death's Edge",
 				"description": "A great conversation starter... and ender.",
-				"file": "/decorations/deaths_edge.png"
+				"file": "deaths_edge.png"
 			},
 			{
 				"name": "Spirit Embers",
 				"description": "For protection against dark nights and unseen terrors.",
-				"file": "/decorations/spirit_embers.png"
+				"file": "spirit_embers.png"
 			},
 			{
 				"name": "Eldritch Ring",
 				"description": "For those days when you want to feel extra cursed.",
-				"file": "/decorations/eldritch_ring.png"
+				"file": "eldritch_ring.png"
 			},
 			{
 				"name": "Arcane Sigil",
 				"description": "Those who stare will fall under your spell.",
-				"file": "/decorations/arcane_sigil.png"
+				"file": "arcane_sigil.png"
 			}
 		]
 	},
@@ -740,32 +740,32 @@
 			{
 				"name": "Chillet",
 				"description": "Who doesn't love to cuddle?",
-				"file": "/decorations/chillet.png"
+				"file": "chillet.png"
 			},
 			{
 				"name": "Pal Sphere",
 				"description": "Fingers crossed!",
-				"file": "/decorations/pal_sphere.png"
+				"file": "pal_sphere.png"
 			},
 			{
 				"name": "Cattiva",
 				"description": "Cute... from a distance.",
-				"file": "/decorations/cattiva.png"
+				"file": "cattiva.png"
 			},
 			{
 				"name": "Lamball",
 				"description": "Cozy, fluffy, and clumsy!",
-				"file": "/decorations/lamball.png"
+				"file": "lamball.png"
 			},
 			{
 				"name": "Depresso",
 				"description": "As enthusiastic as ever.",
-				"file": "/decorations/depresso.png"
+				"file": "depresso.png"
 			},
 			{
 				"name": "Selyne",
 				"description": "A mysterious moonlight encounter.",
-				"file": "/decorations/selyne.png"
+				"file": "selyne.png"
 			}
 		]
 	},
@@ -782,32 +782,32 @@
 			{
 				"name": "Joystick",
 				"description": "Pressing buttons harder definitely increases your chances of winning.",
-				"file": "/decorations/joystick.png"
+				"file": "joystick.png"
 			},
 			{
 				"name": "Clyde Invaders",
 				"description": "Rogue invaders have taken control of the galaxy. It's up to you to save the day.",
-				"file": "/decorations/clyde_invaders.png"
+				"file": "clyde_invaders.png"
 			},
 			{
 				"name": "Pipedream",
 				"description": "If you stare at this for 5,461 seconds without blinking, you win.",
-				"file": "/decorations/pipedream.png"
+				"file": "pipedream.png"
 			},
 			{
 				"name": "Hot Shot",
 				"description": "Baller status: Pro.",
-				"file": "/decorations/hot_shot.png"
+				"file": "hot_shot.png"
 			},
 			{
 				"name": "Mallow Jump",
 				"description": "Hop till you drop!",
-				"file": "/decorations/mallow_jump.png"
+				"file": "mallow_jump.png"
 			},
 			{
 				"name": "Slither 'n Snack",
 				"description": "Gobble and grow to become the biggest snake in the garden.",
-				"file": "/decorations/slither_n_snack.png"
+				"file": "slither_n_snack.png"
 			}
 		]
 	},
@@ -824,22 +824,22 @@
 			{
 				"name": "Feelin' Awe",
 				"description": "When you touch the grass.",
-				"file": "/decorations/feelin_awe.png"
+				"file": "feelin_awe.png"
 			},
 			{
 				"name": "Feelin' Panic",
 				"description": "When you get challenged to a spontaneous rap battle.",
-				"file": "/decorations/feelin_panic.png"
+				"file": "feelin_panic.png"
 			},
 			{
 				"name": "Feelin' Nervous",
 				"description": "When you ping @everyone.",
-				"file": "/decorations/feelin_nervous.png"
+				"file": "feelin_nervous.png"
 			},
 			{
 				"name": "Feelin' Scrumptious",
 				"description": "When they let you cook.",
-				"file": "/decorations/feelin_scrumptious.png"
+				"file": "feelin_scrumptious.png"
 			}
 		]
 	},
@@ -856,32 +856,32 @@
 			{
 				"name": "Pirate Captain",
 				"description": "Arrr... yer bounty comes due.",
-				"file": "/decorations/pirate_captain.png"
+				"file": "pirate_captain.png"
 			},
 			{
 				"name": "Scallywag",
 				"description": "Nay even a pirate can steal me good looks.",
-				"file": "/decorations/scallywag.png"
+				"file": "scallywag.png"
 			},
 			{
 				"name": "Good Ol' Pepper",
 				"description": "An old salt's trusty matey at sea.",
-				"file": "/decorations/good_ol_pepper.png"
+				"file": "good_ol_pepper.png"
 			},
 			{
 				"name": "Crossbones",
 				"description": "Cross me not, else a pile o' bones be yer fate.",
-				"file": "/decorations/crossbones.png"
+				"file": "crossbones.png"
 			},
 			{
 				"name": "Cannon Fire",
 				"description": "Sink yer foes in iron and let 'em be claimed by the sea...",
-				"file": "/decorations/cannon_fire.png"
+				"file": "cannon_fire.png"
 			},
 			{
 				"name": "Helmsman",
 				"description": "Heading, cap'n?",
-				"file": "/decorations/helmsman.png"
+				"file": "helmsman.png"
 			}
 		]
 	},
@@ -898,32 +898,32 @@
 			{
 				"name": "Stardust",
 				"description": "The essence of the cosmos.",
-				"file": "/decorations/stardust.png"
+				"file": "stardust.png"
 			},
 			{
 				"name": "Black Hole",
 				"description": "An enigma of matter, space, and time.",
-				"file": "/decorations/black_hole.png"
+				"file": "black_hole.png"
 			},
 			{
 				"name": "Constellations",
 				"description": "What secrets do the stars reveal?",
-				"file": "/decorations/constellations.png"
+				"file": "constellations.png"
 			},
 			{
 				"name": "Solar Orbit",
 				"description": "An eternal dance of fiery passion.",
-				"file": "/decorations/solar_orbit.png"
+				"file": "solar_orbit.png"
 			},
 			{
 				"name": "UFO",
 				"description": "The perfect ride for any grab-and-go heist.",
-				"file": "/decorations/ufo.png"
+				"file": "ufo.png"
 			},
 			{
 				"name": "Astronaut Helmet",
 				"description": "Always wear your helmet.",
-				"file": "/decorations/astronaut_helmet.png"
+				"file": "astronaut_helmet.png"
 			}
 		]
 	},
@@ -940,32 +940,32 @@
 			{
 				"name": "Chromawave",
 				"description": "Never miss a beat.",
-				"file": "/decorations/chromawave.png"
+				"file": "chromawave.png"
 			},
 			{
 				"name": "Cozy Cat",
 				"description": "Vibing one catnap at a time.",
-				"file": "/decorations/cozy_cat.png"
+				"file": "cozy_cat.png"
 			},
 			{
 				"name": "Oasis",
 				"description": "Chilling in my comfort place.",
-				"file": "/decorations/oasis.png"
+				"file": "oasis.png"
 			},
 			{
 				"name": "Rainy Mood",
 				"description": "Feel the calm.",
-				"file": "/decorations/rainy_mood.png"
+				"file": "rainy_mood.png"
 			},
 			{
 				"name": "Cozy Headphones",
 				"description": "Perfect for any tune.",
-				"file": "/decorations/cozy_headphones.png"
+				"file": "cozy_headphones.png"
 			},
 			{
 				"name": "Doodling",
 				"description": "What do you mean I'm procrastinating?",
-				"file": "/decorations/doodling.png"
+				"file": "doodling.png"
 			}
 		]
 	},
@@ -1000,27 +1000,27 @@
 			{
 				"name": "A Hint of Clove",
 				"description": "Back again from the great beyond.",
-				"file": "/decorations/a_hint_of_clove.png"
+				"file": "a_hint_of_clove.png"
 			},
 			{
 				"name": "Omen's Cowl",
 				"description": "Embrace the shadows.",
-				"file": "/decorations/omens_cowl.png"
+				"file": "omens_cowl.png"
 			},
 			{
 				"name": "Reyna's Leer",
 				"description": "The last thing they'll ever see. Lucky them.",
-				"file": "/decorations/reynas_leer.png"
+				"file": "reynas_leer.png"
 			},
 			{
 				"name": "FRAG OUT",
 				"description": "Five down. None to go.",
-				"file": "/decorations/frag_out.png"
+				"file": "frag_out.png"
 			},
 			{
 				"name": "Blade Storm",
 				"description": "Watch this.",
-				"file": "/decorations/blade_storm.png"
+				"file": "blade_storm.png"
 			}
 		]
 	},
@@ -1037,32 +1037,32 @@
 			{
 				"name": "Honeyblossom",
 				"description": "Buzz meets bloom.",
-				"file": "/decorations/honeyblossom.png"
+				"file": "honeyblossom.png"
 			},
 			{
 				"name": "Dandelion Duo",
 				"description": "Strengths: Cute and fluffy. Weaknesses: The breeze.",
-				"file": "/decorations/dandelion_duo.png"
+				"file": "dandelion_duo.png"
 			},
 			{
 				"name": "Hugh the Rainbow",
 				"description": "Does he have a hue for every mood?",
-				"file": "/decorations/hugh_the_rainbow.png"
+				"file": "hugh_the_rainbow.png"
 			},
 			{
 				"name": "Strawberry Vine",
 				"description": "Now that's a sweet harvest.",
-				"file": "/decorations/strawberry_vine.png"
+				"file": "strawberry_vine.png"
 			},
 			{
 				"name": "Butterflies",
 				"description": "We shall tickle the clouds today - join us!",
-				"file": "/decorations/butterflies.png"
+				"file": "butterflies.png"
 			},
 			{
 				"name": "The Petal Pack",
 				"description": "Comes with sunshine and smiles.",
-				"file": "/decorations/the_petal_pack.png"
+				"file": "the_petal_pack.png"
 			}
 		]
 	},
@@ -1078,67 +1078,67 @@
 			{
 				"name": "Cat Ears",
 				"description": "≽ ^ • ⩊ • ^ ≼",
-				"file": "/decorations/cat_ears.png"
+				"file": "cat_ears.png"
 			},
 			{
 				"name": "Ki Energy",
 				"description": "Focus from within.",
-				"file": "/decorations/ki_energy.png"
+				"file": "ki_energy.png"
 			},
 			{
 				"name": "Heartbloom",
 				"description": "Let your love blossom.",
-				"file": "/decorations/heartbloom.png"
+				"file": "heartbloom.png"
 			},
 			{
 				"name": "Dismay",
 				"description": "Not like this...",
-				"file": "/decorations/dismay.png"
+				"file": "dismay.png"
 			},
 			{
 				"name": "Rage",
 				"description": "THAT'S IT.",
-				"file": "/decorations/rage.png"
+				"file": "rage.png"
 			},
 			{
 				"name": "In Tears",
 				"description": "*sobbing*",
-				"file": "/decorations/in_tears.png"
+				"file": "in_tears.png"
 			},
 			{
 				"name": "Radiating Energy",
 				"description": "Over EIGHT-THOUSAND-NINE-HUNDRED-NINETY-NINE!",
-				"file": "/decorations/radiating_energy.png"
+				"file": "radiating_energy.png"
 			},
 			{
 				"name": "Soul Leaving Body",
 				"description": "Can I just disappear right now?",
-				"file": "/decorations/soul_leaving_body.png"
+				"file": "soul_leaving_body.png"
 			},
 			{
 				"name": "Sweat Drops",
 				"description": "*laughs nervously*",
-				"file": "/decorations/sweat_drops.png"
+				"file": "sweat_drops.png"
 			},
 			{
 				"name": "Starry Eyed",
 				"description": "Feelin' sparkly",
-				"file": "/decorations/starry_eyed.png"
+				"file": "starry_eyed.png"
 			},
 			{
 				"name": "In Love",
 				"description": "uwu",
-				"file": "/decorations/in_love.png"
+				"file": "in_love.png"
 			},
 			{
 				"name": "Shocked",
 				"description": "Nani?!!",
-				"file": "/decorations/shocked.png"
+				"file": "shocked.png"
 			},
 			{
 				"name": "Angry",
 				"description": "How dare you",
-				"file": "/decorations/angry.png"
+				"file": "angry.png"
 			}
 		]
 	},
@@ -1154,32 +1154,32 @@
 			{
 				"name": "Fire",
 				"description": "Ignite your flame within.",
-				"file": "/decorations/fire.png"
+				"file": "fire.png"
 			},
 			{
 				"name": "Water",
 				"description": "Control the ebb and flow.",
-				"file": "/decorations/water.png"
+				"file": "water.png"
 			},
 			{
 				"name": "Air",
 				"description": "Will the wind.",
-				"file": "/decorations/air.png"
+				"file": "air.png"
 			},
 			{
 				"name": "Earth",
 				"description": "Call the might of the earth.",
-				"file": "/decorations/earth.png"
+				"file": "earth.png"
 			},
 			{
 				"name": "Lightning",
 				"description": "Electrify your presence.",
-				"file": "/decorations/lightning.png"
+				"file": "lightning.png"
 			},
 			{
 				"name": "Balance",
 				"description": "Harness the elements.",
-				"file": "/decorations/balance.png"
+				"file": "balance.png"
 			}
 		]
 	},
@@ -1196,32 +1196,32 @@
 			{
 				"name": "Fan Flourish",
 				"description": "Incredibly fan-tastic.",
-				"file": "/decorations/fan_flourish.png"
+				"file": "fan_flourish.png"
 			},
 			{
 				"name": "Lunar Lanterns",
 				"description": "Light the night.",
-				"file": "/decorations/lunar_lanterns.png"
+				"file": "lunar_lanterns.png"
 			},
 			{
 				"name": "Firecrackers",
 				"description": "Don't try this at home!",
-				"file": "/decorations/firecrackers.png"
+				"file": "firecrackers.png"
 			},
 			{
 				"name": "Dragon's Smile",
 				"description": "A dragon's grin fills your year with laughs.",
-				"file": "/decorations/dragons_smile.png"
+				"file": "dragons_smile.png"
 			},
 			{
 				"name": "Lucky Envelopes",
 				"description": "Capacity: 888 coins.",
-				"file": "/decorations/lucky_envelopes.png"
+				"file": "lucky_envelopes.png"
 			},
 			{
 				"name": "Koi Pond",
 				"description": "Swimming in an eternal, peaceful circle.",
-				"file": "/decorations/koi_pond.png"
+				"file": "koi_pond.png"
 			}
 		]
 	},
@@ -1237,22 +1237,22 @@
 			{
 				"name": "Glitch",
 				"description": "Neurovisor disruption detected, please standby.",
-				"file": "/decorations/glitch.png"
+				"file": "glitch.png"
 			},
 			{
 				"name": "Cybernetic",
 				"description": "Cybernetic visuals now online. Welcome aboard, runner.",
-				"file": "/decorations/cybernetic.png"
+				"file": "cybernetic.png"
 			},
 			{
 				"name": "Digital Sunrise",
 				"description": "It's a new day in cyberspace.",
-				"file": "/decorations/digital_sunrise.png"
+				"file": "digital_sunrise.png"
 			},
 			{
 				"name": "Implant",
 				"description": "Get ready to jack in.",
-				"file": "/decorations/implant.png"
+				"file": "implant.png"
 			}
 		]
 	},
@@ -1267,42 +1267,42 @@
 			{
 				"name": "Beamchop",
 				"description": "Awh it's so cu- AHHH",
-				"file": "/decorations/beamchop.png"
+				"file": "beamchop.png"
 			},
 			{
 				"name": "Stinkums",
 				"description": "Questionably dealt. Definitely smelt.",
-				"file": "/decorations/stinkums.png"
+				"file": "stinkums.png"
 			},
 			{
 				"name": "Chuck",
 				"description": "Wanna see what I had for lunch earlier?",
-				"file": "/decorations/chuck.png"
+				"file": "chuck.png"
 			},
 			{
 				"name": "Winkle",
 				"description": "Eye love you.",
-				"file": "/decorations/winkle.png"
+				"file": "winkle.png"
 			},
 			{
 				"name": "Chewbert",
 				"description": "Me chew gum, make bubbles, big fun.",
-				"file": "/decorations/chewbert.png"
+				"file": "chewbert.png"
 			},
 			{
 				"name": "Doodlezard",
 				"description": "You might want to wash up after.",
-				"file": "/decorations/doodlezard.png"
+				"file": "doodlezard.png"
 			},
 			{
 				"name": "Glop",
 				"description": "Is there something in my teeth?",
-				"file": "/decorations/glop.png"
+				"file": "glop.png"
 			},
 			{
 				"name": "Gawblehop",
 				"description": "Talk about being tongue-tied.",
-				"file": "/decorations/gawblehop.png"
+				"file": "gawblehop.png"
 			}
 		]
 	},
@@ -1318,22 +1318,22 @@
 			{
 				"name": "New Year",
 				"description": "Ringing in 2024!",
-				"file": "/decorations/new_year.png"
+				"file": "new_year.png"
 			},
 			{
 				"name": "Fresh Pine",
 				"description": "Ah...the smell of Winter.",
-				"file": "/decorations/fresh_pine.png"
+				"file": "fresh_pine.png"
 			},
 			{
 				"name": "Snowglobe",
 				"description": "Try not to shake too hard.",
-				"file": "/decorations/snowglobe.png"
+				"file": "snowglobe.png"
 			},
 			{
 				"name": "String Lights",
 				"description": "String up some holiday cheer.",
-				"file": "/decorations/string_lights.png"
+				"file": "string_lights.png"
 			}
 		]
 	},
@@ -1349,22 +1349,22 @@
 			{
 				"name": "Graveyard Cat",
 				"description": "Just a cat on graveyard duty.",
-				"file": "/decorations/graveyard_cat.png"
+				"file": "graveyard_cat.png"
 			},
 			{
 				"name": "Ghosts",
 				"description": "Look at them just spinning and grinning all day...",
-				"file": "/decorations/ghosts.png"
+				"file": "ghosts.png"
 			},
 			{
 				"name": "Minions",
 				"description": "Name a more iconic duo.",
-				"file": "/decorations/minions.png"
+				"file": "minions.png"
 			},
 			{
 				"name": "Jack-o'-Lantern",
 				"description": "You can practically hear its eerie cackle...",
-				"file": "/decorations/jack_o_lantern.png"
+				"file": "jack_o_lantern.png"
 			}
 		]
 	},
@@ -1380,22 +1380,22 @@
 			{
 				"name": "Fall Leaves",
 				"description": "Behold nature's dance.",
-				"file": "/decorations/fall_leaves.png"
+				"file": "fall_leaves.png"
 			},
 			{
 				"name": "Pumpkin Spice",
 				"description": "Sweets and spice make everything nice.",
-				"file": "/decorations/pumpkin_spice.png"
+				"file": "pumpkin_spice.png"
 			},
 			{
 				"name": "Frog Hat",
 				"description": "Frogs and fashion go together and you can't tell me otherwise.",
-				"file": "/decorations/frog_hat.png"
+				"file": "frog_hat.png"
 			},
 			{
 				"name": "Fox Hat",
 				"description": "Charming, cozy, and a little bit nosy.",
-				"file": "/decorations/fox_hat.png"
+				"file": "fox_hat.png"
 			}
 		]
 	},
@@ -1410,42 +1410,42 @@
 			{
 				"name": "Flaming Sword",
 				"description": "Slaying the look and the monsters",
-				"file": "/decorations/flaming_sword.png"
+				"file": "flaming_sword.png"
 			},
 			{
 				"name": "Magical Potion",
 				"description": "Drink at your own risk",
-				"file": "/decorations/magical_potion.png"
+				"file": "magical_potion.png"
 			},
 			{
 				"name": "Fairy Sprites",
 				"description": "Here to guide you on your path",
-				"file": "/decorations/fairy_sprites.png"
+				"file": "fairy_sprites.png"
 			},
 			{
 				"name": "Wizard's Staff",
 				"description": "How much power does it hold?",
-				"file": "/decorations/wizards_staff.png"
+				"file": "wizards_staff.png"
 			},
 			{
 				"name": "Glowing Runes",
 				"description": "I wonder what these symbols mean",
-				"file": "/decorations/glowing_runes.png"
+				"file": "glowing_runes.png"
 			},
 			{
 				"name": "Defensive Shield",
 				"description": "Use against pointy things",
-				"file": "/decorations/defensive_shield.png"
+				"file": "defensive_shield.png"
 			},
 			{
 				"name": "Skull Medallion",
 				"description": "Earned through unknown means",
-				"file": "/decorations/skull_medallion.png"
+				"file": "skull_medallion.png"
 			},
 			{
 				"name": "Treasure and Key",
 				"description": "What glorious treasures lie within?",
-				"file": "/decorations/treasure_and_key.png"
+				"file": "treasure_and_key.png"
 			}
 		]
 	},
@@ -1460,37 +1460,37 @@
 			{
 				"name": "Radiating Energy",
 				"description": "Over EIGHT-THOUSAND-NINE-HUNDRED-NINETY-NINE!",
-				"file": "/decorations/radiating_energy.png"
+				"file": "radiating_energy.png"
 			},
 			{
 				"name": "Soul Leaving Body",
 				"description": "Can I just disappear right now?",
-				"file": "/decorations/soul_leaving_body.png"
+				"file": "soul_leaving_body.png"
 			},
 			{
 				"name": "Sweat Drops",
 				"description": "*laughs nervously*",
-				"file": "/decorations/sweat_drops.png"
+				"file": "sweat_drops.png"
 			},
 			{
 				"name": "Starry Eyed",
 				"description": "Feelin' sparkly",
-				"file": "/decorations/starry_eyed.png"
+				"file": "starry_eyed.png"
 			},
 			{
 				"name": "In Love",
 				"description": "uwu",
-				"file": "/decorations/in_love.png"
+				"file": "in_love.png"
 			},
 			{
 				"name": "Shocked",
 				"description": "Nani?!!",
-				"file": "/decorations/shocked.png"
+				"file": "shocked.png"
 			},
 			{
 				"name": "Angry",
 				"description": "How dare you",
-				"file": "/decorations/angry.png"
+				"file": "angry.png"
 			}
 		]
 	},
@@ -1505,32 +1505,32 @@
 			{
 				"name": "Toast",
 				"description": "It is toast",
-				"file": "/decorations/toast.png"
+				"file": "toast.png"
 			},
 			{
 				"name": "Morning Coffee",
 				"description": "Don't talk to me until I finish this",
-				"file": "/decorations/morning_coffee.png"
+				"file": "morning_coffee.png"
 			},
 			{
 				"name": "Fried Egg",
 				"description": "I like mine sunny side-up",
-				"file": "/decorations/fried_egg.png"
+				"file": "fried_egg.png"
 			},
 			{
 				"name": "Blueberry Jam",
 				"description": "MMMM JUICY",
-				"file": "/decorations/blueberry_jam.png"
+				"file": "blueberry_jam.png"
 			},
 			{
 				"name": "Donut",
 				"description": "Never enough sprinkles",
-				"file": "/decorations/donut.png"
+				"file": "donut.png"
 			},
 			{
 				"name": "Pancakes",
 				"description": "How high can you stack 'em?",
-				"file": "/decorations/pancakes.png"
+				"file": "pancakes.png"
 			}
 		]
 	},
@@ -1546,17 +1546,17 @@
 			{
 				"name": "DISXCORE Headset",
 				"description": "Everything sounds better with these on",
-				"file": "/decorations/disxcore_headset.png"
+				"file": "disxcore_headset.png"
 			},
 			{
 				"name": "Futuristic UI",
 				"description": "BEEP BOOP",
-				"file": "/decorations/pink_futuristic_ui.png"
+				"file": "pink_futuristic_ui.png"
 			},
 			{
 				"name": "Smoke",
 				"description": "Now you see me, now you don't",
-				"file": "/decorations/green_smoke.png"
+				"file": "green_smoke.png"
 			}
 		]
 	},
@@ -1572,97 +1572,97 @@
 			{
 				"name": "Blue Headset",
 				"description": "Everything sounds better with these on.",
-				"file": "/decorations/disxcore_headset.png"
+				"file": "disxcore_headset.png"
 			},
 			{
 				"name": "Pink Headset",
 				"description": "Everything sounds better with these on.",
-				"file": "/decorations/pink_headset.png"
+				"file": "pink_headset.png"
 			},
 			{
 				"name": "Green Headset",
 				"description": "Everything sounds better with these on.",
-				"file": "/decorations/green_headset.png"
+				"file": "green_headset.png"
 			},
 			{
 				"name": "Blue Futuristic UI",
 				"description": "BEEP BOOP",
-				"file": "/decorations/blue_futuristic_ui.png"
+				"file": "blue_futuristic_ui.png"
 			},
 			{
 				"name": "Pink Futuristic UI",
 				"description": "BEEP BOOP",
-				"file": "/decorations/pink_futuristic_ui.png"
+				"file": "pink_futuristic_ui.png"
 			},
 			{
 				"name": "Green Futuristic UI",
 				"description": "BEEP BOOP",
-				"file": "/decorations/green_futuristic_ui.png"
+				"file": "green_futuristic_ui.png"
 			},
 			{
 				"name": "Blue Smoke",
 				"description": "Now you see me, now you don't",
-				"file": "/decorations/blue_smoke.png"
+				"file": "blue_smoke.png"
 			},
 			{
 				"name": "Pink Smoke",
 				"description": "Now you see me, now you don't",
-				"file": "/decorations/pink_smoke.png"
+				"file": "pink_smoke.png"
 			},
 			{
 				"name": "Green Smoke",
 				"description": "Now you see me, now you don't",
-				"file": "/decorations/green_smoke.png"
+				"file": "green_smoke.png"
 			},
 			{
 				"name": "Blue Gyroscope",
 				"description": "Keeping your avatar stable while stylish.",
-				"file": "/decorations/blue_gyroscope.png"
+				"file": "blue_gyroscope.png"
 			},
 			{
 				"name": "Pink Gyroscope",
 				"description": "Keeping your avatar stable while stylish.",
-				"file": "/decorations/pink_gyroscope.png"
+				"file": "pink_gyroscope.png"
 			},
 			{
 				"name": "Green Gyroscope",
 				"description": "Keeping your avatar stable while stylish.",
-				"file": "/decorations/green_gyroscope.png"
+				"file": "green_gyroscope.png"
 			},
 			{
 				"name": "Blue Shine Helmet",
 				"description": "Always wear your helmet.",
-				"file": "/decorations/blue_shine_helmet.png"
+				"file": "blue_shine_helmet.png"
 			},
 			{
 				"name": "Pink Shine Helmet",
 				"description": "Always wear your helmet.",
-				"file": "/decorations/pink_shine_helmet.png"
+				"file": "pink_shine_helmet.png"
 			},
 			{
 				"name": "Green Shine Helmet",
 				"description": "Always wear your helmet.",
-				"file": "/decorations/green_shine_helmet.png"
+				"file": "green_shine_helmet.png"
 			},
 			{
 				"name": "Blue Hyper Helmet",
 				"description": "Always wear your helmet.",
-				"file": "/decorations/blue_hyper_helmet.png"
+				"file": "blue_hyper_helmet.png"
 			},
 			{
 				"name": "Pink Hyper Helmet",
 				"description": "Always wear your helmet.",
-				"file": "/decorations/pink_hyper_helmet.png"
+				"file": "pink_hyper_helmet.png"
 			},
 			{
 				"name": "Green Hyper Helmet",
 				"description": "Always wear your helmet.",
-				"file": "/decorations/green_hyper_helmet.png"
+				"file": "green_hyper_helmet.png"
 			},
 			{
 				"name": "Saw",
 				"description": "Here to make your avatar more stylish... and dangerous!",
-				"file": "/decorations/saw.png"
+				"file": "saw.png"
 			}
 		]
 	},
@@ -1679,102 +1679,102 @@
 			{
 				"name": "Sakura",
 				"description": "Close your eyes and breathe.",
-				"file": "/decorations/sakura.png"
+				"file": "sakura.png"
 			},
 			{
 				"name": "Pink Sakura",
 				"description": "Close your eyes and breathe.",
-				"file": "/decorations/sakura_pink.png"
+				"file": "sakura_pink.png"
 			},
 			{
 				"name": "Ukon Sakura",
 				"description": "Close your eyes and breathe.",
-				"file": "/decorations/sakura_ukon.png"
+				"file": "sakura_ukon.png"
 			},
 			{
 				"name": "Gyoiko Sakura",
 				"description": "Close your eyes and breathe.",
-				"file": "/decorations/sakura_gyoiko.png"
+				"file": "sakura_gyoiko.png"
 			},
 			{
 				"name": "Mushroom #1",
 				"description": "A mushroom.",
-				"file": "/decorations/mushroom_1.png"
+				"file": "mushroom_1.png"
 			},
 			{
 				"name": "Mushroom #2",
 				"description": "A mushroom.",
-				"file": "/decorations/mushroom_2.png"
+				"file": "mushroom_2.png"
 			},
 			{
 				"name": "Mushroom #3",
 				"description": "A mushroom.",
-				"file": "/decorations/mushroom_3.png"
+				"file": "mushroom_3.png"
 			},
 			{
 				"name": "Mushroom #4",
 				"description": "A mushroom.",
-				"file": "/decorations/mushroom_4.png"
+				"file": "mushroom_4.png"
 			},
 			{
 				"name": "Forest",
 				"description": "A forest.",
-				"file": "/decorations/forest.png"
+				"file": "forest.png"
 			},
 			{
 				"name": "Frog #1",
 				"description": "*ribbit*",
-				"file": "/decorations/frog_1.png"
+				"file": "frog_1.png"
 			},
 			{
 				"name": "Frog #2",
 				"description": "*ribbit*",
-				"file": "/decorations/frog_derpy.png"
+				"file": "frog_derpy.png"
 			},
 			{
 				"name": "Frog #3",
 				"description": "*ribbit*",
-				"file": "/decorations/frog_3.png"
+				"file": "frog_3.png"
 			},
 			{
 				"name": "Frog #4",
 				"description": "*ribbit*",
-				"file": "/decorations/frog_angry.png"
+				"file": "frog_angry.png"
 			},
 			{
 				"name": "Lazy Cat #1",
 				"description": "A lazy cat.",
-				"file": "/decorations/cat_1.png"
+				"file": "cat_1.png"
 			},
 			{
 				"name": "Lazy Cat #2",
 				"description": "A lazy cat.",
-				"file": "/decorations/cat_2.png"
+				"file": "cat_2.png"
 			},
 			{
 				"name": "Lazy Cat #3",
 				"description": "A lazy cat.",
-				"file": "/decorations/cat_3.png"
+				"file": "cat_3.png"
 			},
 			{
 				"name": "Lazy Cat #4",
 				"description": "A lazy cat.",
-				"file": "/decorations/cat_4.png"
+				"file": "cat_4.png"
 			},
 			{
 				"name": "Dogs #1",
 				"description": "Happy dogs.",
-				"file": "/decorations/dog_1.png"
+				"file": "dog_1.png"
 			},
 			{
 				"name": "Dogs #2",
 				"description": "Happy dogs.",
-				"file": "/decorations/dog_2.png"
+				"file": "dog_2.png"
 			},
 			{
 				"name": "Dogs #3",
 				"description": "Happy dogs.",
-				"file": "/decorations/dog_3.png"
+				"file": "dog_3.png"
 			}
 		]
 	},
@@ -1791,112 +1791,112 @@
 			{
 				"name": "Green Blanket",
 				"description": "Limited time decoration from December 2022. Given to all nitro subscribers.",
-				"file": "/decorations/blanket_green.png"
+				"file": "blanket_green.png"
 			},
 			{
 				"name": "Orange Blanket",
 				"description": "Limited time decoration from December 2022. Given to all nitro subscribers.",
-				"file": "/decorations/blanket_orange.png"
+				"file": "blanket_orange.png"
 			},
 			{
 				"name": "Pink Blanket",
 				"description": "Limited time decoration from December 2022. Given to all nitro subscribers.",
-				"file": "/decorations/blanket_pink.png"
+				"file": "blanket_pink.png"
 			},
 			{
 				"name": "Purple Blanket",
 				"description": "Limited time decoration from December 2022. Given to all nitro subscribers.",
-				"file": "/decorations/blanket_purple.png"
+				"file": "blanket_purple.png"
 			},
 			{
 				"name": "White Box",
 				"description": "Limited time decoration from December 2022. Given to all nitro subscribers.",
-				"file": "/decorations/box_white_blue.png"
+				"file": "box_white_blue.png"
 			},
 			{
 				"name": "Blue Box",
 				"description": "Limited time decoration from December 2022. Given to all nitro subscribers.",
-				"file": "/decorations/box_blue_yellow.png"
+				"file": "box_blue_yellow.png"
 			},
 			{
 				"name": "Green Box",
 				"description": "Limited time decoration from December 2022. Given to all nitro subscribers.",
-				"file": "/decorations/box_green_red.png"
+				"file": "box_green_red.png"
 			},
 			{
 				"name": "Red Box",
 				"description": "Limited time decoration from December 2022. Given to all nitro subscribers.",
-				"file": "/decorations/box_red_white.png"
+				"file": "box_red_white.png"
 			},
 			{
 				"name": "Red White Box",
 				"description": "Limited time decoration from December 2022. Given to all nitro subscribers.",
-				"file": "/decorations/box_red_white_blue.png"
+				"file": "box_red_white_blue.png"
 			},
 			{
 				"name": "Festive Confetti",
 				"description": "Limited time decoration from December 2022. Given to all nitro subscribers.",
-				"file": "/decorations/confetti_festive.png"
+				"file": "confetti_festive.png"
 			},
 			{
 				"name": "Fire Confetti",
 				"description": "Limited time decoration from December 2022. Given to all nitro subscribers.",
-				"file": "/decorations/confetti_fire.png"
+				"file": "confetti_fire.png"
 			},
 			{
 				"name": "Ice Confetti",
 				"description": "Limited time decoration from December 2022. Given to all nitro subscribers.",
-				"file": "/decorations/confetti_ice.png"
+				"file": "confetti_ice.png"
 			},
 			{
 				"name": "Mint Confetti",
 				"description": "Limited time decoration from December 2022. Given to all nitro subscribers.",
-				"file": "/decorations/confetti_mint.png"
+				"file": "confetti_mint.png"
 			},
 			{
 				"name": "Star Confetti",
 				"description": "Limited time decoration from December 2022. Given to all nitro subscribers.",
-				"file": "/decorations/confetti_star.png"
+				"file": "confetti_star.png"
 			},
 			{
 				"name": "Vaporwave Confetti",
 				"description": "Limited time decoration from December 2022. Given to all nitro subscribers.",
-				"file": "/decorations/confetti_vaporwave.png"
+				"file": "confetti_vaporwave.png"
 			},
 			{
 				"name": "Icecube",
 				"description": "Limited time decoration from December 2022. Given to all nitro subscribers.",
-				"file": "/decorations/ice_cube.png"
+				"file": "ice_cube.png"
 			},
 			{
 				"name": "Gleaming Icicle",
 				"description": "Limited time decoration from December 2022. Given to all nitro subscribers.",
-				"file": "/decorations/icicle_gleaming.png"
+				"file": "icicle_gleaming.png"
 			},
 			{
 				"name": "Snowing Icicle",
 				"description": "Limited time decoration from December 2022. Given to all nitro subscribers.",
-				"file": "/decorations/icicle_snowing.png"
+				"file": "icicle_snowing.png"
 			},
 			{
 				"name": "Blue Teacup",
 				"description": "Limited time decoration from December 2022. Given to all nitro subscribers.",
-				"file": "/decorations/teacup_blue.png"
+				"file": "teacup_blue.png"
 			},
 			{
 				"name": "Orange Teacup",
 				"description": "Limited time decoration from December 2022. Given to all nitro subscribers.",
-				"file": "/decorations/teacup_orange.png"
+				"file": "teacup_orange.png"
 			},
 			{
 				"name": "Pink Teacup",
 				"description": "Limited time decoration from December 2022. Given to all nitro subscribers.",
-				"file": "/decorations/teacup_pink.png"
+				"file": "teacup_pink.png"
 			},
 			{
 				"name": "Red Teacup",
 				"description": "Limited time decoration from December 2022. Given to all nitro subscribers.",
-				"file": "/decorations/teacup_red.png"
+				"file": "teacup_red.png"
 			}
 		]
 	}

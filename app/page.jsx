@@ -237,7 +237,7 @@ const App = ({ ffmpegRef, isServer }) => {
 												data-tooltip-content={avatar.name}
 												className="border-2 border-surface1 bg-surface1 p-2 rounded-[5px] w-full aspect-square avatar-preset outline-none"
 												onClick={(e) => {
-													setAvUrl(baseImgUrl + avatar.file);
+													setAvUrl(`${baseImgUrl}/avatars/${avatar.file}`);
 													for (const el of document.querySelectorAll(
 														"button.avatar-preset.border-2.border-primary",
 													)) {
@@ -249,7 +249,7 @@ const App = ({ ffmpegRef, isServer }) => {
 												}}
 											>
 												<Image
-													src={avatar.file}
+													src={`/avatars/${avatar.file}`}
 													className="rounded-full pointer-events-none"
 												/>
 											</button>
@@ -398,7 +398,7 @@ const App = ({ ffmpegRef, isServer }) => {
 														onClick={(e) => {
 															setName(decor.name);
 															setDescription(decor.description);
-															setDecoUrl(decor.file);
+															setDecoUrl(`/decorations/${decor.file}`);
 															for (const el of document.querySelectorAll(
 																"button.decor.border-2.border-primary",
 															)) {
@@ -410,7 +410,7 @@ const App = ({ ffmpegRef, isServer }) => {
 														}}
 													>
 														<Image
-															src={decor.file}
+															src={`/decorations/${decor.file}`}
 															className="pointer-events-none"
 														/>
 													</button>
