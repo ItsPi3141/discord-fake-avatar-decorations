@@ -86,6 +86,48 @@
 		]
 	},
 	{
+		"name": "Arcane",
+		"description": "The hunt is on.",
+		"descriptionTopMargin": "-4px",
+		"banner": {
+			"image": "/banners/arcane.png",
+			"text": "/bannertext/arcane.png",
+			"height": 84
+		},
+		"items": [
+			{
+				"name": "The Monster You Created",
+				"description": "“Powder fell down a well.”",
+				"file": "the_monster_you_created.png"
+			},
+			{
+				"name": "The Atlas Gauntlets",
+				"description": "Meant for mining, better for punching.",
+				"file": "the_atlas_gauntlets.png"
+			},
+			{
+				"name": "Flame Chompers",
+				"description": "Jinx names each and every one.",
+				"file": "flame_chompers.png"
+			},
+			{
+				"name": "FISHBONES!",
+				"description": "And now: the grand finale.",
+				"file": "fishbones.png"
+			},
+			{
+				"name": "The Hexcore",
+				"description": "It’s changing, adapting… but to what end?",
+				"file": "the_hexcore.png"
+			},
+			{
+				"name": "Powered by Shimmer",
+				"description": "Breathe it in. That’s power.",
+				"file": "powered_by_shimmer.png"
+			}
+		]
+	},
+	{
 		"name": "Mythical Creatures",
 		"description": "Wonders lost to time, found again.",
 		"descriptionTopMargin": "-8px",
