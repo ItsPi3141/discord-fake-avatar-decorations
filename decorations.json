@@ -90,7 +90,20 @@
 		"description": "The hunt is on.",
 		"descriptionTopMargin": "-4px",
 		"banner": {
-			"image": "/banners/arcane.png",
+			"image": [
+				{
+					"url": "/banners/arcane.png",
+					"align": "center",
+					"height": "100%",
+					"width": "100%"
+				},
+				{
+					"url": "/banners/arcane1.png",
+					"align": "center",
+					"height": "100%",
+					"width": "100%"
+				}
+			],
 			"text": "/bannertext/arcane.png",
 			"height": 84
 		},
