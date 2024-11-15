@@ -1,5 +1,9 @@
 [
 	{
+		"name": "Arcane",
+		"file": "arcane.png"
+	},
+	{
 		"name": "Dungeons & Dragons",
 		"file": "dungeons_and_dragons.png"
 	},
