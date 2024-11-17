@@ -82,6 +82,11 @@
 				"name": "Wolf Morph",
 				"description": "Your Morph can take on many unique forms and help you move throughout the world in THRONE AND LIBERTY. Available until to use November 30, 2024.",
 				"file": "wolf_morph.png"
+			},
+			{
+				"name": "Wallach IX Spaceport",
+				"description": "The Wallach IX Spaceport is a dynamic port for space travel on the planet Wallach IX. This reward is exclusive to the Dune: Prophecy Quest. Available until to use January 25, 2025.",
+				"file": "wallach_spaceport.png"
 			}
 		]
 	},
