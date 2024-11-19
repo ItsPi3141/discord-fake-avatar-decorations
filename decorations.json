@@ -114,6 +114,16 @@
 		},
 		"items": [
 			{
+				"name": "The Anomaly",
+				"description": "Beautiful. Impossible. Inevitable.",
+				"file": "the_anomaly.png"
+			},
+			{
+				"name": "The Mark",
+				"description": "An act of desperation. This changes nothing.",
+				"file": "the_mark.png"
+			},
+			{
 				"name": "The Monster You Created",
 				"description": "“Powder fell down a well.”",
 				"file": "the_monster_you_created.png"
