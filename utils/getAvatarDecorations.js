@@ -4,9 +4,16 @@
 		"div[class^='categories_'] div[class^='shopCard'] div[class^='avatarContainer_'] svg:nth-child(2) div[class^='avatarStack_'] > img[class^='avatar_']",
 	)) {
 		e.push(
-			el
+			`${el
 				.getAttribute("src")
-				.replace(/size=\d{2,4}&passthrough=false/, "size=1024"),
+				.replace(
+					/size=\d{2,4}&passthrough=false/,
+					"size=1024",
+				)}&name=${el.parentNode.parentNode.parentNode.parentNode.parentNode.parentNode.parentNode
+				.querySelector("div[class*='cardText_'] div[class*='productName_']")
+				.innerText.toLowerCase()
+				.replaceAll("'", "")
+				.replaceAll(/[^A-Za-z0-9]/g, "_")}.png`,
 		);
 	}
 	console.log(e.join("\n"));

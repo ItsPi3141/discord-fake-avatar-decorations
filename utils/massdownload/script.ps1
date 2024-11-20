@@ -4,7 +4,7 @@ if (Test-Path -Path ".\output\") {
 }
 mkdir .\output\
 foreach ($url in Get-Content .\urls.txt) {
-    $name = $url -replace "\w+:\/\/(\w+\.?)+\/avatar-decoration-presets\/", ".\output\" -replace "\?(\w+=\w+&?)*", ""
+    $name = $url -replace ".+&name=", ".\output\"
     Write-Output $name
     Invoke-WebRequest $url -OutFile $name
 }
