@@ -1,5 +1,9 @@
 [
 	{
+		"name": "Kawaii Mode",
+		"file": "kawaii_mode.png"
+	},
+	{
 		"name": "Arcane",
 		"file": "arcane.png"
 	},

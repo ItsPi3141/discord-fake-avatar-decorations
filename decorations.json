@@ -91,6 +91,59 @@
 		]
 	},
 	{
+		"name": "Kawaii Mode",
+		"description": "When :3 is your game face.",
+		"descriptionTopMargin": "-4px",
+		"darkText": true,
+		"banner": {
+			"image": "/banners/kawaii_mode.png",
+			"text": "/bannertext/kawaii_mode.png",
+			"height": 64
+		},
+		"items": [
+			{
+				"name": "Cat Ear Headset",
+				"description": "(O)≽^ ᴖ ω ᴖ ^≼ (O)",
+				"file": "cat_ear_headset.png"
+			},
+			{
+				"name": "Bubble Tea",
+				"description": "Of course I need bubble tea every day. It's called self-care.",
+				"file": "bubble_tea.png"
+			},
+			{
+				"name": "Bunny Zzzs",
+				"description": "Can the snoozers hop in voice already?!",
+				"file": "bunny_zzzs.png"
+			},
+			{
+				"name": "Sproutling",
+				"description": "Your very own bud who'll always root for you!",
+				"file": "sproutling.png"
+			},
+			{
+				"name": "Bloomling",
+				"description": "Your very own bloom who wants to see you flourish!",
+				"file": "bloomling.png"
+			},
+			{
+				"name": "Neon Nibbles",
+				"description": "One does not simply turn off munchie mode.",
+				"file": "neon_nibbles.png"
+			},
+			{
+				"name": "UwU XP",
+				"description": "Being pixel perfect isn't a phase, it's a lifestyle.",
+				"file": "uwu_xp.png"
+			},
+			{
+				"name": "Hex Lights",
+				"description": "When you want glow up the room but the parents say \"NoOo, they're too expensive!!\" so you buy these to glow up anyway.",
+				"file": "hex_lights.png"
+			}
+		]
+	},
+	{
 		"name": "Arcane",
 		"description": "The hunt is on.",
 		"descriptionTopMargin": "-4px",
