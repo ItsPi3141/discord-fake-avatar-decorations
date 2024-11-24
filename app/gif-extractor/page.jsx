@@ -11,6 +11,7 @@ import FileUpload from "../components/fileupload.jsx";
 import Image from "../components/image.jsx";
 
 import { printMsg } from "../print.js";
+import { Icons } from "../components/icons.jsx";
 
 export default function GifExtractor() {
 	const isServer = typeof window === "undefined";
@@ -73,7 +74,7 @@ export default function GifExtractor() {
 							<>
 								<button
 									type="button"
-									className="flex justify-center items-center gap-1 bg-primary hover:bg-primaryAlt mt-3 py-1.5 rounded-[3px] w-72 transition"
+									className="flex justify-center items-center gap-1 mt-3 py-1.5 w-72 button-primary"
 									onClick={() => {
 										document.getElementById("upload-gif").click();
 									}}
@@ -105,31 +106,13 @@ export default function GifExtractor() {
 								<div className="relative flex flex-col items-center">
 									<button
 										type="button"
-										className="top-2 right-2 absolute bg-surface5 hover:bg-secondary shadow p-1 rounded text-error"
+										className="top-2 right-2 absolute bg-surface2 hover:bg-surface3 shadow p-2 rounded-lg text-error text-lg"
 										onClick={() => {
 											setFile(null);
 											setFrames(null);
 										}}
 									>
-										<svg
-											aria-hidden="true"
-											xmlns="http://www.w3.org/2000/svg"
-											width="20"
-											height="20"
-											fill="none"
-											viewBox="0 0 24 24"
-										>
-											<path
-												fill="currentColor"
-												d="M14.25 1c.41 0 .75.34.75.75V3h5.25c.41 0 .75.34.75.75v.5c0 .41-.34.75-.75.75H3.75A.75.75 0 0 1 3 4.25v-.5c0-.41.34-.75.75-.75H9V1.75c0-.41.34-.75.75-.75h4.5Z"
-											/>
-											<path
-												fill="currentColor"
-												fillRule="evenodd"
-												d="M5.06 7a1 1 0 0 0-1 1.06l.76 12.13a3 3 0 0 0 3 2.81h8.36a3 3 0 0 0 3-2.81l.75-12.13a1 1 0 0 0-1-1.06H5.07ZM11 12a1 1 0 1 0-2 0v6a1 1 0 1 0 2 0v-6Zm3-1a1 1 0 0 1 1 1v6a1 1 0 1 1-2 0v-6a1 1 0 0 1 1-1Z"
-												clipRule="evenodd"
-											/>
-										</svg>
+										<Icons.delete />
 									</button>
 									<Image
 										src={file}
@@ -138,7 +121,7 @@ export default function GifExtractor() {
 									/>
 									<button
 										type="button"
-										className="flex justify-center items-center gap-1 bg-primary hover:bg-primaryAlt mt-3 py-1.5 rounded-[3px] w-72 max-w-[calc(100vw-4rem)] transition"
+										className="flex justify-center items-center gap-1 mt-3 py-1.5 w-72 max-w-[calc(100vw-4rem)] button-primary"
 										onClick={async () => {
 											setFrames(await imagesFromGif(ffmpegRef.current, file));
 										}}

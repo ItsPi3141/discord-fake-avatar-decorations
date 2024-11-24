@@ -18,6 +18,7 @@ import { printMsg, printErr } from "./print.js";
 
 import "react-tooltip/dist/react-tooltip.css";
 import { Tooltip } from "react-tooltip";
+import { Icons } from "./components/icons.jsx";
 
 const decorationsData = require("../decorations.json");
 const avatarsData = require("../avatars.json");
@@ -169,7 +170,7 @@ const App = ({ ffmpegRef, isServer }) => {
 						<div className="flex sm:flex-row flex-col sm:items-center gap-3">
 							<button
 								type="button"
-								className="bg-primary hover:bg-primaryAlt px-4 py-2 rounded transition"
+								className="px-4 py-1.5 button-primary"
 								onClick={() => {
 									document.getElementById("upload-avatar").click();
 								}}
@@ -195,7 +196,7 @@ const App = ({ ffmpegRef, isServer }) => {
 							<p className="text-center sm:text-left">or</p>
 							<input
 								type="text"
-								className="bg-surface1 px-2.5 py-2 rounded transition grow outline-none"
+								className="border-white/5 bg-surface4 px-2.5 py-2 border rounded-lg transition grow outline-none"
 								placeholder="Enter image URL..."
 								onChange={async (e) => {
 									const res = await fetch(e.target.value);
@@ -235,7 +236,7 @@ const App = ({ ffmpegRef, isServer }) => {
 													.toLowerCase()
 													.replaceAll(" ", "-")}
 												data-tooltip-content={avatar.name}
-												className="border-2 border-surface1 bg-surface1 p-2 rounded-[5px] w-full aspect-square avatar-preset outline-none"
+												className="border-2 border-surface2 bg-surface2 p-2 rounded-[5px] w-full aspect-square avatar-preset outline-none"
 												onClick={(e) => {
 													setAvUrl(`${baseImgUrl}/avatars/${avatar.file}`);
 													for (const el of document.querySelectorAll(
@@ -394,7 +395,7 @@ const App = ({ ffmpegRef, isServer }) => {
 													<button
 														key={index}
 														type="button"
-														className="border-2 border-surface1 bg-surface1 p-1 rounded-[5px] w-full aspect-square decor"
+														className="border-2 border-surface2 bg-surface2 p-1 rounded-[5px] w-full aspect-square decor"
 														onClick={(e) => {
 															setName(decor.name);
 															setDescription(decor.description);
@@ -427,10 +428,10 @@ const App = ({ ffmpegRef, isServer }) => {
 						{/* PROFILE PREVIEW */}
 						<div
 							id="profile-preview"
-							className="relative bg-surface2 shadow-lg rounded-xl w-[256px] xs:w-[340px] overflow-hidden select-none"
+							className="relative bg-surface0 shadow-lg rounded-lg w-[300px] overflow-hidden select-none"
 						>
-							<div className="bg-[#5461f2] h-[60px]" />
-							<div className="top-4 left-5 absolute border-[6px] border-surface2 bg-surface2 rounded-full w-[92px] h-[92px] select-none">
+							<div className="bg-[#5461f2] h-[105px]" />
+							<div className="top-[61px] left-[16px] absolute bg-surface0 p-[6px] rounded-full w-[92px] h-[92px] select-none">
 								<div className="relative rounded-full w-[80px] h-[80px] overflow-hidden">
 									{avUrl === "loading" ? (
 										<div className="top-[24px] left-[24px] absolute">
@@ -457,26 +458,18 @@ const App = ({ ffmpegRef, isServer }) => {
 								</div>
 								<div className="right-[-4px] bottom-[-4px] absolute border-[5px] border-surface2 bg-[#229f56] rounded-full w-7 h-7" />
 							</div>
-							<div className="bg-surface0 m-4 mt-[calc(15rem/4)] p-4 rounded-lg w-[calc(100%-32px)]">
+							<div className="bg-surface0 mt-[35px] p-4 rounded-lg w-[calc(100%)]">
 								<p className="font-semibold text-xl [letter-spacing:.02em]">
 									{name || "Display Name"}
 								</p>
-								<p className="text-sm">{description || "username"}</p>
-								<hr />
-								<p className="font-semibold text-xs [letter-spacing:.02em] mb-1 scale-y-95">
-									ABOUT ME
-								</p>
+								<p className="mb-3 text-sm">username</p>
 								<p className="text-sm">
-									Hello, this is an example profile so that you can see what the
-									profile picture would actually look like on Discord.
+									{description ||
+										"This is an example profile so that you can see what the profile picture would actually look like on Discord."}
 								</p>
-								<p className="font-semibold text-xs [letter-spacing:.02em] mt-3 mb-1 scale-y-95">
-									DISCORD MEMBER SINCE
-								</p>
-								<p className="text-sm">May 13, 2015</p>
 								<button
 									type="button"
-									className="flex justify-center items-center gap-2 bg-secondary hover:bg-secondaryAlt mt-3 py-1.5 rounded-[3px] w-full transition"
+									className="flex justify-center items-center gap-1.5 mt-3 px-4 py-1.5 w-full button-dark"
 									onClick={() => {
 										setFinishedAv("");
 										setIsGeneratingAv(true);
@@ -488,23 +481,13 @@ const App = ({ ffmpegRef, isServer }) => {
 										);
 									}}
 								>
-									<svg
-										aria-hidden="true"
-										xmlns="http://www.w3.org/2000/svg"
-										height="1em"
-										viewBox="0 0 448 512"
-									>
-										<path
-											fill="#ffffff"
-											d="M64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V173.3c0-17-6.7-33.3-18.7-45.3L352 50.7C340 38.7 323.7 32 306.7 32H64zm0 96c0-17.7 14.3-32 32-32H288c17.7 0 32 14.3 32 32v64c0 17.7-14.3 32-32 32H96c-17.7 0-32-14.3-32-32V128zM224 288a64 64 0 1 1 0 128 64 64 0 1 1 0-128z"
-										/>
-									</svg>
+									<Icons.image />
 									Save image
 								</button>
 							</div>
 						</div>
 						{/* Message preview */}
-						<div className="border-surface1 bg-surface3 py-4 border rounded-lg w-full cursor-default select-none">
+						<div className="border-secondaryAlt bg-surface5 py-4 border rounded-lg w-[300px] cursor-default select-none">
 							{[
 								{
 									styled: false,
@@ -550,7 +533,7 @@ const App = ({ ffmpegRef, isServer }) => {
 							].map((m, i) => {
 								return (
 									<div
-										className="flex items-center gap-4 hover:bg-[#02020210] px-4 py-0.5"
+										className="flex items-center gap-4 hover:bg-surface4 px-4 py-0.5"
 										style={{
 											marginTop: m.groupStart && i !== 0 ? "17px" : "0",
 										}}
@@ -632,27 +615,19 @@ const App = ({ ffmpegRef, isServer }) => {
 							</p>
 							<button
 								type="button"
-								className="flex justify-center items-center gap-1 bg-white/10 hover:bg-white/20 mt-3 py-1.5 rounded-[3px] transition shiny-button"
+								className="flex justify-center items-center gap-1.5 bg-white/10 hover:bg-white/20 mt-3 py-1.5 rounded-lg transition shiny-button"
 								onClick={() => {
 									window.open(
 										"https://github.com/ItsPi3141/discord-fake-avatar-decorations",
 									);
 								}}
 							>
-								<svg
-									aria-hidden="true"
-									height="1em"
-									viewBox="2 2 22 21"
-									xmlns="http://www.w3.org/2000/svg"
-									fill="#ffffff"
-								>
-									<path d="M10.788 3.103c.495-1.004 1.926-1.004 2.421 0l2.358 4.777 5.273.766c1.107.161 1.549 1.522.748 2.303l-3.816 3.72.901 5.25c.19 1.103-.968 1.944-1.959 1.424l-4.716-2.48-4.715 2.48c-.99.52-2.148-.32-1.96-1.424l.901-5.25-3.815-3.72c-.801-.78-.359-2.142.748-2.303L8.43 7.88l2.358-4.777Z" />
-								</svg>
+								<Icons.star />
 								Star on GitHub
 							</button>
 							<button
 								type="button"
-								className="flex justify-center items-center gap-1 bg-white/10 hover:bg-white/20 mt-3 py-1.5 rounded-[3px] transition"
+								className="flex justify-center items-center gap-1.5 bg-white/10 hover:bg-white/20 mt-3 py-1.5 rounded-lg transition"
 								onClick={() => {
 									navigator.clipboard.writeText(window.location.href);
 									setShared(true);
@@ -663,18 +638,7 @@ const App = ({ ffmpegRef, isServer }) => {
 								data-tooltip-id="share-tooltip"
 								data-tooltip-content="Copied to clipboard!"
 							>
-								<svg
-									aria-hidden="true"
-									height="1.1em"
-									fill="none"
-									viewBox="2 2 21 21"
-									xmlns="http://www.w3.org/2000/svg"
-								>
-									<path
-										d="M17 3.002a2.998 2.998 0 1 1-2.148 5.09l-5.457 3.12a3.002 3.002 0 0 1 0 1.577l5.458 3.119a2.998 2.998 0 1 1-.746 1.304l-5.457-3.12a2.998 2.998 0 1 1 0-4.184l5.457-3.12A2.998 2.998 0 0 1 17 3.002Z"
-										fill="#ffffff"
-									/>
-								</svg>
+								<Icons.link />
 								Share the website
 							</button>
 							<Tooltip
@@ -694,23 +658,14 @@ const App = ({ ffmpegRef, isServer }) => {
 							/>
 							<button
 								type="button"
-								className="flex justify-center items-center gap-1 bg-white/10 hover:bg-white/20 mt-3 py-1.5 rounded-[3px] transition"
+								className="flex justify-center items-center gap-1.5 bg-white/10 hover:bg-white/20 mt-3 py-1.5 rounded-lg transition"
 								onClick={() => {
 									window.open(
 										"https://github.com/ItsPi3141/discord-fake-avatar-decorations/issues/new",
 									);
 								}}
 							>
-								<svg
-									aria-hidden="true"
-									height="1em"
-									viewBox="0 0 16 16"
-									xmlns="http://www.w3.org/2000/svg"
-									fill="#ffffff"
-								>
-									<path d="M4.978.855a.5.5 0 1 0-.956.29l.41 1.352A5 5 0 0 0 3 6h10a5 5 0 0 0-1.432-3.503l.41-1.352a.5.5 0 1 0-.956-.29l-.291.956A5 5 0 0 0 8 1a5 5 0 0 0-2.731.811l-.29-.956z" />
-									<path d="M13 6v1H8.5v8.975A5 5 0 0 0 13 11h.5a.5.5 0 0 1 .5.5v.5a.5.5 0 1 0 1 0v-.5a1.5 1.5 0 0 0-1.5-1.5H13V9h1.5a.5.5 0 0 0 0-1H13V7h.5A1.5 1.5 0 0 0 15 5.5V5a.5.5 0 0 0-1 0v.5a.5.5 0 0 1-.5.5zm-5.5 9.975V7H3V6h-.5a.5.5 0 0 1-.5-.5V5a.5.5 0 0 0-1 0v.5A1.5 1.5 0 0 0 2.5 7H3v1H1.5a.5.5 0 0 0 0 1H3v1h-.5A1.5 1.5 0 0 0 1 11.5v.5a.5.5 0 1 0 1 0v-.5a.5.5 0 0 1 .5-.5H3a5 5 0 0 0 4.5 4.975" />
-								</svg>
+								<Icons.bug />
 								Report a bug
 							</button>
 						</div>
@@ -793,7 +748,7 @@ const App = ({ ffmpegRef, isServer }) => {
 									<div className="flex flex-col items-center gap-2 mt-3 w-full">
 										<button
 											type="button"
-											className="flex justify-center items-center gap-1 bg-secondary hover:bg-secondaryAlt py-1.5 rounded-[3px] w-72 transition"
+											className="flex justify-center items-center gap-1.5 py-1.5 w-72 button-light"
 											onClick={() => {
 												const a = document.createElement("a");
 												a.href = finishedAv;
@@ -801,23 +756,12 @@ const App = ({ ffmpegRef, isServer }) => {
 												a.click();
 											}}
 										>
-											<svg
-												aria-hidden="true"
-												height="1.1em"
-												fill="none"
-												viewBox="0 0 24 24"
-												xmlns="http://www.w3.org/2000/svg"
-											>
-												<path
-													d="M5.25 20.5h13.498a.75.75 0 0 1 .101 1.493l-.101.007H5.25a.75.75 0 0 1-.102-1.494l.102-.006h13.498H5.25Zm6.633-18.498L12 1.995a1 1 0 0 1 .993.883l.007.117v12.59l3.294-3.293a1 1 0 0 1 1.32-.083l.094.084a1 1 0 0 1 .083 1.32l-.083.094-4.997 4.996a1 1 0 0 1-1.32.084l-.094-.083-5.004-4.997a1 1 0 0 1 1.32-1.498l.094.083L11 15.58V2.995a1 1 0 0 1 .883-.993L12 1.995l-.117.007Z"
-													fill="#ffffff"
-												/>
-											</svg>
+											<Icons.download />
 											Save
 										</button>
 										<button
 											type="button"
-											className="flex justify-center items-center gap-1 bg-secondary hover:bg-secondaryAlt py-1.5 rounded-[3px] w-72 transition"
+											className="flex justify-center items-center gap-1.5 py-1.5 w-72 button-light"
 											onClick={() => {
 												if (!isServer) {
 													try {
@@ -829,19 +773,7 @@ const App = ({ ffmpegRef, isServer }) => {
 												}
 											}}
 										>
-											<svg
-												aria-hidden="true"
-												xmlns="http://www.w3.org/2000/svg"
-												height="1em"
-												viewBox="0 0 28 28"
-											>
-												<path
-													fill="#ffffff"
-													d="M4.66663 0.666626C2.45749 0.666626 0.666626 2.45748 0.666626 4.66662V23.3333C0.666626 25.5424 2.45748 27.3333 4.66662 27.3333H23.3333C25.5424 27.3333 27.3333 25.5424 27.3333 23.3333V4.66663C27.3333 2.45749 25.5424 0.666626 23.3333 0.666626H4.66663ZM8.66663 5.99996C10.1376 5.99996 11.3333 7.19356 11.3333 8.66663C11.3333 10.1408 10.1376 11.3333 8.66663 11.3333C7.19249 11.3333 5.99996 10.1408 5.99996 8.66663C5.99996 7.19356 7.19249 5.99996 8.66663 5.99996ZM5.99996 22L9.99996 16.6666L12.6666 19.3333L18 12.6666L22 22H5.99996Z"
-													fillRule="evenodd"
-													clipRule="evenodd"
-												/>
-											</svg>
+											<Icons.image />
 											Extract still image
 										</button>
 									</div>
@@ -868,7 +800,7 @@ const App = ({ ffmpegRef, isServer }) => {
 				<div className="flex flex-col items-center">
 					<button
 						type="button"
-						className="flex justify-center items-center gap-1 bg-secondary hover:bg-secondaryAlt py-1.5 rounded-[3px] w-72 transition"
+						className="flex justify-center items-center gap-1.5 py-1.5 w-72 button-dark"
 						onClick={() => {
 							const a = document.createElement("a");
 							a.href = finishedAv;
@@ -876,18 +808,7 @@ const App = ({ ffmpegRef, isServer }) => {
 							a.click();
 						}}
 					>
-						<svg
-							aria-hidden="true"
-							height="1.1em"
-							fill="none"
-							viewBox="0 0 24 24"
-							xmlns="http://www.w3.org/2000/svg"
-						>
-							<path
-								d="M5.25 20.5h13.498a.75.75 0 0 1 .101 1.493l-.101.007H5.25a.75.75 0 0 1-.102-1.494l.102-.006h13.498H5.25Zm6.633-18.498L12 1.995a1 1 0 0 1 .993.883l.007.117v12.59l3.294-3.293a1 1 0 0 1 1.32-.083l.094.084a1 1 0 0 1 .083 1.32l-.083.094-4.997 4.996a1 1 0 0 1-1.32.084l-.094-.083-5.004-4.997a1 1 0 0 1 1.32-1.498l.094.083L11 15.58V2.995a1 1 0 0 1 .883-.993L12 1.995l-.117.007Z"
-								fill="#ffffff"
-							/>
-						</svg>
+						<Icons.download />
 						Save
 					</button>
 				</div>

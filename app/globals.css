@@ -156,3 +156,14 @@ body::-webkit-scrollbar-thumb {
 	border: #b945c1 solid 1px;
 	background: linear-gradient(90deg, #b473f52b 0%, #e292aa2b 100%);
 }
+
+/* BUTTONS */
+.button-primary {
+	@apply border-white/5 bg-primary hover:bg-primaryAlt border rounded-lg transition;
+}
+.button-light {
+	@apply border-white/5 bg-surface6 hover:bg-surface7 border rounded-lg transition;
+}
+.button-dark {
+	@apply border-white/5 bg-secondary hover:bg-secondaryAlt border rounded-lg transition;
+}

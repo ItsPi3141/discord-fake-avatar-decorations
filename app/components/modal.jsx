@@ -1,7 +1,7 @@
 export default function Modal(props) {
 	return (
 		<div
-			className="top-0 left-0 fixed flex justify-center items-center bg-[#000d] w-screen h-screen select-none"
+			className="top-0 left-0 fixed flex justify-center items-center bg-black/80 w-screen h-screen select-none"
 			style={{
 				transition: "opacity 0.2s ease-in-out",
 				opacity: props.visible ? 1 : 0,
@@ -9,7 +9,7 @@ export default function Modal(props) {
 			}}
 		>
 			<div
-				className="relative flex flex-col bg-surface4 xs:rounded-lg w-screen xs:w-[420px] min-h-screen xs:min-h-[200px] text-white overflow-hidden modal-box"
+				className="relative flex flex-col bg-surface5 xs:rounded-lg w-screen xs:w-[420px] min-h-screen xs:min-h-[200px] text-white overflow-hidden modal-box"
 				style={{
 					transition: "all 0.2s ease-in-out",
 					scale: props.visible ? 1 : 0,
@@ -45,11 +45,11 @@ export default function Modal(props) {
 				<div className="flex flex-col justify-stretch p-4 grow">
 					{props.children}
 				</div>
-				<div className="flex justify-end bg-surface3 p-4 h-[70px]">
+				<div className="flex justify-end bg-surface5 p-4 h-[70px]">
 					{props.secondaryText && (
 						<button
 							type="button"
-							className="px-6 py-2 rounded text-sm text-white/70 hover:underline transition"
+							className="px-6 py-2 rounded-lg text-sm text-white/70 hover:underline transition"
 							onClick={props.onClose}
 						>
 							{props.secondaryText || "Cancel"}
@@ -57,7 +57,7 @@ export default function Modal(props) {
 					)}
 					<button
 						type="button"
-						className="bg-primary hover:bg-primaryAlt px-6 py-2 rounded text-sm transition"
+						className="px-6 py-2 text-sm button-primary"
 						onClick={props.onClose}
 					>
 						{props.closeText || "Close"}

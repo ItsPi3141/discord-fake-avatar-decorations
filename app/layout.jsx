@@ -34,7 +34,7 @@ export default function RootLayout({ children }) {
 				{/* Fonts */}
 				<link rel="stylesheet" href="https://itspi3141.github.io/discord-fonts/font.css" />
 			</head>
-			<body className="bg-surface4 overflow-x-hidden">
+			<body className="bg-surface5 overflow-x-hidden">
 				<FontPreloader />
 				{children}
 			</body>
