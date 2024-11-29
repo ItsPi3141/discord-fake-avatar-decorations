@@ -243,10 +243,10 @@ const App = ({ ffmpegRef, isServer }) => {
 														"button.avatar-preset.border-2.border-primary",
 													)) {
 														el.classList.remove("border-primary");
-														el.classList.add("border-surface1");
+														el.classList.add("border-surface2");
 													}
 													e.target.classList.add("border-primary");
-													e.target.classList.remove("border-surface1");
+													e.target.classList.remove("border-surface2");
 												}}
 											>
 												<Image
@@ -404,10 +404,10 @@ const App = ({ ffmpegRef, isServer }) => {
 																"button.decor.border-2.border-primary",
 															)) {
 																el.classList.remove("border-primary");
-																el.classList.add("border-surface1");
+																el.classList.add("border-surface2");
 															}
 															e.target.classList.add("border-primary");
-															e.target.classList.remove("border-surface1");
+															e.target.classList.remove("border-surface2");
 														}}
 													>
 														<Image
