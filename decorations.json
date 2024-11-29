@@ -91,6 +91,32 @@
 		]
 	},
 	{
+		"name": "Winter Wonderland",
+		"description": "tis the season",
+		"banner": {
+			"image": "/banners/winter_wonderland.png",
+			"text": "/bannertext/winter_wonderland.png"
+		},
+		"badge": "WINTER 2024",
+		"items": [
+			{
+				"name": "New Year 2025",
+				"description": "This decoration has not been officially released yet.",
+				"file": "new_year_2025.png"
+			},
+			{
+				"name": "Santa Cat Ears",
+				"description": "This decoration has not been officially released yet.",
+				"file": "santa_cat_ears.png"
+			},
+			{
+				"name": "Snowfall",
+				"description": "This decoration has not been officially released yet.",
+				"file": "snowfall.png"
+			}
+		]
+	},
+	{
 		"name": "Kawaii Mode",
 		"description": "When :3 is your game face.",
 		"descriptionTopMargin": "-4px",
@@ -1441,7 +1467,7 @@
 			{
 				"name": "New Year",
 				"description": "Ringing in 2024!",
-				"file": "new_year.png"
+				"file": "new_year_2024.png"
 			},
 			{
 				"name": "Fresh Pine",
