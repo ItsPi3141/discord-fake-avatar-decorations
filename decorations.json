@@ -87,6 +87,11 @@
 				"name": "Wallach IX Spaceport",
 				"description": "The Wallach IX Spaceport is a dynamic port for space travel on the planet Wallach IX. This reward is exclusive to the Dune: Prophecy Quest. Available until to use January 25, 2025.",
 				"file": "wallach_spaceport.png"
+			},
+			{
+				"name": "Batarang",
+				"description": "The Batarang is Batman’s legendary throwing weapon, blending precision and versatility to instill fear in his enemies. This reward is exclusive to the Become the Knight Quest. Available until to use February 8, 2025.",
+				"file": "batarang.png"
 			}
 		]
 	},
