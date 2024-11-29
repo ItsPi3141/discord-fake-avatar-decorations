@@ -1,3 +1,5 @@
+import { Icons } from "./icons";
+
 export default function Modal(props) {
 	return (
 		<div
@@ -9,7 +11,7 @@ export default function Modal(props) {
 			}}
 		>
 			<div
-				className="relative flex flex-col bg-surface5 xs:rounded-lg w-screen xs:w-[420px] min-h-screen xs:min-h-[200px] text-white overflow-hidden modal-box"
+				className="relative flex flex-col gap-4 border-[#97979f1f] bg-surface5 shadow-sm shadow-surface1/60 p-4 border xs:rounded-xl w-screen xs:w-[420px] min-h-screen xs:min-h-[200px] text-white overflow-hidden modal-box"
 				style={{
 					transition: "all 0.2s ease-in-out",
 					scale: props.visible ? 1 : 0,
@@ -18,34 +20,31 @@ export default function Modal(props) {
 			>
 				<button
 					type="button"
-					className="top-4 right-4 absolute text-secondaryAlt hover:text-white transition-colors [transition-duration:200ms]"
+					className="top-4 right-4 absolute opacity-50 hover:opacity-100 text-iconButton transition-opacity [transition-duration:200ms]"
 					onClick={props.onClose}
 				>
-					<svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24">
-						<path
-							fill="currentColor"
-							d="M18.4 4L12 10.4L5.6 4L4 5.6L10.4 12L4 18.4L5.6 20L12 13.6L18.4 20L20 18.4L13.6 12L20 5.6L18.4 4Z"
-						/>
-					</svg>
+					<Icons.close width="24px" height="24px" />
 				</button>
-				{props.title && (
-					<div className="flex justify-center pt-8">
-						<p className="font-semibold text-2xl [letter-spacing:.02em] text-center">
-							{props.title}
-						</p>
-					</div>
-				)}
-				{props.subtitle && (
-					<div className="flex justify-center px-4">
-						<p className="text-center text-sm text-white/70 xs:text-base">
-							{props.subtitle}
-						</p>
-					</div>
-				)}
-				<div className="flex flex-col justify-stretch p-4 grow">
+				<div className="flex flex-col gap-2">
+					{props.title && (
+						<div className="flex justify-center">
+							<p className="font-semibold text-2xl text-white/80 [letter-spacing:.02em] text-center">
+								{props.title}
+							</p>
+						</div>
+					)}
+					{props.subtitle && (
+						<div className="flex justify-center">
+							<p className="text-center text-sm text-white/70 xs:text-base">
+								{props.subtitle}
+							</p>
+						</div>
+					)}
+				</div>
+				<div className="flex flex-col justify-stretch grow">
 					{props.children}
 				</div>
-				<div className="flex justify-end bg-surface5 p-4 h-[70px]">
+				<div className="flex justify-end bg-surface5 mt-4 h-[38px]">
 					{props.secondaryText && (
 						<button
 							type="button"

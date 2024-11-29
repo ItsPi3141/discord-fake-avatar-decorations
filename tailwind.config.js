@@ -22,6 +22,7 @@ module.exports = {
 				surface6: "#404046",
 				surface7: "#48484e",
 				error: "#d9373d",
+				iconButton: "#bdbdc2",
 			},
 		},
 		screens: {
