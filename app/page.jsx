@@ -19,6 +19,7 @@ import { printMsg, printErr } from "./print.js";
 import "react-tooltip/dist/react-tooltip.css";
 import { Tooltip } from "react-tooltip";
 import { Icons } from "./components/icons.jsx";
+import { LoadingCircle, LoadingCubes } from "./components/spinner.jsx";
 
 const decorationsData = require("../decorations.json");
 const avatarsData = require("../avatars.json");
@@ -84,7 +85,7 @@ const LoadingScreen = () => (
 			<br />
 			FAKE AVATAR DECORATIONS
 		</p>
-		<LoadingSpinner className="mb-8" />
+		<LoadingCircle className="mb-4 w-10 h-10" />
 		<p>Loading...</p>
 	</main>
 );
@@ -435,7 +436,7 @@ const App = ({ ffmpegRef, isServer }) => {
 								<div className="relative rounded-full w-[80px] h-[80px] overflow-hidden">
 									{avUrl === "loading" ? (
 										<div className="top-[24px] left-[24px] absolute">
-											<LoadingSpinner />
+											<LoadingCubes />
 										</div>
 									) : (
 										<>
@@ -543,7 +544,7 @@ const App = ({ ffmpegRef, isServer }) => {
 											<>
 												{avUrl === "loading" ? (
 													<div className="relative w-10 h-10 scale-75">
-														<LoadingSpinner />
+														<LoadingCubes />
 													</div>
 												) : (
 													<>
@@ -723,7 +724,7 @@ const App = ({ ffmpegRef, isServer }) => {
 			>
 				{isGeneratingAv ? (
 					<div className="flex flex-col justify-center items-center gap-4 grow">
-						<LoadingSpinner />
+						<LoadingCubes />
 						<p>Creating image...</p>
 					</div>
 				) : (
@@ -836,10 +837,3 @@ const App = ({ ffmpegRef, isServer }) => {
 		</>
 	);
 };
-
-const LoadingSpinner = (props) => (
-	<span {...props} className={`loading-container ${props.className || ""}`}>
-		<span className="loading-cube" />
-		<span className="loading-cube" />
-	</span>
-);

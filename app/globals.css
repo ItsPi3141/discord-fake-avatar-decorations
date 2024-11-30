@@ -61,7 +61,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 /* LOADING SPINNER */
-.loading-container {
+.loading-cube-container {
 	position: relative;
 	display: block;
 	width: 32px;
@@ -82,46 +82,68 @@ body::-webkit-scrollbar-thumb {
 	-webkit-animation-delay: -0.9s;
 	animation-delay: -0.9s;
 }
-@-webkit-keyframes loading-cube-anim {
+@keyframes loading-cube-anim {
 	25% {
-		-webkit-transform: translateX(22px) rotate(-90deg) scale(0.5);
 		transform: translateX(22px) rotate(-90deg) scale(0.5);
 	}
-
 	50% {
-		-webkit-transform: translateX(22px) translateY(22px) rotate(-180deg);
 		transform: translateX(22px) translateY(22px) rotate(-180deg);
 	}
-
 	75% {
-		-webkit-transform: translateX(0) translateY(22px) rotate(-270deg) scale(0.5);
 		transform: translateX(0) translateY(22px) rotate(-270deg) scale(0.5);
 	}
-
 	to {
-		-webkit-transform: rotate(-1turn);
 		transform: rotate(-1turn);
 	}
 }
-@keyframes loading-cube-anim {
-	25% {
-		-webkit-transform: translateX(22px) rotate(-90deg) scale(0.5);
-		transform: translateX(22px) rotate(-90deg) scale(0.5);
-	}
 
-	50% {
-		-webkit-transform: translateX(22px) translateY(22px) rotate(-180deg);
-		transform: translateX(22px) translateY(22px) rotate(-180deg);
-	}
-
-	75% {
-		-webkit-transform: translateX(0) translateY(22px) rotate(-270deg) scale(0.5);
-		transform: translateX(0) translateY(22px) rotate(-270deg) scale(0.5);
-	}
-
+.loading-circle-container {
+	min-width: 32px;
+	min-height: 32px;
+}
+.loading-circle-inner {
+	transform: rotate(280deg);
+}
+.loading-circle {
+	width: 100%;
+	height: 100%;
+	animation: loading-circle-anim 2s linear infinite;
+}
+.path {
+	animation: loading-circle-dash-anim 2s ease-in-out infinite;
+	stroke-dasharray: 1, 200;
+	stroke-dashoffset: 0;
+	fill: none;
+	stroke-width: 6;
+	stroke-miterlimit: 10;
+	stroke-linecap: round;
+	stroke: #5865f2;
+}
+.path2 {
+	animation-delay: 0.15s;
+	stroke: #778bf8;
+	opacity: 0.6;
+}
+.path3 {
+	animation-delay: 0.23s;
+	stroke: #778bf8;
+}
+@keyframes loading-circle-anim {
 	to {
-		-webkit-transform: rotate(-1turn);
-		transform: rotate(-1turn);
+		transform: rotate(360deg);
+	}
+}
+@keyframes loading-circle-dash-anim {
+	0% {
+		stroke-dasharray: 1, 200;
+		stroke-dashoffset: 0;
+	}
+	50% {
+		stroke-dasharray: 130, 200;
+	}
+	to {
+		stroke-dasharray: 130, 200;
+		stroke-dashoffset: -124;
 	}
 }
 
