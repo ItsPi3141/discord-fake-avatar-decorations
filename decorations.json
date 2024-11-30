@@ -92,6 +92,11 @@
 				"name": "Batarang",
 				"description": "The Batarang is Batman’s legendary throwing weapon, blending precision and versatility to instill fear in his enemies. This reward is exclusive to the Become the Knight Quest. Available until to use February 8, 2025.",
 				"file": "batarang.png"
+			},
+			{
+				"name": "Rift Butterfly",
+				"description": "The Rift Butterfly is a type of sentient Rift that is shaped like a butterfly. This reward is exclusive to the Fortnite Quest. Available until to use February 5, 2025.",
+				"file": "rift_butterfly.png"
 			}
 		]
 	},
