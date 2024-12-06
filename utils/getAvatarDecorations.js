@@ -13,7 +13,8 @@
 				.querySelector("div[class*='cardText_'] div[class*='productName_']")
 				.innerText.toLowerCase()
 				.replaceAll("'", "")
-				.replaceAll(/[^A-Za-z0-9]/g, "_")}.png`,
+				.replaceAll(/[^A-Za-z0-9]+/g, "_")
+				.replaceAll(/(^_|_$)/g, "")}.png`,
 		);
 	}
 	console.log(e.join("\n"));

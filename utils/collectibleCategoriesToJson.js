@@ -15,7 +15,8 @@ function collectibleCategoriesToJson(collectibleCategories) {
 				file: `${p.name
 					.toLowerCase()
 					.replaceAll("'", "")
-					.replaceAll(/[^A-Za-z0-9]/g, "_")}.png`,
+					.replaceAll(/[^A-Za-z0-9]+/g, "_")
+					.replaceAll(/(^_|_$)/g, "")}.png`,
 			})),
 	}));
 }
