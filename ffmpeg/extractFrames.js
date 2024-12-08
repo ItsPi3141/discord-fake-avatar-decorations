@@ -10,8 +10,8 @@ export function imagesFromGif(
 	/** @type {FFmpeg} */ ffmpeg,
 	/** @type {String} */ gifUrl,
 ) {
-	return new Promise(() => {
-		(async (resolve, reject) => {
+	return new Promise((resolve, reject) => {
+		(async () => {
 			try {
 				const dataAB = await (await fetch(gifUrl)).arrayBuffer();
 				const data = await fetchFile(new Blob([dataAB]));
