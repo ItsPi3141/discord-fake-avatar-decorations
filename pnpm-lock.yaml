@@ -22,16 +22,16 @@ importers:
         version: 1.1.4
       next:
         specifier: 15.0.4
-        version: 15.0.4(@preact/compat@18.3.1(preact@10.25.1))(@preact/compat@18.3.1(preact@10.25.1))(sass@1.82.0)
+        version: 15.0.4(react-dom@19.0.0(react@19.0.0))(react@19.0.0)(sass@1.82.0)
       react:
-        specifier: npm:@preact/compat
-        version: '@preact/compat@18.3.1(preact@10.25.1)'
+        specifier: 19.0.0
+        version: 19.0.0
       react-dom:
-        specifier: npm:@preact/compat
-        version: '@preact/compat@18.3.1(preact@10.25.1)'
+        specifier: 19.0.0
+        version: 19.0.0(react@19.0.0)
       react-tooltip:
         specifier: ^5.28.0
-        version: 5.28.0(@preact/compat@18.3.1(preact@10.25.1))(@preact/compat@18.3.1(preact@10.25.1))
+        version: 5.28.0(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
       sass:
         specifier: ^1.82.0
         version: 1.82.0
@@ -354,11 +354,6 @@ packages:
   '@pkgjs/parseargs@0.11.0':
     resolution: {integrity: sha512-+1VkjdD0QBLPodGrJUeqarH8VAIvQODIbwh9XpP5Syisf7YoQgsJKPNFoqqLQlu+VQ/tVSshMR6loPMn8U+dPg==}
     engines: {node: '>=14'}
-
-  '@preact/compat@18.3.1':
-    resolution: {integrity: sha512-Kog4PSRxtT4COtOXjsuQPV1vMXpUzREQfv+6Dmcy9/rMk0HOPK0HTE9fspFjAmY8R80T/T8gtgmZ68u5bOSngw==}
-    peerDependencies:
-      preact: '*'
 
   '@swc/counter@0.1.3':
     resolution: {integrity: sha512-e2BR4lsJkkRlKZ/qCHPw9ZaSxc0MVUd7gtbtaB7aMvHeJVYe8sOB8DBZkP2DtISHGSku9sCK6T6cnY0CtXrOCQ==}
@@ -753,17 +748,23 @@ packages:
     resolution: {integrity: sha512-OCVPnIObs4N29kxTjzLfUryOkvZEq+pf8jTF0lg8E7uETuWHA+v7j3c/xJmiqpX450191LlmZfUKkXxkTry7nA==}
     engines: {node: ^10 || ^12 || >=14}
 
-  preact@10.25.1:
-    resolution: {integrity: sha512-frxeZV2vhQSohQwJ7FvlqC40ze89+8friponWUFeVEkaCfhC6Eu4V0iND5C9CXz8JLndV07QRDeXzH1+Anz5Og==}
-
   queue-microtask@1.2.3:
     resolution: {integrity: sha512-NuaNSa6flKT5JaSYQzJok04JzTL1CA6aGhv5rfLW3PgqA+M2ChpZQnAC8h8i4ZFkBS8X5RqkDBHA7r4hej3K9A==}
+
+  react-dom@19.0.0:
+    resolution: {integrity: sha512-4GV5sHFG0e/0AD4X+ySy6UJd3jVl1iNsNHdpad0qhABJ11twS3TTBnseqsKurKcsNqCEFeGL3uLpVChpIO3QfQ==}
+    peerDependencies:
+      react: ^19.0.0
 
   react-tooltip@5.28.0:
     resolution: {integrity: sha512-R5cO3JPPXk6FRbBHMO0rI9nkUG/JKfalBSQfZedZYzmqaZQgq7GLzF8vcCWx6IhUCKg0yPqJhXIzmIO5ff15xg==}
     peerDependencies:
       react: '>=16.14.0'
       react-dom: '>=16.14.0'
+
+  react@19.0.0:
+    resolution: {integrity: sha512-V8AVnmPIICiWpGfm6GLzCR/W5FXLchHop40W4nXBmdlEceh16rCN8O8LNWm5bh5XUX91fh7KpA+W0TgMKmgTpQ==}
+    engines: {node: '>=0.10.0'}
 
   read-cache@1.0.0:
     resolution: {integrity: sha512-Owdv/Ft7IjOgm/i0xvNDZ1LrRANRfew4b2prF3OWMQLxLfu3bS8FVhCsrSCMK4lR56Y9ya+AThoTpDCTxCmpRA==}
@@ -791,6 +792,9 @@ packages:
     resolution: {integrity: sha512-j4GMCTa8elGyN9A7x7bEglx0VgSpNUG4W4wNedQ33wSMdnkqQCT8HTwOaVSV4e6yQovcu/3Oc4coJP/l0xhL2Q==}
     engines: {node: '>=14.0.0'}
     hasBin: true
+
+  scheduler@0.25.0:
+    resolution: {integrity: sha512-xFVuu11jh+xcO7JOAGJNOXld8/TcEHK/4CituBUeUb5hqxJLj9YuemAEuvm9gQ/+pgXYfbQuqAkiYu+u7YEsNA==}
 
   semver@7.6.3:
     resolution: {integrity: sha512-oVekP1cKtI+CTDvHWYFUcMtsK/00wmAEfyqKfNdARm8u1wNVhSgaX7A8d4UuIlUI5e84iEwOhs7ZPYRmzU9U6A==}
@@ -1153,10 +1157,6 @@ snapshots:
   '@pkgjs/parseargs@0.11.0':
     optional: true
 
-  '@preact/compat@18.3.1(preact@10.25.1)':
-    dependencies:
-      preact: 10.25.1
-
   '@swc/counter@0.1.3': {}
 
   '@swc/helpers@0.5.13':
@@ -1418,7 +1418,7 @@ snapshots:
 
   nanoid@3.3.8: {}
 
-  next@15.0.4(@preact/compat@18.3.1(preact@10.25.1))(@preact/compat@18.3.1(preact@10.25.1))(sass@1.82.0):
+  next@15.0.4(react-dom@19.0.0(react@19.0.0))(react@19.0.0)(sass@1.82.0):
     dependencies:
       '@next/env': 15.0.4
       '@swc/counter': 0.1.3
@@ -1426,9 +1426,9 @@ snapshots:
       busboy: 1.6.0
       caniuse-lite: 1.0.30001687
       postcss: 8.4.31
-      react: '@preact/compat@18.3.1(preact@10.25.1)'
-      react-dom: '@preact/compat@18.3.1(preact@10.25.1)'
-      styled-jsx: 5.1.6(@preact/compat@18.3.1(preact@10.25.1))
+      react: 19.0.0
+      react-dom: 19.0.0(react@19.0.0)
+      styled-jsx: 5.1.6(react@19.0.0)
     optionalDependencies:
       '@next/swc-darwin-arm64': 15.0.4
       '@next/swc-darwin-x64': 15.0.4
@@ -1519,16 +1519,21 @@ snapshots:
       picocolors: 1.1.1
       source-map-js: 1.2.1
 
-  preact@10.25.1: {}
-
   queue-microtask@1.2.3: {}
 
-  react-tooltip@5.28.0(@preact/compat@18.3.1(preact@10.25.1))(@preact/compat@18.3.1(preact@10.25.1)):
+  react-dom@19.0.0(react@19.0.0):
+    dependencies:
+      react: 19.0.0
+      scheduler: 0.25.0
+
+  react-tooltip@5.28.0(react-dom@19.0.0(react@19.0.0))(react@19.0.0):
     dependencies:
       '@floating-ui/dom': 1.6.12
       classnames: 2.5.1
-      react: '@preact/compat@18.3.1(preact@10.25.1)'
-      react-dom: '@preact/compat@18.3.1(preact@10.25.1)'
+      react: 19.0.0
+      react-dom: 19.0.0(react@19.0.0)
+
+  react@19.0.0: {}
 
   read-cache@1.0.0:
     dependencies:
@@ -1559,6 +1564,8 @@ snapshots:
       source-map-js: 1.2.1
     optionalDependencies:
       '@parcel/watcher': 2.5.0
+
+  scheduler@0.25.0: {}
 
   semver@7.6.3:
     optional: true
@@ -1627,10 +1634,10 @@ snapshots:
     dependencies:
       ansi-regex: 6.1.0
 
-  styled-jsx@5.1.6(@preact/compat@18.3.1(preact@10.25.1)):
+  styled-jsx@5.1.6(react@19.0.0):
     dependencies:
       client-only: 0.0.1
-      react: '@preact/compat@18.3.1(preact@10.25.1)'
+      react: 19.0.0
 
   sucrase@3.35.0:
     dependencies:
