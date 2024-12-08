@@ -97,6 +97,11 @@
 				"name": "Rift Butterfly",
 				"description": "The Rift Butterfly is a type of sentient Rift that is shaped like a butterfly. This reward is exclusive to the Fortnite Quest. Available until to use February 5, 2025.",
 				"file": "rift_butterfly.png"
+			},
+			{
+				"name": "Bush Camper",
+				"description": "Exclusive to the Fortnite OG Quest for a limited time. Available until to use February 11, 2025.",
+				"file": "bush_camper.png"
 			}
 		]
 	},
