@@ -14,8 +14,8 @@
 		"@ffmpeg/util": "0.12.1",
 		"apng-js": "^1.1.4",
 		"next": "15.0.4",
-		"react": "19.0.0",
-		"react-dom": "19.0.0",
+		"react": "npm:@preact/compat",
+		"react-dom": "npm:@preact/compat",
 		"react-tooltip": "^5.28.0",
 		"sass": "^1.82.0"
 	},
