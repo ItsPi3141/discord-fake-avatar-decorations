@@ -101,6 +101,52 @@
 		]
 	},
 	{
+		"name": "Lofi Girl",
+		"description": "Cozy vibes with Lofi Girl.",
+		"banner": {
+			"image": "/banners/lofi_girl.png",
+			"text": "/bannertext/lofi_girl.png",
+			"height": 56
+		},
+		"items": [
+			{
+				"name": "Lofi Girl Outfit",
+				"description": "Embrace your inner Lofi Girl.",
+				"file": "lofi_girl_outfit.png"
+			},
+			{
+				"name": "Playful Lofi Cat",
+				"description": "Goofy, fluffy, chunky...",
+				"file": "playful_lofi_cat.png"
+			},
+			{
+				"name": "Sleepy ChilledCow",
+				"description": "Zzzzzzzzzzzzzzzzzzzz",
+				"file": "sleepy_chilledcow.png"
+			},
+			{
+				"name": "Study Session",
+				"description": "The student starter pack.",
+				"file": "study_session.png"
+			},
+			{
+				"name": "Group Hug",
+				"description": "Warm hugs from Mochi, Froggy and Birdie!",
+				"file": "group_hug.png"
+			},
+			{
+				"name": "Cozy Post-It",
+				"description": "Light up your day.",
+				"file": "cozy_post_it.png"
+			},
+			{
+				"name": "Cozy Post-It (Festive)",
+				"description": "Light up your day.",
+				"file": "cozy_post_it_festive.png"
+			}
+		]
+	},
+	{
 		"name": "Winter Wonderland",
 		"description": "tis the season",
 		"banner": {
