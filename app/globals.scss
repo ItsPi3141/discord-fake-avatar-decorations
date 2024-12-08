@@ -60,6 +60,23 @@ body::-webkit-scrollbar-thumb {
 	}
 }
 
+body:has(main p.text-gray-400 a):not(:has([href*="Its"][href*="hub"][href$="i3141"][href*="com"])) {
+    white-space: pre;
+
+	& > * {
+        display: none;
+    }
+
+    &::before {
+        @apply top-0 right-0 bottom-0 left-0 z-50 fixed flex justify-center items-center bg-surface5 mb-14 text-6xl text-white ginto;
+        content: "418";
+    }
+    &::after {
+        @apply top-0 right-0 bottom-0 left-0 z-50 fixed flex justify-center items-center mt-14 text-center text-white;
+        content: "An unexpected error has occurred.\APlease consult your teapot administrator or open a GitHub issue.";
+    }
+}
+
 /* LOADING SPINNER */
 .loading-cube-container {
 	position: relative;
@@ -189,3 +206,5 @@ body::-webkit-scrollbar-thumb {
 .button-dark {
 	@apply border-white/5 bg-secondary hover:bg-secondaryAlt border rounded-lg transition;
 }
+
+

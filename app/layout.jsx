@@ -1,6 +1,6 @@
 "use client";
 
-import "./globals.css";
+import "./globals.scss";
 import "./components/modal.css";
 import "./components/twemoji.css";
 import { FontPreloader } from "./components/fontpreload";
