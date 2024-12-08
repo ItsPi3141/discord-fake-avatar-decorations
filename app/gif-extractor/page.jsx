@@ -2,16 +2,16 @@
 
 import { useCallback, useEffect, useRef, useState } from "react";
 
+import FileUpload from "../components/fileupload.jsx";
+import { Icons } from "../components/icons.jsx";
+import Image from "../components/image.jsx";
+
 import { FFmpeg } from "@ffmpeg/ffmpeg";
 import { toBlobURL } from "@ffmpeg/util";
 import { imagesFromGif } from "@/ffmpeg/extractFrames.js";
 import { getMimeTypeFromArrayBuffer } from "@/ffmpeg/utils.js";
 
-import FileUpload from "../components/fileupload.jsx";
-import Image from "../components/image.jsx";
-
 import { printMsg } from "../print.js";
-import { Icons } from "../components/icons.jsx";
 import { clearData, getData } from "../utils/dataHandler.js";
 
 export default function GifExtractor() {

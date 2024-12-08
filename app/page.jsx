@@ -1,25 +1,26 @@
 "use client";
 
 import { useCallback, useEffect, useRef, useState } from "react";
+
 import { useRouter } from "next/navigation";
 import Link from "next/link";
+
+import FileUpload from "./components/fileupload.jsx";
+import { Icons } from "./components/icons.jsx";
+import Image from "./components/image.jsx";
+import Modal from "./components/modal.jsx";
+import { LoadingCircle, LoadingCubes } from "./components/spinner.jsx";
+import Twemoji from "./components/twemoji.jsx";
+
+import "react-tooltip/dist/react-tooltip.css";
+import { Tooltip } from "react-tooltip";
 
 import { FFmpeg } from "@ffmpeg/ffmpeg";
 import { toBlobURL } from "@ffmpeg/util";
 import { addDecoration, cropToSquare } from "@/ffmpeg/processImage.js";
 import { getMimeTypeFromArrayBuffer } from "@/ffmpeg/utils.js";
 
-import Modal from "./components/modal.jsx";
-import Twemoji from "./components/twemoji.jsx";
-import Image from "./components/image.jsx";
-import FileUpload from "./components/fileupload.jsx";
-
 import { printMsg, printErr } from "./print.js";
-
-import "react-tooltip/dist/react-tooltip.css";
-import { Tooltip } from "react-tooltip";
-import { Icons } from "./components/icons.jsx";
-import { LoadingCircle, LoadingCubes } from "./components/spinner.jsx";
 import { storeData } from "./utils/dataHandler.js";
 
 const decorationsData = require("../decorations.json");
