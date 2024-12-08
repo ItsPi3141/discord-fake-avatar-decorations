@@ -12,6 +12,7 @@ import Image from "../components/image.jsx";
 
 import { printMsg } from "../print.js";
 import { Icons } from "../components/icons.jsx";
+import { clearData, getData } from "../utils/dataHandler.js";
 
 export default function GifExtractor() {
 	const isServer = typeof window === "undefined";
@@ -47,9 +48,9 @@ export default function GifExtractor() {
 		setLoaded(true);
 
 		if (!isServer) {
-			const i = sessionStorage.getItem("image");
+			const i = getData("image");
 			if (i) setFile(i);
-			sessionStorage.removeItem("image");
+			clearData("image");
 		}
 	});
 

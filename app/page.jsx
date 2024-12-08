@@ -20,6 +20,7 @@ import "react-tooltip/dist/react-tooltip.css";
 import { Tooltip } from "react-tooltip";
 import { Icons } from "./components/icons.jsx";
 import { LoadingCircle, LoadingCubes } from "./components/spinner.jsx";
+import { storeData } from "./utils/dataHandler.js";
 
 const decorationsData = require("../decorations.json");
 const avatarsData = require("../avatars.json");
@@ -766,7 +767,7 @@ const App = ({ ffmpegRef, isServer }) => {
 											onClick={() => {
 												if (!isServer) {
 													try {
-														sessionStorage.setItem("image", finishedAv);
+														storeData("image", finishedAv);
 														router.push("/gif-extractor");
 													} catch {
 														setFileTooBig(true);
