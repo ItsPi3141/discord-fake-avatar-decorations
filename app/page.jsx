@@ -148,7 +148,7 @@ const App = ({ ffmpegRef, isServer }) => {
 						<img
 							src={`${baseImgUrl}/wallpaper/winter.jpg`}
 							alt=""
-							className="top-0 right-0 bottom-0 object-bottom left-0 z-0 absolute w-full max-h-full pointer-events-none object-cover"
+							className="top-0 right-0 bottom-0 object-bottom left-0 z-0 absolute w-full h-full pointer-events-none object-cover"
 							loading="eager"
 						/>
 					)}
