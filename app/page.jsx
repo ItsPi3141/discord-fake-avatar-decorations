@@ -612,7 +612,7 @@ const App = ({ ffmpegRef, isServer }) => {
 						</div>
 
 						{/* pls support */}
-						<div className="flex flex-col justify-start items-stretch p-4 rounded-lg w-full text-center highlight">
+						<div className="flex flex-col justify-start items-stretch p-4 rounded-lg w-full text-center select-none highlight">
 							<p>
 								Help support the project <Twemoji emoji="🙏" />
 							</p>
