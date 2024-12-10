@@ -10,6 +10,11 @@
 	letter-spacing: 1px;
 }
 
+*::selection {
+	background: #5865f2;
+	color: white;
+}
+
 #profile-preview hr {
 	outline: none;
 	border: none;
@@ -61,20 +66,20 @@ body::-webkit-scrollbar-thumb {
 }
 
 body:has(main p.text-gray-400 a):not(:has([href*="Its"][href*="hub"][href$="i3141"][href*="com"])) {
-    white-space: pre;
+	white-space: pre;
 
 	& > * {
-        display: none;
-    }
+		display: none;
+	}
 
-    &::before {
-        @apply top-0 right-0 bottom-0 left-0 z-50 fixed flex justify-center items-center bg-surface5 mb-14 text-6xl text-white ginto;
-        content: "418";
-    }
-    &::after {
-        @apply top-0 right-0 bottom-0 left-0 z-50 fixed flex justify-center items-center mt-14 text-center text-white;
-        content: "An unexpected error has occurred.\APlease consult your teapot administrator or open a GitHub issue.";
-    }
+	&::before {
+		@apply top-0 right-0 bottom-0 left-0 z-50 fixed flex justify-center items-center bg-surface5 mb-14 text-6xl text-white ginto;
+		content: "418";
+	}
+	&::after {
+		@apply top-0 right-0 bottom-0 left-0 z-50 fixed flex justify-center items-center mt-14 text-center text-white;
+		content: "An unexpected error has occurred.\APlease consult your teapot administrator or open a GitHub issue.";
+	}
 }
 
 /* LOADING SPINNER */
@@ -206,5 +211,3 @@ body:has(main p.text-gray-400 a):not(:has([href*="Its"][href*="hub"][href$="i314
 .button-dark {
 	@apply border-white/5 bg-secondary hover:bg-secondaryAlt border rounded-lg transition;
 }
-
-
