@@ -5,6 +5,7 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import FileUpload from "../components/fileupload.jsx";
 import { Icons } from "../components/icons.jsx";
 import Image from "../components/image.jsx";
+import { LoadingCircle } from "../components/spinner.jsx";
 
 import { FFmpeg } from "@ffmpeg/ffmpeg";
 import { toBlobURL } from "@ffmpeg/util";
@@ -193,10 +194,7 @@ export default function GifExtractor() {
 							Gif Frame Extractor
 						</span>
 					</p>
-					<span className="mb-8 loading-container">
-						<span className="loading-cube" />
-						<span className="loading-cube" />
-					</span>
+					<LoadingCircle className="mb-4 w-10 h-10" />
 					<p>Loading...</p>
 				</main>
 			)}
