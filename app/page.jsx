@@ -143,25 +143,25 @@ const App = ({ ffmpegRef, isServer }) => {
 	return (
 		<>
 			<main className="flex flex-col items-center w-screen h-screen text-white overflow-auto discord-scrollbar">
-				<div
-					className="flex flex-col justify-center items-center bg-primary mt-8 px-4 py-8 sm:p-8 md:p-12 lg:p-16 rounded-3xl w-[calc(100%-6rem)] text-center"
-					style={{
-						backgroundImage:
-							new Date().getMonth() === 11
-								? `url(${baseImgUrl}/wallpaper/winter.jpg)`
-								: "",
-						backgroundPosition: "center bottom",
-						backgroundSize: "cover",
-					}}
-				>
-					<h1 className="font-bold text-3xl md:text-5xl ginto">Discord</h1>
-					<h1 className="mb-4 text-2xl md:text-4xl ginto">
-						FAKE AVATAR DECORATIONS
-					</h1>
-					<h2 className="text-sm sm:text-base">
-						Create profile pictures with avatar decorations so you can use them
-						in Discord for free without spending money
-					</h2>
+				<div className="relative bg-primary mt-8 px-4 py-8 sm:p-8 md:p-12 lg:p-16 rounded-3xl w-[calc(100%-6rem)] min-h-72 overflow-hidden select-none">
+					{new Date().getMonth() === 11 && (
+						<img
+							src={`${baseImgUrl}/wallpaper/winter.jpg`}
+							alt=""
+							className="top-0 right-0 bottom-0 object-bottom left-0 z-0 absolute w-full max-h-full pointer-events-none object-cover"
+							loading="eager"
+						/>
+					)}
+					<div className="top-0 right-0 bottom-0 left-0 z-10 absolute flex flex-col justify-center items-center text-center">
+						<h1 className="font-bold text-3xl md:text-5xl ginto">Discord</h1>
+						<h1 className="mb-4 text-2xl md:text-4xl ginto">
+							FAKE AVATAR DECORATIONS
+						</h1>
+						<h2 className="text-sm sm:text-base">
+							Create profile pictures with avatar decorations so you can use
+							them in Discord for free without spending money
+						</h2>
+					</div>
 				</div>
 				<div className="flex md:flex-row flex-col items-center md:items-start gap-8 px-8 py-12 w-full max-w-[900px]">
 					{/* SETTINGS */}
