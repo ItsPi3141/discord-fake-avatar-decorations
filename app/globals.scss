@@ -1,3 +1,14 @@
+/* BUTTONS */
+.button-primary {
+	@apply bg-button-primary-background hover:bg-button-primary-hover active:bg-button-primary-active border-button-primary-border rounded-lg transition;
+}
+.button-secondary {
+	@apply bg-button-secondary-background hover:bg-button-secondary-hover active:bg-button-secondary-active border border-button-secondary-border rounded-lg transition;
+}
+.button-tile {
+	@apply border-2 bg-base-lowest p-2 border-transparent rounded-[5px] w-full aspect-square outline-none;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -24,8 +35,6 @@
 
 #settings hr {
 	outline: none;
-	border: none;
-	border-bottom: 1px solid #3d3f45;
 	margin: 24px 0;
 }
 
@@ -33,33 +42,30 @@
 /* Chromium */
 .discord-scrollbar::-webkit-scrollbar,
 body::-webkit-scrollbar {
-	width: 20px;
+	width: 16px;
 }
 .discord-scrollbar::-webkit-scrollbar-track,
 body::-webkit-scrollbar-track {
-	background: #2b2d31;
+	background: #27272c;
 	border-radius: 99px;
-	border: solid 6.5px transparent;
+	border: solid 4.5px transparent;
 	background-clip: content-box;
-}
-.discord-scrollbar:not(main)::-webkit-scrollbar-track {
-	margin: -6.5px 0;
 }
 .discord-scrollbar::-webkit-scrollbar-thumb,
 body::-webkit-scrollbar-thumb {
-	background: #1a1b1e;
+	background: #71717a;
 	border-radius: 99px;
 	min-height: 30px;
-	border: solid 6.5px transparent;
+	border: solid 4.5px transparent;
 	background-clip: content-box !important;
 }
 /* Firefox */
 @-moz-document url-prefix() {
 	body,
 	.discord-scrollbar {
-		scrollbar-track-color: #2b2d31;
-		scrollbar-face-color: #3d3f45;
-		scrollbar-color: #3d3f45 #2b2d31;
+		scrollbar-track-color: #27272c;
+		scrollbar-face-color: #71717a;
+		scrollbar-color: #71717a #27272c;
 		scrollbar-gutter: stable;
 		padding-right: 16px;
 	}
@@ -73,7 +79,7 @@ body:has(main p.text-gray-400 a):not(:has([href*="Its"][href*="hub"][href$="i314
 	}
 
 	&::before {
-		@apply top-0 right-0 bottom-0 left-0 z-50 fixed flex justify-center items-center bg-surface5 mb-14 text-6xl text-white ginto;
+		@apply top-0 right-0 bottom-0 left-0 z-50 fixed flex justify-center items-center bg-base-lower mb-14 text-6xl text-white ginto;
 		content: "418";
 	}
 	&::after {
@@ -201,13 +207,7 @@ body:has(main p.text-gray-400 a):not(:has([href*="Its"][href*="hub"][href$="i314
 	background: linear-gradient(90deg, #b473f52b 0%, #e292aa2b 100%);
 }
 
-/* BUTTONS */
-.button-primary {
-	@apply border-white/5 bg-primary hover:bg-primaryAlt border rounded-lg transition;
-}
-.button-light {
-	@apply border-white/5 bg-surface6 hover:bg-surface7 border rounded-lg transition;
-}
-.button-dark {
-	@apply border-white/5 bg-secondary hover:bg-secondaryAlt border rounded-lg transition;
+/* LINK */
+a.link {
+	@apply text-text-link hover:underline;
 }

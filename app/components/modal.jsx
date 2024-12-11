@@ -3,7 +3,7 @@ import { Icons } from "./icons";
 export default function Modal(props) {
 	return (
 		<div
-			className="top-0 left-0 fixed flex justify-center items-center bg-black/80 w-screen h-screen select-none"
+			className="top-0 left-0 z-50 fixed flex justify-center items-center bg-black/80 w-screen h-screen select-none"
 			style={{
 				transition: "opacity 0.2s ease-in-out",
 				opacity: props.visible ? 1 : 0,
@@ -11,7 +11,7 @@ export default function Modal(props) {
 			}}
 		>
 			<div
-				className="relative flex flex-col gap-4 border-[#97979f1f] bg-surface5 shadow-sm shadow-surface1/60 p-4 border xs:rounded-xl w-screen xs:w-[420px] min-h-screen xs:min-h-[200px] text-white overflow-hidden modal-box"
+				className="relative flex flex-col gap-4 border-[#97979f1f] bg-surface-high shadow-base-lower/60 shadow-sm p-4 border xs:rounded-xl w-screen xs:w-[420px] min-h-screen xs:min-h-[200px] text-white overflow-hidden modal-box"
 				style={{
 					transition: "all 0.2s ease-in-out",
 					scale: props.visible ? 1 : 0,
@@ -20,7 +20,7 @@ export default function Modal(props) {
 			>
 				<button
 					type="button"
-					className="top-4 right-4 absolute opacity-50 hover:opacity-100 text-iconButton transition-opacity [transition-duration:200ms]"
+					className="top-4 right-4 absolute opacity-50 hover:opacity-100 text-icon-tertiary transition-opacity [transition-duration:200ms]"
 					onClick={props.onClose}
 				>
 					<Icons.close width="24px" height="24px" />
@@ -28,7 +28,7 @@ export default function Modal(props) {
 				<div className="flex flex-col gap-2">
 					{props.title && (
 						<div className="flex justify-center">
-							<p className="font-semibold text-2xl text-white/80 [letter-spacing:.02em] text-center">
+							<p className="font-semibold text-2xl text-center text-white/80 [letter-spacing:.02em]">
 								{props.title}
 							</p>
 						</div>
@@ -44,7 +44,7 @@ export default function Modal(props) {
 				<div className="flex flex-col justify-stretch grow">
 					{props.children}
 				</div>
-				<div className="flex justify-end bg-surface5 mt-4 h-[38px]">
+				<div className="flex justify-end bg-surface-high mt-4 h-[38px]">
 					{props.secondaryText && (
 						<button
 							type="button"

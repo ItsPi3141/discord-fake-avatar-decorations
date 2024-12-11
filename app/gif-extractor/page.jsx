@@ -108,7 +108,7 @@ export default function GifExtractor() {
 								<div className="relative flex flex-col items-center">
 									<button
 										type="button"
-										className="top-2 right-2 absolute bg-surface2 hover:bg-surface3 shadow p-2 rounded-lg text-error text-lg"
+										className="top-2 right-2 absolute bg-surface-high hover:bg-surface-higher shadow-sm p-2 rounded-lg text-critical text-lg transition-colors"
 										onClick={() => {
 											setFile(null);
 											setFrames(null);
@@ -139,7 +139,7 @@ export default function GifExtractor() {
 											<button
 												type="button"
 												key={i}
-												className="flex justify-center items-center border-2 border-surface1 bg-surface1 p-1 rounded-[5px] w-32 aspect-square"
+												className="flex justify-center items-center bg-base-lowest p-1 rounded-[5px] w-32 aspect-square"
 												onClick={() => {
 													const a = document.createElement("a");
 													a.href = `data:image/png;base64,${frame}`;

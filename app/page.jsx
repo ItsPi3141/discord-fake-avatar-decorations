@@ -199,7 +199,7 @@ const App = ({ ffmpegRef, isServer }) => {
 							<p className="text-center sm:text-left">or</p>
 							<input
 								type="text"
-								className="border-white/5 bg-surface4 px-2.5 py-2 border rounded-lg transition grow outline-none"
+								className="bg-base-low px-2.5 py-2 border border-border-faint rounded-lg transition grow outline-none"
 								placeholder="Enter image URL..."
 								onChange={async (e) => {
 									const res = await fetch(e.target.value);
@@ -239,17 +239,15 @@ const App = ({ ffmpegRef, isServer }) => {
 													.toLowerCase()
 													.replaceAll(" ", "-")}
 												data-tooltip-content={avatar.name}
-												className="border-2 border-surface2 bg-surface2 p-2 rounded-[5px] w-full aspect-square avatar-preset outline-none"
+												className="avatar-preset button-tile"
 												onClick={(e) => {
 													setAvUrl(`${baseImgUrl}/avatars/${avatar.file}`);
 													for (const el of document.querySelectorAll(
-														"button.avatar-preset.border-2.border-primary",
+														"button.avatar-preset.border-primary",
 													)) {
 														el.classList.remove("border-primary");
-														el.classList.add("border-surface2");
 													}
 													e.target.classList.add("border-primary");
-													e.target.classList.remove("border-surface2");
 												}}
 											>
 												<Image
@@ -273,7 +271,7 @@ const App = ({ ffmpegRef, isServer }) => {
 								})}
 							</div>
 						</div>
-						<hr />
+						<hr className="border-b border-border-faint/10" />
 
 						{/* SELECT DECORATION */}
 						<p className="my-2 font-semibold text-gray-300 text-sm [letter-spacing:.05em] scale-y-90">
@@ -398,7 +396,7 @@ const App = ({ ffmpegRef, isServer }) => {
 													<button
 														key={index}
 														type="button"
-														className="border-2 border-surface2 bg-surface2 p-1 rounded-[5px] w-full aspect-square decor"
+														className="button-tile decor"
 														onClick={(e) => {
 															setName(decor.name);
 															setDescription(decor.description);
@@ -407,10 +405,8 @@ const App = ({ ffmpegRef, isServer }) => {
 																"button.decor.border-2.border-primary",
 															)) {
 																el.classList.remove("border-primary");
-																el.classList.add("border-surface2");
 															}
 															e.target.classList.add("border-primary");
-															e.target.classList.remove("border-surface2");
 														}}
 													>
 														<Image
@@ -431,10 +427,10 @@ const App = ({ ffmpegRef, isServer }) => {
 						{/* PROFILE PREVIEW */}
 						<div
 							id="profile-preview"
-							className="relative bg-surface0 shadow-lg rounded-lg w-[300px] overflow-hidden select-none"
+							className="relative bg-surface-overlay shadow-lg rounded-lg w-[300px] overflow-hidden select-none"
 						>
-							<div className="bg-[#5461f2] h-[105px]" />
-							<div className="top-[61px] left-[16px] absolute bg-surface0 p-[6px] rounded-full w-[92px] h-[92px] select-none">
+							<div className="bg-primary h-[105px]" />
+							<div className="top-[61px] left-[16px] absolute bg-surface-overlay p-[6px] rounded-full w-[92px] h-[92px] select-none">
 								<div className="relative rounded-full w-[80px] h-[80px] overflow-hidden">
 									{avUrl === "loading" ? (
 										<div className="top-[24px] left-[24px] absolute">
@@ -459,9 +455,9 @@ const App = ({ ffmpegRef, isServer }) => {
 										</>
 									)}
 								</div>
-								<div className="right-[-4px] bottom-[-4px] absolute border-[5px] border-surface2 bg-[#229f56] rounded-full w-7 h-7" />
+								<div className="right-[-4px] bottom-[-4px] absolute border-[5px] border-surface-overlay bg-[#229f56] rounded-full w-7 h-7" />
 							</div>
-							<div className="bg-surface0 mt-[35px] p-4 rounded-lg w-[calc(100%)]">
+							<div className="bg-surface-overlay mt-[35px] p-4 rounded-lg w-[calc(100%)]">
 								<p className="font-semibold text-xl [letter-spacing:.02em]">
 									{name || "Display Name"}
 								</p>
@@ -472,7 +468,7 @@ const App = ({ ffmpegRef, isServer }) => {
 								</p>
 								<button
 									type="button"
-									className="flex justify-center items-center gap-1.5 mt-3 px-4 py-1.5 w-full button-dark"
+									className="flex justify-center items-center gap-1.5 mt-3 px-4 py-1.5 w-full button-secondary"
 									onClick={() => {
 										setFinishedAv("");
 										setIsGeneratingAv(true);
@@ -490,7 +486,7 @@ const App = ({ ffmpegRef, isServer }) => {
 							</div>
 						</div>
 						{/* Message preview */}
-						<div className="border-secondaryAlt bg-surface5 py-4 border rounded-lg w-[300px] cursor-default select-none">
+						<div className="bg-base-lower py-4 border border-border-faint rounded-lg w-[300px] cursor-default select-none">
 							{[
 								{
 									styled: false,
@@ -536,7 +532,7 @@ const App = ({ ffmpegRef, isServer }) => {
 							].map((m, i) => {
 								return (
 									<div
-										className="flex items-center gap-4 hover:bg-surface4 px-4 py-0.5"
+										className="flex items-center gap-4 hover:bg-base-lowest px-4 py-0.5"
 										style={{
 											marginTop: m.groupStart && i !== 0 ? "17px" : "0",
 										}}
@@ -584,7 +580,7 @@ const App = ({ ffmpegRef, isServer }) => {
 													<span className="mr-1 text-ellipsis text-nowrap overflow-hidden">
 														{name || "Display Name"}
 													</span>
-													<span className="ml-1 h-4 text-nowrap text-secondaryLight text-xs">
+													<span className="ml-1 h-4 text-nowrap text-text-muted text-xs">
 														Today at{" "}
 														{[
 															new Date().getHours() % 12,
@@ -618,7 +614,7 @@ const App = ({ ffmpegRef, isServer }) => {
 							</p>
 							<button
 								type="button"
-								className="flex justify-center items-center gap-1.5 bg-white/10 hover:bg-white/20 mt-3 py-1.5 rounded-lg transition shiny-button"
+								className="flex justify-center items-center gap-1.5 mt-3 py-1.5 button-secondary shiny-button"
 								onClick={() => {
 									window.open(
 										"https://github.com/ItsPi3141/discord-fake-avatar-decorations",
@@ -630,7 +626,7 @@ const App = ({ ffmpegRef, isServer }) => {
 							</button>
 							<button
 								type="button"
-								className="flex justify-center items-center gap-1.5 bg-white/10 hover:bg-white/20 mt-3 py-1.5 rounded-lg transition"
+								className="flex justify-center items-center gap-1.5 mt-3 py-1.5 button-secondary"
 								onClick={() => {
 									navigator.clipboard.writeText(window.location.href);
 									setShared(true);
@@ -661,7 +657,7 @@ const App = ({ ffmpegRef, isServer }) => {
 							/>
 							<button
 								type="button"
-								className="flex justify-center items-center gap-1.5 bg-white/10 hover:bg-white/20 mt-3 py-1.5 rounded-lg transition"
+								className="flex justify-center items-center gap-1.5 mt-3 py-1.5 button-secondary"
 								onClick={() => {
 									window.open(
 										"https://github.com/ItsPi3141/discord-fake-avatar-decorations/issues/new",
@@ -674,11 +670,11 @@ const App = ({ ffmpegRef, isServer }) => {
 						</div>
 					</div>
 				</div>
-				<p className="mb-4 text-center text-gray-400 text-sm">
+				<p className="mb-4 text-center text-sm text-text-muted">
 					Website made by{" "}
 					<Link
 						href={"https://github.com/ItsPi3141"}
-						className="hover:text-gray-200 underline"
+						className="link"
 						target="_blank"
 					>
 						ItsPi3141
@@ -689,7 +685,7 @@ const App = ({ ffmpegRef, isServer }) => {
 						href={
 							"https://github.com/ItsPi3141/discord-fake-avatar-decorations"
 						}
-						className="hover:text-gray-200 underline"
+						className="link"
 						target="_blank"
 					>
 						source code
@@ -705,7 +701,7 @@ const App = ({ ffmpegRef, isServer }) => {
 						href={
 							"https://www.figma.com/community/file/1316822758717784787/ultimate-discord-library"
 						}
-						className="hover:text-gray-200 underline"
+						className="link"
 						target="_blank"
 					>
 						Figma
@@ -751,7 +747,7 @@ const App = ({ ffmpegRef, isServer }) => {
 									<div className="flex flex-col items-center gap-2 mt-3 w-full">
 										<button
 											type="button"
-											className="flex justify-center items-center gap-1.5 py-1.5 w-72 button-light"
+											className="flex justify-center items-center gap-1.5 py-1.5 w-72 button-secondary"
 											onClick={() => {
 												const a = document.createElement("a");
 												a.href = finishedAv;
@@ -764,7 +760,7 @@ const App = ({ ffmpegRef, isServer }) => {
 										</button>
 										<button
 											type="button"
-											className="flex justify-center items-center gap-1.5 py-1.5 w-72 button-light"
+											className="flex justify-center items-center gap-1.5 py-1.5 w-72 button-secondary"
 											onClick={() => {
 												if (!isServer) {
 													try {
@@ -803,7 +799,7 @@ const App = ({ ffmpegRef, isServer }) => {
 				<div className="flex flex-col items-center">
 					<button
 						type="button"
-						className="flex justify-center items-center gap-1.5 py-1.5 w-72 button-dark"
+						className="flex justify-center items-center gap-1.5 py-1.5 w-72 button-secondary"
 						onClick={() => {
 							const a = document.createElement("a");
 							a.href = finishedAv;
