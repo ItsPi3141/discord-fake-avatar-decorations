@@ -106,6 +106,108 @@
 		]
 	},
 	{
+		"name": "Winter Wonderland",
+		"description": "Tis the season.",
+		"banner": {
+			"image": "/banners/winter_wonderland_2024.png",
+			"text": "/bannertext/winter_wonderland_2024.png",
+			"height": 64
+		},
+		"badge": "WINTER 2024",
+		"items": [
+			{
+				"name": "Aurora",
+				"description": "Even the stars can't help but admire the view.",
+				"file": "aurora.png"
+			},
+			{
+				"name": "Polar Bear Hat",
+				"description": "Soft, cuddly, and a little bit snuffly.",
+				"file": "polar_bear_hat.png"
+			},
+			{
+				"name": "String Lights",
+				"description": "String up some holiday cheer.",
+				"file": "string_lights.png"
+			},
+			{
+				"name": "String Lights (Aurora)",
+				"description": "String up some holiday cheer.",
+				"file": "string_lights_aurora.png"
+			},
+			{
+				"name": "String Lights (Ember)",
+				"description": "String up some holiday cheer.",
+				"file": "string_lights_ember.png"
+			},
+			{
+				"name": "String Lights (Dusk)",
+				"description": "String up some holiday cheer.",
+				"file": "string_lights_dusk.png"
+			},
+			{
+				"name": "String Lights (Mix)",
+				"description": "String up some holiday cheer.",
+				"file": "string_lights_mix.png"
+			},
+			{
+				"name": "Snowglobe",
+				"description": "Try not to shake too hard.",
+				"file": "snowglobe.png"
+			},
+			{
+				"name": "Snowglobe (Wood)",
+				"description": "Try not to shake too hard.",
+				"file": "snowglobe_wood.png"
+			},
+			{
+				"name": "Snowglobe (Pink)",
+				"description": "Try not to shake too hard.",
+				"file": "snowglobe_pink.png"
+			},
+			{
+				"name": "Snowglobe (Blue)",
+				"description": "Try not to shake too hard.",
+				"file": "snowglobe_blue.png"
+			},
+			{
+				"name": "Snowglobe (Green)",
+				"description": "Try not to shake too hard.",
+				"file": "snowglobe_green.png"
+			},
+			{
+				"name": "Fresh Pine",
+				"description": "Ah...the smell of Winter.",
+				"file": "fresh_pine.png"
+			},
+			{
+				"name": "Fresh Pine (Cinnamon)",
+				"description": "Ah...the smell of Winter.",
+				"file": "fresh_pine_cinnamon.png"
+			},
+			{
+				"name": "Fresh Pine (Ribbon)",
+				"description": "Ah...the smell of Winter.",
+				"file": "fresh_pine_ribbon.png"
+			},
+			{
+				"name": "New Year 2025",
+				"description": "This decoration has not been officially released yet.",
+				"file": "new_year_2025.png"
+			},
+			{
+				"name": "Santa Cat Ears",
+				"description": "This decoration has not been officially released yet.",
+				"file": "santa_cat_ears.png"
+			},
+			{
+				"name": "Snowfall",
+				"description": "This decoration has not been officially released yet.",
+				"file": "snowfall.png"
+			}
+		]
+	},
+	{
 		"name": "Lofi Girl",
 		"description": "Cozy vibes with Lofi Girl.",
 		"banner": {
@@ -148,32 +250,6 @@
 				"name": "Cozy Post-It (Festive)",
 				"description": "Light up your day.",
 				"file": "cozy_post_it_festive.png"
-			}
-		]
-	},
-	{
-		"name": "Winter Wonderland",
-		"description": "tis the season",
-		"banner": {
-			"image": "/banners/winter_wonderland.png",
-			"text": "/bannertext/winter_wonderland.png"
-		},
-		"badge": "WINTER 2024",
-		"items": [
-			{
-				"name": "New Year 2025",
-				"description": "This decoration has not been officially released yet.",
-				"file": "new_year_2025.png"
-			},
-			{
-				"name": "Santa Cat Ears",
-				"description": "This decoration has not been officially released yet.",
-				"file": "santa_cat_ears.png"
-			},
-			{
-				"name": "Snowfall",
-				"description": "This decoration has not been officially released yet.",
-				"file": "snowfall.png"
 			}
 		]
 	},
@@ -1520,8 +1596,8 @@
 		"name": "Winter Wonderland",
 		"description": "tis the season",
 		"banner": {
-			"image": "/banners/winter_wonderland.png",
-			"text": "/bannertext/winter_wonderland.png"
+			"image": "/banners/winter_wonderland_2023.png",
+			"text": "/bannertext/winter_wonderland_2023.png"
 		},
 		"badge": "WINTER 2023",
 		"items": [
