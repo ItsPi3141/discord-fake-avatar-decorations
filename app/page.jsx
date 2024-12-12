@@ -402,7 +402,7 @@ const App = ({ ffmpegRef, isServer }) => {
 															setDescription(decor.description);
 															setDecoUrl(`/decorations/${decor.file}`);
 															for (const el of document.querySelectorAll(
-																"button.decor.border-2.border-primary",
+																"button.decor.border-primary",
 															)) {
 																el.classList.remove("border-primary");
 															}
