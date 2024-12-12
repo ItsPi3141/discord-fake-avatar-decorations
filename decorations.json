@@ -102,6 +102,16 @@
 				"name": "Bush Camper",
 				"description": "Exclusive to the Fortnite OG Quest for a limited time. Available until to use February 11, 2025.",
 				"file": "bush_camper.png"
+			},
+			{
+				"name": "Shield Potion",
+				"description": "Exclusive to the Fortnite Ballistic Quest for a limited time. Available until to use February 16, 2025.",
+				"file": "shield_potion.png"
+			},
+			{
+				"name": "TGA Controller",
+				"description": "Exclusive to The Game Awards Quest for a limited time. Available until to use February 14, 2025.",
+				"file": "tga_controller.png"
 			}
 		]
 	},
