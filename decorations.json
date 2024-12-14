@@ -112,6 +112,11 @@
 				"name": "TGA Controller",
 				"description": "Exclusive to The Game Awards Quest for a limited time. Available until to use February 14, 2025.",
 				"file": "tga_controller.png"
+			},
+			{
+				"name": "Shadow",
+				"description": "Exclusive to The Sonic 3 Quest for a limited time. Available until to use February 21, 2025.",
+				"file": "shadow.png"
 			}
 		]
 	},
