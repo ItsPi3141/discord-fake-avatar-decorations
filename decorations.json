@@ -117,6 +117,11 @@
 				"name": "Shadow",
 				"description": "Exclusive to The Sonic 3 Quest for a limited time. Available until to use February 21, 2025.",
 				"file": "shadow.png"
+			},
+			{
+				"name": "Rec Room Lightning",
+				"description": "Exclusive to the Rec Room Quest for a limited time. Available until to use March 1, 2025.",
+				"file": "rec_room_lightning.png"
 			}
 		]
 	},
