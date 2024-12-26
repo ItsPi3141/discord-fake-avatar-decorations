@@ -667,6 +667,13 @@ const App = ({ ffmpegRef, isServer }) => {
 								<Icons.bug />
 								Report a bug
 							</button>
+							<Link
+								className="flex justify-center items-center gap-1.5 mt-3 py-1.5 button-secondary"
+								href={"/discuss"}
+							>
+								<Icons.forum />
+								Suggest a feature
+							</Link>
 						</div>
 					</div>
 				</div>

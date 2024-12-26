@@ -12,6 +12,7 @@
 		"@discordapp/twemoji": "^15.1.0",
 		"@ffmpeg/ffmpeg": "0.12.10",
 		"@ffmpeg/util": "0.12.1",
+		"@giscus/react": "^3.0.0",
 		"apng-js": "^1.1.4",
 		"next": "15.0.4",
 		"react": "19.0.0",
