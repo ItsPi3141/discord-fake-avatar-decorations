@@ -85,7 +85,7 @@ const LoadingScreen = () => (
 		<p className="top-8 absolute mx-8 max-w-xl font-bold text-4xl text-center ginto">
 			Discord
 			<br />
-			<span className="capitalize">Fake Avatar Decorations</span>
+			<span className="capitalize ginto">Fake Avatar Decorations</span>
 		</p>
 		<LoadingCircle className="mb-4 w-10 h-10" />
 		<p>Loading...</p>
