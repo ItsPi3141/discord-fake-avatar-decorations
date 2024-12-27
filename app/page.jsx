@@ -154,8 +154,8 @@ const App = ({ ffmpegRef, isServer }) => {
 					)}
 					<div className="top-0 right-0 bottom-0 left-0 z-10 absolute flex flex-col justify-center items-center text-center">
 						<h1 className="font-bold text-3xl md:text-5xl ginto">Discord</h1>
-						<h1 className="mb-4 text-2xl md:text-4xl ginto">
-							FAKE AVATAR DECORATIONS
+						<h1 className="mb-4 text-2xl md:text-4xl capitalize ginto">
+							Fake Avatar Decorations
 						</h1>
 						<h2 className="text-sm sm:text-base">
 							Create profile pictures with avatar decorations so you can use
