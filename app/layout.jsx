@@ -1,5 +1,3 @@
-"use client";
-
 import "./globals.scss";
 
 import "./components/modal.css";
