@@ -119,6 +119,21 @@
 				"file": "shadow.png"
 			},
 			{
+				"name": "2025 Balloons",
+				"description": "Cheers to 2025!!",
+				"file": "new_year_2025.png"
+			},
+			{
+				"name": "Holiday Cat Ears",
+				"description": "o<≽^ᴖ ωᴖ^≼",
+				"file": "santa_cat_ears.png"
+			},
+			{
+				"name": "Snowfall",
+				"description": "From chill to chilly.",
+				"file": "snowfall.png"
+			},
+			{
 				"name": "Rec Room Lightning",
 				"description": "Exclusive to the Rec Room Quest for a limited time. Available until to use March 1, 2025.",
 				"file": "rec_room_lightning.png"
@@ -209,21 +224,6 @@
 				"name": "Fresh Pine (Ribbon)",
 				"description": "Ah...the smell of Winter.",
 				"file": "fresh_pine_ribbon.png"
-			},
-			{
-				"name": "New Year 2025",
-				"description": "This decoration has not been officially released yet.",
-				"file": "new_year_2025.png"
-			},
-			{
-				"name": "Santa Cat Ears",
-				"description": "This decoration has not been officially released yet.",
-				"file": "santa_cat_ears.png"
-			},
-			{
-				"name": "Snowfall",
-				"description": "This decoration has not been officially released yet.",
-				"file": "snowfall.png"
 			}
 		]
 	},
