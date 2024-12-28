@@ -47,7 +47,7 @@ export default function FileUpload({ onUpload }) {
 			{visible && (
 				<div
 					className={`relative p-2.5 rounded-[10px] w-[330px] h-[190px] pointer-events-none transition-colors duration-200 ${
-						error ? "bg-error upload-shake" : "bg-primary"
+						error ? "bg-critical upload-shake" : "bg-primary"
 					}`}
 				>
 					{/* Sparkle effects container */}
