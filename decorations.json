@@ -137,7 +137,12 @@
 				"name": "Rec Room Lightning",
 				"description": "Exclusive to the Rec Room Quest for a limited time. Available until to use March 1, 2025.",
 				"file": "rec_room_lightning.png"
-			}
+			},
+      {
+				"name": "WINGMAN'S GOT IT",
+				"description": "Exclusive to the VALORANT GO GET EM WINGS Quest for a limited time. Available to use until March 12, 2024.",
+				"file": "wingmans_got_it.png"
+			},
 		]
 	},
 	{
