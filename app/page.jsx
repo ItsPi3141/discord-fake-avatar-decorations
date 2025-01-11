@@ -538,42 +538,37 @@ const App = ({ ffmpegRef, isServer }) => {
 										}}
 										key={i}
 									>
-										{m.groupStart && (
-											<>
-												{avUrl === "loading" ? (
-													<div className="relative w-10 h-10 scale-75">
-														<LoadingCubes />
-													</div>
-												) : (
-													<>
-														{m.styled ? (
-															<div className="relative rounded-full w-10 h-10 overflow-hidden">
-																<Image
-																	src={
-																		avUrl || `${baseImgUrl}/avatars/blue.png`
-																	}
-																	draggable={false}
-																	className="top-[calc(40px*0.09)] left-[calc(40px*0.09)] absolute rounded-full w-[calc(40px*0.82)] h-[calc(40px*0.82)]"
-																/>
-																{decoUrl && (
-																	<Image
-																		src={decoUrl}
-																		draggable={false}
-																		className="top-0 left-0 absolute"
-																	/>
-																)}
-															</div>
-														) : (
+										{m.groupStart &&
+											(avUrl === "loading" ? (
+												<div className="relative w-10 h-10 scale-75">
+													<LoadingCubes />
+												</div>
+											) : (
+												<>
+													{m.styled ? (
+														<div className="relative rounded-full w-10 h-10 overflow-hidden">
 															<Image
 																src={avUrl || `${baseImgUrl}/avatars/blue.png`}
 																draggable={false}
-																className="rounded-full w-10 h-10"
+																className="top-[calc(40px*0.09)] left-[calc(40px*0.09)] absolute rounded-full w-[calc(40px*0.82)] h-[calc(40px*0.82)]"
 															/>
-														)}
-													</>
-												)}
-											</>
-										)}
+															{decoUrl && (
+																<Image
+																	src={decoUrl}
+																	draggable={false}
+																	className="top-0 left-0 absolute"
+																/>
+															)}
+														</div>
+													) : (
+														<Image
+															src={avUrl || `${baseImgUrl}/avatars/blue.png`}
+															draggable={false}
+															className="rounded-full w-10 h-10"
+														/>
+													)}
+												</>
+											))}
 										<div className="flex flex-col overflow-hidden">
 											{m.groupStart && (
 												<p className="flex items-center max-w-[250px] h-fit font-medium text-base">
