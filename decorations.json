@@ -138,11 +138,128 @@
 				"description": "Exclusive to the Rec Room Quest for a limited time. Available until to use March 1, 2025.",
 				"file": "rec_room_lightning.png"
 			},
-      {
+			{
 				"name": "WINGMAN'S GOT IT",
 				"description": "Exclusive to the VALORANT GO GET EM WINGS Quest for a limited time. Available to use until March 12, 2024.",
 				"file": "wingmans_got_it.png"
+			}
+		]
+	},
+	{
+		"name": "Fantasy 2",
+		"description": "You're walking in the forest and notice something magical and shiny.",
+		"descriptionTopMargin": "-6px",
+		"banner": {
+			"image": "/banners/fantasy_2.png",
+			"text": "/bannertext/fantasy_2.png",
+			"height": 60
+		},
+		"items": [
+			{
+				"name": "Magic Portal (Purple)",
+				"description": "Enter at your own risk.",
+				"file": "magic_portal_purple.png"
 			},
+			{
+				"name": "Magic Portal (Blue)",
+				"description": "Enter at your own risk.",
+				"file": "magic_portal_blue.png"
+			},
+			{
+				"name": "Fairy Sprites (Pink)",
+				"description": "Here to guide you on your path.",
+				"file": "fairy_sprites_pink.png"
+			},
+			{
+				"name": "Fairy Sprites (Blue)",
+				"description": "Here to guide you on your path.",
+				"file": "fairy_sprites_blue.png"
+			},
+			{
+				"name": "Fairy Sprites",
+				"description": "Here to guide you on your path.",
+				"file": "fairy_sprites.png"
+			},
+			{
+				"name": "Crystal Ball (Purple)",
+				"description": "Peer into a universe of secrets.",
+				"file": "crystal_ball_purple.png"
+			},
+			{
+				"name": "Crystal Ball (Blue)",
+				"description": "Peer into a universe of secrets.",
+				"file": "crystal_ball_blue.png"
+			},
+			{
+				"name": "Wizard Hat (Purple)",
+				"description": "Bestows the wearer with much wisdom and charm.",
+				"file": "wizard_hat_purple.png"
+			},
+			{
+				"name": "Wizard Hat (Blue)",
+				"description": "Bestows the wearer with much wisdom and charm.",
+				"file": "wizard_hat_blue.png"
+			},
+			{
+				"name": "Magical Wand (Purple)",
+				"description": "In anything you do, add a touch of magic.",
+				"file": "magical_wand_purple.png"
+			},
+			{
+				"name": "Magical Wand (Green)",
+				"description": "In anything you do, add a touch of magic.",
+				"file": "magical_wand_green.png"
+			},
+			{
+				"name": "Mooncaps (Pink)",
+				"description": "It is said they guide lost travelers through moonlit paths.",
+				"file": "mooncaps_pink.png"
+			},
+			{
+				"name": "Mooncaps (Blue)",
+				"description": "It is said they guide lost travelers through moonlit paths.",
+				"file": "mooncaps_blue.png"
+			},
+			{
+				"name": "Cottage Home",
+				"description": "It's cold outside traveler... come, warm yourself by the hearth.",
+				"file": "cottage_home.png"
+			},
+			{
+				"name": "Flaming Sword",
+				"description": "Slaying the look and the monsters.",
+				"file": "flaming_sword.png"
+			},
+			{
+				"name": "Magical Potion",
+				"description": "Drink at your own risk.",
+				"file": "magical_potion.png"
+			},
+			{
+				"name": "Wizard's Staff",
+				"description": "How much power does it hold?",
+				"file": "wizards_staff.png"
+			},
+			{
+				"name": "Glowing Runes",
+				"description": "I wonder what these symbols mean.",
+				"file": "glowing_runes.png"
+			},
+			{
+				"name": "Defensive Shield",
+				"description": "Use against pointy things.",
+				"file": "defensive_shield.png"
+			},
+			{
+				"name": "Skull Medallion",
+				"description": "Earned through unknown means.",
+				"file": "skull_medallion.png"
+			},
+			{
+				"name": "Treasure and Key",
+				"description": "What glorious treasures lie within?",
+				"file": "treasure_and_key.png"
+			}
 		]
 	},
 	{
