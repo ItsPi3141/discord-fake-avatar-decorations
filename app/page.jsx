@@ -23,8 +23,8 @@ import { getMimeTypeFromArrayBuffer } from "@/ffmpeg/utils.js";
 import { printMsg, printErr } from "./print.js";
 import { storeData } from "./utils/dataHandler.js";
 
-const decorationsData = require("../decorations.json");
-const avatarsData = require("../avatars.json");
+import { decorationsData } from "./data/decorations.js";
+import { avatarsData } from "./data/avatars.js";
 
 const baseImgUrl = process.env.NEXT_PUBLIC_BASE_IMAGE_URL || "";
 
@@ -235,13 +235,13 @@ const App = ({ ffmpegRef, isServer }) => {
 											<button
 												key={index}
 												type="button"
-												data-tooltip-id={avatar.name
+												data-tooltip-id={avatar.n
 													.toLowerCase()
 													.replaceAll(" ", "-")}
-												data-tooltip-content={avatar.name}
+												data-tooltip-content={avatar.n}
 												className="avatar-preset button-tile"
 												onClick={(e) => {
-													setAvUrl(`${baseImgUrl}/avatars/${avatar.file}`);
+													setAvUrl(`${baseImgUrl}/avatars/${avatar.f}`);
 													for (const el of document.querySelectorAll(
 														"button.avatar-preset.border-primary",
 													)) {
@@ -251,12 +251,12 @@ const App = ({ ffmpegRef, isServer }) => {
 												}}
 											>
 												<Image
-													src={`/avatars/${avatar.file}`}
+													src={`/avatars/${avatar.f}`}
 													className="rounded-full pointer-events-none"
 												/>
 											</button>
 											<Tooltip
-												id={avatar.name.toLowerCase().replaceAll(" ", "-")}
+												id={avatar.n.toLowerCase().replaceAll(" ", "-")}
 												opacity={1}
 												style={{
 													background: "#111214",
@@ -282,19 +282,19 @@ const App = ({ ffmpegRef, isServer }) => {
 								return (
 									<div key={index}>
 										<div className="relative justify-center items-center grid grid-cols-1 grid-rows-1 bg-black mb-4 rounded-2xl h-28 overflow-hidden">
-											{typeof category.banner.image !== "string" ? (
+											{typeof category.b.i !== "string" ? (
 												<>
 													<div
 														className="top-0 right-0 bottom-0 left-0 absolute"
 														style={{
-															background: category.banner.background || "#000",
+															background: category.b.bg || "#000",
 														}}
 													/>
-													{category.banner.image.map((e, i) => (
+													{category.b.i.map((e, i) => (
 														<Image
 															key={i}
 															className={"object-cover bottom-0 absolute"}
-															src={e.url}
+															src={`/banners/${e.url}`}
 															alt={""}
 															draggable={false}
 															loading="eager"
@@ -319,7 +319,7 @@ const App = ({ ffmpegRef, isServer }) => {
 											) : (
 												<Image
 													className="[grid-column:1/1] [grid-row:1/1] object-cover"
-													src={category.banner.image}
+													src={`/banners/${category.b.i}`}
 													alt={""}
 													draggable={false}
 													loading="eager"
@@ -329,29 +329,29 @@ const App = ({ ffmpegRef, isServer }) => {
 														height: "100%",
 														width: "100%",
 														objectFit: "cover",
-														objectPosition: category.banner.bgPos || "",
+														objectPosition: category.b.bgPos || "",
 													}}
 												/>
 											)}
 											<div className="relative flex flex-col justify-center items-center [grid-column:1/1] [grid-row:1/1] p-4 h-full">
-												{category.banner.text ? (
-													category.banner.text === "" ? (
+												{category.b.t ? (
+													category.b.t === "" ? (
 														<div
 															style={{
-																height: `${category.banner.height || 48}px`,
+																height: `${category.b.h || 48}px`,
 																width: "100%",
 															}}
 														/>
 													) : (
 														<Image
-															src={category.banner.text}
-															alt={category.name}
+															src={`/bannertext/${category.b.t}`}
+															alt={category.n}
 															draggable={false}
 															loading="eager"
 															height={0}
 															width={0}
 															style={{
-																height: `${category.banner.height || 48}px`,
+																height: `${category.b.h || 48}px`,
 																width: "auto",
 															}}
 														/>
@@ -368,7 +368,7 @@ const App = ({ ffmpegRef, isServer }) => {
 																			: "#fff",
 																}}
 															>
-																{category.name}
+																{category.n}
 															</p>
 														)}
 													</>
@@ -377,10 +377,10 @@ const App = ({ ffmpegRef, isServer }) => {
 													className="w-[232px] xs:w-full font-medium text-center text-sm"
 													style={{
 														color: category.darkText || false ? "#000" : "#fff",
-														marginTop: category.descriptionTopMargin || "",
+														marginTop: category.descTopM || "",
 													}}
 												>
-													{category.description}
+													{category.d}
 												</p>
 												{category.badge && (
 													<p className="top-2 right-2 absolute bg-white m-0 px-2 py-0 rounded-full font-semibold text-black text-xs [letter-spacing:0]">
@@ -391,16 +391,16 @@ const App = ({ ffmpegRef, isServer }) => {
 										</div>
 
 										<div className="gap-3 grid grid-cols-3 sm:grid-cols-5 md:grid-cols-5 min-[600px]:grid-cols-6 min-[720px]:grid-cols-7 xs:grid-cols-4">
-											{category.items.map((decor, index) => {
+											{category.i.map((decor, index) => {
 												return (
 													<button
 														key={index}
 														type="button"
 														className="button-tile decor"
 														onClick={(e) => {
-															setName(decor.name);
-															setDescription(decor.description);
-															setDecoUrl(`/decorations/${decor.file}`);
+															setName(decor.n);
+															setDescription(decor.d);
+															setDecoUrl(`/decorations/${decor.f}.png`);
 															for (const el of document.querySelectorAll(
 																"button.decor.border-primary",
 															)) {
@@ -410,7 +410,7 @@ const App = ({ ffmpegRef, isServer }) => {
 														}}
 													>
 														<Image
-															src={`/decorations/${decor.file}`}
+															src={`/decorations/${decor.f}.png`}
 															className="pointer-events-none"
 														/>
 													</button>
