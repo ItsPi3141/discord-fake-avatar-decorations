@@ -142,6 +142,11 @@
 				"name": "WINGMAN'S GOT IT",
 				"description": "Exclusive to the VALORANT GO GET EM WINGS Quest for a limited time. Available to use until March 12, 2024.",
 				"file": "wingmans_got_it.png"
+			},
+			{
+				"name": "Jeff the Land Shark",
+				"description": "Exclusive to the Marvel Rivals Quest for a limited time. Available to use until March 16, 2024.",
+				"file": "jeff_the_land_shark.png"
 			}
 		]
 	},
