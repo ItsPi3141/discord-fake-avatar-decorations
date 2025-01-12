@@ -180,6 +180,9 @@ body:has(main p.text-gray-400 a):not(:has([href*="Its"][href*="hub"][href$="i314
 	0% {
 		left: -50%;
 	}
+	50% {
+		left: 125%;
+	}
 	100% {
 		left: 125%;
 	}
@@ -198,7 +201,7 @@ body:has(main p.text-gray-400 a):not(:has([href*="Its"][href*="hub"][href$="i314
 	transform: rotate(30deg) translate3d(0, -50%, 0);
 	background-color: rgba(255, 255, 255, 0.2);
 	outline: 10px solid rgba(255, 255, 255, 0.1);
-	animation: button-shine 2.5s ease-in-out 750ms infinite;
+	animation: button-shine 2s ease-in-out infinite;
 }
 
 /* HIGHLIGHT */
