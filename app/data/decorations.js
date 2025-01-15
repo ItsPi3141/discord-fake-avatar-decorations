@@ -148,6 +148,11 @@ export const decorationsData = [
 				d: "Exclusive to the Marvel Rivals Quest for a limited time. Available to use until March 16, 2024.",
 				f: "jeff_the_land_shark",
 			},
+			{
+				n: "Valentine's 2025",
+				d: "This decoration has not been officially released yet.",
+				f: "valentines_2025",
+			},
 		],
 	},
 	{
