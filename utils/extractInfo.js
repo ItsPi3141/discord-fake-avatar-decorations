@@ -12,9 +12,9 @@ function extractInfo(collectibleCategories) {
 			.flatMap((p) => {
 				if (p.type === 0) {
 					return {
-						name: p.name,
-						description: p.summary,
-						file: `${p.name
+						n: p.name,
+						d: p.summary,
+						f: `${p.name
 							.toLowerCase()
 							.replaceAll("'", "")
 							.replaceAll(/[^A-Za-z0-9]+/g, "_")
@@ -25,9 +25,9 @@ function extractInfo(collectibleCategories) {
 					return p.variants
 						.filter((p) => p.type === 0)
 						.map((v) => ({
-							name: v.name,
-							description: v.summary,
-							file: `${v.name
+							n: v.name,
+							d: v.summary,
+							f: `${v.name
 								.toLowerCase()
 								.replaceAll("'", "")
 								.replaceAll(/[^A-Za-z0-9]+/g, "_")
@@ -71,4 +71,58 @@ function extractInfo(collectibleCategories) {
 	);
 	console.log(json);
 	console.log(links);
+}
+
+let token = null;
+function getInfoBySKU(sku) {
+	const createLink = (asset, name) =>
+		`https://cdn.discordapp.com/avatar-decoration-presets/${asset}.png?size=1024&name=${name}.png`;
+	return new Promise((resolve, reject) => {
+		(async () => {
+			if (!token) {
+				webpackChunkdiscord_app.push([
+					[crypto.randomUUID()],
+					{},
+					(webpackRequire) => {
+						token = Object.values(webpackRequire.c)
+							.find((module) => module?.exports?.default?.getToken !== void 0)
+							.exports.default.getToken();
+					},
+				]);
+			}
+			while (!token) {
+				await new Promise((r) => setTimeout(r, 100));
+			}
+			fetch(`https://discord.com/api/v9/collectibles-products/${sku}`, {
+				headers: {
+					Authorization: token,
+				},
+			})
+				.then((r) => r.json())
+				.then((j) =>
+					resolve(
+						console.log(
+							{
+								n: j.name,
+								d: j.summary,
+								f: `${j.name
+									.toLowerCase()
+									.replaceAll("'", "")
+									.replaceAll(/[^A-Za-z0-9]+/g, "_")
+									.replaceAll(/(^_|_$)/g, "")}.png`,
+							},
+							createLink(
+								j.items[0].asset,
+								j.name
+									.toLowerCase()
+									.replaceAll("'", "")
+									.replaceAll(/[^A-Za-z0-9]+/g, "_")
+									.replaceAll(/(^_|_$)/g, ""),
+							),
+						),
+					),
+				)
+				.catch(reject);
+		})();
+	});
 }
