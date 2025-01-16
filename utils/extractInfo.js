@@ -14,11 +14,11 @@ function extractInfo(collectibleCategories) {
 					return {
 						n: p.name,
 						d: p.summary,
-						f: `${p.name
+						f: p.name
 							.toLowerCase()
 							.replaceAll("'", "")
 							.replaceAll(/[^A-Za-z0-9]+/g, "_")
-							.replaceAll(/(^_|_$)/g, "")}.png`,
+							.replaceAll(/(^_|_$)/g, ""),
 					};
 				}
 				if (p.type === 2000) {
@@ -27,11 +27,11 @@ function extractInfo(collectibleCategories) {
 						.map((v) => ({
 							n: v.name,
 							d: v.summary,
-							f: `${v.name
+							f: v.name
 								.toLowerCase()
 								.replaceAll("'", "")
 								.replaceAll(/[^A-Za-z0-9]+/g, "_")
-								.replaceAll(/(^_|_$)/g, "")}.png`,
+								.replaceAll(/(^_|_$)/g, ""),
 						}));
 				}
 			}),
@@ -105,11 +105,11 @@ function getInfoBySKU(sku) {
 							{
 								n: j.name,
 								d: j.summary,
-								f: `${j.name
+								f: j.name
 									.toLowerCase()
 									.replaceAll("'", "")
 									.replaceAll(/[^A-Za-z0-9]+/g, "_")
-									.replaceAll(/(^_|_$)/g, "")}.png`,
+									.replaceAll(/(^_|_$)/g, ""),
 							},
 							createLink(
 								j.items[0].asset,
