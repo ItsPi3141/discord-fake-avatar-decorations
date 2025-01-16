@@ -149,9 +149,9 @@ export const decorationsData = [
 				f: "jeff_the_land_shark",
 			},
 			{
-				n: "Valentine's 2025",
-				d: "This decoration has not been officially released yet.",
-				f: "valentines_2025",
+				n: "Heart-to-Heart",
+				d: "Feel the love all around.",
+				f: "heart_to_heart",
 			},
 		],
 	},
