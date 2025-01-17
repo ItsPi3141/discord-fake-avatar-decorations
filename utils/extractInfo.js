@@ -1,13 +1,13 @@
 function extractInfo(collectibleCategories) {
 	const json = collectibleCategories.map((category) => ({
-		name: category.name,
-		description: category.summary,
-		banner: {
-			image: `/banners/${category.name.toLowerCase().replaceAll(" ", "_")}.png`,
-			text: `/bannertext/${category.name.toLowerCase().replaceAll(" ", "_")}.png`,
-			height: 50,
+		n: category.name,
+		d: category.summary,
+		b: {
+			i: `/banners/${category.name.toLowerCase().replaceAll(" ", "_")}.png`,
+			t: `/bannertext/${category.name.toLowerCase().replaceAll(" ", "_")}.png`,
+			h: 50,
 		},
-		items: category.products
+		i: category.products
 			.filter((p) => p.type === 0 || p.type === 2000)
 			.flatMap((p) => {
 				if (p.type === 0) {
