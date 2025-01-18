@@ -156,6 +156,47 @@ export const decorationsData = [
 		],
 	},
 	{
+		n: "Steampunk",
+		d: "What shall we tinker on today?",
+		b: {
+			i: "steampunk.png",
+			t: "steampunk.png",
+			h: 45,
+		},
+		i: [
+			{
+				n: "Steampunk Cat Ears",
+				d: "⚙️ ^ • ⩊ • ^ ⚙️",
+				f: "steampunk_cat_ears",
+			},
+			{
+				n: "Mech Flora",
+				d: "Such charming contraptions in bloom, how exquisite!",
+				f: "mech_flora",
+			},
+			{
+				n: "Bowler Hat",
+				d: "I'd tip my hat, but I fear its legs outrun my courtesy.",
+				f: "bowler_hat",
+			},
+			{
+				n: "Brass Beats",
+				d: "Tune in, turn up, and let off a little steam.",
+				f: "brass_beats",
+			},
+			{
+				n: "Timekeeper's Clock",
+				d: "Capable of time travel by keystroke. Mind your misspellings.",
+				f: "timekeepers_clock",
+			},
+			{
+				n: "Flux Alchemy",
+				d: "Would you care to be the centerpiece of a most daring concoction?",
+				f: "flux_alchemy",
+			},
+		],
+	},
+	{
 		n: "Fantasy 2",
 		d: "You're walking in the forest and notice something magical and shiny.",
 		descTopM: "-6px",
