@@ -3,8 +3,8 @@ function extractInfo(collectibleCategories) {
 		n: category.name,
 		d: category.summary,
 		b: {
-			i: `/banners/${category.name.toLowerCase().replaceAll(" ", "_")}.png`,
-			t: `/bannertext/${category.name.toLowerCase().replaceAll(" ", "_")}.png`,
+			i: `${category.name.toLowerCase().replaceAll(" ", "_")}.png`,
+			t: `${category.name.toLowerCase().replaceAll(" ", "_")}.png`,
 			h: 50,
 		},
 		i: category.products
