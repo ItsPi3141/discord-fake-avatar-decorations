@@ -149,6 +149,11 @@ export const decorationsData = [
 				f: "jeff_the_land_shark",
 			},
 			{
+				n: "Fuchsia Agent",
+				d: "Exclusive to the Strinova Fuchsia Quest for a limited time. Available to use until March 24, 2024.",
+				f: "fuchsia_agent",
+			},
+			{
 				n: "Heart-to-Heart",
 				d: "Feel the love all around.",
 				f: "heart_to_heart",
