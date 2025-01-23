@@ -14,15 +14,15 @@
 		"@ffmpeg/util": "0.12.2",
 		"@giscus/react": "^3.1.0",
 		"apng-js": "^1.1.4",
-		"next": "^15.1.4",
+		"next": "^15.1.6",
 		"react": "19.0.0",
 		"react-dom": "19.0.0",
 		"react-tooltip": "^5.28.0",
-		"sass": "^1.83.1"
+		"sass": "^1.83.4"
 	},
 	"devDependencies": {
 		"autoprefixer": "^10.4.20",
-		"postcss": "^8.4.49",
+		"postcss": "^8.5.1",
 		"tailwindcss": "^3.4.17"
 	}
 }
