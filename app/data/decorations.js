@@ -161,6 +161,62 @@ export const decorationsData = [
 		],
 	},
 	{
+		n: "Lunar New Year",
+		d: "Shed the old, embrace the new. Happy Year of the Snake!",
+		b: {
+			i: "lunar_new_year_2025.png",
+			t: "lunar_new_year_2025.png",
+			h: 38,
+		},
+		i: [
+			{
+				n: "Snake's Hug",
+				d: "Trying to ward off bad luck? Your snake companion's got you covered.",
+				f: "snakes_hug",
+			},
+			{
+				n: "Lotus Flower",
+				d: "Every petal, a promise of new beginnings.",
+				f: "lotus_flower",
+			},
+			{
+				n: "Red Lantern",
+				d: "May you shine bright and boldly.",
+				f: "red_lantern",
+			},
+			{
+				n: "Fan Flourish",
+				d: "Incredibly fan-tastic.",
+				f: "fan_flourish",
+			},
+			{
+				n: "Lunar Lanterns",
+				d: "Light the night.",
+				f: "lunar_lanterns",
+			},
+			{
+				n: "Firecrackers",
+				d: "Don't try this at home!",
+				f: "firecrackers",
+			},
+			{
+				n: "Dragon's Smile",
+				d: "A dragon's grin fills your year with laughs.",
+				f: "dragons_smile",
+			},
+			{
+				n: "Lucky Envelopes",
+				d: "Capacity: 888 coins.",
+				f: "lucky_envelopes",
+			},
+			{
+				n: "Koi Pond",
+				d: "Swimming in an eternal, peaceful circle.",
+				f: "koi_pond",
+			},
+		],
+	},
+	{
 		n: "Steampunk",
 		d: "What shall we tinker on today?",
 		b: {
@@ -1671,8 +1727,8 @@ export const decorationsData = [
 		n: "Lunar New Year",
 		d: "Roar into the Year of the Dragon.",
 		b: {
-			i: "lunar_new_year.png",
-			t: "lunar_new_year.png",
+			i: "lunar_new_year_2024.png",
+			t: "lunar_new_year_2024.png",
 			h: 38,
 		},
 		badge: "SPRING 2024",

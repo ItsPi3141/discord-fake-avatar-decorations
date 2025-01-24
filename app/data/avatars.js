@@ -1,5 +1,9 @@
 export const avatarsData = [
 	{
+		n: "Lunar New Year 2025",
+		f: "lunar_new_year_2025.png",
+	},
+	{
 		n: "Steampunk",
 		f: "steampunk.png",
 	},
