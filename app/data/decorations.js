@@ -1,7 +1,7 @@
 export const decorationsData = [
 	{
-		n: "Nitro Exclusives  ",
-		d: "Miscellaneous decorations and quest rewards.",
+		n: "Nitro Exclusives",
+		d: "Decorations only available to Nitro subscribers.",
 		b: {
 			i: [
 				{

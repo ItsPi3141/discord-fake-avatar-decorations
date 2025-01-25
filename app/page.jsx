@@ -374,7 +374,15 @@ const App = ({ ffmpegRef, isServer }) => {
 																			: "#fff",
 																}}
 															>
-																{category.n}
+																{category.n.toLowerCase().includes("nitro") ? (
+																	<>
+																		<span className="text-4xl uppercase nitro-font">
+																			{category.n}
+																		</span>
+																	</>
+																) : (
+																	category.n
+																)}
 															</p>
 														)}
 													</>
