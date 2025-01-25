@@ -191,6 +191,7 @@ export const decorationsData = [
 			t: "lunar_new_year_2025.png",
 			h: 38,
 		},
+		badge: "SPRING 2025",
 		i: [
 			{
 				n: "Snake's Hug",
