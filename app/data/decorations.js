@@ -26,6 +26,11 @@ export const decorationsData = [
 				f: "sakura_gyoiko",
 			},
 			{
+				n: "Minions",
+				d: "Name a more iconic duo. Given to Nitro gifters in October 2024.",
+				f: "minions",
+			},
+			{
 				n: "2025 Balloons",
 				d: "Cheers to 2025!! Given to Nitro gifters in December 2024.",
 				f: "new_year_2025",
