@@ -27,22 +27,22 @@ export const decorationsData = [
 			},
 			{
 				n: "2025 Balloons",
-				d: "Cheers to 2025!!",
+				d: "Cheers to 2025!! Given to Nitro gifters in December 2024.",
 				f: "new_year_2025",
 			},
 			{
 				n: "Holiday Cat Ears",
-				d: "o<≽^ᴖ ωᴖ^≼",
+				d: "o<≽^ᴖ ωᴖ^≼ Given to Nitro gifters in December 2024.",
 				f: "santa_cat_ears",
 			},
 			{
 				n: "Snowfall",
-				d: "From chill to chilly.",
+				d: "From chill to chilly. Given to Nitro gifters in December 2024.",
 				f: "snowfall",
 			},
 			{
 				n: "Heart-to-Heart",
-				d: "Feel the love all around.",
+				d: "Feel the love all around. Given to Nitro gifters in February 2025.",
 				f: "heart_to_heart",
 			},
 		],
