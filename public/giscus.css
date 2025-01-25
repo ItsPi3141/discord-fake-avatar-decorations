@@ -112,6 +112,10 @@ body {
 	border-bottom: none;
 }
 
+.gsc-replies {
+	border-color: var(--border-normal) !important;
+}
+
 .btn {
 	background: var(--button-secondary-background);
 	border: solid 1px var(--button-secondary-border) !important;
@@ -173,7 +177,11 @@ body {
 	}
 	&.has-reacted {
 		color: var(--text-link);
-		background: color-mix(in srgb, var(--button-primary-background) 20%, transparent) !important;
+		background: color-mix(
+			in srgb,
+			var(--button-primary-background) 20%,
+			transparent
+		) !important;
 		border-color: var(--button-primary-background) !important;
 	}
 }
