@@ -304,14 +304,20 @@ const App = ({ ffmpegRef, isServer }) => {
 																height: e.height || "auto",
 																width: e.width || (e.height ? "auto" : "100%"),
 																left:
-																	e.align === "left" || e.align === "center"
+																	e.align.includes("left") ||
+																	e.align === "center"
 																		? 0
 																		: "",
 																right:
-																	e.align === "right" || e.align === "center"
+																	e.align.includes("right") ||
+																	e.align === "center"
 																		? 0
 																		: "",
+																top: e.align.includes("top") ? 0 : "",
+																bottom: e.align.includes("bottom") ? 0 : "",
 																objectPosition: e.align,
+																opacity: e.opacity || 1,
+																transform: e.transform || "",
 															}}
 														/>
 													))}

@@ -1,6 +1,54 @@
 export const decorationsData = [
 	{
-		n: "Discord",
+		n: "Nitro Exclusives  ",
+		d: "Miscellaneous decorations and quest rewards.",
+		b: {
+			i: [
+				{
+					url: "string_lights.png",
+					align: "top left",
+					height: "160%",
+					transform: "scaleX(-1) translateY(-20%)",
+				},
+				{
+					url: "hearts.png",
+					align: "top right",
+					height: "150%",
+					transform: "translateY(-5%)",
+				},
+			],
+			bg: "linear-gradient(90deg, hsl(269.291 52.697% 52.745%) 0%, hsl(295.645 50% 51.373%) 50%, hsl(325.385 31.707% 51.765%) 100%)",
+		},
+		i: [
+			{
+				n: "Gyoiko Sakura",
+				d: "A rare blossom only seen by a fortunate few. Given to new nitro subscribers between April 24, 2024 and May 1, 2024.",
+				f: "sakura_gyoiko",
+			},
+			{
+				n: "2025 Balloons",
+				d: "Cheers to 2025!!",
+				f: "new_year_2025",
+			},
+			{
+				n: "Holiday Cat Ears",
+				d: "o<≽^ᴖ ωᴖ^≼",
+				f: "santa_cat_ears",
+			},
+			{
+				n: "Snowfall",
+				d: "From chill to chilly.",
+				f: "snowfall",
+			},
+			{
+				n: "Heart-to-Heart",
+				d: "Feel the love all around.",
+				f: "heart_to_heart",
+			},
+		],
+	},
+	{
+		n: "Quests",
 		d: "Miscellaneous decorations and quest rewards.",
 		b: {
 			i: [
@@ -12,7 +60,7 @@ export const decorationsData = [
 					url: "sakura.svg",
 					align: "right",
 					height: "100%",
-					opacity: "0.8",
+					opacity: "0.9",
 				},
 			],
 			bg: "linear-gradient(90deg, rgba(52,65,217,1) 0%, rgba(154,68,247,1) 100%)",
@@ -27,11 +75,6 @@ export const decorationsData = [
 				n: "Mokoko",
 				d: "An affectionate Mokoko wants to give you plenty of hugs! Exclusive to Mokoko Quest 2024 for a limited time.",
 				f: "mokoko",
-			},
-			{
-				n: "Gyoiko Sakura",
-				d: "A rare blossom only seen by a fortunate few. Given to new nitro subscribers between April 24, 2024 and May 1, 2024.",
-				f: "sakura_gyoiko",
 			},
 			{
 				n: "Warp Helmet",
@@ -119,21 +162,6 @@ export const decorationsData = [
 				f: "shadow",
 			},
 			{
-				n: "2025 Balloons",
-				d: "Cheers to 2025!!",
-				f: "new_year_2025",
-			},
-			{
-				n: "Holiday Cat Ears",
-				d: "o<≽^ᴖ ωᴖ^≼",
-				f: "santa_cat_ears",
-			},
-			{
-				n: "Snowfall",
-				d: "From chill to chilly.",
-				f: "snowfall",
-			},
-			{
 				n: "Rec Room Lightning",
 				d: "Exclusive to the Rec Room Quest for a limited time. Available until to use March 1, 2025.",
 				f: "rec_room_lightning",
@@ -152,11 +180,6 @@ export const decorationsData = [
 				n: "Fuchsia Agent",
 				d: "Exclusive to the Strinova Fuchsia Quest for a limited time. Available to use until March 24, 2024.",
 				f: "fuchsia_agent",
-			},
-			{
-				n: "Heart-to-Heart",
-				d: "Feel the love all around.",
-				f: "heart_to_heart",
 			},
 		],
 	},
