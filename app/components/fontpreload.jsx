@@ -19,6 +19,7 @@ export function FontPreloader() {
 						</p>
 					))}
 					<p className="ginto">e</p>
+					<p className="nitro-font">e</p>
 				</div>
 			)}
 		</>
