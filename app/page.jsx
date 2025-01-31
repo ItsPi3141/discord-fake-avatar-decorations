@@ -140,18 +140,27 @@ const App = ({ ffmpegRef, isServer }) => {
 
 	const router = useRouter();
 
+	const getBannerImage = useCallback(() => {
+		switch (new Date().getMonth() + 1) {
+			case 2:
+				return `url(${baseImgUrl}/banners/hearts.png) right top / contain no-repeat, linear-gradient(78.98deg, rgba(221, 98, 98, 1), rgba(171, 12, 152, 1))`;
+			case 12:
+				return `url(${baseImgUrl}/wallpaper/winter.jpg) center / cover no-repeat`;
+			default:
+				return "none";
+		}
+	});
+
 	return (
 		<>
 			<main className="flex flex-col items-center w-screen h-screen text-white overflow-auto discord-scrollbar">
 				<div className="relative bg-primary mt-8 px-4 py-8 sm:p-8 md:p-12 lg:p-16 rounded-3xl w-[calc(100%-6rem)] min-h-72 overflow-hidden select-none">
-					{new Date().getMonth() === 11 && (
-						<img
-							src={`${baseImgUrl}/wallpaper/winter.jpg`}
-							alt=""
-							className="top-0 right-0 bottom-0 object-bottom left-0 z-0 absolute w-full h-full pointer-events-none object-cover"
-							loading="eager"
-						/>
-					)}
+					<div
+						className="top-0 right-0 bottom-0 object-bottom left-0 z-0 absolute w-full h-full pointer-events-none"
+						style={{
+							background: getBannerImage(),
+						}}
+					/>
 					<div className="top-0 right-0 bottom-0 left-0 z-10 absolute flex flex-col justify-center items-center text-center">
 						<h1 className="font-bold text-3xl md:text-5xl ginto">Discord</h1>
 						<h1 className="mb-4 text-2xl md:text-4xl capitalize ginto">
