@@ -173,18 +173,23 @@ export const decorationsData = [
 			},
 			{
 				n: "WINGMAN'S GOT IT",
-				d: "Exclusive to the VALORANT GO GET EM WINGS Quest for a limited time. Available to use until March 12, 2024.",
+				d: "Exclusive to the VALORANT GO GET EM WINGS Quest for a limited time. Available to use until March 12, 2025.",
 				f: "wingmans_got_it",
 			},
 			{
 				n: "Jeff the Land Shark",
-				d: "Exclusive to the Marvel Rivals Quest for a limited time. Available to use until March 16, 2024.",
+				d: "Exclusive to the Marvel Rivals Quest for a limited time. Available to use until March 16, 2025.",
 				f: "jeff_the_land_shark",
 			},
 			{
 				n: "Fuchsia Agent",
-				d: "Exclusive to the Strinova Fuchsia Quest for a limited time. Available to use until March 24, 2024.",
+				d: "Exclusive to the Strinova Fuchsia Quest for a limited time. Available to use until March 24, 2025.",
 				f: "fuchsia_agent",
+			},
+			{
+				n: "Fortnite Boogie Bomb",
+				d: "Exclusive to the Fortnite OG S2 Quest for a limited time. Available to use until April 5, 2025.",
+				f: "fortnite_boogie_bomb",
 			},
 		],
 	},
