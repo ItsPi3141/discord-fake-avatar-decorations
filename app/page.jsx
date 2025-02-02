@@ -563,13 +563,13 @@ const App = ({ ffmpegRef, isServer }) => {
 									>
 										{m.groupStart &&
 											(avUrl === "loading" ? (
-												<div className="relative w-10 h-10 scale-75">
+												<div className="relative w-10 h-10 scale-75 shrink-0">
 													<LoadingCubes />
 												</div>
 											) : (
 												<>
 													{m.styled ? (
-														<div className="relative rounded-full w-10 h-10 overflow-hidden">
+														<div className="relative rounded-full w-10 h-10 overflow-hidden shrink-0">
 															<Image
 																src={avUrl || `${baseImgUrl}/avatars/blue.png`}
 																draggable={false}
@@ -592,13 +592,13 @@ const App = ({ ffmpegRef, isServer }) => {
 													)}
 												</>
 											))}
-										<div className="flex flex-col overflow-hidden">
+										<div className="flex flex-col overflow-hidden shrink">
 											{m.groupStart && (
-												<p className="flex items-center max-w-[250px] h-fit font-medium text-base">
-													<span className="mr-1 text-ellipsis text-nowrap overflow-hidden">
+												<p className="flex items-center gap-2 max-w-[250px] h-fit font-medium text-base">
+													<span className="text-ellipsis text-nowrap overflow-hidden">
 														{name || "Display Name"}
 													</span>
-													<span className="ml-1 h-4 text-nowrap text-text-muted text-xs">
+													<span className="h-4 text-nowrap text-text-muted text-xs">
 														Today at{" "}
 														{[
 															new Date().getHours() % 12,
