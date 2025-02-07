@@ -194,6 +194,47 @@ export const decorationsData = [
 		],
 	},
 	{
+		n: "Civilization VII",
+		d: "Build something you believe in.",
+		b: {
+			i: "civilization_vii.png",
+			t: "civilization_vii.png",
+			h: 60,
+		},
+		i: [
+			{
+				n: "Gold Laurel Wreath",
+				d: "An emperor’s favorite accessory.",
+				f: "gold_laurel_wreath",
+			},
+			{
+				n: "Golden Hex",
+				d: "The building blocks of Civilization.",
+				f: "golden_hex",
+			},
+			{
+				n: "Terrain Tiles",
+				d: "Land, sea, and everything in between.",
+				f: "terrain_tiles",
+			},
+			{
+				n: "Hex Tiles",
+				d: "Make your mark on the map.",
+				f: "hex_tiles",
+			},
+			{
+				n: "City Walls",
+				d: "Barbarian-proof.",
+				f: "city_walls",
+			},
+			{
+				n: "Next Turn Button",
+				d: "Just one more turn.",
+				f: "next_turn_button",
+			},
+		],
+	},
+	{
 		n: "Lunar New Year",
 		d: "Shed the old, embrace the new. Happy Year of the Snake!",
 		b: {
