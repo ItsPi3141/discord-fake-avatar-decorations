@@ -1,5 +1,9 @@
 export const avatarsData = [
 	{
+		n: "Valentine's 2025 and JENNIE",
+		f: "valentines_2025.png",
+	},
+	{
 		n: "Civilization VII",
 		f: "civilization_vii.png",
 	},

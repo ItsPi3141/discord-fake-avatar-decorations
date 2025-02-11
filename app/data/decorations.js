@@ -194,6 +194,83 @@ export const decorationsData = [
 		],
 	},
 	{
+		n: "Valentines",
+		d: "Just send it.",
+		b: {
+			i: "valentines_2025.png",
+			t: "valentines_2025.png",
+			h: 54,
+		},
+		i: [
+			{
+				n: "Rose Bearer (Pink)",
+				d: "Bear hugs and roses never miss.",
+				f: "rose_bearer_pink",
+			},
+			{
+				n: "Rose Bearer (Blue)",
+				d: "Bear hugs and roses never miss.",
+				f: "rose_bearer_blue",
+			},
+			{
+				n: "Angel",
+				d: "Every Angel needs their Devil-in-crime.",
+				f: "angel",
+			},
+			{
+				n: "Devil",
+				d: "Every Devil needs their Angel-in-crime.",
+				f: "devil",
+			},
+			{
+				n: "Aim for Love",
+				d: "Shoot your shot! Results may vary.",
+				f: "aim_for_love",
+			},
+			{
+				n: "Lovestruck",
+				d: "It appears you have a secret admirer.",
+				f: "lovestruck",
+			},
+			{
+				n: "Ring of Roses (Red)",
+				d: "There's always time to stop and frame the roses.",
+				f: "ring_of_roses_red",
+			},
+			{
+				n: "Ring of Roses (Blue)",
+				d: "There's always time to stop and frame the roses.",
+				f: "ring_of_roses_blue",
+			},
+			{
+				n: "Heartstrings (Red)",
+				d: "Pull with care.",
+				f: "heartstrings_red",
+			},
+			{
+				n: "Heartstrings (Blue)",
+				d: "Pull with care.",
+				f: "heartstrings_blue",
+			},
+		],
+	},
+	{
+		n: "JENNIE",
+		d: "JENNIE presents Ruby. Album out March 7th.",
+		b: {
+			i: "jennie.png",
+			t: "jennie.png",
+			h: 58,
+		},
+		i: [
+			{
+				n: "Ruby Hearts",
+				d: "JENNIE Exclusive Avatar Decoration. Only on Discord.",
+				f: "ruby_hearts",
+			},
+		],
+	},
+	{
 		n: "Civilization VII",
 		d: "Build something you believe in.",
 		b: {
