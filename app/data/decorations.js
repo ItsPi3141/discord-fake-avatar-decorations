@@ -1,7 +1,7 @@
 export const decorationsData = [
 	{
-		n: "Nitro Exclusives",
-		d: "Decorations only available to Nitro subscribers.",
+		n: "Nitro",
+		d: "Decorations only available through Nitro purchases.",
 		b: {
 			i: [
 				{
@@ -190,6 +190,11 @@ export const decorationsData = [
 				n: "Fortnite Boogie Bomb",
 				d: "Exclusive to the Fortnite OG S2 Quest for a limited time. Available to use until April 5, 2025.",
 				f: "fortnite_boogie_bomb",
+			},
+			{
+				n: "Scout",
+				d: "Exclusive to the Sid Meier's Civilization VII Quest for a limited time. Available to use until April 26, 2025.",
+				f: "scout",
 			},
 		],
 	},
