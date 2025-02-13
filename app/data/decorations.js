@@ -196,6 +196,11 @@ export const decorationsData = [
 				d: "Exclusive to the Sid Meier's Civilization VII Quest for a limited time. Available to use until April 26, 2025.",
 				f: "scout",
 			},
+			{
+				n: "Exoborne",
+				d: "Exclusive to the Exoborne Wishlist Quest for a limited time. Available to use until April 18, 2025.",
+				f: "exoborne",
+			},
 		],
 	},
 	{
