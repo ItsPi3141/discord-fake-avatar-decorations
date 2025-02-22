@@ -50,6 +50,21 @@ export const decorationsData = [
 				d: "Feel the love all around. Given to Nitro gifters in February 2025.",
 				f: "heart_to_heart",
 			},
+			{
+				n: "Afternoon Breeze",
+				d: "A calm rest in the meadow. Given to Nitro gifters in Spring 2025.",
+				f: "afternoon_breeze",
+			},
+			{
+				n: "Hoppy Day",
+				d: "Brb, out frolicking. Given to Nitro gifters in Spring 2025.",
+				f: "hoppy_day",
+			},
+			{
+				n: "Shower Stroll",
+				d: "Chasing rainbows after the storm. Given to Nitro gifters in Spring 2025.",
+				f: "shower_stroll",
+			},
 		],
 	},
 	{
