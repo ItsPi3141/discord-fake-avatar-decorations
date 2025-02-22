@@ -201,6 +201,11 @@ export const decorationsData = [
 				d: "Exclusive to the Exoborne Wishlist Quest for a limited time. Available to use until April 18, 2025.",
 				f: "exoborne",
 			},
+			{
+				n: "Big Dill Chain",
+				d: "Exclusive to the Fortnite Quest for a limited time. Available to use until April 29, 2025.",
+				f: "big_dill_chain",
+			},
 		],
 	},
 	{
