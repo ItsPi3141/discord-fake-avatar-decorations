@@ -224,6 +224,322 @@ export const decorationsData = [
 		],
 	},
 	{
+		n: "Anime 3",
+		d: "Senpai will definitely notice you.",
+		b: {
+			i: "anime_v3.png",
+			t: "anime_v3.png",
+			h: 48,
+		},
+		i: [
+			{
+				n: "Cat Onesie",
+				d: "I'm just here for naps and snacks.",
+				f: "cat_onesie",
+			},
+			{
+				n: "Cat Onesie (Pink)",
+				d: "I'm just here for naps and snacks.",
+				f: "cat_onesie_pink",
+			},
+			{
+				n: "Cat Onesie (Black)",
+				d: "I'm just here for naps and snacks.",
+				f: "cat_onesie_black",
+			},
+			{
+				n: "Shy",
+				d: "Notice me! Just not too much...",
+				f: "shy",
+			},
+			{
+				n: "Shy (In Love)",
+				d: "Notice me! Just not too much...",
+				f: "shy_in_love",
+			},
+			{
+				n: "Rumbling",
+				d: "You seem to be trembling in my presence.",
+				f: "rumbling",
+			},
+			{
+				n: "Magical Girl",
+				d: "Need to look immaculate when you're saving the world.",
+				f: "magical_girl",
+			},
+			{
+				n: "Sakura Scholar",
+				d: "When you ace the exams, and the look.",
+				f: "sakura_scholar",
+			},
+			{
+				n: "Sushi Roll",
+				d: "When life gives you sushi, add sashimi.",
+				f: "sushi_roll",
+			},
+			{
+				n: "Ramen Bowl",
+				d: "A bowl is most useful when it's filled with ramen.",
+				f: "ramen_bowl",
+			},
+			{
+				n: "Ramen Bowl (Toppings)",
+				d: "A bowl is most useful when it's filled with ramen.",
+				f: "ramen_bowl_toppings",
+			},
+			{
+				n: "Angry",
+				d: "How dare you.",
+				f: "angry",
+			},
+			{
+				n: "Angry (Pink)",
+				d: "How dare you.",
+				f: "angry_pink",
+			},
+			{
+				n: "Angry (Yellow)",
+				d: "How dare you.",
+				f: "angry_yellow",
+			},
+			{
+				n: "Radiating Energy",
+				d: "Over EIGHT-THOUSAND-NINE-HUNDRED-NINETY-NINE!",
+				f: "radiating_energy",
+			},
+			{
+				n: "Radiating Energy (Yellow)",
+				d: "Over EIGHT-THOUSAND-NINE-HUNDRED-NINETY-NINE!",
+				f: "radiating_energy_yellow",
+			},
+			{
+				n: "Radiating Energy (Blue)",
+				d: "Over EIGHT-THOUSAND-NINE-HUNDRED-NINETY-NINE!",
+				f: "radiating_energy_blue",
+			},
+			{
+				n: "Sweat Drops",
+				d: "*laughs nervously*",
+				f: "sweat_drops",
+			},
+			{
+				n: "Sweat Drops (Cyan)",
+				d: "*laughs nervously*",
+				f: "sweat_drops_cyan",
+			},
+			{
+				n: "Sweat Drops (Pink)",
+				d: "*laughs nervously*",
+				f: "sweat_drops_pink",
+			},
+			{
+				n: "Soul Leaving Body",
+				d: "Can I just disappear right now?",
+				f: "soul_leaving_body",
+			},
+			{
+				n: "Soul Leaving Body (Blue)",
+				d: "Can I just disappear right now?",
+				f: "soul_leaving_body_blue",
+			},
+			{
+				n: "Starry Eyed",
+				d: "Feelin' sparkly.",
+				f: "starry_eyed",
+			},
+			{
+				n: "Starry Eyed (Green)",
+				d: "Feelin' sparkly.",
+				f: "starry_eyed_green",
+			},
+			{
+				n: "Starry Eyed (Pink)",
+				d: "Feelin' sparkly.",
+				f: "starry_eyed_pink",
+			},
+			{
+				n: "Shocked",
+				d: "Nani?!!",
+				f: "shocked",
+			},
+			{
+				n: "Shocked (Green)",
+				d: "Nani?!!",
+				f: "shocked_green",
+			},
+			{
+				n: "Shocked (Yellow)",
+				d: "Nani?!!",
+				f: "shocked_yellow",
+			},
+			{
+				n: "In Love",
+				d: "uwu",
+				f: "in_love",
+			},
+			{
+				n: "In Love (Blue)",
+				d: "uwu",
+				f: "in_love_blue",
+			},
+			{
+				n: "In Love (Green)",
+				d: "uwu",
+				f: "in_love_green",
+			},
+			{
+				n: "Ki Energy",
+				d: "Focus from within.",
+				f: "ki_energy",
+			},
+			{
+				n: "Ki Energy (Green)",
+				d: "Focus from within.",
+				f: "ki_energy_green",
+			},
+			{
+				n: "Ki Energy (Cyan)",
+				d: "Focus from within.",
+				f: "ki_energy_cyan",
+			},
+			{
+				n: "Ki Energy (Blue)",
+				d: "Focus from within.",
+				f: "ki_energy_blue",
+			},
+			{
+				n: "Ki Energy (Fuchsia)",
+				d: "Focus from within.",
+				f: "ki_energy_fuchsia",
+			},
+			{
+				n: "Heartbloom",
+				d: "Let your love blossom.",
+				f: "heartbloom",
+			},
+			{
+				n: "Heartbloom (Purple)",
+				d: "Let your love blossom.",
+				f: "heartbloom_purple",
+			},
+			{
+				n: "Heartbloom (Blue)",
+				d: "Let your love blossom.",
+				f: "heartbloom_blue",
+			},
+			{
+				n: "Heartbloom (Yellow)",
+				d: "Let your love blossom.",
+				f: "heartbloom_yellow",
+			},
+			{
+				n: "Heartbloom (Green)",
+				d: "Let your love blossom.",
+				f: "heartbloom_green",
+			},
+			{
+				n: "Dismay",
+				d: "Not like this...",
+				f: "dismay",
+			},
+			{
+				n: "Dismay (Purple)",
+				d: "Not like this...",
+				f: "dismay_purple",
+			},
+			{
+				n: "Dismay (Pink)",
+				d: "Not like this...",
+				f: "dismay_pink",
+			},
+			{
+				n: "Dismay (Yellow)",
+				d: "Not like this...",
+				f: "dismay_yellow",
+			},
+			{
+				n: "Dismay (Green)",
+				d: "Not like this...",
+				f: "dismay_green",
+			},
+			{
+				n: "In Tears",
+				d: "*sobbing*",
+				f: "in_tears",
+			},
+			{
+				n: "In Tears (Purple)",
+				d: "*sobbing*",
+				f: "in_tears_purple",
+			},
+			{
+				n: "In Tears (Pink)",
+				d: "*sobbing*",
+				f: "in_tears_pink",
+			},
+			{
+				n: "In Tears (Yellow)",
+				d: "*sobbing*",
+				f: "in_tears_yellow",
+			},
+			{
+				n: "In Tears (Green)",
+				d: "*sobbing*",
+				f: "in_tears_green",
+			},
+			{
+				n: "Cat Ears",
+				d: "≽ ^ • ⩊ • ^ ≼",
+				f: "cat_ears",
+			},
+			{
+				n: "Cat Ears (Yellow)",
+				d: "≽ ^ • ⩊ • ^ ≼",
+				f: "cat_ears_yellow",
+			},
+			{
+				n: "Cat Ears (Green)",
+				d: "≽ ^ • ⩊ • ^ ≼",
+				f: "cat_ears_green",
+			},
+			{
+				n: "Cat Ears (Blue)",
+				d: "≽ ^ • ⩊ • ^ ≼",
+				f: "cat_ears_blue",
+			},
+			{
+				n: "Cat Ears (Purple)",
+				d: "≽ ^ • ⩊ • ^ ≼",
+				f: "cat_ears_purple",
+			},
+			{
+				n: "Rage",
+				d: "THAT'S IT.",
+				f: "rage",
+			},
+			{
+				n: "Rage (Green)",
+				d: "THAT'S IT.",
+				f: "rage_green",
+			},
+			{
+				n: "Rage (Blue)",
+				d: "THAT'S IT.",
+				f: "rage_blue",
+			},
+			{
+				n: "Rage (Purple)",
+				d: "THAT'S IT.",
+				f: "rage_purple",
+			},
+			{
+				n: "Rage (Red)",
+				d: "THAT'S IT.",
+				f: "rage_red",
+			},
+		],
+	},
+	{
 		n: "Valentines",
 		d: "Just send it.",
 		b: {
@@ -444,8 +760,8 @@ export const decorationsData = [
 		d: "You're walking in the forest and notice something magical and shiny.",
 		descTopM: "-6px",
 		b: {
-			i: "fantasy_2.png",
-			t: "fantasy_2.png",
+			i: "fantasy_v2.png",
+			t: "fantasy_v2.png",
 			h: 60,
 		},
 		i: [
@@ -1114,8 +1430,8 @@ export const decorationsData = [
 		n: "Fall 2",
 		d: "There's a calm and cozy vibe in the air.",
 		b: {
-			i: "fall2.png",
-			t: "fall2.png",
+			i: "fall_v2.png",
+			t: "fall_v2.png",
 		},
 		badge: "FALL 2024",
 		i: [
@@ -1793,8 +2109,9 @@ export const decorationsData = [
 		d: "Senpai will definitely notice you.",
 		darkText: true,
 		b: {
-			i: "anime2.png",
-			t: "anime2.png",
+			i: "anime_v2.png",
+			t: "anime_v2.png",
+			h: 48,
 		},
 		i: [
 			{
@@ -2094,8 +2411,8 @@ export const decorationsData = [
 		n: "Fall",
 		d: "There's a calm and cozy vibe in the air.",
 		b: {
-			i: "fall.png",
-			t: "fall.png",
+			i: "fall_v1.png",
+			t: "fall_v1.png",
 		},
 		badge: "FALL 2023",
 		i: [
@@ -2125,8 +2442,8 @@ export const decorationsData = [
 		n: "Fantasy",
 		d: "You're walking in the forest and notice something magical and shiny.",
 		b: {
-			i: "fantasy.png",
-			t: "fantasy.png",
+			i: "fantasy_v1.png",
+			t: "fantasy_v1.png",
 		},
 		i: [
 			{
@@ -2175,8 +2492,9 @@ export const decorationsData = [
 		n: "Anime",
 		d: "Senpai will definitely notice you.",
 		b: {
-			i: "anime.png",
-			t: "anime.png",
+			i: "anime_v1.png",
+			t: "anime_v1.png",
+			h: 48,
 		},
 		i: [
 			{

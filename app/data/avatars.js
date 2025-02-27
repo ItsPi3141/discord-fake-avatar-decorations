@@ -1,5 +1,9 @@
 export const avatarsData = [
 	{
+		n: "Anime v3",
+		f: "anime_v3.png",
+	},
+	{
 		n: "Valentine's 2025 and JENNIE",
 		f: "valentines_2025.png",
 	},
@@ -17,10 +21,10 @@ export const avatarsData = [
 	},
 	{
 		n: "Fantasy",
-		f: "fantasy_2.png",
+		f: "fantasy_v2.png",
 	},
 	{
-		n: "Winter Wonderland",
+		n: "Winter Wonderland 2024",
 		f: "winter_wonderland_2024.png",
 	},
 	{
