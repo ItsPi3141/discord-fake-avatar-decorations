@@ -1,24 +1,79 @@
-/* BUTTONS */
-.button-primary {
-	@apply bg-button-primary-background hover:bg-button-primary-hover active:bg-button-primary-active border-button-primary-border rounded-lg transition;
-}
-.button-secondary {
-	@apply bg-button-secondary-background hover:bg-button-secondary-hover active:bg-button-secondary-active border border-button-secondary-border rounded-lg transition;
-}
-.button-tile {
-	@apply border-2 bg-base-lowest p-2 border-transparent rounded-[5px] w-full aspect-square outline-none;
+@import "tailwindcss";
+
+@theme {
+	--breakpoint-xs: 440px;
+	--breakpoint-sm: 540px;
+	--breakpoint-md: 900px;
+
+	--color-primary: hsl(234.935, 85.556%, 64.706%);
+	--color-success: #44a25b;
+	--color-warning: #b98037;
+	--color-critical: #d83a42;
+
+	--color-base-low: hsl(240, 5.769%, 20.392%);
+	--color-base-lower: hsl(240, 5.263%, 18.627%);
+	--color-base-lowest: hsl(240, 5.882%, 16.667%);
+
+	--color-surface-overlay: hsl(240, 5.263%, 7.451%);
+	--color-surface-high: hsl(240, 5.263%, 22.353%);
+	--color-surface-higher: hsl(240, 5.691%, 24.118%);
+	--color-surface-highest: hsl(240, 5.263%, 26.078%);
+
+	--color-border-normal: hsla(240, 4%, 60.784%, 0.2);
+	--color-border-faint: hsla(240, 4%, 60.784%, 0.0392156862745098);
+	--color-border-strong: hsla(240, 4%, 60.784%, 0.4392156862745098);
+
+	--color-icon: hsl(0, 0%, 98.431%);
+	--color-icon-tertiary: hsl(240, 4.294%, 68.039%);
+
+	--color-text: hsl(240, 3.226%, 93.922%);
+	--color-text-muted: hsl(240, 4.294%, 68.039%);
+	--color-text-link: hsl(213.659, 83.673%, 71.176%);
+	--color-text-primary: hsl(0, 0%, 100%);
+	--color-text-secondary: hsl(240, 3.571%, 78.039%);
+	--color-text-positive: hsl(130.769, 37.143%, 58.824%);
+	--color-text-warning: hsl(33.143, 54.404%, 62.157%);
+	--color-text-critical: hsl(0, 100%, 93.725%);
+
+	--color-button-primary-background: hsl(234.935, 85.556%, 64.706%);
+	--color-button-primary-hover: hsl(233.445, 47.791%, 51.176%);
+	--color-button-primary-active: hsl(232.121, 45.205%, 42.941%);
+	--color-button-primary-border: hsla(0, 0%, 100%, 0.1);
+
+	--color-button-secondary-background: hsla(240, 4%, 60.784%, 0.12156862745098039);
+	--color-button-secondary-hover: hsla(240, 4%, 60.784%, 0.2);
+	--color-button-secondary-active: hsla(240, 5.882%, 33.333%, 0.3);
+	--color-button-secondary-border: hsla(240, 4%, 60.784%, 0.0392156862745098);
 }
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@layer base {
+	button {
+		@apply cursor-pointer;
+	}
+}
+
+/* BUTTONS */
+@layer components {
+	.button-primary {
+		@apply bg-button-primary-background hover:bg-button-primary-hover active:bg-button-primary-active border-button-primary-border rounded-lg transition;
+	}
+	.button-secondary {
+		@apply bg-button-secondary-background hover:bg-button-secondary-hover active:bg-button-secondary-active border border-button-secondary-border rounded-lg transition;
+	}
+	.button-tile {
+		@apply bg-base-lowest p-2 border-2 border-transparent rounded-[5px] outline-none w-full aspect-square;
+	}
+}
 
 * {
 	font-family: "gg sans";
 }
-.ginto {
+@utility ginto {
 	font-family: "ABC Ginto Nord";
 	letter-spacing: 1px;
+}
+.ginto {
+	@apply ginto;
 }
 .nitro-font {
 	font-family: "Urfa";
@@ -82,11 +137,11 @@ body:has(main p.text-gray-400 a):not(:has([href*="Its"][href*="hub"][href$="i314
 	}
 
 	&::before {
-		@apply top-0 right-0 bottom-0 left-0 z-50 fixed flex justify-center items-center bg-base-lower mb-14 text-6xl text-white ginto;
+		@apply top-0 right-0 bottom-0 left-0 z-50 fixed flex justify-center items-center bg-base-lower mb-14 text-white text-6xl ginto;
 		content: "418";
 	}
 	&::after {
-		@apply top-0 right-0 bottom-0 left-0 z-50 fixed flex justify-center items-center mt-14 text-center text-white;
+		@apply top-0 right-0 bottom-0 left-0 z-50 fixed flex justify-center items-center mt-14 text-white text-center;
 		content: "An unexpected error has occurred.\APlease consult your teapot administrator or open a GitHub issue.";
 	}
 }
