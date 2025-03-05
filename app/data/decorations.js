@@ -224,6 +224,82 @@ export const decorationsData = [
 		],
 	},
 	{
+		n: "Insomnia",
+		d: "Imagination never sleeps.",
+		b: {
+			i: "insomnia.png",
+			t: "insomnia.png",
+			h: 64,
+		},
+		i: [
+			{
+				n: "Starlight Whales",
+				d: "When the whales show up, sleep checks out.",
+				f: "starlight_whales",
+			},
+			{
+				n: "Head In the Clouds",
+				d: "Count the stars for those sleepless nights.",
+				f: "head_in_the_clouds",
+			},
+			{
+				n: "Head In the Clouds (Sunset)",
+				d: "Count the stars for those sleepless nights.",
+				f: "head_in_the_clouds_sunset",
+			},
+			{
+				n: "Mirage",
+				d: "Believe it, and you will see it.",
+				f: "mirage",
+			},
+			{
+				n: "Mirage (Void)",
+				d: "Believe it, and you will see it.",
+				f: "mirage_void",
+			},
+			{
+				n: "Mirage (Twilight)",
+				d: "Believe it, and you will see it.",
+				f: "mirage_twilight",
+			},
+			{
+				n: "Mirage (Nightshade)",
+				d: "Believe it, and you will see it.",
+				f: "mirage_nightshade",
+			},
+			{
+				n: "Lava Blobs",
+				d: "Lose yourself in the ebb and flow.",
+				f: "lava_blobs",
+			},
+			{
+				n: "Lava Blobs (Pink)",
+				d: "Lose yourself in the ebb and flow.",
+				f: "lava_blobs_pink",
+			},
+			{
+				n: "Lava Blobs (Blue)",
+				d: "Lose yourself in the ebb and flow.",
+				f: "lava_blobs_blue",
+			},
+			{
+				n: "Lava Blobs (Slime)",
+				d: "Lose yourself in the ebb and flow.",
+				f: "lava_blobs_slime",
+			},
+			{
+				n: "Luminescent Lotus",
+				d: "Their petals only dance in the sleep of night.",
+				f: "luminescent_lotus",
+			},
+			{
+				n: "Woolgathering",
+				d: "The kind of friends you make at 3 AM.",
+				f: "woolgathering",
+			},
+		],
+	},
+	{
 		n: "Anime 3",
 		d: "Senpai will definitely notice you.",
 		b: {
