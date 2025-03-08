@@ -221,6 +221,16 @@ export const decorationsData = [
 				d: "Exclusive to the Fortnite Quest for a limited time. Available to use until April 29, 2025.",
 				f: "big_dill_chain",
 			},
+			{
+				n: "Pathojen",
+				d: "Exclusive to the FragPunk Launch Quest for a limited time.",
+				f: "pathojen",
+			},
+			{
+				n: "Split Avatar Decoration",
+				d: "Exclusive to the Split Fiction Quest for a limited time.",
+				f: "split_avatar_decoration",
+			},
 		],
 	},
 	{
