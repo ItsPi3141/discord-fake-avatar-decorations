@@ -223,13 +223,18 @@ export const decorationsData = [
 			},
 			{
 				n: "Pathojen",
-				d: "Exclusive to the FragPunk Launch Quest for a limited time.",
+				d: "Exclusive to the FragPunk Launch Quest for a limited time. Available to use until May 13, 2025.",
 				f: "pathojen",
 			},
 			{
 				n: "Split Avatar Decoration",
-				d: "Exclusive to the Split Fiction Quest for a limited time.",
+				d: "Exclusive to the Split Fiction Quest for a limited time. Available to use until May 12, 2025.",
 				f: "split_avatar_decoration",
+			},
+			{
+				n: "Khazan Avatar Decoration",
+				d: "Exclusive to the Kazan Quest for a limited time. Available to use until May 17, 2025.",
+				f: "khazan_avatar_decoration",
 			},
 		],
 	},
