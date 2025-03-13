@@ -239,6 +239,48 @@ export const decorationsData = [
 		],
 	},
 	{
+		n: "aespa",
+		d: "",
+		descTopM: "-8px",
+		b: {
+			i: "aespa.png",
+			t: "aespa.png",
+			h: 72,
+		},
+		i: [
+			{
+				n: "Rocket Puncher",
+				d: "Grow in heart and power with KARINA’s Rocket Punch.",
+				f: "rocket_puncher",
+			},
+			{
+				n: "Got Xenoglossy",
+				d: "Unleash the power of the moon with GISELLE’s Xenoglossy.",
+				f: "got_xenoglossy",
+			},
+			{
+				n: "Armamenter",
+				d: "Cool. Calculated. WINTER is always ready to strike.",
+				f: "armamenter",
+			},
+			{
+				n: "E.D Hacker",
+				d: "Rewrite the rules with E.D Hacker NINGNING.",
+				f: "e_d_hacker",
+			},
+			{
+				n: "Port of Soul",
+				d: "Your bridge between FLAT and REAL WORLD.",
+				f: "port_of_soul",
+			},
+			{
+				n: "aespa Fanlight",
+				d: "Shine bright with aespa’s iconic fanlight!",
+				f: "aespa_fanlight",
+			},
+		],
+	},
+	{
 		n: "Insomnia",
 		d: "Imagination never sleeps.",
 		b: {
