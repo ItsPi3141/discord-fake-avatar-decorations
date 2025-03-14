@@ -236,6 +236,11 @@ export const decorationsData = [
 				d: "Exclusive to the Kazan Quest for a limited time. Available to use until May 17, 2025.",
 				f: "khazan_avatar_decoration",
 			},
+			{
+				n: "Gallica Avatar Decoration",
+				d: "Exclusive to Metaphor Rank Up Quest for a limited time. Available to use until May 18, 2025.",
+				f: "gallica_avatar_decoration",
+			},
 		],
 	},
 	{
