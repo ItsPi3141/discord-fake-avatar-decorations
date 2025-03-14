@@ -22,7 +22,7 @@ export const decorationsData = [
 		i: [
 			{
 				n: "Gyoiko Sakura",
-				d: "A rare blossom only seen by a fortunate few. Given to new nitro subscribers between April 24, 2024 and May 1, 2024.",
+				d: "A rare blossom only seen by a fortunate few. Given to new Nitro subscribers between April 24, 2024 and May 1, 2024.",
 				f: "sakura_gyoiko",
 			},
 			{
@@ -52,17 +52,17 @@ export const decorationsData = [
 			},
 			{
 				n: "Afternoon Breeze",
-				d: "A calm rest in the meadow. Given to Nitro gifters in Spring 2025.",
+				d: "A calm rest in the meadow. Given to new Nitro subscribers in Spring 2025.",
 				f: "afternoon_breeze",
 			},
 			{
 				n: "Hoppy Day",
-				d: "Brb, out frolicking. Given to Nitro gifters in Spring 2025.",
+				d: "Brb, out frolicking. Given to new Nitro subscribers in Spring 2025.",
 				f: "hoppy_day",
 			},
 			{
 				n: "Shower Stroll",
-				d: "Chasing rainbows after the storm. Given to Nitro gifters in Spring 2025.",
+				d: "Chasing rainbows after the storm. Given to new Nitro subscribers in Spring 2025.",
 				f: "shower_stroll",
 			},
 		],
