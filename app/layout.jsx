@@ -1,4 +1,4 @@
-import "./globals.scss";
+import "./globals.css";
 
 import "./components/modal.css";
 import "./components/twemoji.css";
