@@ -153,10 +153,10 @@ const App = ({ ffmpegRef, isServer }) => {
 
 	return (
 		<>
-			<main className="flex flex-col items-center w-screen h-screen text-white overflow-auto discord-scrollbar">
-				<div className="relative bg-primary mt-8 px-4 py-8 sm:p-8 md:p-12 lg:p-16 rounded-3xl w-[calc(100%-6rem)] min-h-72 overflow-hidden select-none">
+			<main className="flex flex-col items-center w-screen h-screen overflow-auto text-white discord-scrollbar">
+				<div className="relative bg-primary mt-8 sm:p-8 md:p-12 lg:p-16 px-4 py-8 rounded-3xl w-[calc(100%-6rem)] min-h-72 overflow-hidden select-none">
 					<div
-						className="top-0 right-0 bottom-0 object-bottom left-0 z-0 absolute w-full h-full pointer-events-none"
+						className="top-0 right-0 bottom-0 left-0 z-0 absolute w-full h-full object-bottom pointer-events-none"
 						style={{
 							background: getBannerImage(),
 						}}
@@ -176,7 +176,7 @@ const App = ({ ffmpegRef, isServer }) => {
 					{/* SETTINGS */}
 					<div id="settings" className="block select-none grow">
 						{/* UPLOAD AVATAR */}
-						<p className="my-2 font-semibold text-gray-300 text-sm [letter-spacing:.05em] scale-y-90">
+						<p className="my-2 font-semibold text-gray-300 text-sm scale-y-90 [letter-spacing:.05em]">
 							AVATAR
 						</p>
 						<div className="flex sm:flex-row flex-col sm:items-center gap-3">
@@ -205,10 +205,10 @@ const App = ({ ffmpegRef, isServer }) => {
 								/>
 								Upload image
 							</button>
-							<p className="text-center sm:text-left">or</p>
+							<p className="sm:text-left text-center">or</p>
 							<input
 								type="text"
-								className="bg-base-low px-2.5 py-2 border border-border-faint rounded-lg transition grow outline-none"
+								className="bg-base-low px-2.5 py-2 border border-border-faint rounded-lg outline-none transition grow"
 								placeholder="Enter image URL..."
 								onChange={async (e) => {
 									const res = await fetch(e.target.value);
@@ -234,7 +234,7 @@ const App = ({ ffmpegRef, isServer }) => {
 						</p>
 						{/* SELECT AVATAR */}
 						<div className="flex flex-col gap-8 py-1 max-h-[280px] overflow-auto discord-scrollbar">
-							<div className="gap-3 grid grid-cols-3 sm:grid-cols-5 md:grid-cols-5 min-[600px]:grid-cols-6 min-[720px]:grid-cols-7 xs:grid-cols-4">
+							<div className="gap-3 grid grid-cols-3 xs:grid-cols-4 sm:grid-cols-5 min-[600px]:grid-cols-6 min-[720px]:grid-cols-7 md:grid-cols-5">
 								{avatarsData.map((avatar, index) => {
 									return (
 										<div
@@ -283,7 +283,7 @@ const App = ({ ffmpegRef, isServer }) => {
 						<hr className="border-b border-border-faint/10" />
 
 						{/* SELECT DECORATION */}
-						<p className="my-2 font-semibold text-gray-300 text-sm [letter-spacing:.05em] scale-y-90">
+						<p className="my-2 font-semibold text-gray-300 text-sm scale-y-90 [letter-spacing:.05em]">
 							AVATAR DECORATION
 						</p>
 						<div className="flex flex-col gap-8 py-1 max-h-[532px] overflow-auto discord-scrollbar">
@@ -397,7 +397,7 @@ const App = ({ ffmpegRef, isServer }) => {
 													</>
 												)}
 												<p
-													className="w-[232px] xs:w-full font-medium text-center text-sm"
+													className="w-[232px] xs:w-full font-medium text-sm text-center"
 													style={{
 														color: category.darkText || false ? "#000" : "#fff",
 														marginTop: category.descTopM || "",
@@ -413,7 +413,7 @@ const App = ({ ffmpegRef, isServer }) => {
 											</div>
 										</div>
 
-										<div className="gap-3 grid grid-cols-3 sm:grid-cols-5 md:grid-cols-5 min-[600px]:grid-cols-6 min-[720px]:grid-cols-7 xs:grid-cols-4">
+										<div className="gap-3 grid grid-cols-3 xs:grid-cols-4 sm:grid-cols-5 min-[600px]:grid-cols-6 min-[720px]:grid-cols-7 md:grid-cols-5">
 											{category.i.map((decor, index) => {
 												return (
 													<button
@@ -478,7 +478,7 @@ const App = ({ ffmpegRef, isServer }) => {
 										</>
 									)}
 								</div>
-								<div className="right-[-4px] bottom-[-4px] absolute border-[5px] border-surface-overlay bg-[#229f56] rounded-full w-7 h-7" />
+								<div className="right-[-4px] bottom-[-4px] absolute bg-[#229f56] border-[5px] border-surface-overlay rounded-full w-7 h-7" />
 							</div>
 							<div className="bg-surface-overlay mt-[35px] p-4 rounded-lg w-[calc(100%)]">
 								<p className="font-semibold text-xl [letter-spacing:.02em]">
@@ -595,10 +595,10 @@ const App = ({ ffmpegRef, isServer }) => {
 										<div className="flex flex-col overflow-hidden shrink">
 											{m.groupStart && (
 												<p className="flex items-center gap-2 max-w-[250px] h-fit font-medium text-base">
-													<span className="text-ellipsis text-nowrap overflow-hidden">
+													<span className="overflow-hidden text-ellipsis text-nowrap">
 														{name || "Display Name"}
 													</span>
-													<span className="h-4 text-nowrap text-text-muted text-xs">
+													<span className="h-4 text-text-muted text-xs text-nowrap">
 														Today at{" "}
 														{[
 															new Date().getHours() % 12,
@@ -695,7 +695,7 @@ const App = ({ ffmpegRef, isServer }) => {
 						</div>
 					</div>
 				</div>
-				<p className="mb-4 text-center text-sm text-text-muted">
+				<p className="mb-4 text-text-muted text-sm text-center">
 					Website made by{" "}
 					<Link
 						href={"https://github.com/ItsPi3141"}
@@ -754,7 +754,7 @@ const App = ({ ffmpegRef, isServer }) => {
 					<>
 						{generationFailed ? (
 							<div className="flex flex-col justify-center items-center gap-4 grow">
-								<p className="text-center text-red-400">
+								<p className="text-red-400 text-center">
 									Failed to generate image
 									<br />
 									Please try again.

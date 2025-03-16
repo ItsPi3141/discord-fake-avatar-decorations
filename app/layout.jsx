@@ -4,6 +4,7 @@ import "./components/modal.css";
 import "./components/twemoji.css";
 
 import { FontPreloader } from "./components/fontpreload.jsx";
+import { Utils } from "./components/utils";
 
 export default function RootLayout({ children }) {
 	return (
@@ -69,6 +70,7 @@ export default function RootLayout({ children }) {
 			<body className="bg-base-lower overflow-x-hidden">
 				<FontPreloader />
 				{children}
+				<Utils />
 			</body>
 		</html>
 	);

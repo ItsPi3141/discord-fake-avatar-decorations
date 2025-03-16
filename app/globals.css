@@ -129,7 +129,7 @@ body::-webkit-scrollbar-thumb {
 	}
 }
 
-body:has(main p.text-gray-400 a):not(:has([href*="Its"][href*="hub"][href$="i3141"][href*="com"])) {
+body:has([nice]) {
 	white-space: pre;
 
 	& > * {
