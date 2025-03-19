@@ -103,7 +103,7 @@ export function arraybuffer2base64(arraybuffer) {
 export async function webp2gif(arraybuf) {
 	return new Promise((resolve) => {
 		ImageMagick.read(new Uint8Array(arraybuf), MagickFormat.WebP, (image) => {
-			image.write(MagickFormat.Gif87, resolve);
+			image.write(MagickFormat.Gif, resolve);
 		});
 	});
 }
