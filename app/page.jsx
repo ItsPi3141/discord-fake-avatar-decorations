@@ -351,7 +351,6 @@ const App = ({ ffmpegRef, isServer }) => {
 															src={`/banners/${e.url}`}
 															alt={""}
 															draggable={false}
-															loading="eager"
 															height={0}
 															width={0}
 															style={{
@@ -382,7 +381,6 @@ const App = ({ ffmpegRef, isServer }) => {
 													src={`/banners/${category.b.i}`}
 													alt={""}
 													draggable={false}
-													loading="eager"
 													height={0}
 													width={0}
 													style={{
@@ -407,7 +405,6 @@ const App = ({ ffmpegRef, isServer }) => {
 															src={`/bannertext/${category.b.t}`}
 															alt={category.n}
 															draggable={false}
-															loading="eager"
 															height={0}
 															width={0}
 															style={{
@@ -480,6 +477,7 @@ const App = ({ ffmpegRef, isServer }) => {
 														<Image
 															src={`/decorations/${decor.f}.png`}
 															className="pointer-events-none"
+															loading="lazy"
 														/>
 													</button>
 												);
