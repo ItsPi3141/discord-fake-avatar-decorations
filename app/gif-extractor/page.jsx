@@ -69,7 +69,7 @@ export default function GifExtractor() {
 		<>
 			{loaded ? (
 				<>
-					<main className="flex flex-col items-center gap-2 px-8 py-12 w-screen h-screen text-white overflow-auto overflow-x-hidden discord-scrollbar">
+					<main className="flex flex-col items-center gap-2 px-8 py-12 w-screen h-screen overflow-auto overflow-x-hidden text-white discord-scrollbar">
 						<p className="mb-8 text-3xl ginto">Gif Frame Extractor</p>
 
 						{file == null ? (
@@ -85,7 +85,7 @@ export default function GifExtractor() {
 										type="file"
 										id="upload-gif"
 										className="hidden"
-										accept="image/png, image/gif"
+										accept="image/png, image/gif, image/webp"
 										onChange={(e) => {
 											const [file] = e.target.files;
 											if (file) {
@@ -162,13 +162,17 @@ export default function GifExtractor() {
 					<FileUpload
 						onUpload={async (e) => {
 							const file = e.dataTransfer.files.item(0);
-							if (!["image/png", "image/gif"].includes(file.type)) {
-								printErr(`Expected image/png or image/gif. Got ${file.type}`);
+							if (
+								!["image/png", "image/gif", "image/webp"].includes(file.type)
+							) {
+								printErr(
+									`Expected image/png, image/gif, or image/webp. Got ${file.type}`,
+								);
 								throw printErr("Invalid file type");
 							}
 							const ab = await file.arrayBuffer();
 							if (
-								!["image/png", "image/gif"].includes(
+								!["image/png", "image/gif", "image/webp"].includes(
 									getMimeTypeFromArrayBuffer(ab),
 								)
 							) {
@@ -190,7 +194,7 @@ export default function GifExtractor() {
 						FAKE AVATAR DECORATIONS
 						<br />
 						<br />
-						<span className="text-3xl text-gray-300 ginto">
+						<span className="text-gray-300 text-3xl ginto">
 							Gif Frame Extractor
 						</span>
 					</p>

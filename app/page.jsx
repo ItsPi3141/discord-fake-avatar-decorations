@@ -25,6 +25,11 @@ import { storeData } from "./utils/dataHandler.js";
 
 import { decorationsData } from "./data/decorations.js";
 import { avatarsData } from "./data/avatars.js";
+import {
+	initializeImageMagick,
+	LogEventTypes,
+	Magick,
+} from "@imagemagick/magick-wasm";
 
 const baseImgUrl = process.env.NEXT_PUBLIC_BASE_IMAGE_URL || "";
 
@@ -36,29 +41,66 @@ export default function Home() {
 
 	const load = useCallback(async () => {
 		if (isServer) return;
-		const baseURL = "https://unpkg.com/@ffmpeg/core@0.12.6/dist/umd/";
+		const ffmpegBaseUrl = "https://unpkg.com/@ffmpeg/core@0.12.6/dist/umd/";
 		const ffmpeg = ffmpegRef.current;
-		// toBlobURL is used to bypass CORS issue, urls with the same domain can be used directly.
-		await ffmpeg.load({
-			coreURL: await toBlobURL(`${baseURL}ffmpeg-core.js`, "text/javascript"),
-			wasmURL: await toBlobURL(
-				`${baseURL}ffmpeg-core.wasm`,
-				"application/wasm",
-			),
-		});
-		ffmpeg.on("log", (e) =>
-			printMsg(
-				["ffmpeg", e.message],
-				[
-					{
-						color: "white",
-						background: "#5765f2",
-						padding: "2px 8px",
-						borderRadius: "10px",
-					},
-				],
-			),
-		);
+
+		const imageMagickUrl =
+			"https://unpkg.com/@imagemagick/magick-wasm@0.0.34/dist/magick.wasm";
+
+		const promises = [
+			new Promise((r) => {
+				(async () => {
+					await ffmpeg.load({
+						coreURL: await toBlobURL(
+							`${ffmpegBaseUrl}ffmpeg-core.js`,
+							"text/javascript",
+						),
+						wasmURL: await toBlobURL(
+							`${ffmpegBaseUrl}ffmpeg-core.wasm`,
+							"application/wasm",
+						),
+					});
+					ffmpeg.on("log", (e) =>
+						printMsg(
+							["ffmpeg", e.message],
+							[
+								{
+									color: "white",
+									background: "#5765f2",
+									padding: "2px 8px",
+									borderRadius: "10px",
+								},
+							],
+						),
+					);
+					r();
+				})();
+			}),
+			new Promise((r) => {
+				(async () => {
+					await initializeImageMagick(
+						new URL(
+							"https://unpkg.com/@imagemagick/magick-wasm@0.0.34/dist/magick.wasm",
+						),
+					);
+					Magick.onLog = (e) =>
+						printMsg(
+							["imagemagick", e.message.split("]:").slice(1).join("]:")],
+							[
+								{
+									color: "black",
+									background: "#e0e3ff",
+									padding: "2px 8px",
+									borderRadius: "10px",
+								},
+							],
+						);
+					Magick.setLogEvents(LogEventTypes.Detailed);
+					r();
+				})();
+			}),
+		];
+		await Promise.all(promises);
 		setLoaded(true);
 	});
 
@@ -191,7 +233,7 @@ const App = ({ ffmpegRef, isServer }) => {
 									type="file"
 									id="upload-avatar"
 									className="hidden"
-									accept="image/png, image/jpeg, image/gif"
+									accept="image/png, image/jpeg, image/gif, image/webp"
 									onChange={(e) => {
 										const [file] = e.target.files;
 										if (file) {
@@ -216,9 +258,12 @@ const App = ({ ffmpegRef, isServer }) => {
 										return setAvUrl(null);
 									const blob = await res.blob();
 									if (
-										!["image/png", "image/jpeg", "image/gif"].includes(
-											blob.type,
-										)
+										![
+											"image/png",
+											"image/jpeg",
+											"image/gif",
+											"image/webp",
+										].includes(blob.type)
 									)
 										return setAvUrl(null);
 									const reader = new FileReader();
@@ -333,7 +378,7 @@ const App = ({ ffmpegRef, isServer }) => {
 												</>
 											) : (
 												<Image
-													className="[grid-column:1/1] [grid-row:1/1] object-cover"
+													className="object-cover [grid-column:1/1] [grid-row:1/1]"
 													src={`/banners/${category.b.i}`}
 													alt={""}
 													draggable={false}
@@ -348,7 +393,7 @@ const App = ({ ffmpegRef, isServer }) => {
 													}}
 												/>
 											)}
-											<div className="relative flex flex-col justify-center items-center [grid-column:1/1] [grid-row:1/1] p-4 h-full">
+											<div className="relative flex flex-col justify-center items-center p-4 h-full [grid-column:1/1] [grid-row:1/1]">
 												{category.b.t ? (
 													category.b.t === "" ? (
 														<div
@@ -840,9 +885,13 @@ const App = ({ ffmpegRef, isServer }) => {
 			<FileUpload
 				onUpload={async (e) => {
 					const file = e.dataTransfer.files.item(0);
-					if (!["image/png", "image/jpeg", "image/gif"].includes(file.type)) {
+					if (
+						!["image/png", "image/jpeg", "image/gif", "image/webp"].includes(
+							file.type,
+						)
+					) {
 						printErr(
-							`Expected image/png, image/jpeg, or image/gif. Got ${file.type}`,
+							`Expected image/png, image/jpeg, image/gif, or image/webp. Got ${file.type}`,
 						);
 						throw printErr("Invalid file type");
 					}

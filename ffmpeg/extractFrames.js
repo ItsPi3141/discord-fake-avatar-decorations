@@ -1,8 +1,7 @@
-import { fetchFile } from "@ffmpeg/util";
 import {
 	arraybuffer2base64,
+	ffmpegFetchAndConvert,
 	getAPngDuration,
-	getMimeTypeFromArrayBuffer,
 } from "./utils";
 import { FFmpeg } from "@ffmpeg/ffmpeg";
 
@@ -13,9 +12,11 @@ export function imagesFromGif(
 	return new Promise((resolve, reject) => {
 		(async () => {
 			try {
-				const dataAB = await (await fetch(gifUrl)).arrayBuffer();
-				const data = await fetchFile(new Blob([dataAB]));
-				const type = getMimeTypeFromArrayBuffer(dataAB);
+				const {
+					arrayBuffer: dataAB,
+					data,
+					type,
+				} = await ffmpegFetchAndConvert(await (await fetch(gifUrl)).blob());
 				if (type == null) return reject("Invalid image type");
 				const ext = type.replace("image/", "");
 

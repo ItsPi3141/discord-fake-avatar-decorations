@@ -1,4 +1,6 @@
 import { printErr } from "@/app/print";
+import { fetchFile } from "@ffmpeg/util";
+import { ImageMagick, MagickFormat } from "@imagemagick/magick-wasm";
 import parseAPNG from "apng-js";
 
 /**
@@ -12,19 +14,25 @@ export function getMimeTypeFromArrayBuffer(
 ) {
 	const uint8arr = new Uint8Array(arrayBuffer);
 
-	const len = 4;
+	const len = 12;
 	if (uint8arr.length >= len) {
 		const signatureArr = new Array(len);
 		for (let i = 0; i < len; i++) signatureArr[i] = uint8arr[i].toString(16);
 		const signature = signatureArr.join("").toUpperCase();
 
 		switch (true) {
-			case signature === "89504E47":
+			// 89 50 4E 47 0D 0A 1A 0A
+			case signature.startsWith("89504E47"):
 				return "image/png";
-			case signature === "47494638":
+			// 47 49 46 38 ?? 61
+			case signature.startsWith("47494638"):
 				return "image/gif";
+			// FF D8 FF E0 ?? ??
 			case signature.startsWith("FFD8FF"):
 				return "image/jpeg";
+			// 52 49 46 46 ?? ?? ?? ?? 57 45 42 50
+			case signature.startsWith("52494646") && signature.includes("57454250"):
+				return "image/webp";
 			default:
 				printErr(`Unknown file type. Signature: ${signature}`);
 				return null;
@@ -84,4 +92,45 @@ export function arraybuffer2base64(arraybuffer) {
 	} catch {
 		return "";
 	}
+}
+
+/**
+ * Converts a WebP file to a GIF file.
+ *
+ * @param {ArrayBuffer} arraybuf - The WebP file as an ArrayBuffer.
+ * @return {Promise<Uint8Array>} A promise that resolves with the converted GIF file as a Blob.
+ */
+export async function webp2gif(arraybuf) {
+	return new Promise((resolve) => {
+		ImageMagick.read(new Uint8Array(arraybuf), MagickFormat.WebP, (image) => {
+			image.write(MagickFormat.Gif87, resolve);
+		});
+	});
+}
+
+/**
+ * Fetches and converts an image file to a format that ffmpeg supports.
+ *
+ * @param {Blob} blob - The image file as a Blob.
+ * @return {Promise<{arrayBuffer: ArrayBuffer, data: Uint8Array, type: string}>} A promise that resolves with the converted image file.
+ */
+export async function ffmpegFetchAndConvert(blob) {
+	const ab = await blob.arrayBuffer();
+	const type = getMimeTypeFromArrayBuffer(ab);
+	if (type == null) throw new Error("Invalid image type");
+
+	if (type !== "image/webp") {
+		return {
+			arrayBuffer: ab,
+			data: await fetchFile(blob),
+			type,
+		};
+	}
+
+	const convertedAb = await webp2gif(ab);
+	return {
+		arrayBuffer: convertedAb,
+		data: await fetchFile(new Blob([convertedAb])),
+		type: "image/gif",
+	};
 }

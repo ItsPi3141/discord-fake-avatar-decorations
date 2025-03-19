@@ -1,9 +1,8 @@
 import { FFmpeg } from "@ffmpeg/ffmpeg";
-import { fetchFile } from "@ffmpeg/util";
 import {
+	ffmpegFetchAndConvert,
 	getAPngDuration,
 	getGifDuration,
-	getMimeTypeFromArrayBuffer,
 } from "./utils";
 
 /**
@@ -20,9 +19,9 @@ export function cropToSquare(
 	return new Promise((resolve, reject) => {
 		(async () => {
 			try {
-				const data = await fetchFile(await (await fetch(url)).blob());
-				const type = getMimeTypeFromArrayBuffer(data);
-				if (type == null) return reject("Invalid image type");
+				const { data, type } = await ffmpegFetchAndConvert(
+					await (await fetch(url)).blob(),
+				);
 
 				const ext = type.replace("image/", "");
 				await ffmpeg.writeFile(`avatarpreview.${ext}`, data);
@@ -62,8 +61,8 @@ export function cropToSquare(
 				reader.onerror = () => {
 					return reject(reader.error);
 				};
-			} catch {
-				return reject(null);
+			} catch (err) {
+				return reject(err);
 			}
 		})();
 	});
@@ -77,10 +76,11 @@ export function addDecoration(
 	return new Promise((resolve, reject) => {
 		(async () => {
 			try {
-				const avatarAB = await (await fetch(imageUrl)).arrayBuffer();
-				const avatarData = await fetchFile(new Blob([avatarAB]));
-				const avatarType = getMimeTypeFromArrayBuffer(avatarData);
-				if (avatarType == null) return reject("Invalid image type");
+				const {
+					arrayBuffer: avatarAB,
+					data: avatarData,
+					type: avatarType,
+				} = await ffmpegFetchAndConvert(await (await fetch(imageUrl)).blob());
 				const ext = avatarType.replace("image/", "");
 
 				if (!decorationUrl) {
@@ -134,8 +134,10 @@ export function addDecoration(
 						return reject(reader.error);
 					};
 				} else {
-					const decoAB = await (await fetch(decorationUrl)).arrayBuffer();
-					const decoData = await fetchFile(new Blob([decoAB]));
+					const { arrayBuffer: decoAB, data: decoData } =
+						await ffmpegFetchAndConvert(
+							await (await fetch(decorationUrl)).blob(),
+						);
 
 					if (ext === "gif") {
 						const decoDuration = getAPngDuration(decoAB);
@@ -310,7 +312,6 @@ export function addDecoration(
 						return resolve(reader.result);
 					};
 					reader.onerror = () => {
-						console.error(reader.error);
 						return reject(reader.error);
 					};
 				}

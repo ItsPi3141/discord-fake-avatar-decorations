@@ -1,5 +1,5 @@
 // it logs to console
-export function printMsg(message, style) {
+export function printMsg(message, style, fn) {
 	try {
 		let m = "";
 		const s = [];
@@ -13,6 +13,7 @@ export function printMsg(message, style) {
 			m += message[i];
 			s.push(obj2css(style[i] || {}));
 		}
+		if (fn) return fn(m, ...s);
 		console.log(m, ...s);
 	} catch {
 		console.log(
@@ -33,6 +34,7 @@ export function printErr(message) {
 				borderRadius: "10px",
 			},
 		],
+		console.error,
 	);
 }
 
