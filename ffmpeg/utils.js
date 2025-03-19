@@ -100,10 +100,10 @@ export function arraybuffer2base64(arraybuffer) {
  * @param {ArrayBuffer} arraybuf - The WebP file as an ArrayBuffer.
  * @return {Promise<Uint8Array>} A promise that resolves with the converted GIF file as a Blob.
  */
-export async function webp2gif(arraybuf) {
+export async function webp2png(arraybuf) {
 	return new Promise((resolve) => {
 		ImageMagick.read(new Uint8Array(arraybuf), MagickFormat.WebP, (image) => {
-			image.write(MagickFormat.Gif, resolve);
+			image.write(MagickFormat.Png, resolve);
 		});
 	});
 }
@@ -127,10 +127,10 @@ export async function ffmpegFetchAndConvert(blob) {
 		};
 	}
 
-	const convertedAb = await webp2gif(ab);
+	const convertedAb = await webp2png(ab);
 	return {
 		arrayBuffer: convertedAb,
 		data: await fetchFile(new Blob([convertedAb])),
-		type: "image/gif",
+		type: "image/png",
 	};
 }
