@@ -307,6 +307,7 @@ const App = ({ ffmpegRef, isServer }) => {
 												<Image
 													src={`/avatars/${avatar.f}`}
 													className="rounded-full pointer-events-none"
+													loading="lazy"
 												/>
 											</button>
 											<Tooltip
