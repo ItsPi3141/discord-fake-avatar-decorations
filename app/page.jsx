@@ -168,6 +168,7 @@ const App = ({ ffmpegRef, isServer }) => {
 			});
 	});
 
+	const [avatarName, setAvatarName] = useState("");
 	const [name, setName] = useState("");
 	const [description, setDescription] = useState("");
 	const [decoUrl, setDecoUrl] = useState("");
@@ -253,6 +254,7 @@ const App = ({ ffmpegRef, isServer }) => {
 								className="bg-base-low px-2.5 py-2 border border-border-faint rounded-lg outline-none transition grow"
 								placeholder="Enter image URL..."
 								onChange={async (e) => {
+									setAvatarName("");
 									const res = await fetch(e.target.value);
 									if (res.status < 200 || res.status >= 400)
 										return setAvUrl(null);
@@ -295,6 +297,7 @@ const App = ({ ffmpegRef, isServer }) => {
 												data-tooltip-content={avatar.n}
 												className="avatar-preset button-tile"
 												onClick={(e) => {
+													setAvatarName(avatar.n.toLowerCase());
 													setAvUrl(`${baseImgUrl}/avatars/${avatar.f}`);
 													for (const el of document.querySelectorAll(
 														"button.avatar-preset.border-primary",
@@ -528,7 +531,7 @@ const App = ({ ffmpegRef, isServer }) => {
 								<p className="font-semibold text-xl [letter-spacing:.02em]">
 									{name || "Display Name"}
 								</p>
-								<p className="mb-3 text-sm">username</p>
+								<p className="mb-3 text-sm">{avatarName || "username"}</p>
 								<p className="text-sm">
 									{description ||
 										"This is an example profile so that you can see what the profile picture would actually look like on Discord."}
