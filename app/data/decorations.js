@@ -249,6 +249,48 @@ export const decorationsData = [
 		],
 	},
 	{
+		n: "Shenanigans",
+		d: "Seriously unserious.",
+		descTopM: "-2px",
+		b: {
+			i: "shenanigans.png",
+			t: "shenanigans.png",
+			h: 64,
+		},
+		i: [
+			{
+				n: "Nom Kitty",
+				d: "Tastes kinda funky.",
+				f: "nom_kitty",
+			},
+			{
+				n: "Egg",
+				d: "It's egg.",
+				f: "egg",
+			},
+			{
+				n: "Chicken Nugget",
+				d: "You want fries with that?",
+				f: "chicken_nugget",
+			},
+			{
+				n: "Toilet Lid",
+				d: "Weeeeeeeee!",
+				f: "toilet_lid",
+			},
+			{
+				n: "Feeling Cute",
+				d: "Just happy to be here.",
+				f: "feeling_cute",
+			},
+			{
+				n: "Buffering...",
+				d: "New personality loading in 3..2..1..",
+				f: "buffering",
+			},
+		],
+	},
+	{
 		n: "aespa",
 		d: "",
 		descTopM: "-8px",
