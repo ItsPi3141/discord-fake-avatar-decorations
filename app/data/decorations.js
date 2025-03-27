@@ -241,6 +241,11 @@ export const decorationsData = [
 				d: "Exclusive to Metaphor Rank Up Quest for a limited time. Available to use until May 18, 2025.",
 				f: "gallica_avatar_decoration",
 			},
+			{
+				n: "Supply Llama",
+				d: "Exclusive to the Fortnite Quest for a limited time. Available to use until May 31, 2025.",
+				f: "supply_llama",
+			},
 		],
 	},
 	{
