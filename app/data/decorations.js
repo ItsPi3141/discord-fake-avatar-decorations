@@ -246,6 +246,11 @@ export const decorationsData = [
 				d: "Exclusive to the Fortnite Quest for a limited time. Available to use until May 31, 2025.",
 				f: "supply_llama",
 			},
+			{
+				n: "Touch Grass",
+				d: "It’s time to touch some reality. Exclusive to April Fools 2025 for a limited time.",
+				f: "touch_grass",
+			},
 		],
 	},
 	{
