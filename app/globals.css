@@ -47,7 +47,12 @@
 }
 
 @layer base {
-	button {
+	html {
+    overflow: hidden;
+    height: 100vh;
+    height: 100dvh;
+  }
+  button {
 		@apply cursor-pointer;
 	}
 }
