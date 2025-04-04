@@ -254,6 +254,68 @@ export const decorationsData = [
 		],
 	},
 	{
+		n: "Chibi Cafe",
+		d: "Too sweet to eat.",
+		darkText: true,
+		b: {
+			i: "chibi_cafe.png",
+			t: "chibi_cafe.png",
+			h: 40,
+		},
+		i: [
+			{
+				n: "Berry Bunny",
+				d: "Fresh from the garden!",
+				f: "berry_bunny",
+			},
+			{
+				n: "Mochi Bunny (Pink)",
+				d: "Let’s bounce!",
+				f: "mochi_bunny_pink",
+			},
+			{
+				n: "Mochi Bunny (Blue)",
+				d: "Let’s bounce!",
+				f: "mochi_bunny_blue",
+			},
+			{
+				n: "Nibbles",
+				d: "Just a nibble.",
+				f: "nibbles",
+			},
+			{
+				n: "Donut Cow",
+				d: "MOOOOO",
+				f: "donut_cow",
+			},
+			{
+				n: "Donut Cat",
+				d: "MEOWWW",
+				f: "donut_cat",
+			},
+			{
+				n: "Donut Bear",
+				d: "RAWRRR",
+				f: "donut_bear",
+			},
+			{
+				n: "Bread Doggy",
+				d: "What a good lil loaf.",
+				f: "bread_doggy",
+			},
+			{
+				n: "Ice Cream Frog",
+				d: "Hop right in!",
+				f: "ice_cream_frog",
+			},
+			{
+				n: "Jelly Bear",
+				d: "So beary delicious!",
+				f: "jelly_bear",
+			},
+		],
+	},
+	{
 		n: "Shenanigans",
 		d: "Seriously unserious.",
 		descTopM: "-2px",

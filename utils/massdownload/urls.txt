@@ -1,3 +1,13 @@
+https://cdn.discordapp.com/avatar-decoration-presets/a_b70f0a0cecf3097eae17a8f7d8c659a8.png?size=1024&name=berry_bunny.png
+https://cdn.discordapp.com/avatar-decoration-presets/a_5a52022f86ac469d0f4c898fc6ebc1c8.png?size=1024&name=mochi_bunny_pink.png
+https://cdn.discordapp.com/avatar-decoration-presets/a_03a466899bcf0dedfd5a26fe50944c8b.png?size=1024&name=mochi_bunny_blue.png
+https://cdn.discordapp.com/avatar-decoration-presets/a_c7febbc41e0673e42f79a79078701660.png?size=1024&name=nibbles.png
+https://cdn.discordapp.com/avatar-decoration-presets/a_45635c94cd1dfa196f9711c01cbd7df8.png?size=1024&name=donut_cow.png
+https://cdn.discordapp.com/avatar-decoration-presets/a_026b2d22a4a39b7b00c622771ec9b1be.png?size=1024&name=donut_cat.png
+https://cdn.discordapp.com/avatar-decoration-presets/a_b3c43599032979c61ca6edc5912b77e3.png?size=1024&name=donut_bear.png
+https://cdn.discordapp.com/avatar-decoration-presets/a_0cc586e65b3cd90c27c42477ede2cc97.png?size=1024&name=bread_doggy.png
+https://cdn.discordapp.com/avatar-decoration-presets/a_4945e17c8ddf8ca470e505c07f191400.png?size=1024&name=ice_cream_frog.png
+https://cdn.discordapp.com/avatar-decoration-presets/a_f0d55a858c3ceb5d082b3e6a7d2a8fea.png?size=1024&name=jelly_bear.png
 https://cdn.discordapp.com/avatar-decoration-presets/a_b524fa5c3f80fbea3865a5d130ab5aef.png?size=1024&name=nom_kitty.png
 https://cdn.discordapp.com/avatar-decoration-presets/a_0e50ebc16aa67676687222d0b9b51eb2.png?size=1024&name=egg.png
 https://cdn.discordapp.com/avatar-decoration-presets/a_a10e6d86819ba0ebdade391d042dd2f5.png?size=1024&name=chicken_nugget.png
