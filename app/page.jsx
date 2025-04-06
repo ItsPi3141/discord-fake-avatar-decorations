@@ -41,11 +41,12 @@ export default function Home() {
 
 	const load = useCallback(async () => {
 		if (isServer) return;
-		const ffmpegBaseUrl = "https://unpkg.com/@ffmpeg/core@0.12.6/dist/umd/";
+		const ffmpegBaseUrl =
+			"https://cdn.jsdelivr.net/npm/@ffmpeg/core@0.12.6/dist/umd/";
 		const ffmpeg = ffmpegRef.current;
 
 		const imageMagickUrl =
-			"https://unpkg.com/@imagemagick/magick-wasm@0.0.34/dist/magick.wasm";
+			"https://cdn.jsdelivr.net/npm/@imagemagick/magick-wasm@0.0.34/dist/magick.wasm";
 
 		const promises = [
 			new Promise((r) => {
@@ -78,11 +79,7 @@ export default function Home() {
 			}),
 			new Promise((r) => {
 				(async () => {
-					await initializeImageMagick(
-						new URL(
-							"https://unpkg.com/@imagemagick/magick-wasm@0.0.34/dist/magick.wasm",
-						),
-					);
+					await initializeImageMagick(new URL(imageMagickUrl));
 					Magick.onLog = (e) =>
 						printMsg(
 							["imagemagick", e.message.split("]:").slice(1).join("]:")],
