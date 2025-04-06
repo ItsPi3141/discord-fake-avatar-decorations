@@ -18,13 +18,6 @@ export class Utils extends Component {
 			) {
 				fire();
 			}
-			if (
-				document.querySelector("main.discord-scrollbar") &&
-				document.querySelector("main.discord-scrollbar").getBoundingClientRect()
-					.height !== document.documentElement.getBoundingClientRect().height
-			) {
-				fire();
-			}
 		};
 		const m = new MutationObserver(fn);
 		m.observe(document.body, {
