@@ -135,6 +135,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 body:has([nice]) {
+  pointer-events: none;
 	white-space: pre;
 
 	& > * {
