@@ -251,6 +251,11 @@ export const decorationsData = [
 				d: "It’s time to touch some reality. Exclusive to April Fools 2025 for a limited time.",
 				f: "touch_grass",
 			},
+			{
+				n: "Clicker Avatar Decoration",
+				d: "Exclusive to The Last of Us Season 2 Quest for a limited time. Available to use until June 13, 2025.",
+				f: "clicker_avatar_decoration",
+			},
 		],
 	},
 	{
