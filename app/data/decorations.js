@@ -254,6 +254,57 @@ export const decorationsData = [
 		],
 	},
 	{
+		n: "GGEZ",
+		d: "Certified W.",
+		b: {
+			i: "ggez.png",
+			t: "ggez.png",
+			h: 46,
+		},
+		i: [
+			{
+				n: "Copium",
+				d: "They’re obviously hacking.",
+				f: "copium",
+			},
+			{
+				n: "Trash",
+				d: "You seem to have found your new home.",
+				f: "trash",
+			},
+			{
+				n: "Grass Toucher",
+				d: "Maybe it’s time take a break?",
+				f: "grass_toucher",
+			},
+			{
+				n: "Press F (Black)",
+				d: "FFFFFFFFFF",
+				f: "press_f_black",
+			},
+			{
+				n: "Press F (White)",
+				d: "FFFFFFFFFF",
+				f: "press_f_white",
+			},
+			{
+				n: "Git Gud",
+				d: "You know what that sounds like?",
+				f: "git_gud",
+			},
+			{
+				n: "GGEZ",
+				d: "I wasn’t even trying.",
+				f: "ggez",
+			},
+			{
+				n: "Questionable",
+				d: "??????????????????",
+				f: "questionable",
+			},
+		],
+	},
+	{
 		n: "Chibi Cafe",
 		d: "Too sweet to eat.",
 		darkText: true,

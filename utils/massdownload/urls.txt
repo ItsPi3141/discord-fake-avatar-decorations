@@ -1,3 +1,11 @@
+https://cdn.discordapp.com/avatar-decoration-presets/a_17208e22d55ca02e33df1f0f500407f5.png?size=1024&name=copium.png
+https://cdn.discordapp.com/avatar-decoration-presets/a_9450b11728cd18bf686d45513559ddb1.png?size=1024&name=trash.png
+https://cdn.discordapp.com/avatar-decoration-presets/a_f0199d0589214667224d95fe24ce0106.png?size=1024&name=grass_toucher.png
+https://cdn.discordapp.com/avatar-decoration-presets/a_fbbdd5565db1c91d95804f7df0074c5a.png?size=1024&name=press_f_black.png
+https://cdn.discordapp.com/avatar-decoration-presets/a_2e158540cee034330f665860cd948891.png?size=1024&name=press_f_white.png
+https://cdn.discordapp.com/avatar-decoration-presets/a_c48b135704ecb5c88f2f71f6c8bcce2f.png?size=1024&name=git_gud.png
+https://cdn.discordapp.com/avatar-decoration-presets/a_74b6491cb73d2be5c1f20374ccb399a8.png?size=1024&name=ggez.png
+https://cdn.discordapp.com/avatar-decoration-presets/a_68257352645ca6367a8594a91dd2f790.png?size=1024&name=questionable.png
 https://cdn.discordapp.com/avatar-decoration-presets/a_b70f0a0cecf3097eae17a8f7d8c659a8.png?size=1024&name=berry_bunny.png
 https://cdn.discordapp.com/avatar-decoration-presets/a_5a52022f86ac469d0f4c898fc6ebc1c8.png?size=1024&name=mochi_bunny_pink.png
 https://cdn.discordapp.com/avatar-decoration-presets/a_03a466899bcf0dedfd5a26fe50944c8b.png?size=1024&name=mochi_bunny_blue.png
