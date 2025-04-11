@@ -21,7 +21,10 @@ export default function SearchBar({ onValueChanged, placeholder }) {
 			{query.length > 0 ? (
 				<button
 					type="button"
-					onClick={() => setQuery("")}
+					onClick={() => {
+						setQuery("");
+						onValueChanged("");
+					}}
 					className="top-1/2 right-4 absolute h-fit text-text-muted hover:text-white transition-colors -translate-y-1/2 transform"
 				>
 					<Icons.close width="1.25em" height="1.25em" />
