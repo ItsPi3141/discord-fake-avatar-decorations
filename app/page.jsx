@@ -345,7 +345,9 @@ const App = ({ ffmpegRef, isServer }) => {
 											key={
 												typeof category.b.i === "string"
 													? category.b.i
-													: category.b.i[0].url
+													: category.b.i.length > 0
+														? category.b.i[0].url
+														: category.n
 											}
 										>
 											<div className="relative justify-center items-center grid grid-cols-1 grid-rows-1 bg-black mb-4 rounded-2xl h-28 overflow-hidden">
