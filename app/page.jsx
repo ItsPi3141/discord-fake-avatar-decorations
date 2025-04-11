@@ -285,7 +285,7 @@ const App = ({ ffmpegRef, isServer }) => {
 							onValueChanged={setAvatarSearch}
 						/>
 						{/* SELECT AVATAR */}
-						<div className="flex flex-col gap-8 mt-1 py-1 max-h-[280px] overflow-auto discord-scrollbar">
+						<div className="flex flex-col gap-8 mt-1 py-1 h-[280px] overflow-auto discord-scrollbar">
 							<div className="gap-3 grid grid-cols-3 xs:grid-cols-4 sm:grid-cols-5 min-[600px]:grid-cols-6 min-[720px]:grid-cols-7 md:grid-cols-5">
 								{avatarsData
 									.filter((avatar) =>
@@ -328,7 +328,7 @@ const App = ({ ffmpegRef, isServer }) => {
 							placeholder={"Search decorations..."}
 							onValueChanged={setDecoSearch}
 						/>
-						<div className="flex flex-col gap-8 mt-1 py-1 max-h-[532px] overflow-auto discord-scrollbar">
+						<div className="flex flex-col gap-8 mt-1 py-1 h-[532px] overflow-auto discord-scrollbar">
 							{decorationsData
 								.map((c) => ({
 									...c,
