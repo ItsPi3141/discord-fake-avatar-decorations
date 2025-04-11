@@ -294,7 +294,7 @@ const App = ({ ffmpegRef, isServer }) => {
 									.map((avatar, index) => {
 										return (
 											<button
-												key={index}
+												key={avatar.n}
 												type="button"
 												className="avatar-preset button-tile"
 												onClick={(e) => {
@@ -341,7 +341,7 @@ const App = ({ ffmpegRef, isServer }) => {
 								.filter((category) => category.i.length > 0)
 								.map((category, index) => {
 									return (
-										<div key={index}>
+										<div key={category.n}>
 											<div className="relative justify-center items-center grid grid-cols-1 grid-rows-1 bg-black mb-4 rounded-2xl h-28 overflow-hidden">
 												{typeof category.b.i !== "string" ? (
 													<>
@@ -353,7 +353,7 @@ const App = ({ ffmpegRef, isServer }) => {
 														/>
 														{category.b.i.map((e, i) => (
 															<Image
-																key={i}
+																key={e.url}
 																className={"object-cover bottom-0 absolute"}
 																src={`/banners/${e.url}`}
 																alt={""}
@@ -470,7 +470,7 @@ const App = ({ ffmpegRef, isServer }) => {
 												{category.i.map((decor, index) => {
 													return (
 														<button
-															key={index}
+															key={decor.n}
 															type="button"
 															className="button-tile decor"
 															onClick={(e) => {
