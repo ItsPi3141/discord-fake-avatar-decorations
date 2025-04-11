@@ -341,7 +341,13 @@ const App = ({ ffmpegRef, isServer }) => {
 								.filter((category) => category.i.length > 0)
 								.map((category, index) => {
 									return (
-										<div key={category.b.i}>
+										<div
+											key={
+												typeof category.b.i === "string"
+													? category.b.i
+													: category.b.i[0].url
+											}
+										>
 											<div className="relative justify-center items-center grid grid-cols-1 grid-rows-1 bg-black mb-4 rounded-2xl h-28 overflow-hidden">
 												{typeof category.b.i !== "string" ? (
 													<>
