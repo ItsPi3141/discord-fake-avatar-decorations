@@ -914,7 +914,9 @@ const DecorationsList = ({
 				i: c.i.filter(
 					(e) =>
 						e.n.toLowerCase().includes(decoSearch.toLowerCase()) ||
-						e.d.toLowerCase().includes(decoSearch.toLowerCase()),
+						e.d.toLowerCase().includes(decoSearch.toLowerCase()) ||
+						c.n.toLowerCase().includes(decoSearch.toLowerCase()) ||
+						c.d.toLowerCase().includes(decoSearch.toLowerCase()),
 				),
 			}))
 			.filter((category) => category.i.length > 0);
