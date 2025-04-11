@@ -136,6 +136,25 @@ export const Icons = {
 			</svg>
 		);
 	},
+	search({ width = "1em", height = "1em" }) {
+		return (
+			<svg
+				aria-hidden="true"
+				width={width}
+				height={height}
+				viewBox="0 0 24 24"
+				fill="none"
+				xmlns="http://www.w3.org/2000/svg"
+			>
+				<path
+					d="M15.62 17.03a9 9 0 1 1 1.41-1.41l4.68 4.67a1 1 0 0 1-1.42 1.42l-4.67-4.68ZM17 10a7 7 0 1 1-14 0 7 7 0 0 1 14 0Z"
+					fill="currentColor"
+					fillRule="evenodd"
+					clipRule="evenodd"
+				/>
+			</svg>
+		);
+	},
 	star({ width = "1em", height = "1em" }) {
 		return (
 			<svg

@@ -20,6 +20,7 @@
 	--color-surface-highest: hsl(240, 5.263%, 26.078%);
 
 	--color-border-normal: hsla(240, 4%, 60.784%, 0.2);
+  --color-border-light: hsla(240, 4%, 60.784%, 0.1);
 	--color-border-faint: hsla(240, 4%, 60.784%, 0.0392156862745098);
 	--color-border-strong: hsla(240, 4%, 60.784%, 0.4392156862745098);
 
@@ -57,8 +58,8 @@
 	}
 }
 
-/* BUTTONS */
 @layer components {
+  /* BUTTONS */
 	.button-primary {
 		@apply bg-button-primary-background hover:bg-button-primary-hover active:bg-button-primary-active border-button-primary-border rounded-lg transition;
 	}
@@ -66,8 +67,13 @@
 		@apply bg-button-secondary-background hover:bg-button-secondary-hover active:bg-button-secondary-active border border-button-secondary-border rounded-lg transition;
 	}
 	.button-tile {
-		@apply bg-base-lowest p-2 border-2 border-transparent rounded-[5px] outline-none w-full aspect-square;
+		@apply bg-base-lowest p-2 border-2 border-transparent rounded-[5px] outline-none w-full aspect-square transition-colors;
 	}
+
+  /* INPUTS */
+  .text-input {
+    @apply bg-base-lowest px-2.5 py-2 border border-border-light rounded-lg outline-none
+  }
 }
 
 * {
