@@ -256,6 +256,11 @@ export const decorationsData = [
 				d: "Exclusive to The Last of Us Season 2 Quest for a limited time. Available to use until June 13, 2025.",
 				f: "clicker_avatar_decoration",
 			},
+			{
+				n: "Face of Corruption Avatar Decoration",
+				d: "Exclusive to the Path of Exile 2 Quest for a limited time. Available to use until June 17, 2025.",
+				f: "face_of_corruption_avatar_decoration",
+			},
 		],
 	},
 	{
