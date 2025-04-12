@@ -261,6 +261,11 @@ export const decorationsData = [
 				d: "Exclusive to the Path of Exile 2 Quest for a limited time. Available to use until June 17, 2025.",
 				f: "face_of_corruption_avatar_decoration",
 			},
+			{
+				n: "Emma Frost Avatar Decoration",
+				d: "Exclusive to the Marvel Rivals S2 Quest for a limited time. Available to use until June 18, 2025.",
+				f: "emma_frost_avatar_decoration",
+			},
 		],
 	},
 	{
