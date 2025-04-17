@@ -271,6 +271,11 @@ export const decorationsData = [
 				d: "Exclusive to the Marathon Reveal Quest for a limited time. Available to use until June 20, 2025.",
 				f: "signal_from_tau_ceti",
 			},
+			{
+				n: "Slurp Barrel",
+				d: "Exclusive to the Fortnite Reload Quest for a limited time. Available to use until June 20, 2025.",
+				f: "slurp_barrel",
+			},
 		],
 	},
 	{
