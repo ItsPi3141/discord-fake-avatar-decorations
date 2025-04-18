@@ -100,6 +100,10 @@ export const avatarsData = [
 		f: "lofi.png",
 	},
 	{
+		n: "Valorant Champions",
+		f: "valorant_champions.png",
+	},
+	{
 		n: "Valorant",
 		f: "valorant.png",
 	},
