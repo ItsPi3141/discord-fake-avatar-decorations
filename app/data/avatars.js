@@ -636,6 +636,10 @@ export const avatarsData = [
 		f: "leon_2.png",
 	},
 	{
+		n: "Lily",
+		f: "lily.png",
+	},
+	{
 		n: "Lime #1",
 		f: "lime_1.png",
 	},
