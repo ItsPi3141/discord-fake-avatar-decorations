@@ -279,6 +279,20 @@ export const decorationsData = [
 		],
 	},
 	{
+		n: "Orbs Exclusive",
+		d: "",
+		b: {
+			i: "orbs_exclusive.png",
+		},
+		i: [
+			{
+				n: "Pondering Portal",
+				d: "Dazzling thoughts create neon sparks.",
+				f: "pondering_portal",
+			},
+		],
+	},
+	{
 		n: "GGEZ",
 		d: "Certified W.",
 		b: {
