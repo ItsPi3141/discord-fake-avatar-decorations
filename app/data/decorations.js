@@ -276,11 +276,6 @@ export const decorationsData = [
 				d: "Exclusive to the Fortnite Reload Quest for a limited time. Available to use until June 20, 2025.",
 				f: "slurp_barrel",
 			},
-			{
-				n: "Hackclaw",
-				d: "Exclusive to the Delta Force Quest for a limited time. Available to use until June 27, 2025.",
-				f: "hackclaw",
-			},
 		],
 	},
 	{
