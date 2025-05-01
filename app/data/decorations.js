@@ -276,6 +276,11 @@ export const decorationsData = [
 				d: "Exclusive to the Fortnite Reload Quest for a limited time. Available to use until June 20, 2025.",
 				f: "slurp_barrel",
 			},
+			{
+				n: "Friend of Dex",
+				d: "Exclusive to the Fragpunk Season 1 Chapter 2 Quest for a limited time. Available to use until July 5, 2025.",
+				f: "friend_of_dex",
+			},
 		],
 	},
 	{
