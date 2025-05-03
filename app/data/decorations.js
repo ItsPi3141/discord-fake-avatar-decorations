@@ -298,6 +298,52 @@ export const decorationsData = [
 		],
 	},
 	{
+		n: "Star Wars™",
+		d: "May the Force be with you.",
+		b: {
+			i: "star_wars.png",
+			t: "star_wars.png",
+			h: 50,
+		},
+		i: [
+			{
+				n: "Lightsabers (Blue and Red)",
+				d: "Which side do you stand on?",
+				f: "lightsabers_blue_and_red",
+			},
+			{
+				n: "Lightsabers (Green and Red)",
+				d: "Which side do you stand on?",
+				f: "lightsabers_green_and_red",
+			},
+			{
+				n: "R2-D2 on Tatooine",
+				d: "Where R2-D2 goes, adventure follows.",
+				f: "r2_d2_on_tatooine",
+			},
+			{
+				n: "Curious BB-8",
+				d: "Never far from his favorite human.",
+				f: "curious_bb_8",
+			},
+			{
+				n: "Yoda on Dagobah",
+				d: "You must learn to be balanced.",
+				f: "yoda_on_dagobah",
+			},
+			{
+				n: "Millennium Falcon Hyperdrive",
+				d: "The Kessel Run record still stands.",
+				f: "millennium_falcon_hyperdrive",
+			},
+			{
+				n: "Space Battle",
+				d: "At the ready.",
+				f: "space_battle",
+			},
+		],
+	},
+	{
 		n: "GGEZ",
 		d: "Certified W.",
 		b: {
