@@ -1215,4 +1215,8 @@ export const avatarsData = [
 		n: "Wumpus #45",
 		f: "wumpus_45.png",
 	},
+	{
+		n: "Wumpus #46",
+		f: "wumpus_46.png",
+	},
 ];
