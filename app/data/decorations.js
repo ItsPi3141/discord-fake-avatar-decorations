@@ -281,6 +281,11 @@ export const decorationsData = [
 				d: "Exclusive to the Fragpunk Season 1 Chapter 2 Quest for a limited time. Available to use until July 5, 2025.",
 				f: "friend_of_dex",
 			},
+			{
+				n: "Shield Saw",
+				d: "Exclusive to the Doom Quest for a limited time. Available to use until July 11, 2025.",
+				f: "shield_saw",
+			},
 		],
 	},
 	{
