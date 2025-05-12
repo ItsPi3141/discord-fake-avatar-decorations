@@ -286,6 +286,11 @@ export const decorationsData = [
 				d: "Exclusive to the Doom Quest for a limited time. Available to use until July 11, 2025.",
 				f: "shield_saw",
 			},
+			{
+				n: "Fortnite Galactic Battle",
+				d: "Exclusive to the Fortnite Galactic Battle Quest for a limited time. Available to use until July 13, 2025.",
+				f: "fortnite_galactic_battle",
+			},
 		],
 	},
 	{
