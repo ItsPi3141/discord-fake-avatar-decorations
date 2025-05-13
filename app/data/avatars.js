@@ -1,5 +1,9 @@
 export const avatarsData = [
 	{
+		n: "Star Wars™",
+		f: "star_wars.png",
+	},
+	{
 		n: "GGEZ",
 		f: "ggez.png",
 	},
