@@ -308,6 +308,88 @@ export const decorationsData = [
 		],
 	},
 	{
+		n: "Cozy Valley",
+		d: "A little slice of paradise.",
+		darkText: true,
+		b: {
+			i: "cozy_valley.png",
+			t: "cozy_valley.png",
+			h: 60,
+		},
+		i: [
+			{
+				n: "Dewdrop",
+				d: "drip drip drip",
+				f: "dewdrop",
+			},
+			{
+				n: "Happy Harvest",
+				d: "These will go great in a stew or a roast.",
+				f: "happy_harvest",
+			},
+			{
+				n: "Gone Fishin'",
+				d: "The fish are really biting today!",
+				f: "gone_fishin",
+			},
+			{
+				n: "Sleepy Bee",
+				d: "Napping on the job, are we?",
+				f: "sleepy_bee",
+			},
+			{
+				n: "Baker Bear",
+				d: "Here for the usual?",
+				f: "baker_bear",
+			},
+			{
+				n: "Shroomling",
+				d: "Firmly down it clings. Perhaps a spade's the key to such fungal things.",
+				f: "shroomling",
+			},
+			{
+				n: "Shroomling (Brown)",
+				d: "Firmly down it clings. Perhaps a spade's the key to such fungal things.",
+				f: "shroomling_brown",
+			},
+			{
+				n: "Shroomling (Blue)",
+				d: "Firmly down it clings. Perhaps a spade's the key to such fungal things.",
+				f: "shroomling_blue",
+			},
+			{
+				n: "Shroomling (Purple)",
+				d: "Firmly down it clings. Perhaps a spade's the key to such fungal things.",
+				f: "shroomling_purple",
+			},
+			{
+				n: "Shroomling (Pink)",
+				d: "Firmly down it clings. Perhaps a spade's the key to such fungal things.",
+				f: "shroomling_pink",
+			},
+			{
+				n: "Hammy",
+				d: "Tiny paws, big hustle.",
+				f: "hammy",
+			},
+			{
+				n: "Hammy (Blue)",
+				d: "Tiny paws, big hustle.",
+				f: "hammy_blue",
+			},
+			{
+				n: "Hammy (Pink)",
+				d: "Tiny paws, big hustle.",
+				f: "hammy_pink",
+			},
+			{
+				n: "Hammy (Green)",
+				d: "Tiny paws, big hustle.",
+				f: "hammy_green",
+			},
+		],
+	},
+	{
 		n: "Star Wars™",
 		d: "May the Force be with you.",
 		b: {

@@ -1,3 +1,17 @@
+https://cdn.discordapp.com/avatar-decoration-presets/a_d5bbba33a9471255027f590d671ea0ef.png?size=1024&name=dewdrop.png
+https://cdn.discordapp.com/avatar-decoration-presets/a_cffaa50ce82fa79b09e2e0078e8b18bb.png?size=1024&name=happy_harvest.png
+https://cdn.discordapp.com/avatar-decoration-presets/a_cec06be6560073121dc9e0bfd9cb536f.png?size=1024&name=gone_fishin.png
+https://cdn.discordapp.com/avatar-decoration-presets/a_8de95a1173704216bf5f6ce7f1221bcf.png?size=1024&name=sleepy_bee.png
+https://cdn.discordapp.com/avatar-decoration-presets/a_1953da70cb693d9a27178eca180f8cb5.png?size=1024&name=baker_bear.png
+https://cdn.discordapp.com/avatar-decoration-presets/a_a4ab0ff68e61e6508bf325b09cb1e8dd.png?size=1024&name=shroomling.png
+https://cdn.discordapp.com/avatar-decoration-presets/a_fc6456f27996897fbde8afdf5e31ed3f.png?size=1024&name=shroomling_brown.png
+https://cdn.discordapp.com/avatar-decoration-presets/a_30f9713ce9c884b996302d64ac8035f7.png?size=1024&name=shroomling_blue.png
+https://cdn.discordapp.com/avatar-decoration-presets/a_6870198ce1bf23a6e1e4d91295cf5bf8.png?size=1024&name=shroomling_purple.png
+https://cdn.discordapp.com/avatar-decoration-presets/a_eab9ba78a42b778003379a42e1b93e53.png?size=1024&name=shroomling_pink.png
+https://cdn.discordapp.com/avatar-decoration-presets/a_71c5b605d5bf95fc43e5335fd760c482.png?size=1024&name=hammy.png
+https://cdn.discordapp.com/avatar-decoration-presets/a_6367382c9520e08b6343a691ee27fc14.png?size=1024&name=hammy_blue.png
+https://cdn.discordapp.com/avatar-decoration-presets/a_c4c43d3e44c2dfaf17629849311eec38.png?size=1024&name=hammy_pink.png
+https://cdn.discordapp.com/avatar-decoration-presets/a_b978e797357c1a14439f4154740e723a.png?size=1024&name=hammy_green.png
 https://cdn.discordapp.com/avatar-decoration-presets/a_e90a90b63d6ea4d40283bbc19b98a153.png?size=1024&name=lightsabers_blue_and_red.png
 https://cdn.discordapp.com/avatar-decoration-presets/a_1cbe627a7afa31cf166a7395ab454d3d.png?size=1024&name=lightsabers_green_and_red.png
 https://cdn.discordapp.com/avatar-decoration-presets/a_cb8bbe431a4c3b88c11096ff8b46907a.png?size=1024&name=r2_d2_on_tatooine.png
