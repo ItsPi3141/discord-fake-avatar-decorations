@@ -303,15 +303,14 @@ const App = ({ ffmpegRef, isServer }) => {
 							placeholder={"Search decorations..."}
 							onValueChanged={setDecoSearch}
 						/>
-						<div className="flex flex-col gap-8 mt-1 py-1 h-[532px] overflow-auto discord-scrollbar">
-							<DecorationsList
-								decoData={decorationsData}
-								decoSearch={decoSearch}
-								setName={setName}
-								setDescription={setDescription}
-								setDecoUrl={setDecoUrl}
-							/>
-						</div>
+
+						<DecorationsTabs
+							decoData={decorationsData}
+							decoSearch={decoSearch}
+							setName={setName}
+							setDescription={setDescription}
+							setDecoUrl={setDecoUrl}
+						/>
 					</div>
 
 					<div className="flex flex-col items-center gap-8">
@@ -900,12 +899,56 @@ const DecorationsCategoryBanner = memo(({ category }) => {
 	);
 });
 
+const DecorationsTabs = ({
+	decoData,
+	decoSearch,
+	setName,
+	setDescription,
+	setDecoUrl,
+}) => {
+	const [activeTab, setActiveTab] = useState(0);
+	return (
+		<>
+			<div className="flex gap-3 my-2">
+				{decoData.map(({ name }, index) => (
+					<button
+						type="button"
+						key={name}
+						className={`${
+							activeTab === index ? "bg-surface-high" : "bg-transparent"
+						} px-4 py-1.5 font-semibold text-sm hover:bg-surface-higher active:bg-surface-high rounded-lg`}
+						onClick={() => setActiveTab(index)}
+					>
+						{name}
+					</button>
+				))}
+			</div>
+			{decoData.map(({ name, data }, index) => (
+				<DecorationsList
+					key={name}
+					{...{
+						decoData: data,
+						decoSearch,
+						setName,
+						setDescription,
+						setDecoUrl,
+					}}
+					style={{
+						display: activeTab === index ? "block" : "none",
+					}}
+				/>
+			))}
+		</>
+	);
+};
+
 const DecorationsList = ({
 	decoData,
 	decoSearch,
 	setName,
 	setDescription,
 	setDecoUrl,
+	style,
 }) => {
 	const getDecorations = useCallback(() => {
 		return decoData
@@ -923,7 +966,10 @@ const DecorationsList = ({
 	}, [decoData, decoSearch]);
 
 	return (
-		<>
+		<div
+			className="mt-1 py-1 h-[532px] overflow-auto discord-scrollbar"
+			style={style}
+		>
 			{getDecorations().length === 0 ? (
 				<NoSearchResults thing="decorations" />
 			) : (
@@ -937,6 +983,7 @@ const DecorationsList = ({
 										? category.b.i[0].url
 										: category.n
 							}
+							className="mt-8 first:mt-0"
 						>
 							<DecorationsCategoryBanner category={category} />
 
@@ -972,6 +1019,6 @@ const DecorationsList = ({
 					);
 				})
 			)}
-		</>
+		</div>
 	);
 };
