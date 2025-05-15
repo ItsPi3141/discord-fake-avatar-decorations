@@ -291,6 +291,11 @@ export const decorationsData = [
 				d: "Exclusive to the Fortnite Galactic Battle Quest for a limited time. Available to use until July 13, 2025.",
 				f: "fortnite_galactic_battle",
 			},
+			{
+				n: "The Bad Guys 2 Trailer",
+				d: "Exclusive to the Bad Guys 2 Trailer Quest for a limited time. Available to use until July 20, 2025.",
+				f: "bad_guys_2",
+			},
 		],
 	},
 	{
