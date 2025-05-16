@@ -13,17 +13,18 @@
 		"@ffmpeg/ffmpeg": "0.12.15",
 		"@ffmpeg/util": "0.12.2",
 		"@giscus/react": "^3.1.0",
-		"@imagemagick/magick-wasm": "^0.0.34",
+		"@imagemagick/magick-wasm": "^0.0.35",
 		"apng-js": "^1.1.5",
-		"next": "^15.3.0",
+		"next": "^15.3.2",
 		"react": "19.1.0",
 		"react-dom": "19.1.0",
 		"react-tooltip": "^5.28.1",
-		"sass": "^1.86.3"
+		"sass": "^1.89.0"
 	},
 	"devDependencies": {
-		"@tailwindcss/postcss": "^4.1.4",
+		"@tailwindcss/postcss": "^4.1.7",
 		"postcss": "^8.5.3",
-		"tailwindcss": "^4.1.4"
-	}
+		"tailwindcss": "^4.1.7"
+	},
+	"trustedDependencies": ["@parcel/watcher", "@tailwindcss/oxide"]
 }
