@@ -93,6 +93,7 @@ export default function Home() {
 								},
 							],
 						);
+					Magick.setLogEvents(LogEventTypes);
 					r();
 				})();
 			}),
