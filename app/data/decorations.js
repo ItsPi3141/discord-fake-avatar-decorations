@@ -3422,6 +3422,11 @@ export const decorationsData = [
 						d: "Exclusive to the Bad Guys 2 Trailer Quest for a limited time. Available to use until July 20, 2025.",
 						f: "bad_guys_2",
 					},
+					{
+						n: "Mission: Impossible",
+						d: "Exclusive to Mission: Impossible Quest for a limited time. Available to use until July 24, 2025.",
+						f: "mission_impossible",
+					},
 				],
 			},
 			{
