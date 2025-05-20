@@ -1,6 +1,7 @@
 export const decorationsData = [
 	{
 		name: "Shop",
+		icon: "shop",
 		data: [
 			{
 				n: "Cozy Valley",
@@ -3124,6 +3125,7 @@ export const decorationsData = [
 	},
 	{
 		name: "Other",
+		icon: "lootbox",
 		data: [
 			{
 				n: "Nitro",

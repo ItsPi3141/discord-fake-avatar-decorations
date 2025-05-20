@@ -560,6 +560,41 @@ const App = ({ ffmpegRef, isServer }) => {
 								Suggest a feature
 							</Link>
 						</div>
+
+						{/* Links */}
+						<div className="flex flex-col justify-start items-stretch rounded-lg w-full font-medium select-none">
+							<p className="font-bold">Links</p>
+							<Link
+								className="flex justify-start items-center gap-2 mt-3 p-2 button-outline"
+								href={"/gif-extractor"}
+								target="_blank"
+							>
+								<span className="place-items-center w-6">
+									<Icons.gif width="18px" height="18px" />
+								</span>
+								Extract still image from GIF
+								<span className="grow" />
+								<span className="rotate-45">
+									<Icons.up width="16px" height="16px" />
+								</span>
+							</Link>
+							<Link
+								className="flex justify-start items-center gap-2 mt-3 p-2 button-outline"
+								href={
+									"https://github.com/ItsPi3141/discord-fake-avatar-decorations"
+								}
+								target="_blank"
+							>
+								<span className="place-items-center w-6">
+									<Icons.github width="24px" height="24px" />
+								</span>
+								Source code
+								<span className="grow" />
+								<span className="rotate-45">
+									<Icons.up width="16px" height="16px" />
+								</span>
+							</Link>
+						</div>
 					</div>
 				</div>
 				<p className="mb-4 text-text-muted text-sm text-center">
@@ -910,18 +945,22 @@ const DecorationsTabs = ({
 	return (
 		<>
 			<div className="flex gap-3 my-2">
-				{decoData.map(({ name }, index) => (
-					<button
-						type="button"
-						key={name}
-						className={`${
-							activeTab === index ? "bg-surface-high" : "bg-transparent"
-						} px-4 py-1.5 font-semibold text-sm hover:bg-surface-higher active:bg-surface-high rounded-lg`}
-						onClick={() => setActiveTab(index)}
-					>
-						{name}
-					</button>
-				))}
+				{decoData.map(({ name, icon }, index) => {
+					const Icon = Icons[icon];
+					return (
+						<button
+							type="button"
+							key={name}
+							className={`${
+								activeTab === index ? "bg-surface-high" : "bg-transparent"
+							} px-4 py-1.5 font-semibold text-sm hover:bg-surface-higher active:bg-surface-high rounded-lg flex items-center gap-1`}
+							onClick={() => setActiveTab(index)}
+						>
+							<Icon width="16px" height="16px" />
+							{name}
+						</button>
+					);
+				})}
 			</div>
 			<div className="relative h-[532px] overflow-clip">
 				{decoData.map(({ name, data }, index) => (
