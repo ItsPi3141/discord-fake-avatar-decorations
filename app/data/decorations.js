@@ -3403,6 +3403,11 @@ export const decorationsData = [
 						f: "slurp_barrel",
 					},
 					{
+						n: "Hackclaw",
+						d: "Exclusive to the Delta Force Quest for a limited time. Available to use until June 27, 2025.",
+						f: "hackclaw",
+					},
+					{
 						n: "Friend of Dex",
 						d: "Exclusive to the Fragpunk Season 1 Chapter 2 Quest for a limited time. Available to use until July 5, 2025.",
 						f: "friend_of_dex",
