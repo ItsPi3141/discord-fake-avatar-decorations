@@ -1,6 +1,6 @@
 "use client";
 
-import { memo, useCallback, useEffect, useRef, useState } from "react";
+import { act, memo, useCallback, useEffect, useRef, useState } from "react";
 
 import { useRouter } from "next/navigation";
 import Link from "next/link";
@@ -923,21 +923,32 @@ const DecorationsTabs = ({
 					</button>
 				))}
 			</div>
-			{decoData.map(({ name, data }, index) => (
-				<DecorationsList
-					key={name}
-					{...{
-						decoData: data,
-						decoSearch,
-						setName,
-						setDescription,
-						setDecoUrl,
-					}}
-					style={{
-						display: activeTab === index ? "block" : "none",
-					}}
-				/>
-			))}
+			<div className="relative h-[532px] overflow-clip">
+				{decoData.map(({ name, data }, index) => (
+					<DecorationsList
+						key={name}
+						{...{
+							decoData: data,
+							decoSearch,
+							setName,
+							setDescription,
+							setDecoUrl,
+						}}
+						style={{
+							// display: activeTab === index ? "block" : "none",
+							transform:
+								activeTab < index
+									? "translateX(100%)"
+									: activeTab > index
+										? "translateX(-100%)"
+										: "translateX(0)",
+							zIndex: activeTab === index ? 1 : 0,
+							transitionTimingFunction: "cubic-bezier(.46,.94,.1,.99)",
+						}}
+						className="top-0 right-0 bottom-0 left-0 absolute transition-transform duration-400"
+					/>
+				))}
+			</div>
 		</>
 	);
 };
@@ -949,6 +960,7 @@ const DecorationsList = ({
 	setDescription,
 	setDecoUrl,
 	style,
+	className,
 }) => {
 	const getDecorations = useCallback(() => {
 		return decoData
@@ -967,7 +979,7 @@ const DecorationsList = ({
 
 	return (
 		<div
-			className="mt-1 py-1 h-[532px] overflow-auto discord-scrollbar"
+			className={`mt-1 py-1 overflow-auto discord-scrollbar ${className}`}
 			style={style}
 		>
 			{getDecorations().length === 0 ? (
