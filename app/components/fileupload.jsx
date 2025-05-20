@@ -10,6 +10,7 @@ export default function FileUpload({ onUpload }) {
 		document.addEventListener("dragover", (e) => {
 			e.preventDefault();
 			e.stopPropagation();
+			if (e.dataTransfer.types.indexOf("Files") < 0) return;
 			setError(false);
 			setVisible(true);
 			try {
