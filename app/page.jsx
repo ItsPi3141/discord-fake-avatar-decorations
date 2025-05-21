@@ -31,6 +31,7 @@ import {
 	Magick,
 } from "@imagemagick/magick-wasm";
 import SearchBar from "./components/searchbar.jsx";
+import { Svg } from "./components/svg.jsx";
 
 const baseImgUrl = process.env.NEXT_PUBLIC_BASE_IMAGE_URL || "";
 
@@ -770,7 +771,7 @@ const App = ({ ffmpegRef, isServer }) => {
 const NoSearchResults = ({ thing }) => {
 	return (
 		<div className="flex flex-col justify-center items-center gap-4 text-text-muted grow">
-			<Icons.search width="3em" height="3em" />
+			<Svg.NoSearchResults size="9rem" />
 			<p className="text-center">No {thing} found</p>
 		</div>
 	);
