@@ -8,7 +8,7 @@ export default function Discussion() {
 	return (
 		<main className="flex flex-col h-screen text-white">
 			<div className="flex items-center gap-2 bg-base-lower p-4 border-b border-border-faint text-icon-tertiary">
-				<Icons.forum width="24px" height="24px" />
+				<Icons.forum size="24px" />
 				<p className="font-semibold text-white">Discussions</p>
 			</div>
 			<div className="overflow-auto discord-scrollbar grow">

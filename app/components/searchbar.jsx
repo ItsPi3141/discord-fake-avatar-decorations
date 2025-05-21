@@ -27,11 +27,11 @@ export default function SearchBar({ onValueChanged, placeholder }) {
 					}}
 					className="top-1/2 right-4 absolute h-fit text-text-muted hover:text-white transition-colors -translate-y-1/2 transform"
 				>
-					<Icons.close width="1.25em" height="1.25em" />
+					<Icons.close size="1.25em" />
 				</button>
 			) : (
 				<div className="top-1/2 right-4 absolute text-text-muted -translate-y-1/2 transform">
-					<Icons.search width="1.25em" height="1.25em" />
+					<Icons.search size="1.25em" />
 				</div>
 			)}
 		</div>

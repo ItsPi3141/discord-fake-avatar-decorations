@@ -571,12 +571,12 @@ const App = ({ ffmpegRef, isServer }) => {
 								target="_blank"
 							>
 								<span className="place-items-center w-6">
-									<Icons.gif width="18px" height="18px" />
+									<Icons.gif size="18px" />
 								</span>
 								Extract still image from GIF
 								<span className="grow" />
 								<span className="rotate-45">
-									<Icons.up width="16px" height="16px" />
+									<Icons.up size="16px" />
 								</span>
 							</Link>
 							<Link
@@ -587,12 +587,12 @@ const App = ({ ffmpegRef, isServer }) => {
 								target="_blank"
 							>
 								<span className="place-items-center w-6">
-									<Icons.github width="24px" height="24px" />
+									<Icons.github size="24px" />
 								</span>
 								Source code
 								<span className="grow" />
 								<span className="rotate-45">
-									<Icons.up width="16px" height="16px" />
+									<Icons.up size="16px" />
 								</span>
 							</Link>
 						</div>
@@ -771,7 +771,7 @@ const App = ({ ffmpegRef, isServer }) => {
 const NoSearchResults = ({ thing }) => {
 	return (
 		<div className="flex flex-col justify-center items-center gap-4 text-text-muted grow">
-			<Svg.NoSearchResults size="9rem" />
+			<Svg.NoSearchResults size="140" />
 			<p className="text-center">No {thing} found</p>
 		</div>
 	);
