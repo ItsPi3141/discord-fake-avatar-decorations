@@ -4,6 +4,57 @@ export const decorationsData = [
 		icon: "shop",
 		data: [
 			{
+				n: "My Hero Academia",
+				d: "© K.Horikoshi / Shueisha, My Hero Academia Project",
+				b: {
+					i: "my_hero_academia.png",
+					t: "my_hero_academia.png",
+					h: 62,
+				},
+				i: [
+					{
+						n: "Izuku Midoriya",
+						d: "Quirk: One For All",
+						f: "izuku_midoriya",
+					},
+					{
+						n: "Katsuki Bakugo",
+						d: "Quirk: Explosion",
+						f: "katsuki_bakugo",
+					},
+					{
+						n: "Ochaco Uraraka",
+						d: "Quirk: Zero Gravity",
+						f: "ochaco_uraraka",
+					},
+					{
+						n: "Shoto Todoroki",
+						d: "Quirk: Half-Cold Half-Hot",
+						f: "shoto_todoroki",
+					},
+					{
+						n: "Endeavor",
+						d: "Quirk: Hellflame",
+						f: "endeavor",
+					},
+					{
+						n: "Hawks",
+						d: "Quirk: Fierce Wings",
+						f: "hawks",
+					},
+					{
+						n: "All Might",
+						d: "Quirk: One For All",
+						f: "all_might",
+					},
+					{
+						n: "Tomura Shigaraki",
+						d: "Quirk: Decay",
+						f: "tomura_shigaraki",
+					},
+				],
+			},
+			{
 				n: "Cozy Valley",
 				d: "A little slice of paradise.",
 				darkText: true,
