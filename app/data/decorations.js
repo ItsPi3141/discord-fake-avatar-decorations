@@ -3146,6 +3146,16 @@ export const decorationsData = [
 						d: "Exclusive to Mission: Impossible Quest for a limited time. Available to use until July 24, 2025.",
 						f: "mission_impossible",
 					},
+					{
+						n: "Jurassic World Rebirth Trailer",
+						d: "Exclusive to Jurassic World Rebirth Trailer Quest for a limited time. Available to use until July 25, 2025.",
+						f: "jurassic_world_rebirth",
+					},
+					{
+						n: "Open Beta",
+						d: "Exclusive to the Open Beta Quest for a limited time. Available to use until July 24, 2025.",
+						f: "open_beta",
+					},
 				],
 			},
 			{
