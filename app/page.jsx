@@ -969,7 +969,7 @@ const DecorationsTabs = ({
 							key={name}
 							className={`${
 								activeTab === index ? "bg-surface-high" : "bg-transparent"
-							} px-4 py-1.5 font-semibold text-sm hover:bg-surface-higher active:bg-surface-high rounded-lg flex items-center gap-1`}
+							} px-4 py-1.5 font-semibold text-sm hover:bg-surface-higher active:bg-surface-high rounded-lg flex items-center gap-1 transition-colors`}
 							onClick={() => setActiveTab(index)}
 						>
 							<Icon width="16px" height="16px" />
