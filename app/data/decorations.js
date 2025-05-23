@@ -2833,6 +2833,335 @@ export const decorationsData = [
 					},
 				],
 			},
+		],
+	},
+	{
+		name: "Other",
+		icon: "lootbox",
+		data: [
+			{
+				n: "Nitro",
+				d: "Decorations only available through Nitro purchases.",
+				b: {
+					i: [
+						{
+							url: "string_lights.png",
+							align: "top left",
+							height: "160%",
+							transform: "scaleX(-1) translateY(-20%)",
+						},
+						{
+							url: "hearts.png",
+							align: "top right",
+							height: "150%",
+							transform: "translateY(-5%)",
+						},
+					],
+					bg: "linear-gradient(90deg, hsl(269.291 52.697% 52.745%) 0%, hsl(295.645 50% 51.373%) 50%, hsl(325.385 31.707% 51.765%) 100%)",
+				},
+				i: [
+					{
+						n: "Gyoiko Sakura",
+						d: "A rare blossom only seen by a fortunate few. Given to new Nitro subscribers between April 24, 2024 and May 1, 2024.",
+						f: "sakura_gyoiko",
+					},
+					{
+						n: "Minions",
+						d: "Name a more iconic duo. Given to Nitro gifters in October 2024.",
+						f: "minions",
+					},
+					{
+						n: "2025 Balloons",
+						d: "Cheers to 2025!! Given to Nitro gifters in December 2024.",
+						f: "new_year_2025",
+					},
+					{
+						n: "Holiday Cat Ears",
+						d: "o<≽^ᴖ ωᴖ^≼ Given to Nitro gifters in December 2024.",
+						f: "santa_cat_ears",
+					},
+					{
+						n: "Snowfall",
+						d: "From chill to chilly. Given to Nitro gifters in December 2024.",
+						f: "snowfall",
+					},
+					{
+						n: "Heart-to-Heart",
+						d: "Feel the love all around. Given to Nitro gifters in February 2025.",
+						f: "heart_to_heart",
+					},
+					{
+						n: "Afternoon Breeze",
+						d: "A calm rest in the meadow. Given to new Nitro subscribers in Spring 2025.",
+						f: "afternoon_breeze",
+					},
+					{
+						n: "Hoppy Day",
+						d: "Brb, out frolicking. Given to new Nitro subscribers in Spring 2025.",
+						f: "hoppy_day",
+					},
+					{
+						n: "Shower Stroll",
+						d: "Chasing rainbows after the storm. Given to new Nitro subscribers in Spring 2025.",
+						f: "shower_stroll",
+					},
+				],
+			},
+			{
+				n: "Quests",
+				d: "Miscellaneous decorations and quest rewards.",
+				b: {
+					i: [
+						{
+							url: "lootbox.svg",
+							align: "left",
+						},
+						{
+							url: "sakura.svg",
+							align: "right",
+							height: "100%",
+							opacity: "0.9",
+						},
+					],
+					bg: "linear-gradient(90deg, rgba(52,65,217,1) 0%, rgba(154,68,247,1) 100%)",
+				},
+				i: [
+					{
+						n: "I'm a Clown",
+						d: "I opened a bunch of Loot Boxes and all I got was this stupid clown decoration. Exclusive to April Fools 2024 for a limited time.",
+						f: "im_a_clown",
+					},
+					{
+						n: "Mokoko",
+						d: "An affectionate Mokoko wants to give you plenty of hugs! Exclusive to Mokoko Quest 2024 for a limited time.",
+						f: "mokoko",
+					},
+					{
+						n: "Warp Helmet",
+						d: "Traveling at the speed of light. Available to use until September 9, 2024.",
+						f: "warp_helmet",
+					},
+					{
+						n: "Fortnite Victory Crown",
+						d: "A sparkly crown! Available to use until September 3, 2024.",
+						f: "victory_crown",
+					},
+					{
+						n: "Freezer Bunny Lovebug",
+						d: "A Sim's coolest companion! Available to use until September 30, 2024.",
+						f: "freezer_bunny_lovebug",
+					},
+					{
+						n: "Wingman Boba",
+						d: "Your trusty VALORANT buddy, with a refreshing bubbly twist. Available to use until October 6, 2024.",
+						f: "wingman_boba",
+					},
+					{
+						n: "Los Santos",
+						d: "Get to the chopper! Los Santos sky-high pursuit! Available to use until October 14, 2024.",
+						f: "los_santos",
+					},
+					{
+						n: "Hailey",
+						d: "Worn by the legendary sniper in The First Descendant. Available until to use November 6, 2024.",
+						f: "hailey",
+					},
+					{
+						n: "Bunny",
+						d: "Worn by Albion's speedster, Bunny, in The First Descendant. Available until to use November 12, 2024.",
+						f: "bunny",
+					},
+					{
+						n: "Torgal Puppy",
+						d: "Torgal the puppy is here to keep you company! This reward is exclusive to the FFXVI Quest. Available until to use November 23, 2024.",
+						f: "torgal_puppy",
+					},
+					{
+						n: "Street Fighter 6 Battle Field",
+						d: "Avatar Decoration for the Award winning Street Fighter 6. Exclusive to Street Fighter 6 Quest for a limited time. Available until to use November 29, 2024.",
+						f: "street_fighter_6_battle_field",
+					},
+					{
+						n: "Wolf Morph",
+						d: "Your Morph can take on many unique forms and help you move throughout the world in THRONE AND LIBERTY. Available until to use November 30, 2024.",
+						f: "wolf_morph",
+					},
+					{
+						n: "Wallach IX Spaceport",
+						d: "The Wallach IX Spaceport is a dynamic port for space travel on the planet Wallach IX. This reward is exclusive to the Dune: Prophecy Quest. Available until to use January 25, 2025.",
+						f: "wallach_spaceport",
+					},
+					{
+						n: "Batarang",
+						d: "The Batarang is Batman’s legendary throwing weapon, blending precision and versatility to instill fear in his enemies. This reward is exclusive to the Become the Knight Quest. Available until to use February 8, 2025.",
+						f: "batarang",
+					},
+					{
+						n: "Rift Butterfly",
+						d: "The Rift Butterfly is a type of sentient Rift that is shaped like a butterfly. This reward is exclusive to the Fortnite Quest. Available until to use February 5, 2025.",
+						f: "rift_butterfly",
+					},
+					{
+						n: "Bush Camper",
+						d: "Exclusive to the Fortnite OG Quest for a limited time. Available until to use February 11, 2025.",
+						f: "bush_camper",
+					},
+					{
+						n: "Shield Potion",
+						d: "Exclusive to the Fortnite Ballistic Quest for a limited time. Available until to use February 16, 2025.",
+						f: "shield_potion",
+					},
+					{
+						n: "TGA Controller",
+						d: "Exclusive to The Game Awards Quest for a limited time. Available until to use February 14, 2025.",
+						f: "tga_controller",
+					},
+					{
+						n: "Shadow",
+						d: "Exclusive to The Sonic 3 Quest for a limited time. Available until to use February 21, 2025.",
+						f: "shadow",
+					},
+					{
+						n: "Rec Room Lightning",
+						d: "Exclusive to the Rec Room Quest for a limited time. Available until to use March 1, 2025.",
+						f: "rec_room_lightning",
+					},
+					{
+						n: "WINGMAN'S GOT IT",
+						d: "Exclusive to the VALORANT GO GET EM WINGS Quest for a limited time. Available to use until March 12, 2025.",
+						f: "wingmans_got_it",
+					},
+					{
+						n: "Jeff the Land Shark",
+						d: "Exclusive to the Marvel Rivals Quest for a limited time. Available to use until March 16, 2025.",
+						f: "jeff_the_land_shark",
+					},
+					{
+						n: "Fuchsia Agent",
+						d: "Exclusive to the Strinova Fuchsia Quest for a limited time. Available to use until March 24, 2025.",
+						f: "fuchsia_agent",
+					},
+					{
+						n: "Fortnite Boogie Bomb",
+						d: "Exclusive to the Fortnite OG S2 Quest for a limited time. Available to use until April 5, 2025.",
+						f: "fortnite_boogie_bomb",
+					},
+					{
+						n: "Scout",
+						d: "Exclusive to the Sid Meier's Civilization VII Quest for a limited time. Available to use until April 26, 2025.",
+						f: "scout",
+					},
+					{
+						n: "Exoborne",
+						d: "Exclusive to the Exoborne Wishlist Quest for a limited time. Available to use until April 18, 2025.",
+						f: "exoborne",
+					},
+					{
+						n: "Big Dill Chain",
+						d: "Exclusive to the Fortnite Quest for a limited time. Available to use until April 29, 2025.",
+						f: "big_dill_chain",
+					},
+					{
+						n: "Pathojen",
+						d: "Exclusive to the FragPunk Launch Quest for a limited time. Available to use until May 13, 2025.",
+						f: "pathojen",
+					},
+					{
+						n: "Split",
+						d: "Exclusive to the Split Fiction Quest for a limited time. Available to use until May 12, 2025.",
+						f: "split",
+					},
+					{
+						n: "Khazan",
+						d: "Exclusive to the Kazan Quest for a limited time. Available to use until May 17, 2025.",
+						f: "khazan",
+					},
+					{
+						n: "Gallica",
+						d: "Exclusive to Metaphor Rank Up Quest for a limited time. Available to use until May 18, 2025.",
+						f: "gallica",
+					},
+					{
+						n: "Supply Llama",
+						d: "Exclusive to the Fortnite Quest for a limited time. Available to use until May 31, 2025.",
+						f: "supply_llama",
+					},
+					{
+						n: "Touch Grass",
+						d: "It’s time to touch some reality. Exclusive to April Fools 2025 for a limited time.",
+						f: "touch_grass",
+					},
+					{
+						n: "Clicker",
+						d: "Exclusive to The Last of Us Season 2 Quest for a limited time. Available to use until June 13, 2025.",
+						f: "clicker",
+					},
+					{
+						n: "Face of Corruption",
+						d: "Exclusive to the Path of Exile 2 Quest for a limited time. Available to use until June 17, 2025.",
+						f: "face_of_corruption",
+					},
+					{
+						n: "Emma Frost",
+						d: "Exclusive to the Marvel Rivals S2 Quest for a limited time. Available to use until June 18, 2025.",
+						f: "emma_frost",
+					},
+					{
+						n: "Signal from Tau Ceti",
+						d: "Exclusive to the Marathon Reveal Quest for a limited time. Available to use until June 20, 2025.",
+						f: "signal_from_tau_ceti",
+					},
+					{
+						n: "Slurp Barrel",
+						d: "Exclusive to the Fortnite Reload Quest for a limited time. Available to use until June 20, 2025.",
+						f: "slurp_barrel",
+					},
+					{
+						n: "Hackclaw",
+						d: "Exclusive to the Delta Force Quest for a limited time. Available to use until June 27, 2025.",
+						f: "hackclaw",
+					},
+					{
+						n: "Friend of Dex",
+						d: "Exclusive to the Fragpunk Season 1 Chapter 2 Quest for a limited time. Available to use until July 5, 2025.",
+						f: "friend_of_dex",
+					},
+					{
+						n: "Shield Saw",
+						d: "Exclusive to the Doom Quest for a limited time. Available to use until July 11, 2025.",
+						f: "shield_saw",
+					},
+					{
+						n: "Fortnite Galactic Battle",
+						d: "Exclusive to the Fortnite Galactic Battle Quest for a limited time. Available to use until July 13, 2025.",
+						f: "fortnite_galactic_battle",
+					},
+					{
+						n: "The Bad Guys 2 Trailer",
+						d: "Exclusive to the Bad Guys 2 Trailer Quest for a limited time. Available to use until July 20, 2025.",
+						f: "bad_guys_2",
+					},
+					{
+						n: "Mission: Impossible",
+						d: "Exclusive to Mission: Impossible Quest for a limited time. Available to use until July 24, 2025.",
+						f: "mission_impossible",
+					},
+				],
+			},
+			{
+				n: "Orbs Exclusive",
+				d: "",
+				b: {
+					i: "orbs_exclusive.png",
+				},
+				i: [
+					{
+						n: "Pondering Portal",
+						d: "Dazzling thoughts create neon sparks.",
+						f: "pondering_portal",
+					},
+				],
+			},
 			{
 				n: "Discord 8th Birthday",
 				d: "",
@@ -3170,335 +3499,6 @@ export const decorationsData = [
 						n: "Red Teacup",
 						d: "Limited time decoration from December 2022. Given to all nitro subscribers.",
 						f: "teacup_red",
-					},
-				],
-			},
-		],
-	},
-	{
-		name: "Other",
-		icon: "lootbox",
-		data: [
-			{
-				n: "Nitro",
-				d: "Decorations only available through Nitro purchases.",
-				b: {
-					i: [
-						{
-							url: "string_lights.png",
-							align: "top left",
-							height: "160%",
-							transform: "scaleX(-1) translateY(-20%)",
-						},
-						{
-							url: "hearts.png",
-							align: "top right",
-							height: "150%",
-							transform: "translateY(-5%)",
-						},
-					],
-					bg: "linear-gradient(90deg, hsl(269.291 52.697% 52.745%) 0%, hsl(295.645 50% 51.373%) 50%, hsl(325.385 31.707% 51.765%) 100%)",
-				},
-				i: [
-					{
-						n: "Gyoiko Sakura",
-						d: "A rare blossom only seen by a fortunate few. Given to new Nitro subscribers between April 24, 2024 and May 1, 2024.",
-						f: "sakura_gyoiko",
-					},
-					{
-						n: "Minions",
-						d: "Name a more iconic duo. Given to Nitro gifters in October 2024.",
-						f: "minions",
-					},
-					{
-						n: "2025 Balloons",
-						d: "Cheers to 2025!! Given to Nitro gifters in December 2024.",
-						f: "new_year_2025",
-					},
-					{
-						n: "Holiday Cat Ears",
-						d: "o<≽^ᴖ ωᴖ^≼ Given to Nitro gifters in December 2024.",
-						f: "santa_cat_ears",
-					},
-					{
-						n: "Snowfall",
-						d: "From chill to chilly. Given to Nitro gifters in December 2024.",
-						f: "snowfall",
-					},
-					{
-						n: "Heart-to-Heart",
-						d: "Feel the love all around. Given to Nitro gifters in February 2025.",
-						f: "heart_to_heart",
-					},
-					{
-						n: "Afternoon Breeze",
-						d: "A calm rest in the meadow. Given to new Nitro subscribers in Spring 2025.",
-						f: "afternoon_breeze",
-					},
-					{
-						n: "Hoppy Day",
-						d: "Brb, out frolicking. Given to new Nitro subscribers in Spring 2025.",
-						f: "hoppy_day",
-					},
-					{
-						n: "Shower Stroll",
-						d: "Chasing rainbows after the storm. Given to new Nitro subscribers in Spring 2025.",
-						f: "shower_stroll",
-					},
-				],
-			},
-			{
-				n: "Quests",
-				d: "Miscellaneous decorations and quest rewards.",
-				b: {
-					i: [
-						{
-							url: "lootbox.svg",
-							align: "left",
-						},
-						{
-							url: "sakura.svg",
-							align: "right",
-							height: "100%",
-							opacity: "0.9",
-						},
-					],
-					bg: "linear-gradient(90deg, rgba(52,65,217,1) 0%, rgba(154,68,247,1) 100%)",
-				},
-				i: [
-					{
-						n: "I'm a Clown",
-						d: "I opened a bunch of Loot Boxes and all I got was this stupid clown decoration. Exclusive to April Fools 2024 for a limited time.",
-						f: "im_a_clown",
-					},
-					{
-						n: "Mokoko",
-						d: "An affectionate Mokoko wants to give you plenty of hugs! Exclusive to Mokoko Quest 2024 for a limited time.",
-						f: "mokoko",
-					},
-					{
-						n: "Warp Helmet",
-						d: "Traveling at the speed of light. Available to use until September 9, 2024.",
-						f: "warp_helmet",
-					},
-					{
-						n: "Fortnite Victory Crown",
-						d: "A sparkly crown! Available to use until September 3, 2024.",
-						f: "victory_crown",
-					},
-					{
-						n: "Freezer Bunny Lovebug",
-						d: "A Sim's coolest companion! Available to use until September 30, 2024.",
-						f: "freezer_bunny_lovebug",
-					},
-					{
-						n: "Wingman Boba",
-						d: "Your trusty VALORANT buddy, with a refreshing bubbly twist. Available to use until October 6, 2024.",
-						f: "wingman_boba",
-					},
-					{
-						n: "Los Santos",
-						d: "Get to the chopper! Los Santos sky-high pursuit! Available to use until October 14, 2024.",
-						f: "los_santos",
-					},
-					{
-						n: "Hailey",
-						d: "Worn by the legendary sniper in The First Descendant. Available until to use November 6, 2024.",
-						f: "hailey",
-					},
-					{
-						n: "Bunny",
-						d: "Worn by Albion's speedster, Bunny, in The First Descendant. Available until to use November 12, 2024.",
-						f: "bunny",
-					},
-					{
-						n: "Torgal Puppy",
-						d: "Torgal the puppy is here to keep you company! This reward is exclusive to the FFXVI Quest. Available until to use November 23, 2024.",
-						f: "torgal_puppy",
-					},
-					{
-						n: "Street Fighter 6 Battle Field",
-						d: "Avatar Decoration for the Award winning Street Fighter 6. Exclusive to Street Fighter 6 Quest for a limited time. Available until to use November 29, 2024.",
-						f: "street_fighter_6_battle_field",
-					},
-					{
-						n: "Wolf Morph",
-						d: "Your Morph can take on many unique forms and help you move throughout the world in THRONE AND LIBERTY. Available until to use November 30, 2024.",
-						f: "wolf_morph",
-					},
-					{
-						n: "Wallach IX Spaceport",
-						d: "The Wallach IX Spaceport is a dynamic port for space travel on the planet Wallach IX. This reward is exclusive to the Dune: Prophecy Quest. Available until to use January 25, 2025.",
-						f: "wallach_spaceport",
-					},
-					{
-						n: "Batarang",
-						d: "The Batarang is Batman’s legendary throwing weapon, blending precision and versatility to instill fear in his enemies. This reward is exclusive to the Become the Knight Quest. Available until to use February 8, 2025.",
-						f: "batarang",
-					},
-					{
-						n: "Rift Butterfly",
-						d: "The Rift Butterfly is a type of sentient Rift that is shaped like a butterfly. This reward is exclusive to the Fortnite Quest. Available until to use February 5, 2025.",
-						f: "rift_butterfly",
-					},
-					{
-						n: "Bush Camper",
-						d: "Exclusive to the Fortnite OG Quest for a limited time. Available until to use February 11, 2025.",
-						f: "bush_camper",
-					},
-					{
-						n: "Shield Potion",
-						d: "Exclusive to the Fortnite Ballistic Quest for a limited time. Available until to use February 16, 2025.",
-						f: "shield_potion",
-					},
-					{
-						n: "TGA Controller",
-						d: "Exclusive to The Game Awards Quest for a limited time. Available until to use February 14, 2025.",
-						f: "tga_controller",
-					},
-					{
-						n: "Shadow",
-						d: "Exclusive to The Sonic 3 Quest for a limited time. Available until to use February 21, 2025.",
-						f: "shadow",
-					},
-					{
-						n: "Rec Room Lightning",
-						d: "Exclusive to the Rec Room Quest for a limited time. Available until to use March 1, 2025.",
-						f: "rec_room_lightning",
-					},
-					{
-						n: "WINGMAN'S GOT IT",
-						d: "Exclusive to the VALORANT GO GET EM WINGS Quest for a limited time. Available to use until March 12, 2025.",
-						f: "wingmans_got_it",
-					},
-					{
-						n: "Jeff the Land Shark",
-						d: "Exclusive to the Marvel Rivals Quest for a limited time. Available to use until March 16, 2025.",
-						f: "jeff_the_land_shark",
-					},
-					{
-						n: "Fuchsia Agent",
-						d: "Exclusive to the Strinova Fuchsia Quest for a limited time. Available to use until March 24, 2025.",
-						f: "fuchsia_agent",
-					},
-					{
-						n: "Fortnite Boogie Bomb",
-						d: "Exclusive to the Fortnite OG S2 Quest for a limited time. Available to use until April 5, 2025.",
-						f: "fortnite_boogie_bomb",
-					},
-					{
-						n: "Scout",
-						d: "Exclusive to the Sid Meier's Civilization VII Quest for a limited time. Available to use until April 26, 2025.",
-						f: "scout",
-					},
-					{
-						n: "Exoborne",
-						d: "Exclusive to the Exoborne Wishlist Quest for a limited time. Available to use until April 18, 2025.",
-						f: "exoborne",
-					},
-					{
-						n: "Big Dill Chain",
-						d: "Exclusive to the Fortnite Quest for a limited time. Available to use until April 29, 2025.",
-						f: "big_dill_chain",
-					},
-					{
-						n: "Pathojen",
-						d: "Exclusive to the FragPunk Launch Quest for a limited time. Available to use until May 13, 2025.",
-						f: "pathojen",
-					},
-					{
-						n: "Split",
-						d: "Exclusive to the Split Fiction Quest for a limited time. Available to use until May 12, 2025.",
-						f: "split",
-					},
-					{
-						n: "Khazan",
-						d: "Exclusive to the Kazan Quest for a limited time. Available to use until May 17, 2025.",
-						f: "khazan",
-					},
-					{
-						n: "Gallica",
-						d: "Exclusive to Metaphor Rank Up Quest for a limited time. Available to use until May 18, 2025.",
-						f: "gallica",
-					},
-					{
-						n: "Supply Llama",
-						d: "Exclusive to the Fortnite Quest for a limited time. Available to use until May 31, 2025.",
-						f: "supply_llama",
-					},
-					{
-						n: "Touch Grass",
-						d: "It’s time to touch some reality. Exclusive to April Fools 2025 for a limited time.",
-						f: "touch_grass",
-					},
-					{
-						n: "Clicker",
-						d: "Exclusive to The Last of Us Season 2 Quest for a limited time. Available to use until June 13, 2025.",
-						f: "clicker",
-					},
-					{
-						n: "Face of Corruption",
-						d: "Exclusive to the Path of Exile 2 Quest for a limited time. Available to use until June 17, 2025.",
-						f: "face_of_corruption",
-					},
-					{
-						n: "Emma Frost",
-						d: "Exclusive to the Marvel Rivals S2 Quest for a limited time. Available to use until June 18, 2025.",
-						f: "emma_frost",
-					},
-					{
-						n: "Signal from Tau Ceti",
-						d: "Exclusive to the Marathon Reveal Quest for a limited time. Available to use until June 20, 2025.",
-						f: "signal_from_tau_ceti",
-					},
-					{
-						n: "Slurp Barrel",
-						d: "Exclusive to the Fortnite Reload Quest for a limited time. Available to use until June 20, 2025.",
-						f: "slurp_barrel",
-					},
-					{
-						n: "Hackclaw",
-						d: "Exclusive to the Delta Force Quest for a limited time. Available to use until June 27, 2025.",
-						f: "hackclaw",
-					},
-					{
-						n: "Friend of Dex",
-						d: "Exclusive to the Fragpunk Season 1 Chapter 2 Quest for a limited time. Available to use until July 5, 2025.",
-						f: "friend_of_dex",
-					},
-					{
-						n: "Shield Saw",
-						d: "Exclusive to the Doom Quest for a limited time. Available to use until July 11, 2025.",
-						f: "shield_saw",
-					},
-					{
-						n: "Fortnite Galactic Battle",
-						d: "Exclusive to the Fortnite Galactic Battle Quest for a limited time. Available to use until July 13, 2025.",
-						f: "fortnite_galactic_battle",
-					},
-					{
-						n: "The Bad Guys 2 Trailer",
-						d: "Exclusive to the Bad Guys 2 Trailer Quest for a limited time. Available to use until July 20, 2025.",
-						f: "bad_guys_2",
-					},
-					{
-						n: "Mission: Impossible",
-						d: "Exclusive to Mission: Impossible Quest for a limited time. Available to use until July 24, 2025.",
-						f: "mission_impossible",
-					},
-				],
-			},
-			{
-				n: "Orbs Exclusive",
-				d: "",
-				b: {
-					i: "orbs_exclusive.png",
-				},
-				i: [
-					{
-						n: "Pondering Portal",
-						d: "Dazzling thoughts create neon sparks.",
-						f: "pondering_portal",
 					},
 				],
 			},
