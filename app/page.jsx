@@ -1,6 +1,14 @@
 "use client";
 
-import { act, memo, useCallback, useEffect, useRef, useState } from "react";
+import {
+	act,
+	Fragment,
+	memo,
+	useCallback,
+	useEffect,
+	useRef,
+	useState,
+} from "react";
 
 import { useRouter } from "next/navigation";
 import Link from "next/link";
@@ -917,13 +925,20 @@ const DecorationsCategoryBanner = memo(({ category }) => {
 					</>
 				)}
 				<p
-					className="w-[232px] xs:w-full font-medium text-sm text-center"
+					className="w-[232px] xs:w-full font-medium text-sm text-center [line-height:1]"
 					style={{
 						color: category.darkText || false ? "#000" : "#fff",
 						marginTop: category.descTopM || "",
 					}}
 				>
-					{category.d}
+					{category.d.includes("\n")
+						? category.d.split("\n").map((e, i) => (
+								<Fragment key={i}>
+									{i > 0 && <br />}
+									{e}
+								</Fragment>
+							))
+						: category.d}
 				</p>
 				{category.badge && (
 					<p className="top-2 right-2 absolute bg-white m-0 px-2 py-0 rounded-full font-semibold text-black text-xs [letter-spacing:0]">

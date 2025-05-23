@@ -5,7 +5,8 @@ export const decorationsData = [
 		data: [
 			{
 				n: "My Hero Academia",
-				d: "© K.Horikoshi / Shueisha, My Hero Academia Project",
+				d: "© K.Horikoshi / Shueisha\nMy Hero Academia Project",
+				darkText: true,
 				b: {
 					i: "my_hero_academia.png",
 					t: "my_hero_academia.png",
