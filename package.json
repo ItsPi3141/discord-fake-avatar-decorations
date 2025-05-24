@@ -13,7 +13,7 @@
 		"@ffmpeg/ffmpeg": "0.12.15",
 		"@ffmpeg/util": "0.12.2",
 		"@giscus/react": "^3.1.0",
-		"@imagemagick/magick-wasm": "0.0.34",
+		"@imagemagick/magick-wasm": "0.0.35",
 		"apng-js": "^1.1.5",
 		"next": "^15.3.2",
 		"react": "19.1.0",

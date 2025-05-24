@@ -56,7 +56,7 @@ export default function Home() {
 		const ffmpeg = ffmpegRef.current;
 
 		const imageMagickUrl =
-			"https://cdn.jsdelivr.net/npm/@imagemagick/magick-wasm@0.0.34/dist/magick.wasm";
+			"https://cdn.jsdelivr.net/npm/@imagemagick/magick-wasm@0.0.35/dist/magick.wasm";
 
 		const promises = [
 			new Promise((r) => {
