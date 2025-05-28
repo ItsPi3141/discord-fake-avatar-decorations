@@ -2906,9 +2906,9 @@ export const decorationsData = [
 						f: "shower_stroll",
 					},
 					{
-						n: "Summer 2025",
-						d: "This decoration has not been officially released yet. Given to Nitro gifters in June 2025.",
-						f: "summer_2025",
+						n: "Freshly Picked",
+						d: "Now where's my blender? Given to Nitro gifters in June 2025.",
+						f: "freshly_picked",
 					},
 				],
 			},
