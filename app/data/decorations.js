@@ -2905,6 +2905,11 @@ export const decorationsData = [
 						d: "Chasing rainbows after the storm. Given to new Nitro subscribers in Spring 2025.",
 						f: "shower_stroll",
 					},
+					{
+						n: "Summer 2025",
+						d: "This decoration has not been officially released yet. Given to Nitro gifters in June 2025.",
+						f: "summer_2025",
+					},
 				],
 			},
 			{
