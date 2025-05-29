@@ -20,7 +20,7 @@
 	--color-surface-highest: hsl(240, 5.263%, 26.078%);
 
 	--color-border-normal: hsla(240, 4%, 60.784%, 0.2);
-  --color-border-light: hsla(240, 4%, 60.784%, 0.1);
+	--color-border-light: hsla(240, 4%, 60.784%, 0.1);
 	--color-border-faint: hsla(240, 4%, 60.784%, 0.0392156862745098);
 	--color-border-strong: hsla(240, 4%, 60.784%, 0.4392156862745098);
 
@@ -41,7 +41,12 @@
 	--color-button-primary-active: hsl(232.121, 45.205%, 42.941%);
 	--color-button-primary-border: hsla(0, 0%, 100%, 0.1);
 
-	--color-button-secondary-background: hsla(240, 4%, 60.784%, 0.12156862745098039);
+	--color-button-secondary-background: hsla(
+		240,
+		4%,
+		60.784%,
+		0.12156862745098039
+	);
 	--color-button-secondary-hover: hsla(240, 4%, 60.784%, 0.2);
 	--color-button-secondary-active: hsla(240, 5.882%, 33.333%, 0.3);
 	--color-button-secondary-border: hsla(240, 4%, 60.784%, 0.0392156862745098);
@@ -49,17 +54,17 @@
 
 @layer base {
 	html {
-    overflow: hidden;
-    height: 100vh;
-    height: 100dvh;
-  }
-  button {
+		overflow: hidden;
+		height: 100vh;
+		height: 100dvh;
+	}
+	button {
 		@apply cursor-pointer;
 	}
 }
 
 @layer components {
-  /* BUTTONS */
+	/* BUTTONS */
 	.button-primary {
 		@apply bg-button-primary-background hover:bg-button-primary-hover active:bg-button-primary-active border-button-primary-border rounded-lg transition;
 	}
@@ -69,14 +74,14 @@
 	.button-tile {
 		@apply bg-base-lowest p-2 border-2 border-transparent rounded-[5px] outline-none w-full aspect-square transition-colors;
 	}
-  .button-outline {
+	.button-outline {
 		@apply border border-button-secondary-background rounded-lg transition;
 	}
 
-  /* INPUTS */
-  .text-input {
-    @apply bg-base-lowest px-2.5 py-2 border border-border-light rounded-lg outline-none
-  }
+	/* INPUTS */
+	.text-input {
+		@apply bg-base-lowest px-2.5 py-2 border border-border-light rounded-lg outline-none;
+	}
 }
 
 * {
@@ -144,7 +149,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 body:has([nice]) {
-  pointer-events: none;
+	pointer-events: none;
 	white-space: pre;
 
 	& > * {
@@ -286,4 +291,18 @@ body:has([nice]) {
 /* LINK */
 a.link {
 	@apply text-text-link hover:underline;
+}
+
+/* CUSTOM BACKGROUNDS */
+.glow-bg {
+	background: radial-gradient(
+			100% 100% at 50% 100%,
+			color-mix(in oklab, rgb(32, 32, 36) 100%, rgb(0, 0, 0)) 60%,
+			rgba(0, 0, 0, 0) 100%
+		),
+		linear-gradient(
+			270deg,
+			rgba(22, 26, 138, 0.3) 0px,
+			rgba(88, 101, 242, 0.3) 100%
+		);
 }

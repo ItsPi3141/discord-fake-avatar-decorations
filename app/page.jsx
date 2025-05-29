@@ -661,61 +661,57 @@ const App = ({ ffmpegRef, isServer }) => {
 						<LoadingCubes />
 						<p>Creating image...</p>
 					</div>
+				) : generationFailed ? (
+					<div className="flex flex-col justify-center items-center gap-4 grow">
+						<p className="text-red-400 text-center">
+							Failed to generate image
+							<br />
+							Please try again.
+						</p>
+					</div>
 				) : (
-					<>
-						{generationFailed ? (
-							<div className="flex flex-col justify-center items-center gap-4 grow">
-								<p className="text-red-400 text-center">
-									Failed to generate image
-									<br />
-									Please try again.
-								</p>
+					<div className="flex flex-col justify-center items-center gap-4 grow">
+						<Image
+							src={finishedAv}
+							draggable={false}
+							width={128}
+							height={128}
+						/>
+						<div className="flex flex-col w-full">
+							<div className="flex flex-col items-center gap-2 mt-3 w-full">
+								<button
+									type="button"
+									className="flex justify-center items-center gap-1.5 py-1.5 w-72 button-secondary"
+									onClick={() => {
+										const a = document.createElement("a");
+										a.href = finishedAv;
+										a.download = `discord_fake_avatar_decorations_${Date.now()}.gif`;
+										a.click();
+									}}
+								>
+									<Icons.download />
+									Save
+								</button>
+								<button
+									type="button"
+									className="flex justify-center items-center gap-1.5 py-1.5 w-72 button-secondary"
+									onClick={() => {
+										if (!isServer) {
+											try {
+												storeData("image", finishedAv);
+												router.push("/gif-extractor");
+											} catch {
+												setFileTooBig(true);
+											}
+										}
+									}}
+								>
+									<Icons.image />
+									Extract still image
+								</button>
 							</div>
-						) : (
-							<div className="flex flex-col justify-center items-center gap-4 grow">
-								<Image
-									src={finishedAv}
-									draggable={false}
-									width={128}
-									height={128}
-								/>
-								<div className="flex flex-col w-full">
-									<div className="flex flex-col items-center gap-2 mt-3 w-full">
-										<button
-											type="button"
-											className="flex justify-center items-center gap-1.5 py-1.5 w-72 button-secondary"
-											onClick={() => {
-												const a = document.createElement("a");
-												a.href = finishedAv;
-												a.download = `discord_fake_avatar_decorations_${Date.now()}.gif`;
-												a.click();
-											}}
-										>
-											<Icons.download />
-											Save
-										</button>
-										<button
-											type="button"
-											className="flex justify-center items-center gap-1.5 py-1.5 w-72 button-secondary"
-											onClick={() => {
-												if (!isServer) {
-													try {
-														storeData("image", finishedAv);
-														router.push("/gif-extractor");
-													} catch {
-														setFileTooBig(true);
-													}
-												}
-											}}
-										>
-											<Icons.image />
-											Extract still image
-										</button>
-									</div>
-								</div>
-							</div>
-						)}
-					</>
+						</div>
+					</div>
 				)}
 			</Modal>
 			<Modal
