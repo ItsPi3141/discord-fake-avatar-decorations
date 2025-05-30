@@ -3161,6 +3161,11 @@ export const decorationsData = [
 						d: "Exclusive to the Open Beta Quest for a limited time. Available to use until July 24, 2025.",
 						f: "open_beta",
 					},
+					{
+						n: "Ultron",
+						d: "Exclusive to the Marvel Rivals S2.5 Quest for a limited time. Available to use until August 5, 2025.",
+						f: "ultron",
+					},
 				],
 			},
 			{
