@@ -3166,6 +3166,11 @@ export const decorationsData = [
 						d: "Exclusive to the Marvel Rivals S2.5 Quest for a limited time. Available to use until August 5, 2025.",
 						f: "ultron",
 					},
+					{
+						n: "Ballerina",
+						d: "Exclusive to the Ballerina Trailer Quest for a limited time. Available to use until August 6, 2025.",
+						f: "ballerina",
+					},
 				],
 			},
 			{
