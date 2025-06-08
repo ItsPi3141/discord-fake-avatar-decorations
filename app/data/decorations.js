@@ -3176,6 +3176,11 @@ export const decorationsData = [
 						d: "Exclusive to the Symbiote Spider-Man Quest for a limited time. Available to use until August 8, 2025.",
 						f: "marvel_snap_venom",
 					},
+					{
+						n: "How to Train Your Dragon",
+						d: "Exclusive to the How to Train Your Dragon Quest for a limited time. Available to use until August 12, 2025.",
+						f: "how_to_train_your_dragon",
+					},
 				],
 			},
 			{
