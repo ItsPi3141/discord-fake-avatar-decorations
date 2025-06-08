@@ -3171,6 +3171,11 @@ export const decorationsData = [
 						d: "Exclusive to the Ballerina Trailer Quest for a limited time. Available to use until August 6, 2025.",
 						f: "ballerina",
 					},
+					{
+						n: "Marvel Snap Venom",
+						d: "Exclusive to the Symbiote Spider-Man Quest for a limited time. Available to use until August 8, 2025.",
+						f: "marvel_snap_venom",
+					},
 				],
 			},
 			{
