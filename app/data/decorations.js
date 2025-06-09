@@ -3181,6 +3181,11 @@ export const decorationsData = [
 						d: "Exclusive to the How to Train Your Dragon Quest for a limited time. Available to use until August 12, 2025.",
 						f: "how_to_train_your_dragon",
 					},
+					{
+						n: "Starlight Revolver",
+						d: "Exclusive to the Starlight Revolver Quest for a limited time. Available to use until August 14, 2025.",
+						f: "starlight_revolver",
+					},
 				],
 			},
 			{
