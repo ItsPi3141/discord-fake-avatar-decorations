@@ -4,6 +4,43 @@ export const decorationsData = [
 		icon: "shop",
 		data: [
 			{
+				n: "Magic: The Gathering",
+				d: "Which color will you wield?",
+				descTopM: "2px",
+				b: {
+					i: "magic_the_gathering.png",
+					t: "magic_the_gathering.png",
+					h: 64,
+				},
+				i: [
+					{
+						n: "White Mana",
+						d: "Give your avatar a new look.",
+						f: "white_mana",
+					},
+					{
+						n: "Blue Mana",
+						d: "Give your avatar a new look.",
+						f: "blue_mana",
+					},
+					{
+						n: "Black Mana",
+						d: "Give your avatar a new look.",
+						f: "black_mana",
+					},
+					{
+						n: "Red Mana",
+						d: "Give your avatar a new look.",
+						f: "red_mana",
+					},
+					{
+						n: "Green Mana",
+						d: "Give your avatar a new look.",
+						f: "green_mana",
+					},
+				],
+			},
+			{
 				n: "My Hero Academia",
 				d: "© K.Horikoshi / Shueisha\nMy Hero Academia Project",
 				darkText: true,
