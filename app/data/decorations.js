@@ -3228,6 +3228,11 @@ export const decorationsData = [
 						d: "Exclusive to the Towerborne Play Quest for a limited time. Available to use until August 17, 2025.",
 						f: "towerborne_play",
 					},
+					{
+						n: "R6 Siege X Avatar",
+						d: "Exclusive to the R6 Siege X Avatar Quest for a limited time. Available to use until August 18, 2025.",
+						f: "r6_siege_x_avatar",
+					},
 				],
 			},
 			{
