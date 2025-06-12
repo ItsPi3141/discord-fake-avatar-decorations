@@ -3223,6 +3223,11 @@ export const decorationsData = [
 						d: "Exclusive to the Starlight Revolver Quest for a limited time. Available to use until August 14, 2025.",
 						f: "starlight_revolver",
 					},
+					{
+						n: "Towerborne Play",
+						d: "Exclusive to the Towerborne Play Quest for a limited time. Available to use until August 17, 2025.",
+						f: "towerborne_play",
+					},
 				],
 			},
 			{
