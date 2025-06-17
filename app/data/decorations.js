@@ -3233,6 +3233,16 @@ export const decorationsData = [
 						d: "Exclusive to the R6 Siege X Avatar Quest for a limited time. Available to use until August 18, 2025.",
 						f: "r6_siege_x_avatar",
 					},
+					{
+						n: "28 Years Later",
+						d: "Exclusive to the 28 Years Later Quest for a limited time. Available to use until August 21, 2025.",
+						f: "28_years_later",
+					},
+					{
+						n: "M3GAN 2.0",
+						d: "Exclusive to the M3GAN 2.0 Quest for a limited time. Available to use until August 21, 2025.",
+						f: "m3gan_2_0",
+					}
 				],
 			},
 			{
