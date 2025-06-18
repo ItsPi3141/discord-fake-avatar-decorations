@@ -4,6 +4,47 @@ export const decorationsData = [
 		icon: "shop",
 		data: [
 			{
+				n: "Zen Protocol",
+				d: "Tradition never dies, it reboots.",
+				b: {
+					i: "zen_protocol.png",
+					t: "zen_protocol.png",
+					h: 50,
+				},
+				i: [
+					{
+						n: "Bonsai",
+						d: "Ancient branches shaped by the hands of a master.",
+						f: "bonsai",
+					},
+					{
+						n: "Sakura City",
+						d: "Where the future wears the past.",
+						f: "sakura_city",
+					},
+					{
+						n: "Hologram Dragon",
+						d: "Your companion for future battles.",
+						f: "hologram_dragon",
+					},
+					{
+						n: "Cyber Katana",
+						d: "As beautiful as it is deadly.",
+						f: "cyber_katana",
+					},
+					{
+						n: "O.N.I",
+						d: "Disappear into ghost-mode with this Overclocked Neutral Interface.",
+						f: "o_n_i",
+					},
+					{
+						n: "Jingasa",
+						d: "The hat of choice for any modern samurai.",
+						f: "jingasa",
+					},
+				],
+			},
+			{
 				n: "Magic: The Gathering",
 				d: "Which color will you wield?",
 				descTopM: "2px",
@@ -3242,7 +3283,7 @@ export const decorationsData = [
 						n: "M3GAN 2.0",
 						d: "Exclusive to the M3GAN 2.0 Quest for a limited time. Available to use until August 21, 2025.",
 						f: "m3gan_2_0",
-					}
+					},
 				],
 			},
 			{
