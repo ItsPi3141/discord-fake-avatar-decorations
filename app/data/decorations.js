@@ -3289,6 +3289,11 @@ export const decorationsData = [
 						d: "Exclusive to the LEGO® Fortnite Quest for a limited time. Available to use until August 21, 2025.",
 						f: "lego_fortnite",
 					},
+					{
+						n: "I Love R.E.P.O.",
+						d: "Exclusive to the R.E.P.O. Quest for a limited time. Available to use until August 23, 2025.",
+						f: "i_love_repo",
+					},
 				],
 			},
 			{
