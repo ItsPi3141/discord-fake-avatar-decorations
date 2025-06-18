@@ -3284,6 +3284,11 @@ export const decorationsData = [
 						d: "Exclusive to the M3GAN 2.0 Quest for a limited time. Available to use until August 21, 2025.",
 						f: "m3gan_2_0",
 					},
+					{
+						n: "LEGO® Fortnite",
+						d: "Exclusive to the LEGO® Fortnite Quest for a limited time. Available to use until August 21, 2025.",
+						f: "lego_fortnite",
+					},
 				],
 			},
 			{
