@@ -4,14 +4,6 @@ export const avatarsData = [
 		f: "magic_the_gathering.png",
 	},
 	{
-		n: "My Hero Academia",
-		f: "my_hero_academia.png",
-	},
-	{
-		n: "Cozy Valley",
-		f: "cozy_valley.png",
-	},
-	{
 		n: "Star Wars",
 		f: "star_wars.png",
 	},
@@ -34,10 +26,6 @@ export const avatarsData = [
 	{
 		n: "Insomnia",
 		f: "insomnia.png",
-	},
-	{
-		n: "Anime v3",
-		f: "anime_v3.png",
 	},
 	{
 		n: "Valentine's 2025 and JENNIE",
