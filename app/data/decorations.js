@@ -3299,6 +3299,11 @@ export const decorationsData = [
 						d: "Exclusive to the SuperCell Quest for a limited time. Available to use until August 28, 2025.",
 						f: "supercell",
 					},
+					{
+						n: "Palia",
+						d: "Exclusive to the Palia Play Quest for a limited time. Available to use until August 29, 2025.",
+						f: "palia",
+					},
 				],
 			},
 			{
