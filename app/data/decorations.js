@@ -3294,6 +3294,11 @@ export const decorationsData = [
 						d: "Exclusive to the R.E.P.O. Quest for a limited time. Available to use until August 23, 2025.",
 						f: "i_love_repo",
 					},
+					{
+						n: "SuperCell",
+						d: "Exclusive to the SuperCell Quest for a limited time. Available to use until August 28, 2025.",
+						f: "supercell",
+					},
 				],
 			},
 			{
