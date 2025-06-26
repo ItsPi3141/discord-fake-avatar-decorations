@@ -3345,6 +3345,11 @@ export const decorationsData = [
 						d: "Exclusive to the Palia Play Quest for a limited time. Available to use until August 29, 2025.",
 						f: "palia",
 					},
+					{
+						n: "VALORANT Summer Kickoff",
+						d: "Exclusive to the VALORANT Summer Kickoff Quest for a limited time. Available to use until August 29, 2025.",
+						f: "valorant_summer_kickoff",
+					},
 				],
 			},
 			{
