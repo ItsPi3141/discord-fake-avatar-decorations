@@ -4,6 +4,47 @@ export const decorationsData = [
 		icon: "shop",
 		data: [
 			{
+				n: "Summer Bliss",
+				d: "Sunshine is a state of mind",
+				b: {
+					i: "summer_bliss.png",
+					t: "summer_bliss.png",
+					h: 48,
+				},
+				i: [
+					{
+						n: "Sippy Juice",
+						d: "Give your avatar a new look.",
+						f: "sippy_juice",
+					},
+					{
+						n: "Sunflowers",
+						d: "Give your avatar a new look.",
+						f: "sunflowers",
+					},
+					{
+						n: "Beach Hat",
+						d: "Give your avatar a new look.",
+						f: "beach_hat",
+					},
+					{
+						n: "a duck",
+						d: "Give your avatar a new look.",
+						f: "a_duck",
+					},
+					{
+						n: "Bubble",
+						d: "Give your avatar a new look.",
+						f: "bubble",
+					},
+					{
+						n: "Fireflies",
+						d: "Give your avatar a new look.",
+						f: "fireflies",
+					},
+				],
+			},
+			{
 				n: "Zen Protocol",
 				d: "Tradition never dies, it reboots.",
 				b: {
