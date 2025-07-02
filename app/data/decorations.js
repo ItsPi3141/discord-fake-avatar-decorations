@@ -6,10 +6,11 @@ export const decorationsData = [
 			{
 				n: "Skibidi Toilet",
 				d: "come for the chaos. stay for the lore.",
+				descTopM: "6px",
 				b: {
 					i: "skibidi_toilet.png",
 					t: "skibidi_toilet.png",
-					h: 50,
+					h: 51,
 				},
 				i: [
 					{
