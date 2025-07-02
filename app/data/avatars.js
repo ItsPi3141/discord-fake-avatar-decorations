@@ -1,5 +1,9 @@
 export const avatarsData = [
 	{
+		n: "Skibidi Toilet",
+		f: "skibidi_toilet.png",
+	},
+	{
 		n: "Summer Bliss",
 		f: "summer_bliss.png",
 	},

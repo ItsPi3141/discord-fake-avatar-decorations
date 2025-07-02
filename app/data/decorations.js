@@ -4,6 +4,47 @@ export const decorationsData = [
 		icon: "shop",
 		data: [
 			{
+				n: "Skibidi Toilet",
+				d: "come for the chaos. stay for the lore.",
+				b: {
+					i: "skibidi_toilet.png",
+					t: "skibidi_toilet.png",
+					h: 50,
+				},
+				i: [
+					{
+						n: "Cameraman Glitch",
+						d: "Give your avatar a new look.",
+						f: "cameraman_glitch",
+					},
+					{
+						n: "Speakerwoman",
+						d: "Give your avatar a new look.",
+						f: "speakerwoman",
+					},
+					{
+						n: "TV Woman",
+						d: "Give your avatar a new look.",
+						f: "tv_woman",
+					},
+					{
+						n: "G-Toilet",
+						d: "Give your avatar a new look.",
+						f: "g_toilet",
+					},
+					{
+						n: "Juggernaut Astro",
+						d: "Give your avatar a new look.",
+						f: "juggernaut_astro",
+					},
+					{
+						n: "Skibidi Toilet",
+						d: "Give your avatar a new look.",
+						f: "skibidi_toilet",
+					},
+				],
+			},
+			{
 				n: "Summer Bliss",
 				d: "Sunshine is a state of mind",
 				b: {
