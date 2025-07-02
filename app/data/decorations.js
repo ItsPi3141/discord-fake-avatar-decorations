@@ -3391,6 +3391,11 @@ export const decorationsData = [
 						d: "Exclusive to the VALORANT Summer Kickoff Quest for a limited time. Available to use until August 29, 2025.",
 						f: "valorant_summer_kickoff",
 					},
+					{
+						n: "Moomoo Hood",
+						d: "Exclusive to the Milk Cup Quest for a limited time. Available to use until September 10, 2025.",
+						f: "moomoo_hood",
+					},
 				],
 			},
 			{
