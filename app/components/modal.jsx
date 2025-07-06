@@ -14,7 +14,7 @@ export default function Modal(props) {
 				className="bg-surface-high shadow-base-lower/60 shadow-sm border border-[#97979f1f] xs:rounded-xl w-screen xs:w-[420px] min-h-screen xs:min-h-[200px] overflow-hidden text-white modal-box"
 				style={{
 					transition: "scale 0.2s ease-in-out",
-					scale: props.visible ? 1 : 0,
+					scale: props.visible ? 1 : 0.5,
 				}}
 			>
 				<div
