@@ -9,22 +9,25 @@
 		"lint": "next lint"
 	},
 	"dependencies": {
-		"@discordapp/twemoji": "^15.1.0",
+		"@discordapp/twemoji": "^16.0.1",
 		"@ffmpeg/ffmpeg": "0.12.15",
 		"@ffmpeg/util": "0.12.2",
 		"@giscus/react": "^3.1.0",
 		"@imagemagick/magick-wasm": "0.0.35",
 		"apng-js": "^1.1.5",
-		"next": "^15.3.2",
+		"next": "^15.4.0",
 		"react": "19.1.0",
 		"react-dom": "19.1.0",
-		"react-tooltip": "^5.28.1",
-		"sass": "^1.89.0"
+		"react-tooltip": "^5.29.1",
+		"sass": "^1.89.2"
 	},
 	"devDependencies": {
-		"@tailwindcss/postcss": "^4.1.7",
-		"postcss": "^8.5.3",
-		"tailwindcss": "^4.1.7"
+		"@tailwindcss/postcss": "^4.1.11",
+		"postcss": "^8.5.6",
+		"tailwindcss": "^4.1.11"
 	},
-	"trustedDependencies": ["@parcel/watcher", "@tailwindcss/oxide"]
+	"trustedDependencies": [
+		"@parcel/watcher",
+		"@tailwindcss/oxide"
+	]
 }
