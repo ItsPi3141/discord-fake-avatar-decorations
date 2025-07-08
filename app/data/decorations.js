@@ -3397,6 +3397,11 @@ export const decorationsData = [
 						d: "Exclusive to the Milk Cup Quest for a limited time. Available to use until September 10, 2025.",
 						f: "moomoo_hood",
 					},
+					{
+						n: "Mecha BREAK",
+						d: "Exclusive to the Mecha BREAK Quest for a limited time. Available to use until September 14, 2025.",
+						f: "mecha_break",
+					},
 				],
 			},
 			{
