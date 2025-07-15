@@ -3408,6 +3408,11 @@ export const decorationsData = [
 						d: "Exclusive to the THPS 3+4 Quest for a limited time. Available to use until September 22, 2025.",
 						f: "thps_half_pipe",
 					},
+					{
+						n: "Phoenix",
+						d: "Jean Grey with her fiery Phoenix form. Available to use until September 16, 2025.",
+						f: "jean_grey_phoenix",
+					},
 				],
 			},
 			{
