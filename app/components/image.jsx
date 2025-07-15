@@ -12,6 +12,7 @@ export default function Image(props) {
 							? props.src
 							: `${baseImgUrl}${props.src}`
 					}
+					loading="lazy"
 				/>
 			)}
 		</>

@@ -810,7 +810,6 @@ const AvatarList = ({ avatarsData, avatarSearch, setAvatarName, setAvUrl }) => {
 								<Image
 									src={`/avatars/${avatar.f}`}
 									className="rounded-full pointer-events-none"
-									loading="lazy"
 								/>
 							</button>
 						);
@@ -1068,7 +1067,6 @@ const DecorationsList = ({
 											<Image
 												src={`/decorations/${decor.f}.png`}
 												className="pointer-events-none"
-												loading="lazy"
 											/>
 										</button>
 									);
