@@ -1,7 +1,6 @@
 "use client";
 
 import {
-	act,
 	Fragment,
 	memo,
 	useCallback,
@@ -120,17 +119,14 @@ export default function Home() {
 
 	return (
 		<>
-			{loaded ? (
-				<App ffmpegRef={ffmpegRef} isServer={isServer} />
-			) : (
-				<LoadingScreen />
-			)}
+			{!loaded && <LoadingScreen />}
+			<App ffmpegRef={ffmpegRef} isServer={isServer} />
 		</>
 	);
 }
 
 const LoadingScreen = () => (
-	<main className="flex flex-col justify-center items-center p-8 w-full h-screen text-white">
+	<main className="top-0 right-0 bottom-0 left-0 z-50 fixed flex flex-col justify-center items-center bg-base-lower p-8 text-white">
 		<p className="top-8 absolute mx-8 max-w-xl font-bold text-4xl text-center ginto">
 			Discord
 			<br />
