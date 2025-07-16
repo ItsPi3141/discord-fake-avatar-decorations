@@ -4,6 +4,52 @@ export const decorationsData = [
 		icon: "shop",
 		data: [
 			{
+				n: "Spirit Blossom Beyond",
+				d: "",
+				b: {
+					i: "spirit_blossom_beyond.png",
+					t: "spirit_blossom_beyond.png",
+					h: 72,
+				},
+				i: [
+					{
+						n: "Spirit Blossom Zed",
+						d: "Give your avatar a new look.",
+						f: "spirit_blossom_zed",
+					},
+					{
+						n: "Spirit Blossom Springs Sett",
+						d: "Give your avatar a new look.",
+						f: "spirit_blossom_springs_sett",
+					},
+					{
+						n: "Spirit Blossom Morgana",
+						d: "Give your avatar a new look.",
+						f: "spirit_blossom_morgana",
+					},
+					{
+						n: "Spirit Blossom Karma",
+						d: "Give your avatar a new look.",
+						f: "spirit_blossom_karma",
+					},
+					{
+						n: "Spirit Blossom Springs",
+						d: "Give your avatar a new look.",
+						f: "spirit_blossom_springs",
+					},
+					{
+						n: "Spirit Blossom Springs Ahri",
+						d: "Give your avatar a new look.",
+						f: "spirit_blossom_springs_ahri",
+					},
+					{
+						n: "Yunara",
+						d: "Give your avatar a new look.",
+						f: "yunara",
+					},
+				],
+			},
+			{
 				n: "Skibidi Toilet",
 				d: "come for the chaos. stay for the lore.",
 				descTopM: "6px",
