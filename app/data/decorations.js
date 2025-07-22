@@ -3459,6 +3459,11 @@ export const decorationsData = [
 						d: "Jean Grey with her fiery Phoenix form. Available to use until September 16, 2025.",
 						f: "jean_grey_phoenix",
 					},
+					{
+						n: "Call of Duty: Mobile",
+						d: "Exclusive to CALL OF DUTY: MOBILE Quest for a limited time. Available to use until September 25, 2025.",
+						f: "call_of_duty_mobile",
+					},
 				],
 			},
 			{
