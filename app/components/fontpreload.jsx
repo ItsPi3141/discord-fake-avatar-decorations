@@ -12,14 +12,27 @@ export function FontPreloader() {
 	return (
 		<>
 			{!loaded && (
-				<div className="top-0 left-0 fixed opacity-0 pointer-events-none">
-					{["normal", "medium", "semibold", "bold"].map((weight) => (
-						<p key={weight} className={`font-${weight}`}>
+				<div
+					style={{
+						top: 0,
+						left: 0,
+						position: "fixed",
+						opacity: 0,
+						color: "transparent",
+						pointerEvents: "none",
+					}}
+				>
+					{[400, 500, 600, 700].map((weight) => (
+						<p key={weight} style={{ fontWeight: weight, fontSize: "1px" }}>
 							e
 						</p>
 					))}
-					<p className="ginto">e</p>
-					<p className="nitro-font">e</p>
+					<p className="ginto" style={{ fontSize: "1px" }}>
+						e
+					</p>
+					<p className="nitro-font" style={{ fontSize: "1px" }}>
+						e
+					</p>
 				</div>
 			)}
 		</>

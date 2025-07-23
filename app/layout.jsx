@@ -68,8 +68,8 @@ export default function RootLayout({ children }) {
 				/>
 			</head>
 			<body className="bg-base-lower overflow-x-hidden">
-				<FontPreloader />
 				{children}
+				<FontPreloader />
 				<Utils />
 			</body>
 		</html>
