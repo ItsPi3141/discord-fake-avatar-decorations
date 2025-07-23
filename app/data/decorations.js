@@ -4,6 +4,47 @@ export const decorationsData = [
 		icon: "shop",
 		data: [
 			{
+				n: "Fantastic 4",
+				d: "",
+				b: {
+					i: "fantastic_4.png",
+					t: "fantastic_4.png",
+					h: 84,
+				},
+				i: [
+					{
+						n: "The Thing",
+						d: "Give your avatar a new look.",
+						f: "the_thing",
+					},
+					{
+						n: "Invisible Woman",
+						d: "Give your avatar a new look.",
+						f: "invisible_woman",
+					},
+					{
+						n: "Mister Fantastic",
+						d: "Give your avatar a new look.",
+						f: "mister_fantastic",
+					},
+					{
+						n: "Human Torch",
+						d: "Give your avatar a new look.",
+						f: "human_torch",
+					},
+					{
+						n: "Silver Surfer",
+						d: "Give your avatar a new look.",
+						f: "silver_surfer",
+					},
+					{
+						n: "The Fantastic Four",
+						d: "Give your avatar a new look.",
+						f: "the_fantastic_four",
+					},
+				],
+			},
+			{
 				n: "Spirit Blossom Beyond",
 				d: "",
 				b: {
