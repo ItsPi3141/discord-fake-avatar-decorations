@@ -26,7 +26,7 @@ export default function RootLayout({ children }) {
 				/>
 				<meta
 					property="og:image"
-					content="https://discord-decorations.vercel.app/android-chrome-192x192.png"
+					content={`${process.env.NEXT_PUBLIC_BASE_IMAGE_URL || "https://discord-decorations.vercel.app"}/android-chrome-192x192.png`}
 				/>
 
 				{/* Twitter embeds */}
@@ -38,33 +38,33 @@ export default function RootLayout({ children }) {
 				/>
 				<meta
 					property="twitter:image"
-					content="https://discord-decorations.vercel.app/android-chrome-192x192.png"
+					content={`${process.env.NEXT_PUBLIC_BASE_IMAGE_URL || "https://discord-decorations.vercel.app"}/android-chrome-192x192.png`}
 				/>
 
 				{/* Favicon */}
 				<link
 					rel="apple-touch-icon"
 					sizes="180x180"
-					href="/apple-touch-icon.png"
+					href={`${process.env.NEXT_PUBLIC_BASE_IMAGE_URL || ""}/apple-touch-icon.png`}
 				/>
 				<link
 					rel="icon"
 					type="image/png"
 					sizes="32x32"
-					href="/favicon-32x32.png"
+					href={`${process.env.NEXT_PUBLIC_BASE_IMAGE_URL || ""}/favicon-32x32.png`}
 				/>
 				<link
 					rel="icon"
 					type="image/png"
 					sizes="16x16"
-					href="/favicon-16x16.png"
+					href={`${process.env.NEXT_PUBLIC_BASE_IMAGE_URL || ""}/favicon-16x16.png`}
 				/>
 				<link rel="manifest" href="/site.webmanifest" />
 
 				{/* Fonts */}
 				<link
 					rel="stylesheet"
-					href="https://itspi3141.github.io/discord-fonts/font.css"
+					href="https://cdn.jsdelivr.net/gh/itspi3141/discord-fonts/font.css"
 				/>
 			</head>
 			<body className="bg-base-lower overflow-x-hidden">
