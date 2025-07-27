@@ -14,23 +14,34 @@ import { getMimeTypeFromArrayBuffer } from "@/ffmpeg/utils.js";
 
 import { printMsg } from "../print.js";
 import { clearData, getData } from "../utils/dataHandler.js";
+import { ffmpegTotalBytes } from "../data/fileSizes.js";
+import { downloadWithProgress } from "../utils/download.js";
 
 export default function GifExtractor() {
 	const isServer = typeof window === "undefined";
 
 	const [loaded, setLoaded] = useState(false);
+	const [loadPercentage, setLoadPercentage] = useState("0%");
 	const ffmpegRef = useRef(isServer ? null : new FFmpeg());
 
 	const load = useCallback(async () => {
 		if (isServer) return;
 		const baseURL = "https://unpkg.com/@ffmpeg/core@0.12.6/dist/umd/";
 		const ffmpeg = ffmpegRef.current;
-		// toBlobURL is used to bypass CORS issue, urls with the same domain can be used directly.
+
 		await ffmpeg.load({
 			coreURL: await toBlobURL(`${baseURL}ffmpeg-core.js`, "text/javascript"),
-			wasmURL: await toBlobURL(
-				`${baseURL}ffmpeg-core.wasm`,
-				"application/wasm",
+			wasmURL: URL.createObjectURL(
+				new Blob(
+					[
+						await downloadWithProgress(`${baseURL}ffmpeg-core.wasm`, (e) => {
+							setLoadPercentage(
+								`${Math.round((e.received / ffmpegTotalBytes) * 100)}%`,
+							);
+						}),
+					],
+					{ type: "application/wasm" },
+				),
 			),
 		});
 		ffmpeg.on("log", (e) =>
@@ -198,8 +209,17 @@ export default function GifExtractor() {
 							Gif Frame Extractor
 						</span>
 					</p>
-					<LoadingCircle className="mb-4 w-10 h-10" />
-					<p>Loading...</p>
+					<div className="relative bg-surface-higher rounded-full w-[calc(100vw-3rem)] max-w-84 h-8 overflow-clip">
+						<div
+							style={{
+								width: loadPercentage,
+							}}
+							className="bg-primary h-full"
+						/>
+						<div className="top-0 right-0 bottom-0 left-0 absolute flex justify-center items-center">
+							<p className="text-xl text-center ginto">{loadPercentage}</p>
+						</div>
+					</div>
 				</main>
 			)}
 		</>

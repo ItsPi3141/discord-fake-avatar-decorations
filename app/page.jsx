@@ -41,6 +41,7 @@ import {
 import SearchBar from "./components/searchbar.jsx";
 import { Svg } from "./components/svg.jsx";
 import { downloadWithProgress } from "./utils/download.js";
+import { ffmpegTotalBytes, imagemagickTotalBytes } from "./data/fileSizes.js";
 
 const baseImgUrl = process.env.NEXT_PUBLIC_BASE_IMAGE_URL || "";
 
@@ -61,9 +62,6 @@ export default function Home() {
 		const imageMagickUrl =
 			"https://cdn.jsdelivr.net/npm/@imagemagick/magick-wasm@0.0.35/dist/magick.wasm";
 
-		const ffmpegTotalBytes = 32129114;
-		const imagemagickTotalBytes = 14291459;
-
 		const promises = [
 			new Promise((r) => {
 				(async () => {
@@ -72,12 +70,6 @@ export default function Home() {
 							`${ffmpegBaseUrl}ffmpeg-core.js`,
 							"text/javascript",
 						),
-						// wasmURL: await toBlobURL(
-						// 	`${ffmpegBaseUrl}ffmpeg-core.wasm`,
-						// 	"application/wasm",
-						// 	true,
-						// 	(e) => setLoadProgress_ffmpeg(e.loaded / e.total),
-						// ),
 						wasmURL: URL.createObjectURL(
 							new Blob(
 								[
