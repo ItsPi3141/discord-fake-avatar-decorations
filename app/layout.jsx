@@ -59,6 +59,12 @@ export default function RootLayout({ children }) {
 					sizes="16x16"
 					href={`${process.env.NEXT_PUBLIC_BASE_IMAGE_URL || ""}/favicon-16x16.png`}
 				/>
+				<link
+					rel="icon"
+					type="image/x-icon"
+					sizes="16x16"
+					href={`${process.env.NEXT_PUBLIC_BASE_IMAGE_URL || ""}/favicon.ico`}
+				/>
 				<link rel="manifest" href="/site.webmanifest" />
 
 				{/* Fonts */}
