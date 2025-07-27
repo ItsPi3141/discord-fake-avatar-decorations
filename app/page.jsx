@@ -40,6 +40,7 @@ import {
 } from "@imagemagick/magick-wasm";
 import SearchBar from "./components/searchbar.jsx";
 import { Svg } from "./components/svg.jsx";
+import { downloadWithProgress } from "./utils/download.js";
 
 const baseImgUrl = process.env.NEXT_PUBLIC_BASE_IMAGE_URL || "";
 
@@ -47,6 +48,8 @@ export default function Home() {
 	const isServer = typeof window === "undefined";
 
 	const [loaded, setLoaded] = useState(false);
+	const [loadProgress_ffmpeg, setLoadProgress_ffmpeg] = useState(0);
+	const [loadProgress_imagemagick, setLoadProgress_imagemagick] = useState(0);
 	const ffmpegRef = useRef(isServer ? null : new FFmpeg());
 
 	const load = useCallback(async () => {
@@ -58,6 +61,9 @@ export default function Home() {
 		const imageMagickUrl =
 			"https://cdn.jsdelivr.net/npm/@imagemagick/magick-wasm@0.0.35/dist/magick.wasm";
 
+		const ffmpegTotalBytes = 32129114;
+		const imagemagickTotalBytes = 14291459;
+
 		const promises = [
 			new Promise((r) => {
 				(async () => {
@@ -66,9 +72,24 @@ export default function Home() {
 							`${ffmpegBaseUrl}ffmpeg-core.js`,
 							"text/javascript",
 						),
-						wasmURL: await toBlobURL(
-							`${ffmpegBaseUrl}ffmpeg-core.wasm`,
-							"application/wasm",
+						// wasmURL: await toBlobURL(
+						// 	`${ffmpegBaseUrl}ffmpeg-core.wasm`,
+						// 	"application/wasm",
+						// 	true,
+						// 	(e) => setLoadProgress_ffmpeg(e.loaded / e.total),
+						// ),
+						wasmURL: URL.createObjectURL(
+							new Blob(
+								[
+									await downloadWithProgress(
+										`${ffmpegBaseUrl}ffmpeg-core.wasm`,
+										(e) => {
+											setLoadProgress_ffmpeg(e.received / ffmpegTotalBytes);
+										},
+									),
+								],
+								{ type: "application/wasm" },
+							),
 						),
 					});
 					ffmpeg.on("log", (e) =>
@@ -89,7 +110,11 @@ export default function Home() {
 			}),
 			new Promise((r) => {
 				(async () => {
-					await initializeImageMagick(new URL(imageMagickUrl));
+					await initializeImageMagick(
+						await downloadWithProgress(imageMagickUrl, (e) => {
+							setLoadProgress_imagemagick(e.received / imagemagickTotalBytes);
+						}),
+					);
 					Magick.onLog = (e) =>
 						printMsg(
 							["imagemagick", e.message.split("]:").slice(1).join("]:")],
@@ -123,21 +148,33 @@ export default function Home() {
 			{loaded ? (
 				<App ffmpegRef={ffmpegRef} isServer={isServer} />
 			) : (
-				<LoadingScreen />
+				<LoadingScreen
+					progress={`${Math.round((loadProgress_imagemagick + loadProgress_ffmpeg) * 50)}%`}
+				/>
 			)}
 		</>
 	);
 }
 
-const LoadingScreen = () => (
+const LoadingScreen = ({ progress }) => (
 	<main className="flex flex-col justify-center items-center p-8 w-full h-screen text-white">
 		<p className="top-8 absolute mx-8 max-w-xl font-bold text-4xl text-center ginto">
 			Discord
 			<br />
 			<span className="capitalize ginto">Fake Avatar Decorations</span>
 		</p>
-		<LoadingCircle className="mb-4 w-10 h-10" />
-		<p>Loading...</p>
+
+		<div className="relative bg-surface-higher rounded-full w-[calc(100vw-3rem)] max-w-84 h-8 overflow-clip">
+			<div
+				style={{
+					width: progress,
+				}}
+				className="bg-primary h-full"
+			/>
+			<div className="top-0 right-0 bottom-0 left-0 absolute flex justify-center items-center">
+				<p className="text-xl text-center ginto">{progress}</p>
+			</div>
+		</div>
 	</main>
 );
 
