@@ -3505,6 +3505,11 @@ export const decorationsData = [
 						d: "Exclusive to CALL OF DUTY: MOBILE Quest for a limited time. Available to use until September 25, 2025.",
 						f: "call_of_duty_mobile",
 					},
+					{
+						n: "Sweet Tooth",
+						d: "Exclusive to Twisted Metal S2 Quest for a limited time. Available to use until October 6, 2025.",
+						f: "sweet_tooth",
+					},
 				],
 			},
 			{
