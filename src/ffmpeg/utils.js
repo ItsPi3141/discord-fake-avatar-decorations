@@ -1,4 +1,4 @@
-import { printErr } from "@/app/print";
+import { printErr } from "@/utils/print";
 import { fetchFile } from "@ffmpeg/util";
 import { ImageMagick, MagickFormat } from "@imagemagick/magick-wasm";
 import parseAPNG from "apng-js";

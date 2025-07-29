@@ -1,26 +1,15 @@
-# Discord Fake Avatar Decorations
-![Next JS](https://img.shields.io/badge/Next-black?style=for-the-badge&logo=next.js&logoColor=white)
+# `create-preact`
+
+<h2 align="center">
+  <img height="256" width="256" src="./src/assets/preact.svg">
+</h2>
+
+<h3 align="center">Get started using Preact and Vite!</h3>
 
 ## Getting Started
 
-First, run the development server:
+-   `npm run dev` - Starts a dev server at http://localhost:5173/
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+-   `npm run build` - Builds for production, emitting to `dist/`. Prerenders all found routes in app to static HTML
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-## Contributing
-
-If you have a bug report, open an issue. Try to include as much detail as possible. If applicable, include screenshots of the browser console. Please do NOT just say "it doesn't work". 
-
-Put feature suggestions in [this discussion](https://github.com/ItsPi3141/discord-fake-avatar-decorations/discussions/4).
-
-If you want an avatar decoration to be added, make pull request. If you don't know how, then open an issue and attach the asset files. Note that they must be an official avatar decoration made by Discord (e.g. decorations from past years).
+-   `npm run preview` - Starts a server at http://localhost:4173/ to test production build locally

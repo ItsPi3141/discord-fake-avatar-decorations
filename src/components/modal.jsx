@@ -1,4 +1,5 @@
 import { Icons } from "./icons";
+import "./modal.css";
 
 export default function Modal(props) {
 	return (

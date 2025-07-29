@@ -1,12 +1,10 @@
 {
-	"name": "discord-fake-avatar-deco",
-	"version": "0.1.0",
 	"private": true,
+	"type": "module",
 	"scripts": {
-		"dev": "next dev",
-		"build": "next build",
-		"start": "next start",
-		"lint": "next lint"
+		"dev": "vite",
+		"build": "vite build",
+		"preview": "vite preview"
 	},
 	"dependencies": {
 		"@discordapp/twemoji": "^16.0.1",
@@ -14,20 +12,17 @@
 		"@ffmpeg/util": "0.12.2",
 		"@giscus/react": "^3.1.0",
 		"@imagemagick/magick-wasm": "0.0.35",
+		"@tailwindcss/vite": "^4.1.11",
 		"apng-js": "^1.1.5",
-		"next": "^15.4.3",
-		"react": "19.1.0",
-		"react-dom": "19.1.0",
-		"react-tooltip": "^5.29.1",
-		"sass": "^1.89.2"
+		"preact": "^10.27.0",
+		"preact-iso": "^2.9.2",
+		"preact-render-to-string": "^6.5.13",
+		"tailwindcss": "^4.1.11",
+		"vite-plugin-meta-tags": "^0.1.4"
 	},
 	"devDependencies": {
-		"@tailwindcss/postcss": "^4.1.11",
-		"postcss": "^8.5.6",
-		"tailwindcss": "^4.1.11"
+		"@preact/preset-vite": "^2.10.2",
+		"vite": "^6.3.5"
 	},
-	"trustedDependencies": [
-		"@parcel/watcher",
-		"@tailwindcss/oxide"
-	]
+	"packageManager": "yarn@4.9.2"
 }

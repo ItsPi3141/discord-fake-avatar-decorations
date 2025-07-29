@@ -1,6 +1,6 @@
 // https://gist.github.com/chibicode/fe195d792270910226c928b69a468206
-import React, { memo } from "react";
 import twemoji from "@discordapp/twemoji";
+import "./twemoji.css";
 
 const Twemoji = ({ emoji }) => (
 	<span
@@ -13,4 +13,4 @@ const Twemoji = ({ emoji }) => (
 	/>
 );
 
-export default memo(Twemoji);
+export default Twemoji;

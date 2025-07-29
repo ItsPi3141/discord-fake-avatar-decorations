@@ -1,4 +1,4 @@
-const baseImgUrl = process.env.NEXT_PUBLIC_BASE_IMAGE_URL || "";
+const baseImgUrl = import.meta.env.VITE_BASE_IMAGE_URL || "";
 
 export default function Image(props) {
 	return (

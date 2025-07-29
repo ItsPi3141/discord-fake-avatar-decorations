@@ -1,5 +1,3 @@
-"use client";
-
 import { Component } from "react";
 
 export class Utils extends Component {

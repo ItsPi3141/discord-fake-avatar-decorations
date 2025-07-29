@@ -1,0 +1,312 @@
+@import "tailwindcss";
+@import "./fonts.css";
+
+@theme {
+	--breakpoint-xs: 440px;
+	--breakpoint-sm: 540px;
+	--breakpoint-md: 900px;
+
+	--color-primary: hsl(234.935, 85.556%, 64.706%);
+	--color-success: #44a25b;
+	--color-warning: #b98037;
+	--color-critical: #d83a42;
+
+	--color-base-low: hsl(240, 5.769%, 20.392%);
+	--color-base-lower: hsl(240, 5.263%, 18.627%);
+	--color-base-lowest: hsl(240, 5.882%, 16.667%);
+
+	--color-surface-overlay: hsl(240, 5.263%, 7.451%);
+	--color-surface-high: hsl(240, 5.263%, 22.353%);
+	--color-surface-higher: hsl(240, 5.691%, 24.118%);
+	--color-surface-highest: hsl(240, 5.263%, 26.078%);
+
+	--color-border-normal: hsla(240, 4%, 60.784%, 0.2);
+	--color-border-light: hsla(240, 4%, 60.784%, 0.1);
+	--color-border-faint: hsla(240, 4%, 60.784%, 0.0392156862745098);
+	--color-border-strong: hsla(240, 4%, 60.784%, 0.4392156862745098);
+
+	--color-icon: hsl(0, 0%, 98.431%);
+	--color-icon-tertiary: hsl(240, 4.294%, 68.039%);
+
+	--color-text: hsl(240, 3.226%, 93.922%);
+	--color-text-muted: hsl(240, 4.294%, 68.039%);
+	--color-text-link: hsl(213.659, 83.673%, 71.176%);
+	--color-text-primary: hsl(0, 0%, 100%);
+	--color-text-secondary: hsl(240, 3.571%, 78.039%);
+	--color-text-positive: hsl(130.769, 37.143%, 58.824%);
+	--color-text-warning: hsl(33.143, 54.404%, 62.157%);
+	--color-text-critical: hsl(0, 100%, 93.725%);
+
+	--color-button-primary-background: hsl(234.935, 85.556%, 64.706%);
+	--color-button-primary-hover: hsl(233.445, 47.791%, 51.176%);
+	--color-button-primary-active: hsl(232.121, 45.205%, 42.941%);
+	--color-button-primary-border: hsla(0, 0%, 100%, 0.1);
+
+	--color-button-secondary-background: hsla(
+		240,
+		4%,
+		60.784%,
+		0.12156862745098039
+	);
+	--color-button-secondary-hover: hsla(240, 4%, 60.784%, 0.2);
+	--color-button-secondary-active: hsla(240, 5.882%, 33.333%, 0.3);
+	--color-button-secondary-border: hsla(240, 4%, 60.784%, 0.0392156862745098);
+}
+
+@layer base {
+	html {
+		overflow: hidden;
+		height: 100vh;
+		height: 100dvh;
+	}
+  body {
+    padding: 0;
+  }
+	button {
+		@apply cursor-pointer;
+	}
+}
+
+@layer components {
+	/* BUTTONS */
+	.button-primary {
+		@apply bg-button-primary-background hover:bg-button-primary-hover active:bg-button-primary-active border-button-primary-border rounded-lg transition;
+	}
+	.button-secondary {
+		@apply bg-button-secondary-background hover:bg-button-secondary-hover active:bg-button-secondary-active border border-button-secondary-border rounded-lg transition;
+	}
+	.button-tile {
+		@apply bg-base-lowest p-2 border-2 border-transparent rounded-[5px] outline-none w-full aspect-square transition-colors;
+	}
+	.button-outline {
+		@apply border border-button-secondary-background rounded-lg transition;
+	}
+
+	/* INPUTS */
+	.text-input {
+		@apply bg-base-lowest px-2.5 py-2 border border-border-light rounded-lg outline-none;
+	}
+}
+
+* {
+	font-family: "gg sans", sans-serif;
+}
+@utility ginto {
+	font-family: "ABC Ginto Nord";
+	letter-spacing: 1px;
+}
+.ginto {
+	@apply ginto;
+}
+.nitro-font {
+	font-family: "Urfa", sans-serif;
+}
+
+*::selection {
+	background: #5865f2;
+	color: white;
+}
+
+#profile-preview hr {
+	outline: none;
+	border: none;
+	border-bottom: 1px solid #313338;
+	margin: 12px 0;
+}
+
+#settings hr {
+	outline: none;
+	margin: 24px 0;
+}
+
+/* DISCORD STYLE SCROLLBAR */
+/* Chromium */
+.discord-scrollbar::-webkit-scrollbar,
+body::-webkit-scrollbar {
+	width: 16px;
+}
+.discord-scrollbar::-webkit-scrollbar-track,
+body::-webkit-scrollbar-track {
+	background: #27272c;
+	border-radius: 99px;
+	border: solid 4.5px transparent;
+	background-clip: content-box;
+}
+.discord-scrollbar::-webkit-scrollbar-thumb,
+body::-webkit-scrollbar-thumb {
+	background: #71717a;
+	border-radius: 99px;
+	min-height: 30px;
+	border: solid 4.5px transparent;
+	background-clip: content-box !important;
+}
+/* Firefox */
+@-moz-document url-prefix() {
+	body,
+	.discord-scrollbar {
+		scrollbar-track-color: #27272c;
+		scrollbar-face-color: #71717a;
+		scrollbar-color: #71717a #27272c;
+		scrollbar-gutter: stable;
+		padding-right: 16px;
+	}
+}
+
+body:has([nice]) {
+	pointer-events: none;
+	white-space: pre;
+
+	& > * {
+		display: none;
+	}
+
+	&::before {
+		@apply top-0 right-0 bottom-0 left-0 z-50 fixed flex justify-center items-center bg-base-lower mb-14 text-white text-6xl ginto;
+		content: "418";
+	}
+	&::after {
+		@apply top-0 right-0 bottom-0 left-0 z-50 fixed flex justify-center items-center mt-14 text-white text-center;
+		content: "An unexpected error has occurred.\APlease consult your teapot administrator or open a GitHub issue.";
+	}
+}
+
+/* LOADING SPINNER */
+.loading-cube-container {
+	position: relative;
+	display: block;
+	width: 32px;
+	height: 32px;
+	contain: paint;
+}
+.loading-cube {
+	background-color: #5865f2;
+	width: 10px;
+	height: 10px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	-webkit-animation: loading-cube-anim 1.8s ease-in-out infinite;
+	animation: loading-cube-anim 1.8s ease-in-out infinite;
+}
+.loading-cube:last-child {
+	-webkit-animation-delay: -0.9s;
+	animation-delay: -0.9s;
+}
+@keyframes loading-cube-anim {
+	25% {
+		transform: translateX(22px) rotate(-90deg) scale(0.5);
+	}
+	50% {
+		transform: translateX(22px) translateY(22px) rotate(-180deg);
+	}
+	75% {
+		transform: translateX(0) translateY(22px) rotate(-270deg) scale(0.5);
+	}
+	to {
+		transform: rotate(-1turn);
+	}
+}
+
+.loading-circle-container {
+	min-width: 32px;
+	min-height: 32px;
+}
+.loading-circle-inner {
+	transform: rotate(280deg);
+}
+.loading-circle {
+	width: 100%;
+	height: 100%;
+	animation: loading-circle-anim 2s linear infinite;
+}
+.path {
+	animation: loading-circle-dash-anim 2s ease-in-out infinite;
+	stroke-dasharray: 1, 200;
+	stroke-dashoffset: 0;
+	fill: none;
+	stroke-width: 6;
+	stroke-miterlimit: 10;
+	stroke-linecap: round;
+	stroke: #5865f2;
+}
+.path2 {
+	animation-delay: 0.15s;
+	stroke: #778bf8;
+	opacity: 0.6;
+}
+.path3 {
+	animation-delay: 0.23s;
+	stroke: #778bf8;
+}
+@keyframes loading-circle-anim {
+	to {
+		transform: rotate(360deg);
+	}
+}
+@keyframes loading-circle-dash-anim {
+	0% {
+		stroke-dasharray: 1, 200;
+		stroke-dashoffset: 0;
+	}
+	50% {
+		stroke-dasharray: 130, 200;
+	}
+	to {
+		stroke-dasharray: 130, 200;
+		stroke-dashoffset: -124;
+	}
+}
+
+/* SHINY BUTTON */
+@keyframes button-shine {
+	0% {
+		left: -50%;
+	}
+	50% {
+		left: 125%;
+	}
+	100% {
+		left: 125%;
+	}
+}
+.shiny-button {
+	position: relative;
+	overflow: hidden;
+}
+.shiny-button::after {
+	content: "";
+	width: 10px;
+	height: 100px;
+	position: absolute;
+	top: 50%;
+	left: 0;
+	transform: rotate(30deg) translate3d(0, -50%, 0);
+	background-color: rgba(255, 255, 255, 0.2);
+	outline: 10px solid rgba(255, 255, 255, 0.1);
+	animation: button-shine 2s ease-in-out infinite;
+}
+
+/* HIGHLIGHT */
+.highlight {
+	border: #b945c1 solid 1px;
+	background: linear-gradient(90deg, #b473f52b 0%, #e292aa2b 100%);
+}
+
+/* LINK */
+a.link {
+	@apply text-text-link hover:underline;
+}
+
+/* CUSTOM BACKGROUNDS */
+.glow-bg {
+	background: radial-gradient(
+			100% 100% at 50% 100%,
+			color-mix(in oklab, rgb(32, 32, 36) 100%, rgb(0, 0, 0)) 60%,
+			rgba(0, 0, 0, 0) 100%
+		),
+		linear-gradient(
+			270deg,
+			rgba(22, 26, 138, 0.3) 0px,
+			rgba(88, 101, 242, 0.3) 100%
+		);
+}

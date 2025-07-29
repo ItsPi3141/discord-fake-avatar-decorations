@@ -2,20 +2,19 @@
 
 import { useCallback, useEffect, useRef, useState } from "react";
 
-import FileUpload from "../components/fileupload.jsx";
-import { Icons } from "../components/icons.jsx";
-import Image from "../components/image.jsx";
-import { LoadingCircle } from "../components/spinner.jsx";
+import FileUpload from "@/components/fileupload.jsx";
+import { Icons } from "@/components/icons.jsx";
+import Image from "@/components/image.jsx";
 
 import { FFmpeg } from "@ffmpeg/ffmpeg";
 import { toBlobURL } from "@ffmpeg/util";
 import { imagesFromGif } from "@/ffmpeg/extractFrames.js";
 import { getMimeTypeFromArrayBuffer } from "@/ffmpeg/utils.js";
 
-import { printMsg } from "../print.js";
-import { clearData, getData } from "../utils/dataHandler.js";
-import { ffmpegTotalBytes } from "../data/fileSizes.js";
-import { downloadWithProgress } from "../utils/download.js";
+import { printMsg } from "@/utils/print.js";
+import { clearData, getData } from "@/utils/dataHandler.js";
+import { ffmpegTotalBytes } from "@/data/fileSizes.js";
+import { downloadWithProgress } from "@/utils/download.js";
 
 export default function GifExtractor() {
 	const isServer = typeof window === "undefined";
