@@ -3510,6 +3510,11 @@ export const decorationsData = [
 						d: "Exclusive to Twisted Metal S2 Quest for a limited time. Available to use until October 6, 2025.",
 						f: "sweet_tooth",
 					},
+					{
+						n: "Chomp Chomp",
+						d: "Exclusive to SUPERVIVE 1.0 Quest for a limited time. Available to use until October 9, 2025.",
+						f: "chomp_chomp",
+					},
 				],
 			},
 			{
