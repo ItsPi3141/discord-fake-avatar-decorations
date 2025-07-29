@@ -12,7 +12,7 @@ import { imagesFromGif } from "@/ffmpeg/extractFrames.js";
 import { getMimeTypeFromArrayBuffer } from "@/ffmpeg/utils.js";
 
 import { printErr, printMsg } from "@/utils/print.js";
-import { clearData, getData } from "@/utils/dataHandler.js";
+import { clearData, getData, storeData } from "@/utils/dataHandler.js";
 import { ffmpegTotalBytes } from "@/data/fileSizes.js";
 import { downloadWithProgress } from "@/utils/download.js";
 
@@ -21,41 +21,47 @@ const isServer = typeof window === "undefined";
 export default function GifExtractor() {
 	const [loaded, setLoaded] = useState(false);
 	const [loadPercentage, setLoadPercentage] = useState("0%");
-	const ffmpegRef = useRef(isServer ? null : new FFmpeg());
+	const transferredFfmpeg = getData("ffmpeg");
+	const ffmpegRef = useRef(isServer ? null : transferredFfmpeg || new FFmpeg());
 
 	const load = useCallback(async () => {
 		if (isServer) return;
-		const baseURL = "https://unpkg.com/@ffmpeg/core@0.12.6/dist/esm/";
-		const ffmpeg = ffmpegRef.current;
 
-		await ffmpeg.load({
-			coreURL: await toBlobURL(`${baseURL}ffmpeg-core.js`, "text/javascript"),
-			wasmURL: URL.createObjectURL(
-				new Blob(
-					[
-						await downloadWithProgress(`${baseURL}ffmpeg-core.wasm`, (e) => {
-							setLoadPercentage(
-								`${Math.round((e.received / ffmpegTotalBytes) * 100)}%`,
-							);
-						}),
-					],
-					{ type: "application/wasm" },
+		if (!transferredFfmpeg) {
+			const baseURL = "https://unpkg.com/@ffmpeg/core@0.12.6/dist/esm/";
+			const ffmpeg = ffmpegRef.current;
+
+			await ffmpeg.load({
+				coreURL: await toBlobURL(`${baseURL}ffmpeg-core.js`, "text/javascript"),
+				wasmURL: URL.createObjectURL(
+					new Blob(
+						[
+							await downloadWithProgress(`${baseURL}ffmpeg-core.wasm`, (e) => {
+								setLoadPercentage(
+									`${Math.round((e.received / ffmpegTotalBytes) * 100)}%`,
+								);
+							}),
+						],
+						{ type: "application/wasm" },
+					),
 				),
-			),
-		});
-		ffmpeg.on("log", (e) =>
-			printMsg(
-				["ffmpeg", e.message],
-				[
-					{
-						color: "white",
-						background: "#5765f2",
-						padding: "2px 8px",
-						borderRadius: "10px",
-					},
-				],
-			),
-		);
+			});
+			ffmpeg.on("log", (e) =>
+				printMsg(
+					["ffmpeg", e.message],
+					[
+						{
+							color: "white",
+							background: "#5765f2",
+							padding: "2px 8px",
+							borderRadius: "10px",
+						},
+					],
+				),
+			);
+			storeData("ffmpeg", ffmpeg);
+		}
+
 		setLoaded(true);
 
 		if (!isServer) {

@@ -1,6 +1,4 @@
-"use client";
-
-import { useState } from "react";
+import { useState } from "preact/hooks";
 import { Icons } from "./icons";
 
 export default function SearchBar({ onValueChanged, placeholder }) {

@@ -1,4 +1,4 @@
-import { Component } from "react";
+import { Component } from "preact";
 
 export class Utils extends Component {
 	componentDidMount() {

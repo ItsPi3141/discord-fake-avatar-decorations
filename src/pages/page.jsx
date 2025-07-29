@@ -15,7 +15,7 @@ import { addDecoration, cropToSquare } from "@/ffmpeg/processImage.js";
 import { getMimeTypeFromArrayBuffer } from "@/ffmpeg/utils.js";
 
 import { printMsg, printErr } from "@/utils/print.js";
-import { storeData } from "@/utils/dataHandler.js";
+import { getData, storeData } from "@/utils/dataHandler.js";
 
 import { decorationsData } from "@/data/decorations.js";
 import { avatarsData } from "@/data/avatars.js";
@@ -39,7 +39,9 @@ export default function Home() {
 	const [loaded, setLoaded] = useState(false);
 	const [loadProgress_ffmpeg, setLoadProgress_ffmpeg] = useState(0);
 	const [loadProgress_imagemagick, setLoadProgress_imagemagick] = useState(0);
-	const ffmpegRef = useRef(isServer ? null : new FFmpeg());
+
+	const transferredFfmpeg = getData("ffmpeg");
+	const ffmpegRef = useRef(isServer ? null : transferredFfmpeg || new FFmpeg());
 
 	const load = useCallback(async () => {
 		if (isServer) return;
@@ -85,6 +87,7 @@ export default function Home() {
 							],
 						),
 					);
+					storeData("ffmpeg", ffmpeg);
 					r();
 				})();
 			}),
