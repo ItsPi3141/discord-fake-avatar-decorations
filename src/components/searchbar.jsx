@@ -14,7 +14,9 @@ export default function SearchBar({ onValueChanged, placeholder }) {
 				placeholder={placeholder}
 				value={query}
 				onChange={(e) => {
+					// @ts-ignore
 					setQuery(e.target.value);
+					// @ts-ignore
 					onValueChanged(e.target.value);
 				}}
 			/>

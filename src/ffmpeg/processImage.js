@@ -51,6 +51,7 @@ export function cropToSquare(
 				const res = await ffmpeg.readFile("avatarpreviewcropped.gif");
 				const reader = new FileReader();
 				reader.readAsDataURL(
+					// @ts-ignore
 					new Blob([new Uint8Array(res.buffer, res.byteOffset, res.length)], {
 						type: type,
 					}),
@@ -123,6 +124,7 @@ export function addDecoration(
 						.catch((err) => console.error(err));
 					const reader = new FileReader();
 					reader.readAsDataURL(
+						// @ts-ignore
 						new Blob([new Uint8Array(res.buffer, res.byteOffset, res.length)], {
 							type: "image/gif",
 						}),
@@ -234,6 +236,7 @@ export function addDecoration(
 						const reader = new FileReader();
 						reader.readAsDataURL(
 							new Blob(
+								// @ts-ignore
 								[new Uint8Array(res.buffer, res.byteOffset, res.length)],
 								{
 									type: "image/gif",
@@ -304,6 +307,7 @@ export function addDecoration(
 						const reader = new FileReader();
 						reader.readAsDataURL(
 							new Blob(
+								// @ts-ignore
 								[new Uint8Array(res.buffer, res.byteOffset, res.length)],
 								{
 									type: "image/gif",

@@ -159,6 +159,7 @@ const LoadingScreen = ({ progress }) => (
 );
 
 const App = ({ ffmpegRef, isServer }) => {
+	// @ts-ignore
 	const previewAvatar = useCallback(async (url) => {
 		if (isServer) return;
 		setAvUrl("loading");
@@ -169,6 +170,7 @@ const App = ({ ffmpegRef, isServer }) => {
 		setAvUrl(res);
 	});
 
+	// @ts-ignore
 	const createAvatar = useCallback(async (url, deco) => {
 		if (isServer) return;
 		addDecoration(
@@ -202,6 +204,7 @@ const App = ({ ffmpegRef, isServer }) => {
 	const [isGeneratingAv, setIsGeneratingAv] = useState(false);
 	const [generationFailed, setGenerationFailed] = useState(false);
 	const [downloadModalVisible, setDownloadModalVisible] = useState(false);
+	// @ts-ignore
 	const [shared, setShared] = useState(false);
 	const [fileTooBig, setFileTooBig] = useState(false);
 
@@ -210,6 +213,7 @@ const App = ({ ffmpegRef, isServer }) => {
 
 	const router = useLocation();
 
+	// @ts-ignore
 	const getBannerImage = useCallback(() => {
 		switch (new Date().getMonth() + 1) {
 			case 2:
@@ -263,6 +267,7 @@ const App = ({ ffmpegRef, isServer }) => {
 									className="hidden"
 									accept="image/png, image/jpeg, image/gif, image/webp"
 									onChange={(e) => {
+										// @ts-ignore
 										const [file] = e.target.files;
 										if (file) {
 											const reader = new FileReader();
@@ -282,6 +287,7 @@ const App = ({ ffmpegRef, isServer }) => {
 								placeholder="Enter image URL..."
 								onChange={async (e) => {
 									setAvatarName("");
+									// @ts-ignore
 									const res = await fetch(e.target.value);
 									if (res.status < 200 || res.status >= 400)
 										return setAvUrl(null);
@@ -577,6 +583,7 @@ const App = ({ ffmpegRef, isServer }) => {
 								className="flex justify-start items-center gap-2 mt-3 p-2 button-outline"
 								href={"/gif-extractor"}
 								target="_blank"
+								rel="noreferrer"
 							>
 								<span className="place-items-center w-6">
 									<Icons.gif size="18px" />
@@ -593,6 +600,7 @@ const App = ({ ffmpegRef, isServer }) => {
 									"https://github.com/ItsPi3141/discord-fake-avatar-decorations"
 								}
 								target="_blank"
+								rel="noreferrer"
 							>
 								<span className="place-items-center w-6">
 									<Icons.github size="24px" />
@@ -612,6 +620,7 @@ const App = ({ ffmpegRef, isServer }) => {
 						href={"https://github.com/ItsPi3141"}
 						className="link"
 						target="_blank"
+						rel="noreferrer"
 					>
 						ItsPi3141
 					</a>
@@ -623,6 +632,7 @@ const App = ({ ffmpegRef, isServer }) => {
 						}
 						className="link"
 						target="_blank"
+						rel="noreferrer"
 					>
 						source code
 					</a>{" "}
@@ -639,6 +649,7 @@ const App = ({ ffmpegRef, isServer }) => {
 						}
 						className="link"
 						target="_blank"
+						rel="noreferrer"
 					>
 						Figma
 					</a>
@@ -808,6 +819,7 @@ const AvatarList = ({ avatarsData, avatarSearch, setAvatarName, setAvUrl }) => {
 									)) {
 										el.classList.remove("border-primary");
 									}
+									// @ts-ignore
 									e.target.classList.add("border-primary");
 								}}
 							>
@@ -1050,31 +1062,38 @@ const DecorationsList = ({
 							<DecorationsCategoryBanner category={category} />
 
 							<div className="gap-3 grid grid-cols-3 xs:grid-cols-4 sm:grid-cols-5 min-[600px]:grid-cols-6 min-[720px]:grid-cols-7 md:grid-cols-5">
-								{category.i.map((decor, index) => {
-									return (
-										<button
-											key={decor.n}
-											type="button"
-											className="button-tile decor"
-											onClick={(e) => {
-												setName(decor.n);
-												setDescription(decor.d);
-												setDecoUrl(`/decorations/${decor.f}.png`);
-												for (const el of document.querySelectorAll(
-													"button.decor.border-primary",
-												)) {
-													el.classList.remove("border-primary");
-												}
-												e.target.classList.add("border-primary");
-											}}
-										>
-											<Image
-												src={`/decorations/${decor.f}.png`}
-												className="pointer-events-none"
-											/>
-										</button>
-									);
-								})}
+								{category.i.map(
+									(
+										decor,
+										// @ts-ignore
+										index,
+									) => {
+										return (
+											<button
+												key={decor.n}
+												type="button"
+												className="button-tile decor"
+												onClick={(e) => {
+													setName(decor.n);
+													setDescription(decor.d);
+													setDecoUrl(`/decorations/${decor.f}.png`);
+													for (const el of document.querySelectorAll(
+														"button.decor.border-primary",
+													)) {
+														el.classList.remove("border-primary");
+													}
+													// @ts-ignore
+													e.target.classList.add("border-primary");
+												}}
+											>
+												<Image
+													src={`/decorations/${decor.f}.png`}
+													className="pointer-events-none"
+												/>
+											</button>
+										);
+									},
+								)}
 							</div>
 						</div>
 					);

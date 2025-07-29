@@ -4,6 +4,7 @@ import "./twemoji.css";
 
 const Twemoji = ({ emoji }) => (
 	<span
+		// biome-ignore lint/security/noDangerouslySetInnerHtml: <explanation>
 		dangerouslySetInnerHTML={{
 			__html: twemoji.parse(emoji, {
 				folder: "svg",

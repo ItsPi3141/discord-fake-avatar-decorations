@@ -11,21 +11,21 @@ import { toBlobURL } from "@ffmpeg/util";
 import { imagesFromGif } from "@/ffmpeg/extractFrames.js";
 import { getMimeTypeFromArrayBuffer } from "@/ffmpeg/utils.js";
 
-import { printMsg } from "@/utils/print.js";
+import { printErr, printMsg } from "@/utils/print.js";
 import { clearData, getData } from "@/utils/dataHandler.js";
 import { ffmpegTotalBytes } from "@/data/fileSizes.js";
 import { downloadWithProgress } from "@/utils/download.js";
 
-export default function GifExtractor() {
-	const isServer = typeof window === "undefined";
+const isServer = typeof window === "undefined";
 
+export default function GifExtractor() {
 	const [loaded, setLoaded] = useState(false);
 	const [loadPercentage, setLoadPercentage] = useState("0%");
 	const ffmpegRef = useRef(isServer ? null : new FFmpeg());
 
 	const load = useCallback(async () => {
 		if (isServer) return;
-		const baseURL = "https://unpkg.com/@ffmpeg/core@0.12.6/dist/umd/";
+		const baseURL = "https://unpkg.com/@ffmpeg/core@0.12.6/dist/esm/";
 		const ffmpeg = ffmpegRef.current;
 
 		await ffmpeg.load({
@@ -63,7 +63,7 @@ export default function GifExtractor() {
 			if (i) setFile(i);
 			clearData("image");
 		}
-	});
+	}, []);
 
 	const [t, setT] = useState(false);
 	useEffect(() => {
@@ -97,6 +97,7 @@ export default function GifExtractor() {
 										className="hidden"
 										accept="image/png, image/gif, image/webp"
 										onChange={(e) => {
+											// @ts-ignore
 											const [file] = e.target.files;
 											if (file) {
 												const reader = new FileReader();
@@ -161,7 +162,7 @@ export default function GifExtractor() {
 													alt=""
 													src={`data:image/png;base64,${frame}`}
 													className="rounded"
-													draggable="false"
+													draggable={false}
 												/>
 											</button>
 										))}

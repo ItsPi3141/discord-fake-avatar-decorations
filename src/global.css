@@ -59,9 +59,9 @@
 		height: 100vh;
 		height: 100dvh;
 	}
-  body {
-    padding: 0;
-  }
+	body {
+		padding: 0;
+	}
 	button {
 		@apply cursor-pointer;
 	}
@@ -76,7 +76,7 @@
 		@apply bg-button-secondary-background hover:bg-button-secondary-hover active:bg-button-secondary-active border border-button-secondary-border rounded-lg transition;
 	}
 	.button-tile {
-		@apply bg-base-lowest p-2 border-2 border-transparent rounded-[5px] outline-none w-full aspect-square transition-colors;
+		@apply bg-base-lowest p-2 border-2 border-transparent rounded-[5px] outline-none w-full aspect-square;
 	}
 	.button-outline {
 		@apply border border-button-secondary-background rounded-lg transition;
@@ -92,7 +92,7 @@
 	font-family: "gg sans", sans-serif;
 }
 @utility ginto {
-	font-family: "ABC Ginto Nord";
+	font-family: "ABC Ginto Nord", sans-serif;
 	letter-spacing: 1px;
 }
 .ginto {
@@ -141,7 +141,7 @@ body::-webkit-scrollbar-thumb {
 	background-clip: content-box !important;
 }
 /* Firefox */
-@-moz-document url-prefix() {
+@-moz-document url-prefix("") {
 	body,
 	.discord-scrollbar {
 		scrollbar-track-color: #27272c;

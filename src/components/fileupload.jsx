@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import "./fileupload.css";
 
-let closeInter = 0;
+let closeInter;
 export default function FileUpload({ onUpload }) {
 	const [visible, setVisible] = useState(false);
 	const [error, setError] = useState(false);

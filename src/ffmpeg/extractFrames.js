@@ -50,6 +50,7 @@ export function imagesFromGif(
 				frames = await Promise.all(
 					frames.map(async (f) => {
 						const res = await ffmpeg.readFile(`extract/${f}`);
+						// @ts-ignore
 						return arraybuffer2base64(res.buffer);
 					}),
 				);

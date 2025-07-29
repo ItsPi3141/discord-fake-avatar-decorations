@@ -4,29 +4,18 @@ import "./modal.css";
 export default function Modal(props) {
 	return (
 		<div
-			className="top-0 left-0 z-50 fixed flex justify-center items-center bg-black/80 w-screen h-screen select-none"
-			style={{
-				transition: "opacity 0.2s ease-in-out",
-				opacity: props.visible ? 1 : 0,
-				pointerEvents: props.visible ? "" : "none",
-			}}
+			className={`top-0 left-0 z-50 fixed flex justify-center items-center bg-black/80 w-screen h-screen select-none modal-container ${props.visible ? "modal-visible" : ""}`}
 		>
-			<div
-				className="bg-surface-high shadow-base-lower/60 shadow-sm border border-[#97979f1f] xs:rounded-xl w-screen xs:w-[420px] min-h-screen xs:min-h-[200px] overflow-hidden text-white modal-box"
-				style={{
-					transition: "scale 0.2s ease-in-out",
-					scale: props.visible ? 1 : 0.5,
-				}}
-			>
+			<div className="flex flex-col items-stretch bg-surface-high shadow-base-lower/60 shadow-sm border border-[#97979f1f] xs:rounded-xl w-screen xs:w-[420px] min-h-screen xs:min-h-[200px] overflow-hidden text-white modal-box">
 				<div
-					className={`p-4 relative flex flex-col gap-4 ${props.glow ? "glow-bg" : ""}`}
+					className={`p-4 relative flex flex-col grow gap-4 ${props.glow ? "glow-bg" : ""}`}
 				>
 					<button
 						type="button"
 						className="top-4 right-4 absolute opacity-50 hover:opacity-100 text-icon-tertiary transition-opacity [transition-duration:200ms]"
 						onClick={props.onClose}
 					>
-						<Icons.close width="24px" height="24px" />
+						<Icons.close size="24px" />
 					</button>
 					<div className="flex flex-col gap-2">
 						{props.title && (
@@ -44,9 +33,8 @@ export default function Modal(props) {
 							</div>
 						)}
 					</div>
-					<div className="flex flex-col justify-stretch grow">
-						{props.children}
-					</div>
+					<div className="flex flex-col justify-stretch">{props.children}</div>
+					<div class="modal-spacer" />
 					<div className="flex justify-end bg-surface-high mt-4 h-[38px]">
 						{props.secondaryText && (
 							<button

@@ -94,7 +94,6 @@ export const Icons = {
 					fill="currentColor"
 					fillRule="evenodd"
 				/>
-				<script xmlns="" />
 			</svg>
 		);
 	},

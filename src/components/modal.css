@@ -1,11 +1,25 @@
+.modal-container {
+	pointer-events: none;
+	opacity: 0;
+	transition: opacity 0.2s ease-in-out;
+}
+.modal-container.modal-visible {
+	pointer-events: initial;
+	opacity: 1;
+}
+.modal-box {
+	transition: transform 0.2s ease-in-out;
+}
 @media screen and (max-width: 440px) {
-	.modal-box {
-		scale: 1 !important;
-		transform-origin: bottom;
+	.modal-spacer {
+		flex-grow: 1;
 	}
 }
 @media screen and (min-width: 440px) {
 	.modal-box {
-		transform: translateY(0) !important;
+		transform: scale(0.5);
+	}
+	.modal-visible .modal-box {
+		transform: scale(1);
 	}
 }
