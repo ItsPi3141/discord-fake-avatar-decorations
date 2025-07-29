@@ -228,6 +228,14 @@ const App = ({ ffmpegRef, isServer }) => {
 		}
 	});
 
+	const clearSelectedAvatar = useCallback(() => {
+		for (const el of document.querySelectorAll(
+			"button.avatar-preset.border-primary",
+		)) {
+			el.classList.remove("border-primary");
+		}
+	}, []);
+
 	return (
 		<>
 			<main className="flex flex-col items-center w-screen h-screen overflow-auto text-white discord-scrollbar">
@@ -277,6 +285,7 @@ const App = ({ ffmpegRef, isServer }) => {
 											reader.readAsDataURL(file);
 											reader.onload = () => {
 												previewAvatar(reader.result);
+												clearSelectedAvatar();
 											};
 										}
 									}}
@@ -308,6 +317,7 @@ const App = ({ ffmpegRef, isServer }) => {
 									reader.readAsDataURL(blob);
 									reader.onload = () => {
 										previewAvatar(reader.result);
+										clearSelectedAvatar();
 									};
 								}}
 							/>
@@ -779,6 +789,7 @@ const App = ({ ffmpegRef, isServer }) => {
 					reader.readAsDataURL(new Blob([ab]));
 					reader.onload = () => {
 						previewAvatar(reader.result);
+						clearSelectedAvatar();
 					};
 				}}
 			/>
