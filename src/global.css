@@ -140,15 +140,17 @@ body::-webkit-scrollbar-thumb {
 	border: solid 4.5px transparent;
 	background-clip: content-box !important;
 }
+.discord-scrollbar {
+	scrollbar-color: #71717a #27272c;
+	scrollbar-gutter: stable;
+	scrollbar-width: thin;
+}
 /* Firefox */
 @-moz-document url-prefix("") {
 	body,
 	.discord-scrollbar {
 		scrollbar-track-color: #27272c;
 		scrollbar-face-color: #71717a;
-		scrollbar-color: #71717a #27272c;
-		scrollbar-gutter: stable;
-		padding-right: 16px;
 	}
 }
 
