@@ -237,14 +237,14 @@ const App = ({ ffmpegRef, isServer }) => {
 	return (
 		<>
 			<main className="flex flex-col items-center w-screen h-screen overflow-auto text-white discord-scrollbar">
-				<div className="relative bg-primary mt-8 sm:p-8 md:p-12 lg:p-16 px-4 py-8 rounded-3xl w-[calc(100%-6rem)] min-h-72 overflow-hidden select-none">
+				<div className="relative bg-primary sm:mt-8 sm:rounded-3xl w-full sm:w-[calc(100%-6rem)] min-h-72 overflow-hidden select-none">
 					<div
 						className="top-0 right-0 bottom-0 left-0 z-0 absolute w-full h-full object-bottom pointer-events-none"
 						style={{
 							background: getBannerImage(),
 						}}
 					/>
-					<div className="top-0 right-0 bottom-0 left-0 z-10 absolute flex flex-col justify-center items-center text-center">
+					<div className="top-0 right-0 bottom-0 left-0 z-10 absolute flex flex-col justify-center items-center p-8 md:p-12 lg:p-16 text-center">
 						<h1 className="font-bold text-3xl md:text-5xl ginto">Discord</h1>
 						<h1 className="mb-4 text-2xl md:text-4xl capitalize ginto">
 							Fake Avatar Decorations
