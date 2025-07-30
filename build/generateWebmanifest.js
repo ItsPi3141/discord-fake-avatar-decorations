@@ -2,7 +2,7 @@ const base = process.env.VITE_BASE_IMAGE_URL || "";
 
 export const generateWebmanifest = () => {
 	return JSON.stringify({
-		name: "Discord Fake Avatar Decorations",
+		name: "Fake Discord Avatar Decorations",
 		short_name: "Discord Decorations",
 		icons: [
 			{
