@@ -3506,6 +3506,11 @@ export const decorationsData = [
 						f: "call_of_duty_mobile",
 					},
 					{
+						n: "The Entity",
+						d: "Exclusive to Dead by Daylight x TWD Quest for a limited time. Available to use until October 4, 2025.",
+						f: "the_entity",
+					},
+					{
 						n: "Sweet Tooth",
 						d: "Exclusive to Twisted Metal S2 Quest for a limited time. Available to use until October 6, 2025.",
 						f: "sweet_tooth",
