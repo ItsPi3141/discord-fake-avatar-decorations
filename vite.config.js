@@ -25,7 +25,7 @@ export default defineConfig({
 		meta({
 			title: "Fake Discord Avatar Decorations",
 			description: "Get Discord avatar decorations for free!",
-			img: `${process.env.NEXT_PUBLIC_BASE_IMAGE_URL || "https://discord-decorations.vercel.app"}/android-chrome-192x192.png`,
+			img: `${process.env.VITE_BASE_IMAGE_URL || "https://discord-decorations.vercel.app"}/android-chrome-192x192.png`,
 		}),
 	],
 	optimizeDeps: {
