@@ -1,7 +1,8 @@
 const base = process.env.VITE_BASE_IMAGE_URL || "";
 
 export const generateMeta = (html, { title, description, image }) => {
-	const metaHtml = `		<title>${title}</title>
+	const metaHtml = `
+		<title>${title}</title>
 		<meta property="og:description" content="${description}">
 		<meta property="og:title" content="${title}">
 		<meta property="og:image" content="${image}">

@@ -50,6 +50,12 @@ export default defineConfig({
 				});
 			},
 		},
+		{
+			name: "minify-html",
+			transformIndexHtml(html) {
+				return html.replace(/[\n\t]/g, "");
+			},
+		},
 	],
 	optimizeDeps: {
 		exclude: ["@ffmpeg/ffmpeg", "@ffmpeg/util"],
