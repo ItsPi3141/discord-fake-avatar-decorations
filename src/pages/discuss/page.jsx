@@ -1,5 +1,3 @@
-"use client";
-
 import { Icons } from "@/components/icons";
 
 import Giscus from "@giscus/react";

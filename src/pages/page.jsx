@@ -1,5 +1,3 @@
-"use client";
-
 import { useCallback, useEffect, useRef, useState } from "preact/hooks";
 
 import FileUpload from "@/components/fileupload.jsx";
