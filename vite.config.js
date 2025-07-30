@@ -2,9 +2,9 @@ import path from "node:path";
 import { defineConfig } from "vite";
 import preact from "@preact/preset-vite";
 import tailwindcss from "@tailwindcss/vite";
-import { meta } from "vite-plugin-meta-tags";
 import { generateWebmanifest } from "./build/generateWebmanifest";
 import { generateFavicons } from "./build/generateFavicons";
+import { generateMeta } from "./build/generateMeta";
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -24,11 +24,6 @@ export default defineConfig({
 			},
 		}),
 		tailwindcss(),
-		meta({
-			title: "Fake Discord Avatar Decorations",
-			description: "Get Discord avatar decorations for free!",
-			img: `${process.env.VITE_BASE_IMAGE_URL || "https://discord-decorations.vercel.app"}/android-chrome-192x192.png`,
-		}),
 		{
 			name: "generate-webmanifest",
 			generateBundle() {
@@ -43,6 +38,16 @@ export default defineConfig({
 			name: "generate-favicons",
 			transformIndexHtml(html) {
 				return generateFavicons(html);
+			},
+		},
+		{
+			name: "generate-meta",
+			transformIndexHtml(html) {
+				return generateMeta(html, {
+					title: "Fake Discord Avatar Decorations",
+					description: "Get Discord avatar decorations for free!",
+					image: `${process.env.VITE_BASE_IMAGE_URL || ""}/android-chrome-192x192.png`,
+				});
 			},
 		},
 	],

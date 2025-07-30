@@ -17,8 +17,7 @@
 		"preact": "^10.27.0",
 		"preact-iso": "^2.9.2",
 		"preact-render-to-string": "^6.5.13",
-		"tailwindcss": "^4.1.11",
-		"vite-plugin-meta-tags": "^0.1.4"
+		"tailwindcss": "^4.1.11"
 	},
 	"devDependencies": {
 		"@preact/preset-vite": "^2.10.2",

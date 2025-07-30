@@ -2286,7 +2286,6 @@ __metadata:
     preact-render-to-string: "npm:^6.5.13"
     tailwindcss: "npm:^4.1.11"
     vite: "npm:^6.3.5"
-    vite-plugin-meta-tags: "npm:^0.1.4"
   languageName: unknown
   linkType: soft
 
@@ -2533,15 +2532,6 @@ __metadata:
   bin:
     update-browserslist-db: cli.js
   checksum: 10c0/682e8ecbf9de474a626f6462aa85927936cdd256fe584c6df2508b0df9f7362c44c957e9970df55dfe44d3623807d26316ea2c7d26b80bb76a16c56c37233c32
-  languageName: node
-  linkType: hard
-
-"vite-plugin-meta-tags@npm:^0.1.4":
-  version: 0.1.4
-  resolution: "vite-plugin-meta-tags@npm:0.1.4"
-  peerDependencies:
-    vite: ">=4.0.0"
-  checksum: 10c0/76f63d300389dc9701a8f46cf7a6057fefb01d0e1fa3d5b700851d3f0be69f253147adcf1b95ea6e90eef5e907757e68dcf236b7ef40eb35d3efadd6330475e6
   languageName: node
   linkType: hard
 
