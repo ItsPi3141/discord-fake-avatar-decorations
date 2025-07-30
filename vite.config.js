@@ -4,6 +4,7 @@ import preact from "@preact/preset-vite";
 import tailwindcss from "@tailwindcss/vite";
 import { meta } from "vite-plugin-meta-tags";
 import { generateWebmanifest } from "./build/generateWebmanifest";
+import { generateFavicons } from "./build/generateFavicons";
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -36,6 +37,12 @@ export default defineConfig({
 					fileName: "site.webmanifest",
 					source: generateWebmanifest(),
 				});
+			},
+		},
+		{
+			name: "generate-favicons",
+			transformIndexHtml(html) {
+				return generateFavicons(html);
 			},
 		},
 	],
