@@ -19,9 +19,7 @@ export default function Discussion() {
 					reactionsEnabled="0"
 					emitMetadata="0"
 					inputPosition="top"
-					theme={
-						"https://itspi3141.github.io/discord-fake-avatar-decorations/public/giscus.css"
-					}
+					theme={`${import.meta.env.VITE_BASE_IMAGE_URL || "https://itspi3141.github.io/discord-fake-avatar-decorations/public"}/giscus.css`}
 					lang="en"
 					loading="lazy"
 				/>
