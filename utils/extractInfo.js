@@ -1,9 +1,9 @@
 function extractInfo(collectibleCategories) {
-	const json = collectibleCategories.map((category) => ({
+	const transformCategory = (category) => ({
 		n: category.name,
 		d: category.summary,
 		b: {
-			i: `${category.name.toLowerCase().replaceAll(" ", "_")}.png`,
+			i: `${category.name.toLowerCase().replaceAll(" ", "_")}.webp`,
 			t: `${category.name.toLowerCase().replaceAll(" ", "_")}.png`,
 			h: 50,
 		},
@@ -35,10 +35,8 @@ function extractInfo(collectibleCategories) {
 						}));
 				}
 			}),
-	}));
-	const createLink = (asset, name) =>
-		`https://cdn.discordapp.com/avatar-decoration-presets/${asset}.png?size=1024&name=${name}.png`;
-	const links = collectibleCategories.map((category) =>
+	});
+	const transformLinks = (category) =>
 		category.products
 			.filter((p) => p.type === 0 || p.type === 2000)
 			.flatMap((p) => {
@@ -67,8 +65,23 @@ function extractInfo(collectibleCategories) {
 						);
 				}
 			})
-			.join("\n"),
-	);
+			.join("\n");
+
+	const createLink = (asset, name) =>
+		`https://cdn.discordapp.com/avatar-decoration-presets/${asset}.png?size=1024&name=${name}.png`;
+
+	let json;
+	let links;
+
+	if (collectibleCategories?.length) {
+		json = collectibleCategories.map(transformCategory);
+		links = collectibleCategories.map(transformLinks);
+	} else if (collectibleCategories.products?.length) {
+		json = transformCategory(collectibleCategories);
+		links = transformLinks(collectibleCategories);
+	} else {
+		throw new Error("Invalid data");
+	}
 	console.log(json);
 	console.log(links);
 }
