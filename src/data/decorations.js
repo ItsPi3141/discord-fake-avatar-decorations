@@ -4,6 +4,62 @@ export const decorationsData = [
 		icon: "shop",
 		data: [
 			{
+				n: "Dragon Ball Daima",
+				d: "",
+				b: {
+					i: "dragon_ball_daima.webp",
+					t: "dragon_ball_daima.png",
+					h: 72,
+				},
+				i: [
+					{
+						n: "Dragon Balls",
+						d: "Give your avatar a new look.",
+						f: "dragon_balls",
+					},
+					{
+						n: "Gomah",
+						d: "Give your avatar a new look.",
+						f: "gomah",
+					},
+					{
+						n: "Shenron",
+						d: "Give your avatar a new look.",
+						f: "shenron",
+					},
+					{
+						n: "Mini Goku",
+						d: "Give your avatar a new look.",
+						f: "mini_goku",
+					},
+					{
+						n: "Mini Vegeta",
+						d: "Give your avatar a new look.",
+						f: "mini_vegeta",
+					},
+					{
+						n: "Glorio",
+						d: "Give your avatar a new look.",
+						f: "glorio",
+					},
+					{
+						n: "Mini Supreme Kai",
+						d: "Give your avatar a new look.",
+						f: "mini_supreme_kai",
+					},
+					{
+						n: "Mini Piccolo",
+						d: "Give your avatar a new look.",
+						f: "mini_piccolo",
+					},
+					{
+						n: "Panzy",
+						d: "Give your avatar a new look.",
+						f: "panzy",
+					},
+				],
+			},
+			{
 				n: "Fantastic 4",
 				d: "",
 				b: {
