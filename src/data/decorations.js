@@ -3572,6 +3572,11 @@ export const decorationsData = [
 						f: "sweet_tooth",
 					},
 					{
+						n: "Descendant",
+						d: "Exclusive to The First Descendant Quest for a limited time. Available to use until October 13, 2025.",
+						f: "descendant",
+					},
+					{
 						n: "The Entity",
 						d: "Exclusive to Dead by Daylight x TWD Quest for a limited time. Available to use until October 4, 2025.",
 						f: "the_entity",
