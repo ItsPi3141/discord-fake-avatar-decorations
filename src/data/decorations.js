@@ -3581,6 +3581,11 @@ export const decorationsData = [
 						d: "Exclusive to Dead by Daylight x TWD Quest for a limited time. Available to use until October 4, 2025.",
 						f: "the_entity",
 					},
+					{
+						n: "Hank Hill",
+						d: "Exclusive to King of the Hill Quest for a limited time. Available to use until October 4, 2025.",
+						f: "hank_hill",
+					},
 				],
 			},
 			{
