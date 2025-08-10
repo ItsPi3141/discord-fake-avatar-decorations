@@ -3586,6 +3586,11 @@ export const decorationsData = [
 						d: "Exclusive to King of the Hill Quest for a limited time. Available to use until October 4, 2025.",
 						f: "hank_hill",
 					},
+					{
+						n: "BF Soldier Helmet",
+						d: "Exclusive to BF6 Open Beta Quest for a limited time. Available to use until October 16, 2025.",
+						f: "bf_soldier_helmet",
+					},
 				],
 			},
 			{
