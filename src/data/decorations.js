@@ -3562,9 +3562,9 @@ export const decorationsData = [
 						f: "call_of_duty_mobile",
 					},
 					{
-						n: "The Entity",
-						d: "Exclusive to Dead by Daylight x TWD Quest for a limited time. Available to use until October 4, 2025.",
-						f: "the_entity",
+						n: "Chomp Chomp",
+						d: "Exclusive to SUPERVIVE 1.0 Quest for a limited time. Available to use until October 9, 2025.",
+						f: "chomp_chomp",
 					},
 					{
 						n: "Sweet Tooth",
@@ -3572,9 +3572,9 @@ export const decorationsData = [
 						f: "sweet_tooth",
 					},
 					{
-						n: "Chomp Chomp",
-						d: "Exclusive to SUPERVIVE 1.0 Quest for a limited time. Available to use until October 9, 2025.",
-						f: "chomp_chomp",
+						n: "The Entity",
+						d: "Exclusive to Dead by Daylight x TWD Quest for a limited time. Available to use until October 4, 2025.",
+						f: "the_entity",
 					},
 				],
 			},
