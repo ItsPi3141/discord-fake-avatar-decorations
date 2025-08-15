@@ -1,3 +1,15 @@
+https://cdn.discordapp.com/avatar-decoration-presets/a_e87f540de155224ae20679fbb250951e.png?size=1024&name=neon_cat_hoodie.png
+https://cdn.discordapp.com/avatar-decoration-presets/a_6c95060374323ce9b50b1630e6d44348.png?size=1024&name=neon_cat_hoodie_blue.png
+https://cdn.discordapp.com/avatar-decoration-presets/a_e1e9cd6fc7448acfe0fbf2829681e281.png?size=1024&name=neon_cat_hoodie_pink.png
+https://cdn.discordapp.com/avatar-decoration-presets/a_a41b03990d296e4ebb25ac0332e6b893.png?size=1024&name=neon_cat_hoodie_black.png
+https://cdn.discordapp.com/avatar-decoration-presets/a_f3637655ae2af0c4507379ce7523ed0b.png?size=1024&name=neon_decora_hair.png
+https://cdn.discordapp.com/avatar-decoration-presets/a_c994d7f03bc1af3d6e9d0cf5cc065d8d.png?size=1024&name=neon_spike_choker.png
+https://cdn.discordapp.com/avatar-decoration-presets/a_8d72b37d1040134935b75d73611eb020.png?size=1024&name=neon_spike_choker_black.png
+https://cdn.discordapp.com/avatar-decoration-presets/a_c267faa7eccd8517681a2a02d4d9957f.png?size=1024&name=mischievous_kitties.png
+https://cdn.discordapp.com/avatar-decoration-presets/a_d22ff89e74ed6b55d972ed9922491bf1.png?size=1024&name=mischievous_kitties_hearts.png
+https://cdn.discordapp.com/avatar-decoration-presets/a_e08b43c436272bc2c1e6ae85e71ab884.png?size=1024&name=mischievous_kitties_blue.png
+https://cdn.discordapp.com/avatar-decoration-presets/a_f783b451f252c5e34143898e97a8e585.png?size=1024&name=skully_charms.png
+https://cdn.discordapp.com/avatar-decoration-presets/a_b9f89cd88eabf437777bf35f55e6126f.png?size=1024&name=rawr_xd.png
 https://cdn.discordapp.com/avatar-decoration-presets/a_f1a2dc0cceccbc3da0838627460bd6ee.png?size=1024&name=dragon_balls.png
 https://cdn.discordapp.com/avatar-decoration-presets/a_4cb3f6e0d7869b30b2ed561dd205e7f8.png?size=1024&name=gomah.png
 https://cdn.discordapp.com/avatar-decoration-presets/a_3ce0ab2726378ba762fcc5318b87ee6f.png?size=1024&name=shenron.png
