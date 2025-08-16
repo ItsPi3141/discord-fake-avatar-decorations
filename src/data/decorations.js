@@ -3658,6 +3658,11 @@ export const decorationsData = [
             f: "hank_hill",
           },
           {
+            n: "Bing Bong",
+            d: "Exclusive to PEAK Quest for a limited time. Available to use until October 16, 2025.",
+            f: "bing_bong",
+          },
+          {
             n: "BF Soldier Helmet",
             d: "Exclusive to BF6 Open Beta Quest for a limited time. Available to use until October 16, 2025.",
             f: "bf_soldier_helmet",
