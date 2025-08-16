@@ -1144,8 +1144,8 @@ const Decoration = ({ name, fileName, onClick }) => {
       <Image
         src={
           isHovered
-            ? `decorations/${fileName}.png`
-            : `mdecorations/${fileName}.webp`
+            ? `/decorations/${fileName}.png`
+            : `/mdecorations/${fileName}.webp`
         }
         className="pointer-events-none"
       />
