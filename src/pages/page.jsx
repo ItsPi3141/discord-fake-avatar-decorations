@@ -904,7 +904,9 @@ const DecorationsCategoryBanner = ({ category }) => {
       ) : (
         <Image
           className="object-cover [grid-column:1/1] [grid-row:1/1]"
-          src={`/banners/${category.b.i}.webp`}
+          src={`/banners/${category.b.i}${
+            category.b.i.includes(".") ? "" : ".webp"
+          }`}
           alt={""}
           draggable={false}
           height={0}
@@ -928,7 +930,9 @@ const DecorationsCategoryBanner = ({ category }) => {
             />
           ) : (
             <Image
-              src={`/bannertext/${category.b.t}.webp`}
+              src={`/bannertext/${category.b.t}${
+                category.b.t.includes(".") ? "" : ".webp"
+              }`}
               alt={category.n}
               draggable={false}
               height={0}
