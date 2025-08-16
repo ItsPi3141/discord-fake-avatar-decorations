@@ -1127,6 +1127,7 @@ const DecorationsList = ({
 
 const Decoration = ({ name, fileName, onClick }) => {
   const [isHovered, setIsHovered] = useState(false);
+  const [timer, setTimer] = useState(0);
 
   return (
     <button
@@ -1135,9 +1136,19 @@ const Decoration = ({ name, fileName, onClick }) => {
       className="button-tile decor"
       onClick={onClick}
       onMouseOver={() => {
-        setIsHovered(true);
+        setTimer(
+          setInterval(() => {
+            setIsHovered(true);
+            try {
+              clearTimeout(timer);
+            } catch (e) {}
+          }, 100)
+        );
       }}
       onMouseOut={() => {
+        try {
+          clearTimeout(timer);
+        } catch (e) {}
         setIsHovered(false);
       }}
     >
