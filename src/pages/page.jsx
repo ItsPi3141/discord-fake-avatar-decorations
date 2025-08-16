@@ -448,7 +448,7 @@ const App = ({ ffmpegRef, isServer }) => {
                   groupStart: false,
                   text: (
                     <>
-                      Fluttering in the moonlight <Twemoji emoji={"🌝"} />
+                      Fluttering in the moonlight <Twemoji emoji={"1f31d"} />
                     </>
                   ),
                 },
@@ -469,11 +469,12 @@ const App = ({ ffmpegRef, isServer }) => {
                     <>
                       {decoUrl ? (
                         <>
-                          Yay! Here it is! <Twemoji emoji={"🎉"} />
+                          Yay! Here it is! <Twemoji emoji={"1f389"} />
                         </>
                       ) : (
                         <>
-                          Hmm... I still don't see it <Twemoji emoji={"🤔"} />
+                          Hmm... I still don't see it{" "}
+                          <Twemoji emoji={"1f914"} />
                         </>
                       )}
                     </>
@@ -555,7 +556,7 @@ const App = ({ ffmpegRef, isServer }) => {
             {/* pls support */}
             <div className="flex flex-col justify-start items-stretch p-4 rounded-lg w-full text-center select-none highlight">
               <p>
-                Help support the project <Twemoji emoji="🙏" />
+                Help support the project <Twemoji emoji="1f64f" />
               </p>
               <button
                 type="button"

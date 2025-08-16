@@ -1,16 +1,9 @@
-// https://gist.github.com/chibicode/fe195d792270910226c928b69a468206
-import twemoji from "@discordapp/twemoji";
 import "./twemoji.css";
 
 const Twemoji = ({ emoji }) => (
-  <span
-    // biome-ignore lint/security/noDangerouslySetInnerHtml: <explanation>
-    dangerouslySetInnerHTML={{
-      __html: twemoji.parse(emoji, {
-        folder: "svg",
-        ext: ".svg",
-      }),
-    }}
+  <img
+    class={"emoji"}
+    src={`https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/${emoji}.svg`}
   />
 );
 
