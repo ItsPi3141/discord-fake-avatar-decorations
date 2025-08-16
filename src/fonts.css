@@ -1,203 +1,174 @@
 @font-face {
-	font-family: "ABC Ginto Nord";
-	font-style: normal;
-	font-weight: 800;
-	src: url("https://cdn.jsdelivr.net/gh/itspi3141/discord-fonts@c0222e6/fonts/ABC Ginto Nord normal 800.woff2")
-		format("woff2");
+  font-family: "ABC Ginto Nord";
+  font-style: normal;
+  font-weight: 800;
+  src: url("https://cdn.jsdelivr.net/gh/itspi3141/discord-fonts@c0222e6/fonts/ABC Ginto Nord normal 800.woff2") format("woff2");
 }
 @font-face {
-	font-family: "ABC Ginto Nord";
-	font-style: italic;
-	font-weight: 800;
-	src: url("https://cdn.jsdelivr.net/gh/itspi3141/discord-fonts@c0222e6/fonts/ABC Ginto Nord italic 800.woff2")
-		format("woff2");
+  font-family: "ABC Ginto Nord";
+  font-style: italic;
+  font-weight: 800;
+  src: url("https://cdn.jsdelivr.net/gh/itspi3141/discord-fonts@c0222e6/fonts/ABC Ginto Nord italic 800.woff2") format("woff2");
 }
 @font-face {
-	font-family: "gg sans";
-	font-style: normal;
-	font-weight: 400;
-	src: url("https://cdn.jsdelivr.net/gh/itspi3141/discord-fonts@c0222e6/fonts/gg sans normal 400.woff2")
-		format("woff2");
+  font-family: "gg sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url("https://cdn.jsdelivr.net/gh/itspi3141/discord-fonts@c0222e6/fonts/gg sans normal 400.woff2") format("woff2");
 }
 @font-face {
-	font-family: "gg sans";
-	font-style: italic;
-	font-weight: 400;
-	src: url("https://cdn.jsdelivr.net/gh/itspi3141/discord-fonts@c0222e6/fonts/gg sans italic 400.woff2")
-		format("woff2");
+  font-family: "gg sans";
+  font-style: italic;
+  font-weight: 400;
+  src: url("https://cdn.jsdelivr.net/gh/itspi3141/discord-fonts@c0222e6/fonts/gg sans italic 400.woff2") format("woff2");
 }
 @font-face {
-	font-family: "gg sans";
-	font-style: normal;
-	font-weight: 500;
-	src: url("https://cdn.jsdelivr.net/gh/itspi3141/discord-fonts@c0222e6/fonts/gg sans normal 500.woff2")
-		format("woff2");
+  font-family: "gg sans";
+  font-style: normal;
+  font-weight: 500;
+  src: url("https://cdn.jsdelivr.net/gh/itspi3141/discord-fonts@c0222e6/fonts/gg sans normal 500.woff2") format("woff2");
 }
 @font-face {
-	font-family: "gg sans";
-	font-style: italic;
-	font-weight: 500;
-	src: url("https://cdn.jsdelivr.net/gh/itspi3141/discord-fonts@c0222e6/fonts/gg sans italic 500.woff2")
-		format("woff2");
+  font-family: "gg sans";
+  font-style: italic;
+  font-weight: 500;
+  src: url("https://cdn.jsdelivr.net/gh/itspi3141/discord-fonts@c0222e6/fonts/gg sans italic 500.woff2") format("woff2");
 }
 @font-face {
-	font-family: "gg sans";
-	font-style: normal;
-	font-weight: 600;
-	src: url("https://cdn.jsdelivr.net/gh/itspi3141/discord-fonts@c0222e6/fonts/gg sans normal 600.woff2")
-		format("woff2");
+  font-family: "gg sans";
+  font-style: normal;
+  font-weight: 600;
+  src: url("https://cdn.jsdelivr.net/gh/itspi3141/discord-fonts@c0222e6/fonts/gg sans normal 600.woff2") format("woff2");
 }
 @font-face {
-	font-family: "gg sans";
-	font-style: italic;
-	font-weight: 600;
-	src: url("https://cdn.jsdelivr.net/gh/itspi3141/discord-fonts@c0222e6/fonts/gg sans italic 600.woff2")
-		format("woff2");
+  font-family: "gg sans";
+  font-style: italic;
+  font-weight: 600;
+  src: url("https://cdn.jsdelivr.net/gh/itspi3141/discord-fonts@c0222e6/fonts/gg sans italic 600.woff2") format("woff2");
 }
 @font-face {
-	font-family: "gg sans";
-	font-style: normal;
-	font-weight: 700;
-	src: url("https://cdn.jsdelivr.net/gh/itspi3141/discord-fonts@c0222e6/fonts/gg sans normal 700.woff2")
-		format("woff2");
+  font-family: "gg sans";
+  font-style: normal;
+  font-weight: 700;
+  src: url("https://cdn.jsdelivr.net/gh/itspi3141/discord-fonts@c0222e6/fonts/gg sans normal 700.woff2") format("woff2");
 }
 @font-face {
-	font-family: "gg sans";
-	font-style: italic;
-	font-weight: 700;
-	src: url("https://cdn.jsdelivr.net/gh/itspi3141/discord-fonts@c0222e6/fonts/gg sans italic 700.woff2")
-		format("woff2");
+  font-family: "gg sans";
+  font-style: italic;
+  font-weight: 700;
+  src: url("https://cdn.jsdelivr.net/gh/itspi3141/discord-fonts@c0222e6/fonts/gg sans italic 700.woff2") format("woff2");
 }
 @font-face {
-	font-family: "gg sans";
-	font-style: normal;
-	font-weight: 800;
-	src: url("https://cdn.jsdelivr.net/gh/itspi3141/discord-fonts@c0222e6/fonts/gg sans normal 800.woff2")
-		format("woff2");
+  font-family: "gg sans";
+  font-style: normal;
+  font-weight: 800;
+  src: url("https://cdn.jsdelivr.net/gh/itspi3141/discord-fonts@c0222e6/fonts/gg sans normal 800.woff2") format("woff2");
 }
 @font-face {
-	font-family: "gg sans";
-	font-style: italic;
-	font-weight: 800;
-	src: url("https://cdn.jsdelivr.net/gh/itspi3141/discord-fonts@c0222e6/fonts/gg sans italic 800.woff2")
-		format("woff2");
+  font-family: "gg sans";
+  font-style: italic;
+  font-weight: 800;
+  src: url("https://cdn.jsdelivr.net/gh/itspi3141/discord-fonts@c0222e6/fonts/gg sans italic 800.woff2") format("woff2");
 }
 @font-face {
-	font-family: "gg mono";
-	font-style: normal;
-	font-weight: 400;
-	src: url("https://cdn.jsdelivr.net/gh/itspi3141/discord-fonts@c0222e6/fonts/gg mono normal 400.woff2")
-		format("woff2");
+  font-family: "gg mono";
+  font-style: normal;
+  font-weight: 400;
+  src: url("https://cdn.jsdelivr.net/gh/itspi3141/discord-fonts@c0222e6/fonts/gg mono normal 400.woff2") format("woff2");
 }
 @font-face {
-	font-family: "gg mono";
-	font-style: normal;
-	font-weight: 700;
-	src: url("https://cdn.jsdelivr.net/gh/itspi3141/discord-fonts@c0222e6/fonts/gg mono normal 700.woff2")
-		format("woff2");
+  font-family: "gg mono";
+  font-style: normal;
+  font-weight: 700;
+  src: url("https://cdn.jsdelivr.net/gh/itspi3141/discord-fonts@c0222e6/fonts/gg mono normal 700.woff2") format("woff2");
 }
 @font-face {
-	font-family: "Noto Sans";
-	font-style: normal;
-	font-weight: 400;
-	src: url("https://cdn.jsdelivr.net/gh/itspi3141/discord-fonts@c0222e6/fonts/Noto Sans normal 400.woff2")
-		format("woff2");
+  font-family: "Noto Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url("https://cdn.jsdelivr.net/gh/itspi3141/discord-fonts@c0222e6/fonts/Noto Sans normal 400.woff2") format("woff2");
 }
 @font-face {
-	font-family: "Noto Sans";
-	font-style: italic;
-	font-weight: 400;
-	src: url("https://cdn.jsdelivr.net/gh/itspi3141/discord-fonts@c0222e6/fonts/Noto Sans italic 400.woff2")
-		format("woff2");
+  font-family: "Noto Sans";
+  font-style: italic;
+  font-weight: 400;
+  src: url("https://cdn.jsdelivr.net/gh/itspi3141/discord-fonts@c0222e6/fonts/Noto Sans italic 400.woff2") format("woff2");
 }
 @font-face {
-	font-family: "Noto Sans";
-	font-style: normal;
-	font-weight: 500;
-	src: url("https://cdn.jsdelivr.net/gh/itspi3141/discord-fonts@c0222e6/fonts/Noto Sans normal 500.woff2")
-		format("woff2");
+  font-family: "Noto Sans";
+  font-style: normal;
+  font-weight: 500;
+  src: url("https://cdn.jsdelivr.net/gh/itspi3141/discord-fonts@c0222e6/fonts/Noto Sans normal 500.woff2") format("woff2");
 }
 @font-face {
-	font-family: "Noto Sans";
-	font-style: italic;
-	font-weight: 500;
-	src: url("https://cdn.jsdelivr.net/gh/itspi3141/discord-fonts@c0222e6/fonts/Noto Sans italic 500.woff2")
-		format("woff2");
+  font-family: "Noto Sans";
+  font-style: italic;
+  font-weight: 500;
+  src: url("https://cdn.jsdelivr.net/gh/itspi3141/discord-fonts@c0222e6/fonts/Noto Sans italic 500.woff2") format("woff2");
 }
 @font-face {
-	font-family: "Noto Sans";
-	font-style: normal;
-	font-weight: 600;
-	src: url("https://cdn.jsdelivr.net/gh/itspi3141/discord-fonts@c0222e6/fonts/Noto Sans normal 600.woff2")
-		format("woff2");
+  font-family: "Noto Sans";
+  font-style: normal;
+  font-weight: 600;
+  src: url("https://cdn.jsdelivr.net/gh/itspi3141/discord-fonts@c0222e6/fonts/Noto Sans normal 600.woff2") format("woff2");
 }
 @font-face {
-	font-family: "Noto Sans";
-	font-style: italic;
-	font-weight: 600;
-	src: url("https://cdn.jsdelivr.net/gh/itspi3141/discord-fonts@c0222e6/fonts/Noto Sans italic 600.woff2")
-		format("woff2");
+  font-family: "Noto Sans";
+  font-style: italic;
+  font-weight: 600;
+  src: url("https://cdn.jsdelivr.net/gh/itspi3141/discord-fonts@c0222e6/fonts/Noto Sans italic 600.woff2") format("woff2");
 }
 @font-face {
-	font-family: "Noto Sans";
-	font-style: normal;
-	font-weight: 700;
-	src: url("https://cdn.jsdelivr.net/gh/itspi3141/discord-fonts@c0222e6/fonts/Noto Sans normal 700.woff2")
-		format("woff2");
+  font-family: "Noto Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: url("https://cdn.jsdelivr.net/gh/itspi3141/discord-fonts@c0222e6/fonts/Noto Sans normal 700.woff2") format("woff2");
 }
 @font-face {
-	font-family: "Noto Sans";
-	font-style: italic;
-	font-weight: 700;
-	src: url("https://cdn.jsdelivr.net/gh/itspi3141/discord-fonts@c0222e6/fonts/Noto Sans italic 700.woff2")
-		format("woff2");
+  font-family: "Noto Sans";
+  font-style: italic;
+  font-weight: 700;
+  src: url("https://cdn.jsdelivr.net/gh/itspi3141/discord-fonts@c0222e6/fonts/Noto Sans italic 700.woff2") format("woff2");
 }
 @font-face {
-	font-family: "Noto Sans";
-	font-style: normal;
-	font-weight: 800;
-	src: url("https://cdn.jsdelivr.net/gh/itspi3141/discord-fonts@c0222e6/fonts/Noto Sans normal 800.woff2")
-		format("woff2");
+  font-family: "Noto Sans";
+  font-style: normal;
+  font-weight: 800;
+  src: url("https://cdn.jsdelivr.net/gh/itspi3141/discord-fonts@c0222e6/fonts/Noto Sans normal 800.woff2") format("woff2");
 }
 @font-face {
-	font-family: "Noto Sans";
-	font-style: italic;
-	font-weight: 800;
-	src: url("https://cdn.jsdelivr.net/gh/itspi3141/discord-fonts@c0222e6/fonts/Noto Sans italic 800.woff2")
-		format("woff2");
+  font-family: "Noto Sans";
+  font-style: italic;
+  font-weight: 800;
+  src: url("https://cdn.jsdelivr.net/gh/itspi3141/discord-fonts@c0222e6/fonts/Noto Sans italic 800.woff2") format("woff2");
 }
 @font-face {
-	font-family: "Source Code Pro";
-	font-style: normal;
-	font-weight: 400;
-	src: url("https://cdn.jsdelivr.net/gh/itspi3141/discord-fonts@c0222e6/fonts/Source Code Pro normal 400.woff2")
-		format("woff2");
+  font-family: "Source Code Pro";
+  font-style: normal;
+  font-weight: 400;
+  src: url("https://cdn.jsdelivr.net/gh/itspi3141/discord-fonts@c0222e6/fonts/Source Code Pro normal 400.woff2") format("woff2");
 }
 @font-face {
-	font-family: "Source Code Pro";
-	font-style: normal;
-	font-weight: 700;
-	src: url("https://cdn.jsdelivr.net/gh/itspi3141/discord-fonts@c0222e6/fonts/Source Code Pro normal 700.woff2")
-		format("woff2");
+  font-family: "Source Code Pro";
+  font-style: normal;
+  font-weight: 700;
+  src: url("https://cdn.jsdelivr.net/gh/itspi3141/discord-fonts@c0222e6/fonts/Source Code Pro normal 700.woff2") format("woff2");
 }
 @font-face {
-	font-family: "Corinthia";
-	font-style: normal;
-	font-weight: 400;
-	src: url("https://cdn.jsdelivr.net/gh/itspi3141/discord-fonts@c0222e6/fonts/Corinthia normal 400.woff2")
-		format("woff2");
+  font-family: "Corinthia";
+  font-style: normal;
+  font-weight: 400;
+  src: url("https://cdn.jsdelivr.net/gh/itspi3141/discord-fonts@c0222e6/fonts/Corinthia normal 400.woff2") format("woff2");
 }
 @font-face {
-	font-family: "Fraunces";
-	font-style: normal;
-	font-weight: 300 800;
-	src: url("https://cdn.jsdelivr.net/gh/itspi3141/discord-fonts@c0222e6/fonts/Fraunces normal.woff2")
-		format("woff2");
+  font-family: "Fraunces";
+  font-style: normal;
+  font-weight: 300 800;
+  src: url("https://cdn.jsdelivr.net/gh/itspi3141/discord-fonts@c0222e6/fonts/Fraunces normal.woff2") format("woff2");
 }
 @font-face {
-	font-family: "Urfa";
-	font-style: italic;
-	font-weight: 800;
-	src: url("https://cdn.jsdelivr.net/gh/itspi3141/discord-fonts@c0222e6/fonts/Urfa italic 800.woff2")
-		format("woff2");
+  font-family: "Urfa";
+  font-style: italic;
+  font-weight: 800;
+  src: url("https://cdn.jsdelivr.net/gh/itspi3141/discord-fonts@c0222e6/fonts/Urfa italic 800.woff2") format("woff2");
 }
