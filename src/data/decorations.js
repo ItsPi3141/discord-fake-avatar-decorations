@@ -3667,6 +3667,11 @@ export const decorationsData = [
             d: "Exclusive to BF6 Open Beta Quest for a limited time. Available to use until October 16, 2025.",
             f: "bf_soldier_helmet",
           },
+          {
+            n: "Cow Glider",
+            d: "Exclusive to The Milk Cup Quest 2 Quest for a limited time. Available to use until October 20, 2025.",
+            f: "cow_glider",
+          },
         ],
       },
       {
