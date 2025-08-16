@@ -7,8 +7,8 @@ export const decorationsData = [
         n: "Rawr xD",
         d: "",
         b: {
-          i: "rawr_xd.webp",
-          t: "rawr_xd.png",
+          i: "rawr_xd",
+          t: "rawr_xd",
           h: 64,
         },
         i: [
@@ -78,8 +78,8 @@ export const decorationsData = [
         n: "Dragon Ball Daima",
         d: "",
         b: {
-          i: "dragon_ball_daima.webp",
-          t: "dragon_ball_daima.png",
+          i: "dragon_ball_daima",
+          t: "dragon_ball_daima",
           h: 72,
         },
         i: [
@@ -134,8 +134,8 @@ export const decorationsData = [
         n: "Fantastic 4",
         d: "",
         b: {
-          i: "fantastic_4.webp",
-          t: "fantastic_4.png",
+          i: "fantastic_4",
+          t: "fantastic_4",
           h: 84,
         },
         i: [
@@ -175,8 +175,8 @@ export const decorationsData = [
         n: "Spirit Blossom Beyond",
         d: "",
         b: {
-          i: "spirit_blossom_beyond.webp",
-          t: "spirit_blossom_beyond.png",
+          i: "spirit_blossom_beyond",
+          t: "spirit_blossom_beyond",
           h: 72,
         },
         i: [
@@ -222,8 +222,8 @@ export const decorationsData = [
         d: "come for the chaos. stay for the lore.",
         descTopM: "6px",
         b: {
-          i: "skibidi_toilet.webp",
-          t: "skibidi_toilet.png",
+          i: "skibidi_toilet",
+          t: "skibidi_toilet",
           h: 51,
         },
         i: [
@@ -263,8 +263,8 @@ export const decorationsData = [
         n: "Summer Bliss",
         d: "Sunshine is a state of mind",
         b: {
-          i: "summer_bliss.webp",
-          t: "summer_bliss.png",
+          i: "summer_bliss",
+          t: "summer_bliss",
           h: 48,
         },
         i: [
@@ -304,8 +304,8 @@ export const decorationsData = [
         n: "Zen Protocol",
         d: "Tradition never dies, it reboots.",
         b: {
-          i: "zen_protocol.webp",
-          t: "zen_protocol.png",
+          i: "zen_protocol",
+          t: "zen_protocol",
           h: 50,
         },
         i: [
@@ -346,8 +346,8 @@ export const decorationsData = [
         d: "Which color will you wield?",
         descTopM: "2px",
         b: {
-          i: "magic_the_gathering.webp",
-          t: "magic_the_gathering.png",
+          i: "magic_the_gathering",
+          t: "magic_the_gathering",
           h: 64,
         },
         i: [
@@ -383,8 +383,8 @@ export const decorationsData = [
         d: "© K.Horikoshi / Shueisha\nMy Hero Academia Project",
         darkText: true,
         b: {
-          i: "my_hero_academia.webp",
-          t: "my_hero_academia.png",
+          i: "my_hero_academia",
+          t: "my_hero_academia",
           h: 62,
         },
         i: [
@@ -435,8 +435,8 @@ export const decorationsData = [
         d: "A little slice of paradise.",
         darkText: true,
         b: {
-          i: "cozy_valley.webp",
-          t: "cozy_valley.png",
+          i: "cozy_valley",
+          t: "cozy_valley",
           h: 60,
         },
         i: [
@@ -516,8 +516,8 @@ export const decorationsData = [
         n: "Star Wars™",
         d: "May the Force be with you.",
         b: {
-          i: "star_wars.webp",
-          t: "star_wars.png",
+          i: "star_wars",
+          t: "star_wars",
           h: 50,
         },
         i: [
@@ -562,8 +562,8 @@ export const decorationsData = [
         n: "GGEZ",
         d: "Certified W.",
         b: {
-          i: "ggez.webp",
-          t: "ggez.png",
+          i: "ggez",
+          t: "ggez",
           h: 46,
         },
         i: [
@@ -614,8 +614,8 @@ export const decorationsData = [
         d: "Too sweet to eat.",
         darkText: true,
         b: {
-          i: "chibi_cafe.webp",
-          t: "chibi_cafe.png",
+          i: "chibi_cafe",
+          t: "chibi_cafe",
           h: 40,
         },
         i: [
@@ -676,8 +676,8 @@ export const decorationsData = [
         d: "Seriously unserious.",
         descTopM: "-2px",
         b: {
-          i: "shenanigans.webp",
-          t: "shenanigans.png",
+          i: "shenanigans",
+          t: "shenanigans",
           h: 64,
         },
         i: [
@@ -718,8 +718,8 @@ export const decorationsData = [
         d: "",
         descTopM: "-8px",
         b: {
-          i: "aespa.webp",
-          t: "aespa.png",
+          i: "aespa",
+          t: "aespa",
           h: 72,
         },
         i: [
@@ -759,8 +759,8 @@ export const decorationsData = [
         n: "Insomnia",
         d: "Imagination never sleeps.",
         b: {
-          i: "insomnia.webp",
-          t: "insomnia.png",
+          i: "insomnia",
+          t: "insomnia",
           h: 64,
         },
         i: [
@@ -835,8 +835,8 @@ export const decorationsData = [
         n: "Anime 3",
         d: "Senpai will definitely notice you.",
         b: {
-          i: "anime_v3.webp",
-          t: "anime_v3.png",
+          i: "anime_v3",
+          t: "anime_v3",
           h: 48,
         },
         i: [
@@ -1151,8 +1151,8 @@ export const decorationsData = [
         n: "Valentines",
         d: "Just send it.",
         b: {
-          i: "valentines_2025.webp",
-          t: "valentines_2025.png",
+          i: "valentines_2025",
+          t: "valentines_2025",
           h: 54,
         },
         i: [
@@ -1212,8 +1212,8 @@ export const decorationsData = [
         n: "JENNIE",
         d: "JENNIE presents Ruby. Album out March 7th.",
         b: {
-          i: "jennie.webp",
-          t: "jennie.png",
+          i: "jennie",
+          t: "jennie",
           h: 58,
         },
         i: [
@@ -1228,8 +1228,8 @@ export const decorationsData = [
         n: "Civilization VII",
         d: "Build something you believe in.",
         b: {
-          i: "civilization_vii.webp",
-          t: "civilization_vii.png",
+          i: "civilization_vii",
+          t: "civilization_vii",
           h: 60,
         },
         i: [
@@ -1269,8 +1269,8 @@ export const decorationsData = [
         n: "Lunar New Year",
         d: "Shed the old, embrace the new. Happy Year of the Snake!",
         b: {
-          i: "lunar_new_year_2025.webp",
-          t: "lunar_new_year_2025.png",
+          i: "lunar_new_year_2025",
+          t: "lunar_new_year_2025",
           h: 38,
         },
         badge: "SPRING 2025",
@@ -1326,8 +1326,8 @@ export const decorationsData = [
         n: "Steampunk",
         d: "What shall we tinker on today?",
         b: {
-          i: "steampunk.webp",
-          t: "steampunk.png",
+          i: "steampunk",
+          t: "steampunk",
           h: 45,
         },
         i: [
@@ -1368,8 +1368,8 @@ export const decorationsData = [
         d: "You're walking in the forest and notice something magical and shiny.",
         descTopM: "-6px",
         b: {
-          i: "fantasy_v2.webp",
-          t: "fantasy_v2.png",
+          i: "fantasy_v2",
+          t: "fantasy_v2",
           h: 60,
         },
         i: [
@@ -1484,8 +1484,8 @@ export const decorationsData = [
         n: "Winter Wonderland",
         d: "Tis the season.",
         b: {
-          i: "winter_wonderland_2024.webp",
-          t: "winter_wonderland_2024.png",
+          i: "winter_wonderland_2024",
+          t: "winter_wonderland_2024",
           h: 64,
         },
         badge: "WINTER 2024",
@@ -1571,8 +1571,8 @@ export const decorationsData = [
         n: "Lofi Girl",
         d: "Cozy vibes with Lofi Girl.",
         b: {
-          i: "lofi_girl.webp",
-          t: "lofi_girl.png",
+          i: "lofi_girl",
+          t: "lofi_girl",
           h: 56,
         },
         i: [
@@ -1619,8 +1619,8 @@ export const decorationsData = [
         descTopM: "-4px",
         darkText: true,
         b: {
-          i: "kawaii_mode.webp",
-          t: "kawaii_mode.png",
+          i: "kawaii_mode",
+          t: "kawaii_mode",
           h: 64,
         },
         i: [
@@ -1673,19 +1673,19 @@ export const decorationsData = [
         b: {
           i: [
             {
-              url: "arcane.webp",
+              url: "arcane",
               align: "center",
               height: "100%",
               width: "100%",
             },
             {
-              url: "arcane1.webp",
+              url: "arcane1",
               align: "center",
               height: "100%",
               width: "100%",
             },
           ],
-          t: "arcane.png",
+          t: "arcane",
           h: 84,
         },
         i: [
@@ -1736,8 +1736,8 @@ export const decorationsData = [
         d: "Wonders lost to time, found again.",
         descTopM: "-8px",
         b: {
-          i: "mythical_creatures.webp",
-          t: "mythical_creatures.png",
+          i: "mythical_creatures",
+          t: "mythical_creatures",
           h: 84,
         },
         i: [
@@ -1779,17 +1779,17 @@ export const decorationsData = [
         b: {
           i: [
             {
-              url: "dungeons_and_dragons.webp",
+              url: "dungeons_and_dragons",
               align: "center",
               height: "100%",
               width: "100%",
             },
             {
-              url: "dungeons_and_dragons1.webp",
+              url: "dungeons_and_dragons1",
               align: "center",
             },
           ],
-          t: "dungeons_and_dragons.png",
+          t: "dungeons_and_dragons",
           h: 64,
         },
         i: [
@@ -1835,8 +1835,8 @@ export const decorationsData = [
         d: "Beware what lurks in the dark...",
         descTopM: "-12px",
         b: {
-          i: "spooky_night.webp",
-          t: "spooky_night.png",
+          i: "spooky_night",
+          t: "spooky_night",
           h: 70,
         },
         badge: "FALL 2024",
@@ -1919,18 +1919,18 @@ export const decorationsData = [
         b: {
           i: [
             {
-              url: "street_fighter.webp",
+              url: "street_fighter",
               align: "center",
               height: "100%",
               width: "100%",
             },
             {
-              url: "street_fighter1.webp",
+              url: "street_fighter1",
               align: "center",
               height: "100%",
             },
           ],
-          t: "street_fighter.png",
+          t: "street_fighter",
           h: 50,
         },
         i: [
@@ -1981,8 +1981,8 @@ export const decorationsData = [
         d: "Beauty in balance.",
         descTopM: "-4px",
         b: {
-          i: "autumn_equinox.webp",
-          t: "autumn_equinox.png",
+          i: "autumn_equinox",
+          t: "autumn_equinox",
           h: 42,
         },
         badge: "FALL 2024",
@@ -2038,8 +2038,8 @@ export const decorationsData = [
         n: "Fall 2",
         d: "There's a calm and cozy vibe in the air.",
         b: {
-          i: "fall_v2.webp",
-          t: "fall_v2.png",
+          i: "fall_v2",
+          t: "fall_v2",
         },
         badge: "FALL 2024",
         i: [
@@ -2080,8 +2080,8 @@ export const decorationsData = [
         d: "Long-awaited treasures from times past have made their return…",
         darkText: false,
         b: {
-          i: "the_vault.webp",
-          t: "the_vault.png",
+          i: "the_vault",
+          t: "the_vault",
           h: 72,
         },
         badge: "SEPTEMBER 2024",
@@ -2159,8 +2159,8 @@ export const decorationsData = [
         darkText: true,
         descTopM: "2px",
         b: {
-          i: "dojo.webp",
-          t: "dojo.png",
+          i: "dojo",
+          t: "dojo",
           h: 48,
         },
         i: [
@@ -2202,8 +2202,8 @@ export const decorationsData = [
         darkText: false,
         descTopM: "4px",
         b: {
-          i: "valorant_champions.webp",
-          t: "valorant_champions.png",
+          i: "valorant_champions",
+          t: "valorant_champions",
           h: 40,
         },
         i: [
@@ -2263,7 +2263,7 @@ export const decorationsData = [
         b: {
           i: [
             {
-              url: "spongebob.webp",
+              url: "spongebob",
               align: "center",
               height: "115%",
               width: "100%",
@@ -2314,8 +2314,8 @@ export const decorationsData = [
         d: "Approach, wanderer... dangerously charming relics await.",
         darkText: false,
         b: {
-          i: "dark_fantasy.webp",
-          t: "dark_fantasy.png",
+          i: "dark_fantasy",
+          t: "dark_fantasy",
           h: 48,
         },
         i: [
@@ -2358,27 +2358,27 @@ export const decorationsData = [
         b: {
           i: [
             {
-              url: "palworld.webp",
+              url: "palworld",
               align: "center",
               height: "100%",
               width: "100%",
             },
             {
-              url: "palworld1.webp",
+              url: "palworld1",
               align: "center",
             },
             {
-              url: "palworld2.webp",
+              url: "palworld2",
               align: "right",
               height: "150%",
             },
             {
-              url: "palworld3.webp",
+              url: "palworld3",
               align: "left",
               height: "150%",
             },
           ],
-          t: "palworld.png",
+          t: "palworld",
           h: 56,
         },
         badge: "JULY 2024",
@@ -2420,8 +2420,8 @@ export const decorationsData = [
         d: "Press START to play.",
         darkText: false,
         b: {
-          i: "arcade.webp",
-          t: "arcade.png",
+          i: "arcade",
+          t: "arcade",
           h: 40,
         },
         i: [
@@ -2462,8 +2462,8 @@ export const decorationsData = [
         d: "How ya feelin' today?",
         darkText: false,
         b: {
-          i: "feelin_retro.webp",
-          t: "feelin_retro.png",
+          i: "feelin_retro",
+          t: "feelin_retro",
           h: 52,
         },
         i: [
@@ -2494,8 +2494,8 @@ export const decorationsData = [
         d: "Don yer finest and set course, ye landlubbers.",
         darkText: false,
         b: {
-          i: "pirates.webp",
-          t: "pirates.png",
+          i: "pirates",
+          t: "pirates",
           h: 52,
         },
         i: [
@@ -2536,8 +2536,8 @@ export const decorationsData = [
         d: "Reach for the stars.",
         darkText: false,
         b: {
-          i: "galaxy.webp",
-          t: "galaxy.png",
+          i: "galaxy",
+          t: "galaxy",
           h: 38,
         },
         i: [
@@ -2578,8 +2578,8 @@ export const decorationsData = [
         d: "Where chill meets mood.",
         darkText: true,
         b: {
-          i: "lofi_vibes.webp",
-          t: "lofi_vibes.png",
+          i: "lofi_vibes",
+          t: "lofi_vibes",
           h: 45,
         },
         i: [
@@ -2623,21 +2623,21 @@ export const decorationsData = [
         b: {
           i: [
             {
-              url: "valorant1.webp",
+              url: "valorant1",
               align: "right",
             },
             {
-              url: "valorant2.webp",
+              url: "valorant2",
               align: "right",
               height: "150%",
             },
             {
-              url: "valorant3.webp",
+              url: "valorant3",
               align: "left",
               height: "150%",
             },
           ],
-          t: "valorant.png",
+          t: "valorant",
           h: 64,
           bg: "#ff4655",
         },
@@ -2675,8 +2675,8 @@ export const decorationsData = [
         d: "You awaken to find yourself in a springtime wonderland.",
         darkText: true,
         b: {
-          i: "springtoon.webp",
-          t: "springtoon.png",
+          i: "springtoon",
+          t: "springtoon",
           h: 38,
         },
         i: [
@@ -2717,8 +2717,8 @@ export const decorationsData = [
         d: "Senpai will definitely notice you.",
         darkText: true,
         b: {
-          i: "anime_v2.webp",
-          t: "anime_v2.png",
+          i: "anime_v2",
+          t: "anime_v2",
           h: 48,
         },
         i: [
@@ -2793,8 +2793,8 @@ export const decorationsData = [
         n: "Elements",
         d: "Which will you unleash?",
         b: {
-          i: "elements.webp",
-          t: "elements.png",
+          i: "elements",
+          t: "elements",
           h: 42,
         },
         i: [
@@ -2834,8 +2834,8 @@ export const decorationsData = [
         n: "Lunar New Year",
         d: "Roar into the Year of the Dragon.",
         b: {
-          i: "lunar_new_year_2024.webp",
-          t: "lunar_new_year_2024.png",
+          i: "lunar_new_year_2024",
+          t: "lunar_new_year_2024",
           h: 38,
         },
         badge: "SPRING 2024",
@@ -2876,8 +2876,8 @@ export const decorationsData = [
         n: "Cyberpunk",
         d: "Welcome to the neon embrace of the future.",
         b: {
-          i: "cyberpunk.webp",
-          t: "cyberpunk.png",
+          i: "cyberpunk",
+          t: "cyberpunk",
           h: 44,
         },
         i: [
@@ -2907,8 +2907,8 @@ export const decorationsData = [
         n: "Monsters",
         d: "We're not a menace, just misunderstood.",
         b: {
-          i: "monsters.webp",
-          t: "monsters.png",
+          i: "monsters",
+          t: "monsters",
         },
         i: [
           {
@@ -2957,8 +2957,8 @@ export const decorationsData = [
         n: "Winter Wonderland",
         d: "tis the season",
         b: {
-          i: "winter_wonderland_2023.webp",
-          t: "winter_wonderland_2023.png",
+          i: "winter_wonderland_2023",
+          t: "winter_wonderland_2023",
         },
         badge: "WINTER 2023",
         i: [
@@ -2988,8 +2988,8 @@ export const decorationsData = [
         n: "Halloween",
         d: "Fright and delight your friends, strangers, and friendly strangers.",
         b: {
-          i: "halloween.webp",
-          t: "halloween.png",
+          i: "halloween",
+          t: "halloween",
         },
         badge: "FALL 2023",
         i: [
@@ -3019,8 +3019,8 @@ export const decorationsData = [
         n: "Fall",
         d: "There's a calm and cozy vibe in the air.",
         b: {
-          i: "fall_v1.webp",
-          t: "fall_v1.png",
+          i: "fall_v1",
+          t: "fall_v1",
         },
         badge: "FALL 2023",
         i: [
@@ -3050,8 +3050,8 @@ export const decorationsData = [
         n: "Fantasy",
         d: "You're walking in the forest and notice something magical and shiny.",
         b: {
-          i: "fantasy_v1.webp",
-          t: "fantasy_v1.png",
+          i: "fantasy_v1",
+          t: "fantasy_v1",
         },
         i: [
           {
@@ -3100,8 +3100,8 @@ export const decorationsData = [
         n: "Anime",
         d: "Senpai will definitely notice you.",
         b: {
-          i: "anime_v1.webp",
-          t: "anime_v1.png",
+          i: "anime_v1",
+          t: "anime_v1",
           h: 48,
         },
         i: [
@@ -3146,8 +3146,8 @@ export const decorationsData = [
         n: "Breakfast",
         d: "Breakfast is definitely the most important meal of the day.",
         b: {
-          i: "breakfast.webp",
-          t: "breakfast.png",
+          i: "breakfast",
+          t: "breakfast",
         },
         i: [
           {
@@ -3186,8 +3186,8 @@ export const decorationsData = [
         n: "Disxcore",
         d: "Available to use with an active Nitro subscription.",
         b: {
-          i: "disxcore.webp",
-          t: "disxcore.png",
+          i: "disxcore",
+          t: "disxcore",
           h: 26,
         },
         i: [
@@ -3220,13 +3220,13 @@ export const decorationsData = [
         b: {
           i: [
             {
-              url: "string_lights.webp",
+              url: "string_lights",
               align: "top left",
               height: "160%",
               transform: "scaleX(-1) translateY(-20%)",
             },
             {
-              url: "hearts.webp",
+              url: "hearts",
               align: "top right",
               height: "150%",
               transform: "translateY(-5%)",
@@ -3678,7 +3678,7 @@ export const decorationsData = [
         n: "Orbs Exclusive",
         d: "",
         b: {
-          i: "orbs_exclusive.webp",
+          i: "orbs_exclusive",
         },
         i: [
           {
@@ -3910,7 +3910,7 @@ export const decorationsData = [
         n: "Snowsgiving",
         d: "❆ Happy Snowsgiving! ❆",
         b: {
-          i: "snowsgiving.webp",
+          i: "snowsgiving",
           t: "snowsgiving.svg",
           h: 46,
         },

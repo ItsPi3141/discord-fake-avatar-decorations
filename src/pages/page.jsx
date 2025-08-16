@@ -880,7 +880,7 @@ const DecorationsCategoryBanner = ({ category }) => {
             <Image
               key={e.url}
               className={"object-cover bottom-0 absolute"}
-              src={`/banners/${e.url}`}
+              src={`/banners/${e.url}${e.url.includes(".") ? "" : ".webp"}`}
               alt={""}
               draggable={false}
               height={0}
@@ -903,7 +903,7 @@ const DecorationsCategoryBanner = ({ category }) => {
       ) : (
         <Image
           className="object-cover [grid-column:1/1] [grid-row:1/1]"
-          src={`/banners/${category.b.i}`}
+          src={`/banners/${category.b.i}.webp`}
           alt={""}
           draggable={false}
           height={0}
@@ -927,7 +927,7 @@ const DecorationsCategoryBanner = ({ category }) => {
             />
           ) : (
             <Image
-              src={`/bannertext/${category.b.t}`}
+              src={`/bannertext/${category.b.t}.webp`}
               alt={category.n}
               draggable={false}
               height={0}
