@@ -38,11 +38,18 @@ export default function Home() {
   const [loadProgress_ffmpeg, setLoadProgress_ffmpeg] = useState(0);
   const [loadProgress_imagemagick, setLoadProgress_imagemagick] = useState(0);
 
+  const [unsupported, setUnsupported] = useState("");
+
   const transferredFfmpeg = getData("ffmpeg");
   const ffmpegRef = useRef(isServer ? null : transferredFfmpeg || new FFmpeg());
 
   const load = useCallback(async () => {
     if (isServer) return;
+
+    if (typeof WebAssembly === "undefined") {
+      setUnsupported("Your browser does not support WebAssembly.");
+    }
+
     const ffmpegBaseUrl =
       "https://cdn.jsdelivr.net/npm/@ffmpeg/core@0.12.6/dist/esm/";
     const ffmpeg = ffmpegRef.current;
@@ -130,6 +137,7 @@ export default function Home() {
         <App ffmpegRef={ffmpegRef} isServer={isServer} />
       ) : (
         <LoadingScreen
+          unsupportedMsg={unsupported}
           progress={`${Math.round(
             (loadProgress_imagemagick + loadProgress_ffmpeg) * 50
           )}%`}
@@ -139,7 +147,7 @@ export default function Home() {
   );
 }
 
-const LoadingScreen = ({ progress }) => (
+const LoadingScreen = ({ progress, unsupportedMsg }) => (
   <main className="flex flex-col justify-center items-center p-8 w-full h-screen text-white">
     <p className="top-8 absolute mx-8 max-w-xl font-bold text-4xl text-center ginto">
       Discord
@@ -147,17 +155,24 @@ const LoadingScreen = ({ progress }) => (
       <span className="capitalize ginto">Fake Avatar Decorations</span>
     </p>
 
-    <div className="relative bg-surface-higher rounded-full w-[calc(100vw-3rem)] max-w-84 h-8 overflow-clip">
-      <div
-        style={{
-          width: progress,
-        }}
-        className="bg-primary h-full"
-      />
-      <div className="top-0 right-0 bottom-0 left-0 absolute flex justify-center items-center">
-        <p className="text-xl text-center ginto">{progress}</p>
+    {unsupportedMsg ? (
+      <div className="bg-critical/20 px-4 py-8 border-2 border-critical border-dashed rounded-xl">
+        <p className="text-2xl text-center ginto">Error</p>
+        <p className="text-center">{unsupportedMsg}</p>
       </div>
-    </div>
+    ) : (
+      <div className="relative bg-surface-higher rounded-full w-[calc(100vw-3rem)] max-w-84 h-8 overflow-clip">
+        <div
+          style={{
+            width: progress,
+          }}
+          className="bg-primary h-full"
+        />
+        <div className="top-0 right-0 bottom-0 left-0 absolute flex justify-center items-center">
+          <p className="text-xl text-center ginto">{progress}</p>
+        </div>
+      </div>
+    )}
   </main>
 );
 
