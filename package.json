@@ -12,16 +12,16 @@
     "@ffmpeg/util": "0.12.2",
     "@giscus/react": "^3.1.0",
     "@imagemagick/magick-wasm": "0.0.35",
-    "@tailwindcss/vite": "^4.1.11",
+    "@tailwindcss/vite": "^4.1.12",
     "apng-js": "^1.1.5",
     "preact": "^10.27.0",
     "preact-iso": "^2.9.2",
     "preact-render-to-string": "^6.5.13",
-    "tailwindcss": "^4.1.11"
+    "tailwindcss": "^4.1.12"
   },
   "devDependencies": {
     "@preact/preset-vite": "^2.10.2",
-    "vite": "^6.3.5"
+    "vite": "^7.1.2"
   },
   "packageManager": "yarn@4.9.2"
 }
