@@ -1096,43 +1096,59 @@ const DecorationsList = ({
               <DecorationsCategoryBanner category={category} />
 
               <div className="gap-3 grid grid-cols-3 xs:grid-cols-4 sm:grid-cols-5 min-[600px]:grid-cols-6 min-[720px]:grid-cols-7 md:grid-cols-5">
-                {category.i.map(
-                  (
-                    decor,
-                    // @ts-ignore
-                    index
-                  ) => {
-                    return (
-                      <button
-                        key={decor.n}
-                        type="button"
-                        className="button-tile decor"
-                        onClick={(e) => {
-                          setName(decor.n);
-                          setDescription(decor.d);
-                          setDecoUrl(`/decorations/${decor.f}.png`);
-                          for (const el of document.querySelectorAll(
-                            "button.decor.border-primary"
-                          )) {
-                            el.classList.remove("border-primary");
-                          }
-                          // @ts-ignore
-                          e.target.classList.add("border-primary");
-                        }}
-                      >
-                        <Image
-                          src={`/decorations/${decor.f}.png`}
-                          className="pointer-events-none"
-                        />
-                      </button>
-                    );
-                  }
-                )}
+                {category.i.map((decor) => {
+                  return (
+                    <Decoration
+                      name={decor.n}
+                      fileName={decor.f}
+                      onClick={(e) => {
+                        setName(decor.n);
+                        setDescription(decor.d);
+                        setDecoUrl(`/decorations/${decor.f}.png`);
+                        for (const el of document.querySelectorAll(
+                          "button.decor.border-primary"
+                        )) {
+                          el.classList.remove("border-primary");
+                        }
+                        // @ts-ignore
+                        e.target.classList.add("border-primary");
+                      }}
+                    />
+                  );
+                })}
               </div>
             </div>
           );
         })
       )}
     </div>
+  );
+};
+
+const Decoration = ({ name, fileName, onClick }) => {
+  const [isHovered, setIsHovered] = useState(false);
+
+  return (
+    <button
+      key={name}
+      type="button"
+      className="button-tile decor"
+      onClick={onClick}
+      onMouseOver={() => {
+        setIsHovered(true);
+      }}
+      onMouseOut={() => {
+        setIsHovered(false);
+      }}
+    >
+      <Image
+        src={
+          isHovered
+            ? `decorations/${fileName}.png`
+            : `mdecorations/${fileName}.webp`
+        }
+        className="pointer-events-none"
+      />
+    </button>
   );
 };
