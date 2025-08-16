@@ -53,13 +53,34 @@ export default function FileUpload({ onUpload }) {
         >
           {/* Sparkle effects container */}
           <div>
-            <div className="sparkle-white upload-effect" style={{ bottom: "-40px", right: "-15px" }} />
-            <div className="sparkle-white upload-effect" style={{ top: "-67px", right: "12px" }} />
-            <div className="light-white upload-effect" style={{ top: "24px", right: "-35px" }} />
-            <div className="light-white upload-effect" style={{ top: "-32px", left: "-10px" }} />
-            <div className="cross-white upload-effect" style={{ right: "100px", bottom: "-35px" }} />
-            <div className="cross-white upload-effect" style={{ left: "-70px", bottom: "50px" }} />
-            <div className="pop-white upload-effect" style={{ bottom: "-40px", left: "50px" }} />
+            <div
+              className="sparkle-white upload-effect"
+              style={{ bottom: "-40px", right: "-15px" }}
+            />
+            <div
+              className="sparkle-white upload-effect"
+              style={{ top: "-67px", right: "12px" }}
+            />
+            <div
+              className="light-white upload-effect"
+              style={{ top: "24px", right: "-35px" }}
+            />
+            <div
+              className="light-white upload-effect"
+              style={{ top: "-32px", left: "-10px" }}
+            />
+            <div
+              className="cross-white upload-effect"
+              style={{ right: "100px", bottom: "-35px" }}
+            />
+            <div
+              className="cross-white upload-effect"
+              style={{ left: "-70px", bottom: "50px" }}
+            />
+            <div
+              className="pop-white upload-effect"
+              style={{ bottom: "-40px", left: "50px" }}
+            />
           </div>
           {/* Upload box */}
           <div className="flex flex-col justify-center items-center border-[#fff6] border-2 border-dashed rounded-md w-full h-full">
@@ -80,8 +101,14 @@ export default function FileUpload({ onUpload }) {
                 </div>
               </div>
             </div>
-            <p className="font-bold text-2xl">{error ? "Invalid file format" : "Upload image"}</p>
-            <p className="text-sm">{error ? "Please select a valid image file" : "Drop your avatar here to use it"}</p>
+            <p className="font-bold text-2xl">
+              {error ? "Invalid file format" : "Upload image"}
+            </p>
+            <p className="text-sm">
+              {error
+                ? "Please select a valid image file"
+                : "Drop your avatar here to use it"}
+            </p>
           </div>
         </div>
       )}
@@ -91,7 +118,14 @@ export default function FileUpload({ onUpload }) {
 
 function ImageSvg() {
   return (
-    <svg aria-hidden="true" fill="none" height="96" viewBox="0 0 72 96" width="72" xmlns="http://www.w3.org/2000/svg">
+    <svg
+      aria-hidden="true"
+      fill="none"
+      height="96"
+      viewBox="0 0 72 96"
+      width="72"
+      xmlns="http://www.w3.org/2000/svg"
+    >
       <clipPath id="a">
         <path d="m0 0h72v96h-72z" />
       </clipPath>

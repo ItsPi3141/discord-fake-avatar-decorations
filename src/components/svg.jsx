@@ -2,7 +2,11 @@ export const Svg = {
   NoSearchResults({ size = "1em" }) {
     return (
       <svg aria-hidden="true" width={size} height={size} viewBox="0 0 160 160">
-        <path d="M121.9,113.98c-2.2,2.67-4.65,5.12-7.32,7.32l7.78,7.78,7.39-7.25-7.85-7.85Z" fill="#fff" opacity=".1" />
+        <path
+          d="M121.9,113.98c-2.2,2.67-4.65,5.12-7.32,7.32l7.78,7.78,7.39-7.25-7.85-7.85Z"
+          fill="#fff"
+          opacity=".1"
+        />
         <rect
           x="123.01"
           y="128.62"

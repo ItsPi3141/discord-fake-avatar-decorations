@@ -9,7 +9,11 @@ export default function Modal(props) {
       }`}
     >
       <div className="flex flex-col items-stretch bg-surface-high shadow-base-lower/60 shadow-sm border border-[#97979f1f] xs:rounded-xl w-screen xs:w-[420px] min-h-screen xs:min-h-[200px] overflow-hidden text-white modal-box">
-        <div className={`p-4 relative flex flex-col grow gap-4 ${props.glow ? "glow-bg" : ""}`}>
+        <div
+          className={`p-4 relative flex flex-col grow gap-4 ${
+            props.glow ? "glow-bg" : ""
+          }`}
+        >
           <button
             type="button"
             className="top-4 right-4 absolute opacity-50 hover:opacity-100 text-icon-tertiary transition-opacity [transition-duration:200ms]"
@@ -20,12 +24,16 @@ export default function Modal(props) {
           <div className="flex flex-col gap-2">
             {props.title && (
               <div className="flex justify-center">
-                <p className="font-semibold text-white/80 text-2xl text-center [letter-spacing:.02em]">{props.title}</p>
+                <p className="font-semibold text-white/80 text-2xl text-center [letter-spacing:.02em]">
+                  {props.title}
+                </p>
               </div>
             )}
             {props.subtitle && (
               <div className="flex justify-center">
-                <p className="text-white/70 text-sm xs:text-base text-center">{props.subtitle}</p>
+                <p className="text-white/70 text-sm xs:text-base text-center">
+                  {props.subtitle}
+                </p>
               </div>
             )}
           </div>
@@ -33,11 +41,19 @@ export default function Modal(props) {
           <div class="modal-spacer" />
           <div className="flex justify-end bg-surface-high mt-4 h-[38px]">
             {props.secondaryText && (
-              <button type="button" className="px-6 py-2 rounded-lg text-white/70 text-sm hover:underline transition" onClick={props.onClose}>
+              <button
+                type="button"
+                className="px-6 py-2 rounded-lg text-white/70 text-sm hover:underline transition"
+                onClick={props.onClose}
+              >
                 {props.secondaryText || "Cancel"}
               </button>
             )}
-            <button type="button" className="px-6 py-2 text-sm button-primary" onClick={props.onClose}>
+            <button
+              type="button"
+              className="px-6 py-2 text-sm button-primary"
+              onClick={props.onClose}
+            >
               {props.closeText || "Close"}
             </button>
           </div>

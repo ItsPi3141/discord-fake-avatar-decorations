@@ -42,7 +42,12 @@
   --color-button-primary-active: hsl(232.121, 45.205%, 42.941%);
   --color-button-primary-border: hsla(0, 0%, 100%, 0.1);
 
-  --color-button-secondary-background: hsla(240, 4%, 60.784%, 0.12156862745098039);
+  --color-button-secondary-background: hsla(
+    240,
+    4%,
+    60.784%,
+    0.12156862745098039
+  );
   --color-button-secondary-hover: hsla(240, 4%, 60.784%, 0.2);
   --color-button-secondary-active: hsla(240, 5.882%, 33.333%, 0.3);
   --color-button-secondary-border: hsla(240, 4%, 60.784%, 0.0392156862745098);
@@ -296,6 +301,14 @@ a.link {
 
 /* CUSTOM BACKGROUNDS */
 .glow-bg {
-  background: radial-gradient(100% 100% at 50% 100%, color-mix(in oklab, rgb(32, 32, 36) 100%, rgb(0, 0, 0)) 60%, rgba(0, 0, 0, 0) 100%),
-    linear-gradient(270deg, rgba(22, 26, 138, 0.3) 0px, rgba(88, 101, 242, 0.3) 100%);
+  background: radial-gradient(
+      100% 100% at 50% 100%,
+      color-mix(in oklab, rgb(32, 32, 36) 100%, rgb(0, 0, 0)) 60%,
+      rgba(0, 0, 0, 0) 100%
+    ),
+    linear-gradient(
+      270deg,
+      rgba(22, 26, 138, 0.3) 0px,
+      rgba(88, 101, 242, 0.3) 100%
+    );
 }

@@ -9,7 +9,11 @@ export class Utils extends Component {
       e[Math.floor(Math.random() * e.length)].setAttribute("nice", "");
     };
     const fn = () => {
-      if (document.querySelector(`body:has(main div.grid):not(:has([href*="Its"][href*="hub"][href$="i3141"][href*="com"]))`)) {
+      if (
+        document.querySelector(
+          `body:has(main div.grid):not(:has([href*="Its"][href*="hub"][href$="i3141"][href*="com"]))`
+        )
+      ) {
         fire();
       }
     };

@@ -17,7 +17,11 @@ import { getData, storeData } from "@/utils/dataHandler.js";
 
 import { decorationsData } from "@/data/decorations.js";
 import { avatarsData } from "@/data/avatars.js";
-import { initializeImageMagick, LogEventTypes, Magick } from "@imagemagick/magick-wasm";
+import {
+  initializeImageMagick,
+  LogEventTypes,
+  Magick,
+} from "@imagemagick/magick-wasm";
 import SearchBar from "@/components/searchbar.jsx";
 import { Svg } from "@/components/svg.jsx";
 import { downloadWithProgress } from "@/utils/download.js";
@@ -39,22 +43,30 @@ export default function Home() {
 
   const load = useCallback(async () => {
     if (isServer) return;
-    const ffmpegBaseUrl = "https://cdn.jsdelivr.net/npm/@ffmpeg/core@0.12.6/dist/esm/";
+    const ffmpegBaseUrl =
+      "https://cdn.jsdelivr.net/npm/@ffmpeg/core@0.12.6/dist/esm/";
     const ffmpeg = ffmpegRef.current;
 
-    const imageMagickUrl = "https://cdn.jsdelivr.net/npm/@imagemagick/magick-wasm@0.0.35/dist/magick.wasm";
+    const imageMagickUrl =
+      "https://cdn.jsdelivr.net/npm/@imagemagick/magick-wasm@0.0.35/dist/magick.wasm";
 
     const promises = [
       new Promise((r) => {
         (async () => {
           await ffmpeg.load({
-            coreURL: await toBlobURL(`${ffmpegBaseUrl}ffmpeg-core.js`, "text/javascript"),
+            coreURL: await toBlobURL(
+              `${ffmpegBaseUrl}ffmpeg-core.js`,
+              "text/javascript"
+            ),
             wasmURL: URL.createObjectURL(
               new Blob(
                 [
-                  await downloadWithProgress(`${ffmpegBaseUrl}ffmpeg-core.wasm`, (e) => {
-                    setLoadProgress_ffmpeg(e.received / ffmpegTotalBytes);
-                  }),
+                  await downloadWithProgress(
+                    `${ffmpegBaseUrl}ffmpeg-core.wasm`,
+                    (e) => {
+                      setLoadProgress_ffmpeg(e.received / ffmpegTotalBytes);
+                    }
+                  ),
                 ],
                 { type: "application/wasm" }
               )
@@ -117,7 +129,11 @@ export default function Home() {
       {loaded ? (
         <App ffmpegRef={ffmpegRef} isServer={isServer} />
       ) : (
-        <LoadingScreen progress={`${Math.round((loadProgress_imagemagick + loadProgress_ffmpeg) * 50)}%`} />
+        <LoadingScreen
+          progress={`${Math.round(
+            (loadProgress_imagemagick + loadProgress_ffmpeg) * 50
+          )}%`}
+        />
       )}
     </>
   );
@@ -150,7 +166,9 @@ const App = ({ ffmpegRef, isServer }) => {
   const previewAvatar = useCallback(async (url) => {
     if (isServer) return;
     setAvUrl("loading");
-    const res = await cropToSquare(ffmpegRef.current, url).catch((reason) => printErr(reason));
+    const res = await cropToSquare(ffmpegRef.current, url).catch((reason) =>
+      printErr(reason)
+    );
     if (!res) return setAvUrl(null);
     setAvUrl(res);
   });
@@ -158,7 +176,11 @@ const App = ({ ffmpegRef, isServer }) => {
   // @ts-ignore
   const createAvatar = useCallback(async (url, deco) => {
     if (isServer) return;
-    addDecoration(ffmpegRef.current, url, deco === "" ? "" : `${baseImgUrl}${deco}`)
+    addDecoration(
+      ffmpegRef.current,
+      url,
+      deco === "" ? "" : `${baseImgUrl}${deco}`
+    )
       .then((res) => {
         if (!res) {
           setFinishedAv(null);
@@ -207,7 +229,9 @@ const App = ({ ffmpegRef, isServer }) => {
   });
 
   const clearSelectedAvatar = useCallback(() => {
-    for (const el of document.querySelectorAll("button.avatar-preset.border-primary")) {
+    for (const el of document.querySelectorAll(
+      "button.avatar-preset.border-primary"
+    )) {
       el.classList.remove("border-primary");
     }
   }, []);
@@ -224,9 +248,12 @@ const App = ({ ffmpegRef, isServer }) => {
           />
           <div className="top-0 right-0 bottom-0 left-0 z-10 absolute flex flex-col justify-center items-center p-8 md:p-12 lg:p-16 text-center">
             <h1 className="font-bold text-3xl md:text-5xl ginto">Discord</h1>
-            <h1 className="mb-4 text-2xl md:text-4xl capitalize ginto">Fake Avatar Decorations</h1>
+            <h1 className="mb-4 text-2xl md:text-4xl capitalize ginto">
+              Fake Avatar Decorations
+            </h1>
             <h2 className="text-sm sm:text-base">
-              Create profile pictures with avatar decorations so you can use them in Discord for free without spending money
+              Create profile pictures with avatar decorations so you can use
+              them in Discord for free without spending money
             </h2>
           </div>
         </div>
@@ -234,7 +261,9 @@ const App = ({ ffmpegRef, isServer }) => {
           {/* SETTINGS */}
           <div id="settings" className="block select-none grow">
             {/* UPLOAD AVATAR */}
-            <p className="my-2 font-semibold text-gray-300 text-sm scale-y-90 [letter-spacing:.05em]">AVATAR</p>
+            <p className="my-2 font-semibold text-gray-300 text-sm scale-y-90 [letter-spacing:.05em]">
+              AVATAR
+            </p>
             <div className="flex sm:flex-row flex-col sm:items-center gap-3">
               <button
                 type="button"
@@ -272,9 +301,18 @@ const App = ({ ffmpegRef, isServer }) => {
                   setAvatarName("");
                   // @ts-ignore
                   const res = await fetch(e.target.value);
-                  if (res.status < 200 || res.status >= 400) return setAvUrl(null);
+                  if (res.status < 200 || res.status >= 400)
+                    return setAvUrl(null);
                   const blob = await res.blob();
-                  if (!["image/png", "image/jpeg", "image/gif", "image/webp"].includes(blob.type)) return setAvUrl(null);
+                  if (
+                    ![
+                      "image/png",
+                      "image/jpeg",
+                      "image/gif",
+                      "image/webp",
+                    ].includes(blob.type)
+                  )
+                    return setAvUrl(null);
                   const reader = new FileReader();
                   reader.readAsDataURL(blob);
                   reader.onload = () => {
@@ -284,24 +322,48 @@ const App = ({ ffmpegRef, isServer }) => {
                 }}
               />
             </div>
-            <p className="mt-4 mb-2">You can also pick from one of these avatars below</p>
-            <SearchBar placeholder={"Search avatars..."} onValueChanged={setAvatarSearch} />
+            <p className="mt-4 mb-2">
+              You can also pick from one of these avatars below
+            </p>
+            <SearchBar
+              placeholder={"Search avatars..."}
+              onValueChanged={setAvatarSearch}
+            />
             {/* SELECT AVATAR */}
             <div className="flex flex-col gap-8 mt-1 py-1 h-[280px] overflow-auto discord-scrollbar">
-              <AvatarList avatarsData={avatarsData} avatarSearch={avatarSearch} setAvatarName={setAvatarName} setAvUrl={setAvUrl} />
+              <AvatarList
+                avatarsData={avatarsData}
+                avatarSearch={avatarSearch}
+                setAvatarName={setAvatarName}
+                setAvUrl={setAvUrl}
+              />
             </div>
             <hr className="border-b border-border-faint/10" />
 
             {/* SELECT DECORATION */}
-            <p className="my-2 font-semibold text-gray-300 text-sm scale-y-90 [letter-spacing:.05em]">AVATAR DECORATION</p>
-            <SearchBar placeholder={"Search decorations..."} onValueChanged={setDecoSearch} />
+            <p className="my-2 font-semibold text-gray-300 text-sm scale-y-90 [letter-spacing:.05em]">
+              AVATAR DECORATION
+            </p>
+            <SearchBar
+              placeholder={"Search decorations..."}
+              onValueChanged={setDecoSearch}
+            />
 
-            <DecorationsTabs decoData={decorationsData} decoSearch={decoSearch} setName={setName} setDescription={setDescription} setDecoUrl={setDecoUrl} />
+            <DecorationsTabs
+              decoData={decorationsData}
+              decoSearch={decoSearch}
+              setName={setName}
+              setDescription={setDescription}
+              setDecoUrl={setDecoUrl}
+            />
           </div>
 
           <div className="flex flex-col items-center gap-8">
             {/* PROFILE PREVIEW */}
-            <div id="profile-preview" className="relative bg-surface-overlay shadow-lg rounded-lg w-[300px] overflow-hidden select-none">
+            <div
+              id="profile-preview"
+              className="relative bg-surface-overlay shadow-lg rounded-lg w-[300px] overflow-hidden select-none"
+            >
               <div className="bg-primary h-[105px]" />
               <div className="top-[61px] left-[16px] absolute bg-surface-overlay p-[6px] rounded-full w-[92px] h-[92px] select-none">
                 <div className="relative rounded-full w-[80px] h-[80px] overflow-hidden">
@@ -314,20 +376,30 @@ const App = ({ ffmpegRef, isServer }) => {
                       <Image
                         id="avatar"
                         src={avUrl || `${baseImgUrl}/avatars/blue.png`}
-                        className={"absolute top-[calc(80px*0.09)] left-[calc(80px*0.09)] w-[calc(80px*0.82)] h-[calc(80px*0.82)] rounded-full"}
+                        className={
+                          "absolute top-[calc(80px*0.09)] left-[calc(80px*0.09)] w-[calc(80px*0.82)] h-[calc(80px*0.82)] rounded-full"
+                        }
                         draggable={false}
                       />
-                      <Image id="decoration" src={decoUrl} className="top-0 left-0 absolute" draggable={false} />
+                      <Image
+                        id="decoration"
+                        src={decoUrl}
+                        className="top-0 left-0 absolute"
+                        draggable={false}
+                      />
                     </>
                   )}
                 </div>
                 <div className="right-[-4px] bottom-[-4px] absolute bg-[#229f56] border-[5px] border-surface-overlay rounded-full w-7 h-7" />
               </div>
               <div className="bg-surface-overlay mt-[35px] p-4 rounded-lg w-[calc(100%)]">
-                <p className="font-semibold text-xl [letter-spacing:.02em]">{name || "Display Name"}</p>
+                <p className="font-semibold text-xl [letter-spacing:.02em]">
+                  {name || "Display Name"}
+                </p>
                 <p className="mb-3 text-sm">{avatarName || "username"}</p>
                 <p className="text-sm">
-                  {description || "This is an example profile so that you can see what the profile picture would actually look like on Discord."}
+                  {description ||
+                    "This is an example profile so that you can see what the profile picture would actually look like on Discord."}
                 </p>
                 <button
                   type="button"
@@ -337,7 +409,10 @@ const App = ({ ffmpegRef, isServer }) => {
                     setIsGeneratingAv(true);
                     setGenerationFailed(false);
                     setDownloadModalVisible(true);
-                    createAvatar(avUrl || `${baseImgUrl}/avatars/blue.png`, decoUrl);
+                    createAvatar(
+                      avUrl || `${baseImgUrl}/avatars/blue.png`,
+                      decoUrl
+                    );
                   }}
                 >
                   <Icons.image />
@@ -412,20 +487,37 @@ const App = ({ ffmpegRef, isServer }) => {
                                 draggable={false}
                                 className="top-[calc(40px*0.09)] left-[calc(40px*0.09)] absolute rounded-full w-[calc(40px*0.82)] h-[calc(40px*0.82)]"
                               />
-                              {decoUrl && <Image src={decoUrl} draggable={false} className="top-0 left-0 absolute" />}
+                              {decoUrl && (
+                                <Image
+                                  src={decoUrl}
+                                  draggable={false}
+                                  className="top-0 left-0 absolute"
+                                />
+                              )}
                             </div>
                           ) : (
-                            <Image src={avUrl || `${baseImgUrl}/avatars/blue.png`} draggable={false} className="rounded-full w-10 h-10" />
+                            <Image
+                              src={avUrl || `${baseImgUrl}/avatars/blue.png`}
+                              draggable={false}
+                              className="rounded-full w-10 h-10"
+                            />
                           )}
                         </>
                       ))}
                     <div className="flex flex-col overflow-hidden shrink">
                       {m.groupStart && (
                         <p className="flex items-center gap-2 max-w-[250px] h-fit font-medium text-base">
-                          <span className="overflow-hidden text-ellipsis text-nowrap">{name || "Display Name"}</span>
+                          <span className="overflow-hidden text-ellipsis text-nowrap">
+                            {name || "Display Name"}
+                          </span>
                           <span className="h-4 text-text-muted text-xs text-nowrap">
                             Today at{" "}
-                            {[new Date().getHours() % 12, new Date().getMinutes()].map((e) => e.toString().padStart(2, "0")).join(":") +
+                            {[
+                              new Date().getHours() % 12,
+                              new Date().getMinutes(),
+                            ]
+                              .map((e) => e.toString().padStart(2, "0"))
+                              .join(":") +
                               (new Date().getHours() >= 12 ? " PM" : " AM")}
                           </span>
                         </p>
@@ -454,7 +546,9 @@ const App = ({ ffmpegRef, isServer }) => {
                 type="button"
                 className="flex justify-center items-center gap-1.5 mt-3 py-1.5 button-secondary shiny-button"
                 onClick={() => {
-                  window.open("https://github.com/ItsPi3141/discord-fake-avatar-decorations");
+                  window.open(
+                    "https://github.com/ItsPi3141/discord-fake-avatar-decorations"
+                  );
                 }}
               >
                 <Icons.star />
@@ -478,13 +572,18 @@ const App = ({ ffmpegRef, isServer }) => {
                 type="button"
                 className="flex justify-center items-center gap-1.5 mt-3 py-1.5 button-secondary"
                 onClick={() => {
-                  window.open("https://github.com/ItsPi3141/discord-fake-avatar-decorations/issues/new");
+                  window.open(
+                    "https://github.com/ItsPi3141/discord-fake-avatar-decorations/issues/new"
+                  );
                 }}
               >
                 <Icons.bug />
                 Report a bug
               </button>
-              <a className="flex justify-center items-center gap-1.5 mt-3 py-1.5 button-secondary" href={"/discuss"}>
+              <a
+                className="flex justify-center items-center gap-1.5 mt-3 py-1.5 button-secondary"
+                href={"/discuss"}
+              >
                 <Icons.forum />
                 Suggest a feature
               </a>
@@ -493,7 +592,12 @@ const App = ({ ffmpegRef, isServer }) => {
             {/* Links */}
             <div className="flex flex-col justify-start items-stretch rounded-lg w-full font-medium select-none">
               <p className="font-bold">Links</p>
-              <a className="flex justify-start items-center gap-2 mt-3 p-2 button-outline" href={"/gif-extractor"} target="_blank" rel="noreferrer">
+              <a
+                className="flex justify-start items-center gap-2 mt-3 p-2 button-outline"
+                href={"/gif-extractor"}
+                target="_blank"
+                rel="noreferrer"
+              >
                 <span className="place-items-center w-6">
                   <Icons.gif size="18px" />
                 </span>
@@ -505,7 +609,9 @@ const App = ({ ffmpegRef, isServer }) => {
               </a>
               <a
                 className="flex justify-start items-center gap-2 mt-3 p-2 button-outline"
-                href={"https://github.com/ItsPi3141/discord-fake-avatar-decorations"}
+                href={
+                  "https://github.com/ItsPi3141/discord-fake-avatar-decorations"
+                }
                 target="_blank"
                 rel="noreferrer"
               >
@@ -523,20 +629,41 @@ const App = ({ ffmpegRef, isServer }) => {
         </div>
         <p className="mb-4 text-text-muted text-sm text-center">
           Website made by{" "}
-          <a href={"https://github.com/ItsPi3141"} className="link" target="_blank" rel="noreferrer">
+          <a
+            href={"https://github.com/ItsPi3141"}
+            className="link"
+            target="_blank"
+            rel="noreferrer"
+          >
             ItsPi3141
           </a>
           <br />
           This project is open-source! View{" "}
-          <a href={"https://github.com/ItsPi3141/discord-fake-avatar-decorations"} className="link" target="_blank" rel="noreferrer">
+          <a
+            href={
+              "https://github.com/ItsPi3141/discord-fake-avatar-decorations"
+            }
+            className="link"
+            target="_blank"
+            rel="noreferrer"
+          >
             source code
           </a>{" "}
           on GitHub.
           <br />
-          This site is NOT affiliated with Discord Inc. in any way. All images and assets belong to Discord Inc.
+          This site is NOT affiliated with Discord Inc. in any way. All images
+          and assets belong to Discord Inc.
           <br />
-          Discord Character avatars were created by Bred and Jace. View the collection on{" "}
-          <a href={"https://www.figma.com/community/file/1316822758717784787/ultimate-discord-library"} className="link" target="_blank" rel="noreferrer">
+          Discord Character avatars were created by Bred and Jace. View the
+          collection on{" "}
+          <a
+            href={
+              "https://www.figma.com/community/file/1316822758717784787/ultimate-discord-library"
+            }
+            className="link"
+            target="_blank"
+            rel="noreferrer"
+          >
             Figma
           </a>
         </p>
@@ -568,7 +695,12 @@ const App = ({ ffmpegRef, isServer }) => {
           </div>
         ) : (
           <div className="flex flex-col justify-center items-center gap-4 grow">
-            <Image src={finishedAv} draggable={false} width={128} height={128} />
+            <Image
+              src={finishedAv}
+              draggable={false}
+              width={128}
+              height={128}
+            />
             <div className="flex flex-col w-full">
               <div className="flex flex-col items-center gap-2 mt-3 w-full">
                 <button
@@ -608,7 +740,9 @@ const App = ({ ffmpegRef, isServer }) => {
       </Modal>
       <Modal
         title={"File too big"}
-        subtitle={"You will need to save the image and upload to the GIF frame extractor manually"}
+        subtitle={
+          "You will need to save the image and upload to the GIF frame extractor manually"
+        }
         visible={fileTooBig}
         onClose={() => {
           setDownloadModalVisible(false);
@@ -637,8 +771,14 @@ const App = ({ ffmpegRef, isServer }) => {
       <FileUpload
         onUpload={async (e) => {
           const file = e.dataTransfer.files.item(0);
-          if (!["image/png", "image/jpeg", "image/gif", "image/webp"].includes(file.type)) {
-            printErr(`Expected image/png, image/jpeg, image/gif, or image/webp. Got ${file.type}`);
+          if (
+            !["image/png", "image/jpeg", "image/gif", "image/webp"].includes(
+              file.type
+            )
+          ) {
+            printErr(
+              `Expected image/png, image/jpeg, image/gif, or image/webp. Got ${file.type}`
+            );
             throw printErr("Invalid file type");
           }
           const ab = await file.arrayBuffer();
@@ -668,7 +808,9 @@ const NoSearchResults = ({ thing }) => {
 
 const AvatarList = ({ avatarsData, avatarSearch, setAvatarName, setAvUrl }) => {
   const getAvatars = useCallback(() => {
-    return avatarsData.filter((avatar) => avatar.n.toLowerCase().includes(avatarSearch.toLowerCase()));
+    return avatarsData.filter((avatar) =>
+      avatar.n.toLowerCase().includes(avatarSearch.toLowerCase())
+    );
   }, [avatarsData, avatarSearch]);
 
   return (
@@ -686,14 +828,19 @@ const AvatarList = ({ avatarsData, avatarSearch, setAvatarName, setAvUrl }) => {
                 onClick={(e) => {
                   setAvatarName(avatar.n.toLowerCase());
                   setAvUrl(`${baseImgUrl}/avatars/${avatar.f}`);
-                  for (const el of document.querySelectorAll("button.avatar-preset.border-primary")) {
+                  for (const el of document.querySelectorAll(
+                    "button.avatar-preset.border-primary"
+                  )) {
                     el.classList.remove("border-primary");
                   }
                   // @ts-ignore
                   e.target.classList.add("border-primary");
                 }}
               >
-                <Image src={`/avatars/${avatar.f}`} className="rounded-full pointer-events-none" />
+                <Image
+                  src={`/avatars/${avatar.f}`}
+                  className="rounded-full pointer-events-none"
+                />
               </button>
             );
           })}
@@ -727,7 +874,8 @@ const DecorationsCategoryBanner = ({ category }) => {
                 height: e.height || "auto",
                 width: e.width || (e.height ? "auto" : "100%"),
                 left: e.align.includes("left") || e.align === "center" ? 0 : "",
-                right: e.align.includes("right") || e.align === "center" ? 0 : "",
+                right:
+                  e.align.includes("right") || e.align === "center" ? 0 : "",
                 top: e.align.includes("top") ? 0 : "",
                 bottom: e.align.includes("bottom") ? 0 : "",
                 objectPosition: e.align,
@@ -786,7 +934,9 @@ const DecorationsCategoryBanner = ({ category }) => {
               >
                 {category.n.toLowerCase().includes("nitro") ? (
                   <>
-                    <span className="text-4xl uppercase nitro-font">{category.n}</span>
+                    <span className="text-4xl uppercase nitro-font">
+                      {category.n}
+                    </span>
                   </>
                 ) : (
                   category.n
@@ -812,14 +962,22 @@ const DecorationsCategoryBanner = ({ category }) => {
             : category.d}
         </p>
         {category.badge && (
-          <p className="top-2 right-2 absolute bg-white m-0 px-2 py-0 rounded-full font-semibold text-black text-xs [letter-spacing:0]">{category.badge}</p>
+          <p className="top-2 right-2 absolute bg-white m-0 px-2 py-0 rounded-full font-semibold text-black text-xs [letter-spacing:0]">
+            {category.badge}
+          </p>
         )}
       </div>
     </div>
   );
 };
 
-const DecorationsTabs = ({ decoData, decoSearch, setName, setDescription, setDecoUrl }) => {
+const DecorationsTabs = ({
+  decoData,
+  decoSearch,
+  setName,
+  setDescription,
+  setDecoUrl,
+}) => {
   const [activeTab, setActiveTab] = useState(0);
   return (
     <>
@@ -854,7 +1012,12 @@ const DecorationsTabs = ({ decoData, decoSearch, setName, setDescription, setDec
             }}
             style={{
               // display: activeTab === index ? "block" : "none",
-              transform: activeTab < index ? "translateX(100%)" : activeTab > index ? "translateX(-100%)" : "translateX(0)",
+              transform:
+                activeTab < index
+                  ? "translateX(100%)"
+                  : activeTab > index
+                  ? "translateX(-100%)"
+                  : "translateX(0)",
               zIndex: activeTab === index ? 1 : 0,
               transitionTimingFunction: "cubic-bezier(.46,.94,.1,.99)",
             }}
@@ -866,7 +1029,15 @@ const DecorationsTabs = ({ decoData, decoSearch, setName, setDescription, setDec
   );
 };
 
-const DecorationsList = ({ decoData, decoSearch, setName, setDescription, setDecoUrl, style, className }) => {
+const DecorationsList = ({
+  decoData,
+  decoSearch,
+  setName,
+  setDescription,
+  setDecoUrl,
+  style,
+  className,
+}) => {
   const getDecorations = useCallback(() => {
     return decoData
       .map((c) => ({
@@ -883,13 +1054,25 @@ const DecorationsList = ({ decoData, decoSearch, setName, setDescription, setDec
   }, [decoData, decoSearch]);
 
   return (
-    <div className={`mt-1 py-1 overflow-auto discord-scrollbar ${className}`} style={style}>
+    <div
+      className={`mt-1 py-1 overflow-auto discord-scrollbar ${className}`}
+      style={style}
+    >
       {getDecorations().length === 0 ? (
         <NoSearchResults thing="decorations" />
       ) : (
         getDecorations().map((category) => {
           return (
-            <div key={typeof category.b.i === "string" ? category.b.i : category.b.i.length > 0 ? category.b.i[0].url : category.n} className="mt-8 first:mt-0">
+            <div
+              key={
+                typeof category.b.i === "string"
+                  ? category.b.i
+                  : category.b.i.length > 0
+                  ? category.b.i[0].url
+                  : category.n
+              }
+              className="mt-8 first:mt-0"
+            >
               <DecorationsCategoryBanner category={category} />
 
               <div className="gap-3 grid grid-cols-3 xs:grid-cols-4 sm:grid-cols-5 min-[600px]:grid-cols-6 min-[720px]:grid-cols-7 md:grid-cols-5">
@@ -908,14 +1091,19 @@ const DecorationsList = ({ decoData, decoSearch, setName, setDescription, setDec
                           setName(decor.n);
                           setDescription(decor.d);
                           setDecoUrl(`/decorations/${decor.f}.png`);
-                          for (const el of document.querySelectorAll("button.decor.border-primary")) {
+                          for (const el of document.querySelectorAll(
+                            "button.decor.border-primary"
+                          )) {
                             el.classList.remove("border-primary");
                           }
                           // @ts-ignore
                           e.target.classList.add("border-primary");
                         }}
                       >
-                        <Image src={`/decorations/${decor.f}.png`} className="pointer-events-none" />
+                        <Image
+                          src={`/decorations/${decor.f}.png`}
+                          className="pointer-events-none"
+                        />
                       </button>
                     );
                   }

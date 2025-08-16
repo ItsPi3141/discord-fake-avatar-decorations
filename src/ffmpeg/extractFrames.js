@@ -1,11 +1,22 @@
-import { arraybuffer2base64, ffmpegFetchAndConvert, getAPngDuration } from "./utils";
+import {
+  arraybuffer2base64,
+  ffmpegFetchAndConvert,
+  getAPngDuration,
+} from "./utils";
 import { FFmpeg } from "@ffmpeg/ffmpeg";
 
-export function imagesFromGif(/** @type {FFmpeg} */ ffmpeg, /** @type {String} */ gifUrl) {
+export function imagesFromGif(
+  /** @type {FFmpeg} */ ffmpeg,
+  /** @type {String} */ gifUrl
+) {
   return new Promise((resolve, reject) => {
     (async () => {
       try {
-        const { arrayBuffer: dataAB, data, type } = await ffmpegFetchAndConvert(await (await fetch(gifUrl)).blob());
+        const {
+          arrayBuffer: dataAB,
+          data,
+          type,
+        } = await ffmpegFetchAndConvert(await (await fetch(gifUrl)).blob());
         if (type == null) return reject("Invalid image type");
         const ext = type.replace("image/", "");
 
@@ -15,7 +26,9 @@ export function imagesFromGif(/** @type {FFmpeg} */ ffmpeg, /** @type {String} *
         }
         await ffmpeg.writeFile(`image.${ext}`, data);
         try {
-          for (const file of (await ffmpeg.listDir("extract")).filter((f) => !f.isDir)) {
+          for (const file of (await ffmpeg.listDir("extract")).filter(
+            (f) => !f.isDir
+          )) {
             await ffmpeg.deleteFile(`extract/${file.name}`);
           }
           await ffmpeg.deleteDir("extract");
@@ -23,9 +36,17 @@ export function imagesFromGif(/** @type {FFmpeg} */ ffmpeg, /** @type {String} *
         try {
           await ffmpeg.createDir("extract");
         } catch {}
-        await ffmpeg.exec(["-i", `image.${ext}`, "-vsync", "0", "extract/frame_%d.png"]);
+        await ffmpeg.exec([
+          "-i",
+          `image.${ext}`,
+          "-vsync",
+          "0",
+          "extract/frame_%d.png",
+        ]);
 
-        let frames = (await ffmpeg.listDir("extract")).filter((f) => !f.isDir).map((f) => f.name);
+        let frames = (await ffmpeg.listDir("extract"))
+          .filter((f) => !f.isDir)
+          .map((f) => f.name);
         frames = await Promise.all(
           frames.map(async (f) => {
             const res = await ffmpeg.readFile(`extract/${f}`);

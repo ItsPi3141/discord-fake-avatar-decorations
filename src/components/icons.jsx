@@ -66,7 +66,12 @@ export const Icons = {
       <svg aria-hidden="true" width={size} height={size} viewBox="0 0 32 33">
         <defs>
           <clipPath id="clip_gifIcon">
-            <rect width="32" height="32" fill="white" transform="translate(0 0.439941)" />
+            <rect
+              width="32"
+              height="32"
+              fill="white"
+              transform="translate(0 0.439941)"
+            />
           </clipPath>
         </defs>
         <g clipPath="url(#clip_gifIcon)">
@@ -155,7 +160,12 @@ export const Icons = {
         </g>
         <defs>
           <clipPath id="clip_shopIcon">
-            <rect width="32" height="32" fill="white" transform="translate(0 0.439941)" />
+            <rect
+              width="32"
+              height="32"
+              fill="white"
+              transform="translate(0 0.439941)"
+            />
           </clipPath>
         </defs>
       </svg>
@@ -174,7 +184,11 @@ export const Icons = {
   up({ size = "1em" }) {
     return (
       <svg aria-hidden="true" width={size} height={size} viewBox="0 0 24 24">
-        <polygon fill="currentColor" fillRule="nonzero" points="13 20 11 20 11 8 5.5 13.5 4.08 12.08 12 4.16 19.92 12.08 18.5 13.5 13 8" />
+        <polygon
+          fill="currentColor"
+          fillRule="nonzero"
+          points="13 20 11 20 11 8 5.5 13.5 4.08 12.08 12 4.16 19.92 12.08 18.5 13.5 13 8"
+        />
       </svg>
     );
   },

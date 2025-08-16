@@ -16,7 +16,11 @@ export function printMsg(message, style, fn) {
     if (fn) return fn(m, ...s);
     console.log(m, ...s);
   } catch {
-    console.log(`%cinfo%c${message}`, "color:white;background:#444;padding:2px 8px;border-radius:10px", "");
+    console.log(
+      `%cinfo%c${message}`,
+      "color:white;background:#444;padding:2px 8px;border-radius:10px",
+      ""
+    );
   }
 }
 export function printErr(message) {

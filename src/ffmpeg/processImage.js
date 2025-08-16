@@ -1,5 +1,9 @@
 import { FFmpeg } from "@ffmpeg/ffmpeg";
-import { ffmpegFetchAndConvert, getAPngDuration, getGifDuration } from "./utils";
+import {
+  ffmpegFetchAndConvert,
+  getAPngDuration,
+  getGifDuration,
+} from "./utils";
 
 /**
  * Crop the image to a square shape using FFmpeg.
@@ -8,11 +12,16 @@ import { ffmpegFetchAndConvert, getAPngDuration, getGifDuration } from "./utils"
  * @param {String} url - The URL or B64 string of the image to crop.
  * @return {Promise} A promise that resolves with the cropped image data.
  */
-export function cropToSquare(/** @type {FFmpeg} */ ffmpeg, /** @type {String} */ url) {
+export function cropToSquare(
+  /** @type {FFmpeg} */ ffmpeg,
+  /** @type {String} */ url
+) {
   return new Promise((resolve, reject) => {
     (async () => {
       try {
-        const { data, type } = await ffmpegFetchAndConvert(await (await fetch(url)).blob());
+        const { data, type } = await ffmpegFetchAndConvert(
+          await (await fetch(url)).blob()
+        );
 
         const ext = type.replace("image/", "");
         await ffmpeg.writeFile(`avatarpreview.${ext}`, data);
@@ -31,7 +40,13 @@ export function cropToSquare(/** @type {FFmpeg} */ ffmpeg, /** @type {String} */
           "[s1][p]paletteuse",
         ];
 
-        await ffmpeg.exec(["-i", `avatarpreview.${ext}`, "-filter_complex", filter_complex.join(""), "avatarpreviewcropped.gif"]);
+        await ffmpeg.exec([
+          "-i",
+          `avatarpreview.${ext}`,
+          "-filter_complex",
+          filter_complex.join(""),
+          "avatarpreviewcropped.gif",
+        ]);
 
         const res = await ffmpeg.readFile("avatarpreviewcropped.gif");
         const reader = new FileReader();
@@ -54,11 +69,19 @@ export function cropToSquare(/** @type {FFmpeg} */ ffmpeg, /** @type {String} */
   });
 }
 
-export function addDecoration(/** @type {FFmpeg} */ ffmpeg, /** @type {String} */ imageUrl, /** @type {String} */ decorationUrl) {
+export function addDecoration(
+  /** @type {FFmpeg} */ ffmpeg,
+  /** @type {String} */ imageUrl,
+  /** @type {String} */ decorationUrl
+) {
   return new Promise((resolve, reject) => {
     (async () => {
       try {
-        const { arrayBuffer: avatarAB, data: avatarData, type: avatarType } = await ffmpegFetchAndConvert(await (await fetch(imageUrl)).blob());
+        const {
+          arrayBuffer: avatarAB,
+          data: avatarData,
+          type: avatarType,
+        } = await ffmpegFetchAndConvert(await (await fetch(imageUrl)).blob());
         const ext = avatarType.replace("image/", "");
 
         if (!decorationUrl) {
@@ -88,9 +111,17 @@ export function addDecoration(/** @type {FFmpeg} */ ffmpeg, /** @type {String} *
             "[s1][p]paletteuse",
           ];
 
-          await ffmpeg.exec(["-i", `avatarbase.${ext}`, "-filter_complex", filter_complex.join(""), `avatarcircle.${ext}`]);
+          await ffmpeg.exec([
+            "-i",
+            `avatarbase.${ext}`,
+            "-filter_complex",
+            filter_complex.join(""),
+            `avatarcircle.${ext}`,
+          ]);
 
-          const res = await ffmpeg.readFile(`avatarcircle.${ext}`).catch((err) => console.error(err));
+          const res = await ffmpeg
+            .readFile(`avatarcircle.${ext}`)
+            .catch((err) => console.error(err));
           const reader = new FileReader();
           reader.readAsDataURL(
             // @ts-ignore
@@ -105,7 +136,10 @@ export function addDecoration(/** @type {FFmpeg} */ ffmpeg, /** @type {String} *
             return reject(reader.error);
           };
         } else {
-          const { arrayBuffer: decoAB, data: decoData } = await ffmpegFetchAndConvert(await (await fetch(decorationUrl)).blob());
+          const { arrayBuffer: decoAB, data: decoData } =
+            await ffmpegFetchAndConvert(
+              await (await fetch(decorationUrl)).blob()
+            );
 
           if (ext === "gif") {
             const decoDuration = getAPngDuration(decoAB);
@@ -156,7 +190,12 @@ export function addDecoration(/** @type {FFmpeg} */ ffmpeg, /** @type {String} *
           }
           await ffmpeg.writeFile("decoration.png", decoData);
 
-          if (document.querySelector(`body:not(:has([href$="41"][href*="hub"][href*="com"]))`) && window.location.hostname !== "localhost") {
+          if (
+            document.querySelector(
+              `body:not(:has([href$="41"][href*="hub"][href*="com"]))`
+            ) &&
+            window.location.hostname !== "localhost"
+          ) {
             const filter_complex = [
               // Start out with a transparent background
               "color=s=288x288:d=100,format=argb,colorchannelmixer=aa=0.0[background];",
@@ -181,9 +220,19 @@ export function addDecoration(/** @type {FFmpeg} */ ffmpeg, /** @type {String} *
               "[s0]palettegen=reserve_transparent=on:transparency_color=ffffff[p];",
               "[s1][p]paletteuse",
             ];
-            await ffmpeg.exec(["-i", `avatarbase.${ext}`, "-i", "decoration.png", "-filter_complex", filter_complex.join(""), "avatar.gif"]);
+            await ffmpeg.exec([
+              "-i",
+              `avatarbase.${ext}`,
+              "-i",
+              "decoration.png",
+              "-filter_complex",
+              filter_complex.join(""),
+              "avatar.gif",
+            ]);
 
-            const res = await ffmpeg.readFile("avatar.gif").catch((err) => console.error(err));
+            const res = await ffmpeg
+              .readFile("avatar.gif")
+              .catch((err) => console.error(err));
             const reader = new FileReader();
             reader.readAsDataURL(
               new Blob(
@@ -234,10 +283,24 @@ export function addDecoration(/** @type {FFmpeg} */ ffmpeg, /** @type {String} *
               "[s0]palettegen=reserve_transparent=on:transparency_color=ffffff[p];",
               "[s1][p]paletteuse",
             ];
-            await ffmpeg.exec(["-i", `avatarbase.${ext}`, "-i", "decoration.png", "-filter_complex", filter_complex.join(""), "avatarwithdeco.gif"]);
+            await ffmpeg.exec([
+              "-i",
+              `avatarbase.${ext}`,
+              "-i",
+              "decoration.png",
+              "-filter_complex",
+              filter_complex.join(""),
+              "avatarwithdeco.gif",
+            ]);
 
-            const res = await ffmpeg.readFile("avatarwithdeco.gif").catch((err) => console.error(err));
-            if (typeof res === "undefined" || res.length === 0 || !document.documentElement.getAttribute("loaded")) {
+            const res = await ffmpeg
+              .readFile("avatarwithdeco.gif")
+              .catch((err) => console.error(err));
+            if (
+              typeof res === "undefined" ||
+              res.length === 0 ||
+              !document.documentElement.getAttribute("loaded")
+            ) {
               console.error("Error: Empty result from ffmpeg");
               return reject();
             }
