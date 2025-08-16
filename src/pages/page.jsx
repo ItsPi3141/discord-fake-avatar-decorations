@@ -443,7 +443,7 @@ const App = ({ ffmpegRef, isServer }) => {
 								{
 									styled: false,
 									groupStart: false,
-									text: "I get a profile picture decoration",
+									text: "I get an avatar decoration",
 								},
 								{
 									styled: true,
