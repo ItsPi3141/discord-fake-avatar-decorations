@@ -28,20 +28,30 @@ import { downloadWithProgress } from "@/utils/download.js";
 import { ffmpegTotalBytes, imagemagickTotalBytes } from "@/data/fileSizes.js";
 import { Fragment } from "preact/jsx-runtime";
 import { useLocation } from "preact-iso";
+import { NeutralButton } from "@/components/button";
 
 const baseImgUrl = import.meta.env.VITE_BASE_IMAGE_URL || "";
 
 const isServer = typeof window === "undefined";
 
+let loadingPromise = null;
+
 export default function Home() {
   const [loaded, setLoaded] = useState(false);
-  const [loadProgress_ffmpeg, setLoadProgress_ffmpeg] = useState(0);
-  const [loadProgress_imagemagick, setLoadProgress_imagemagick] = useState(0);
 
   const [unsupported, setUnsupported] = useState("");
 
   const transferredFfmpeg = getData("ffmpeg");
   const ffmpegRef = useRef(isServer ? null : transferredFfmpeg || new FFmpeg());
+
+  const ensureLoaded = useCallback(async () => {
+    if (loaded) return;
+    if (loadingPromise != null) {
+      await loadingPromise;
+      return;
+    }
+    throw new Error("FFmpeg initialization not queued.");
+  }, []);
 
   const load = useCallback(async () => {
     if (isServer) return;
@@ -65,18 +75,9 @@ export default function Home() {
               `${ffmpegBaseUrl}ffmpeg-core.js`,
               "text/javascript"
             ),
-            wasmURL: URL.createObjectURL(
-              new Blob(
-                [
-                  await downloadWithProgress(
-                    `${ffmpegBaseUrl}ffmpeg-core.wasm`,
-                    (e) => {
-                      setLoadProgress_ffmpeg(e.received / ffmpegTotalBytes);
-                    }
-                  ),
-                ],
-                { type: "application/wasm" }
-              )
+            wasmURL: await toBlobURL(
+              `${ffmpegBaseUrl}ffmpeg-core.wasm`,
+              "application/wasm"
             ),
           });
           ffmpeg.on("log", (e) =>
@@ -98,11 +99,7 @@ export default function Home() {
       }),
       new Promise((r) => {
         (async () => {
-          await initializeImageMagick(
-            await downloadWithProgress(imageMagickUrl, (e) => {
-              setLoadProgress_imagemagick(e.received / imagemagickTotalBytes);
-            })
-          );
+          await initializeImageMagick(new URL(imageMagickUrl));
           Magick.onLog = (e) =>
             printMsg(
               ["imagemagick", e.message.split("]:").slice(1).join("]:")],
@@ -120,7 +117,8 @@ export default function Home() {
         })();
       }),
     ];
-    await Promise.all(promises);
+    loadingPromise = Promise.all(promises);
+    await loadingPromise;
     setLoaded(true);
   }, []);
 
@@ -133,53 +131,43 @@ export default function Home() {
 
   return (
     <>
-      {loaded ? (
-        <App ffmpegRef={ffmpegRef} isServer={isServer} />
-      ) : (
-        <LoadingScreen
-          unsupportedMsg={unsupported}
-          progress={`${Math.round(
-            (loadProgress_imagemagick + loadProgress_ffmpeg) * 50
-          )}%`}
-        />
-      )}
+      <App
+        ffmpegRef={ffmpegRef}
+        isServer={isServer}
+        ensureLoaded={ensureLoaded}
+      />
+      <UnsupportedModal unsupportedMsg={unsupported} />
     </>
   );
 }
 
-const LoadingScreen = ({ progress, unsupportedMsg }) => (
-  <main className="flex flex-col justify-center items-center p-8 w-full h-screen text-white">
-    <p className="top-8 absolute mx-8 max-w-xl font-bold text-4xl text-center ginto">
-      Discord
-      <br />
-      <span className="capitalize ginto">Fake Avatar Decorations</span>
-    </p>
-
-    {unsupportedMsg ? (
-      <div className="bg-critical/20 px-4 py-8 border-2 border-critical border-dashed rounded-xl">
-        <p className="text-2xl text-center ginto">Error</p>
-        <p className="text-center">{unsupportedMsg}</p>
-      </div>
-    ) : (
-      <div className="relative bg-surface-higher rounded-full w-[calc(100vw-3rem)] max-w-84 h-8 overflow-clip">
-        <div
-          style={{
-            width: progress,
-          }}
-          className="bg-primary h-full"
-        />
-        <div className="top-0 right-0 bottom-0 left-0 absolute flex justify-center items-center">
-          <p className="text-xl text-center ginto">{progress}</p>
+const UnsupportedModal = ({ unsupportedMsg }) =>
+  unsupportedMsg && (
+    <Modal visible={true} hideActions={true}>
+      <div className="flex flex-col justify-between items-stretch bg-critical/20 p-4 border-2 border-critical border-dashed rounded-xl grow">
+        <div>
+          <p className="text-2xl text-center ginto">Error</p>
+          <p className="text-center">{unsupportedMsg}</p>
         </div>
+        <NeutralButton
+          onClick={() => {
+            window.open(
+              "https://github.com/ItsPi3141/discord-fake-avatar-decorations/issues"
+            );
+          }}
+        >
+          <Icons.bug />
+          Report a bug
+        </NeutralButton>
       </div>
-    )}
-  </main>
-);
+    </Modal>
+  );
 
-const App = ({ ffmpegRef, isServer }) => {
+const App = ({ ffmpegRef, isServer, ensureLoaded }) => {
   // @ts-ignore
   const previewAvatar = useCallback(async (url) => {
     if (isServer) return;
+    await ensureLoaded();
     setAvUrl("loading");
     const res = await cropToSquare(ffmpegRef.current, url).catch((reason) =>
       printErr(reason)
@@ -191,6 +179,7 @@ const App = ({ ffmpegRef, isServer }) => {
   // @ts-ignore
   const createAvatar = useCallback(async (url, deco) => {
     if (isServer) return;
+    await ensureLoaded();
     addDecoration(
       ffmpegRef.current,
       url,
@@ -241,7 +230,7 @@ const App = ({ ffmpegRef, isServer }) => {
       default:
         return "none";
     }
-  });
+  }, []);
 
   const clearSelectedAvatar = useCallback(() => {
     for (const el of document.querySelectorAll(
@@ -570,9 +559,7 @@ const App = ({ ffmpegRef, isServer }) => {
                 <Icons.star />
                 Star on GitHub
               </button>
-              <button
-                type="button"
-                className="flex justify-center items-center gap-1.5 mt-3 py-1.5 button-secondary"
+              <NeutralButton
                 onClick={() => {
                   navigator.clipboard.writeText(window.location.href);
                   setShared(true);
@@ -583,10 +570,8 @@ const App = ({ ffmpegRef, isServer }) => {
               >
                 <Icons.link />
                 Share the website
-              </button>
-              <button
-                type="button"
-                className="flex justify-center items-center gap-1.5 mt-3 py-1.5 button-secondary"
+              </NeutralButton>
+              <NeutralButton
                 onClick={() => {
                   window.open(
                     "https://github.com/ItsPi3141/discord-fake-avatar-decorations/issues/new"
@@ -595,14 +580,15 @@ const App = ({ ffmpegRef, isServer }) => {
               >
                 <Icons.bug />
                 Report a bug
-              </button>
-              <a
-                className="flex justify-center items-center gap-1.5 mt-3 py-1.5 button-secondary"
-                href={"/discuss"}
+              </NeutralButton>
+              <NeutralButton
+                onClick={() => {
+                  router.route("/discuss");
+                }}
               >
                 <Icons.forum />
                 Suggest a feature
-              </a>
+              </NeutralButton>
             </div>
 
             {/* Links */}
@@ -736,14 +722,9 @@ const App = ({ ffmpegRef, isServer }) => {
                   type="button"
                   className="flex justify-center items-center gap-1.5 py-1.5 w-72 button-secondary"
                   onClick={() => {
-                    if (!isServer) {
-                      try {
-                        storeData("image", finishedAv);
-                        router.route("/gif-extractor");
-                      } catch {
-                        setFileTooBig(true);
-                      }
-                    }
+                    if (isServer) return;
+                    storeData("image", finishedAv);
+                    router.route("/gif-extractor");
                   }}
                 >
                   <Icons.image />
@@ -753,36 +734,6 @@ const App = ({ ffmpegRef, isServer }) => {
             </div>
           </div>
         )}
-      </Modal>
-      <Modal
-        title={"File too big"}
-        subtitle={
-          "You will need to save the image and upload to the GIF frame extractor manually"
-        }
-        visible={fileTooBig}
-        onClose={() => {
-          setDownloadModalVisible(false);
-          setFileTooBig(false);
-          router.route("/gif-extractor");
-        }}
-        secondaryText="Cancel"
-        closeText="Proceed"
-      >
-        <div className="flex flex-col items-center">
-          <button
-            type="button"
-            className="flex justify-center items-center gap-1.5 py-1.5 w-72 button-secondary"
-            onClick={() => {
-              const a = document.createElement("a");
-              a.href = finishedAv;
-              a.download = `discord_fake_avatar_decorations_${Date.now()}.gif`;
-              a.click();
-            }}
-          >
-            <Icons.download />
-            Save
-          </button>
-        </div>
       </Modal>
       <FileUpload
         onUpload={async (e) => {
