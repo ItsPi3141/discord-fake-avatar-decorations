@@ -1,15 +1,45 @@
-# `create-preact`
+# Discord Fake Avatar Decorations
 
-<h2 align="center">
-  <img height="256" width="256" src="./src/assets/preact.svg">
-</h2>
+[![Vite](https://img.shields.io/badge/Vite-646CFF?logo=vite&logoColor=fff&style=for-the-badge)](#)
+[![Preact](https://img.shields.io/badge/Preact-673AB8?logo=preact&logoColor=fff&style=for-the-badge)](#)
 
-<h3 align="center">Get started using Preact and Vite!</h3>
+## ✨ Getting Started
 
-## Getting Started
+Clone the repository:
 
--   `npm run dev` - Starts a dev server at http://localhost:5173/
+```bash
+git clone https://github.com/ItsPi3141/discord-fake-avatar-decorations
+cd discord-fake-avatar-decorations
+```
 
--   `npm run build` - Builds for production, emitting to `dist/`. Prerenders all found routes in app to static HTML
+Start the development server:
 
--   `npm run preview` - Starts a server at http://localhost:4173/ to test production build locally
+```bash
+yarn dev
+```
+
+Open [localhost:5173](http://localhost:5173) with your browser to see the result.
+
+## 🚀 Deployment
+
+Create a production build:
+
+```bash
+yarn build
+```
+
+Start the production server:
+
+```bash
+yarn preview
+```
+
+Open [localhost:4173](http://localhost:4173) with your browser to see the deployment.
+
+## 🧑‍💻 Contributing
+
+If you have a bug report, open an issue. Try to include as much detail as possible. If applicable, include screenshots of the browser console. Please do NOT just say "it doesn't work".
+
+Put feature suggestions in [this discussion](https://github.com/ItsPi3141/discord-fake-avatar-decorations/discussions/4).
+
+If you want an avatar decoration to be added, make pull request. If you don't know how, then open an issue and attach the asset files. Note that they must be an official avatar decoration made by Discord (e.g. decorations from past years).
