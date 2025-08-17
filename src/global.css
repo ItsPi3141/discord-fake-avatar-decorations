@@ -162,7 +162,7 @@ body:has([nice]) {
   white-space: pre;
 
   & > * {
-    display: none;
+    display: none !important;
   }
 
   &::before {
