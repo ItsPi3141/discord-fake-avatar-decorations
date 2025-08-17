@@ -211,8 +211,6 @@ const Decoration = ({ name, fileName, onClick }) => {
   const [isHovered, setIsHovered] = useState(false);
   const [timer, setTimer] = useState(0);
 
-  const [shouldAnimate, setShouldAnimate] = useState(false);
-
   return (
     <button
       key={name}
@@ -223,7 +221,6 @@ const Decoration = ({ name, fileName, onClick }) => {
         setTimer(
           setInterval(() => {
             setIsHovered(true);
-            if (!shouldAnimate) setShouldAnimate(true);
             try {
               clearTimeout(timer);
             } catch (e) {}
@@ -231,29 +228,19 @@ const Decoration = ({ name, fileName, onClick }) => {
         );
       }}
       onMouseOut={() => {
+        setIsHovered(false);
         try {
           clearTimeout(timer);
         } catch (e) {}
-        setIsHovered(false);
       }}
     >
       <Image
-        src={`/mdecorations/${fileName}.webp`}
-        className="pointer-events-none a"
-        style={{
-          display: isHovered ? "none" : "",
-        }}
-      />
-      <Image
         src={
-          shouldAnimate
+          isHovered
             ? `/decorations/${fileName}.png`
             : `/mdecorations/${fileName}.webp`
         }
-        className="pointer-events-none b"
-        style={{
-          display: isHovered ? "block" : "",
-        }}
+        className="pointer-events-none"
       />
     </button>
   );
