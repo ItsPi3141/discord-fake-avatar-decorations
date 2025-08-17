@@ -312,3 +312,8 @@ a.link {
       rgba(88, 101, 242, 0.3) 100%
     );
 }
+
+/* DECOR */
+.button-tile.decor > .b {
+  @apply hidden;
+}
