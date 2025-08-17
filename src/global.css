@@ -65,6 +65,9 @@
   button {
     @apply cursor-pointer;
   }
+  #app {
+    display: block !important;
+  }
 }
 
 @layer components {
