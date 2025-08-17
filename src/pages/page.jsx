@@ -283,7 +283,10 @@ const App = ({ ffmpegRef, isServer, ensureLoaded }) => {
         </div>
         <div className="flex md:flex-row flex-col items-center md:items-start gap-8 px-8 py-12 w-full max-w-[900px]">
           {/* SETTINGS */}
-          <div id="settings" className="block select-none grow">
+          <div
+            id="settings"
+            className="block w-full md:w-auto select-none grow"
+          >
             {/* UPLOAD AVATAR */}
             <p className="my-2 font-semibold text-gray-300 text-sm scale-y-90 [letter-spacing:.05em]">
               AVATAR
