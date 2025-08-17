@@ -489,12 +489,16 @@ const App = ({ ffmpegRef, isServer, ensureLoaded }) => {
                               <Image
                                 src={avUrl || `${baseImgUrl}/avatars/blue.png`}
                                 draggable={false}
-                                className="top-[calc(40px*0.09)] left-[calc(40px*0.09)] absolute rounded-full w-[calc(40px*0.82)] h-[calc(40px*0.82)]"
+                                width={32.8}
+                                height={32.8}
+                                className="absolute rounded-full w-[calc(40px*0.82)] h-[calc(40px*0.82)]"
                               />
                               {decoUrl && (
                                 <Image
                                   src={decoUrl}
                                   draggable={false}
+                                  width={40}
+                                  height={40}
                                   className="top-0 left-0 absolute"
                                 />
                               )}
@@ -503,7 +507,9 @@ const App = ({ ffmpegRef, isServer, ensureLoaded }) => {
                             <Image
                               src={avUrl || `${baseImgUrl}/avatars/blue.png`}
                               draggable={false}
-                              className="rounded-full w-10 h-10"
+                              width={40}
+                              height={40}
+                              className="rounded-full"
                             />
                           )}
                         </>

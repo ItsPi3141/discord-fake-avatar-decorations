@@ -52,7 +52,7 @@ export const DecorationsList = ({
             >
               <DecorationsCategoryBanner category={category} />
 
-              <div className="gap-3 grid grid-cols-3 xs:grid-cols-4 sm:grid-cols-5 min-[600px]:grid-cols-6 min-[720px]:grid-cols-7 md:grid-cols-5">
+              <div className="gap-3 grid grid-cols-3 xs:grid-cols-4 sm:grid-cols-5 min-[600px]:grid-cols-6 min-[720px]:grid-cols-7 md:grid-cols-5 w-full">
                 {category.i.map((decor) => {
                   return (
                     <Decoration
@@ -84,7 +84,7 @@ export const DecorationsList = ({
 
 const DecorationsCategoryBanner = ({ category }) => {
   return (
-    <div className="relative justify-center items-center grid grid-cols-1 grid-rows-1 bg-black mb-4 rounded-2xl h-28 overflow-hidden">
+    <div className="relative justify-center items-center grid grid-cols-1 grid-rows-1 bg-black mb-4 rounded-2xl w-full h-28 overflow-hidden">
       {typeof category.b.i !== "string" ? (
         <>
           <div
