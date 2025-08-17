@@ -70,7 +70,11 @@ export default function Home() {
     const promises = [
       new Promise((r) => {
         (async () => {
-          if (typeof SharedArrayBuffer === "undefined") {
+          if (
+            typeof SharedArrayBuffer === "undefined" ||
+            (navigator.userAgent.includes("Chrome/") &&
+              window.location.hostname === "localhost")
+          ) {
             await ffmpeg.load({
               coreURL: await toBlobURL(
                 `${ffmpegBaseUrl}ffmpeg-core.js`,
