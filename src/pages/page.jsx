@@ -268,7 +268,6 @@ const App = ({ ffmpegRef, isServer, ensureLoaded }) => {
             </p>
             <div className="flex sm:flex-row flex-col sm:items-center gap-3">
               <button
-                type="button"
                 className="px-4 py-1.5 button-primary"
                 onClick={() => {
                   document.getElementById("upload-avatar").click();
@@ -787,7 +786,6 @@ const AvatarList = ({ avatarsData, avatarSearch, setAvatarName, setAvUrl }) => {
             return (
               <button
                 key={avatar.n}
-                type="button"
                 className="avatar-preset button-tile"
                 onClick={(e) => {
                   setAvatarName(avatar.n.toLowerCase());
@@ -829,7 +827,6 @@ const DecorationsTabs = ({
           const Icon = Icons[icon];
           return (
             <button
-              type="button"
               key={name}
               className={`${
                 activeTab === index ? "bg-surface-high" : "bg-transparent"
@@ -1081,7 +1078,6 @@ const Decoration = ({ name, fileName, onClick }) => {
   return (
     <button
       key={name}
-      type="button"
       className="button-tile decor"
       onClick={onClick}
       onMouseOver={() => {

@@ -16,7 +16,6 @@ export default function Modal(props) {
         >
           {props.hideActions || (
             <button
-              type="button"
               className="top-4 right-4 absolute opacity-50 hover:opacity-100 text-icon-tertiary transition-opacity [transition-duration:200ms]"
               onClick={props.onClose}
             >
@@ -50,7 +49,6 @@ export default function Modal(props) {
               <div className="flex justify-end bg-surface-high mt-4 h-[38px]">
                 {props.secondaryText && (
                   <button
-                    type="button"
                     className="px-6 py-2 rounded-lg text-white/70 text-sm hover:underline transition"
                     onClick={props.onClose}
                   >
@@ -59,7 +57,6 @@ export default function Modal(props) {
                 )}
 
                 <button
-                  type="button"
                   className="px-6 py-2 text-sm button-primary"
                   onClick={props.onClose}
                 >

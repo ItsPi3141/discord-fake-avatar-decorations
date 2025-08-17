@@ -20,7 +20,6 @@ export default function SearchBar({ onValueChanged, placeholder }) {
       />
       {query.length > 0 ? (
         <button
-          type="button"
           onClick={() => {
             setQuery("");
             onValueChanged("");

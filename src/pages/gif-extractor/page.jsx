@@ -89,7 +89,6 @@ export default function GifExtractor() {
             {file == null ? (
               <>
                 <button
-                  type="button"
                   className="flex justify-center items-center gap-1 mt-3 py-1.5 w-72 button-primary"
                   onClick={() => {
                     document.getElementById("upload-gif").click();
@@ -122,7 +121,6 @@ export default function GifExtractor() {
               <>
                 <div className="relative flex flex-col items-center">
                   <button
-                    type="button"
                     className="top-2 right-2 absolute bg-surface-high hover:bg-surface-higher shadow-sm p-2 rounded-lg text-critical text-lg transition-colors"
                     onClick={() => {
                       setFile(null);
@@ -137,7 +135,6 @@ export default function GifExtractor() {
                     draggable="false"
                   />
                   <button
-                    type="button"
                     className="flex justify-center items-center gap-1 mt-3 py-1.5 w-72 max-w-[calc(100vw-4rem)] button-primary"
                     onClick={async () => {
                       setFrames(await imagesFromGif(ffmpegRef.current, file));
@@ -152,7 +149,6 @@ export default function GifExtractor() {
                     typeof frames.map === "function" &&
                     frames.map((frame, i) => (
                       <button
-                        type="button"
                         key={i}
                         className="flex justify-center items-center bg-base-lowest p-1 rounded-[5px] w-32 aspect-square"
                         onClick={() => {
