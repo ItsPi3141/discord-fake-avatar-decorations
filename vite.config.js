@@ -55,7 +55,7 @@ export default defineConfig({
     {
       name: "minify-html",
       transformIndexHtml(html) {
-        return html.replace(/[\n\t]/g, "");
+        return html.replace(/[\n\t]| {2}/g, "");
       },
     },
   ],
