@@ -506,7 +506,7 @@ const App = ({ ffmpegRef, isServer, ensureLoaded }) => {
                                 draggable={false}
                                 width={32.8}
                                 height={32.8}
-                                className="absolute rounded-full w-[calc(40px*0.82)] h-[calc(40px*0.82)]"
+                                className="top-[3.6px] left-[3.6px] absolute rounded-full"
                               />
                               {decoUrl && (
                                 <Image
