@@ -24,12 +24,10 @@ import {
 } from "@imagemagick/magick-wasm";
 import SearchBar from "@/components/searchbar.jsx";
 import { Svg } from "@/components/svg.jsx";
-import { lazy, useLocation } from "preact-iso";
+import { useLocation } from "preact-iso";
 import { NeutralButton } from "@/components/button";
 
-const DecorationsList = lazy(() =>
-  import("@/components/decorations").then((m) => m.DecorationsList)
-);
+import { DecorationsList } from "@/components/decorations";
 
 const baseImgUrl = import.meta.env.VITE_BASE_IMAGE_URL || "";
 
