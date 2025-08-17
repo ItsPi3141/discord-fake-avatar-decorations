@@ -232,9 +232,8 @@ const App = ({ ffmpegRef, isServer, ensureLoaded }) => {
   const [isGeneratingAv, setIsGeneratingAv] = useState(false);
   const [generationFailed, setGenerationFailed] = useState(false);
   const [downloadModalVisible, setDownloadModalVisible] = useState(false);
-  // @ts-ignore
+
   const [shared, setShared] = useState(false);
-  const [fileTooBig, setFileTooBig] = useState(false);
 
   const [avatarSearch, setAvatarSearch] = useState("");
   const [decoSearch, setDecoSearch] = useState("");
@@ -591,7 +590,7 @@ const App = ({ ffmpegRef, isServer, ensureLoaded }) => {
                 }}
               >
                 <Icons.link />
-                Share the website
+                {shared ? "Copied!" : "Share the website"}
               </NeutralButton>
               <NeutralButton
                 onClick={() => {
