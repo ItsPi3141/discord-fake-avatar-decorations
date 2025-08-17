@@ -779,7 +779,7 @@ const AvatarList = ({ avatarsData, avatarSearch, setAvatarName, setAvUrl }) => {
 
   return (
     <>
-      {getAvatars().length === 0 ? (
+      {getAvatars().length === 0 && !isServer ? (
         <NoSearchResults thing="avatars" />
       ) : (
         <div className="gap-3 grid grid-cols-3 xs:grid-cols-4 sm:grid-cols-5 min-[600px]:grid-cols-6 min-[720px]:grid-cols-7 md:grid-cols-5">
@@ -902,7 +902,7 @@ const DecorationsList = ({
       className={`mt-1 py-1 overflow-auto discord-scrollbar ${className}`}
       style={style}
     >
-      {getDecorations().length === 0 ? (
+      {getDecorations().length === 0 && !isServer ? (
         <NoSearchResults thing="decorations" />
       ) : (
         getDecorations().map((category) => {
