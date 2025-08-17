@@ -59,7 +59,9 @@ export default function Home() {
     }
 
     const ffmpegBaseUrl =
-      "https://cdn.jsdelivr.net/npm/@ffmpeg/core@0.12.6/dist/esm/";
+      "https://cdn.jsdelivr.net/npm/@ffmpeg/core@0.12.10/dist/esm/";
+    const ffmpegMtBaseUrl =
+      "https://cdn.jsdelivr.net/npm/@ffmpeg/core-mt@0.12.10/dist/esm/";
     const ffmpeg = ffmpegRef.current;
 
     const imageMagickUrl =
@@ -68,16 +70,33 @@ export default function Home() {
     const promises = [
       new Promise((r) => {
         (async () => {
-          await ffmpeg.load({
-            coreURL: await toBlobURL(
-              `${ffmpegBaseUrl}ffmpeg-core.js`,
-              "text/javascript"
-            ),
-            wasmURL: await toBlobURL(
-              `${ffmpegBaseUrl}ffmpeg-core.wasm`,
-              "application/wasm"
-            ),
-          });
+          if (typeof SharedArrayBuffer === "undefined") {
+            await ffmpeg.load({
+              coreURL: await toBlobURL(
+                `${ffmpegBaseUrl}ffmpeg-core.js`,
+                "text/javascript"
+              ),
+              wasmURL: await toBlobURL(
+                `${ffmpegBaseUrl}ffmpeg-core.wasm`,
+                "application/wasm"
+              ),
+            });
+          } else {
+            await ffmpeg.load({
+              coreURL: await toBlobURL(
+                `${ffmpegMtBaseUrl}ffmpeg-core.js`,
+                "text/javascript"
+              ),
+              wasmURL: await toBlobURL(
+                `${ffmpegMtBaseUrl}ffmpeg-core.wasm`,
+                "application/wasm"
+              ),
+              workerURL: await toBlobURL(
+                `${ffmpegMtBaseUrl}ffmpeg-core.worker.js`,
+                "text/javascript"
+              ),
+            });
+          }
           ffmpeg.on("log", (e) =>
             printMsg(
               ["ffmpeg", e.message],
