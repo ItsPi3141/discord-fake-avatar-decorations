@@ -1,4 +1,10 @@
-import { useCallback, useEffect, useRef, useState } from "preact/hooks";
+import {
+  useCallback,
+  useContext,
+  useEffect,
+  useRef,
+  useState,
+} from "preact/hooks";
 
 import FileUpload from "@/components/fileupload.jsx";
 import { Icons } from "@/components/icons.jsx";
@@ -27,6 +33,7 @@ import { Svg } from "@/components/svg.jsx";
 import { useLocation } from "preact-iso";
 import { NeutralButton } from "@/components/button";
 import { Fragment } from "preact/jsx-runtime";
+import { createContext } from "preact";
 
 const baseImgUrl = import.meta.env.VITE_BASE_IMAGE_URL || "";
 
@@ -152,11 +159,7 @@ export default function Home() {
 
   return (
     <>
-      <App
-        ffmpegRef={ffmpegRef}
-        isServer={isServer}
-        ensureLoaded={ensureLoaded}
-      />
+      <App ffmpegRef={ffmpegRef} ensureLoaded={ensureLoaded} />
       <UnsupportedModal unsupportedMsg={unsupported} />
     </>
   );
@@ -184,7 +187,9 @@ const UnsupportedModal = ({ unsupportedMsg }) =>
     </Modal>
   );
 
-const App = ({ ffmpegRef, isServer, ensureLoaded }) => {
+const CurrentData = createContext(null);
+
+const App = ({ ffmpegRef, ensureLoaded }) => {
   // @ts-ignore
   const previewAvatar = useCallback(async (url) => {
     if (isServer) return;
@@ -261,7 +266,21 @@ const App = ({ ffmpegRef, isServer, ensureLoaded }) => {
   }, []);
 
   return (
-    <>
+    <CurrentData.Provider
+      value={{
+        avatarsData,
+        avatarSearch,
+        setAvatarName,
+        setAvUrl,
+
+        decorationsData,
+        decoSearch,
+        setName,
+        setDescription,
+        setDecoUrl,
+        name,
+      }}
+    >
       <main className="flex flex-col items-center w-screen h-screen overflow-auto text-white discord-scrollbar">
         <div className="relative bg-primary sm:mt-8 sm:rounded-3xl w-full sm:w-[calc(100%-6rem)] min-h-72 overflow-hidden select-none">
           <div
@@ -357,12 +376,7 @@ const App = ({ ffmpegRef, isServer, ensureLoaded }) => {
             />
             {/* SELECT AVATAR */}
             <div className="flex flex-col gap-8 mt-1 py-1 h-[280px] overflow-auto discord-scrollbar">
-              <AvatarList
-                avatarsData={avatarsData}
-                avatarSearch={avatarSearch}
-                setAvatarName={setAvatarName}
-                setAvUrl={setAvUrl}
-              />
+              <AvatarList />
             </div>
             <hr className="border-b border-border-faint/10" />
 
@@ -375,13 +389,7 @@ const App = ({ ffmpegRef, isServer, ensureLoaded }) => {
               onValueChanged={setDecoSearch}
             />
 
-            <DecorationsTabs
-              decoData={decorationsData}
-              decoSearch={decoSearch}
-              setName={setName}
-              setDescription={setDescription}
-              setDecoUrl={setDecoUrl}
-            />
+            <DecorationsTabs />
           </div>
 
           <div className="flex flex-col items-center gap-8">
@@ -780,7 +788,7 @@ const App = ({ ffmpegRef, isServer, ensureLoaded }) => {
           };
         }}
       />
-    </>
+    </CurrentData.Provider>
   );
 };
 
@@ -793,13 +801,28 @@ export const NoSearchResults = ({ thing }) => {
   );
 };
 
-const AvatarList = ({ avatarsData, avatarSearch, setAvatarName, setAvUrl }) => {
+const AvatarList = () => {
+  const { avatarsData, avatarSearch, setAvatarName, setAvUrl } =
+    useContext(CurrentData);
+
   const getAvatars = useCallback(() => {
     if (isServer) return [];
     return avatarsData.filter((avatar) =>
       avatar.n.toLowerCase().includes(avatarSearch.toLowerCase())
     );
   }, [avatarsData, avatarSearch]);
+
+  const onSelectAvatar = useCallback((event, name, file) => {
+    setAvatarName(name.toLowerCase());
+    setAvUrl(`${baseImgUrl}/avatars/${file}`);
+    for (const el of document.querySelectorAll(
+      ".avatar-preset.border-primary"
+    )) {
+      el.classList.remove("border-primary");
+    }
+    // @ts-ignore
+    event.target.classList.add("border-primary");
+  }, []);
 
   return (
     <>
@@ -813,15 +836,7 @@ const AvatarList = ({ avatarsData, avatarSearch, setAvatarName, setAvUrl }) => {
                 key={avatar.n}
                 className="avatar-preset button-tile"
                 onClick={(e) => {
-                  setAvatarName(avatar.n.toLowerCase());
-                  setAvUrl(`${baseImgUrl}/avatars/${avatar.f}`);
-                  for (const el of document.querySelectorAll(
-                    "button.avatar-preset.border-primary"
-                  )) {
-                    el.classList.remove("border-primary");
-                  }
-                  // @ts-ignore
-                  e.target.classList.add("border-primary");
+                  onSelectAvatar(e, avatar.n, avatar.f);
                 }}
               >
                 <Image
@@ -837,18 +852,14 @@ const AvatarList = ({ avatarsData, avatarSearch, setAvatarName, setAvUrl }) => {
   );
 };
 
-const DecorationsTabs = ({
-  decoData,
-  decoSearch,
-  setName,
-  setDescription,
-  setDecoUrl,
-}) => {
+const DecorationsTabs = () => {
+  const { decorationsData } = useContext(CurrentData);
+
   const [activeTab, setActiveTab] = useState(0);
   return (
     <>
       <div className="flex gap-3 my-2">
-        {decoData.map(({ name, icon }, index) => {
+        {decorationsData.map(({ name, icon }, index) => {
           const Icon = Icons[icon];
           return (
             <button
@@ -865,15 +876,11 @@ const DecorationsTabs = ({
         })}
       </div>
       <div className="relative h-[532px] overflow-clip">
-        {decoData.map(({ name, data }, index) => (
+        {decorationsData.map(({ name, data }, index) => (
           <DecorationsList
             key={name}
             {...{
-              decoData: data,
-              decoSearch,
-              setName,
-              setDescription,
-              setDecoUrl,
+              decorationsList: data,
             }}
             style={{
               // display: activeTab === index ? "block" : "none",
@@ -894,18 +901,13 @@ const DecorationsTabs = ({
   );
 };
 
-const DecorationsList = ({
-  decoData,
-  decoSearch,
-  setName,
-  setDescription,
-  setDecoUrl,
-  style,
-  className,
-}) => {
+const DecorationsList = ({ decorationsList, style, className }) => {
+  const { decoSearch, setName, setDescription, setDecoUrl } =
+    useContext(CurrentData);
+
   const getDecorations = useCallback(() => {
     if (isServer) return [];
-    return decoData
+    return decorationsList
       .map((c) => ({
         ...c,
         i: c.i.filter(
@@ -917,7 +919,18 @@ const DecorationsList = ({
         ),
       }))
       .filter((category) => category.i.length > 0);
-  }, [decoData, decoSearch]);
+  }, [decorationsList, decoSearch]);
+
+  const onSelectDecor = useCallback((event, name, description, file) => {
+    setName(name);
+    setDescription(description);
+    setDecoUrl(`/decorations/${file}.png`);
+
+    for (const el of document.querySelectorAll(".decor.border-primary")) {
+      el.classList.remove("border-primary");
+    }
+    event.target.classList.add("border-primary");
+  }, []);
 
   return (
     <div
@@ -947,18 +960,9 @@ const DecorationsList = ({
                     <Decoration
                       name={decor.n}
                       fileName={decor.f}
-                      onClick={(e) => {
-                        setName(decor.n);
-                        setDescription(decor.d);
-                        setDecoUrl(`/decorations/${decor.f}.png`);
-                        for (const el of document.querySelectorAll(
-                          "button.decor.border-primary"
-                        )) {
-                          el.classList.remove("border-primary");
-                        }
-                        // @ts-ignore
-                        e.target.classList.add("border-primary");
-                      }}
+                      onClick={(e) =>
+                        onSelectDecor(e, decor.n, decor.d, decor.f)
+                      }
                     />
                   );
                 })}
@@ -1097,9 +1101,15 @@ const Decoration = ({ name, fileName, onClick }) => {
   const [timer, setTimer] = useState(0);
 
   return (
-    <button
+    <Image
       key={name}
+      src={
+        isHovered
+          ? `/decorations/${fileName}.png`
+          : `/mdecorations/${fileName}.webp`
+      }
       className="button-tile decor"
+      draggable={false}
       onClick={onClick}
       onMouseOver={() => {
         setTimer(
@@ -1117,15 +1127,6 @@ const Decoration = ({ name, fileName, onClick }) => {
           clearTimeout(timer);
         } catch (e) {}
       }}
-    >
-      <Image
-        src={
-          isHovered
-            ? `/decorations/${fileName}.png`
-            : `/mdecorations/${fileName}.webp`
-        }
-        className="pointer-events-none"
-      />
-    </button>
+    />
   );
 };

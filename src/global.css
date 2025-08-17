@@ -79,7 +79,7 @@
     @apply bg-button-secondary-background hover:bg-button-secondary-hover active:bg-button-secondary-active border border-button-secondary-border rounded-lg transition;
   }
   .button-tile {
-    @apply bg-base-lowest p-2 border-2 border-transparent rounded-[5px] outline-none w-full aspect-square;
+    @apply bg-base-lowest p-2 border-2 border-transparent rounded-[5px] outline-none w-full aspect-square cursor-pointer;
   }
   .button-outline {
     @apply border border-button-secondary-background rounded-lg transition;
