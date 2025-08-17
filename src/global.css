@@ -101,9 +101,6 @@
 .ginto {
   @apply ginto;
 }
-.nitro-font {
-  font-family: "Urfa", sans-serif;
-}
 
 *::selection {
   background: #5865f2;

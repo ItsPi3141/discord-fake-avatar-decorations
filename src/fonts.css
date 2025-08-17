@@ -96,10 +96,3 @@
   src: url("https://cdn.jsdelivr.net/gh/itspi3141/discord-fonts@c0222e6/fonts/gg mono normal 700.woff2")
     format("woff2");
 }
-@font-face {
-  font-family: "Urfa";
-  font-style: italic;
-  font-weight: 800;
-  src: url("https://cdn.jsdelivr.net/gh/itspi3141/discord-fonts@c0222e6/fonts/Urfa italic 800.woff2")
-    format("woff2");
-}

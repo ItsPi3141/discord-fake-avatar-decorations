@@ -20,13 +20,12 @@ export function FontPreloader() {
             fontSize: "1px",
           }}
         >
-          {[400, 500, 600, 700].map((weight) => (
+          {[400, 500, 600].map((weight) => (
             <p key={weight} style={{ fontWeight: weight }}>
               e
             </p>
           ))}
           <p className="ginto">e</p>
-          <p className="nitro-font">e</p>
         </div>
       )}
     </>

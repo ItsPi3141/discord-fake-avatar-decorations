@@ -1055,11 +1055,7 @@ const DecorationsCategoryBanner = ({ category }) => {
                 }}
               >
                 {category.n.toLowerCase().includes("nitro") ? (
-                  <>
-                    <span className="text-4xl uppercase nitro-font">
-                      {category.n}
-                    </span>
-                  </>
+                  <Svg.Nitro className="my-2" />
                 ) : (
                   category.n
                 )}
