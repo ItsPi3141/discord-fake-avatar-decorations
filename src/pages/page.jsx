@@ -396,7 +396,7 @@ const App = ({ ffmpegRef, isServer, ensureLoaded }) => {
                 </div>
                 <div className="right-[-4px] bottom-[-4px] absolute bg-[#229f56] border-[5px] border-surface-overlay rounded-full w-7 h-7" />
               </div>
-              <div className="bg-surface-overlay mt-[35px] p-4 rounded-lg w-[calc(100%)]">
+              <div className="bg-surface-overlay mt-[35px] p-4 rounded-lg w-[calc(100%)] *:w-full">
                 <p className="font-semibold text-xl [letter-spacing:.02em]">
                   {name || "Display Name"}
                 </p>
@@ -405,9 +405,7 @@ const App = ({ ffmpegRef, isServer, ensureLoaded }) => {
                   {description ||
                     "This is an example profile so that you can see what the profile picture would actually look like on Discord."}
                 </p>
-                <button
-                  type="button"
-                  className="flex justify-center items-center gap-1.5 mt-3 px-4 py-1.5 w-full button-secondary"
+                <NeutralButton
                   onClick={() => {
                     setFinishedAv("");
                     setIsGeneratingAv(true);
@@ -421,7 +419,7 @@ const App = ({ ffmpegRef, isServer, ensureLoaded }) => {
                 >
                   <Icons.image />
                   Save image
-                </button>
+                </NeutralButton>
               </div>
             </div>
             {/* Message preview */}
@@ -547,9 +545,7 @@ const App = ({ ffmpegRef, isServer, ensureLoaded }) => {
               <p>
                 Help support the project <Twemoji emoji="1f64f" />
               </p>
-              <button
-                type="button"
-                className="flex justify-center items-center gap-1.5 mt-3 py-1.5 button-secondary shiny-button"
+              <NeutralButton
                 onClick={() => {
                   window.open(
                     "https://github.com/ItsPi3141/discord-fake-avatar-decorations"
@@ -558,7 +554,7 @@ const App = ({ ffmpegRef, isServer, ensureLoaded }) => {
               >
                 <Icons.star />
                 Star on GitHub
-              </button>
+              </NeutralButton>
               <NeutralButton
                 onClick={() => {
                   navigator.clipboard.writeText(window.location.href);
@@ -704,10 +700,8 @@ const App = ({ ffmpegRef, isServer, ensureLoaded }) => {
               height={128}
             />
             <div className="flex flex-col w-full">
-              <div className="flex flex-col items-center gap-2 mt-3 w-full">
-                <button
-                  type="button"
-                  className="flex justify-center items-center gap-1.5 py-1.5 w-72 button-secondary"
+              <div className="flex flex-col items-center gap-2 mt-3 *:mt-0 w-full *:w-72">
+                <NeutralButton
                   onClick={() => {
                     const a = document.createElement("a");
                     a.href = finishedAv;
@@ -717,10 +711,8 @@ const App = ({ ffmpegRef, isServer, ensureLoaded }) => {
                 >
                   <Icons.download />
                   Save
-                </button>
-                <button
-                  type="button"
-                  className="flex justify-center items-center gap-1.5 py-1.5 w-72 button-secondary"
+                </NeutralButton>
+                <NeutralButton
                   onClick={() => {
                     if (isServer) return;
                     storeData("image", finishedAv);
@@ -729,7 +721,7 @@ const App = ({ ffmpegRef, isServer, ensureLoaded }) => {
                 >
                   <Icons.image />
                   Extract still image
-                </button>
+                </NeutralButton>
               </div>
             </div>
           </div>
