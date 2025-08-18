@@ -1,5 +1,5 @@
-import { FFmpeg } from "@ffmpeg/ffmpeg";
 import {
+  ffmpeg,
   ffmpegFetchAndConvert,
   getAPngDuration,
   getGifDuration,
@@ -8,14 +8,10 @@ import {
 /**
  * Crop the image to a square shape using FFmpeg.
  *
- * @param {FFmpeg} ffmpeg - The FFmpeg instance.
  * @param {String} url - The URL or B64 string of the image to crop.
  * @return {Promise} A promise that resolves with the cropped image data.
  */
-export function cropToSquare(
-  /** @type {FFmpeg} */ ffmpeg,
-  /** @type {String} */ url
-) {
+export function cropToSquare(/** @type {String} */ url) {
   return new Promise((resolve, reject) => {
     (async () => {
       try {
@@ -70,7 +66,6 @@ export function cropToSquare(
 }
 
 export function addDecoration(
-  /** @type {FFmpeg} */ ffmpeg,
   /** @type {String} */ imageUrl,
   /** @type {String} */ decorationUrl
 ) {

@@ -4,16 +4,18 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "remove-build-assets": "node build/removeAssets.js"
   },
   "dependencies": {
     "@discordapp/twemoji": "^16.0.1",
     "@ffmpeg/ffmpeg": "0.12.15",
     "@ffmpeg/util": "0.12.2",
     "@giscus/react": "^3.1.0",
-    "@imagemagick/magick-wasm": "0.0.35",
+    "@jsquash/webp": "1.5.0-animated-webp-support-beta.2",
     "@tailwindcss/vite": "^4.1.12",
     "apng-js": "^1.1.5",
+    "gifski-wasm": "^2.2.0",
     "preact": "^10.27.0",
     "preact-iso": "^2.9.2",
     "preact-render-to-string": "^6.5.13",

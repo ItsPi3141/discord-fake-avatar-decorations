@@ -16,18 +16,19 @@ import Twemoji from "@/components/twemoji.jsx";
 import { FFmpeg } from "@ffmpeg/ffmpeg";
 import { toBlobURL } from "@ffmpeg/util";
 import { addDecoration, cropToSquare } from "@/ffmpeg/processImage.js";
-import { getMimeTypeFromArrayBuffer } from "@/ffmpeg/utils.js";
+import {
+  ffmpeg,
+  getMimeTypeFromArrayBuffer,
+  initFfmpeg,
+  setFfmpeg,
+} from "@/ffmpeg/utils.js";
 
 import { printMsg, printErr } from "@/utils/print.js";
 import { getData, storeData } from "@/utils/dataHandler.js";
 
 import { decorationsData } from "@/data/decorations.js";
 import { avatarsData } from "@/data/avatars.js";
-import {
-  initializeImageMagick,
-  LogEventTypes,
-  Magick,
-} from "@imagemagick/magick-wasm";
+
 import SearchBar from "@/components/searchbar.jsx";
 import { Svg } from "@/components/svg.jsx";
 import { useLocation } from "preact-iso";
@@ -65,88 +66,21 @@ export default function Home() {
       setUnsupported("Your browser does not support WebAssembly.");
     }
 
-    const ffmpegBaseUrl =
-      "https://cdn.jsdelivr.net/npm/@ffmpeg/core@0.12.10/dist/esm/";
-    const ffmpegMtBaseUrl =
-      "https://cdn.jsdelivr.net/npm/@ffmpeg/core-mt@0.12.10/dist/esm/";
-    const ffmpeg = ffmpegRef.current;
+    if (!transferredFfmpeg) {
+      setFfmpeg(ffmpegRef.current);
 
-    const imageMagickUrl =
-      "https://cdn.jsdelivr.net/npm/@imagemagick/magick-wasm@0.0.35/dist/magick.wasm";
+      const promises = [
+        new Promise((r) => {
+          (async () => {
+            await initFfmpeg();
+            r();
+          })();
+        }),
+      ];
+      loadingPromise = Promise.all(promises);
+      await loadingPromise;
+    }
 
-    const promises = [
-      new Promise((r) => {
-        (async () => {
-          if (
-            typeof SharedArrayBuffer === "undefined" ||
-            (navigator.userAgent.includes("Chrome/") &&
-              window.location.hostname === "localhost")
-          ) {
-            await ffmpeg.load({
-              coreURL: await toBlobURL(
-                `${ffmpegBaseUrl}ffmpeg-core.js`,
-                "text/javascript"
-              ),
-              wasmURL: await toBlobURL(
-                `${ffmpegBaseUrl}ffmpeg-core.wasm`,
-                "application/wasm"
-              ),
-            });
-          } else {
-            await ffmpeg.load({
-              coreURL: await toBlobURL(
-                `${ffmpegMtBaseUrl}ffmpeg-core.js`,
-                "text/javascript"
-              ),
-              wasmURL: await toBlobURL(
-                `${ffmpegMtBaseUrl}ffmpeg-core.wasm`,
-                "application/wasm"
-              ),
-              workerURL: await toBlobURL(
-                `${ffmpegMtBaseUrl}ffmpeg-core.worker.js`,
-                "text/javascript"
-              ),
-            });
-          }
-          ffmpeg.on("log", (e) =>
-            printMsg(
-              ["ffmpeg", e.message],
-              [
-                {
-                  color: "white",
-                  background: "#5765f2",
-                  padding: "2px 8px",
-                  borderRadius: "10px",
-                },
-              ]
-            )
-          );
-          storeData("ffmpeg", ffmpeg);
-          r();
-        })();
-      }),
-      new Promise((r) => {
-        (async () => {
-          await initializeImageMagick(new URL(imageMagickUrl));
-          Magick.onLog = (e) =>
-            printMsg(
-              ["imagemagick", e.message.split("]:").slice(1).join("]:")],
-              [
-                {
-                  color: "black",
-                  background: "#e0e3ff",
-                  padding: "2px 8px",
-                  borderRadius: "10px",
-                },
-              ]
-            );
-          Magick.setLogEvents(LogEventTypes.All);
-          r();
-        })();
-      }),
-    ];
-    loadingPromise = Promise.all(promises);
-    await loadingPromise;
     setLoaded(true);
   }, []);
 
@@ -159,7 +93,7 @@ export default function Home() {
 
   return (
     <>
-      <App ffmpegRef={ffmpegRef} ensureLoaded={ensureLoaded} />
+      <App ensureLoaded={ensureLoaded} />
       <UnsupportedModal unsupportedMsg={unsupported} />
     </>
   );
@@ -189,15 +123,13 @@ const UnsupportedModal = ({ unsupportedMsg }) =>
 
 const CurrentData = createContext(null);
 
-const App = ({ ffmpegRef, ensureLoaded }) => {
+const App = ({ ensureLoaded }) => {
   // @ts-ignore
   const previewAvatar = useCallback(async (url) => {
     if (isServer) return;
     await ensureLoaded();
     setAvUrl("loading");
-    const res = await cropToSquare(ffmpegRef.current, url).catch((reason) =>
-      printErr(reason)
-    );
+    const res = await cropToSquare(url).catch((reason) => printErr(reason));
     if (!res) return setAvUrl(null);
     setAvUrl(res);
   });
@@ -206,11 +138,7 @@ const App = ({ ffmpegRef, ensureLoaded }) => {
   const createAvatar = useCallback(async (url, deco) => {
     if (isServer) return;
     await ensureLoaded();
-    addDecoration(
-      ffmpegRef.current,
-      url,
-      deco === "" ? "" : `${baseImgUrl}${deco}`
-    )
+    addDecoration(url, deco === "" ? "" : `${baseImgUrl}${deco}`)
       .then((res) => {
         if (!res) {
           setFinishedAv(null);

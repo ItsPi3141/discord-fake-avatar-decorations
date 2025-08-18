@@ -7,7 +7,12 @@ import Image from "@/components/image.jsx";
 import { FFmpeg } from "@ffmpeg/ffmpeg";
 import { toBlobURL } from "@ffmpeg/util";
 import { imagesFromGif } from "@/ffmpeg/extractFrames.js";
-import { getMimeTypeFromArrayBuffer } from "@/ffmpeg/utils.js";
+import {
+  ffmpeg,
+  getMimeTypeFromArrayBuffer,
+  initFfmpeg,
+  setFfmpeg,
+} from "@/ffmpeg/utils.js";
 
 import { printErr, printMsg } from "@/utils/print.js";
 import { clearData, getData, storeData } from "@/utils/dataHandler.js";
@@ -19,6 +24,7 @@ const isServer = typeof window === "undefined";
 export default function GifExtractor() {
   const [loaded, setLoaded] = useState(false);
   const [loadPercentage, setLoadPercentage] = useState("0%");
+
   const transferredFfmpeg = getData("ffmpeg");
   const ffmpegRef = useRef(isServer ? null : transferredFfmpeg || new FFmpeg());
 
@@ -26,38 +32,11 @@ export default function GifExtractor() {
     if (isServer) return;
 
     if (!transferredFfmpeg) {
-      const baseURL = "https://unpkg.com/@ffmpeg/core@0.12.6/dist/esm/";
-      const ffmpeg = ffmpegRef.current;
-
-      await ffmpeg.load({
-        coreURL: await toBlobURL(`${baseURL}ffmpeg-core.js`, "text/javascript"),
-        wasmURL: URL.createObjectURL(
-          new Blob(
-            [
-              await downloadWithProgress(`${baseURL}ffmpeg-core.wasm`, (e) => {
-                setLoadPercentage(
-                  `${Math.round((e.received / ffmpegTotalBytes) * 100)}%`
-                );
-              }),
-            ],
-            { type: "application/wasm" }
-          )
-        ),
+      await initFfmpeg((e) => {
+        setLoadPercentage(
+          `${Math.round((e.received / ffmpegTotalBytes) * 100)}%`
+        );
       });
-      ffmpeg.on("log", (e) =>
-        printMsg(
-          ["ffmpeg", e.message],
-          [
-            {
-              color: "white",
-              background: "#5765f2",
-              padding: "2px 8px",
-              borderRadius: "10px",
-            },
-          ]
-        )
-      );
-      storeData("ffmpeg", ffmpeg);
     }
 
     setLoaded(true);
@@ -137,7 +116,7 @@ export default function GifExtractor() {
                   <button
                     className="flex justify-center items-center gap-1 mt-3 py-1.5 w-72 max-w-[calc(100vw-4rem)] button-primary"
                     onClick={async () => {
-                      setFrames(await imagesFromGif(ffmpegRef.current, file));
+                      setFrames(await imagesFromGif(file));
                     }}
                   >
                     Extract frames

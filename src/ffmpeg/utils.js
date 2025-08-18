@@ -1,7 +1,96 @@
-import { printErr } from "@/utils/print";
-import { fetchFile } from "@ffmpeg/util";
-import { ImageMagick, MagickFormat } from "@imagemagick/magick-wasm";
+import { printErr, printMsg } from "@/utils/print";
+import { downloadWithProgress } from "@/utils/download";
+import { storeData } from "@/utils/dataHandler";
+
+import { FFmpeg } from "@ffmpeg/ffmpeg";
+import { fetchFile, toBlobURL } from "@ffmpeg/util";
+
 import parseAPNG from "apng-js";
+import {
+  decodeAnimated as decodeAnimatedWebp,
+  init as initDecodeWebp,
+} from "@jsquash/webp/decode";
+import { encode as encodeGif, init as initGif } from "gifski-wasm";
+
+export let /** @type {FFmpeg} */ ffmpeg;
+export const setFfmpeg = (/** @type {FFmpeg} */ f) => (ffmpeg = f);
+
+export const initFfmpeg = async (onProgress) => {
+  const ffmpegBaseUrl =
+    "https://cdn.jsdelivr.net/npm/@ffmpeg/core@0.12.10/dist/esm/";
+  const ffmpegMtBaseUrl =
+    "https://cdn.jsdelivr.net/npm/@ffmpeg/core-mt@0.12.10/dist/esm/";
+
+  if (
+    typeof SharedArrayBuffer === "undefined" ||
+    (navigator.userAgent.includes("Chrome/") &&
+      window.location.hostname === "localhost")
+  ) {
+    await ffmpeg.load({
+      coreURL: await toBlobURL(
+        `${ffmpegBaseUrl}ffmpeg-core.js`,
+        "text/javascript"
+      ),
+      wasmURL: onProgress
+        ? URL.createObjectURL(
+            new Blob(
+              [
+                await downloadWithProgress(
+                  `${ffmpegBaseUrl}ffmpeg-core.wasm`,
+                  onProgress
+                ),
+              ],
+              { type: "application/wasm" }
+            )
+          )
+        : await toBlobURL(
+            `${ffmpegBaseUrl}ffmpeg-core.wasm`,
+            "application/wasm"
+          ),
+    });
+  } else {
+    await ffmpeg.load({
+      coreURL: await toBlobURL(
+        `${ffmpegMtBaseUrl}ffmpeg-core.js`,
+        "text/javascript"
+      ),
+      wasmURL: onProgress
+        ? URL.createObjectURL(
+            new Blob(
+              [
+                await downloadWithProgress(
+                  `${ffmpegMtBaseUrl}ffmpeg-core.wasm`,
+                  onProgress
+                ),
+              ],
+              { type: "application/wasm" }
+            )
+          )
+        : await toBlobURL(
+            `${ffmpegMtBaseUrl}ffmpeg-core.wasm`,
+            "application/wasm"
+          ),
+      workerURL: await toBlobURL(
+        `${ffmpegMtBaseUrl}ffmpeg-core.worker.js`,
+        "text/javascript"
+      ),
+    });
+  }
+  ffmpeg.on("log", (e) =>
+    printMsg(
+      ["ffmpeg", e.message],
+      [
+        {
+          color: "white",
+          background: "#5765f2",
+          padding: "2px 8px",
+          borderRadius: "10px",
+        },
+      ]
+    )
+  );
+  storeData("ffmpeg", ffmpeg);
+};
 
 /**
  * Retrieves the MIME type of an ArrayBuffer or Uint8Array.
@@ -98,14 +187,44 @@ export function arraybuffer2base64(arraybuffer) {
  * Converts a WebP file to a GIF file.
  *
  * @param {ArrayBuffer} arraybuf - The WebP file as an ArrayBuffer.
- * @return {Promise<Uint8Array>} A promise that resolves with the converted GIF file as a Blob.
+ * @return {Promise<{arrayBuffer: ArrayBuffer, data: Uint8Array, type: string}>} A promise that resolves with an ffmpeg-compatible file.
  */
-export async function webp2png(arraybuf) {
-  return new Promise((resolve) => {
-    ImageMagick.read(new Uint8Array(arraybuf), MagickFormat.WebP, (image) => {
-      image.write(MagickFormat.Png, resolve);
-    });
+export async function awebp2gif(arraybuf) {
+  printMsg("Decoding animated WebP");
+  await initDecodeWebp(null, {
+    locateFile: (path) =>
+      `https://cdn.jsdelivr.net/npm/@jsquash/webp@1.5.0-animated-webp-support-beta.2/codec/dec/${path}`,
   });
+
+  const [frames] = await Promise.all([
+    new Promise(async (resolve) => {
+      const frames = await decodeAnimatedWebp(arraybuf);
+      resolve(frames);
+    }),
+    new Promise(async (resolve) => {
+      await initGif(
+        "https://cdn.jsdelivr.net/npm/gifski-wasm@2.2.0/pkg/gifski_wasm_bg.wasm"
+      );
+      resolve();
+    }),
+  ]);
+
+  printMsg("Converting to GIF");
+  const res = await encodeGif({
+    frames: frames.map((frame) => frame.imageData),
+    width: frames[0].imageData.width,
+    height: frames[0].imageData.height,
+    frameDurations: frames.map((frame) => frame.duration),
+  });
+  printMsg("Done");
+  const gif = res.buffer;
+  return {
+    // @ts-ignore
+    arrayBuffer: gif,
+    // @ts-ignore
+    data: await fetchFile(new Blob([gif], { type: "image/gif" })),
+    type: "image/gif",
+  };
 }
 
 /**
@@ -127,10 +246,15 @@ export async function ffmpegFetchAndConvert(blob) {
     };
   }
 
-  const convertedAb = await webp2png(ab);
-  return {
-    arrayBuffer: convertedAb,
-    data: await fetchFile(new Blob([convertedAb])),
-    type: "image/png",
-  };
+  const u8arr = new Uint8Array(ab);
+  const isAnimated = u8arr.slice(30, 34).join("") === "65787377";
+  if (!isAnimated) {
+    return {
+      arrayBuffer: ab,
+      data: await fetchFile(blob),
+      type,
+    };
+  }
+
+  return await awebp2gif(ab);
 }

@@ -500,13 +500,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@imagemagick/magick-wasm@npm:0.0.35":
-  version: 0.0.35
-  resolution: "@imagemagick/magick-wasm@npm:0.0.35"
-  checksum: 10c0/a3844caf19abe38875457e68217c488aadb9c189f992fca1ad41cb9b696d6d348a11c46f63b3bd62a9412ff4eed6b29c76dea5d52e5875fc1903f37d4342319c
-  languageName: node
-  linkType: hard
-
 "@isaacs/cliui@npm:^8.0.2":
   version: 8.0.2
   resolution: "@isaacs/cliui@npm:8.0.2"
@@ -571,6 +564,15 @@ __metadata:
     "@jridgewell/resolve-uri": "npm:^3.1.0"
     "@jridgewell/sourcemap-codec": "npm:^1.4.14"
   checksum: 10c0/fb547ba31658c4d74eb17e7389f4908bf7c44cef47acb4c5baa57289daf68e6fe53c639f41f751b3923aca67010501264f70e7b49978ad1f040294b22c37b333
+  languageName: node
+  linkType: hard
+
+"@jsquash/webp@npm:1.5.0-animated-webp-support-beta.2":
+  version: 1.5.0-animated-webp-support-beta.2
+  resolution: "@jsquash/webp@npm:1.5.0-animated-webp-support-beta.2"
+  dependencies:
+    wasm-feature-detect: "npm:^1.2.11"
+  checksum: 10c0/44018bb1ecf927dff308756de682e7e08237720c40672ae751c91d27ae5f2d96ab68c970c2b62f36c1b0b1bc8548907948c083e606a91b358c6b05f3dbca84a2
   languageName: node
   linkType: hard
 
@@ -1534,6 +1536,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"gifski-wasm@npm:^2.2.0":
+  version: 2.2.0
+  resolution: "gifski-wasm@npm:2.2.0"
+  dependencies:
+    wasm-feature-detect: "npm:1.6.1"
+  checksum: 10c0/20c6b5f43b0093195b1cd94445ead9714094238e7114f1f7726f6225668c6ac8ed48a9f361009d3f9c600d54e45d5a71e38523123ac7bf7c5b467728ffde1b5b
+  languageName: node
+  linkType: hard
+
 "giscus@npm:^1.6.0":
   version: 1.6.0
   resolution: "giscus@npm:1.6.0"
@@ -2290,10 +2301,11 @@ __metadata:
     "@ffmpeg/ffmpeg": "npm:0.12.15"
     "@ffmpeg/util": "npm:0.12.2"
     "@giscus/react": "npm:^3.1.0"
-    "@imagemagick/magick-wasm": "npm:0.0.35"
+    "@jsquash/webp": "npm:1.5.0-animated-webp-support-beta.2"
     "@preact/preset-vite": "npm:^2.10.2"
     "@tailwindcss/vite": "npm:^4.1.12"
     apng-js: "npm:^1.1.5"
+    gifski-wasm: "npm:^2.2.0"
     preact: "npm:^10.27.0"
     preact-iso: "npm:^2.9.2"
     preact-render-to-string: "npm:^6.5.13"
@@ -2616,6 +2628,20 @@ __metadata:
   bin:
     vite: bin/vite.js
   checksum: 10c0/4ed825b20bc0f49db99cd382de9506b2721ccd47dcebd4a68e0ef65e3cdd2347fded52b306c34178308e0fd7fe78fd5ff517623002cb00710182ad3012c92ced
+  languageName: node
+  linkType: hard
+
+"wasm-feature-detect@npm:1.6.1":
+  version: 1.6.1
+  resolution: "wasm-feature-detect@npm:1.6.1"
+  checksum: 10c0/c45c162978874bb4daa6b918e2b1477cc4a009aef2819876e916e293de5f7e7d4b36ad24cfca96d4d9dce5671cec153ee929bc75b440c6e5bd08d64f0a1481bf
+  languageName: node
+  linkType: hard
+
+"wasm-feature-detect@npm:^1.2.11":
+  version: 1.8.0
+  resolution: "wasm-feature-detect@npm:1.8.0"
+  checksum: 10c0/2cb43e91bbf7aa7c121bc76b3133de3ab6dc4f482acc1d2dc46c528e8adb7a51c72df5c2aacf1d219f113c04efd1706f18274d5790542aa5dd49e0644e3ee665
   languageName: node
   linkType: hard
 
