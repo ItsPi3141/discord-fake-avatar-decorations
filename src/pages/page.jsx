@@ -14,16 +14,14 @@ import { LoadingCubes } from "@/components/spinner.jsx";
 import Twemoji from "@/components/twemoji.jsx";
 
 import { FFmpeg } from "@ffmpeg/ffmpeg";
-import { toBlobURL } from "@ffmpeg/util";
 import { addDecoration, cropToSquare } from "@/ffmpeg/processImage.js";
 import {
-  ffmpeg,
   getMimeTypeFromArrayBuffer,
   initFfmpeg,
   setFfmpeg,
 } from "@/ffmpeg/utils.js";
 
-import { printMsg, printErr } from "@/utils/print.js";
+import { printErr } from "@/utils/print.js";
 import { getData, storeData } from "@/utils/dataHandler.js";
 
 import { decorationsData } from "@/data/decorations.js";
@@ -69,15 +67,7 @@ export default function Home() {
     if (!transferredFfmpeg) {
       setFfmpeg(ffmpegRef.current);
 
-      const promises = [
-        new Promise((r) => {
-          (async () => {
-            await initFfmpeg();
-            r();
-          })();
-        }),
-      ];
-      loadingPromise = Promise.all(promises);
+      loadingPromise = initFfmpeg();
       await loadingPromise;
     }
 

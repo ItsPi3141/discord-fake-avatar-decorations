@@ -5,10 +5,8 @@ import { Icons } from "@/components/icons.jsx";
 import Image from "@/components/image.jsx";
 
 import { FFmpeg } from "@ffmpeg/ffmpeg";
-import { toBlobURL } from "@ffmpeg/util";
 import { imagesFromGif } from "@/ffmpeg/extractFrames.js";
 import {
-  ffmpeg,
   getMimeTypeFromArrayBuffer,
   initFfmpeg,
   setFfmpeg,
@@ -17,7 +15,6 @@ import {
 import { printErr, printMsg } from "@/utils/print.js";
 import { clearData, getData, storeData } from "@/utils/dataHandler.js";
 import { ffmpegTotalBytes } from "@/data/fileSizes.js";
-import { downloadWithProgress } from "@/utils/download.js";
 
 const isServer = typeof window === "undefined";
 
@@ -32,6 +29,7 @@ export default function GifExtractor() {
     if (isServer) return;
 
     if (!transferredFfmpeg) {
+      setFfmpeg(ffmpegRef.current);
       await initFfmpeg((e) => {
         setLoadPercentage(
           `${Math.round((e.received / ffmpegTotalBytes) * 100)}%`
