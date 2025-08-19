@@ -1,9 +1,5 @@
-import {
-  ffmpeg,
-  ffmpegFetchAndConvert,
-  getAPngDuration,
-  getGifDuration,
-} from "./utils";
+import { getAPngDuration } from "@/utils/apng";
+import { ffmpeg, ffmpegFetchAndConvert, getGifDuration } from "./utils";
 
 /**
  * Crop the image to a square shape using FFmpeg.

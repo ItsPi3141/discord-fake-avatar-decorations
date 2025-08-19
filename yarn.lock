@@ -1080,13 +1080,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"apng-js@npm:^1.1.5":
-  version: 1.1.5
-  resolution: "apng-js@npm:1.1.5"
-  checksum: 10c0/768b4ebdf2b9e6b5adcd5302aeba0b80c788d2da25cef629a498ac1ce9f1fdc2324fffb0cf0a9e5425e2a23918e8c1684a7bb87bcb745ceb832593640a5b95f3
-  languageName: node
-  linkType: hard
-
 "babel-plugin-transform-hook-names@npm:^1.0.2":
   version: 1.0.2
   resolution: "babel-plugin-transform-hook-names@npm:1.0.2"
@@ -2304,7 +2297,6 @@ __metadata:
     "@jsquash/webp": "npm:1.5.0-animated-webp-support-beta.2"
     "@preact/preset-vite": "npm:^2.10.2"
     "@tailwindcss/vite": "npm:^4.1.12"
-    apng-js: "npm:^1.1.5"
     gifski-wasm: "npm:^2.2.0"
     preact: "npm:^10.27.0"
     preact-iso: "npm:^2.9.2"

@@ -1,9 +1,5 @@
-import {
-  arraybuffer2base64,
-  ffmpeg,
-  ffmpegFetchAndConvert,
-  getAPngDuration,
-} from "./utils";
+import { getAPngDuration } from "@/utils/apng";
+import { arraybuffer2base64, ffmpeg, ffmpegFetchAndConvert } from "./utils";
 
 export function imagesFromGif(/** @type {String} */ gifUrl) {
   return new Promise((resolve, reject) => {

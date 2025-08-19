@@ -5,7 +5,6 @@ import { storeData } from "@/utils/dataHandler";
 import { FFmpeg } from "@ffmpeg/ffmpeg";
 import { fetchFile, toBlobURL } from "@ffmpeg/util";
 
-import parseAPNG from "apng-js";
 import {
   decodeAnimated as decodeAnimatedWebp,
   init as initDecodeWebp,
@@ -128,20 +127,6 @@ export function getMimeTypeFromArrayBuffer(
     }
   }
   return null;
-}
-
-/**
- * Calculates the duration of an APNG file. Returns 0 if the provided PNG file is not an APNG.
- *
- * @param {ArrayBuffer} arraybuf - The APNG file as an ArrayBuffer.
- * @return {number} The duration of the APNG file in seconds.
- */
-export function getAPngDuration(arraybuf) {
-  const apng = parseAPNG(arraybuf);
-  if (apng instanceof Error) {
-    return 1;
-  }
-  return apng.playTime / 1000;
 }
 
 // https://stackoverflow.com/a/74236879
