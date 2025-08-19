@@ -15,7 +15,7 @@
     "@jsquash/webp": "1.5.0-animated-webp-support-beta.2",
     "@tailwindcss/vite": "^4.1.12",
     "gifski-wasm": "^2.2.0",
-    "preact": "^10.27.0",
+    "preact": "^10.27.1",
     "preact-iso": "^2.9.2",
     "preact-render-to-string": "^6.5.13",
     "tailwindcss": "^4.1.12"
