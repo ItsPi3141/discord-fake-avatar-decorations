@@ -4,6 +4,47 @@ export const decorationsData = [
     icon: "shop",
     data: [
       {
+        n: "Secret Garden",
+        d: "",
+        b: {
+          i: "secret_garden",
+          t: "secret_garden",
+          h: 64,
+        },
+        i: [
+          {
+            n: "Terrarium",
+            d: "Give your avatar a new look.",
+            f: "terrarium",
+          },
+          {
+            n: "Mushcaps",
+            d: "Give your avatar a new look.",
+            f: "mushcaps",
+          },
+          {
+            n: "Blossomburst",
+            d: "Give your avatar a new look.",
+            f: "blossomburst",
+          },
+          {
+            n: "Greenhouse Cat",
+            d: "Give your avatar a new look.",
+            f: "greenhouse_cat",
+          },
+          {
+            n: "Rainy Canopy",
+            d: "Give your avatar a new look.",
+            f: "rainy_canopy",
+          },
+          {
+            n: "Snowdrops",
+            d: "Give your avatar a new look.",
+            f: "snowdrops",
+          },
+        ],
+      },
+      {
         n: "Rawr xD",
         d: "",
         b: {
