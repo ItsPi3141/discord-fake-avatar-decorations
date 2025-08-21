@@ -3348,6 +3348,11 @@ export const decorationsData = [
         },
         i: [
           {
+            n: "ESPN",
+            d: "Exclusive to ESPN Mobile Quest for a limited time. Available to use until October 25, 2025.",
+            f: "espn",
+          },
+          {
             n: "Cow Glider",
             d: "Exclusive to The Milk Cup Quest 2 Quest for a limited time. Available to use until October 20, 2025.",
             f: "cow_glider",
