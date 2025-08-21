@@ -533,7 +533,7 @@ const App = ({ ensureLoaded }) => {
               </NeutralButton>
               <NeutralButton
                 onClick={() => {
-                  router.route("/discuss");
+                  window.open("/discuss");
                 }}
               >
                 <Icons.forum />

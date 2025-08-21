@@ -17,9 +17,12 @@ export default defineConfig({
     {
       name: "custom-server-headers",
       configureServer: (server) => {
-        server.middlewares.use((_req, res, next) => {
+        server.middlewares.use((req, res, next) => {
           res.setHeader("Cross-Origin-Opener-Policy", "same-origin");
-          res.setHeader("Cross-Origin-Embedder-Policy", "require-corp");
+          res.setHeader(
+            "Cross-Origin-Embedder-Policy",
+            req.originalUrl === "/discuss" ? "unsafe-none" : "require-corp"
+          );
           next();
         });
       },
