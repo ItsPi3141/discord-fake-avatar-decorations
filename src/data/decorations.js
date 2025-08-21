@@ -3353,6 +3353,11 @@ export const decorationsData = [
             f: "cow_glider",
           },
           {
+            n: "Wendy’s x Wednesday",
+            d: "Exclusive to View If You Dare Quest for a limited time. Available to use until October 30, 2025.",
+            f: "wendys_x_wednesday",
+          },
+          {
             n: "BF Soldier Helmet",
             d: "Exclusive to BF6 Open Beta Quest for a limited time. Available to use until October 16, 2025.",
             f: "bf_soldier_helmet",
