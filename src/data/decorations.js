@@ -3348,6 +3348,11 @@ export const decorationsData = [
         },
         i: [
           {
+            n: "inZOI Psycat",
+            d: "Exclusive to inZOI Update Quest Quest for a limited time. Available to use until October 25, 2025.",
+            f: "inzoi_psycat",
+          },
+          {
             n: "ESPN",
             d: "Exclusive to ESPN Mobile Quest for a limited time. Available to use until October 25, 2025.",
             f: "espn",
