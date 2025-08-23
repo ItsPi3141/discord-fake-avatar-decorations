@@ -5,7 +5,7 @@
   ],
   "headers": [
     {
-      "source": "/.*\\.(js|css)",
+      "source": "/.*(js|css)",
       "headers": [
         {
           "key": "cache-control",
