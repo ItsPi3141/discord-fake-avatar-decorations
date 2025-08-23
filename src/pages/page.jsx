@@ -757,7 +757,7 @@ const AvatarList = () => {
       {getAvatars().length === 0 && !isServer ? (
         <NoSearchResults thing="avatars" />
       ) : (
-        <div className="gap-3 grid grid-cols-3 xs:grid-cols-4 sm:grid-cols-5 min-[600px]:grid-cols-6 min-[720px]:grid-cols-7 md:grid-cols-5">
+        <div className="gap-3 grid grid-cols-3 xs:grid-cols-4 sm:grid-cols-5 min-[600px]:grid-cols-6 min-[720px]:grid-cols-7 md:grid-cols-5 translate-z-1">
           {getAvatars().map((avatar) => {
             return (
               <button
@@ -823,7 +823,7 @@ const DecorationsTabs = () => {
               zIndex: activeTab === index ? 1 : 0,
               transitionTimingFunction: "cubic-bezier(.46,.94,.1,.99)",
             }}
-            className="top-0 right-0 bottom-0 left-0 absolute transition-transform duration-400"
+            className="top-0 right-0 bottom-0 left-0 absolute transition-transform translate-z-1 duration-400"
           />
         ))}
       </div>
