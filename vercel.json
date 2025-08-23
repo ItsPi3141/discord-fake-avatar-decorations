@@ -2,5 +2,16 @@
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "rewrites": [
     { "source": "/(.*)", "statusCode": 404, "destination": "/404/index.html" }
+  ],
+  "headers": [
+    {
+      "source": "/.*\\.(js|css)",
+      "headers": [
+        {
+          "key": "cache-control",
+          "value": "public, max-age=604800, s-maxage=43200"
+        }
+      ]
+    }
   ]
 }
