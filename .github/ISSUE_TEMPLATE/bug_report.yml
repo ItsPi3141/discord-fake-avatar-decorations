@@ -16,6 +16,7 @@ body:
     attributes:
       label: "Description"
       description: "What problem are you having?"
+      placeholder: "Explain your problem here"
     validations:
       required: true
 
