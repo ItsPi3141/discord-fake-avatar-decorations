@@ -11,64 +11,26 @@ export const setFfmpeg = (/** @type {FFmpeg} */ f) => (ffmpeg = f);
 export const initFfmpeg = async (onProgress) => {
   const ffmpegBaseUrl =
     "https://cdn.jsdelivr.net/npm/@ffmpeg/core@0.12.10/dist/esm/";
-  const ffmpegMtBaseUrl =
-    "https://cdn.jsdelivr.net/npm/@ffmpeg/core-mt@0.12.10/dist/esm/";
 
-  if (
-    typeof SharedArrayBuffer === "undefined" ||
-    (navigator.userAgent.includes("Chrome/") &&
-      window.location.hostname === "localhost")
-  ) {
-    await ffmpeg.load({
-      coreURL: await toBlobURL(
-        `${ffmpegBaseUrl}ffmpeg-core.js`,
-        "text/javascript"
-      ),
-      wasmURL: onProgress
-        ? URL.createObjectURL(
-            new Blob(
-              [
-                await downloadWithProgress(
-                  `${ffmpegBaseUrl}ffmpeg-core.wasm`,
-                  onProgress
-                ),
-              ],
-              { type: "application/wasm" }
-            )
+  await ffmpeg.load({
+    coreURL: await toBlobURL(
+      `${ffmpegBaseUrl}ffmpeg-core.js`,
+      "text/javascript"
+    ),
+    wasmURL: onProgress
+      ? URL.createObjectURL(
+          new Blob(
+            [
+              await downloadWithProgress(
+                `${ffmpegBaseUrl}ffmpeg-core.wasm`,
+                onProgress
+              ),
+            ],
+            { type: "application/wasm" }
           )
-        : await toBlobURL(
-            `${ffmpegBaseUrl}ffmpeg-core.wasm`,
-            "application/wasm"
-          ),
-    });
-  } else {
-    await ffmpeg.load({
-      coreURL: await toBlobURL(
-        `${ffmpegMtBaseUrl}ffmpeg-core.js`,
-        "text/javascript"
-      ),
-      wasmURL: onProgress
-        ? URL.createObjectURL(
-            new Blob(
-              [
-                await downloadWithProgress(
-                  `${ffmpegMtBaseUrl}ffmpeg-core.wasm`,
-                  onProgress
-                ),
-              ],
-              { type: "application/wasm" }
-            )
-          )
-        : await toBlobURL(
-            `${ffmpegMtBaseUrl}ffmpeg-core.wasm`,
-            "application/wasm"
-          ),
-      workerURL: await toBlobURL(
-        `${ffmpegMtBaseUrl}ffmpeg-core.worker.js`,
-        "text/javascript"
-      ),
-    });
-  }
+        )
+      : await toBlobURL(`${ffmpegBaseUrl}ffmpeg-core.wasm`, "application/wasm"),
+  });
   ffmpeg.on("log", (e) =>
     printMsg(
       ["ffmpeg", e.message],
