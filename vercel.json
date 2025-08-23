@@ -5,7 +5,16 @@
   ],
   "headers": [
     {
-      "source": "/.*(js|css)",
+      "source": "/(.*).js",
+      "headers": [
+        {
+          "key": "cache-control",
+          "value": "public, max-age=604800, s-maxage=43200"
+        }
+      ]
+    },
+    {
+      "source": "/(.*).css",
       "headers": [
         {
           "key": "cache-control",
