@@ -1,0 +1,62 @@
+name: Bug report
+description: Report a problem
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Before creating an issue:
+        1. Check if someone already reported the same bug:  
+           https://github.com/ItsPi3141/discord-fake-avatar-decorations/issues?q=is%3Aissue+label%3Abug  
+           If you find the same bug, don't open a new issue. Instead, leave a comment on that issue and include your own details.
+        2. Try to fill out as much of this template as you can. Clear details will help fix the problem faster.
+
+  - type: textarea
+    id: description
+    attributes:
+      label: "Description"
+      description: "What problem are you having?"
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: "Steps to Reproduce"
+      description: "Write the steps that cause the bug."
+      placeholder: |
+        1. Click on "..."
+        2. Scroll down to "..."
+        3. See the error
+    validations:
+      required: true
+
+  - type: input
+    id: os
+    attributes:
+      label: "Operating System"
+      placeholder: "Example: iOS 17.1, Android 15, Windows 11"
+    validations:
+      required: true
+
+  - type: input
+    id: browser
+    attributes:
+      label: "Browser"
+      placeholder: "Example: Safari, Chrome, Firefox"
+    validations:
+      required: true
+
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: "Screenshots (Optional)"
+      description: "If possible, add screenshots to help explain your problem."
+      placeholder: "Drag and drop images here"
+    validations:
+      required: false
+
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for taking the time to report this bug. Your feedback helps improve the project!
