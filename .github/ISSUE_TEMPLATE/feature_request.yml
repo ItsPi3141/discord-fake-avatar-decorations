@@ -1,0 +1,24 @@
+name: Feature request
+description: Suggest a new feature or improvement
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Before creating a feature request:
+        1. Check if someone already suggested the same idea:  
+           https://github.com/ItsPi3141/discord-fake-avatar-decorations/issues?q=is%3Aissue+label%3Aenhancement  
+           If you find the same idea, don't open a new issue. Instead, leave a comment on that issue and include your thoughts.
+
+  - type: textarea
+    id: description
+    attributes:
+      label: "Feature Description"
+      description: "What would you like to see added or changed?"
+    validations:
+      required: true
+
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for suggesting a feature. Your ideas help improve the project!
