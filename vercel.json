@@ -2,28 +2,5 @@
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "rewrites": [
     { "source": "/(.*)", "statusCode": 404, "destination": "/404/index.html" }
-  ],
-  "headers": [
-    {
-      "source": "/",
-      "headers": [
-        { "key": "Cross-Origin-Opener-Policy", "value": "same-origin" },
-        { "key": "Cross-Origin-Embedder-Policy", "value": "require-corp" }
-      ]
-    },
-    {
-      "source": "/:path*",
-      "headers": [
-        { "key": "Cross-Origin-Opener-Policy", "value": "same-origin" },
-        { "key": "Cross-Origin-Embedder-Policy", "value": "require-corp" }
-      ]
-    },
-    {
-      "source": "/discuss",
-      "headers": [
-        { "key": "Cross-Origin-Opener-Policy", "value": "same-origin" },
-        { "key": "Cross-Origin-Embedder-Policy", "value": "unsafe-none" }
-      ]
-    }
   ]
 }
