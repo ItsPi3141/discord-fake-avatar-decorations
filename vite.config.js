@@ -6,8 +6,23 @@ import { generateWebmanifest } from "./build/generateWebmanifest";
 import { generateFavicons } from "./build/generateFavicons";
 import { generateMeta } from "./build/generateMeta";
 
+import browserslist from "browserslist";
+import { browserslistToTargets } from "lightningcss";
+
 // https://vitejs.dev/config/
 export default defineConfig({
+  css: {
+    transformer: "lightningcss",
+    lightningcss: {
+      targets: browserslistToTargets(browserslist(">= 0.25% and not ie > 0")),
+    },
+  },
+  build: {
+    minify: "terser",
+    terserOptions: {
+      ecma: 2020,
+    },
+  },
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "src"),
