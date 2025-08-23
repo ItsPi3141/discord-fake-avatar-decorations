@@ -524,7 +524,7 @@ const App = ({ ensureLoaded }) => {
               <NeutralButton
                 onClick={() => {
                   window.open(
-                    "https://github.com/ItsPi3141/discord-fake-avatar-decorations/issues/new"
+                    "https://github.com/ItsPi3141/discord-fake-avatar-decorations/issues/new?template=bug_report.yml"
                   );
                 }}
               >
@@ -533,11 +533,21 @@ const App = ({ ensureLoaded }) => {
               </NeutralButton>
               <NeutralButton
                 onClick={() => {
+                  window.open(
+                    "https://github.com/ItsPi3141/discord-fake-avatar-decorations/issues/new?template=feature_request.yml"
+                  );
+                }}
+              >
+                <Icons.inbox />
+                Suggest a feature
+              </NeutralButton>
+              <NeutralButton
+                onClick={() => {
                   window.open("/discuss");
                 }}
               >
                 <Icons.forum />
-                Suggest a feature
+                Discussions
               </NeutralButton>
             </div>
 

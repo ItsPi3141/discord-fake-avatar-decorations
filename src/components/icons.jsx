@@ -114,6 +114,18 @@ export const Icons = {
       </svg>
     );
   },
+  inbox({ size = "1em" }) {
+    return (
+      <svg aria-hidden="true" width={size} height={size} viewBox="0 0 48 48">
+        <path
+          fillRule="evenodd"
+          clipRule="evenodd"
+          d="M8 11v12a3 3 90 003 3h5.3c1 0 1.7 1 1.7 2a6 6 90 1012 0c0-1 .7-2 1.7-2H37c1.66 0 3-1.34 3-3V11c0-1.66-1.34-3-3-3H11C9.34 8 8 9.34 8 11Zm2-7H38a6 6 90 016 6V38a6 6 90 01-6 6H10A6 6 90 014 38V10a6 6 90 016-6Z"
+          fill="currentColor"
+        />
+      </svg>
+    );
+  },
   link({ size = "1em" }) {
     return (
       <svg aria-hidden="true" width={size} height={size} viewBox="0 0 32 33">
