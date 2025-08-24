@@ -469,11 +469,12 @@ const App = ({ ensureLoaded }) => {
                             {!isServer &&
                               `Today at ${
                                 [
-                                  new Date().getHours() % 12,
-                                  new Date().getMinutes(),
-                                ]
-                                  .map((e) => e.toString().padStart(2, "0"))
-                                  .join(":") +
+                                  (new Date().getHours() % 12).toString(),
+                                  new Date()
+                                    .getMinutes()
+                                    .toString()
+                                    .padStart(2, "0"),
+                                ].join(":") +
                                 (new Date().getHours() >= 12 ? " PM" : " AM")
                               }`}
                           </span>
