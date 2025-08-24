@@ -466,14 +466,16 @@ const App = ({ ensureLoaded }) => {
                             {name || "Display Name"}
                           </span>
                           <span className="h-4 text-text-muted text-xs text-nowrap">
-                            Today at{" "}
-                            {[
-                              new Date().getHours() % 12,
-                              new Date().getMinutes(),
-                            ]
-                              .map((e) => e.toString().padStart(2, "0"))
-                              .join(":") +
-                              (new Date().getHours() >= 12 ? " PM" : " AM")}
+                            {!isServer &&
+                              `Today at ${
+                                [
+                                  new Date().getHours() % 12,
+                                  new Date().getMinutes(),
+                                ]
+                                  .map((e) => e.toString().padStart(2, "0"))
+                                  .join(":") +
+                                (new Date().getHours() >= 12 ? " PM" : " AM")
+                              }`}
                           </span>
                         </p>
                       )}
