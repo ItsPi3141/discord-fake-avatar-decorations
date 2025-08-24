@@ -454,9 +454,7 @@ const App = ({ ensureLoaded }) => {
                             <Image
                               src={avUrl || `${baseImgUrl}/avatars/blue.png`}
                               draggable={false}
-                              width={40}
-                              height={40}
-                              className="rounded-full"
+                              className="rounded-full w-10 h-10 shrink-0"
                             />
                           )}
                         </>
