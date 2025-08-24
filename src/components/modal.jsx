@@ -18,6 +18,7 @@ export default function Modal(props) {
             <button
               className="top-4 right-4 absolute opacity-50 hover:opacity-100 text-icon-tertiary transition-opacity [transition-duration:200ms]"
               onClick={props.onClose}
+              aria-label={"Close modal"}
             >
               <Icons.close size="24px" />
             </button>

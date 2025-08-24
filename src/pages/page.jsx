@@ -766,7 +766,7 @@ const AvatarList = () => {
                 onClick={(e) => {
                   onSelectAvatar(e, avatar.n, avatar.f);
                 }}
-                aria-hidden={true}
+                aria-label={avatar.n}
               >
                 <Image
                   src={`/avatars/${avatar.f}`}
@@ -797,7 +797,7 @@ const DecorationsTabs = () => {
                 activeTab === index ? "bg-surface-high" : "bg-transparent"
               } px-4 py-1.5 font-semibold text-sm hover:bg-surface-higher active:bg-surface-high rounded-lg flex items-center gap-1 transition-colors`}
               onClick={() => setActiveTab(index)}
-              aria-hidden={true}
+              aria-label={name}
             >
               <Icon width="16px" height="16px" />
               {name}
