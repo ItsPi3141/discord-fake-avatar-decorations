@@ -3348,6 +3348,11 @@ export const decorationsData = [
         },
         i: [
           {
+            n: "NBA 2K26",
+            d: "Exclusive to NBA 2K26 Quest Quest for a limited time. Available to use until November 4, 2025.",
+            f: "nba_2k26",
+          },
+          {
             n: "The Conjuring: Last Rites",
             d: "Exclusive to The Conjuring Quest for a limited time. Available to use until November 7, 2025.",
             f: "the_conjuring_last_rites",
