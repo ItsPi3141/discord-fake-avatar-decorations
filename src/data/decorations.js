@@ -3348,6 +3348,11 @@ export const decorationsData = [
         },
         i: [
           {
+            n: "Eye of Prophesy",
+            d: "Exclusive to Path of Exile 2 Quests Quest for a limited time. Available to use until November 4, 2025.",
+            f: "eye_of_prophesy",
+          },
+          {
             n: "inZOI Psycat",
             d: "Exclusive to inZOI Update Quest Quest for a limited time. Available to use until October 25, 2025.",
             f: "inzoi_psycat",
