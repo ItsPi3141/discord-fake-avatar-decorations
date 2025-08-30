@@ -3348,6 +3348,11 @@ export const decorationsData = [
         },
         i: [
           {
+            n: "The Conjuring: Last Rites",
+            d: "Exclusive to The Conjuring Quest for a limited time. Available to use until November 7, 2025.",
+            f: "the_conjuring_last_rites",
+          },
+          {
             n: "Eye of Prophesy",
             d: "Exclusive to Path of Exile 2 Quests Quest for a limited time. Available to use until November 4, 2025.",
             f: "eye_of_prophesy",
