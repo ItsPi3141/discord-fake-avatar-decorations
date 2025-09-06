@@ -4,6 +4,47 @@ export const decorationsData = [
     icon: "shop",
     data: [
       {
+        n: "Lunar Eclipse",
+        d: "",
+        b: {
+          i: "lunar_eclipse",
+          t: "lunar_eclipse",
+          h: 72,
+        },
+        i: [
+          {
+            n: "Lunar Flowers",
+            d: "Give your avatar a new look.",
+            f: "lunar_flowers",
+          },
+          {
+            n: "Starlight Tiara",
+            d: "Give your avatar a new look.",
+            f: "starlight_tiara",
+          },
+          {
+            n: "Astral Aura",
+            d: "Give your avatar a new look.",
+            f: "astral_aura",
+          },
+          {
+            n: "Luna Moths",
+            d: "Give your avatar a new look.",
+            f: "luna_moths",
+          },
+          {
+            n: "Moonlit Charms",
+            d: "Give your avatar a new look.",
+            f: "moonlit_charms",
+          },
+          {
+            n: "Liquid Moon",
+            d: "Give your avatar a new look.",
+            f: "liquid_moon",
+          },
+        ],
+      },
+      {
         n: "Secret Garden",
         d: "",
         b: {
