@@ -13,19 +13,19 @@
     "@ffmpeg/util": "0.12.2",
     "@giscus/react": "^3.1.0",
     "@jsquash/webp": "1.5.0-animated-webp-support-beta.2",
-    "@tailwindcss/vite": "^4.1.12",
+    "@tailwindcss/vite": "^4.1.13",
     "gifski-wasm": "^2.2.0",
     "preact": "^10.27.1",
     "preact-iso": "^2.10.0",
     "preact-render-to-string": "^6.6.1",
-    "tailwindcss": "^4.1.12"
+    "tailwindcss": "^4.1.13"
   },
   "devDependencies": {
     "@preact/preset-vite": "^2.10.2",
-    "browserslist": "^4.25.3",
+    "browserslist": "^4.25.4",
     "lightningcss": "^1.30.1",
-    "terser": "^5.43.1",
-    "vite": "^7.1.3"
+    "terser": "^5.44.0",
+    "vite": "^7.1.4"
   },
-  "packageManager": "yarn@4.9.2"
+  "packageManager": "yarn@4.9.4"
 }
