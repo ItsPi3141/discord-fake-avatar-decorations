@@ -3359,6 +3359,11 @@ export const decorationsData = [
         },
         i: [
           {
+            n: "Jet Ring",
+            d: "Surround your avatar with a pulse of Nitro energy.",
+            f: "jet_ring",
+          },
+          {
             n: "Freshly Picked",
             d: "Now where's my blender? Given to Nitro gifters in June 2025.",
             f: "freshly_picked",
