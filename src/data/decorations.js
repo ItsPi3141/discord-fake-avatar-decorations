@@ -3406,7 +3406,7 @@ export const decorationsData = [
               transform: "translateY(-5%)",
             },
           ],
-          bg: "linear-gradient(90deg, hsl(269.291 52.697% 52.745%) 0%, hsl(295.645 50% 51.373%) 50%, hsl(325.385 31.707% 51.765%) 100%)",
+          bg: "linear-gradient(90deg, #8547c6 0%, #b845c1 50%, #ab5d8a 100%)",
         },
         i: [
           {
@@ -3482,7 +3482,7 @@ export const decorationsData = [
               opacity: "0.9",
             },
           ],
-          bg: "linear-gradient(90deg, rgba(52,65,217,1) 0%, rgba(154,68,247,1) 100%)",
+          bg: "linear-gradient(90deg, #3441d9 0%, #9a44f7 100%)",
         },
         i: [
           {
@@ -3911,7 +3911,7 @@ export const decorationsData = [
         d: "",
         b: {
           i: [],
-          bg: "linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(16,6,37,1) 100%)",
+          bg: "linear-gradient(90deg, #000 0%, #100625 100%)",
         },
         badge: "JUNE 2023",
         i: [
@@ -4018,7 +4018,7 @@ export const decorationsData = [
         darkText: true,
         b: {
           i: [],
-          bg: "linear-gradient(90deg, rgba(209,221,147,1) 0%, rgba(240,237,170,1) 100%)",
+          bg: "linear-gradient(90deg, #d1dd93 0%, #f0edaa 100%)",
         },
         badge: "APRIL 2023",
         i: [
