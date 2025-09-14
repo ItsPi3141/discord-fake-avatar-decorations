@@ -18,7 +18,7 @@ function extractInfo(collectibleCategories) {
             d: p.summary,
             f: p.name
               .toLowerCase()
-              .replaceAll("'", "")
+              .replaceAll(/['"’]/g, "")
               .replaceAll(/[^A-Za-z0-9]+/g, "_")
               .replaceAll(/(^_|_$)/g, ""),
           };
