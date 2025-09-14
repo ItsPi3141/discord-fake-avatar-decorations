@@ -3338,8 +3338,8 @@ export const decorationsData = [
     icon: "lootbox",
     data: [
       {
-        n: "Halloween 2025",
-        d: "",
+        n: "Halloween '25",
+        d: "Limited time decorations from Halloween 2025.",
         b: {
           i: [],
           bg: "linear-gradient(90deg, #cd7e4e 0%, #eabd83 100%)",
