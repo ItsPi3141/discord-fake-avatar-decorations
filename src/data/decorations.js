@@ -3430,13 +3430,18 @@ export const decorationsData = [
         },
         i: [
           {
+            n: "Angela Avatar",
+            d: "Exclusive to Marvel Rivals S4.0 Quest for a limited time. Available to use until November 19, 2025.",
+            f: "angela_avatar",
+          },
+          {
             n: "Echo 4",
-            d: "Exclusive to Borderlands 4 Launch Quest Quest for a limited time. Available to use until November 18, 2025.",
+            d: "Exclusive to Borderlands 4 Launch Quest for a limited time. Available to use until November 18, 2025.",
             f: "echo_4",
           },
           {
             n: "NBA 2K26",
-            d: "Exclusive to NBA 2K26 Quest Quest for a limited time. Available to use until November 4, 2025.",
+            d: "Exclusive to NBA 2K26 Quest for a limited time. Available to use until November 4, 2025.",
             f: "nba_2k26",
           },
           {
