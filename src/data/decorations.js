@@ -4,6 +4,47 @@ export const decorationsData = [
     icon: "shop",
     data: [
       {
+        n: "Borderlands 4",
+        d: "",
+        b: {
+          i: "borderlands_4",
+          t: "borderlands_4",
+          h: 62,
+        },
+        i: [
+          {
+            n: "I’m Dancin’!",
+            d: "Give your avatar a new look.",
+            f: "im_dancin",
+          },
+          {
+            n: "Finger Gun",
+            d: "Give your avatar a new look.",
+            f: "finger_gun",
+          },
+          {
+            n: "Bandit Mask",
+            d: "Give your avatar a new look.",
+            f: "bandit_mask",
+          },
+          {
+            n: "Mad Moxxi",
+            d: "Give your avatar a new look.",
+            f: "mad_moxxi",
+          },
+          {
+            n: "Elpis",
+            d: "Give your avatar a new look.",
+            f: "elpis",
+          },
+          {
+            n: "Loot Lightshow",
+            d: "Give your avatar a new look.",
+            f: "loot_lightshow",
+          },
+        ],
+      },
+      {
         n: "Lunar Eclipse",
         d: "",
         b: {
