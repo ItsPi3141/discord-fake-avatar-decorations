@@ -3430,6 +3430,11 @@ export const decorationsData = [
         },
         i: [
           {
+            n: "Echo 4",
+            d: "Exclusive to Borderlands 4 Launch Quest Quest for a limited time. Available to use until November 18, 2025.",
+            f: "echo_4",
+          },
+          {
             n: "NBA 2K26",
             d: "Exclusive to NBA 2K26 Quest Quest for a limited time. Available to use until November 4, 2025.",
             f: "nba_2k26",
