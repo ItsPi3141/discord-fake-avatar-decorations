@@ -3486,6 +3486,11 @@ export const decorationsData = [
         },
         i: [
           {
+            n: "Travel Ring",
+            d: "Exclusive to Sonic Racing: CrossWorlds Quest for a limited time. Available to use until December 1, 2025.",
+            f: "travel_ring",
+          },
+          {
             n: "FC 26 Icon",
             d: "Exclusive to EA SPORTS FC 26 Quest for a limited time. Available to use until December 8, 2025.",
             f: "fc_26_icon",
