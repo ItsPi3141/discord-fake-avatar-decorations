@@ -3486,6 +3486,11 @@ export const decorationsData = [
         },
         i: [
           {
+            n: "skate.",
+            d: "Exclusive to skate. Trailer Quest for a limited time. Available to use until November 28, 2025.",
+            f: "skate",
+          },
+          {
             n: "Angela Avatar",
             d: "Exclusive to Marvel Rivals S4.0 Quest for a limited time. Available to use until November 19, 2025.",
             f: "angela_avatar",
