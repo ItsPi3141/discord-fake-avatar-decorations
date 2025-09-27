@@ -3486,6 +3486,11 @@ export const decorationsData = [
         },
         i: [
           {
+            n: "Atsu's Mask",
+            d: "Exclusive to Ghost of Yōtei Quest for a limited time. Available to use until December 4, 2025.",
+            f: "atsus_mask",
+          },
+          {
             n: "Dream Dive Stars",
             d: "Exclusive to Early Access Quest for a limited time. Available to use until November 14, 2025.",
             f: "dream_dive_stars",
