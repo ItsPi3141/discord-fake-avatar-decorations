@@ -3486,6 +3486,11 @@ export const decorationsData = [
         },
         i: [
           {
+            n: "FC 26 Icon",
+            d: "Exclusive to EA SPORTS FC 26 Quest for a limited time. Available to use until December 8, 2025.",
+            f: "fc_26_icon",
+          },
+          {
             n: "Atsu's Mask",
             d: "Exclusive to Ghost of Yōtei Quest for a limited time. Available to use until December 4, 2025.",
             f: "atsus_mask",
