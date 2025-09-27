@@ -3486,6 +3486,11 @@ export const decorationsData = [
         },
         i: [
           {
+            n: "Dream Dive Stars",
+            d: "Exclusive to Early Access Quest for a limited time. Available to use until November 14, 2025.",
+            f: "dream_dive_stars",
+          },
+          {
             n: "skate.",
             d: "Exclusive to skate. Trailer Quest for a limited time. Available to use until November 28, 2025.",
             f: "skate",
