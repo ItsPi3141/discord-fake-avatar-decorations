@@ -3491,6 +3491,11 @@ export const decorationsData = [
             f: "travel_ring",
           },
           {
+            n: "Champions Tactibear",
+            d: "Exclusive to VALORANT Champions Paris Quest for a limited time. Available to use until December 5, 2025.",
+            f: "champions_tactibear",
+          },
+          {
             n: "FC 26 Icon",
             d: "Exclusive to EA SPORTS FC 26 Quest for a limited time. Available to use until December 8, 2025.",
             f: "fc_26_icon",
