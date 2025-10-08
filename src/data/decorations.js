@@ -3486,6 +3486,11 @@ export const decorationsData = [
         },
         i: [
           {
+            n: "Mr. M",
+            d: "Exclusive to the Monopoly at McD's Quest for a limited time. Available to use until January 2, 2025.",
+            f: "mr_m",
+          },
+          {
             n: "Travel Ring",
             d: "Exclusive to Sonic Racing: CrossWorlds Quest for a limited time. Available to use until December 1, 2025.",
             f: "travel_ring",
