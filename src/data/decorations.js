@@ -3501,6 +3501,11 @@ export const decorationsData = [
             f: "travel_ring",
           },
           {
+            n: "KOM",
+            d: "Exclusive to King of Meat Avatar Quest Quest for a limited time. Available to use until December 6, 2025.",
+            f: "kom",
+          },
+          {
             n: "Champions Tactibear",
             d: "Exclusive to VALORANT Champions Paris Quest for a limited time. Available to use until December 5, 2025.",
             f: "champions_tactibear",
