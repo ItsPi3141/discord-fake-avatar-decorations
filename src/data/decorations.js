@@ -3486,8 +3486,13 @@ export const decorationsData = [
         },
         i: [
           {
+            n: "Airona Fireworks",
+            d: "Exclusive to Blue Protocol: Star Resonance Quest for a limited time. Available to use until December 13, 2025.",
+            f: "airona_fireworks",
+          },
+          {
             n: "Mr. M",
-            d: "Exclusive to the Monopoly at McD's Quest for a limited time. Available to use until January 2, 2025.",
+            d: "Exclusive to the Monopoly at McD's Quest for a limited time. Available to use until January 2, 2026.",
             f: "mr_m",
           },
           {
