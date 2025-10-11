@@ -5,12 +5,7 @@ export const decorationsData = [
     data: [
       {
         n: "Borderlands 4",
-        d: "",
-        b: {
-          i: "borderlands_4",
-          t: "borderlands_4",
-          h: 62,
-        },
+        b: "borderlands_4",
         i: [
           {
             n: "I’m Dancin’!",
@@ -46,12 +41,7 @@ export const decorationsData = [
       },
       {
         n: "Lunar Eclipse",
-        d: "",
-        b: {
-          i: "lunar_eclipse",
-          t: "lunar_eclipse",
-          h: 72,
-        },
+        b: "lunar_eclipse",
         i: [
           {
             n: "Lunar Flowers",
@@ -87,12 +77,7 @@ export const decorationsData = [
       },
       {
         n: "Secret Garden",
-        d: "",
-        b: {
-          i: "secret_garden",
-          t: "secret_garden",
-          h: 64,
-        },
+        b: "secret_garden",
         i: [
           {
             n: "Terrarium",
@@ -128,12 +113,7 @@ export const decorationsData = [
       },
       {
         n: "Rawr xD",
-        d: "",
-        b: {
-          i: "rawr_xd",
-          t: "rawr_xd",
-          h: 64,
-        },
+        b: "rawr_xd",
         i: [
           {
             n: "Neon Cat Hoodie",
@@ -199,12 +179,7 @@ export const decorationsData = [
       },
       {
         n: "Dragon Ball Daima",
-        d: "",
-        b: {
-          i: "dragon_ball_daima",
-          t: "dragon_ball_daima",
-          h: 72,
-        },
+        b: "dragon_ball_daima",
         i: [
           {
             n: "Dragon Balls",
@@ -255,12 +230,7 @@ export const decorationsData = [
       },
       {
         n: "Fantastic 4",
-        d: "",
-        b: {
-          i: "fantastic_4",
-          t: "fantastic_4",
-          h: 84,
-        },
+        b: "fantastic_4",
         i: [
           {
             n: "The Thing",
@@ -296,12 +266,7 @@ export const decorationsData = [
       },
       {
         n: "Spirit Blossom Beyond",
-        d: "",
-        b: {
-          i: "spirit_blossom_beyond",
-          t: "spirit_blossom_beyond",
-          h: 72,
-        },
+        b: "spirit_blossom_beyond",
         i: [
           {
             n: "Spirit Blossom Zed",
@@ -342,13 +307,7 @@ export const decorationsData = [
       },
       {
         n: "Skibidi Toilet",
-        d: "come for the chaos. stay for the lore.",
-        descTopM: "6px",
-        b: {
-          i: "skibidi_toilet",
-          t: "skibidi_toilet",
-          h: 51,
-        },
+        b: "skibidi_toilet",
         i: [
           {
             n: "Cameraman Glitch",
@@ -384,12 +343,7 @@ export const decorationsData = [
       },
       {
         n: "Summer Bliss",
-        d: "Sunshine is a state of mind",
-        b: {
-          i: "summer_bliss",
-          t: "summer_bliss",
-          h: 48,
-        },
+        b: "summer_bliss",
         i: [
           {
             n: "Sippy Juice",
@@ -425,12 +379,7 @@ export const decorationsData = [
       },
       {
         n: "Zen Protocol",
-        d: "Tradition never dies, it reboots.",
-        b: {
-          i: "zen_protocol",
-          t: "zen_protocol",
-          h: 50,
-        },
+        b: "zen_protocol",
         i: [
           {
             n: "Bonsai",
@@ -466,13 +415,7 @@ export const decorationsData = [
       },
       {
         n: "Magic: The Gathering",
-        d: "Which color will you wield?",
-        descTopM: "2px",
-        b: {
-          i: "magic_the_gathering",
-          t: "magic_the_gathering",
-          h: 64,
-        },
+        b: "magic_the_gathering",
         i: [
           {
             n: "White Mana",
@@ -503,13 +446,7 @@ export const decorationsData = [
       },
       {
         n: "My Hero Academia",
-        d: "© K.Horikoshi / Shueisha\nMy Hero Academia Project",
-        darkText: true,
-        b: {
-          i: "my_hero_academia",
-          t: "my_hero_academia",
-          h: 62,
-        },
+        b: "my_hero_academia",
         i: [
           {
             n: "Izuku Midoriya",
@@ -555,13 +492,7 @@ export const decorationsData = [
       },
       {
         n: "Cozy Valley",
-        d: "A little slice of paradise.",
-        darkText: true,
-        b: {
-          i: "cozy_valley",
-          t: "cozy_valley",
-          h: 60,
-        },
+        b: "cozy_valley",
         i: [
           {
             n: "Dewdrop",
@@ -637,12 +568,7 @@ export const decorationsData = [
       },
       {
         n: "Star Wars™",
-        d: "May the Force be with you.",
-        b: {
-          i: "star_wars",
-          t: "star_wars",
-          h: 50,
-        },
+        b: "star_wars",
         i: [
           {
             n: "Lightsabers (Blue and Red)",
@@ -683,12 +609,7 @@ export const decorationsData = [
       },
       {
         n: "GGEZ",
-        d: "Certified W.",
-        b: {
-          i: "ggez",
-          t: "ggez",
-          h: 46,
-        },
+        b: "ggez",
         i: [
           {
             n: "Copium",
@@ -734,13 +655,7 @@ export const decorationsData = [
       },
       {
         n: "Chibi Cafe",
-        d: "Too sweet to eat.",
-        darkText: true,
-        b: {
-          i: "chibi_cafe",
-          t: "chibi_cafe",
-          h: 40,
-        },
+        b: "chibi_cafe",
         i: [
           {
             n: "Berry Bunny",
@@ -796,13 +711,7 @@ export const decorationsData = [
       },
       {
         n: "Shenanigans",
-        d: "Seriously unserious.",
-        descTopM: "-2px",
-        b: {
-          i: "shenanigans",
-          t: "shenanigans",
-          h: 64,
-        },
+        b: "shenanigans",
         i: [
           {
             n: "Nom Kitty",
@@ -838,13 +747,7 @@ export const decorationsData = [
       },
       {
         n: "aespa",
-        d: "",
-        descTopM: "-8px",
-        b: {
-          i: "aespa",
-          t: "aespa",
-          h: 72,
-        },
+        b: "aespa",
         i: [
           {
             n: "Rocket Puncher",
@@ -880,12 +783,7 @@ export const decorationsData = [
       },
       {
         n: "Insomnia",
-        d: "Imagination never sleeps.",
-        b: {
-          i: "insomnia",
-          t: "insomnia",
-          h: 64,
-        },
+        b: "insomnia",
         i: [
           {
             n: "Starlight Whales",
@@ -956,12 +854,7 @@ export const decorationsData = [
       },
       {
         n: "Anime 3",
-        d: "Senpai will definitely notice you.",
-        b: {
-          i: "anime_v3",
-          t: "anime_v3",
-          h: 48,
-        },
+        b: "anime_v3",
         i: [
           {
             n: "Cat Onesie",
@@ -1272,12 +1165,7 @@ export const decorationsData = [
       },
       {
         n: "Valentines",
-        d: "Just send it.",
-        b: {
-          i: "valentines_2025",
-          t: "valentines_2025",
-          h: 54,
-        },
+        b: "valentines_2025",
         i: [
           {
             n: "Rose Bearer (Pink)",
@@ -1333,12 +1221,7 @@ export const decorationsData = [
       },
       {
         n: "JENNIE",
-        d: "JENNIE presents Ruby. Album out March 7th.",
-        b: {
-          i: "jennie",
-          t: "jennie",
-          h: 58,
-        },
+        b: "jennie",
         i: [
           {
             n: "Ruby Hearts",
@@ -1349,12 +1232,7 @@ export const decorationsData = [
       },
       {
         n: "Civilization VII",
-        d: "Build something you believe in.",
-        b: {
-          i: "civilization_vii",
-          t: "civilization_vii",
-          h: 60,
-        },
+        b: "civilization_vii",
         i: [
           {
             n: "Gold Laurel Wreath",
@@ -1390,12 +1268,7 @@ export const decorationsData = [
       },
       {
         n: "Lunar New Year",
-        d: "Shed the old, embrace the new. Happy Year of the Snake!",
-        b: {
-          i: "lunar_new_year_2025",
-          t: "lunar_new_year_2025",
-          h: 38,
-        },
+        b: "lunar_new_year_2025",
         badge: "SPRING 2025",
         i: [
           {
@@ -1447,12 +1320,7 @@ export const decorationsData = [
       },
       {
         n: "Steampunk",
-        d: "What shall we tinker on today?",
-        b: {
-          i: "steampunk",
-          t: "steampunk",
-          h: 45,
-        },
+        b: "steampunk",
         i: [
           {
             n: "Steampunk Cat Ears",
@@ -1488,13 +1356,7 @@ export const decorationsData = [
       },
       {
         n: "Fantasy 2",
-        d: "You're walking in the forest and notice something magical and shiny.",
-        descTopM: "-6px",
-        b: {
-          i: "fantasy_v2",
-          t: "fantasy_v2",
-          h: 60,
-        },
+        b: "fantasy_v2",
         i: [
           {
             n: "Magic Portal (Purple)",
@@ -1605,12 +1467,7 @@ export const decorationsData = [
       },
       {
         n: "Winter Wonderland",
-        d: "Tis the season.",
-        b: {
-          i: "winter_wonderland_2024",
-          t: "winter_wonderland_2024",
-          h: 64,
-        },
+        b: "winter_wonderland_2024",
         badge: "WINTER 2024",
         i: [
           {
@@ -1692,12 +1549,7 @@ export const decorationsData = [
       },
       {
         n: "Lofi Girl",
-        d: "Cozy vibes with Lofi Girl.",
-        b: {
-          i: "lofi_girl",
-          t: "lofi_girl",
-          h: 56,
-        },
+        b: "lofi_girl",
         i: [
           {
             n: "Lofi Girl Outfit",
@@ -1738,14 +1590,7 @@ export const decorationsData = [
       },
       {
         n: "Kawaii Mode",
-        d: "When :3 is your game face.",
-        descTopM: "-4px",
-        darkText: true,
-        b: {
-          i: "kawaii_mode",
-          t: "kawaii_mode",
-          h: 64,
-        },
+        b: "kawaii_mode",
         i: [
           {
             n: "Cat Ear Headset",
@@ -1791,26 +1636,7 @@ export const decorationsData = [
       },
       {
         n: "Arcane",
-        d: "The hunt is on.",
-        descTopM: "-4px",
-        b: {
-          i: [
-            {
-              url: "arcane",
-              align: "center",
-              height: "100%",
-              width: "100%",
-            },
-            {
-              url: "arcane1",
-              align: "center",
-              height: "100%",
-              width: "100%",
-            },
-          ],
-          t: "arcane",
-          h: 84,
-        },
+        b: "arcane",
         i: [
           {
             n: "The Anomaly",
@@ -1856,13 +1682,7 @@ export const decorationsData = [
       },
       {
         n: "Mythical Creatures",
-        d: "Wonders lost to time, found again.",
-        descTopM: "-8px",
-        b: {
-          i: "mythical_creatures",
-          t: "mythical_creatures",
-          h: 84,
-        },
+        b: "mythical_creatures",
         i: [
           {
             n: "Kitsune",
@@ -1898,23 +1718,7 @@ export const decorationsData = [
       },
       {
         n: "Dungeons & Dragons",
-        d: "The ultimate adventurer's pack.",
-        b: {
-          i: [
-            {
-              url: "dungeons_and_dragons",
-              align: "center",
-              height: "100%",
-              width: "100%",
-            },
-            {
-              url: "dungeons_and_dragons1",
-              align: "center",
-            },
-          ],
-          t: "dungeons_and_dragons",
-          h: 64,
-        },
+        b: "dungeons_and_dragons",
         i: [
           {
             n: "Violet Dice",
@@ -1955,13 +1759,7 @@ export const decorationsData = [
       },
       {
         n: "Spooky Night",
-        d: "Beware what lurks in the dark...",
-        descTopM: "-12px",
-        b: {
-          i: "spooky_night",
-          t: "spooky_night",
-          h: 70,
-        },
+        b: "spooky_night",
         badge: "FALL 2024",
         i: [
           {
@@ -2038,24 +1836,7 @@ export const decorationsData = [
       },
       {
         n: "Street Fighter",
-        d: "Hit the streets with Street Fighter.",
-        b: {
-          i: [
-            {
-              url: "street_fighter",
-              align: "center",
-              height: "100%",
-              width: "100%",
-            },
-            {
-              url: "street_fighter1",
-              align: "center",
-              height: "100%",
-            },
-          ],
-          t: "street_fighter",
-          h: 50,
-        },
+        b: "street_fighter",
         i: [
           {
             n: "Ryu",
@@ -2101,13 +1882,7 @@ export const decorationsData = [
       },
       {
         n: "Autumn Equinox",
-        d: "Beauty in balance.",
-        descTopM: "-4px",
-        b: {
-          i: "autumn_equinox",
-          t: "autumn_equinox",
-          h: 42,
-        },
+        b: "autumn_equinox",
         badge: "FALL 2024",
         i: [
           {
@@ -2159,11 +1934,7 @@ export const decorationsData = [
       },
       {
         n: "Fall 2",
-        d: "There's a calm and cozy vibe in the air.",
-        b: {
-          i: "fall_v2",
-          t: "fall_v2",
-        },
+        b: "fall_v2",
         badge: "FALL 2024",
         i: [
           {
@@ -2200,13 +1971,7 @@ export const decorationsData = [
       },
       {
         n: "The Vault",
-        d: "Long-awaited treasures from times past have made their return…",
-        darkText: false,
-        b: {
-          i: "the_vault",
-          t: "the_vault",
-          h: 72,
-        },
+        b: "the_vault",
         badge: "SEPTEMBER 2024",
         i: [
           {
@@ -2278,14 +2043,7 @@ export const decorationsData = [
       },
       {
         n: "Dojo",
-        d: "Where discipline meets destiny.",
-        darkText: true,
-        descTopM: "2px",
-        b: {
-          i: "dojo",
-          t: "dojo",
-          h: 48,
-        },
+        b: "dojo",
         i: [
           {
             n: "Kabuto",
@@ -2321,14 +2079,7 @@ export const decorationsData = [
       },
       {
         n: "VALORANT CHAMPIONS",
-        d: "All Paths End Here.",
-        darkText: false,
-        descTopM: "4px",
-        b: {
-          i: "valorant_champions",
-          t: "valorant_champions",
-          h: 40,
-        },
+        b: "valorant_champions",
         i: [
           {
             n: "VALORANT Champions 2024",
@@ -2379,21 +2130,7 @@ export const decorationsData = [
       },
       {
         n: "Spongebob",
-        d: "Celebrate 25 years of nautical nonsense!",
-        darkText: true,
-        hideTitle: true,
-        descTopM: "72px",
-        b: {
-          i: [
-            {
-              url: "spongebob",
-              align: "center",
-              height: "115%",
-              width: "100%",
-            },
-          ],
-          h: 40,
-        },
+        b: "spongebob",
         i: [
           {
             n: "SpongeBob",
@@ -2434,13 +2171,7 @@ export const decorationsData = [
       },
       {
         n: "Dark Fantasy",
-        d: "Approach, wanderer... dangerously charming relics await.",
-        darkText: false,
-        b: {
-          i: "dark_fantasy",
-          t: "dark_fantasy",
-          h: 48,
-        },
+        b: "dark_fantasy",
         i: [
           {
             n: "Midnight Sorceress",
@@ -2476,34 +2207,7 @@ export const decorationsData = [
       },
       {
         n: "Palworld",
-        d: "New island, new Pals, new adventures!",
-        darkText: false,
-        b: {
-          i: [
-            {
-              url: "palworld",
-              align: "center",
-              height: "100%",
-              width: "100%",
-            },
-            {
-              url: "palworld1",
-              align: "center",
-            },
-            {
-              url: "palworld2",
-              align: "right",
-              height: "150%",
-            },
-            {
-              url: "palworld3",
-              align: "left",
-              height: "150%",
-            },
-          ],
-          t: "palworld",
-          h: 56,
-        },
+        b: "palworld",
         badge: "JULY 2024",
         i: [
           {
@@ -2540,13 +2244,7 @@ export const decorationsData = [
       },
       {
         n: "Arcade",
-        d: "Press START to play.",
-        darkText: false,
-        b: {
-          i: "arcade",
-          t: "arcade",
-          h: 40,
-        },
+        b: "arcade",
         i: [
           {
             n: "Joystick",
@@ -2582,13 +2280,7 @@ export const decorationsData = [
       },
       {
         n: "Feelin' Retro",
-        d: "How ya feelin' today?",
-        darkText: false,
-        b: {
-          i: "feelin_retro",
-          t: "feelin_retro",
-          h: 52,
-        },
+        b: "feelin_retro",
         i: [
           {
             n: "Feelin' Awe",
@@ -2614,13 +2306,7 @@ export const decorationsData = [
       },
       {
         n: "Pirates",
-        d: "Don yer finest and set course, ye landlubbers.",
-        darkText: false,
-        b: {
-          i: "pirates",
-          t: "pirates",
-          h: 52,
-        },
+        b: "pirates",
         i: [
           {
             n: "Pirate Captain",
@@ -2656,13 +2342,7 @@ export const decorationsData = [
       },
       {
         n: "Galaxy",
-        d: "Reach for the stars.",
-        darkText: false,
-        b: {
-          i: "galaxy",
-          t: "galaxy",
-          h: 38,
-        },
+        b: "galaxy",
         i: [
           {
             n: "Stardust",
@@ -2698,13 +2378,7 @@ export const decorationsData = [
       },
       {
         n: "Lofi Vibes",
-        d: "Where chill meets mood.",
-        darkText: true,
-        b: {
-          i: "lofi_vibes",
-          t: "lofi_vibes",
-          h: 45,
-        },
+        b: "lofi_vibes",
         i: [
           {
             n: "Chromawave",
@@ -2740,30 +2414,7 @@ export const decorationsData = [
       },
       {
         n: "VALORANT",
-        d: "DEFY DEFINITION",
-        darkText: false,
-        descTopM: "-16px",
-        b: {
-          i: [
-            {
-              url: "valorant1",
-              align: "right",
-            },
-            {
-              url: "valorant2",
-              align: "right",
-              height: "150%",
-            },
-            {
-              url: "valorant3",
-              align: "left",
-              height: "150%",
-            },
-          ],
-          t: "valorant",
-          h: 64,
-          bg: "#ff4655",
-        },
+        b: "valorant",
         badge: "APRIL 2024",
         i: [
           {
@@ -2795,13 +2446,7 @@ export const decorationsData = [
       },
       {
         n: "Springtoon",
-        d: "You awaken to find yourself in a springtime wonderland.",
-        darkText: true,
-        b: {
-          i: "springtoon",
-          t: "springtoon",
-          h: 38,
-        },
+        b: "springtoon",
         i: [
           {
             n: "Honeyblossom",
@@ -2837,13 +2482,7 @@ export const decorationsData = [
       },
       {
         n: "Anime 2",
-        d: "Senpai will definitely notice you.",
-        darkText: true,
-        b: {
-          i: "anime_v2",
-          t: "anime_v2",
-          h: 48,
-        },
+        b: "anime_v2",
         i: [
           {
             n: "Cat Ears",
@@ -2914,12 +2553,7 @@ export const decorationsData = [
       },
       {
         n: "Elements",
-        d: "Which will you unleash?",
-        b: {
-          i: "elements",
-          t: "elements",
-          h: 42,
-        },
+        b: "elements",
         i: [
           {
             n: "Fire",
@@ -2955,12 +2589,7 @@ export const decorationsData = [
       },
       {
         n: "Lunar New Year",
-        d: "Roar into the Year of the Dragon.",
-        b: {
-          i: "lunar_new_year_2024",
-          t: "lunar_new_year_2024",
-          h: 38,
-        },
+        b: "lunar_new_year_2024",
         badge: "SPRING 2024",
         i: [
           {
@@ -2997,12 +2626,7 @@ export const decorationsData = [
       },
       {
         n: "Cyberpunk",
-        d: "Welcome to the neon embrace of the future.",
-        b: {
-          i: "cyberpunk",
-          t: "cyberpunk",
-          h: 44,
-        },
+        b: "cyberpunk",
         i: [
           {
             n: "Glitch",
@@ -3028,11 +2652,7 @@ export const decorationsData = [
       },
       {
         n: "Monsters",
-        d: "We're not a menace, just misunderstood.",
-        b: {
-          i: "monsters",
-          t: "monsters",
-        },
+        b: "monsters",
         i: [
           {
             n: "Beamchop",
@@ -3078,11 +2698,7 @@ export const decorationsData = [
       },
       {
         n: "Winter Wonderland",
-        d: "tis the season",
-        b: {
-          i: "winter_wonderland_2023",
-          t: "winter_wonderland_2023",
-        },
+        b: "winter_wonderland_2023",
         badge: "WINTER 2023",
         i: [
           {
@@ -3109,11 +2725,7 @@ export const decorationsData = [
       },
       {
         n: "Halloween",
-        d: "Fright and delight your friends, strangers, and friendly strangers.",
-        b: {
-          i: "halloween",
-          t: "halloween",
-        },
+        b: "halloween",
         badge: "FALL 2023",
         i: [
           {
@@ -3140,11 +2752,7 @@ export const decorationsData = [
       },
       {
         n: "Fall",
-        d: "There's a calm and cozy vibe in the air.",
-        b: {
-          i: "fall_v1",
-          t: "fall_v1",
-        },
+        b: "fall_v1",
         badge: "FALL 2023",
         i: [
           {
@@ -3171,11 +2779,7 @@ export const decorationsData = [
       },
       {
         n: "Fantasy",
-        d: "You're walking in the forest and notice something magical and shiny.",
-        b: {
-          i: "fantasy_v1",
-          t: "fantasy_v1",
-        },
+        b: "fantasy_v1",
         i: [
           {
             n: "Flaming Sword",
@@ -3221,12 +2825,7 @@ export const decorationsData = [
       },
       {
         n: "Anime",
-        d: "Senpai will definitely notice you.",
-        b: {
-          i: "anime_v1",
-          t: "anime_v1",
-          h: 48,
-        },
+        b: "anime_v1",
         i: [
           {
             n: "Radiating Energy",
@@ -3267,11 +2866,7 @@ export const decorationsData = [
       },
       {
         n: "Breakfast",
-        d: "Breakfast is definitely the most important meal of the day.",
-        b: {
-          i: "breakfast",
-          t: "breakfast",
-        },
+        b: "breakfast",
         i: [
           {
             n: "Toast",
@@ -3307,12 +2902,7 @@ export const decorationsData = [
       },
       {
         n: "Disxcore",
-        d: "Available to use with an active Nitro subscription.",
-        b: {
-          i: "disxcore",
-          t: "disxcore",
-          h: 26,
-        },
+        b: "disxcore",
         i: [
           {
             n: "DISXCORE Headset",
@@ -3338,12 +2928,8 @@ export const decorationsData = [
     icon: "lootbox",
     data: [
       {
-        n: "Halloween '25",
-        d: "Limited time decorations from Halloween 2025.",
-        b: {
-          i: [],
-          bg: "linear-gradient(90deg, #cd7e4e 0%, #eabd83 100%)",
-        },
+        n: "Trick or Treat",
+        b: "trick_or_treat",
         badge: "OCTOBER 2025",
         i: [
           {
@@ -3390,20 +2976,13 @@ export const decorationsData = [
       },
       {
         n: "Nitro",
-        d: "Decorations only available through Nitro purchases.",
         b: {
           i: [
             {
               url: "string_lights",
-              align: "top left",
-              height: "160%",
-              transform: "scaleX(-1) translateY(-20%)",
-            },
-            {
-              url: "hearts",
               align: "top right",
-              height: "150%",
-              transform: "translateY(-5%)",
+              height: "160%",
+              transform: "translateY(-20%)",
             },
           ],
           bg: "linear-gradient(90deg, #8547c6 0%, #b845c1 50%, #ab5d8a 100%)",
@@ -3468,7 +3047,6 @@ export const decorationsData = [
       },
       {
         n: "Quests",
-        d: "Miscellaneous decorations and quest rewards.",
         b: {
           i: [
             {
@@ -3939,10 +3517,7 @@ export const decorationsData = [
       },
       {
         n: "Orbs Exclusive",
-        d: "",
-        b: {
-          i: "orbs_exclusive",
-        },
+        b: "orbs_exclusive",
         i: [
           {
             n: "Pondering Portal",
@@ -3953,7 +3528,6 @@ export const decorationsData = [
       },
       {
         n: "Discord 8th Birthday",
-        d: "",
         b: {
           i: [],
           bg: "linear-gradient(90deg, #000 0%, #100625 100%)",
@@ -4059,7 +3633,6 @@ export const decorationsData = [
       },
       {
         n: "Spring '23",
-        d: "Limited time decoration from Spring 2023",
         darkText: true,
         b: {
           i: [],
@@ -4171,12 +3744,7 @@ export const decorationsData = [
       },
       {
         n: "Snowsgiving",
-        d: "❆ Happy Snowsgiving! ❆",
-        b: {
-          i: "snowsgiving",
-          t: "snowsgiving.svg",
-          h: 46,
-        },
+        b: "snowsgiving",
         badge: "WINTER 2022",
         i: [
           {

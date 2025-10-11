@@ -845,8 +845,7 @@ const DecorationsList = ({ decorationsList, style, className }) => {
           (e) =>
             e.n.toLowerCase().includes(decoSearch.toLowerCase()) ||
             e.d.toLowerCase().includes(decoSearch.toLowerCase()) ||
-            c.n.toLowerCase().includes(decoSearch.toLowerCase()) ||
-            c.d.toLowerCase().includes(decoSearch.toLowerCase())
+            c.n.toLowerCase().includes(decoSearch.toLowerCase())
         ),
       }))
       .filter((category) => category.i.length > 0);
@@ -875,10 +874,10 @@ const DecorationsList = ({ decorationsList, style, className }) => {
           return (
             <div
               key={
-                typeof category.b.i === "string"
-                  ? category.b.i
-                  : category.b.i.length > 0
-                  ? category.b.i[0].url
+                typeof category.b === "string"
+                  ? category.b
+                  : category.b.length > 0
+                  ? category.b[0].url
                   : category.n
               }
               className="mt-8 first:mt-0"
@@ -908,8 +907,8 @@ const DecorationsList = ({ decorationsList, style, className }) => {
 
 const DecorationsCategoryBanner = ({ category }) => {
   return (
-    <div className="relative justify-center items-center grid grid-cols-1 grid-rows-1 bg-black mb-4 rounded-2xl w-full h-28 overflow-hidden">
-      {typeof category.b.i !== "string" ? (
+    <div className="relative justify-center items-center grid grid-cols-1 grid-rows-1 bg-black mb-4 rounded-2xl w-full h-24 overflow-hidden">
+      {typeof category.b !== "string" ? (
         <>
           <div
             className="top-0 right-0 bottom-0 left-0 absolute"
@@ -921,7 +920,7 @@ const DecorationsCategoryBanner = ({ category }) => {
             <Image
               key={e.url}
               className={"object-cover bottom-0 absolute"}
-              src={`/banners/${e.url}${e.url.includes(".") ? "" : ".webp"}`}
+              src={`/banner/${e.url}${e.url.includes(".") ? "" : ".webp"}`}
               alt={""}
               draggable={false}
               height={0}
@@ -943,10 +942,8 @@ const DecorationsCategoryBanner = ({ category }) => {
         </>
       ) : (
         <Image
-          className="object-cover [grid-column:1/1] [grid-row:1/1]"
-          src={`/banners/${category.b.i}${
-            category.b.i.includes(".") ? "" : ".webp"
-          }`}
+          className="object-cover object-left [grid-column:1/1] [grid-row:1/1]"
+          src={`/banner/${category.b}.webp`}
           alt={""}
           draggable={false}
           height={0}
@@ -959,70 +956,27 @@ const DecorationsCategoryBanner = ({ category }) => {
           }}
         />
       )}
-      <div className="relative flex flex-col justify-center items-center p-4 h-full [grid-column:1/1] [grid-row:1/1]">
-        {category.b.t ? (
-          category.b.t === "" ? (
-            <div
-              style={{
-                height: `${category.b.h || 48}px`,
-                width: "100%",
-              }}
-            />
-          ) : (
-            <Image
-              src={`/bannertext/${category.b.t}${
-                category.b.t.includes(".") ? "" : ".webp"
-              }`}
-              alt={category.n}
-              draggable={false}
-              height={0}
-              width={0}
-              style={{
-                height: `${category.b.h || 48}px`,
-                width: "auto",
-              }}
-            />
-          )
-        ) : (
-          <>
-            {!category.hideTitle && (
-              <p
-                className="px-4 text-3xl text-center ginto"
-                style={{
-                  color: category.darkText || false ? "#000" : "#fff",
-                }}
-              >
-                {category.n.toLowerCase().includes("nitro") ? (
-                  <Svg.Nitro className="my-2" />
-                ) : (
-                  category.n
-                )}
-              </p>
+      {typeof category.b?.i?.length !== "undefined" && (
+        <div className="absolute flex flex-col justify-center p-4 h-full [grid-column:1/1] [grid-row:1/1]">
+          <p
+            className="px-4 text-2xl text-left ginto"
+            style={{
+              color: category.darkText || false ? "#000" : "#fff",
+            }}
+          >
+            {category.n.toLowerCase().includes("nitro") ? (
+              <Svg.Nitro className="my-2" />
+            ) : (
+              category.n
             )}
-          </>
-        )}
-        <p
-          className="w-[232px] xs:w-full font-medium text-sm text-center [line-height:1]"
-          style={{
-            color: category.darkText || false ? "#000" : "#fff",
-            marginTop: category.descTopM || "",
-          }}
-        >
-          {category.d.includes("\n")
-            ? category.d.split("\n").map((e, i) => (
-                <Fragment key={i}>
-                  {i > 0 && <br />}
-                  {e}
-                </Fragment>
-              ))
-            : category.d}
-        </p>
-        {category.badge && (
-          <p className="top-2 right-2 absolute bg-white m-0 px-2 py-0 rounded-full font-semibold text-black text-xs [letter-spacing:0]">
-            {category.badge}
           </p>
-        )}
-      </div>
+        </div>
+      )}
+      {category.badge && (
+        <p className="top-2 right-2 absolute bg-white m-0 px-2 py-0 rounded-full font-semibold text-black text-xs [letter-spacing:0]">
+          {category.badge}
+        </p>
+      )}
     </div>
   );
 };
