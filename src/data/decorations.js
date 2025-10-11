@@ -4,6 +4,53 @@ export const decorationsData = [
     icon: "shop",
     data: [
       {
+        n: "Trick or Treat",
+        b: "trick_or_treat",
+        badge: "OCTOBER 2025",
+        i: [
+          {
+            n: "Trick Pumpkin",
+            d: "A spooky pumpkin with a trick in hand.",
+            f: "trick_pumpkin",
+          },
+          {
+            n: "Treat Pumpkin",
+            d: "A spooky pumpkin with a treat in hand.",
+            f: "treat_pumpkin",
+          },
+          {
+            n: "Trick Spider",
+            d: "A spooky spider with a trick in hand.",
+            f: "trick_spider",
+          },
+          {
+            n: "Treat Spider",
+            d: "A spooky spider with a treat in hand.",
+            f: "treat_spider",
+          },
+          {
+            n: "Trick Skull",
+            d: "A spooky skull with a trick in hand.",
+            f: "trick_skull",
+          },
+          {
+            n: "Treat Skull",
+            d: "A spooky skull with a treat in hand.",
+            f: "treat_skull",
+          },
+          {
+            n: "Trick Ghost",
+            d: "A spooky ghost with a trick in hand.",
+            f: "trick_ghost",
+          },
+          {
+            n: "Treat Ghost",
+            d: "A spooky ghost with a treat in hand.",
+            f: "treat_ghost",
+          },
+        ],
+      },
+      {
         n: "Borderlands 4",
         b: "borderlands_4",
         i: [
@@ -2927,53 +2974,6 @@ export const decorationsData = [
     name: "Other",
     icon: "lootbox",
     data: [
-      {
-        n: "Trick or Treat",
-        b: "trick_or_treat",
-        badge: "OCTOBER 2025",
-        i: [
-          {
-            n: "Trick Pumpkin",
-            d: "A spooky pumpkin with a trick in hand.",
-            f: "trick_pumpkin",
-          },
-          {
-            n: "Treat Pumpkin",
-            d: "A spooky pumpkin with a treat in hand.",
-            f: "treat_pumpkin",
-          },
-          {
-            n: "Trick Spider",
-            d: "A spooky spider with a trick in hand.",
-            f: "trick_spider",
-          },
-          {
-            n: "Treat Spider",
-            d: "A spooky spider with a treat in hand.",
-            f: "treat_spider",
-          },
-          {
-            n: "Trick Skull",
-            d: "A spooky skull with a trick in hand.",
-            f: "trick_skull",
-          },
-          {
-            n: "Treat Skull",
-            d: "A spooky skull with a treat in hand.",
-            f: "treat_skull",
-          },
-          {
-            n: "Trick Ghost",
-            d: "A spooky ghost with a trick in hand.",
-            f: "trick_ghost",
-          },
-          {
-            n: "Treat Ghost",
-            d: "A spooky ghost with a treat in hand.",
-            f: "treat_ghost",
-          },
-        ],
-      },
       {
         n: "Nitro",
         b: {
