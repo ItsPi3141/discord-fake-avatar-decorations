@@ -10,42 +10,42 @@ export const decorationsData = [
         i: [
           {
             n: "Trick Pumpkin",
-            d: "A spooky pumpkin with a trick in hand.",
+            d: "Give your avatar a new look.",
             f: "trick_pumpkin",
           },
           {
             n: "Treat Pumpkin",
-            d: "A spooky pumpkin with a treat in hand.",
+            d: "Give your avatar a new look.",
             f: "treat_pumpkin",
           },
           {
             n: "Trick Spider",
-            d: "A spooky spider with a trick in hand.",
+            d: "Give your avatar a new look.",
             f: "trick_spider",
           },
           {
             n: "Treat Spider",
-            d: "A spooky spider with a treat in hand.",
+            d: "Give your avatar a new look.",
             f: "treat_spider",
           },
           {
             n: "Trick Skull",
-            d: "A spooky skull with a trick in hand.",
+            d: "Give your avatar a new look.",
             f: "trick_skull",
           },
           {
             n: "Treat Skull",
-            d: "A spooky skull with a treat in hand.",
+            d: "Give your avatar a new look.",
             f: "treat_skull",
           },
           {
             n: "Trick Ghost",
-            d: "A spooky ghost with a trick in hand.",
+            d: "Give your avatar a new look.",
             f: "trick_ghost",
           },
           {
             n: "Treat Ghost",
-            d: "A spooky ghost with a treat in hand.",
+            d: "Give your avatar a new look.",
             f: "treat_ghost",
           },
         ],
