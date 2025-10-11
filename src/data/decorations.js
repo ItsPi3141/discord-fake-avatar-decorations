@@ -51,6 +51,42 @@ export const decorationsData = [
         ],
       },
       {
+        n: "Woodland Friends",
+        b: "woodland_friends",
+        i: [
+          {
+            n: "Forest Frolic",
+            d: "Give your avatar a new look.",
+            f: "forest_frolic",
+          },
+          {
+            n: "Cosy Deer",
+            d: "Give your avatar a new look.",
+            f: "cosy_deer",
+          },
+          {
+            n: "A Real Fungi",
+            d: "Give your avatar a new look.",
+            f: "a_real_fungi",
+          },
+          {
+            n: "Lover Girl Autumn",
+            d: "Give your avatar a new look.",
+            f: "lover_girl_autumn",
+          },
+          {
+            n: "Autumn Foliage",
+            d: "Give your avatar a new look.",
+            f: "autumn_foliage",
+          },
+          {
+            n: "Hoppy Boi",
+            d: "Give your avatar a new look.",
+            f: "hoppy_boi",
+          },
+        ],
+      },
+      {
         n: "It’s Showtime",
         b: "its_showtime",
         i: [
