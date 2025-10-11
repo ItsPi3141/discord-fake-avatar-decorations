@@ -51,6 +51,22 @@ export const decorationsData = [
         ],
       },
       {
+        n: "It’s Showtime",
+        b: "its_showtime",
+        i: [
+          {
+            n: "Lights, Camera, Action! (Orange)",
+            d: "Give your avatar a new look.",
+            f: "lights_camera_action_orange",
+          },
+          {
+            n: "Lights, Camera, Action! (Teal)",
+            d: "Give your avatar a new look.",
+            f: "lights_camera_action_teal",
+          },
+        ],
+      },
+      {
         n: "Borderlands 4",
         b: "borderlands_4",
         i: [
