@@ -3,12 +3,7 @@ import readline from "node:readline";
 function extractInfo(collectibleCategories) {
   const transformCategory = (category) => ({
     n: category.name,
-    d: category.summary,
-    b: {
-      i: `${category.name.toLowerCase().replaceAll(" ", "_")}`,
-      t: `${category.name.toLowerCase().replaceAll(" ", "_")}`,
-      h: 50,
-    },
+    b: `${category.name.toLowerCase().replaceAll(" ", "_")}`,
     i: category.products
       .filter((p) => p.type === 0 || p.type === 2000)
       .flatMap((p) => {

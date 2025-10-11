@@ -1,7 +1,6 @@
 function extractInfo(collectibleCategories) {
   const transformCategory = (category) => ({
     n: category.name,
-    d: category.summary,
     b: `${category.name.toLowerCase().replaceAll(" ", "_")}`,
     i: category.products
       .filter((p) => p.type === 0 || p.type === 2000)
