@@ -3502,7 +3502,7 @@ export const decorationsData = [
           },
           {
             n: "KOM",
-            d: "Exclusive to King of Meat Avatar Quest Quest for a limited time. Available to use until December 6, 2025.",
+            d: "Exclusive to King of Meat Avatar Quest for a limited time. Available to use until December 6, 2025.",
             f: "kom",
           },
           {
