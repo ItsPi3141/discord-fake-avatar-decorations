@@ -3116,6 +3116,11 @@ export const decorationsData = [
         },
         i: [
           {
+            n: "Black Phone 2",
+            d: "Exclusive to The Black Phone 2 Main Quest for a limited time. Available to use until December 17, 2025.",
+            f: "black_phone_2",
+          },
+          {
             n: "Airona Fireworks",
             d: "Exclusive to Blue Protocol: Star Resonance Quest for a limited time. Available to use until December 13, 2025.",
             f: "airona_fireworks",
