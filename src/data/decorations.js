@@ -3126,6 +3126,11 @@ export const decorationsData = [
             f: "mr_m",
           },
           {
+            n: "Tactibear Flex",
+            d: "Exclusive to VALORANT Invite Quest for a limited time. Available to use until December 12, 2025.",
+            f: "tactibear_flex",
+          },
+          {
             n: "Travel Ring",
             d: "Exclusive to Sonic Racing: CrossWorlds Quest for a limited time. Available to use until December 1, 2025.",
             f: "travel_ring",
