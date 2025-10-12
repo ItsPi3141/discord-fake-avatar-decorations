@@ -3126,6 +3126,11 @@ export const decorationsData = [
             f: "mr_m",
           },
           {
+            n: "Cab Monster",
+            d: "Exclusive to 2XKO Early Access Quest for a limited time. Available to use until December 17, 2025.",
+            f: "cab_monster",
+          },
+          {
             n: "Tactibear Flex",
             d: "Exclusive to VALORANT Invite Quest for a limited time. Available to use until December 12, 2025.",
             f: "tactibear_flex",
