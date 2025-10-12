@@ -3116,6 +3116,11 @@ export const decorationsData = [
         },
         i: [
           {
+            n: "Daredevil",
+            d: "Exclusive to Marvel Rivals Quest S4.5 Quest for a limited time. Available to use until December 17, 2025.",
+            f: "daredevil",
+          },
+          {
             n: "Black Phone 2",
             d: "Exclusive to The Black Phone 2 Main Quest for a limited time. Available to use until December 17, 2025.",
             f: "black_phone_2",
