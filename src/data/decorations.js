@@ -3098,6 +3098,27 @@ export const decorationsData = [
         ],
       },
       {
+        n: "Orbs Exclusive",
+        b: "orbs_exclusive",
+        i: [
+          {
+            n: "Magic Mists",
+            d: "Give your avatar a new look.",
+            f: "magic_mists",
+          },
+          {
+            n: "Infinite Swirl",
+            d: "Give your avatar a new look.",
+            f: "infinite_swirl",
+          },
+          {
+            n: "Pondering Portal",
+            d: "Dazzling thoughts create neon sparks.",
+            f: "pondering_portal",
+          },
+        ],
+      },
+      {
         n: "Quests",
         b: {
           i: [
@@ -3599,17 +3620,6 @@ export const decorationsData = [
             n: "I'm a Clown",
             d: "I opened a bunch of Loot Boxes and all I got was this stupid clown decoration. Exclusive to April Fools 2024 for a limited time.",
             f: "im_a_clown",
-          },
-        ],
-      },
-      {
-        n: "Orbs Exclusive",
-        b: "orbs_exclusive",
-        i: [
-          {
-            n: "Pondering Portal",
-            d: "Dazzling thoughts create neon sparks.",
-            f: "pondering_portal",
           },
         ],
       },
