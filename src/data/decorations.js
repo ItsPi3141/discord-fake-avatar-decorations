@@ -6,7 +6,7 @@ export const decorationsData = [
       {
         n: "Trick or Treat",
         b: "trick_or_treat",
-        badge: "FALL 2025",
+        badge: "OCTOBER 2025",
         i: [
           {
             n: "Trick Pumpkin",
