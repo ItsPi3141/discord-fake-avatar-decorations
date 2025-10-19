@@ -3116,6 +3116,11 @@ export const decorationsData = [
         },
         i: [
           {
+            n: "Dart Monkey",
+            d: "Exclusive to Bloons TD 6 Dart Monkey Quest for a limited time. Available to use until December 26, 2025.",
+            f: "dart_monkey",
+          },
+          {
             n: "Warframe Clem",
             d: "Exclusive to Warframe Quest for a limited time. Available to use until December 22, 2025.",
             f: "warframe_clem",
