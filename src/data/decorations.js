@@ -3116,6 +3116,11 @@ export const decorationsData = [
         },
         i: [
           {
+            n: "Warframe Clem",
+            d: "Exclusive to Warframe Quest for a limited time. Available to use until December 22, 2025.",
+            f: "warframe_clem",
+          },
+          {
             n: "Daredevil",
             d: "Exclusive to Marvel Rivals Quest S4.5 Quest for a limited time. Available to use until December 17, 2025.",
             f: "daredevil",
