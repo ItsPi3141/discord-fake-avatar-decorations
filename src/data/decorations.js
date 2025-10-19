@@ -3126,6 +3126,11 @@ export const decorationsData = [
             f: "black_phone_2",
           },
           {
+            n: "The Final Peel",
+            d: "Exclusive to Fortnitemares Quest for a limited time. Available to use until December 20, 2025.",
+            f: "the_final_peel",
+          },
+          {
             n: "Airona Fireworks",
             d: "Exclusive to Blue Protocol: Star Resonance Quest for a limited time. Available to use until December 13, 2025.",
             f: "airona_fireworks",
